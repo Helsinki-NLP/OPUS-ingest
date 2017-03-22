@@ -10,6 +10,16 @@ The goal of this activity is to setup OPUS inside of a proper IT framework.
 * improved (consistent) pre-processing pipelines
 * cleanup corpus creation procedures
 
+Some statistics:
+
+* ca 16 million files in corpus
+* 1.4 TB  corpus
+* 1.4 TB  html
+* 150 GB  src-data
+* 106 GB  cwb
+* 690 GB  wordalign
+
+
 ## Virtual Web Server ##
 
 * access to data and on-line services
