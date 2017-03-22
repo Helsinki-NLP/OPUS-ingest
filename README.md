@@ -12,7 +12,7 @@ The goal of this activity is to setup OPUS inside of a proper IT framework.
 
 Some statistics:
 
-* ca 16 million files in corpus
+* ca 16 million files in corpus/
 * 1.4 TB  corpus
 * 1.4 TB  html
 * 150 GB  src-data
@@ -33,7 +33,7 @@ Some statistics:
 
 ## Documentation ##
 
-* finding and downloading data
+* finding and downloading data from OPUS
 * web interfaces
 * contributing
 * F.A.Q.'s
