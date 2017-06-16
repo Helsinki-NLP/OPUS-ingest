@@ -37,3 +37,9 @@ Some statistics:
 * web interfaces
 * contributing
 * F.A.Q.'s
+
+## Admin F.A.Q. ##
+
+ * Can I run cronjobs on taito? Yes it's possible. One needs to remember which server it's installed, so please use taito-login3.csc.fi or taito-login4.csc.fi instead of generic taito.csc.fi alias.
+
+ * Can I run cronjobs on abel? Yes. Set them from the login nodes with crontab -e
