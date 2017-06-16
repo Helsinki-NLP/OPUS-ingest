@@ -43,3 +43,4 @@ Some statistics:
  * Can I run cronjobs on taito? Yes it's possible. One needs to remember which server it's installed, so please use taito-login3.csc.fi or taito-login4.csc.fi instead of generic taito.csc.fi alias.
  * Can I run cronjobs on abel? Yes. Set them from the login nodes with crontab -e
  * How do I use the cPouta service on CSC? check the user guide at https://research.csc.fi/pouta-user-guide
+ * Can I create a disk image of my virtual server on CSC? Yes! Check https://research.csc.fi/pouta-adding-images
