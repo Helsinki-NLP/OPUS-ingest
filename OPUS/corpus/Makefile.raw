@@ -1,0 +1,31 @@
+# -*-makefile-*-
+#
+# if raw files do not exist:
+#
+# use this Makefile for creating "raw" files from annotated files
+# (simply use letsmt_detokenizer)
+#
+#
+# put this Makefile in the raw directory and run
+#
+#
+
+ifndef LANGUAGE
+  LANGUAGE=en
+endif
+
+LANGUAGES=$(notdir $(wildcard ../xml/??) $(wildcard ../xml/??_??) $(wildcard ../xml/???))
+
+XML=$(patsubst ../xml/%,%,$(shell find ../xml/${LANGUAGE} -name '*.xml.gz'))
+
+
+all: ${LANGUAGES}
+
+${LANGUAGES}:
+	make LANGUAGE=$@ detokenize
+
+detokenize: ${XML}
+
+${XML}: %: ../xml/%
+	mkdir -p `dirname $@`
+	letsmt_detokenize -l ${LANGUAGE} $< $@

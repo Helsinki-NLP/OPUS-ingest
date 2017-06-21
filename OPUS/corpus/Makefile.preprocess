@@ -1,0 +1,34 @@
+# -*-makefile-*-
+#
+# Makefile targets for standard pre-processing
+# (plain text --> simple XML with paragraph/sentence markup)
+#
+#
+
+ifndef LANGUAGE
+	LANGUAGE=$(firstword ${LANGUAGES})
+endif
+
+SRCDIR   = src/${LANGUAGE}
+RAWFILES = $(patsubst src/%.${TXTEXT},raw/%.${XMLEXT}, \
+		$(shell find ${SRCDIR} -name '*.${TXTEXT}'))
+
+
+preprocess:
+	for l in ${LANGUAGES}; do \
+		${MAKE} LANGUAGE=$$l preprocess_files; \
+	done
+
+preprocess_files: ${RAWFILES}
+
+raw/${LANGUAGE}/%.${XMLEXT}: src/${LANGUAGE}/%.${TXTEXT}
+	mkdir -p $(shell dirname $@)
+	${PRE} -in $< -out $@
+
+
+clean-raw:
+	for l in ${LANGUAGES}; do \
+	    if [ -d "raw/$$l" ]; then \
+		rm -fr raw/$$l; \
+	    fi \
+	done

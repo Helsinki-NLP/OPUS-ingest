@@ -1,0 +1,144 @@
+# -*-makefile-*-
+#--------------------------------------------------------------------
+# Joerg Tiedemann			2010-11-05
+# tiedeman@gmail.com
+#
+# general variables for OPUS corpora
+#--------------------------------------------------------------------
+
+
+#
+# set OPUSHOME in your environment
+# if you don't want to use the default directory!
+#
+
+ifndef OPUSHOME
+  OPUSHOME=$(shell pwd | sed 's|OPUS/.*|OPUS|')
+#  OPUSHOME=/home/opus/OPUS
+endif
+
+
+#
+# OPUSCORPORA ..... home directory of all corpora in OPUS
+# CORPUSHOME ...... home directory of the current corpus
+#     (need to define CORPUS in the Makfile that includes this one)
+# LANGUAGES ....... sorted list of languages (2/3-letter codes possibly
+#                   with region extension); need to be subdirectories of
+#                   the source text directory! --> might have to run 
+#                   'make' in source text directory first!
+#
+
+OPUSCORPORA = ${OPUSHOME}/corpus
+OPUSHTML    = ${OPUSHOME}/html
+OPUSPUB     = ${OPUSHOME}/../public_html
+# OPUSPUB     = /home/opus/public_html/test
+OPUSDATA    = ${OPUSHOME}/data
+OPUSWORDALIGN = ${OPUSHOME}/wordalign
+
+
+OPUSCWB     = ${OPUSHOME}/cwb
+CWBDATA     = ${OPUSCWB}/data
+CWBREG      = ${OPUSCWB}/reg
+
+CORPUSHOME  = ${OPUSCORPORA}/${CORPUS}
+CORPUSSRC   = ${CORPUSHOME}/src
+CORPUSXML   = ${CORPUSHOME}/xml
+CORPUSRAW   = ${CORPUSHOME}/raw
+CORPUSHTML  = ${OPUSHTML}/${CORPUS}
+CORPUSWORDALIGN  = ${OPUSWORDALIGN}/${CORPUS}
+
+
+ifndef LANGUAGES
+  LANGUAGES = $(sort $(notdir $(wildcard ${CORPUSSRC}/??)) \
+                     $(notdir $(wildcard ${CORPUSSRC}/???)) \
+                     $(notdir $(wildcard ${CORPUSSRC}/??_??)) \
+                     $(notdir $(wildcard ${CORPUSRAW}/??)) \
+                     $(notdir $(wildcard ${CORPUSRAW}/???)) \
+                     $(notdir $(wildcard ${CORPUSRAW}/??_??)))
+endif
+
+
+# general file extension of files in the corpus
+# (if you add \.gz --> all files wil be compressed)
+
+XMLEXT = xml.gz
+TXTEXT = txt.gz
+ALGEXT = xml.gz
+
+#
+# general tools that we will use for pre-processing & alignment
+#
+
+TOOLS      = ${OPUSHOME}/tools
+OPUSTOOLS  = ${TOOLS}/opus
+CORPUSTOOLS= ${OPUSTOOLS}/${CORPUS}
+
+ISO639     = $(TOOLS)/opus/iso639.pl
+
+UPLUGHOME  = ${TOOLS}/public/uplug/uplug-main
+UPLUGCWB   = ${TOOLS}/public/uplug/uplug-cwb
+UPLUGTOOLS = ${UPLUGHOME}/tools
+UPLUG      = $(shell which uplug)
+
+
+
+MOSESHOME       = ${USERAPPL}/tools/mosesdecoder-2017
+MOSESSCRIPTS    = ${MOSESHOME}/scripts
+SCRIPTS_ROOTDIR = ${MOSESSCRIPTS}
+
+EFMARAL         = ${USERAPPL}/tools/efmaral/efmaral.py
+ATOOLS          = ${USERAPPL}/tools/fast_align/atools
+
+#--------------------------------------------------------------------
+# individual pre-processing steps (using Uplug)
+#
+# PAR ........ paragraph markup
+# SENT ....... sentence boundary detection
+# TOK ........ tokenization
+# PRE_ALL .... make everything (par, sent, tok)
+# PRE_SENT ... make only par & sent (no tokenization)
+#--------------------------------------------------------------------
+
+PAR        = ${UPLUG} pre/markup
+SENT       = ${UPLUG} pre/sent
+TOK        = ${UPLUG} pre/tok
+PRE_ALL    = ${UPLUG} pre/basic
+PRE        = ${UPLUG} pre/par-sent
+
+# language specific tools
+
+# 1) all pre-processing steps
+
+ifneq ($(strip $(wildcard ${UPLUGHOME}/systems/pre/${LANGUAGE}-all)),)
+  PRE_ALL=${UPLUG} pre/${LANGUAGE}-all
+endif
+
+# 2) a language-specific tokenizer
+
+ifneq ($(strip $(wildcard ${UPLUGHOME}/systems/pre/${LANGUAGE}/tok)),)
+  TOK=${UPLUG} pre/${LANGUAGE}/tok
+endif
+
+
+# 3) a tokenizer + tagger tool
+
+ifneq ($(strip $(wildcard ${UPLUGHOME}/systems/pre/${LANGUAGE}/toktag)),)
+  TOK=${UPLUG} pre/${LANGUAGE}/toktag
+endif
+
+# 4) a language-specific sentence boundary detection tool
+
+ifneq ($(strip $(wildcard ${UPLUGHOME}/systems/pre/${LANGUAGE}-sent)),)
+  SENT=${UPLUG} pre/${LANGUAGE}-sent
+endif
+
+
+#--------------------------------------------------------------------
+# sentence alignment
+#   sent ... Gale&Church (original C-code via Uplug)
+#   hun .... hunalign (called from Uplug)
+#--------------------------------------------------------------------
+
+SENTALIGN  = ${UPLUG} align/hun
+# SENTALIGN = ${UPLUG} align/sent
+

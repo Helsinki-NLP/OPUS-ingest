@@ -1,0 +1,17 @@
+
+===================================================
+OPUS - a collection of parallel corpora and tools
+===================================================
+
+
+annotated ..... parsed corpus data
+corpus ........ all corpus data
+cwb ........... index/registry files for Corpus Work Bench
+experiments ... experiments based on OPUS data
+html .......... files for the OPUS website
+incoming ...... collections and ideas for new resources
+data .......... original source documents
+tools ......... various tools (tokenizer, tagger, ....)
+wordalign ..... word alignments (and SMT models) for some OPUS corpora
+
+

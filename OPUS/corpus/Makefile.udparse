@@ -1,0 +1,30 @@
+# -*-makefile-*-
+#
+# Makefile for running the UD pipeline
+#
+#
+
+
+UDLANGUAGES = 	ar eu bg hr cs da nl en et ft fr de el he hi hu \
+		id ga it la nb fa pl pt ro sl es sv ta 
+
+ifndef LANGUAGE
+  LANGUAGE=$(firstword ${LANGUAGES})
+endif
+
+RAWDIR   = raw/${LANGUAGE}
+XMLFILES = $(subst :,\:,$(patsubst raw/%,ud/%,$(shell find ${RAWDIR}/ -name '*.${XMLEXT}')))
+
+UDPARSE = ${TOOLS}/public/preprocess/opus-udpipe.pl
+
+
+udparse:
+	for l in ${UDLANGUAGES}; do \
+		${MAKE} LANGUAGE=$$l udparse_files; \
+	done
+
+udparse_files: ${XMLFILES}
+
+ud/${LANGUAGE}/%: raw/${LANGUAGE}/%
+	mkdir -p $(shell dirname $@)
+	zcat "$<" | ${UDPARSE} -l ${LANGUAGE} | gzip -c > "$@"

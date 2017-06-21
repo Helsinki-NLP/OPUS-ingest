@@ -1,0 +1,129 @@
+
+
+===============================================
+This is the home directory of the OPUS corpora
+===============================================
+
+
+EMEA .......... European Medicinces Agency corpus
+EUconst ....... the (dismissed) Constitution of the EU
+Europarl3 ..... Europarl (version 3)
+KDE4 .......... KDE4 system messages (localization data)
+KDEdoc ........ documentation of KDE3
+OpenOffice .... documentation of OpenOffice (very old)
+OpenOffice3 ... documentation of OpenOffice (from OpenOffice version 3)
+OpenSubtitles . corpus of translated movie subtitles
+PHP ........... translated manuals of the PHP scripting language (very noisy)
+SETIMES ....... corpus of Balkan languages (Francis Tyers)
+SPC ........... Stockholm Parallel Corpus (data by Hercules Dalianis&students)
+TEP ........... Teheran English-Persian Parallel Corpus
+
+example ....... small example corpus
+
+
+
+
+How to add a new corpus
+-----------------------
+
+
+1) make a copy of the <template> directory for your new corpus
+
+   cp -R example MyCorpus
+
+2) change name and information about your corpus in
+   MyCorpus/Makefile.def
+
+3) put your source text files into appropriate sub-directories in
+   MyCorpus/src
+
+   You can specify how to fetch data from the web or how to convert data files
+   from other formats in MyCorpus/src/Makefile. Important is that all files
+   need to be in gzipped plain text format and Unicode UTF8. They also need 
+   to be in language-specific sub-directories and parallel documents need 
+   to have the same name and path (except for the language directory). 
+   For example,
+
+   MyCorpus/src/en/path/to/document1.txt.gz
+   MyCorpus/src/en/path/document2.txt.gz
+   MyCorpus/src/en/path/document3.txt.gz
+   ...
+   MyCorpus/src/fr/path/to/document1.txt.gz
+   MyCorpus/src/fr/path/document2.txt.gz
+   MyCorpus/src/fr/path/document3.txt.gz
+   ...
+   MyCorpus/src/de/path/to/document1.txt.gz
+   MyCorpus/src/de/path/document2.txt.gz
+   MyCorpus/src/de/path/document3.txt.gz
+
+   Please, use ISO639 2-letter-codes for the language directories.
+   You may also use other formats for the source documents but then you need
+   to change the make procedures for converting, see 
+      MyCorpus/Makefile
+      Makefile.preprocess
+      Makefile.def
+
+4) go to your corpus directory, run 'make corpus' (and pray)
+   'make' should convert, pre-process, annotate, align all your data.
+   Several steps may take very long time! Especially annotation and
+   alignment can take forever. Be patient!
+
+   You could also run make with several jobs in parallel, for example
+   'make -j 4 corpus' (for 4 jobs).
+
+5) optional: make web-information, cwb-index, various corpus formats with
+   'make web-corpus'
+
+
+
+Troubleshooting
+---------------
+
+* Annotation jobs fail
+
+  - make sure you have all the tools necessary for the languages you work with
+  - make sure that all these tools work in isolation (maybe you need to
+    re-compile some of them?)
+  - make sure you have all the necessary permissions for accessing 
+    data, directories and tools
+  - check if your source files exist and have the correct character encoding
+
+
+* Alignment fails
+
+  - make sure that hunalign is installed and works
+  - make sure that parallel documents have identical names (and paths)
+
+
+* Make sure to run on 64-bit machines 
+  (some tools are compiled for 64bit architectures only!)
+
+
+
+
+Making a new corpus in another directory (your own working directory)
+---------------------------------------------------------------------
+
+1) create your own OPUS home directory
+
+   mkdir OPUS
+
+   IMPORTANT! Use exactly this name because some path operations will 
+   depend on it! 
+
+2) link the 'tools' and 'lang' directory to your OPUS home 
+
+   cd OPUS
+   ln -s /path/to/original/OPUS/tools .
+   ln -s /path/to/original/OPUS/lang .
+
+3) copy Makefiles and the example corpus
+
+   mkdir corpus
+   cd corpus
+   cp /path/to/original/OPUS/corpus/Makefile* .
+   cp -R /path/to/original/OPUS/corpus/example MyCorpus
+
+4) do the steps from above ("How to add a new corpus") starting with step (2)
+
+

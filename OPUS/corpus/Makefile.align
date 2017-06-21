@@ -1,0 +1,173 @@
+# -*-makefile-*-
+#
+# Makfile targets for sentence alignment
+# should be included by CORPUS/xml/Makfile!
+#
+
+#--------------------------------------------------------------------
+# sentence alignment
+#   sent ... Gale&Church (original C-code via Uplug)
+#   hun .... hunalign (called from Uplug)
+#--------------------------------------------------------------------
+
+# hunalign with disctionaries, tokenized & lowercased text, timeout = 5 minutes
+ALIGNTIMEOUT = 300
+ALIGNMETHOD  = hun -tok -l -time ${ALIGNTIMEOUT}
+SENTALIGN    = ${UPLUG} align/$(ALIGNMETHOD)
+# SENTALIGN = ${UPLUG} align/sent
+
+
+#
+# phony language targets ...
+#
+# ALLSRC - all possible source languages
+# ALLTRG - all possible target languages (same as ALLSRC)
+#
+# LANGUAGES comes from ../../Makefile.def, should be sorted alphabetically
+
+ALLSRC = $(addsuffix .src,$(LANGUAGES))
+ALLTRG = $(addsuffix .trg,$(LANGUAGES))
+
+# make all:
+#
+# - for all possible source languages
+#   - for all possible target languages
+#     - align all source files to appropriate target language files
+#       (only if the target language is not yet aligned to the source language)
+# sentence alignments will be in one file per language pair (SRCTRG.ces)
+# (but also in indivudal files for each language pair and file pair)
+#
+# (translate.txt is created by hunalign - don't know why ...)
+
+
+all-align: ${ALLSRC}
+	rm -f translate.txt
+	rm -fr data
+
+clean-align:
+	for s in ${LANGUAGES}; do \
+	  for t in ${LANGUAGES}; do \
+		rm -fr $$s-$$t; \
+	    	rm -f $$s-$$t.xml*; \
+	  done \
+	done
+
+
+# SRC - current source language (take first if not set)
+# TRG - current target language (take last if not set)
+
+ifndef SRC
+  SRC=$(firstword ${LANGUAGES})
+endif
+ifndef TRG
+  TRG=$(lastword ${LANGUAGES})
+endif
+
+ifndef SRC
+  SRC=en
+endif
+ifndef TRG
+  TRG=sv
+endif
+
+
+## align all files for the current language pair
+## (if not already aligned in opposite direction)
+
+align:
+	if `perl -e "exit 0 if ('${SRC}' lt '${TRG}');exit 1;"`; then \
+	    ${MAKE} ${SRC}-${TRG}.xml.gz; \
+	fi
+
+
+## call 'make $ALLTRG' for all languages once as source language
+
+$(ALLSRC): %.src: %
+	${MAKE} SRC=$< ${ALLTRG}
+
+
+## for all languages as target language: align to current source language
+
+$(ALLTRG): %.trg: %
+	${MAKE} SRC=$(SRC) TRG=$< align
+
+
+# all alignment file targets for the current language pair:
+#
+# files with the same name are parallel documents!
+# --> grep those and make them alignment targets!
+
+
+#ALGFILES = $(addprefix $(SRC)-$(TRG)/,\
+#	 	$(shell ls ${SRC} ${TRG} | grep '\.${XMLEXT}$$' |\
+#			sort | uniq -c | grep '^ *2 *' | sed 's/^ *2 *//'))
+
+ALGFILES = $(addprefix $(SRC)-$(TRG)/,\
+	   $(shell find ${SRC}/ ${TRG}/ -name '*.${XMLEXT}' -printf "%P\n" |\
+		   sort | uniq -c | grep '^ *2 *' | sed 's/^ *2 *//'))
+
+
+## this is the final target (all sentence alignments in one file)
+
+${SRC}-${TRG}.xml.gz: ${ALGFILES}
+	mkdir -p ${SRC}-${TRG}
+	-( find ${SRC}-${TRG}/ -type f -name '*.xml.gz' |\
+		sort |\
+		xargs zgrep --no-filename 'link' >> $@.links )
+	if [ -s $@.links ]; then \
+	  echo '<?xml version="1.0" encoding="utf-8"?>' >$@.tmp; \
+	  echo '<!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">' \
+		  >>$@.tmp; \
+	  echo '<cesAlign version="1.0">' >> $@.tmp; \
+	  cat $@.links >> $@.tmp; \
+	  echo '</cesAlign>' >> $@.tmp; \
+	  gzip $@.tmp; \
+	  mv $@.tmp.gz $@; \
+	fi
+	rm -f $@.links
+
+
+# individual sentence alignment files (for each document pair)
+
+${ALGFILES}: ${SRC}-${TRG}/%: ${SRC}/% ${TRG}/%
+	mkdir -p $(shell dirname $@)
+	${SENTALIGN} -s ${SRC} -t ${TRG} \
+		-src $< -trg $(patsubst ${SRC}/%,${TRG}/%,$<) -out $@
+
+
+
+
+
+
+
+
+# make only the alignment files for each language pair
+
+
+create-align-files:
+	for s in ${LANGUAGES}; do \
+	  for t in ${LANGUAGES}; do \
+		make SRC=$$s TRG=$$t create-align-file; \
+	  done \
+	done
+
+create-align-file:
+	if [ "${SRC}" != "${TRG}" ]; then \
+	  if [ -d "${SRC}-${TRG}" ]; then \
+	find ${SRC}-${TRG}/ -type f -name '*.xml.gz' |\
+		sort |\
+		xargs zgrep --no-filename 'link' |\
+	sed 's/\.xml"/\.xml.gz"/g' >> ${SRC}-${TRG}.links; \
+	if [ -s ${SRC}-${TRG}.links ]; then \
+	  echo '<?xml version="1.0" encoding="utf-8"?>' >${SRC}-${TRG}.tmp; \
+	  echo '<!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">' \
+		  >>${SRC}-${TRG}.tmp; \
+	  echo '<cesAlign version="1.0">' >> ${SRC}-${TRG}.tmp; \
+	  cat ${SRC}-${TRG}.links >> ${SRC}-${TRG}.tmp; \
+	  echo '</cesAlign>' >> ${SRC}-${TRG}.tmp; \
+	  gzip ${SRC}-${TRG}.tmp; \
+	  mv ${SRC}-${TRG}.tmp.gz ${SRC}-${TRG}.xml.gz; \
+	fi; \
+	rm -f ${SRC}-${TRG}.links; \
+	  fi; \
+	fi

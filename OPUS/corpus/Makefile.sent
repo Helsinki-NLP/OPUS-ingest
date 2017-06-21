@@ -1,0 +1,35 @@
+# -*-makefile-*-
+#
+# Makefile targets for simple pre-processing of XML files
+# --> add only sentence boundaries!
+#
+# files in src/ should have the same files extension as output files
+# (---> *.xml.gz)
+#
+
+ifndef LANGUAGE
+	LANGUAGE=$(firstword ${LANGUAGES})
+endif
+
+SRCDIR   = src/${LANGUAGE}
+RAWFILES = $(patsubst src/%.${XMLEXT},raw/%.${XMLEXT}, \
+		$(shell find ${SRCDIR} -name '*.${XMLEXT}'))
+
+
+preprocess:
+	for l in ${LANGUAGES}; do \
+		${MAKE} LANGUAGE=$$l preprocess_files; \
+	done
+
+preprocess_files: ${RAWFILES}
+
+raw/${LANGUAGE}/%.${XMLEXT}: src/${LANGUAGE}/%.${TXTEXT}
+	mkdir -p $(shell dirname $@)
+	${SENT} -in $< -out $@
+
+clean-raw:
+	for l in ${LANGUAGES}; do \
+	    if [ -d "raw/$$l" ]; then \
+		rm -fr raw/$$l; \
+	    fi \
+	done

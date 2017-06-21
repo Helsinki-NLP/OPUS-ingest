@@ -1,0 +1,51 @@
+# -*-makefile-*-
+#
+# create CWB index
+
+
+
+
+INDEXER = $(UPLUGCWB)/scripts/opus-indexer.pl -s
+
+cwb-index:
+	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
+	mkdir -p $(CWBDATA)
+	mkdir -p $(CWBREG)
+	$(INDEXER) -v -c ${CORPUS} \
+	           -d $(CWBDATA) \
+		   -m cwbtmp \
+	           -r $(CWBREG) \
+		   -P '(id|alternative|emphasis|initial)' \
+	           -t $(ALGEXT) \
+	           $(LANGUAGES)
+	rm -fr cwbtmp
+
+# (add -k to keep temporary file for cwb encoding!)
+
+
+
+## only convert to vertical format!
+## in UTF-8
+
+cwb-convert:
+	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
+	mkdir -p $(CWBDATA)
+	mkdir -p $(CWBREG)
+	$(INDEXER) -C -k -v -c ${CORPUS} \
+		   -e utf8 \
+		   -p '(tree|lem)' \
+	           -d $(CWBDATA) \
+		   -m cwbtmp \
+	           -r $(CWBREG) \
+	           -t $(ALGEXT) \
+	           $(LANGUAGES)
+
+
+
+# 		   -P '(id|alternative|emphasis|initial)' \
+
+#	perl -pi.orig -e 's|HOME ${CWBDATA}|HOME /home/opus/public_html/cwb/data|' ${CWBREG}/${CORPUS}/*
+#	rm ${CWBREG}/${CORPUS}/*.orig
+
+
+
