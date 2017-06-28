@@ -35,7 +35,7 @@ clean: ${NLPL_SOURCES}/${PACKAGE}/${VERSION}
 	make -C $< clean
 
 install-prerequisites:
-	@for m in ${MODULES}; do \
+	@for m in ${PERLMODULES}; do \
 	  echo "test module $$m"; \
 	  perl -e "use $$m;" || cpan $$m; \
 	done

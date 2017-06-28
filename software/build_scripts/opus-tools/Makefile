@@ -14,12 +14,17 @@ VERSION = 0.02
 
 GITURL = https://bitbucket.org/tiedemann/opus-tools.git
 
-.PHONY: all fetch install clean
+.PHONY: all fetch install re-install clean
 all: ${NLPL_BIN}/opus-read
 
 fetch: ${NLPL_SOURCES}/${PACKAGE}/${VERSION}
 install: ${NLPL_BIN}/opus-read
+re-install:
+	rm -fr ${NLPL_SOURCES}/${PACKAGE}/${VERSION}
+	${MAKE} install
 clean:
+	-make -C ${NLPL_SOURCES}/${PACKAGE}/${VERSION} clean
+
 
 ${NLPL_SOURCES}/${PACKAGE}/${VERSION}:
 	mkdir -p ${NLPL_SOURCES}/${PACKAGE}
