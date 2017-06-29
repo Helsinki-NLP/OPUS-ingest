@@ -28,8 +28,9 @@ fetch: ${NLPL_SOURCES}/${PACKAGE}/${VERSION}
 
 install: ${NLPL_SOURCES}/${PACKAGE}/${VERSION}
 	@perl -e 'use inc::Module::Install;' || ${MAKE} -C ../perl-install all
-	${MAKE} install-prerequisites 
-	make -C $< PREFIX=${NLPL_SOFTWARE} all test install
+	${MAKE} install-prerequisites
+	mkdir -p ${NLPL_SOFTWARE}/${PACKAGE}/${VERSION}
+	make -C $< PREFIX=${NLPL_SOFTWARE}/${PACKAGE}/${VERSION} all test install
 
 clean: ${NLPL_SOURCES}/${PACKAGE}/${VERSION}
 	make -C $< clean

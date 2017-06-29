@@ -33,6 +33,7 @@ ${NLPL_SOURCES}/${PACKAGE}/${VERSION}:
 ${NLPL_BIN}/opus-read: ${NLPL_SOURCES}/${PACKAGE}/${VERSION}
 	@perl -e 'use inc::Module::Install;' || ${MAKE} -C ../perl-install all
 	@perl -e 'use XML::Parser;' || cpan XML::Parser
-	cd $< && perl Makefile.PL PREFIX=${NLPL_SOFTWARE}
+	mkdir -p ${NLPL_SOFTWARE}/${PACKAGE}/${VERSION}
+	cd $< && perl Makefile.PL PREFIX=${NLPL_SOFTWARE}/${PACKAGE}/${VERSION}
 	make -C $< install
 	make -C $< clean

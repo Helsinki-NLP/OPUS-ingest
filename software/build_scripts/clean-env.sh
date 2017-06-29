@@ -15,9 +15,9 @@ module purge
 umask u=rwx,g=rx,o=rx
 
 if [ `hostname --domain` == "csc.fi" ]; then
-    NLPL_HOME=/proj/nlpl
+    export NLPL_HOME=/proj/nlpl
 else
-    NLPL_HOME=/projects/nlpl
+    export NLPL_HOME=/projects/nlpl
 fi
 
 # basic environment paths
