@@ -3,7 +3,7 @@
 # makefile for installing pdf2xml under NLPL
 #
 # Joerg Tiedemann <jorg.tiedemann@helsinki.fi>
-# created: Tue Jun 27, 2017
+# created: Sat Jul  1, 2017
 #
 
 include ../Makefile.common

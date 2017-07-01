@@ -57,12 +57,12 @@ PERLMODULES =	inc::latest \
 		XML::Simple \
 		Switch
 
-# Class::Sniff \
+# Class::Sniff
 # Lingua::Identify::Blacklists
 
 CPAN = http://search.cpan.org/CPAN/authors/id/
 CPANMODULES = 	E/ET/ETJ/Inline-Java-0.58 \
-		T/TI/TIEDEMANN/Lingua-Identify-Blacklists-0.04
+		T/TI/TIEDEMANN/Lingua-Identify-Blacklists-0.04b
 
 .PHONY: all fetch install clean install-prerequisites
 
@@ -182,6 +182,16 @@ ${TIKA}: ${PACKAGE_SOURCE}
 ${patsubst ${PACKAGE_SOURCE}/%,${PACKAGE_HOME}/%,${TIKA}}: ${TIKA}
 	${INSTALL_BIN} $< $@
 
+
+.PHONY: software-tidy
+software-tidy: ${PACKAGE_HOME}/bin/tidy
+${NLPL_SOURCES}/tidy-html5:
+	git clone https://github.com/htacg/tidy-html5.git $@
+${PACKAGE_HOME}/bin/tidy: ${NLPL_SOURCES}/tidy-html5
+	cd $</build/cmake && \
+	  cmake ../.. 	-DCMAKE_BUILD_TYPE=Release \
+			-DCMAKE_INSTALL_PREFIX=${PACKAGE_HOME}
+	make -C $</build/cmake install clean
 
 
 .PHONY: install-cpan-modules
