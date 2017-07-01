@@ -6,6 +6,10 @@
 # created: Tue Jun 27, 2017
 #
 
+INSTALL = install -c
+INSTALL_BIN = ${INSTALL} -m 755
+INSTALL_DATA = ${INSTALL} -m 644
+
 ifeq (${shell hostname --domain},csc.fi)
   NLPL_HOME=/proj/nlpl
 else
@@ -27,8 +31,8 @@ NLPL_SHARE    = ${NLPL_SOFTWARE}/share
 # basic environment variables
 export NLPL_HOME
 export MANPATH=/usr/local/share/man:/usr/share/man/overrides:/usr/share/man:/usr/man
-# export PERL5LIB=${NLPL_HOME}/software/share/perl5:${NLPL_HOME}/software/lib64/perl5
-# export LD_LIBRARY_PATH=
+export PERL5LIB=${NLPL_HOME}/software/share/perl5:${NLPL_HOME}/software/lib64/perl5
+export LD_LIBRARY_PATH=
 export USERAPPL=
 export PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/appl/bin
 export BOOST_ROOT=

@@ -1,6 +1,6 @@
 #-*-makefile-*-
 #
-# makefile for installing opus-tools under NLPL
+# makefile for installing pdf2xml under NLPL
 #
 # Joerg Tiedemann <jorg.tiedemann@helsinki.fi>
 # created: Tue Jun 27, 2017
@@ -9,10 +9,10 @@
 include ../Makefile.common
 
 
-PACKAGE = opus-tools
-VERSION = 0.02
+PACKAGE = pdf2xml
+VERSION = 0.2.7
 
-GITURL = https://bitbucket.org/tiedemann/opus-tools.git
+GITURL = https://bitbucket.org/tiedemann/pdf2xml.git
 
 PACKAGE_SOURCE = ${NLPL_SOURCES}/${PACKAGE}/${VERSION}
 PACKAGE_HOME = ${NLPL_SOFTWARE}/${PACKAGE}/${VERSION}
@@ -20,11 +20,11 @@ PACKAGE_HOME = ${NLPL_SOFTWARE}/${PACKAGE}/${VERSION}
 
 .PHONY: all fetch install re-install clean
 
-all: ${PACKAGE_HOME}/bin/opus-read
+all: ${PACKAGE_HOME}/bin/pdf2xml
 
 fetch: ${PACKAGE_SOURCE}
 
-install: ${PACKAGE_HOME}/bin/opus-read
+install: ${PACKAGE_HOME}/bin/pdf2xml
 
 re-install:
 	rm -fr ${PACKAGE_SOURCE}
@@ -37,10 +37,9 @@ ${PACKAGE_SOURCE}:
 	mkdir -p ${NLPL_SOURCES}/${PACKAGE}
 	git clone ${GITURL} $@
 
-${PACKAGE_HOME}/bin/opus-read: ${PACKAGE_SOURCE}
+${PACKAGE_HOME}/bin/pdf2xml: ${PACKAGE_SOURCE}
 	@perl -e 'use inc::Module::Install;' || ${MAKE} -C ../perl-install all
-	@perl -e 'use XML::Parser;' || cpan XML::Parser
 	mkdir -p ${PACKAGE_HOME}
 	cd $< && perl Makefile.PL PREFIX=${PACKAGE_HOME}
-	make -C $< install clean
+	make -C $< all test install clean
 	touch $@
