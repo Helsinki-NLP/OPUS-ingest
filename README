@@ -13,5 +13,5 @@ incoming ...... collections and ideas for new resources
 data .......... original source documents
 tools ......... various tools (tokenizer, tagger, ....)
 wordalign ..... word alignments (and SMT models) for some OPUS corpora
-
+nlpl .......... tools and scripts for the NLPL project
 
