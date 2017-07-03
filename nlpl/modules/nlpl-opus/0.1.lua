@@ -7,8 +7,10 @@ whatis("Description: Tools for OPUS")
 
 -- load other relevant modules
 
+load("StdEnv")
 load("nlpl-uplug")
 load("nlpl-cwb")
+load("nlpl-udpipe")
 
 -- some basic information
 
