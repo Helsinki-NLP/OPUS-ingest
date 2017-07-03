@@ -6,7 +6,7 @@ whatis("URL: https://bitbucket.org/tiedemann/uplug")
 whatis("Description: NLP tools for processing parallel corpora")
 
 local basepath = "/proj/nlpl/software"
-local package = "nlpl-uplug"
+local package = "uplug"
 local version = "latest"
 
 -- add binaries and libraries to env

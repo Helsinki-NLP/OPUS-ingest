@@ -6,7 +6,7 @@ whatis("URL: http://cwb.sourceforge.net/")
 whatis("Description: Corpus Workbench CWB")
 
 local basepath = "/proj/nlpl/software"
-local package = "nlpl-cwb"
+local package = "cwb"
 local version = "latest"
 
 -- add binaries and libraries to env
