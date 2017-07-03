@@ -2,6 +2,17 @@
 
 The goal of this activity is to setup OPUS inside of a proper IT framework.
 
+
+## Install ##
+
+Build scripts are available in directory `software/build_scripts`.
+Install scripts and modules by running
+
+~~~~
+make -C software/build_scripts install
+~~~~
+
+
 ## Data ##
 
 * move data to project directory on CSC (what is a good permanent space?)

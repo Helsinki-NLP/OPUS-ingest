@@ -1,13 +1,13 @@
 help([[
 This module loads Uplug with various tools for processing parallel corpora.
 ]])
-whatis("Version: 0.3.8dev (latest from bitbucket)")
+whatis("Version: latest")
 whatis("URL: https://bitbucket.org/tiedemann/uplug")
 whatis("Description: NLP tools for processing parallel corpora")
 
 local basepath = "/proj/nlpl/software"
-local package = "uplug"
-local version = "0.3.8dev"
+local package = "nlpl-uplug"
+local version = "latest"
 
 -- add binaries and libraries to env
 

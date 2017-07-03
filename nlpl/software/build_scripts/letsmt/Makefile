@@ -9,7 +9,7 @@
 include ../Makefile.common
 
 PACKAGE = letsmt
-VERSION = dev
+VERSION = latest
 
 # GITURL = https://bitbucket.org/hy-crossNLP/letsmt-repository
 GITURL = git@bitbucket.org:hy-crossNLP/letsmt-repository.git
@@ -64,7 +64,7 @@ CPAN = http://search.cpan.org/CPAN/authors/id/
 CPANMODULES = 	E/ET/ETJ/Inline-Java-0.58 \
 		T/TI/TIEDEMANN/Lingua-Identify-Blacklists-0.04b
 
-.PHONY: all fetch install clean install-prerequisites
+.PHONY: all fetch install clean install-prerequisites uninstall
 
 all test install: ${PACKAGE_SOURCE}/perllib/LetsMT/Makefile
 	make -C ${dir $<} PREFIX=${PACKAGE_HOME} $@
@@ -89,7 +89,7 @@ install-prerequisites: ${PREREQUISITES}
 	done
 
 ${PACKAGE_SOURCE}:
-	mkdir -p ${NLPL_SOURCES}/${PACKAGE}
+	${MKDIR} ${NLPL_SOURCES}/${PACKAGE}
 	git clone ${GITURL} $@
 
 ${PACKAGE_SOURCE}/perllib/LetsMT/Makefile: ${PACKAGE_SOURCE}
@@ -150,7 +150,7 @@ ${HUNALIGN}.tgz: ${PACKAGE_SOURCE}
 ${PACKAGE_HOME}/bin/hunalign: ${HUNALIGN}.tgz
 	tar -C ${PACKAGE_SOURCE}/lib -zxf $<
 	make -C ${HUNALIGN}/src/hunalign CC=g++
-	mkdir -p ${dir $@}
+	${MKDIR} ${dir $@}
 	${INSTALL_BIN} ${HUNALIGN}/src/hunalign/hunalign ${PACKAGE_HOME}/bin/hunalign
 	rm -fr ${HUNALIGN}
 
@@ -170,7 +170,7 @@ software-opennlp: ${PACKAGE_HOME}/bin/opennlp
 ${PACKAGE_SOURCE}/lib/${OPENNLP}-bin.tar.gz: ${PACKAGE_SOURCE}
 ${PACKAGE_HOME}/bin/opennlp: ${OPENNLP}-bin.tar.gz
 	tar -C ${PACKAGE_SOURCE}/lib -zxf $<
-	mkdir -p ${dir $@} ${PACKAGE_HOME}/lib
+	${MKDIR} ${dir $@} ${PACKAGE_HOME}/lib
 	${INSTALL_BIN} ${OPENNLP}/bin/opennlp ${PACKAGE_HOME}/bin/opennlp
 	${INSTALL_BIN} ${OPENNLP}/lib/*.jar ${PACKAGE_HOME}/lib
 	rm -fr ${OPENNLP}
@@ -206,4 +206,6 @@ install-cpan-modules:
 	done
 
 
-
+uninstall:
+	rm -fr ${PACKAGE_SOURCE}
+	rm -fr ${PACKAGE_HOME}

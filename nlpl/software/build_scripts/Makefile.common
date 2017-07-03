@@ -10,6 +10,9 @@ INSTALL = install -c
 INSTALL_BIN = ${INSTALL} -m 755
 INSTALL_DATA = ${INSTALL} -m 644
 
+MKDIR = mkdir -p -m 755
+
+
 ifeq (${shell hostname --domain},csc.fi)
   NLPL_HOME=/proj/nlpl
 else
@@ -17,9 +20,10 @@ else
 endif
 
 NLPL_MODULES  = ${NLPL_HOME}/modules
-NLPL_DATA     = ${NLPL_HOME}/datasets
+NLPL_DATASETS = ${NLPL_HOME}/datasets
 NLPL_SOFTWARE = ${NLPL_HOME}/software
 NLPL_SOURCES  = ${NLPL_SOFTWARE}/sources
+NLPL_BUILD    = ${NLPL_SOFTWARE}/build_scripts
 NLPL_BIN      = ${NLPL_SOFTWARE}/bin
 NLPL_LIB      = ${NLPL_SOFTWARE}/lib
 NLPL_LIB64    = ${NLPL_SOFTWARE}/lib64
