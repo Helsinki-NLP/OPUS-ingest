@@ -24,18 +24,25 @@ PERLMODULES =	Class::Inspector \
 PACKAGE_SOURCE = ${NLPL_SOURCES}/${PACKAGE}/${VERSION}
 PACKAGE_HOME = ${NLPL_SOFTWARE}/${PACKAGE}/${VERSION}
 
+
+export PATH:=${PACKAGE_HOME}/bin:${PATH}
+export LD_LIBRARY_PATH:=${PACKAGE_HOME}/lib:${LD_LIBRARY_PATH}
+export MANPATH:=${PACKAGE_HOME}/man:${MANPATH}
+export PERL5LIB:=${PACKAGE_HOME}/share/perl5:${PACKAGE_HOME}/lib64/perl5:${PERL5LIB}
+
+
 .PHONY: all fetch install clean install-prerequisites uninstall
 all: fetch install clean
 
-fetch: ${NLPL_SOURCES}/${PACKAGE}/${VERSION}
+fetch: ${PACKAGE_SOURCE}
 
-install: ${NLPL_SOURCES}/${PACKAGE}/${VERSION}
+install: ${PACKAGE_SOURCE}
 	@perl -e 'use inc::Module::Install;' || ${MAKE} -C ../perl-install all
 	${MAKE} install-prerequisites
-	${MKDIR} ${NLPL_SOFTWARE}/${PACKAGE}/${VERSION}
-	make -C $< PREFIX=${NLPL_SOFTWARE}/${PACKAGE}/${VERSION} all test install
+	${MKDIR} ${PACKAGE_HOME}
+	make -C $< PREFIX=${PACKAGE_HOME} all test install
 
-clean: ${NLPL_SOURCES}/${PACKAGE}/${VERSION}
+clean: ${PACKAGE_SOURCE}
 	make -C $< clean
 
 install-prerequisites:
@@ -44,9 +51,15 @@ install-prerequisites:
 	  perl -e "use $$m;" || cpan $$m; \
 	done
 
-${NLPL_SOURCES}/${PACKAGE}/${VERSION}:
+${PACKAGE_SOURCE}:
 	${MKDIR} ${NLPL_SOURCES}/${PACKAGE}
-	git clone ${GITURL} $@
+	${MKDIR} ${OPUS_TOOLS}/public
+	if [ -e ${OPUS_TOOLS}/public/${PACKAGE} ]; then \
+	  cd ${OPUS_TOOLS}/public/${PACKAGE} && git pull; \
+	else \
+	  git clone ${GITURL} ${OPUS_TOOLS}/public/${PACKAGE}; \
+	fi
+	ln -s ${OPUS_TOOLS}/public/${PACKAGE} $@
 
 uninstall:
 	rm -fr ${PACKAGE_SOURCE}

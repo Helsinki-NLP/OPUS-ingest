@@ -16,6 +16,7 @@ umask u=rwx,g=rx,o=rx
 
 if [ `hostname --domain` == "csc.fi" ]; then
     export NLPL_HOME=/proj/nlpl
+    module load StdEnv
 else
     export NLPL_HOME=/projects/nlpl
 fi

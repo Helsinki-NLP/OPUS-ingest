@@ -40,6 +40,7 @@ prepend_path("MANPATH", pathJoin(basepath, "letsmt/latest/share/man"))
 prepend_path("PERL5LIB", pathJoin(basepath, "letsmt/latest/share/perl5"))
 prepend_path("PERL5LIB", pathJoin(basepath, "letsmt/latest/lib64/perl5"))
 prepend_path("PYTHONPATH", pathJoin(basepath, "letsmt/latest/lib/python2.6/site-packages"))
+prepend_path("LETSMTROOT", pathJoin(basepath, "letsmt/latest"))
 
 prepend_path("PATH", pathJoin(basepath, "subalign/latest/bin"))
 prepend_path("PERL5LIB", pathJoin(basepath, "subalign/latest/share/perl5"))
