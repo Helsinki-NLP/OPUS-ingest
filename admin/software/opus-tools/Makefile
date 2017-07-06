@@ -30,7 +30,7 @@ clean:
 ${PACKAGE_SOURCE}:
 	git clone ${GITURL} ${PACKAGE_SOURCE}
 
-${PACKAGE_HOME}/bin/opus-read: ${PACKAGE_SOURCE}
+${PREFIX}/bin/opus-read: ${PACKAGE_SOURCE}
 	@perl -e 'use inc::Module::Install;' || cpan Module::Install
 	@perl -e 'use XML::Parser;' || cpan XML::Parser
 	${MKDIR} ${PACKAGE_HOME}
