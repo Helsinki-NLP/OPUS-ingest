@@ -3,9 +3,15 @@
 # create CWB index
 
 
+# assume that the indexer script is in the path
+# NEW: do utf8 for all corpora! (requires CWB v3.2 or higher!)
 
+INDEXER = opus-index -s -e utf8
 
-INDEXER = $(UPLUGCWB)/scripts/opus-indexer.pl -s
+# INDEXER = $(UPLUGCWB)/scripts/opus-indexer.pl -s
+# INDEXER = ${OPUSTOOLS}/public/opus-tools/scripts/opus-index -s -e utf8
+# INDEXER = ${HOME}/research/nlpl/opus-tools/scripts/opus-index -s -e utf8
+
 
 cwb-index:
 	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
