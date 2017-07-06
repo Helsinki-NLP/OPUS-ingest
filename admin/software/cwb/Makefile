@@ -4,12 +4,16 @@
 # Joerg Tiedemann <jorg.tiedemann@helsinki.fi>
 #
 
+include ../Makefile.common
+
 PACKAGE = cwb
 VERSION = latest
 
 PACKAGE_SOURCE = src
 PACKAGE_HOME = build
 PREFIX = /usr/local
+
+PREREQUISITES = libglib2.0-dev bison flex libncurses5 libncurses5-dev libreadline-dev libpcre++-dev
 
 SVN_CWB = http://svn.code.sf.net/p/cwb/code/cwb/trunk
 SVN_CWBPERL = http://svn.code.sf.net/p/cwb/code/perl/trunk
@@ -48,7 +52,6 @@ clean: ${PACKAGE_SOURCE}
 	${MAKE} -C $< clean
 
 ${PACKAGE_SOURCE}:
-	${MKDIR} ${NLPL_SOURCES}/${PACKAGE}
 	svn export ${SVN_CWB} $@
 
 ${PACKAGE_SOURCE}/perl: | ${PACKAGE_SOURCE}
@@ -74,12 +77,12 @@ ${PACKAGE_HOME}/cwbenc: | ${PACKAGE_SOURCE}
 
 
 ${PREFIX}/bin/cqp: ${PACKAGE_SOURCE} ${PACKAGE_SOURCE}/pcre-8.40
+	sudo apt-get install ${PREREQUISITES}
 	mv $</config.mk $</config.original
 	sed -e 's/# PLATFORM-SPECIFIC.*$$/PLATFORM = linux-64/' \
 	    -e 's|# PREFIX = .*$$|PREFIX = ${PREFIX}|' \
-	    -e 's|# DEFAULT_REGISTRY .*$$|DEFAULT_REGISTRY = ${NLPL_DATASETS}/cwb|' \
+	    -e 's|# DEFAULT_REGISTRY .*$$|DEFAULT_REGISTRY = /media/cwb/reg|' \
 	< $</config.original > $</config.mk
-	${MKDIR} ${NLPL_DATASETS}/cwb
 	${MAKE} -C $< clean
 	${MAKE} -C $< depend
 	${MAKE} -C $< all
@@ -92,8 +95,8 @@ install-prerequistes: ${PACKAGE_SOURCE}/pcre-8.40
 ${PACKAGE_SOURCE}/pcre-8.40:
 	wget -O $@.tar.gz https://ftp.pcre.org/pub/pcre/pcre-8.40.tar.gz
 	tar -C ${dir $@} -xzf $@.tar.gz
-	cd $@ && ./configure 	--enable-unicode-properties
+	cd $@ && ./configure --enable-unicode-properties
 	${MAKE} -C $@ all 
-	sudo ${MAKE} -C install
-	${MAKE} -C clean
+	sudo ${MAKE} -C $@ install
+	${MAKE} -C $@ clean
 
