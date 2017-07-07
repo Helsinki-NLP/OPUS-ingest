@@ -1,0 +1,14 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = DGT
+VERSION = 4
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=<p>A collection of translation memories provided by the JRC. Source: <a href="https://ec.europa.eu/jrc/en/language-technologies/dgt-translation-memory">https://ec.europa.eu/jrc/en/language-technologies/dgt-translation-memory</a></p>
+EXTRAHTML=

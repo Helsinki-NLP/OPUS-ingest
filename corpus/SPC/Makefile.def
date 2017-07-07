@@ -1,0 +1,14 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = SPC
+VERSION = v1
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML = <p>This is a collection of parallel corpora collected by Hercules Dalianis and his research group for bilingual dictionary construction.<br/> More information in: Hercules Dalianis, Hao-chun Xing, Xin Zhang: <i>Creating a Reusable English-Chinese Parallel Corpus for Bilingual Dictionary Construction</i>, In Proceedings of LREC2010 (source: <a href="http://people.dsv.su.se/~hercules/SEC/">http://people.dsv.su.se/~hercules/SEC/</a>) and Konstantinos Charitakis (2007): <a href="http://dspace.utlib.ee/xmlui/bitstream/handle/10062/2576/stud-Charitakis-10.pdf?sequence=1">Using Parallel Corpora to Create a Greek-English Dictionary with UPLUG</a>, In Proceedings of NODALIDA 2007. Afrikaans-English: Aldin Draghoender and Mattias Kanhov: <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.174.6893">Creating a reusable English – Afrikaans parallel corpora for bilingual dictionary construction</a></p>
+

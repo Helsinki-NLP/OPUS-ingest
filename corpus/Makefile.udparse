@@ -5,26 +5,37 @@
 #
 
 
-UDLANGUAGES = 	ar eu bg hr cs da nl en et ft fr de el he hi hu \
-		id ga it la nb fa pl pt ro sl es sv ta 
+# UDPARSE   = ${TOOLS}/public/preprocess/opus-udpipe.pl
+UDPARSE     = opus-udpipe
+UDLANGUAGES = ${shell ${UDPARSE} -L}
+
+# UDLANGUAGES = ar eu bg hr cs da nl en et ft fr de el he hi hu \
+# 		id ga it la nb fa pl pt ro sl es sv ta 
+
 
 ifndef LANGUAGE
   LANGUAGE=$(firstword ${LANGUAGES})
 endif
+ifndef CORPUSRAW
+  CORPUSRAW = raw
+endif
+ifndef CORPUSPARSED
+  CORPUSPARSED = parsed
+endif
 
-RAWDIR   = raw/${LANGUAGE}
-XMLFILES = $(subst :,\:,$(patsubst raw/%,ud/%,$(shell find ${RAWDIR}/ -name '*.${XMLEXT}')))
 
-UDPARSE = ${TOOLS}/public/preprocess/opus-udpipe.pl
-
+RAWDIR   = ${CORPUSRAW}/${LANGUAGE}
+XMLFILES = $(subst :,\:,$(patsubst ${CORPUSRAW}/%,${CORPUSPARSED}/%,$(shell find ${RAWDIR}/ -name '*.${XMLEXT}')))
 
 udparse:
 	for l in ${UDLANGUAGES}; do \
+	  if [ -d ${CORPUSRAW}/$$l ]; then \
 		${MAKE} LANGUAGE=$$l udparse_files; \
+	  fi; \
 	done
 
 udparse_files: ${XMLFILES}
 
-ud/${LANGUAGE}/%: raw/${LANGUAGE}/%
+${CORPUSPARSED}/${LANGUAGE}/%: ${CORPUSRAW}/${LANGUAGE}/%
 	mkdir -p $(shell dirname $@)
 	zcat "$<" | ${UDPARSE} -l ${LANGUAGE} | gzip -c > "$@"

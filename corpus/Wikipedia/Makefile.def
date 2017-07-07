@@ -1,0 +1,15 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = Wikipedia
+VERSION = 1.0
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=<p>This is a corpus of parallel sentences extracted from Wikipedia by Krzysztof Wołk and Krzysztof Marasek. Please cite the following publication if you use the data: Krzysztof Wołk and Krzysztof Marasek: <i><a href="http://www.sciencedirect.com/science/article/pii/S2212017314005453">Building Subject-aligned Comparable Corpora and Mining it for Truly Parallel Sentence Pairs.</a></i>, Procedia Technology, 18, Elsevier, p.126-132, 2014</p>
+
+EXTRAHTML=

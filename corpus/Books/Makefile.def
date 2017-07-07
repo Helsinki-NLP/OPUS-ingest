@@ -1,0 +1,15 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = Books
+# VERSION = 0.1
+VERSION = $(shell date +%F)
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=This is a collection of copyright free books aligned by <a href="http://www.farkastranslations.com">Andras Farkas</a>, which are available from <a href="http://www.farkastranslations.com/bilingual_books.php">http://www.farkastranslations.com/bilingual_books.php</a><p></p>Note that the texts are rather dated due to copyright issues and that some of them are manually reviewed (check the meta-data at the top of the corpus files in XML). The source is multilingually aligned, which is available from <a href="http://www.farkastranslations.com/bilingual_books.php">http://www.farkastranslations.com/bilingual_books.php</a>. In OPUS, the alignment is formally bilingual but the multilingual alignment can be recovered from the XCES sentence alignment files. Note also that the alignment units from the original source may include multi-sentence paragraphs, which are split and sentence-aligned in OPUS.<h3>Terms of Use</h3><p>All texts are freely available for personal, educational and research use. Commercial use (e.g. reselling as parallel books) and mass redistribution without explicit permission are not granted. Please acknowledge the source when using the data!</p>
+EXTRAHTML=

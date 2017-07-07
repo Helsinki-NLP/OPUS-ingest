@@ -1,0 +1,15 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = TEP
+VERSION = 0.1
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+
+SRCHTML=<p><a href="http://ece.ut.ac.ir/nlp/resources.html">TEP: Tehran English-Persian parallel corpus</a></p><p>The first free Eng-Per corpus, provided by the Natural Language and Text Processing Laboratory, University of Tehran</p><p>Usage of this package for any research or non-commercial purposes requires the precondition that you cite the following paper:</p><p>M. T. Pilevar, H. Faili, and A. H. Pilevar, “TEP: Tehran English-Persian Parallel Corpus”, in proceedings of 12th International Conference on Intelligent Text Processing and Computational Linguistics (CICLing-2011). </p>
+EXTRAHTML=

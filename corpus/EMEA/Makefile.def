@@ -1,0 +1,14 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = EMEA
+VERSION = 0.3
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=<p>This is a parallel corpus made out of PDF documents from the European Medicines Agency. All files are automatically converted from PDF to plain text using pdftotext with the command line arguments -layout -nopgbrk -eol unix. There are some known problems with tables and multi-column layouts - some of them are fixed in the current version.<br/><br/>source: <a href="http://www.emea.europa.eu/">http://www.emea.europa.eu/</a></p>
+EXTRAHTML=<p>NEW: <a href="http://urd.let.rug.nl/~vannoord/trees/Treebank/Machine/EMEA/COMPACT/">Dutch EMEA Treebank (parsed with Alpino)</a></p>

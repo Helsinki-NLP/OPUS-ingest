@@ -1,0 +1,14 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = TED2013
+VERSION = v1.1
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=<p>A parallel corpus of <a href="http://www.ted.com/">TED talk</a> subtitles provided by CASMACAT: <a href="http://www.casmacat.eu/corpus/ted2013.html">http://www.casmacat.eu/corpus/ted2013.html</a>. The files are originally provided by <a href="https://wit3.fbk.eu">https://wit3.fbk.eu</a>.</p>
+EXTRAHTML=

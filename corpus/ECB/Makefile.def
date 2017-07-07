@@ -1,0 +1,15 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = ECB
+VERSION = 0.1
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=Original source: Website and documentatuion from the European Central Bank,  compiled and made available by Alberto Simoes (thank you very much!)
+
+EXTRAHTML=

@@ -1,0 +1,10 @@
+@inproceedings{SkadinsEA:LREC14,
+  author =       {Raivis Skadi\c{n}\v{s} and J{\"o}rg Tiedemann and Roberts Rozis and Daiga Deksne},
+  title =        {Billions of Parallel Words for Free: Building and Using the EU Bookshop Corpus},
+  booktitle =    {Proceedings of the 9th International Conference
+                  on Language Resources and Evaluation (LREC-2014)},
+  year =         2014,
+  month =        {May},
+  address =      {Reykjavik, Iceland},
+  publisher =    {European Language Resources Association (ELRA)},
+}

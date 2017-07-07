@@ -5,11 +5,18 @@
 #
 
 ifndef LANGUAGE
-  LANGUAGE=$(firstword ${LANGUAGES})
+  LANGUAGE = $(firstword ${LANGUAGES})
+endif
+ifndef CORPUSRAW
+  CORPUSRAW = raw
+endif
+ifndef CORPUSXML
+  CORPUSXML = xml
 endif
 
-RAWDIR   = raw/${LANGUAGE}
-XMLFILES = $(subst :,\:,$(patsubst raw/%,xml/%,$(shell find ${RAWDIR}/ -name '*.${XMLEXT}')))
+
+RAWDIR   = ${CORPUSRAW}/${LANGUAGE}
+XMLFILES = $(subst :,\:,$(patsubst ${CORPUSRAW}/%,${CORPUSXML}/%,$(shell find ${RAWDIR}/ -name '*.${XMLEXT}')))
 
 
 
@@ -29,16 +36,17 @@ annotate:
 
 annotate_files: ${XMLFILES}
 
-xml/${LANGUAGE}/%: raw/${LANGUAGE}/%
+${CORPUSXML}/${LANGUAGE}/%: ${CORPUSRAW}/${LANGUAGE}/%
 	mkdir -p $(shell dirname $@)
 	${TAG} -in "$<" -out "$@"
 
 #	${TAG} -in "$<" | tidy -i -xml -utf8 -wrap 0 | gzip -c > "$@"
 
 
+# this looks dangerous ....
 clean-xml:
 	for l in ${LANGUAGES}; do \
-	    if [ -d "xml/$$l" ]; then \
-		rm -fr xml/$$l; \
+	    if [ -d "${CORPUSXML}/$$l" ]; then \
+		rm -fr ${CORPUSXML}/$$l; \
 	    fi \
 	done

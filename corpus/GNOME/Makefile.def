@@ -1,0 +1,15 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = GNOME
+# VERSION = 0.1
+VERSION = $(shell date +%F)
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=<p>A parallel corpus of GNOME localization files. Source: <a href="https://l10n.gnome.org">https://l10n.gnome.org</a></p>
+EXTRAHTML=

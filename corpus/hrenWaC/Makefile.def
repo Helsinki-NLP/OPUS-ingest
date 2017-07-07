@@ -1,0 +1,13 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = hrenWaC
+VERSION = 1
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=<p>The Croatian-English Parallel Web Corpus - The parallel document pair candidates were automatically extracted from the hrWaC corpus by Nikola Ljubešić. These candidates were manually checked by Daša Berović and Danijela Merkler under the supervision of Marko Tadić. The collection is available from <a href="http://www.nljubesic.net/resources/corpora/hrenwac/">http://www.nljubesic.net/resources/corpora/hrenwac</a> provided under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA license</a></p>
+EXTRAHTML=

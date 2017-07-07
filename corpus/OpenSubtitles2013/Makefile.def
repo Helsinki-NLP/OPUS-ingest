@@ -1,0 +1,17 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = OpenSubtitles2013
+VERSION = 
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=<p>This is an EXTENSION of the OpenSubtitles2012 collection of translated movie subtitles from <a href="http://www.opensubtitles.org/">http://www.opensubtitles.org/</a>. It contains additional subtitle pairs not covered by the previous distribution. <br/><b>IMPORTANT:</b> If you use the OpenSubtitle corpus: <br/>Please, add a link to <b>http://www.opensubtitles.org/</b> to your website and to your reports and publications produced with the data! I promised this when I got the data from the providers of that website!</p> <p> This is a slightly cleaner version of the subtitle collection using improved sentence alignment and better language checking.</p>
+
+EXTRAHTML=
+
+# <p><b>WARNING!</b> This collection is not ready yet! Data sets will still change a lot. Use with care!!</p>

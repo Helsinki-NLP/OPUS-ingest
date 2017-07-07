@@ -1,0 +1,14 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = MultiUN
+VERSION = 1
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=This is a collection of translated documents from the United Nations originally compiled by Andreas Eisele and Yu Chen (see <a href="http://www.euromatrixplus.net/multi-un/">http://www.euromatrixplus.net/multi-un/</a>). Please cite <a href="http://www.dfki.de/lt/publication_show.php?id=4790">MultiUN: A Multilingual corpus from United Nation Documents, Andreas Eisele and Yu Chen, LREC 2010</a>
+EXTRAHTML=

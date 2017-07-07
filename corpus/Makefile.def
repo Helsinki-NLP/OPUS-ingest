@@ -41,15 +41,22 @@ else
   OPUSPUB   = ${OPUSHOME}/../public_html
 endif
 
-OPUSCWB     = ${OPUSHOME}/cwb
-CWBDATA     = ${OPUSCWB}/data
-CWBREG      = ${OPUSCWB}/reg
+# CWB for standard annotation
+OPUSCWB      = ${OPUSHOME}/cwb
+CWBDATA      = ${OPUSCWB}/data
+CWBREG       = ${OPUSCWB}/reg
 
-CORPUSHOME  = ${OPUSCORPORA}/${CORPUS}
-CORPUSSRC   = ${CORPUSHOME}/src
-CORPUSXML   = ${CORPUSHOME}/xml
-CORPUSRAW   = ${CORPUSHOME}/raw
-CORPUSHTML  = ${OPUSHTML}/${CORPUS}
+# CWB for UD-parsed data
+UDCWB        = ${OPUSHOME}/cwb-ud
+UDCWBDATA    = ${UDCWB}/data
+UDCWBREG     = ${UDCWB}/reg
+
+CORPUSHOME   = ${OPUSCORPORA}/${CORPUS}
+CORPUSSRC    = ${CORPUSHOME}/src
+CORPUSXML    = ${CORPUSHOME}/xml
+CORPUSRAW    = ${CORPUSHOME}/raw
+CORPUSPARSED = ${CORPUSHOME}/parsed
+CORPUSHTML   = ${OPUSHTML}/${CORPUS}
 CORPUSWORDALIGN  = ${OPUSWORDALIGN}/${CORPUS}
 
 

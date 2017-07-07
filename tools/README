@@ -1,0 +1,11 @@
+
+OPUS/tools
+A collection of various tools used for creating and working with OPUS
+
+
+opus ........ OPUS-specific tools & scripts
+public ...... freely available tools
+academic .... tools freely available for research purposes
+nonfree ..... non-free or licensed tools
+
+

@@ -1,0 +1,14 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = GlobalVoices
+VERSION = 2015
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=<p>A parallel corpus of news stories from the web site <a href="https://globalvoices.org/">Global Voices</a> compiled and provided by CASMACAT: <a href="http://casmacat.eu/corpus/global-voices.html">http://casmacat.eu/corpus/global-voices.html</a>. This version is adjusted for OPUS and is truly multilingual.</p>
+EXTRAHTML=

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /opus/*.tar$
+Disallow: /opus/*.gz$
+Disallow: /opus/*.zip$
+Disallow: /trac
+Disallow: /letsmt-trac
+

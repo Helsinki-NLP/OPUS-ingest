@@ -1,0 +1,14 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = Ubuntu
+VERSION = 14.10
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=<p>A parallel corpus of Ubuntu localization files. Source: <a href="https://translations.launchpad.net">https://translations.launchpad.net</a></p>
+EXTRAHTML=

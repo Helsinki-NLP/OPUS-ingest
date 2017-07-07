@@ -1,0 +1,11 @@
+@InProceedings{TiedemannNygard:LREC04,
+  author =	 {J\"org Tiedemann and Lars Nygard},
+  title =	  {The {OPUS} corpus - parallel and free},
+  booktitle =	   {Proceedings of the Fourth International Conference
+                  on Language Resources and Evaluation (LREC'2004)},
+  year =	   2004,
+  address =	    {Lisbon, Portugal},
+  month =  {May},
+  pdf =          {http://stp.lingfil.uu.se/~joerg/published/lrec04_opus.pdf},
+  topic  =       {Parallel corpora}
+}

@@ -1,0 +1,14 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = TedTalks
+VERSION = 0.1
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=This is a Croatian-English parallel corpus of transcribed and translated TED talks, originally extracted from <a href="https://wit3.fbk.eu">https://wit3.fbk.eu</a>. The corpus is compiled by \&\\\#381;eljko Agi\&\\\#263; and is taken from <a href="http://lt.ffzg.hr/zagic">http://lt.ffzg.hr/zagic</a> provided under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-NC-SA license</a>.
+EXTRAHTML=

@@ -1,0 +1,14 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = PHP
+VERSION = 
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=<p>A parallel corpus originally extracted from <a href="http://se.php.net/download-docs.php">http://se.php.net/download-docs.php</a>. The original documents are written in English and have been partly translated into 21 languages. The original manuals contain about 500,000 words. The amount of actually translated texts varies for different languages between 50,000 and 380,000 words. The corpus is rather noisy and may include parts from the English original in some of the translations. The corpus is tokenized and each language pair has been sentence aligned.</p>
+EXTRAHTML=

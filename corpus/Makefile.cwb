@@ -12,6 +12,7 @@ INDEXER = opus-index -s -e utf8
 # INDEXER = ${OPUSTOOLS}/public/opus-tools/scripts/opus-index -s -e utf8
 # INDEXER = ${HOME}/research/nlpl/opus-tools/scripts/opus-index -s -e utf8
 
+XMLDIR = ${CORPUSXML}
 
 cwb-index:
 	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
@@ -27,6 +28,23 @@ cwb-index:
 	rm -fr cwbtmp
 
 # (add -k to keep temporary file for cwb encoding!)
+
+
+# create index of UD-parsed data
+cwb-index-ud:
+	-cd parsed && ln -s ../xml/*.xml.gz .
+	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
+	mkdir -p $(UDCWBDATA)
+	mkdir -p $(UDCWBREG)
+	$(INDEXER) -v -c ${CORPUS} \
+	           -d $(UDCWBDATA) \
+		   -m cwbudtmp \
+	           -r $(UDCWBREG) \
+		   -x parsed \
+		   -P '(id|alternative|emphasis|initial)' \
+	           -t $(ALGEXT) \
+	           $(LANGUAGES)
+	rm -fr cwbudtmp
 
 
 

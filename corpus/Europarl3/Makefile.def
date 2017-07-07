@@ -1,0 +1,14 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = Europarl3
+VERSION = 
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=<p>A parallel corpus extracted from the European Parliament web site by Philipp Koehn (University of Edinburgh). Appr. 40 million words per language. The main intended use is to aid statistical machine translation research.</p><p>More information can be found at <a href="http://www.statmt.org/europarl/">http://www.statmt.org/europarl/</a>. The main difference in this release vs. the first release in 2002 and second release in 2003 is that it is larger and it comes with improved processing tools that allow the creation of parallel corpora between any two of the 11 languages. Some data is now tagged with the original language the text was spoken in.</p>
+EXTRAHTML=<p>Old version: <a href="http://opus.lingfil.uu.se/Europarl.php">Europarl2</a>.</p><p>NEW: <a href="http://urd.let.rug.nl/~vannoord/trees/Treebank/Machine/europarl3/COMPACT/">Dutch Europarl3 Treebank (parsed with Alpino)</a>.</p>
