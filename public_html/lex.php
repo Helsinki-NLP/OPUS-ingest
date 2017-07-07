@@ -157,7 +157,7 @@ function update_feedback_counts($table,$srcID,$trgID){
 ?>
 </div>
 
-<h2><a href="http://opus.lingfil.uu.se">OPUS: </a>
+<h2><a href="/index.php">OPUS: </a>
 Search Word Alignment Database for <i><?php echo $lang; ?></i></h2>
 
 

@@ -246,6 +246,11 @@ sub DecodeString{
     use Encode;
 
     my ($lang,$string)=@_;
+
+    $string=decode('utf-8',$string);
+    return escapeHTML($string);
+
+
 #    my $lang = $My::Config::Corpus;
 
     if ($lang=~/^(ar|az|be|bg|bs|he|id|jp|ja|ko|ku|mi|mk|ru|ta|th|uk|vi|xh|zh_tw|zu|bul|chi|rus|heb|jpn|jap)$/i){

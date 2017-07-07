@@ -234,6 +234,9 @@ sub Format {
 
 sub DecodeString{
     use Encode;
+    $string=decode('utf-8',$string);
+    return escapeHTML($string);
+
 
     my ($lang,$string)=@_;
 #    my $lang = $My::Config::Corpus;

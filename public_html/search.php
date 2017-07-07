@@ -1,6 +1,6 @@
 <?php
 
-$opuspub = "/home/opus/OPUS/html";
+$opuspub = "/home/opus/public_html";
 
 $src = NULL;
 $trg = NULL;

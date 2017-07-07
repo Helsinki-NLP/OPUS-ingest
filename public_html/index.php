@@ -426,11 +426,15 @@ if (Date.parse(document.lastModified) != 0)
 
     <table border="0" width="100%">
       <tr>
-        <td><a href="http://www.uu.se"><img border="0" src="http://stp.lingfil.uu.se/~joerg/img/uulogo_white.gif" height="120"></a></td>
+        <td><a href="https://www.csc.fi"><img border="0" src="img/csc-logo-teksti-en.png" height="60"></a></td>
 
-        <td><a href="http://essenceofescience.se/sensordata/#nivre"><img border="0" src="http://stp.lingfil.uu.se/~joerg/img/essence.png" height="80"></a></td>
+        <td><a href="http://www.helsinki.fi"><img border="0" src="img/HY.jpg" height="120"></a></td>
 
-        <td><a href="http://www.letsmt.eu"><img border="0" src="img/letsmt.jpg" height="80"></a></td>
+        <td><a href="http://www.uu.se"><img border="0" src="img/uulogo_white.gif" height="120"></a></td>
+
+        <td><a href="http://essenceofescience.se/sensordata/#nivre"><img border="0" src="img/essence.png" width="120"></a><br/><br/><a href="http://www.letsmt.eu"><img border="0" src="img/letsmt.jpg" width="120"></a></td>
+
+        <td><a href="http://www.nlpl.eu"><img border="0" src="img/nlpl.png" height="140"></a></td>
 
         <td align="right"><a href="http://www2.clustrmaps.com/counter/maps.php?url=http://opus.lingfil.uu.se" id="clustrMapsLink" name="clustrMapsLink"><img src="http://www2.clustrmaps.com/counter/index2.php?url=http://opus.lingfil.uu.se" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onerror="this.onerror=null; this.src='http://clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://clustrmaps.com';" name="clustrMapsImg"></a></td>
       </tr>
