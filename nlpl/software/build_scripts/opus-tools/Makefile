@@ -28,6 +28,7 @@ install: ${PACKAGE_HOME}/bin/opus-read
 
 re-install:
 	rm -fr ${PACKAGE_SOURCE}
+	rm -f ${PACKAGE_HOME}/bin/opus-read
 	${MAKE} install
 
 clean:

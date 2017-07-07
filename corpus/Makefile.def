@@ -28,13 +28,18 @@ endif
 #                   'make' in source text directory first!
 #
 
-OPUSCORPORA = ${OPUSHOME}/corpus
-OPUSHTML    = ${OPUSHOME}/html
-OPUSPUB     = ${OPUSHOME}/../public_html
-# OPUSPUB     = /home/opus/public_html/test
-OPUSDATA    = ${OPUSHOME}/data
+OPUSCORPORA   = ${OPUSHOME}/corpus
+OPUSHTML      = ${OPUSHOME}/html
+OPUSDATA      = ${OPUSHOME}/data
 OPUSWORDALIGN = ${OPUSHOME}/wordalign
 
+## old OPUS server: public_html is next to OPUS
+## new OPUS: public_html is within OPUS
+ifneq ("$(wildcard ${OPUSHOME}/public_html)","")
+  OPUSPUB   = ${OPUSHOME}/public_html
+else
+  OPUSPUB   = ${OPUSHOME}/../public_html
+endif
 
 OPUSCWB     = ${OPUSHOME}/cwb
 CWBDATA     = ${OPUSCWB}/data
@@ -81,10 +86,13 @@ UPLUGTOOLS = ${UPLUGHOME}/tools
 UPLUG      = $(shell which uplug)
 
 
+# SMT tools via Moses (TODO: adjust to NLPL!)
 
 MOSESHOME       = ${USERAPPL}/tools/mosesdecoder-2017
 MOSESSCRIPTS    = ${MOSESHOME}/scripts
 SCRIPTS_ROOTDIR = ${MOSESSCRIPTS}
+
+# Word alignment tools (TODO: adjust to NLPL!)
 
 EFMARAL         = ${USERAPPL}/tools/efmaral/efmaral.py
 ATOOLS          = ${USERAPPL}/tools/fast_align/atools
@@ -136,9 +144,19 @@ endif
 #--------------------------------------------------------------------
 # sentence alignment
 #   sent ... Gale&Church (original C-code via Uplug)
-#   hun .... hunalign (called from Uplug)
+#   hun .... hunalign (called from Uplug) - default
 #--------------------------------------------------------------------
 
 SENTALIGN  = ${UPLUG} align/hun
 # SENTALIGN = ${UPLUG} align/sent
 
+
+
+
+
+
+
+## always load generic makefile for submitting hpc-jobs
+## TODO: is it good to do that here?
+
+include ${OPUSCORPORA}/Makefile.submit

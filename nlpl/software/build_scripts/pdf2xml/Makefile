@@ -28,6 +28,7 @@ install: ${PACKAGE_HOME}/bin/pdf2xml
 
 re-install:
 	rm -fr ${PACKAGE_SOURCE}
+	rm -f ${PACKAGE_HOME}/bin/pdf2xml
 	${MAKE} install
 
 clean:
