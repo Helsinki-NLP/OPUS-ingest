@@ -7,7 +7,10 @@
 
 # UDPARSE   = ${TOOLS}/public/preprocess/opus-udpipe.pl
 UDPARSE     = opus-udpipe
-UDLANGUAGES = ${shell ${UDPARSE} -L}
+
+ifndef UDLANGUAGES
+  UDLANGUAGES = ${shell ${UDPARSE} -L}
+endif
 
 # UDLANGUAGES = ar eu bg hr cs da nl en et ft fr de el he hi hu \
 # 		id ga it la nb fa pl pt ro sl es sv ta 

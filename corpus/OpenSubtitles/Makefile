@@ -9,6 +9,7 @@ include ../Makefile.def
 # - tokenise and sentence splitting
 # - sentence alignment (in xml/Makefile)
 
+CWB_EXTRA_ARGS = -U time
 
 all:
 	${MAKE} -C src all
