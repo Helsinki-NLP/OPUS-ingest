@@ -40,7 +40,7 @@ $space = ' &nbsp;&nbsp; ';
 %DefaultQuery = (DA => '"euro.*"',
 		 DE => '"so" [tree="ADJ.*"] "wie" [tree="NN.*"]',
 		 EL => '"e.*"',
-		 EN => '"as" [tnt="JJ.*"] "as" <c_t="NP"> []+ </c>',
+		 EN => '"as" [tree="JJ.*"] "as" <chunk_type="NP"> []+ </chunk>',
 		 ES => '"euro.*"',
 		 FI => '"euro.*"',
 		 FR => '[lem="le"] [pos="NOM"] [pos="PRP.*"] "Parlement"',

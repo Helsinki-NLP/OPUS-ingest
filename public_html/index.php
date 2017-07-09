@@ -31,18 +31,18 @@
 
     <ul>
     <li>2016-01-08: New version: <a href="OpenSubtitles2016.php">OpenSubtitles2016</a></li>
-    <li>2015-10-15: New versions of <a href="http://opus.lingfil.uu.se/TED2013.php">TED2013</a>, <a href="http://opus.lingfil.uu.se/News-Commentary.php">NCv9</a></li>
-    <li>2014-10-24: New: <a href="http://opus.lingfil.uu.se/JRC-Acquis.php">JRC-Acquis</a></li>
+    <li>2015-10-15: New versions of <a href="/TED2013.php">TED2013</a>, <a href="/News-Commentary.php">NCv9</a></li>
+    <li>2014-10-24: New: <a href="/JRC-Acquis.php">JRC-Acquis</a></li>
     <li>2014-10-20: <a href="News-Commentary.php">NCv9</a>, <a href="TED2013.php">TED talks</a>, <a href="DGT.php">DGT</a>, <a href="WMT-News.php">WMT</a></li>
       <li>2014-08-21: New: <a href="Ubuntu.php">Ubuntu</a>, <a href="GNOME.php">GNOME</a></li>
       <li>2014-07-30: New: <a href="Books.php">Translated Books</a></li>
       <li>2014-07-27: New: <a href="DOGC.php">DOGC</a>, <a href="Tanzil.php">Tanzil</a></li>
-      <li>2014-05-07: Parallel coref corpus <a href="http://opus.lingfil.uu.se/ParCor">ParCor</a></li>
+      <li>2014-05-07: Parallel coref corpus <a href="/ParCor">ParCor</a></li>
 
 <!--
-      <li>2013-02-08: New version: <a href="http://opus.lingfil.uu.se/EUbookshop.php">EUbookshop</a></li>
+      <li>2013-02-08: New version: <a href="/EUbookshop.php">EUbookshop</a></li>
 
-      <li>2013-02-01: New version: <a href="http://opus.lingfil.uu.se/Tatoeba.php">Tatoeba</a></li>
+      <li>2013-02-01: New version: <a href="/Tatoeba.php">Tatoeba</a></li>
 -->
 <!--
       <li>2013-11-18: Extended corpus: <a href="OpenSubtitles2013.php">Subs2013</a></li>
@@ -56,9 +56,9 @@
       <li>2013-02-26: Added <a href="UN.php">UN</a> and <a href="MultiUN.php">MultiUN</a></li>
 -->
 <!--  <li>2013-01-29: ACL workshop: <a href="http://www.idiap.ch/workshop/DiscoMT/">DiscoMT</a></li> -->
-      <!--  <li>2013-01-13: New corpus: <a href="http://opus.lingfil.uu.se/Tatoeba.php">Tatoeba</a></li> -->
+      <!--  <li>2013-01-13: New corpus: <a href="/Tatoeba.php">Tatoeba</a></li> -->
 
-<!--      <li>2013-01-10: New corpus: <a href="http://opus.lingfil.uu.se/TedTalks.php">TedTalks hr-en</a></li> -->
+<!--      <li>2013-01-10: New corpus: <a href="/TedTalks.php">TedTalks hr-en</a></li> -->
 
 <!--      <li>2012-12-20: New corpus: <a href="OfisPublik.php">OfisPublik</a></li> -->
 <!--   <li>2012-08-22: Server upgrade</li> -->
@@ -99,7 +99,7 @@
   <p>The OPUS collection is growing! Check this page from time to time to see new data arriving ...<br>
   Contributions are very welcome! Please contact &lt;jorg.tiedemann<?php
      echo '&#64;'; 
-  ?>lingfil.uu.se
+  ?>helsinki.fi
   &gt;</p>
 
   <p><?php include("search.php"); ?></p><a name="download" id="download"></a>
@@ -170,11 +170,11 @@
 
           <li><a href="http://pelcra.pl/res/parallel/">Parallel corpora at PELCRA</a> (<a href="http://pelcra.pl/res/parallel/word-aligned/">word-aligned data</a>)</li>
 	  <li><a href="http://nlp2ct.cis.umac.mo/um-corpus/">UM - a domain specific Chinese-English parallel corpus</a></li>
-          <li><a href="https://www.letsmt.eu">Let's MT!</a> and its <a href="http://opus.lingfil.uu.se/letsmt-trac/">Resource Repository Software</a></li>
+          <li><a href="https://www.letsmt.eu">Let's MT!</a> and its <a href="/letsmt-trac/">Resource Repository Software</a></li>
 
-          <li><a href="http://opus.lingfil.uu.se/letsmt-trac/wiki/DataProcessingTools">Links</a> to alignment and MT-related tools</li>
+          <li><a href="/letsmt-trac/wiki/DataProcessingTools">Links</a> to alignment and MT-related tools</li>
 
-          <li><a href="http://opus.lingfil.uu.se/letsmt-trac/wiki/MTResources">Links</a> to other MT-related resources</li>
+          <li><a href="/letsmt-trac/wiki/MTResources">Links</a> to other MT-related resources</li>
         </ul>
       </td>
 
@@ -215,9 +215,9 @@
 
           <li><a href="MultiUN.php">MultiUN</a> - Translated UN documents <!-- (<a href="http://opus.lingfil.uu.se/download.php?f=MultiUN/MultiUN1.tar.gz">MultiUN1.tar.gz</a> - 25 GB) --></li>
 
-          <li><a href="http://opus.lingfil.uu.se/News-Commentary.php">News Commentary</a> (<a href="download.php?f=News-Commentary/News-Commentary9.tar.gz" rel="nofollow">News-Commentary9.tar.gz</a> - 2.2 GB)</li>
+          <li><a href="/News-Commentary.php">News Commentary</a> (<a href="download.php?f=News-Commentary/News-Commentary9.tar.gz" rel="nofollow">News-Commentary9.tar.gz</a> - 2.2 GB)</li>
 
-          <li><a href="http://opus.lingfil.uu.se/News-Commentary11.php">News Commentary</a> (<a href="http://opus.lingfil.uu.se/download.php?f=News-Commentary11/News-Commentary11.tar.gz" rel="nofollow">News-Commentary11.tar.gz</a> - 741 MB)</li>
+          <li><a href="/News-Commentary11.php">News Commentary</a> (<a href="http://opus.lingfil.uu.se/download.php?f=News-Commentary11/News-Commentary11.tar.gz" rel="nofollow">News-Commentary11.tar.gz</a> - 741 MB)</li>
 
           <li><a href="OpenOffice.php">OO - the OpenOffice.org corpus</a> (<a href="download.php?f=OpenOffice/OpenOffice.tar.gz" rel="nofollow">OpenOffice.tar.gz</a> - 34 MB)</li>
 
@@ -244,13 +244,13 @@
 
           <li><a href="SETIMES2.php">SETIMES2</a> - A new version of SETIMES ( <a href="download.php?f=SETIMES2/SETIMES2.tar.gz" rel="nofollow">SETIMES2.tar.gz</a> - 2.9 GB)</li>
 
-          <li><a href="SPC.php">SPC - Stockholm Parallel Corpora</a> ( <a href="download.php?f=SPC/SPCv1.tar.gz" rel="nofollow">SPCv1.tar.gz</a> - 3.5 MB)</li><!--      <li><a href="http://opus.lingfil.uu.se/Tatoeba.php">Tatoeba</a> - A DB of translated sentences (<a href="download.php?f=TedTalks/Tatoeba2013-01-13.tar.gz">Tatoeba2013-01-13.tar.gz</a> - 124MB MB)</li> -->
+          <li><a href="SPC.php">SPC - Stockholm Parallel Corpora</a> ( <a href="download.php?f=SPC/SPCv1.tar.gz" rel="nofollow">SPCv1.tar.gz</a> - 3.5 MB)</li><!--      <li><a href="/Tatoeba.php">Tatoeba</a> - A DB of translated sentences (<a href="download.php?f=TedTalks/Tatoeba2013-01-13.tar.gz">Tatoeba2013-01-13.tar.gz</a> - 124MB MB)</li> -->
 
-          <li><a href="http://opus.lingfil.uu.se/Tatoeba.php">Tatoeba</a> - A DB of translated sentences (<a href="download.php?f=Tatoeba/Tatoeba2014-07-28.tar.gz" rel="nofollow">Tatoeba2014-07-28.tar.gz</a> - 262MB MB)</li>
+          <li><a href="/Tatoeba.php">Tatoeba</a> - A DB of translated sentences (<a href="download.php?f=Tatoeba/Tatoeba2014-07-28.tar.gz" rel="nofollow">Tatoeba2014-07-28.tar.gz</a> - 262MB MB)</li>
 
-          <li><a href="http://opus.lingfil.uu.se/TedTalks.php">TedTalks hr-en</a> (<a href="download.php?f=TedTalks/TedTalks0.1.tar.gz" rel="nofollow">TedTalks0.1.tar.gz</a> - 26 MB)</li>
+          <li><a href="/TedTalks.php">TedTalks hr-en</a> (<a href="download.php?f=TedTalks/TedTalks0.1.tar.gz" rel="nofollow">TedTalks0.1.tar.gz</a> - 26 MB)</li>
 
-          <li><a href="http://opus.lingfil.uu.se/TED2013.php">TED Talks</a> (<a href="download.php?f=TED2013/TED2013v1.tar.gz" rel="nofollow">TED2013v1.tar.gz</a> - 781 MB)</li>
+          <li><a href="/TED2013.php">TED Talks</a> (<a href="download.php?f=TED2013/TED2013v1.tar.gz" rel="nofollow">TED2013v1.tar.gz</a> - 781 MB)</li>
 
           <li><a href="Tanzil.php">Tanzil</a> - A collection of Quran translations</li>
 

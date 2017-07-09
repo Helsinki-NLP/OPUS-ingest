@@ -228,7 +228,7 @@ sub DisplayOptions {
   else{
       push(@html,hidden('pos',My::Param::Get('pos')));
   }
-  my @values = @{$My::Param::ParamDefs{"xp"}{'values'}};
+  @values = @{$My::Param::ParamDefs{"xp"}{'values'}};
   if (@values>1){
       push @html, "phrases&nbsp;=&nbsp;".PopupMenu("xp"), $space;
   }

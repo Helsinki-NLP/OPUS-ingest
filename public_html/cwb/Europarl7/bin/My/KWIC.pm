@@ -126,10 +126,10 @@ sub Format {
 
   if ($par_xp ne "none") {
       if ($My::Config::Corpus=~/en/i){
-	  eval { $CHUNK = My::Config::GetAttribute("c_type"); };
+	  eval { $CHUNK = My::Config::GetAttribute("chunk_type"); };
       }
       elsif ($My::Config::Corpus=~/sv/i){
-	  eval { $CHUNK = My::Config::GetAttribute("c_type"); };
+	  eval { $CHUNK = My::Config::GetAttribute("chunk_type"); };
       }
   }
 
@@ -241,11 +241,12 @@ sub Format {
 sub DecodeString{
     use Encode;
 
+    my ($lang,$string)=@_;
+#    my $lang = $My::Config::Corpus;
+
     $string=decode('utf-8',$string);
     return escapeHTML($string);
 
-    my ($lang,$string)=@_;
-#    my $lang = $My::Config::Corpus;
 
     if ($lang=~/^(ar|az|be|bg|bs|he|id|jp|ja|ko|ku|mi|mk|ru|ta|th|uk|vi|xh|zh_tw|zu|bul|chi|rus|heb|jpn|jap)$/i){
 #	decode_entities($string);

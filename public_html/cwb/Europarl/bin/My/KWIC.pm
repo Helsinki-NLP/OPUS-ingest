@@ -234,12 +234,13 @@ sub Format {
 
 sub DecodeString{
     use Encode;
-    $string=decode('utf-8',$string);
-    return escapeHTML($string);
-
 
     my ($lang,$string)=@_;
 #    my $lang = $My::Config::Corpus;
+
+    $string=decode('utf-8',$string);
+    return escapeHTML($string);
+
 
     if ($lang=~/^(ar|az|be|bg|bs|he|id|jp|ja|ko|ku|mi|mk|ru|ta|th|uk|vi|xh|zh_tw|zu|bul|chi|rus|heb|jpn|jap)$/i){
 #	decode_entities($string);
