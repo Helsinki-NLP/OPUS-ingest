@@ -14,6 +14,10 @@ INDEXER = opus-index -s -e utf8
 
 XMLDIR = ${CORPUSXML}
 
+ifndef CWB_DISALLOW_POSATTR
+  CWB_DISALLOW_POSATTR = '(id|alternative|emphasis|initial)'
+endif
+
 cwb-index:
 	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
 	mkdir -p $(CWBDATA)
@@ -22,8 +26,9 @@ cwb-index:
 	           -d $(CWBDATA) \
 		   -m cwbtmp \
 	           -r $(CWBREG) \
-		   -P '(id|alternative|emphasis|initial)' \
+		   -P $(CWB_DISALLOW_POSATTR) \
 	           -t $(ALGEXT) \
+		   ${CWB_EXTRA_ARGS} \
 	           $(LANGUAGES)
 	rm -fr cwbtmp
 
@@ -41,8 +46,9 @@ cwb-index-ud:
 		   -m cwbudtmp \
 	           -r $(UDCWBREG) \
 		   -x parsed \
-		   -P '(id|alternative|emphasis|initial)' \
+		   -P $(CWB_DISALLOW_POSATTR) \
 	           -t $(ALGEXT) \
+		   ${CWB_EXTRA_ARGS} \
 	           $(LANGUAGES)
 	rm -fr cwbudtmp
 

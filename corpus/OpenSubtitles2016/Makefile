@@ -5,6 +5,10 @@ include ../Makefile.def
 
 UNRELIABLE = $(patsubst %,unreliable/xml/%,${LANGUAGES})
 
+CWB_EXTRA_ARGS = -U time
+UDLANGUAGES = eu bg hr cs da nl en et ft fr de el he hi hu \
+               id ga it la nb fa pl pt ro sl es sv ta
+
 all: ${UNRELIABLE}
 	${MAKE} -C xml all
 	${MAKE} html

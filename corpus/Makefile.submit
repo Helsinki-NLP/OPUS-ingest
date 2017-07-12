@@ -52,6 +52,6 @@ endif
 	echo 'cd $${SLURM_SUBMIT_DIR:-.}' >> $@
 	echo 'pwd' >> $@
 	echo 'echo "Starting at `date`"' >> $@
-	echo '${MAKE} ${@:.submit=}' >> $@
+	echo '${MAKE} -j ${HPC_CORES} ${@:.submit=}' >> $@
 	echo 'echo "Finishing at `date`"' >> $@
 	sbatch $@

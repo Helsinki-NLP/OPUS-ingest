@@ -27,3 +27,4 @@ web-corpus: tmx moses alg_samples html
 include ../Makefile.tag
 include ../Makefile.cwb
 include ../Makefile.html
+include ../Makefile.udparse
