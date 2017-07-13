@@ -9,7 +9,8 @@
 <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-<div class="header"><?php include("header.php"); ?></div><h1>RF</h1><p>Declarations of Government Policy by the Swedish Government</p><p>5 languages, 10 bitexts<br>total number of files: 11<br>total number of tokens: 19.74k<br>total number of sentence fragments: 0.86k<br><p>Please <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J&ouml;rg Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)<br/><h3>Download</h3><p>Simple example corpus</p><table><tr><td>Bottom-left triangle: download files<ul><li><i>ces</i> = sentence alignments in XCES format</li> <li><i>leftmost column language IDs</i> = tokenized corpus files in XML</li> <li>TMX and plain text files (Moses): see "Statistics" below</li> <li><i>lower row language IDs</i> = parsed corpus files (if they exist)</li></ul></td><td>Upper-right triangle: sample files <ul><li><i>view</i> = bilingual XML file samples</li> <li><i>upper row language IDs</i> = monolingual XML file samples</li> <li><i>rightmost column language IDs</i> = untokenized corpus files</li></ul></td></tr></table><p><div class="sample"><table border="0" cellpadding="0">
+<div class="header"><?php include("header.php"); ?></div><h1>RF</h1><p>Declarations of Government Policy by the Swedish Government</p><p>5 languages, 10 bitexts<br>total number of files: 11<br>total number of tokens: 19.74k<br>total number of sentence fragments: 0.86k<br><p>Please <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J&ouml;rg Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)<br/><h3>Download</h3><p>Simple example corpus</p>Complete download of aligned documents (in XML): <a href="download.php?f=RF.tar.gz">RF.tar.gz</a> (600K
+)<br><p><table><tr><td>Bottom-left triangle: download files<ul><li><i>ces</i> = sentence alignments in XCES format</li> <li><i>leftmost column language IDs</i> = tokenized corpus files in XML</li> <li>TMX and plain text files (Moses): see "Statistics" below</li> <li><i>lower row language IDs</i> = parsed corpus files (if they exist)</li></ul></td><td>Upper-right triangle: sample files <ul><li><i>view</i> = bilingual XML file samples</li> <li><i>upper row language IDs</i> = monolingual XML file samples</li> <li><i>rightmost column language IDs</i> = untokenized corpus files</li></ul></td></tr></table><p><div class="sample"><table border="0" cellpadding="0">
 <tr>
 <th></th>
 <th><a rel="nofollow" href="RF/de_sample.html">de</a></th>
@@ -18,37 +19,37 @@
 <th><a rel="nofollow" href="RF/fr_sample.html">fr</a></th>
 <th><a rel="nofollow" href="RF/sv_sample.html">sv</a></th>
 <th></th></tr>
-<tr><th><a rel="nofollow" href="download.php?f=xml/de.tar.gz">de</a></th>
+<tr><th><a rel="nofollow" href="download.php?f=RF/de.tar.gz">de</a></th>
 <th></th>
-<td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=RF/de.raw.tar.gz">de</a></th></tr>
-<tr><th><a rel="nofollow" href="download.php?f=xml/en.tar.gz">en</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'English-German' (2 aligned documents, 0.2k links, 8.8k tokens)" href="download.php?f=xml/xml/de-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="German-English (sample file)" href="RF/de-en_sample.html">view</a></td><td><a rel="nofollow" title="German-Spanish (sample file)" href="RF/de-es_sample.html">view</a></td><td><a rel="nofollow" title="German-French (sample file)" href="RF/de-fr_sample.html">view</a></td><td><a rel="nofollow" title="German-Swedish (sample file)" href="RF/de-sv_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=RF/de.raw.tar.gz">de</a></th></tr>
+<tr><th><a rel="nofollow" href="download.php?f=RF/en.tar.gz">en</a></th>
+<td><a rel="nofollow" title="sentence alignments for 'English-German' (2 aligned documents, 0.2k links, 8.8k tokens)" href="download.php?f=RF/de-en.xml.gz">ces</a></td>
 <th></th>
-<td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=RF/en.raw.tar.gz">en</a></th></tr>
-<tr><th><a rel="nofollow" href="download.php?f=xml/es.tar.gz">es</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (31 links, 3.9k tokens)" href="download.php?f=xml/xml/de-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (32 links, 3.7k tokens)" href="download.php?f=xml/xml/en-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="English-Spanish (sample file)" href="RF/en-es_sample.html">view</a></td><td><a rel="nofollow" title="English-French (sample file)" href="RF/en-fr_sample.html">view</a></td><td><a rel="nofollow" title="English-Swedish (sample file)" href="RF/en-sv_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=RF/en.raw.tar.gz">en</a></th></tr>
+<tr><th><a rel="nofollow" href="download.php?f=RF/es.tar.gz">es</a></th>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (31 links, 3.9k tokens)" href="download.php?f=RF/de-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (32 links, 3.7k tokens)" href="download.php?f=RF/en-es.xml.gz">ces</a></td>
 <th></th>
-<td></td><td></td><th><a rel="nofollow" href="download.php?f=RF/es.raw.tar.gz">es</a></th></tr>
-<tr><th><a rel="nofollow" href="download.php?f=xml/fr.tar.gz">fr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'French-German' (2 aligned documents, 0.2k links, 9.9k tokens)" href="download.php?f=xml/xml/de-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English' (2 aligned documents, 0.2k links, 9.8k tokens)" href="download.php?f=xml/xml/en-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (31 links, 4.2k tokens)" href="download.php?f=xml/xml/es-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="Spanish-French (sample file)" href="RF/es-fr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Swedish (sample file)" href="RF/es-sv_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=RF/es.raw.tar.gz">es</a></th></tr>
+<tr><th><a rel="nofollow" href="download.php?f=RF/fr.tar.gz">fr</a></th>
+<td><a rel="nofollow" title="sentence alignments for 'French-German' (2 aligned documents, 0.2k links, 9.9k tokens)" href="download.php?f=RF/de-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English' (2 aligned documents, 0.2k links, 9.8k tokens)" href="download.php?f=RF/en-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (31 links, 4.2k tokens)" href="download.php?f=RF/es-fr.xml.gz">ces</a></td>
 <th></th>
-<td></td><th><a rel="nofollow" href="download.php?f=RF/fr.raw.tar.gz">fr</a></th></tr>
-<tr><th><a rel="nofollow" href="download.php?f=xml/sv.tar.gz">sv</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-German' (2 aligned documents, 0.2k links, 7.4k tokens)" href="download.php?f=xml/xml/de-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (2 aligned documents, 0.2k links, 7.3k tokens)" href="download.php?f=xml/xml/en-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Spanish' (67 links, 2.8k tokens)" href="download.php?f=xml/xml/es-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (2 aligned documents, 0.2k links, 8.3k tokens)" href="download.php?f=xml/xml/fr-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="French-Swedish (sample file)" href="RF/fr-sv_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=RF/fr.raw.tar.gz">fr</a></th></tr>
+<tr><th><a rel="nofollow" href="download.php?f=RF/sv.tar.gz">sv</a></th>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-German' (2 aligned documents, 0.2k links, 7.4k tokens)" href="download.php?f=RF/de-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (2 aligned documents, 0.2k links, 7.3k tokens)" href="download.php?f=RF/en-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Spanish' (67 links, 2.8k tokens)" href="download.php?f=RF/es-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (2 aligned documents, 0.2k links, 8.3k tokens)" href="download.php?f=RF/fr-sv.xml.gz">ces</a></td>
 <th></th>
 <th><a rel="nofollow" href="download.php?f=RF/sv.raw.tar.gz">sv</a></th></tr>
 <tr><th></th>
-<th>de</th>
-<th>en</th>
-<th>es</th>
-<th>fr</th>
-<th>sv</th>
+<th><a rel="nofollow" href="download.php?f=RF/de.parsed.tar.gz">de</a></th>
+<th><a rel="nofollow" href="download.php?f=RF/en.parsed.tar.gz">en</a></th>
+<th><a rel="nofollow" href="download.php?f=RF/es.parsed.tar.gz">es</a></th>
+<th><a rel="nofollow" href="download.php?f=RF/fr.parsed.tar.gz">fr</a></th>
+<th><a rel="nofollow" href="download.php?f=RF/sv.parsed.tar.gz">sv</a></th>
 <th></th></tr>
 </table>
 </div><p><h3>Statistics and TMX/Moses Downloads</h3>Number of files, tokens, and sentences per language (including non-parallel ones if they exist)<br>Number of sentence alignment units per language pair<p>Upper-right triangle: download translation memory files (TMX)<br>Bottom-left triangle: download plain text files (MOSES/GIZA++)<br>Language ID's, first row: monolingual plain text files (tokenized)<br>Language ID's, first column: monolingual plain text files (untokenized)<div class="counts"><table><caption></caption> <tr><th>language</th> <th>files</th> <th>tokens</th> <th>sentences</th><th><a rel="nofollow" title='monolingual tokenized de plain text' href="download.php?f=RF/mono/RF.de.gz">de</a>

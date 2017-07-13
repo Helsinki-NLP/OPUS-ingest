@@ -6,6 +6,7 @@
 
 
 CES      = $(wildcard ${CORPUSXML}/*.xml.gz)
+ALG      = $(patsubst ${CORPUSXML}/%,${CORPUSHTML}/%,$(CES))
 TMX      = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSHTML}/%.tmx.gz,$(CES))
 MOSES    = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSHTML}/%.txt.zip,$(CES))
 LANG_TAR = $(patsubst %,${CORPUSHTML}/%.tar.gz,${LANGUAGES})
@@ -37,6 +38,7 @@ LANG_INFO = $(patsubst %,${CORPUSXML}/%.info,${LANGUAGES})
 ## some scripts for conversion
 ## TODO: check if we have more updated versions
 # MAKEHTML   = ${TOOLS}/opus/make-download-page.pl
+# MAKEHTML   = ${HOME}/research/nlpl/opus-tools/scripts/admin/generate-website.pl
 MAKEHTML   = ${TOOLS}/public/opus-tools/scripts/admin/generate-website.pl
 TAB2TMX    = ${UPLUGHOME}/tools/tab2tmx
 OPUS2MOSES = $(UPLUGHOME)/tools/xces2moses
@@ -79,7 +81,7 @@ ifndef CITENOTE
 endif
 
 
-${OPUSPUB}/${CORPUS}.php: 	${CORPUSHTML} \
+${OPUSPUB}/${CORPUS}.php: 	${CORPUSHTML} ${ALG} \
 				${LANG_TAR} ${LANG_RAW} \
 				${MONO_TOK} ${MONO_RAW} \
 				$(TMX) $(MOSES) \
@@ -108,7 +110,7 @@ ${OPUSHTML}/${CORPUS}.tar.gz: $(CES)
 	mkdir -p $(shell dirname $@)
 	-tar --ignore-failed-read  --transform 's#^#${CORPUS}/#' -chzf $(shell basename $@) xml raw parsed
 	mv $(shell basename $@) $@
-	echo "$@" | sed "s#${OPUSHTML}/#all #" >> ${PACKAGES}
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
 ## OLD OLD OLD ################################################################
@@ -144,6 +146,14 @@ ${OPUSHTML}/${CORPUS}.tar.gz: $(CES)
 
 
 
+## copy sentence alignment files
+
+alg_files: ${ALG}
+
+${ALG}: ${CORPUSHTML}/%: ${CORPUSXML}/%
+	cp $< $@
+
+
 #----------------------------------------------------------------------------
 # pack all language files in tar-archives
 #----------------------------------------------------------------------------
@@ -156,7 +166,7 @@ ${LANG_TAR}: ${CORPUSHTML}/%.tar.gz: ${CORPUSXML}/%
 	find $</ -name '*.xml.gz' > $<.files
 	-tar -T $<.files -P --transform='s#${CORPUSXML}#${CORPUS}/xml#' -czf $@
 	rm -f $<.files
-	echo "$@" | sed "s#${OPUSHTML}/#xml #" >> ${PACKAGES}
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 # raw corpus files
 
@@ -166,7 +176,7 @@ ${LANG_RAW}: ${CORPUSHTML}/%.raw.tar.gz: ${CORPUSRAW}/%
 	find $</ -name '*.xml.gz' > $<.files
 	-tar -T $<.files -P --transform='s#${CORPUSRAW}#${CORPUS}/raw#' -czf $@
 	rm -f $<.files
-	echo "$@" | sed "s#${OPUSHTML}/#raw #" >> ${PACKAGES}
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 # parsed corpus files (not all languages need to be parsed)
 
@@ -181,7 +191,7 @@ ${LANG_UD}: ${CORPUSHTML}/%.parsed.tar.gz: ${CORPUSPARSED}/%
 	find $</ -name '*.xml.gz' > $<.files
 	-tar -T $<.files -P --transform='s#${CORPUSRAW}#${CORPUS}/parsed#' -czf $@
 	rm -f $<.files
-	echo "$@" | sed "s#${OPUSHTML}/#parsed #" >> ${PACKAGES}
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
 
@@ -204,7 +214,7 @@ ${CORPUSHTML}/mono/${CORPUS}.%.gz: ${CORPUSXML}/%
 	perl ${TOOLS}/opus/xml2text.pl | \
 	sed 's/  */ /g;s/^ *//;s/ *$$//' |\
 	gzip -c > $@
-	echo "$@" | sed "s#${OPUSHTML}/#mono #" >> ${PACKAGES}
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
 ${CORPUSHTML}/mono/${CORPUS}.raw.%.gz: ${CORPUSRAW}/%
@@ -215,7 +225,7 @@ ${CORPUSHTML}/mono/${CORPUS}.raw.%.gz: ${CORPUSRAW}/%
 	perl ${TOOLS}/opus/rawxml2text.pl | \
 	sed 's/  */ /g;s/^ *//;s/ *$$//' |\
 	gzip -c > $@
-	echo "$@" | sed "s#${OPUSHTML}/#mono-raw #" >> ${PACKAGES}
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
 #----------------------------------------------------------------------------
@@ -232,7 +242,7 @@ ${CORPUSHTML}/freq/${CORPUS}.%.gz: ${CORPUSHTML}/mono/${CORPUS}.%.gz
 	tr ' ' "\n" | \
 	sort | uniq -c | sort -nr | \
 	gzip -c > $@
-	echo "$@" | sed "s#${OPUSHTML}/#freq #" >> ${PACKAGES}
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
 ## not good enough for unicode:
@@ -294,7 +304,7 @@ tmx-strict: ${CORPUSHTML} $(TMX_STRICT)
 	  $(TAB2TMX) -s $$S -t $$T |\
 	  gzip -c > $@; \
 	  rm -f ${CORPUS}.$$P.$$SEXT ${CORPUS}.$$P.$$TEXT ${CORPUS}.$$P.ids; )
-	echo "$@" | sed "s#${OPUSHTML}/#tmx #" >> ${PACKAGES}
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
 #----------------------------------------------------------------------------
@@ -319,7 +329,7 @@ $(MOSES): ${CORPUSHTML}/%.txt.zip: ${CORPUSXML}/%.xml.gz
 	  mv ${CORPUS}.$$P.$$T.tmp ${CORPUS}.$$P.$$T; \
 	  zip $@ ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; \
 	  rm -f ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; )
-	echo "$@" | sed "s#${OPUSHTML}/#moses #" >> ${PACKAGES}
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
 moses-strict: ${CORPUSHTML} $(MOSES_STRICT)
@@ -337,7 +347,7 @@ $(MOSES_STRICT): ${CORPUSHTML}/%.strict.txt.zip: ${CORPUSXML}/%.xml.gz
 	  zip $@ ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; \
 	  rm -f ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; )
 	rm -f $(<:gz=11)
-	echo "$@" | sed "s#${OPUSHTML}/#moses-strict #" >> ${PACKAGES}
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
 
