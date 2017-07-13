@@ -194,6 +194,11 @@ function print_resource($corpus,$src,$trg,$resource){
   global $TotalDocs,$TotalLinks,$TotalSrcTok,$TotalTrgTok,
     $TotalTmxLinks,$TotalTxtLinks;
 
+  if (file_exists($corpus.'/.packages')){
+    $corpusfiles = file($corpus.'/.packages', FILE_IGNORE_NEW_LINES);
+  }
+  else { $corpusfiles = array(); }
+
   foreach ($resource as $format => $parts){
 
       $link = 'download.php?f='.urlencode($parts[0]);
@@ -212,7 +217,7 @@ function print_resource($corpus,$src,$trg,$resource){
 	$ResourceHtml[$format].=$src."</a>&nbsp;";
 
 	$rawsrc = preg_replace('/\.tar\.gz/','.raw.tar.gz',$parts[1]);
-	if (file_exists($rawsrc)){
+	if (in_array($rawsrc,$corpusfiles) || file_exists($rawsrc)){
 	  $link = 'download.php?f='.urlencode($rawsrc);
 	  $ResourceHtml['raw']='<a href="'.$link.'" title="'.$title.'">';
 	  $ResourceHtml['raw'].=$src."</a>&nbsp;";
@@ -225,7 +230,7 @@ function print_resource($corpus,$src,$trg,$resource){
 	$ResourceHtml[$format].=$trg."</a>";
 
 	$rawtrg = preg_replace('/\.tar\.gz/','.raw.tar.gz',$parts[2]);
-	if (file_exists($rawtrg)){
+	if (in_array($rawtrg,$corpusfiles) || file_exists($rawtrg)){
 	  $link = 'download.php?f='.urlencode($rawtrg);
 	  $ResourceHtml['raw'].='<a href="'.$link.'" title="'.$title.'">';
 	  $ResourceHtml['raw'].=$trg."</a>";
@@ -236,7 +241,8 @@ function print_resource($corpus,$src,$trg,$resource){
 	$nrTMXLinks=$parts[1];
 	$nrTMXSrcTok=$parts[2];
 	$nrTMXTrgTok=$parts[3];
-        if (file_exists($corpus.'/'.$src.'-'.$trg.'.tmx.gz')){
+	$tmxfile = $corpus.'/'.$src.'-'.$trg.'.tmx.gz';
+        if (in_array($tmxfile,$corpusfiles) || file_exists($tmxfile)){
 	    $title = pretty_number($nrTMXLinks)." sentence alignments, ";
 	    $title .= pretty_number($nrTMXSrcTok)." source tokens,";
 	    $title .= pretty_number($nrTMXTrgTok)." target tokens";
@@ -251,7 +257,8 @@ function print_resource($corpus,$src,$trg,$resource){
 	$nrTXTLinks=$parts[1];
 	$nrTXTSrcTok=$parts[2];
 	$nrTXTTrgTok=$parts[3];
-        if (file_exists($corpus.'/'.$src.'-'.$trg.'.txt.zip')){
+	$mosesfile = $corpus.'/'.$src.'-'.$trg.'.txt.zip';
+        if (in_array($mosesfile,$corpusfiles) || file_exists($mosesfile)){
 	    $title = pretty_number($nrTXTLinks)." sentence alignments, ";
 	    $title .= pretty_number($nrTXTSrcTok)." source tokens,";
 	    $title .= pretty_number($nrTXTTrgTok)." target tokens";
@@ -319,42 +326,42 @@ function print_resource($corpus,$src,$trg,$resource){
 
     $monobase = $corpus.'/mono/'.$corpus.'.';
     echo '<td>';
-    if (file_exists($monobase.$src.'.gz')){
+    if (in_array($monobase.$src.'.gz',$corpusfiles) || file_exists($monobase.$src.'.gz')){
       $link = 'download.php?f='.urlencode($monobase.$src.'.gz');
       echo '<a href="'.$link.'" title="tokenized '.$src.'">'.$src."</a>&nbsp;";
     }
-    if (file_exists($monobase.$trg.'.gz')){
+    if (in_array($monobase.$trg.'.gz',$corpusfiles) || file_exists($monobase.$trg.'.gz')){
       $link = 'download.php?f='.urlencode($monobase.$trg.'.gz');
       echo '<a href="'.$link.'" title="tokenized '.$trg.'">'.$trg."</a>&nbsp;";
     }
     echo '</td>';
     $monobase = $corpus.'/mono/'.$corpus.'.raw.';
     echo '<td>';
-    if (file_exists($monobase.$src.'.gz')){
+    if (in_array($monobase.$src.'.gz',$corpusfiles) || file_exists($monobase.$src.'.gz')){
       $link = 'download.php?f='.urlencode($monobase.$src.'.gz');
       echo '<a href="'.$link.'" title="tokenized '.$src.'">'.$src."</a>&nbsp;";
     }
-    if (file_exists($monobase.$trg.'.gz')){
+    if (in_array($monobase.$trg.'.gz',$corpusfiles) || file_exists($monobase.$trg.'.gz')){
       $link = 'download.php?f='.urlencode($monobase.$trg.'.gz');
       echo '<a href="'.$link.'" title="tokenized '.$trg.'">'.$trg."</a>&nbsp;";
     }
     echo '</td>';
 
     echo '<td>';
-    $truedir = $corpus.'/wordalign/truecaser/';
-    if (file_exists($truedir.$src.'.gz')){
+    $truedir = $corpus.'/truecaser/';
+    if (in_array($truedir.$src.'.gz',$corpusfiles) || file_exists($truedir.$src.'.gz')){
       $link = 'download.php?f='.urlencode($truedir.$src.'.gz');
       echo '<a href="'.$link.'" title="truecaser '.$src.'">'.$src."</a>&nbsp;";
     }
-    if (file_exists($truedir.$trg.'.gz')){
+    if (in_array($truedir.$trg.'.gz',$corpusfiles) || file_exists($truedir.$trg.'.gz')){
       $link = 'download.php?f='.urlencode($truedir.$trg.'.gz');
       echo '<a href="'.$link.'" title="truecaser '.$trg.'">'.$trg."</a>&nbsp;";
     }
     echo '</td>';
 
     echo '<td>';
-    if (is_dir("$corpus/wordalign/$src-$trg")){
-      echo "<a rel='nofollow' href='$corpus/wordalign/$src-$trg'>$src-$trg</a>";
+    if (in_array("$corpus/$src-$trg/model",$corpusfiles) || is_dir("$corpus/$src-$trg/model")){
+      echo "<a rel='nofollow' href='$corpus/$src-$trg'>$src-$trg</a>";
     }
     echo '</td>';
 
@@ -362,7 +369,7 @@ function print_resource($corpus,$src,$trg,$resource){
     // dictionary files
     $dicfile = $corpus.'/dic/'.$src.'-'.$trg.'.dic';
     echo '<td>';
-    if (file_exists($dicfile)){
+    if (in_array($dicfile,$corpusfiles) || file_exists($dicfile)){
       $link = 'download.php?f='.urlencode($dicfile);
       echo '<a href="'.$link.'" title="dictionary">dic</a>&nbsp;';
     }
@@ -371,11 +378,11 @@ function print_resource($corpus,$src,$trg,$resource){
     // freq files
     $freqbase = $corpus.'/freq/'.$corpus.'.';
     echo '<td>';
-    if (file_exists($freqbase.$src.'.gz')){
+    if (in_array($freqbase.$src.'.gz',$corpusfiles) || file_exists($freqbase.$src.'.gz')){
       $link = 'download.php?f='.urlencode($freqbase.$src.'.gz');
       echo '<a href="'.$link.'" title="lowercased frequencies '.$src.'">'.$src."</a>&nbsp;";
     }
-    if (file_exists($freqbase.$trg.'.gz')){
+    if (in_array($freqbase.$trg.'.gz',$corpusfiles) || file_exists($freqbase.$trg.'.gz')){
       $link = 'download.php?f='.urlencode($freqbase.$trg.'.gz');
       echo '<a href="'.$link.'" title="lowercased frequencies '.$trg.'">'.$trg."</a>&nbsp;";
     }
