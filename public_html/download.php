@@ -1,12 +1,9 @@
 <?php
 
+// file extensions that we allow to download
 $extension = array('.gz','.tar','.ces','.xml','.txt','.srt3','.zip','.model','.mco','.dic');
 
-if ($file = check_file()){
-//     define("_BBC_PAGE_NAME", "OPUS -> $file");
-//     define("_BBCLONE_DIR", "/storage/tiedeman/public_html/bbclone/");
-//     define("COUNTER", _BBCLONE_DIR."mark_page.php");  
-//     if (is_readable(COUNTER)) include_once(COUNTER);  
+if ($file = validate_filename()){
     $logfile = 'downloads.txt';
     $user = get_user_id();
 
@@ -17,13 +14,28 @@ if ($file = check_file()){
     fwrite($fh,$string);
     fclose($fh);
 
-    header("Location: ".$file);
+    // check if the file exists on the local server
+    if (file_exists($file)){
+      header("Location: ".$file);
+    }
+    // otherwise: download from the old OPUS server
+    // TODO: change this to the new download location!
+    else{
+      header("Location: http://opus.lingfil.uu.se/".$file);
+    }
+
+// not a valid filename? go back to home page
+// TODO: show some kind of error message? Error page?
 } else{
-    header("Location: http://opus.lingfil.uu.se");
+    // header("Location: http://opus.lingfil.uu.se");
+    header("Location: /index.php");
 }
 
 
-function check_file(){
+
+// validate filenames
+
+function validate_filename(){
     global $downdir;
     if (isset($_REQUEST["f"])){
         $file = $_REQUEST["f"];
@@ -37,15 +49,14 @@ function check_file(){
         // don't allow filenames that start with '.'
         if (strpos('.',$basename) === 0){return false;}
 
-        if (file_exists($file)){
-            // check file extension
-            if (extOK($file)){
-               return $file;
-            }
+	// check file extension
+        if (extOK($file)){
+            return $file;
         }
     }
     return false;
 }
+
 
 function extOk($file) {
     global $extension;

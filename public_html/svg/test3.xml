@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+ <!ATTLIST svg xmlns:xlink CDATA #FIXED "http://www.w3.org/1999/xlink">
+]>
+
+<!-- Title: G Pages: 1 -->
+<svg width="100%" height="50%"
+     xmlns="http://www.w3.org/2000/svg" 
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <defs>
+    <text id="This" text-anchor="middle">This</text>
+    <text id="is">is</text>
+    <text id="a">a</text>
+    <text id="test">test</text>
+    <marker id="arrow" viewBox="0 0 10 10" refX="1" refY="5" 
+	    markerUnits="strokeWidth" orient="auto"
+	    markerWidth="10" markerHeight="8">
+      <polyline points="0,0 10,5 0,10 1,5" fill="black" />
+    </marker>
+  </defs>
+
+  <text x="100" y="200" font-size="45" fill="red" >
+    <tref xlink:href="#This"/>
+    <tref xlink:href="#is"/>
+    <tref xlink:href="#a"/>
+    <tref xlink:href="#test"/>
+  </text>
+
+<!--  width="{0.2 + string-length($label) *0.12} -->
+<!-- length*10+10 ?!? -->
+
+  <text x="100" y="300" font-size="20" fill="black" >This</text>
+  <text x="150" y="300" font-size="20" fill="black" >is</text>
+  <text x="180" y="300" font-size="20" fill="black" >a</text>
+  <text x="200" y="300" font-size="20" fill="black" >test</text>
+
+  <path style="fill:none;stroke:black;" d="M120 280 S140 240 155 275" marker-end="url(#arrow)"/> 
+
+  <path style="fill:none;stroke:black;" d="M220 280 S190 220 165 275" marker-end="url(#arrow)"/> 
+
+  <path style="fill:none;stroke:black;" d="M220 280 S170 180 115 275" marker-end="url(#arrow)"/> 
+
+  <text x="140" y="240" font-size="10" fill="blue" text-anchor="middle">label</text>
+
+
+
+  <path style="fill:none;stroke:black;" d="M220 280 S220 240 170 220 S115 240 115 275" marker-end="url(#arrow)"/> 
+
+
+  <path style="fill:none;stroke:black;" d="M0 100 C0 100 0 50 100 50 C100 50 200 50 200 100" marker-end="url(#arrow)"/> 
+
+  <text x="100" y="48" font-size="12" fill="blue" text-anchor="middle">label</text>
+
+
+
+</svg>
+
+

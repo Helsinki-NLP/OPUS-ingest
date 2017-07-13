@@ -1,0 +1,770 @@
+1	Celex	_	NE	NE	_	2	PNC	_	_
+2	Test	_	NN	NN	_	0	ROOT	_	_
+
+1	Amtsblatt	_	NN	NN	_	2	PNC	_	_
+2	Nr	_	NE	NE	_	0	ROOT	_	_
+3	.	_	$.	$.	_	2	PUNC	_	_
+
+1	DE	_	NE	NE	_	0	ROOT	_	_
+
+1	Vertrag	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	eine	_	ART	ART	_	2	NK	_	_
+4	Verfassung	_	NN	NN	_	2	NK	_	_
+5	für	_	APPR	APPR	_	2	MNR	_	_
+6	Europa	_	NE	NE	_	5	NK	_	_
+
+1	PRÄAMBEL	_	NE	NE	_	0	ROOT	_	_
+
+1	TEIL	_	PTKVZ	PTKVZ	_	0	ROOT	_	_
+2	I	_	XY	XY	_	1	PUNC	_	_
+
+1	TEIL	_	PTKVZ	PTKVZ	_	9	NK	_	_
+2	II	_	CARD	CARD	_	9	NK	_	_
+3	-	_	$(	$(	_	9	PUNC	_	_
+4	DIE	_	ART	ART	_	7	NK	_	_
+5	CHARTA	_	NE	NE	_	7	PNC	_	_
+6	DER	_	NE	NE	_	7	PNC	_	_
+7	GRUNDRECHTE	_	NN	NN	_	9	PNC	_	_
+8	DER	_	NE	NE	_	9	PNC	_	_
+9	UNION	_	NE	NE	_	0	ROOT	_	_
+
+1	TEIL	_	PTKVZ	PTKVZ	_	8	NK	_	_
+2	III	_	CARD	CARD	_	8	NK	_	_
+3	-	_	$(	$(	_	8	PUNC	_	_
+4	DIE	_	ART	ART	_	5	NK	_	_
+5	POLITIKBEREICHE	_	NN	NN	_	8	CJ	_	_
+6	UND	_	KON	KON	_	8	CD	_	_
+7	DIE	_	ART	ART	_	8	NK	_	_
+8	ARBEITSWEISE	_	NN	NN	_	0	ROOT	_	_
+9	DER	_	NE	NE	_	10	PNC	_	_
+10	UNION	_	NE	NE	_	8	NK	_	_
+
+1	TEIL	_	PTKVZ	PTKVZ	_	4	NK	_	_
+2	IV	_	CARD	CARD	_	4	NK	_	_
+3	-	_	$(	$(	_	4	NK	_	_
+4	ALLGEMEINE	_	NN	NN	_	0	ROOT	_	_
+5	UND	_	KON	KON	_	4	CD	_	_
+6	SCHLUSSBESTIMMUNGEN	_	NN	NN	_	4	CJ	_	_
+
+1	PROTOKOLLE	_	NN	NN	_	0	ROOT	_	_
+2	UND	_	KON	KON	_	1	CD	_	_
+3	ANHÄNGE	_	NN	NN	_	1	UC	_	_
+
+1	A	_	NE	NE	_	0	ROOT	_	_
+2	.	_	$.	$.	_	0	PUNC	_	_
+
+1	Protokolle	_	NN	NN	_	0	ROOT	_	_
+2	zum	_	APPRART	APPRART	_	1	MNR	_	_
+3	Vertrag	_	NN	NN	_	2	PNC	_	_
+4	über	_	APPR	APPR	_	1	MNR	_	_
+5	eine	_	ART	ART	_	4	NK	_	_
+6	Verfassung	_	NN	NN	_	4	NK	_	_
+7	für	_	APPR	APPR	_	4	MNR	_	_
+8	Europa	_	NE	NE	_	7	NK	_	_
+
+1	1	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	die	_	ART	ART	_	2	NK	_	_
+4	Rolle	_	NN	NN	_	2	NK	_	_
+5	der	_	ART	ART	_	7	NK	_	_
+6	nationalen	_	ADJA	ADJA	_	7	NK	_	_
+7	Parlamente	_	NN	NN	_	2	AG	_	_
+8	in	_	APPR	APPR	_	7	MNR	_	_
+9	der	_	ART	ART	_	8	NK	_	_
+10	Europäischen Union	_	NN	NN	_	8	NK	_	_
+
+1	2	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	die	_	ART	ART	_	2	NK	_	_
+4	Anwendung	_	NN	NN	_	2	NK	_	_
+5	der	_	ART	ART	_	6	NK	_	_
+6	Grundsätze	_	NN	NN	_	2	AG	_	_
+7	der	_	ART	ART	_	8	PNC	_	_
+8	Subsidiarität	_	NN	NN	_	6	PNC	_	_
+9	und	_	KON	KON	_	6	CD	_	_
+10	der	_	ART	ART	_	11	PNC	_	_
+11	Verhältnismäßigkeit	_	NN	NN	_	6	CJ	_	_
+
+1	3	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	10	NK	_	_
+2	zur	_	APPRART	APPRART	_	10	NK	_	_
+3	Festlegung	_	NN	NN	_	2	PNC	_	_
+4	der	_	ART	ART	_	5	PNC	_	_
+5	Satzung	_	NN	NN	_	7	PNC	_	_
+6	des	_	ART	ART	_	7	PNC	_	_
+7	Gerichtshofs	_	NN	NN	_	10	AG	_	_
+8	der	_	ART	ART	_	10	NK	_	_
+9	Europäischen	_	ADJA	ADJA	_	10	NK	_	_
+10	Union	_	NN	NN	_	0	ROOT	_	_
+
+1	4	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	zur	_	APPRART	APPRART	_	1	MNR	_	_
+3	Festlegung	_	NN	NN	_	5	PNC	_	_
+4	der	_	ART	ART	_	5	PNC	_	_
+5	Satzung	_	NN	NN	_	2	NK	_	_
+6	des	_	ART	ART	_	8	NK	_	_
+7	Europäischen	_	ADJA	ADJA	_	8	NK	_	_
+8	Systems	_	NN	NN	_	2	AG	_	_
+9	der	_	ART	ART	_	10	PNC	_	_
+10	Zentralbanken	_	NN	NN	_	8	PNC	_	_
+11	und	_	KON	KON	_	8	CD	_	_
+12	der	_	ART	ART	_	14	NK	_	_
+13	Europäischen	_	ADJA	ADJA	_	14	PNC	_	_
+14	Zentralbank	_	NN	NN	_	8	CJ	_	_
+
+1	5	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	zur	_	APPRART	APPRART	_	1	MNR	_	_
+3	Festlegung	_	NN	NN	_	2	NK	_	_
+4	der	_	ART	ART	_	5	NK	_	_
+5	Satzung	_	NN	NN	_	3	PNC	_	_
+6	der	_	ART	ART	_	8	NK	_	_
+7	Europäischen	_	ADJA	ADJA	_	8	PNC	_	_
+8	Investitionsbank	_	NN	NN	_	5	AG	_	_
+
+1	6	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	die	_	ART	ART	_	2	NK	_	_
+4	Festlegung	_	NN	NN	_	2	NK	_	_
+5	der	_	ART	ART	_	6	NK	_	_
+6	Sitze	_	NN	NN	_	2	AG	_	_
+7	der	_	ART	ART	_	11	NK	_	_
+8	Organe	_	NN	NN	_	11	CJ	_	_
+9	und	_	KON	KON	_	11	CD	_	_
+10	bestimmter	_	ADJA	ADJA	_	11	NK	_	_
+11	Einrichtungen	_	NN	NN	_	6	AG	_	_
+12	,	_	$,	$,	_	11	PUNC	_	_
+13	sonstiger	_	ADJA	ADJA	_	14	PNC	_	_
+14	Stellen	_	NN	NN	_	11	CJ	_	_
+15	und	_	KON	KON	_	11	CD	_	_
+16	Dienststellen	_	NN	NN	_	11	UC	_	_
+17	der	_	ART	ART	_	19	NK	_	_
+18	Europäischen	_	ADJA	ADJA	_	19	NK	_	_
+19	Union	_	NN	NN	_	11	AG	_	_
+
+1	7	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	die	_	ART	ART	_	2	NK	_	_
+4	Vorrechte	_	NN	NN	_	2	NK	_	_
+5	und	_	KON	KON	_	4	CD	_	_
+6	Befreiungen	_	NN	NN	_	4	CJ	_	_
+7	der	_	ART	ART	_	9	NK	_	_
+8	Europäischen	_	ADJA	ADJA	_	9	PNC	_	_
+9	Union	_	NN	NN	_	2	AG	_	_
+
+1	8	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	2	UC	_	_
+2	betreffend	_	ADJD	ADJD	_	4	MO	_	_
+3	die	_	ART	ART	_	4	NK	_	_
+4	Verträge	_	NN	NN	_	0	ROOT	_	_
+5	und	_	KON	KON	_	4	CD	_	_
+6	die	_	ART	ART	_	7	PNC	_	_
+7	Akten	_	NN	NN	_	8	NK	_	_
+8	über	_	APPR	APPR	_	4	CJ	_	_
+9	den	_	ART	ART	_	8	NK	_	_
+10	Beitritt	_	NN	NN	_	8	NK	_	_
+11	des	_	ART	ART	_	18	PNC	_	_
+12	Königreichs	_	NN	NN	_	13	PNC	_	_
+13	Dänemark	_	NE	NE	_	18	PNC	_	_
+14	,	_	$,	$,	_	18	PNC	_	_
+15	Irlands	_	NE	NE	_	18	PNC	_	_
+16	sowie	_	KON	KON	_	18	PNC	_	_
+17	des	_	ART	ART	_	18	PNC	_	_
+18	Vereinigten	_	ADJA	ADJA	_	22	NK	_	_
+19	Königreichs	_	NN	NN	_	20	PNC	_	_
+20	Großbritannien	_	NE	NE	_	22	CJ	_	_
+21	und	_	KON	KON	_	22	CD	_	_
+22	Nordirland	_	NE	NE	_	8	AG	_	_
+23	,	_	$,	$,	_	8	PUNC	_	_
+24	der	_	ART	ART	_	26	NK	_	_
+25	Hellenischen	_	ADJA	ADJA	_	26	NK	_	_
+26	Republik	_	NN	NN	_	8	APP	_	_
+27	,	_	$,	$,	_	8	PUNC	_	_
+28	des	_	ART	ART	_	30	NK	_	_
+29	Königreichs	_	NN	NN	_	30	PNC	_	_
+30	Spanien	_	NE	NE	_	8	CJ	_	_
+31	und	_	KON	KON	_	30	CD	_	_
+32	der	_	ART	ART	_	34	PNC	_	_
+33	Portugiesischen	_	ADJA	ADJA	_	34	PNC	_	_
+34	Republik	_	NN	NN	_	30	CJ	_	_
+35	,	_	$,	$,	_	30	PUNC	_	_
+36	der	_	ART	ART	_	38	PNC	_	_
+37	Republik	_	NN	NN	_	38	PNC	_	_
+38	Österreich	_	NE	NE	_	30	CJ	_	_
+39	,	_	$,	$,	_	30	PUNC	_	_
+40	der	_	ART	ART	_	42	PNC	_	_
+41	Republik	_	NN	NN	_	42	PNC	_	_
+42	Finnland	_	NE	NE	_	30	CJ	_	_
+43	und	_	KON	KON	_	30	CD	_	_
+44	des	_	ART	ART	_	45	PNC	_	_
+45	Königreichs	_	NN	NN	_	46	PNC	_	_
+46	Schweden	_	NE	NE	_	30	CJ	_	_
+
+1	9	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	2	UC	_	_
+2	betreffend	_	ADJD	ADJD	_	7	MO	_	_
+3	den	_	ART	ART	_	4	PNC	_	_
+4	Vertrag	_	NN	NN	_	7	CJ	_	_
+5	und	_	KON	KON	_	7	CD	_	_
+6	die	_	ART	ART	_	7	NK	_	_
+7	Akte	_	NN	NN	_	0	ROOT	_	_
+8	über	_	APPR	APPR	_	7	MNR	_	_
+9	den	_	ART	ART	_	8	NK	_	_
+10	Beitritt	_	NN	NN	_	8	NK	_	_
+11	der	_	ART	ART	_	13	NK	_	_
+12	Tschechischen	_	ADJA	ADJA	_	13	NK	_	_
+13	Republik	_	NN	NN	_	8	AG	_	_
+14	,	_	$,	$,	_	13	PUNC	_	_
+15	der	_	ART	ART	_	17	PNC	_	_
+16	Republik	_	NN	NN	_	17	PNC	_	_
+17	Estland	_	NE	NE	_	13	CJ	_	_
+18	,	_	$,	$,	_	13	PUNC	_	_
+19	der	_	ART	ART	_	21	PNC	_	_
+20	Republik	_	NN	NN	_	21	PNC	_	_
+21	Zypern	_	NE	NE	_	13	CJ	_	_
+22	,	_	$,	$,	_	13	PUNC	_	_
+23	der	_	ART	ART	_	25	PNC	_	_
+24	Republik	_	NN	NN	_	25	PNC	_	_
+25	Lettland	_	NE	NE	_	13	CJ	_	_
+26	,	_	$,	$,	_	13	PUNC	_	_
+27	der	_	ART	ART	_	29	PNC	_	_
+28	Republik	_	NN	NN	_	29	PNC	_	_
+29	Litauen	_	NE	NE	_	13	CJ	_	_
+30	,	_	$,	$,	_	13	PUNC	_	_
+31	der	_	ART	ART	_	33	PNC	_	_
+32	Republik	_	NN	NN	_	33	PNC	_	_
+33	Ungarn	_	NE	NE	_	13	CJ	_	_
+34	,	_	$,	$,	_	13	PUNC	_	_
+35	der	_	ART	ART	_	37	PNC	_	_
+36	Republik	_	NN	NN	_	37	PNC	_	_
+37	Malta	_	NE	NE	_	13	CJ	_	_
+38	,	_	$,	$,	_	13	PUNC	_	_
+39	der	_	ART	ART	_	41	PNC	_	_
+40	Republik	_	NN	NN	_	41	PNC	_	_
+41	Polen	_	NE	NE	_	13	CJ	_	_
+42	,	_	$,	$,	_	13	PUNC	_	_
+43	der	_	ART	ART	_	45	NK	_	_
+44	Republik	_	NN	NN	_	45	PNC	_	_
+45	Slowenien	_	NE	NE	_	13	CJ	_	_
+46	und	_	KON	KON	_	13	CD	_	_
+47	der	_	ART	ART	_	49	NK	_	_
+48	Slowakischen	_	ADJA	ADJA	_	49	NK	_	_
+49	Republik	_	NN	NN	_	13	CJ	_	_
+
+1	10	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	das	_	ART	ART	_	2	NK	_	_
+4	Verfahren	_	NN	NN	_	2	NK	_	_
+5	bei	_	APPR	APPR	_	2	MNR	_	_
+6	einem	_	ART	ART	_	5	NK	_	_
+7	übermäßigen	_	ADJA	ADJA	_	5	NK	_	_
+8	Defizit	_	NN	NN	_	5	NK	_	_
+
+1	11	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	die	_	ART	ART	_	2	NK	_	_
+4	Konvergenzkriterien	_	NN	NN	_	2	NK	_	_
+
+1	12	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	2	UC	_	_
+2	betreffend	_	ADJD	ADJD	_	4	MO	_	_
+3	die	_	ART	ART	_	4	NK	_	_
+4	Euro-	_	NN	NN	_	0	ROOT	_	_
+5	Gruppe	_	NN	NN	_	4	PNC	_	_
+
+1	13	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	einige	_	PIAT	PIAT	_	2	NK	_	_
+4	Bestimmungen	_	NN	NN	_	2	NK	_	_
+5	betreffend	_	ADJD	ADJD	_	7	PNC	_	_
+6	das	_	ART	ART	_	7	PNC	_	_
+7	Vereinigte	_	ADJA	ADJA	_	11	NK	_	_
+8	Königreich	_	NN	NN	_	9	PNC	_	_
+9	Großbritannien	_	NE	NE	_	11	NK	_	_
+10	und	_	KON	KON	_	11	CD	_	_
+11	Nordirland	_	NE	NE	_	2	AG	_	_
+12	hinsichtlich	_	APPR	APPR	_	11	MNR	_	_
+13	der	_	ART	ART	_	12	NK	_	_
+14	Wirtschafts	_	TRUNC	TRUNC	_	12	NK	_	_
+15	-	_	$(	$(	_	14	PUNC	_	_
+16	und	_	KON	KON	_	14	CD	_	_
+17	Währungsunion	_	NN	NN	_	12	NK	_	_
+
+1	14	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	einige	_	PIAT	PIAT	_	2	NK	_	_
+4	Bestimmungen	_	NN	NN	_	2	NK	_	_
+5	betreffend	_	ADJD	ADJD	_	6	PNC	_	_
+6	Dänemark	_	NE	NE	_	2	NK	_	_
+7	hinsichtlich	_	APPR	APPR	_	6	MNR	_	_
+8	der	_	ART	ART	_	7	NK	_	_
+9	Wirtschafts	_	TRUNC	TRUNC	_	7	NK	_	_
+10	-	_	$(	$(	_	9	PUNC	_	_
+11	und	_	KON	KON	_	9	CD	_	_
+12	Währungsunion	_	NN	NN	_	7	NK	_	_
+
+1	15	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	bestimmte	_	ADJA	ADJA	_	2	PNC	_	_
+4	Aufgaben	_	NN	NN	_	2	NK	_	_
+5	der	_	ART	ART	_	6	NK	_	_
+6	Nationalbank	_	NN	NN	_	7	PNC	_	_
+7	Dänemarks	_	NE	NE	_	2	AG	_	_
+
+1	16	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	die	_	ART	ART	_	2	NK	_	_
+4	Regelung	_	NN	NN	_	2	NK	_	_
+5	für	_	APPR	APPR	_	2	MNR	_	_
+6	den	_	ART	ART	_	5	NK	_	_
+7	Franc	_	NN	NN	_	5	NK	_	_
+8	der	_	ART	ART	_	10	NK	_	_
+9	Pazifischen	_	ADJA	ADJA	_	10	PNC	_	_
+10	Finanzgemeinschaft	_	NN	NN	_	5	AG	_	_
+
+1	17	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	den	_	ART	ART	_	2	NK	_	_
+4	in	_	APPR	APPR	_	10	MO	_	_
+5	den	_	ART	ART	_	4	NK	_	_
+6	Rahmen	_	NN	NN	_	4	NK	_	_
+7	der	_	ART	ART	_	9	NK	_	_
+8	Europäischen	_	ADJA	ADJA	_	9	NK	_	_
+9	Union	_	NN	NN	_	10	PNC	_	_
+10	einbezogenen	_	ADJA	ADJA	_	2	NK	_	_
+11	Schengen-	_	TRUNC	TRUNC	_	2	NK	_	_
+12	Besitzstand	_	NN	NN	_	2	NK	_	_
+
+1	18	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	die	_	ART	ART	_	2	NK	_	_
+4	Anwendung	_	NN	NN	_	2	NK	_	_
+5	bestimmter	_	ADJA	ADJA	_	6	NK	_	_
+6	Aspekte	_	NN	NN	_	2	AG	_	_
+7	des	_	ART	ART	_	11	PNC	_	_
+8	Artikels III-	_	NN	NN	_	11	PNC	_	_
+9	130	_	CARD	CARD	_	8	PNC	_	_
+10	der	_	ART	ART	_	11	PNC	_	_
+11	Verfassung	_	NN	NN	_	6	PNC	_	_
+12	auf	_	APPR	APPR	_	6	MNR	_	_
+13	das	_	ART	ART	_	12	NK	_	_
+14	Vereinigte	_	ADJA	ADJA	_	12	NK	_	_
+15	Königreich	_	NN	NN	_	12	NK	_	_
+16	und	_	KON	KON	_	12	CD	_	_
+17	auf	_	APPR	APPR	_	12	CJ	_	_
+18	Irland	_	NE	NE	_	17	NK	_	_
+
+1	19	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	die	_	ART	ART	_	2	NK	_	_
+4	Position	_	NN	NN	_	2	NK	_	_
+5	des	_	ART	ART	_	6	PNC	_	_
+6	Vereinigten	_	ADJA	ADJA	_	7	NK	_	_
+7	Königreichs	_	NN	NN	_	2	AG	_	_
+8	und	_	KON	KON	_	7	CD	_	_
+9	Irlands	_	NE	NE	_	7	CJ	_	_
+10	hinsichtlich	_	APPR	APPR	_	7	MNR	_	_
+11	der	_	ART	ART	_	10	NK	_	_
+12	Politik	_	NN	NN	_	10	NK	_	_
+13	betreffend	_	ADJD	ADJD	_	20	MO	_	_
+14	Grenzkontrollen	_	NN	NN	_	20	CJ	_	_
+15	,	_	$,	$,	_	14	PUNC	_	_
+16	Asyl	_	NN	NN	_	14	UC	_	_
+17	und	_	KON	KON	_	14	CD	_	_
+18	Einwanderung	_	NN	NN	_	14	UC	_	_
+19	sowie	_	KON	KON	_	20	CD	_	_
+20	hinsichtlich	_	APPR	APPR	_	10	MNR	_	_
+21	der	_	ART	ART	_	20	NK	_	_
+22	justiziellen	_	ADJA	ADJA	_	20	NK	_	_
+23	Zusammenarbeit	_	NN	NN	_	20	NK	_	_
+24	in	_	APPR	APPR	_	20	MNR	_	_
+25	Zivilsachen	_	NN	NN	_	29	CJ	_	_
+26	und	_	KON	KON	_	29	CD	_	_
+27	der	_	ART	ART	_	29	NK	_	_
+28	polizeilichen	_	ADJA	ADJA	_	29	NK	_	_
+29	Zusammenarbeit	_	NN	NN	_	24	NK	_	_
+
+1	20	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	die	_	ART	ART	_	2	NK	_	_
+4	Position	_	NN	NN	_	2	NK	_	_
+5	Dänemarks	_	NE	NE	_	2	NK	_	_
+
+1	21	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	die	_	ART	ART	_	2	NK	_	_
+4	Außenbeziehungen	_	NN	NN	_	2	NK	_	_
+5	der	_	ART	ART	_	6	NK	_	_
+6	Mitgliedstaaten	_	NN	NN	_	2	AG	_	_
+7	hinsichtlich	_	APPR	APPR	_	6	MNR	_	_
+8	des	_	ART	ART	_	7	NK	_	_
+9	Überschreitens	_	NN	NN	_	7	NK	_	_
+10	der	_	ART	ART	_	11	PNC	_	_
+11	Außengrenzen	_	NN	NN	_	7	NK	_	_
+
+1	22	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	die	_	ART	ART	_	2	NK	_	_
+4	Gewährung	_	NN	NN	_	2	NK	_	_
+5	von	_	APPR	APPR	_	2	MNR	_	_
+6	Asyl	_	NN	NN	_	5	NK	_	_
+7	für	_	APPR	APPR	_	5	MNR	_	_
+8	Staatsangehörige	_	NN	NN	_	7	NK	_	_
+9	der	_	ART	ART	_	10	PNC	_	_
+10	Mitgliedstaaten	_	NN	NN	_	7	NK	_	_
+
+1	23	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	die	_	ART	ART	_	2	NK	_	_
+4	ständige	_	ADJA	ADJA	_	2	NK	_	_
+5	Strukturierte	_	ADJA	ADJA	_	2	NK	_	_
+6	Zusammenarbeit	_	NN	NN	_	2	NK	_	_
+7	nach	_	APPR	APPR	_	2	MNR	_	_
+8	Artikel I-	_	NN	NN	_	10	PNC	_	_
+9	41	_	CARD	CARD	_	10	PNC	_	_
+10	Absatz 6	_	NN	NN	_	12	CJ	_	_
+11	und	_	KON	KON	_	12	CD	_	_
+12	Artikel III-	_	NN	NN	_	7	NK	_	_
+13	312	_	CARD	CARD	_	12	PNC	_	_
+14	der	_	ART	ART	_	15	PNC	_	_
+15	Verfassung	_	NN	NN	_	12	PNC	_	_
+
+1	24	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	zu	_	APPR	APPR	_	1	MNR	_	_
+3	Artikel I-	_	NN	NN	_	5	PNC	_	_
+4	41	_	CARD	CARD	_	5	NK	_	_
+5	Absatz 2	_	NN	NN	_	2	NK	_	_
+6	der	_	ART	ART	_	7	NK	_	_
+7	Verfassung	_	NN	NN	_	2	AG	_	_
+
+1	25	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	die	_	ART	ART	_	2	NK	_	_
+4	Einfuhr	_	NN	NN	_	2	NK	_	_
+5	von	_	APPR	APPR	_	2	MNR	_	_
+6	in	_	APPR	APPR	_	10	MO	_	_
+7	den	_	ART	ART	_	8	PNC	_	_
+8	Niederländischen	_	ADJA	ADJA	_	6	NK	_	_
+9	Antillen	_	NE	NE	_	6	NK	_	_
+10	raffinierten	_	ADJA	ADJA	_	5	NK	_	_
+11	Erdölerzeugnissen	_	NN	NN	_	5	NK	_	_
+12	in	_	APPR	APPR	_	5	MNR	_	_
+13	die	_	ART	ART	_	12	NK	_	_
+14	Europäische	_	ADJA	ADJA	_	12	NK	_	_
+15	Union	_	NN	NN	_	12	NK	_	_
+
+1	26	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	2	UC	_	_
+2	betreffend	_	ADJD	ADJD	_	4	PNC	_	_
+3	den	_	ART	ART	_	4	PNC	_	_
+4	Erwerb	_	NN	NN	_	5	NK	_	_
+5	von	_	APPR	APPR	_	0	ROOT	_	_
+6	Immobilien	_	NN	NN	_	5	NK	_	_
+7	in	_	APPR	APPR	_	5	MNR	_	_
+8	Dänemark	_	NE	NE	_	7	NK	_	_
+
+1	27	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	den	_	ART	ART	_	2	NK	_	_
+4	öffentlich-	_	ADJA	ADJA	_	2	NK	_	_
+5	rechtlichen	_	ADJA	ADJA	_	2	NK	_	_
+6	Rundfunk	_	NN	NN	_	2	NK	_	_
+7	in	_	APPR	APPR	_	2	MNR	_	_
+8	den	_	ART	ART	_	7	NK	_	_
+9	Mitgliedstaaten	_	NN	NN	_	7	NK	_	_
+
+1	28	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	zu	_	APPR	APPR	_	1	MNR	_	_
+3	Artikel III-	_	NN	NN	_	2	NK	_	_
+4	214	_	CARD	CARD	_	2	NK	_	_
+5	der	_	ART	ART	_	6	NK	_	_
+6	Verfassung	_	NN	NN	_	2	AG	_	_
+
+1	29	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	den	_	ART	ART	_	2	NK	_	_
+4	wirtschaftlichen	_	ADJA	ADJA	_	2	NK	_	_
+5	,	_	$,	$,	_	4	PUNC	_	_
+6	sozialen	_	ADJA	ADJA	_	4	CJ	_	_
+7	und	_	KON	KON	_	4	CD	_	_
+8	territorialen	_	ADJA	ADJA	_	4	CJ	_	_
+9	Zusammenhalt	_	NN	NN	_	2	NK	_	_
+
+1	30	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	die	_	ART	ART	_	2	NK	_	_
+4	Sonderregelung	_	NN	NN	_	2	NK	_	_
+5	für	_	APPR	APPR	_	2	MNR	_	_
+6	Grönland	_	NE	NE	_	5	NK	_	_
+
+1	31	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	Artikel 40.	_	NE	NE	_	2	NK	_	_
+4	3.	_	ADV	ADV	_	5	MO	_	_
+5	3	_	CARD	CARD	_	7	NK	_	_
+6	der	_	ART	ART	_	7	NK	_	_
+7	Verfassung	_	NN	NN	_	8	PNC	_	_
+8	Irlands	_	NE	NE	_	2	NK	_	_
+
+1	32	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	zu	_	APPR	APPR	_	1	MNR	_	_
+3	Artikel I-	_	NE	NE	_	5	PNC	_	_
+4	9	_	CARD	CARD	_	5	PNC	_	_
+5	Absatz 2	_	NN	NN	_	7	PNC	_	_
+6	der	_	ART	ART	_	7	PNC	_	_
+7	Verfassung	_	NN	NN	_	2	NK	_	_
+8	über	_	APPR	APPR	_	2	MNR	_	_
+9	den	_	ART	ART	_	8	NK	_	_
+10	Beitritt	_	NN	NN	_	8	NK	_	_
+11	der	_	ART	ART	_	19	NK	_	_
+12	Union	_	NN	NN	_	19	PNC	_	_
+13	zur	_	APPRART	APPRART	_	19	PNC	_	_
+14	Europäischen	_	ADJA	ADJA	_	13	PNC	_	_
+15	Konvention	_	NN	NN	_	13	PNC	_	_
+16	zum	_	APPRART	APPRART	_	19	PNC	_	_
+17	Schutz	_	NN	NN	_	16	PNC	_	_
+18	der	_	ART	ART	_	19	PNC	_	_
+19	Menschenrechte	_	NN	NN	_	8	AG	_	_
+20	und	_	KON	KON	_	19	CD	_	_
+21	Grundfreiheiten	_	NN	NN	_	19	CJ	_	_
+
+1	33	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	die	_	ART	ART	_	2	NK	_	_
+4	Rechtsakte	_	NN	NN	_	2	NK	_	_
+5	und	_	KON	KON	_	4	CD	_	_
+6	Verträge	_	NN	NN	_	4	CJ	_	_
+7	zur	_	APPRART	APPRART	_	2	MNR	_	_
+8	Ergänzung	_	NN	NN	_	20	CJ	_	_
+9	oder	_	KON	KON	_	20	CD	_	_
+10	Änderung	_	NN	NN	_	20	AG	_	_
+11	des	_	ART	ART	_	20	NK	_	_
+12	Vertrags	_	NN	NN	_	20	CJ	_	_
+13	zur	_	APPRART	APPRART	_	12	MNR	_	_
+14	Gründung	_	NN	NN	_	13	NK	_	_
+15	der	_	ART	ART	_	17	NK	_	_
+16	Europäischen	_	ADJA	ADJA	_	17	NK	_	_
+17	Gemeinschaft	_	NN	NN	_	13	AG	_	_
+18	und	_	KON	KON	_	20	CD	_	_
+19	des	_	ART	ART	_	20	PNC	_	_
+20	Vertrags	_	NN	NN	_	7	NK	_	_
+21	über	_	APPR	APPR	_	20	MNR	_	_
+22	die	_	ART	ART	_	21	NK	_	_
+23	Europäische	_	ADJA	ADJA	_	21	NK	_	_
+24	Union	_	NN	NN	_	21	NK	_	_
+
+1	34	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	die	_	ART	ART	_	2	NK	_	_
+4	Übergangsbestimmungen	_	NN	NN	_	2	NK	_	_
+5	für	_	APPR	APPR	_	2	MNR	_	_
+6	die	_	ART	ART	_	5	NK	_	_
+7	Organe	_	NN	NN	_	5	NK	_	_
+8	und	_	KON	KON	_	7	CD	_	_
+9	Einrichtungen	_	NN	NN	_	7	CJ	_	_
+10	der	_	ART	ART	_	11	PNC	_	_
+11	Union	_	NN	NN	_	5	NK	_	_
+
+1	35	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	über	_	APPR	APPR	_	1	MNR	_	_
+3	die	_	ART	ART	_	2	NK	_	_
+4	finanziellen	_	ADJA	ADJA	_	2	NK	_	_
+5	Folgen	_	NN	NN	_	2	NK	_	_
+6	des	_	ART	ART	_	9	NK	_	_
+7	Ablaufs	_	NN	NN	_	9	PNC	_	_
+8	des	_	ART	ART	_	9	PNC	_	_
+9	Vertrags	_	NN	NN	_	2	AG	_	_
+10	über	_	APPR	APPR	_	9	MNR	_	_
+11	die	_	ART	ART	_	10	NK	_	_
+12	Gründung	_	NN	NN	_	10	NK	_	_
+13	der	_	ART	ART	_	15	PNC	_	_
+14	Europäischen	_	ADJA	ADJA	_	15	PNC	_	_
+15	Gemeinschaft	_	NN	NN	_	16	NK	_	_
+16	für	_	APPR	APPR	_	10	MNR	_	_
+17	Kohle	_	NN	NN	_	19	CJ	_	_
+18	und	_	KON	KON	_	19	CD	_	_
+19	Stahl	_	NN	NN	_	16	NK	_	_
+20	und	_	KON	KON	_	19	CD	_	_
+21	über	_	APPR	APPR	_	19	CJ	_	_
+22	den	_	ART	ART	_	21	NK	_	_
+23	Forschungsfonds	_	NN	NN	_	21	NK	_	_
+24	für	_	APPR	APPR	_	21	MNR	_	_
+25	Kohle	_	NN	NN	_	24	NK	_	_
+26	und	_	KON	KON	_	25	CD	_	_
+27	Stahl	_	NN	NN	_	25	CJ	_	_
+
+1	36	_	CARD	CARD	_	0	ROOT	_	_
+2	.	_	$.	$.	_	1	PUNC	_	_
+
+1	Protokoll	_	NN	NN	_	0	ROOT	_	_
+2	zur	_	APPRART	APPRART	_	1	MNR	_	_
+3	Änderung	_	NN	NN	_	2	PNC	_	_
+4	des	_	ART	ART	_	5	NK	_	_
+5	Vertrags	_	NN	NN	_	2	NK	_	_
+6	zur	_	APPRART	APPRART	_	5	PNC	_	_
+7	Gründung	_	NN	NN	_	6	NK	_	_
+8	der	_	ART	ART	_	10	NK	_	_
+9	Europäischen	_	ADJA	ADJA	_	10	NK	_	_
+10	Atomgemeinschaft	_	NN	NN	_	6	AG	_	_
+
+1	B	_	XY	XY	_	0	ROOT	_	_
+2	.	_	$.	$.	_	0	PUNC	_	_
+
+1	Anhänge	_	NN	NN	_	0	ROOT	_	_
+2	zum	_	APPRART	APPRART	_	1	MNR	_	_
+3	Vertrag	_	NN	NN	_	2	PNC	_	_
+4	über	_	APPR	APPR	_	1	MNR	_	_
+5	eine	_	ART	ART	_	4	NK	_	_
+6	Verfassung	_	NN	NN	_	4	NK	_	_
+7	für	_	APPR	APPR	_	4	MNR	_	_
+8	Europa	_	NE	NE	_	7	NK	_	_
+
+1	Anhang I	_	NE	NE	_	0	ROOT	_	_
+2	-	_	$(	$(	_	1	PUNC	_	_
+3	Liste	_	NN	NN	_	1	UC	_	_
+4	zu	_	APPR	APPR	_	3	MNR	_	_
+5	Artikel III-	_	NN	NN	_	4	PNC	_	_
+6	226	_	CARD	CARD	_	4	NK	_	_
+7	der	_	ART	ART	_	8	NK	_	_
+8	Verfassung	_	NN	NN	_	4	AG	_	_
+
+1	Anhang II	_	NE	NE	_	0	ROOT	_	_
+2	-	_	$(	$(	_	1	PUNC	_	_
+3	Überseeische	_	ADJA	ADJA	_	4	PNC	_	_
+4	Länder	_	NN	NN	_	6	CJ	_	_
+5	und	_	KON	KON	_	6	CD	_	_
+6	Hoheitsgebiete	_	NN	NN	_	1	NK	_	_
+7	,	_	$,	$,	_	1	PUNC	_	_
+8	auf	_	APPR	APPR	_	17	NK	_	_
+9	welche	_	PWAT	PWAT	_	17	MO	_	_
+10	Teil	_	NN	NN	_	17	SB	_	_
+11	III	_	CARD	CARD	_	12	PNC	_	_
+12	Titel	_	NN	NN	_	17	OA	_	_
+13	IV	_	CARD	CARD	_	12	PNC	_	_
+14	der	_	ART	ART	_	16	PNC	_	_
+15	Verfassung	_	NN	NN	_	16	PNC	_	_
+16	Anwendung	_	NN	NN	_	12	NK	_	_
+17	findet	_	VVFIN	VVFIN	_	1	SB	_	_
+
+1	SCHLUSSAKTE	_	NN	NN	_	0	ROOT	_	_
+
+1	A	_	NE	NE	_	0	ROOT	_	_
+2	.	_	$.	$.	_	0	PUNC	_	_
+
+1	Erklärungen	_	NN	NN	_	0	ROOT	_	_
+2	zu	_	APPR	APPR	_	1	MNR	_	_
+3	Bestimmungen	_	NN	NN	_	2	NK	_	_
+4	der	_	ART	ART	_	5	NK	_	_
+5	Verfassung	_	NN	NN	_	2	AG	_	_
+
+1	B	_	XY	XY	_	0	ROOT	_	_
+2	.	_	$.	$.	_	0	PUNC	_	_
+
+1	Erklärungen	_	NN	NN	_	6	SB	_	_
+2	zu	_	APPR	APPR	_	6	MO	_	_
+3	den	_	ART	ART	_	2	NK	_	_
+4	der	_	ART	ART	_	5	NK	_	_
+5	Verfassung	_	NN	NN	_	6	SB	_	_
+6	beigefügten	_	VVFIN	VVFIN	_	0	ROOT	_	_
+7	Protokollen	_	NN	NN	_	6	OA	_	_
+
