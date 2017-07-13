@@ -1,0 +1,5 @@
+
+
+* escape table names with hyphens: use backticks, e.g.
+  DESCRIBE `spa-swe`
+

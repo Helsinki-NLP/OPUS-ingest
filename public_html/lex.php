@@ -82,9 +82,10 @@ function set_checked($ip,$srclang,$trglang,$srcID,$trgID,$ok){
   global $DBname;
 
     $query='INSERT IGNORE INTO user (user) VALUES ("'.$ip.'")';
-//    echo $query;
+    // echo $query;
     $result = mysql($DBname, $query);
     $query='SELECT ID FROM user WHERE user="'.$ip.'"';
+    // echo $query;
     if ($result = mysql($DBname, $query)){
 	if (mysql_num_rows($result)){
 	    $row=mysql_fetch_array($result);
@@ -103,7 +104,7 @@ function set_checked($ip,$srclang,$trglang,$srcID,$trgID,$ok){
 
     $query='SELECT correct FROM `'.$table.'_check` WHERE ';
     $query.='userID='.$userID.' AND srcID='.$srcID.' AND trgID='.$trgID;
-//    echo $query;
+    // echo $query;
     if ($result = mysql($DBname, $query)){
 	if (mysql_num_rows($result)){
 	    $row=mysql_fetch_array($result);
@@ -113,7 +114,7 @@ function set_checked($ip,$srclang,$trglang,$srcID,$trgID,$ok){
 	    $query='UPDATE `'.$table.'_check` ';
 	    $query.='SET correct='.$ok.' WHERE userID='.$userID;
 	    $query.=' AND srcID='.$srcID.' AND trgID='.$trgID;
-//	    echo $query;
+	    // echo $query;
 	    mysql($DBname, $query);
 	    return update_feedback_counts($table,$srcID,$trgID);
 	}
@@ -149,7 +150,7 @@ function update_feedback_counts($table,$srcID,$trgID){
     $query = 'UPDATE `'.$table.'` SET ok='.$correct.',wrong='.$wrong;
     $query.= ' WHERE srcID='.$srcID.' AND trgID='.$trgID;
 
-//    echo $query;
+    // echo $query;
     return mysql($DBname, $query);
 
 }
