@@ -1,62 +1,66 @@
 # -*-makefile-*-
 #
 #
-# make the html pages for downloading the corpus
+# make all download packages and the website
 # (including all data formats we provide)
 
 
 CES      = $(wildcard ${CORPUSXML}/*.xml.gz)
+ALG      = $(patsubst ${CORPUSXML}/%,${CORPUSHTML}/%,$(CES))
 TMX      = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSHTML}/%.tmx.gz,$(CES))
 MOSES    = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSHTML}/%.txt.zip,$(CES))
 LANG_TAR = $(patsubst %,${CORPUSHTML}/%.tar.gz,${LANGUAGES})
 LANG_RAW = $(patsubst %,${CORPUSHTML}/%.raw.tar.gz,${LANGUAGES})
-
+LANG_UD  = $(patsubst %,${CORPUSHTML}/%.parsed.tar.gz,${LANGUAGES})
 
 ## strict = bitexts with "high-quality" alignments only
 ## (1:1, hunalign link score > 1)
-
 TMX_STRICT    = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSHTML}/%.strict.tmx.gz,$(CES))
 MOSES_STRICT  = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSHTML}/%.strict.txt.zip,$(CES))
 
-
+# monolingual data
 MONO_TOK = $(patsubst %,${CORPUSHTML}/mono/${CORPUS}.%.gz, ${LANGUAGES})
 MONO_RAW = $(patsubst %,${CORPUSHTML}/mono/${CORPUS}.raw.%.gz, ${LANGUAGES})
 
-FREQ_COUNTS = $(patsubst %,${CORPUSHTML}/freq/${CORPUS}.%.gz, ${LANGUAGES})
-ALG_SAMPLES = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSHTML}/%_sample.html, ${CES})
-CORPUS_SAMPLES = $(patsubst %,${CORPUSHTML}/%_sample.html, ${LANGUAGES})
+# frequency counts
+FREQ_COUNTS    = $(patsubst %,${CORPUSHTML}/freq/${CORPUS}.%.gz, ${LANGUAGES})
 
+# sample files in HTML
+ALG_SAMPLES    = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSPUB}/%_sample.html, ${CES})
+CORPUS_SAMPLES = $(patsubst %,${CORPUSPUB}/%_sample.html, ${LANGUAGES})
 
-CES_INFO = $(patsubst %.xml.gz,%.info,${CES})
-TXT_INFO = $(patsubst ${CORPUSHTML}/%.txt.zip,${CORPUSXML}/%.txt.info,${MOSES})
-TMX_INFO = $(patsubst ${CORPUSHTML}/%.tmx.gz,${CORPUSXML}/%.tmx.info,${TMX})
+# info files with statistics
+CES_INFO  = $(patsubst %.xml.gz,%.info,${CES})
+TXT_INFO  = $(patsubst ${CORPUSHTML}/%.txt.zip,${CORPUSXML}/%.txt.info,${MOSES})
+TMX_INFO  = $(patsubst ${CORPUSHTML}/%.tmx.gz,${CORPUSXML}/%.tmx.info,${TMX})
 LANG_INFO = $(patsubst %,${CORPUSXML}/%.info,${LANGUAGES})
 
-
-MAKEHTML   = ${TOOLS}/opus/make-download-page.pl
+## some scripts for conversion
+## TODO: check if we have more updated versions
+# MAKEHTML   = ${TOOLS}/opus/make-download-page.pl
+# MAKEHTML   = ${HOME}/research/nlpl/opus-tools/scripts/admin/generate-website.pl
+MAKEHTML   = ${TOOLS}/public/opus-tools/scripts/admin/generate-website.pl
 TAB2TMX    = ${UPLUGHOME}/tools/tab2tmx
 OPUS2MOSES = $(UPLUGHOME)/tools/xces2moses
 
+# file with all packages that can be distributed
+PACKAGES   = ${CORPUSPUB}/.packages
 
-html: 	download-dirs \
-	lang_tok_tar lang_raw_tar \
-	mono_tok mono_raw \
-	moses tmx \
-	info \
-	pack \
-	${OPUSPUB}/${CORPUS}.php
+
+html: 	${OPUSPUB}/${CORPUS}.php ${FREQ_COUNTS}
+	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
+	mv -f ${PACKAGES}.uniq ${PACKAGES}
 
 refresh-html:
 	rm -f ${OPUSPUB}/${CORPUS}.php
-	rm -f ${CORPUSHTML}/*sample.html
+	rm -f ${CORPUSPUB}/*sample.html
 	touch $(CES)
 	make html
 
 
-download-dirs: ${CORPUS} ${CORPUSHTML} ${CORPUSHTML}/xml
+download-dirs: ${CORPUS} ${CORPUSHTML} # ${CORPUSHTML}/xml
 
 webpage: ${OPUSPUB}/${CORPUS}.php
-
 
 ${CORPUS}:
 	ln -s xml $@
@@ -67,6 +71,9 @@ ${CORPUSHTML}:
 ${CORPUSHTML}/xml:
 	ln -s $(CORPUSXML) $@
 
+
+## citation note to be added to website
+
 #  CITENOTE=Please <a href="http://opus.lingfil.uu.se/RANLP_V.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J\&ouml;rg Tiedemann, 2009, <a href="http://stp.lingfil.uu.se/~joerg/published/ranlp-V.pdf">News from OPUS - A Collection of Multilingual Parallel Corpora with Tools and Interfaces</a>. In N. Nicolov and K. Bontcheva and G. Angelova and R. Mitkov (eds.) Recent Advances in Natural Language Processing (vol V), pages 237-248, John Benjamins, Amsterdam/Philadelphia<br/>
 
 ifndef CITENOTE
@@ -74,18 +81,17 @@ ifndef CITENOTE
 endif
 
 
-## 2015-08-16: do not depend on packed archive anymore
-# ${OPUSHTML}/${CORPUS}/${CORPUS}${VERSION}.tar.gz
-
-${OPUSPUB}/${CORPUS}.php: 
+${OPUSPUB}/${CORPUS}.php: 	${CORPUSHTML} ${ALG} \
+				${LANG_TAR} ${LANG_RAW} \
+				${MONO_TOK} ${MONO_RAW} \
+				$(TMX) $(MOSES) \
+				${CORPUS_SAMPLES} ${ALG_SAMPLES} \
+				${LANG_INFO} ${CES_INFO} ${TXT_INFO} ${TMX_INFO} \
+				${OPUSHTML}/${CORPUS}.tar.gz
+	${MAKE} lang_parsed_tar
 	mkdir -p $(shell dirname $@)
-	if [ ! -e ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
-	if [ ! -e ${OPUSHTML}/${CORPUS} ]; then mkdir ${OPUSHTML}/${CORPUS}; fi
-	if [ ! -e ${OPUSHTML}/${CORPUS}/xml ]; then ln -s ${CORPUSHOME}/xml ${OPUSHTML}/${CORPUS}/xml; fi
-	if [ ! -e ${OPUSPUB}/${CORPUS} ]; then ln -s ${OPUSHTML}/${CORPUS} ${OPUSPUB}/${CORPUS}; fi
-	${MAKEHTML} -e $(ALGEXT:.gz=) ${CORPUS} ${VERSION}|\
+	${MAKEHTML} -e $(ALGEXT:.gz=) -o ${OPUSHOME} ${CORPUS} |\
 	sed -e 's#<h3>Download</h3>#<h3>Download</h3>${EXTRAHTML}#' \
-	    -e "s#${CORPUS}.tar.gz#${CORPUS}${VERSION}.tar.gz#g" \
 	    -e 's#<h3>Download</h3>#${CITENOTE}<h3>Download</h3>#' \
 	    -e 's#<h1>${CORPUS}${VERSION}</h1>#<h1>${CORPUS}</h1>#' \
 	    -e 's#<h1>${CORPUS}</h1>#<h1>${CORPUS}</h1>${SRCHTML}#' > $@
@@ -94,60 +100,63 @@ ${OPUSPUB}/${CORPUS}.php:
 
 ## make an archive with all xml-files!
 
-pack:
-	${MAKE} ${OPUSHTML}/${CORPUS}/${CORPUS}${VERSION}.tar.gz
-
-## only pack parallel data files (tokenized and untokenized)
-## --> skip non-aligned files
-## --> problem: non-aligned files may be interesting for language modeling!
-##              (a lot of files are lost in this way in OpenSubtitles!)
-
-${OPUSHTML}/${CORPUS}/${CORPUS}${VERSION}.tar.files: $(CES)
-	mkdir -p $(shell dirname $@)
-	zcat $^ | \
-	tr " " "\n" | \
-	egrep '(from|to)Doc' | \
-	cut -f2 -d '"' | \
-	sort | uniq > $@.basenames
-	sed 's#^#xml/#' < $@.basenames >>$@
-	sed 's#^#raw/#' < $@.basenames >>$@
-	rm -f $@.basenames
-	find ${CORPUSXML} -maxdepth 1 -name '*.xml.gz' | \
-	sed 's#${CORPUSXML}#xml#' >> $@
-	if [ -e README ]; then echo 'README' >> $@; fi
-	if [ -e CHANGES ]; then echo 'CHANGES' >> $@; fi
+pack: ${OPUSHTML}/${CORPUS}.tar.gz
 
 
-${OPUSHTML}/${CORPUS}/${CORPUS}${VERSION}.tar.gz: ${OPUSHTML}/${CORPUS}/${CORPUS}${VERSION}.tar.files
+### just pack everything in xml and raw!
+
+${OPUSHTML}/${CORPUS}.tar.gz: $(CES)
 	rm -f $@
 	mkdir -p $(shell dirname $@)
-	-tar -h -T $< --transform='s#^#${CORPUS}/#' -czf $@
+	-tar --ignore-failed-read  --transform 's#^#${CORPUS}/#' -chzf $(shell basename $@) xml raw parsed
+	mv $(shell basename $@) $@
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
-##	rm -f ${OPUSHTML}/${CORPUS}/${CORPUS}${VERSION}.tar.files
+
+## OLD OLD OLD ################################################################
+#
+# ## only pack parallel data files (tokenized and untokenized)
+# ## --> skip non-aligned files
+# ## --> problem: non-aligned files may be interesting for language modeling!
+# ##              (a lot of files are lost in this way in OpenSubtitles!)
+
+# ${OPUSHTML}/${CORPUS}.tar.files: $(CES)
+# 	mkdir -p $(shell dirname $@)
+# 	zcat $^ | \
+# 	tr " " "\n" | \
+# 	egrep '(from|to)Doc' | \
+# 	cut -f2 -d '"' | \
+# 	sort | uniq > $@.basenames
+# 	sed 's#^#xml/#' < $@.basenames >>$@
+# 	sed 's#^#raw/#' < $@.basenames >>$@
+# 	rm -f $@.basenames
+# 	find ${CORPUSXML} -maxdepth 1 -name '*.xml.gz' | \
+# 	sed 's#${CORPUSXML}#xml#' >> $@
+# 	if [ -e README ]; then echo 'README' >> $@; fi
+# 	if [ -e CHANGES ]; then echo 'CHANGES' >> $@; fi
 
 
-# ### alternative: just pack everything in xml and raw!
-
-# ${OPUSHTML}/${CORPUS}/${CORPUS}${VERSION}.tar.gz: $(CES)
+# ${OPUSHTML}/${CORPUS}.tar.gz: ${OPUSHTML}/${CORPUS}.tar.files
 # 	rm -f $@
 # 	mkdir -p $(shell dirname $@)
-# 	-tar --transform 's#^#${CORPUS}/#' -chzf $(shell basename $@) xml raw
-# 	mv $(shell basename $@) $@
+# 	-tar -h -T $< --transform='s#^#${CORPUS}/#' -czf $@
+# ##	rm -f ${OPUSHTML}/${CORPUS}.tar.files
 
+## OLD OLD OLD ################################################################
+
+
+
+## copy sentence alignment files
+
+alg_files: ${ALG}
+
+${ALG}: ${CORPUSHTML}/%: ${CORPUSXML}/%
+	cp $< $@
 
 
 #----------------------------------------------------------------------------
 # pack all language files in tar-archives
 #----------------------------------------------------------------------------
-
-# # old version: just pack the tokenized versions
-
-# lang_tar: ${LANG_TAR}
-
-# ${LANG_TAR}: ${CORPUSHTML}/%.tar.gz: ${CORPUS}/%
-# 	find $</ -name '*.xml.gz' > $<.files
-# 	-tar -T $<.files -czf $@
-# 	rm -f $<.files
 
 # tokenized version (same as above but file path including /xml/)
 
@@ -157,6 +166,7 @@ ${LANG_TAR}: ${CORPUSHTML}/%.tar.gz: ${CORPUSXML}/%
 	find $</ -name '*.xml.gz' > $<.files
 	-tar -T $<.files -P --transform='s#${CORPUSXML}#${CORPUS}/xml#' -czf $@
 	rm -f $<.files
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 # raw corpus files
 
@@ -166,6 +176,23 @@ ${LANG_RAW}: ${CORPUSHTML}/%.raw.tar.gz: ${CORPUSRAW}/%
 	find $</ -name '*.xml.gz' > $<.files
 	-tar -T $<.files -P --transform='s#${CORPUSRAW}#${CORPUS}/raw#' -czf $@
 	rm -f $<.files
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
+
+# parsed corpus files (not all languages need to be parsed)
+
+lang_parsed_tar:
+	for l in ${LANGUAGES}; do \
+	  if [ -d ${CORPUSPARSED}/$$l ]; then \
+	    ${MAKE} ${CORPUSHTML}/$$l.parsed.tar.gz; \
+	  fi; \
+	done
+
+${LANG_UD}: ${CORPUSHTML}/%.parsed.tar.gz: ${CORPUSPARSED}/%
+	find $</ -name '*.xml.gz' > $<.files
+	-tar -T $<.files -P --transform='s#${CORPUSRAW}#${CORPUS}/parsed#' -czf $@
+	rm -f $<.files
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
+
 
 
 #----------------------------------------------------------------------------
@@ -187,6 +214,7 @@ ${CORPUSHTML}/mono/${CORPUS}.%.gz: ${CORPUSXML}/%
 	perl ${TOOLS}/opus/xml2text.pl | \
 	sed 's/  */ /g;s/^ *//;s/ *$$//' |\
 	gzip -c > $@
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
 ${CORPUSHTML}/mono/${CORPUS}.raw.%.gz: ${CORPUSRAW}/%
@@ -197,7 +225,7 @@ ${CORPUSHTML}/mono/${CORPUS}.raw.%.gz: ${CORPUSRAW}/%
 	perl ${TOOLS}/opus/rawxml2text.pl | \
 	sed 's/  */ /g;s/^ *//;s/ *$$//' |\
 	gzip -c > $@
-
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
 #----------------------------------------------------------------------------
@@ -214,6 +242,7 @@ ${CORPUSHTML}/freq/${CORPUS}.%.gz: ${CORPUSHTML}/mono/${CORPUS}.%.gz
 	tr ' ' "\n" | \
 	sort | uniq -c | sort -nr | \
 	gzip -c > $@
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
 ## not good enough for unicode:
@@ -230,7 +259,7 @@ alg_samples: ${ALG_SAMPLES}
 # which would be used for many sample files (year = 0)
 # (they look messy and should actually be removed from the corpus)
 
-${ALG_SAMPLES}: ${CORPUSHTML}/%_sample.html: ${CORPUSXML}/%.xml.gz
+${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%.xml.gz
 	mkdir -p `dirname $@`
 	$(UPLUGTOOLS)/uplug-readalign \
 		-h -m 100 \
@@ -241,11 +270,7 @@ ${ALG_SAMPLES}: ${CORPUSHTML}/%_sample.html: ${CORPUSXML}/%.xml.gz
 .PHONY: corpus_samples
 corpus_samples: ${CORPUS_SAMPLES}
 
-# -N '\/0\/' is used to filter out some strange files in OpenSubtitles2012
-# which would be used for many sample files (year = 0)
-# (they look messy and should actually be removed from the corpus)
-
-${CORPUS_SAMPLES}: ${CORPUSHTML}/%_sample.html: ${CORPUSXML}/%
+${CORPUS_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%
 	echo '<html><head></head><body><pre>' >$@
 	find $</ -name '*.xml.gz' | \
 	xargs zcat | head -100 | recode utf8..html >> $@
@@ -279,6 +304,7 @@ tmx-strict: ${CORPUSHTML} $(TMX_STRICT)
 	  $(TAB2TMX) -s $$S -t $$T |\
 	  gzip -c > $@; \
 	  rm -f ${CORPUS}.$$P.$$SEXT ${CORPUS}.$$P.$$TEXT ${CORPUS}.$$P.ids; )
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
 #----------------------------------------------------------------------------
@@ -303,6 +329,7 @@ $(MOSES): ${CORPUSHTML}/%.txt.zip: ${CORPUSXML}/%.xml.gz
 	  mv ${CORPUS}.$$P.$$T.tmp ${CORPUS}.$$P.$$T; \
 	  zip $@ ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; \
 	  rm -f ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; )
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
 moses-strict: ${CORPUSHTML} $(MOSES_STRICT)
@@ -320,6 +347,8 @@ $(MOSES_STRICT): ${CORPUSHTML}/%.strict.txt.zip: ${CORPUSXML}/%.xml.gz
 	  zip $@ ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; \
 	  rm -f ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; )
 	rm -f $(<:gz=11)
+	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
+
 
 
 # create bitext info files (some basic statistics)

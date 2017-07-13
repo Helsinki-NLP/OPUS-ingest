@@ -7,58 +7,64 @@
 #--------------------------------------------------------------------
 
 
-#
-# set OPUSHOME in your environment
-# if you don't want to use the default directory!
-#
-
+# assume that the first subdir OPUS is our root-dir
 ifndef OPUSHOME
   OPUSHOME=$(shell pwd | sed 's|OPUS/.*|OPUS|')
-#  OPUSHOME=/home/opus/OPUS
 endif
 
 
 #
 # OPUSCORPORA ..... home directory of all corpora in OPUS
-# CORPUSHOME ...... home directory of the current corpus
-#     (need to define CORPUS in the Makfile that includes this one)
-# LANGUAGES ....... sorted list of languages (2/3-letter codes possibly
-#                   with region extension); need to be subdirectories of
-#                   the source text directory! --> might have to run 
-#                   'make' in source text directory first!
-#
+# OPUSDATA ........ data files like original sources etc
+# OPUSPUB ......... public www data (public_html)
+# OPUSHTML ........ downloadable files (to be available from www)
+# OPUSWORDALIGN ... word alignment and translation models
+
 
 OPUSCORPORA   = ${OPUSHOME}/corpus
-OPUSHTML      = ${OPUSHOME}/html
 OPUSDATA      = ${OPUSHOME}/data
-OPUSWORDALIGN = ${OPUSHOME}/wordalign
+
 
 ## old OPUS server: public_html is next to OPUS
-## new OPUS: public_html is within OPUS
-ifneq ("$(wildcard ${OPUSHOME}/public_html)","")
-  OPUSPUB   = ${OPUSHOME}/public_html
+## new OPUS: public_html is within OPUS and html,wordalign is in download
+
+ifeq ("${shell hostname -d}","lingfil.uu.se")
+  OPUSPUB       = ${OPUSHOME}/../public_html
+  OPUSHTML      = ${OPUSHOME}/html
+  OPUSWORDALIGN = ${OPUSHOME}/wordalign
 else
-  OPUSPUB   = ${OPUSHOME}/../public_html
+  OPUSPUB       = ${OPUSHOME}/public_html
+  OPUSHTML      = ${OPUSHOME}/download
+  OPUSWORDALIGN = ${OPUSHOME}/download
 endif
 
-# CWB for standard annotation
+
+# CWB home for standard annotation
 OPUSCWB      = ${OPUSHOME}/cwb
 CWBDATA      = ${OPUSCWB}/data
 CWBREG       = ${OPUSCWB}/reg
 
-# CWB for UD-parsed data
+# CWB home for UD-parsed data
 UDCWB        = ${OPUSHOME}/cwb-ud
 UDCWBDATA    = ${UDCWB}/data
 UDCWBREG     = ${UDCWB}/reg
 
-CORPUSHOME   = ${OPUSCORPORA}/${CORPUS}
-CORPUSSRC    = ${CORPUSHOME}/src
-CORPUSXML    = ${CORPUSHOME}/xml
-CORPUSRAW    = ${CORPUSHOME}/raw
-CORPUSPARSED = ${CORPUSHOME}/parsed
-CORPUSHTML   = ${OPUSHTML}/${CORPUS}
+
+# corpus-specific directories
+CORPUSHOME       = ${OPUSCORPORA}/${CORPUS}
+CORPUSSRC        = ${CORPUSHOME}/src
+CORPUSXML        = ${CORPUSHOME}/xml
+CORPUSRAW        = ${CORPUSHOME}/raw
+CORPUSPARSED     = ${CORPUSHOME}/parsed
+CORPUSPUB        = ${OPUSPUB}/${CORPUS}
+CORPUSHTML       = ${OPUSHTML}/${CORPUS}
 CORPUSWORDALIGN  = ${OPUSWORDALIGN}/${CORPUS}
 
+
+# LANGUAGES ....... sorted list of languages (2/3-letter codes possibly
+#                   with region extension); need to be subdirectories of
+#                   the source text directory! --> might have to run 
+#                   'make' in source text directory first!
 
 ifndef LANGUAGES
   LANGUAGES = $(sort $(notdir $(wildcard ${CORPUSSRC}/??)) \
@@ -71,7 +77,7 @@ endif
 
 
 # general file extension of files in the corpus
-# (if you add \.gz --> all files wil be compressed)
+# (if you add .gz --> all files will be compressed)
 
 XMLEXT = xml.gz
 TXTEXT = txt.gz
@@ -156,7 +162,6 @@ endif
 
 SENTALIGN  = ${UPLUG} align/hun
 # SENTALIGN = ${UPLUG} align/sent
-
 
 
 

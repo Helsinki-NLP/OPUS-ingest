@@ -36,13 +36,7 @@ clean:
 
 ${PACKAGE_SOURCE}:
 	${MKDIR} ${NLPL_SOURCES}/${PACKAGE}
-	${MKDIR} ${OPUS_TOOLS}/public
-	if [ -e ${OPUS_TOOLS}/public/${PACKAGE} ]; then \
-	  cd ${OPUS_TOOLS}/public/${PACKAGE} && git pull; \
-	else \
-	  git clone ${GITURL} ${OPUS_TOOLS}/public/${PACKAGE}; \
-	fi
-	ln -s ${OPUS_TOOLS}/public/${PACKAGE} $@
+	git clone ${GITURL} $@
 
 ${PACKAGE_HOME}/bin/opus-read: ${PACKAGE_SOURCE}
 	@perl -e 'use inc::Module::Install;' || ${MAKE} -C ../perl-install all

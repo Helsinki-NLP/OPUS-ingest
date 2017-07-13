@@ -44,13 +44,7 @@ clean:
 
 ${PACKAGE_SOURCE}:
 	${MKDIR} ${NLPL_SOURCES}/${PACKAGE}
-	${MKDIR} ${OPUS_TOOLS}/public/aligner
-	if [ -e ${OPUS_TOOLS}/public/aligner/${PACKAGE} ]; then \
-	  cd ${OPUS_TOOLS}/public/aligner/${PACKAGE} && git pull; \
-	else \
-	  git clone ${GITURL} ${OPUS_TOOLS}/public/aligner/${PACKAGE}; \
-	fi
-	ln -s ${OPUS_TOOLS}/public/aligner/${PACKAGE} $@
+	git clone ${GITURL} $@
 
 ${PACKAGE_HOME}/bin/srtalign: ${PACKAGE_SOURCE}
 	@perl -e 'use inc::Module::Install;' || ${MAKE} -C ../perl-install all
