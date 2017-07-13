@@ -14,6 +14,9 @@ FILTEREDXML = $(patsubst converted/%,filtered/%,\
 SENTALGFILES = $(patsubst converted/%,${CORPUSXML}/%,\
 		$(wildcard converted/*.xml.gz))
 
+encode-en:
+	cwb-encode -c utf8 -R /proj/OPUS/cwb/reg/EUbookshop/en -d /proj/OPUS/cwb/data/EUbookshop/en -f cwbtmp/en -xsB -S p:0+id -S style:0+type -S file:0+name -S chunk:0+type+id -S s:0+hun+lang+tree+lem+id+pos -P hun -P lem -P pos -P tree
+
 
 corpus:
 	${MAKE} convert
