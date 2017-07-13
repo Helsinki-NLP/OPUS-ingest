@@ -53,13 +53,7 @@ install-prerequisites:
 
 ${PACKAGE_SOURCE}:
 	${MKDIR} ${NLPL_SOURCES}/${PACKAGE}
-	${MKDIR} ${OPUS_TOOLS}/public
-	if [ -e ${OPUS_TOOLS}/public/${PACKAGE} ]; then \
-	  cd ${OPUS_TOOLS}/public/${PACKAGE} && git pull; \
-	else \
-	  git clone ${GITURL} ${OPUS_TOOLS}/public/${PACKAGE}; \
-	fi
-	ln -s ${OPUS_TOOLS}/public/${PACKAGE} $@
+	git clone ${GITURL} $@
 
 uninstall:
 	rm -fr ${PACKAGE_SOURCE}

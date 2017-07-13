@@ -7,7 +7,7 @@
 # NEW: do utf8 for all corpora! (requires CWB v3.2 or higher!)
 # NEW: added -k to keep the vertical files and position info files
 
-INDEXER = opus-index =k -s -e utf8
+INDEXER = opus-index -k -s -e utf8
 
 ## various other places where we had the indexer script before
 ##
@@ -21,6 +21,10 @@ XMLDIR = ${CORPUSXML}
 ifndef CWB_DISALLOW_POSATTR
   CWB_DISALLOW_POSATTR = '(id|alternative|emphasis|initial)'
 endif
+ifndef UD_CWB_DISALLOW_POSATTR
+  UD_CWB_DISALLOW_POSATTR = '(alternative|emphasis|initial)'
+endif
+
 
 cwb-index:
 	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
@@ -35,6 +39,8 @@ cwb-index:
 		   ${CWB_EXTRA_ARGS} \
 	           $(LANGUAGES)
 	rm -fr cwb
+	chmod -R o+rX $(CWBDATA)/${CORPUS}
+	chmod o+rX $(CWBREG)/${CORPUS}
 
 # (add -k to keep temporary file for cwb encoding!)
 
@@ -50,11 +56,13 @@ cwb-index-ud:
 		   -m cwb-ud \
 	           -r $(UDCWBREG) \
 		   -x parsed \
-		   -P $(CWB_DISALLOW_POSATTR) \
+		   -P $(UD_CWB_DISALLOW_POSATTR) \
 	           -t $(ALGEXT) \
 		   ${CWB_EXTRA_ARGS} \
 	           $(LANGUAGES)
 	rm -fr cwb-ud
+	chmod -R o+rX $(UDCWBDATA)/${CORPUS}
+	chmod o+rX $(UDCWBREG)/${CORPUS}
 
 
 
