@@ -1,0 +1,11 @@
+@inproceedings{GuillouEA:LREC14,
+  author =       {Liane Guillou and Christian Hardmeier and Aaron Smith and J{\"o}rg Tiedemann and Bonnie Webber},
+  title =        {ParCor 1.0: A Parallel Pronoun-Coreference Corpus to Support Statistical MT},
+  booktitle =    {Proceedings of the 9th International Conference
+                  on Language Resources and Evaluation (LREC-2014)},
+  year =         2014,
+  month =        {May},
+  address =      {Reykjavik, Iceland},
+  publisher =    {European Language Resources Association (ELRA)},
+  topic =        {Alignment and Parallel corpora},
+}

@@ -27,6 +27,8 @@ endif
 
 
 cwb-index:
+	mkdir -p cwb
+	-gunzip -f cwb/*.gz
 	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
 	mkdir -p $(CWBDATA)
 	mkdir -p $(CWBREG)
@@ -38,15 +40,17 @@ cwb-index:
 	           -t $(ALGEXT) \
 		   ${CWB_EXTRA_ARGS} \
 	           $(LANGUAGES)
-	rm -fr cwb
 	chmod -R o+rX $(CWBDATA)/${CORPUS}
 	chmod o+rX $(CWBREG)/${CORPUS}
+	-gzip -f cwb/*
 
 # (add -k to keep temporary file for cwb encoding!)
 
 
 # create index of UD-parsed data
 cwb-index-ud:
+	mkdir -p cwb-ud
+	-gunzip -f cwb/*.gz
 	-cd parsed && ln -s ../xml/*.xml.gz .
 	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
 	mkdir -p $(UDCWBDATA)
@@ -60,10 +64,9 @@ cwb-index-ud:
 	           -t $(ALGEXT) \
 		   ${CWB_EXTRA_ARGS} \
 	           $(LANGUAGES)
-	rm -fr cwb-ud
 	chmod -R o+rX $(UDCWBDATA)/${CORPUS}
 	chmod o+rX $(UDCWBREG)/${CORPUS}
-
+	-gzip -f cwb-ud/*
 
 
 ## only convert to vertical format!
