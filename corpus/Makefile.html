@@ -51,6 +51,8 @@ html: 	${OPUSPUB}/${CORPUS}.php ${FREQ_COUNTS}
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
 	mv -f ${PACKAGES}.uniq ${PACKAGES}
 
+packages: ${PACKAGES}
+
 refresh-html:
 	rm -f ${OPUSPUB}/${CORPUS}.php
 	rm -f ${CORPUSPUB}/*sample.html
@@ -81,14 +83,9 @@ ifndef CITENOTE
 endif
 
 
-${OPUSPUB}/${CORPUS}.php: 	${CORPUSHTML} ${ALG} \
-				${LANG_TAR} ${LANG_RAW} \
-				${MONO_TOK} ${MONO_RAW} \
-				$(TMX) $(MOSES) \
-				${CORPUS_SAMPLES} ${ALG_SAMPLES} \
-				${LANG_INFO} ${CES_INFO} ${TXT_INFO} ${TMX_INFO} \
-				${OPUSHTML}/${CORPUS}.tar.gz
-	${MAKE} lang_parsed_tar
+${OPUSPUB}/${CORPUS}.php: ${PACKAGES} \
+			${CORPUS_SAMPLES} ${ALG_SAMPLES} \
+			${LANG_INFO} ${CES_INFO} ${TXT_INFO} ${TMX_INFO}
 	mkdir -p $(shell dirname $@)
 	${MAKEHTML} -e $(ALGEXT:.gz=) -o ${OPUSHOME} ${CORPUS} |\
 	sed -e 's#<h3>Download</h3>#<h3>Download</h3>${EXTRAHTML}#' \
@@ -96,6 +93,15 @@ ${OPUSPUB}/${CORPUS}.php: 	${CORPUSHTML} ${ALG} \
 	    -e 's#<h1>${CORPUS}${VERSION}</h1>#<h1>${CORPUS}</h1>#' \
 	    -e 's#<h1>${CORPUS}</h1>#<h1>${CORPUS}</h1>${SRCHTML}#' > $@
 
+${PACKAGES}:	${ALG} \
+		${LANG_TAR} ${LANG_RAW} \
+		${MONO_TOK} ${MONO_RAW} \
+		$(TMX) $(MOSES) ${FREQ_COUNTS} \
+		${OPUSHTML}/${CORPUS}.tar.gz
+	${MAKE} lang_parsed_tar
+	echo "$^" | tr ' ' "\n" | sed "s#${OPUSHTML}/##" >> $@
+	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
+	mv -f ${PACKAGES}.uniq ${PACKAGES}
 
 
 ## make an archive with all xml-files!
@@ -106,10 +112,15 @@ pack: ${OPUSHTML}/${CORPUS}.tar.gz
 ### just pack everything in xml and raw!
 
 ${OPUSHTML}/${CORPUS}.tar.gz: $(CES)
-	rm -f $@
 	mkdir -p $(shell dirname $@)
-	-tar --ignore-failed-read  --transform 's#^#${CORPUS}/#' -chzf $(shell basename $@) xml raw parsed
-	mv $(shell basename $@) $@
+	-tar 	--ignore-failed-read  \
+		--exclude='*Makefile*' \
+		--exclude='*~' \
+		--exclude='*.info' \
+		--exclude-vcs \
+		--transform 's#^#${CORPUS}/#' \
+		-chzf $(shell basename $@) xml raw parsed
+	mv -f $(shell basename $@) $@
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
@@ -151,6 +162,7 @@ ${OPUSHTML}/${CORPUS}.tar.gz: $(CES)
 alg_files: ${ALG}
 
 ${ALG}: ${CORPUSHTML}/%: ${CORPUSXML}/%
+	@mkdir -p ${dir $@}
 	cp $< $@
 
 
@@ -163,6 +175,7 @@ ${ALG}: ${CORPUSHTML}/%: ${CORPUSXML}/%
 lang_tar lang_tok_tar: ${LANG_TAR}
 
 ${LANG_TAR}: ${CORPUSHTML}/%.tar.gz: ${CORPUSXML}/%
+	@mkdir -p ${dir $@}
 	find $</ -name '*.xml.gz' > $<.files
 	-tar -T $<.files -P --transform='s#${CORPUSXML}#${CORPUS}/xml#' -czf $@
 	rm -f $<.files
@@ -173,6 +186,7 @@ ${LANG_TAR}: ${CORPUSHTML}/%.tar.gz: ${CORPUSXML}/%
 lang_raw_tar: ${LANG_RAW}
 
 ${LANG_RAW}: ${CORPUSHTML}/%.raw.tar.gz: ${CORPUSRAW}/%
+	@mkdir -p ${dir $@}
 	find $</ -name '*.xml.gz' > $<.files
 	-tar -T $<.files -P --transform='s#${CORPUSRAW}#${CORPUS}/raw#' -czf $@
 	rm -f $<.files
@@ -188,6 +202,7 @@ lang_parsed_tar:
 	done
 
 ${LANG_UD}: ${CORPUSHTML}/%.parsed.tar.gz: ${CORPUSPARSED}/%
+	@mkdir -p ${dir $@}
 	find $</ -name '*.xml.gz' > $<.files
 	-tar -T $<.files -P --transform='s#${CORPUSRAW}#${CORPUS}/parsed#' -czf $@
 	rm -f $<.files
@@ -208,7 +223,7 @@ CORPUS_EXT = xml
 # (NEW: only real files, no symlinks!)
 
 ${CORPUSHTML}/mono/${CORPUS}.%.gz: ${CORPUSXML}/%
-	mkdir -p `dirname $@`
+	@mkdir -p ${dir $@}
 	find $</ -name '*.${CORPUS_EXT}.gz' -type f | \
 	xargs zcat | \
 	perl ${TOOLS}/opus/xml2text.pl | \
@@ -218,7 +233,7 @@ ${CORPUSHTML}/mono/${CORPUS}.%.gz: ${CORPUSXML}/%
 
 
 ${CORPUSHTML}/mono/${CORPUS}.raw.%.gz: ${CORPUSRAW}/%
-	mkdir -p `dirname $@`
+	@mkdir -p ${dir $@}
 	find $</ -name '*.${CORPUS_EXT}.gz' -type f | \
 	xargs zcat | \
 	perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g' |\
@@ -236,7 +251,7 @@ ${CORPUSHTML}/mono/${CORPUS}.raw.%.gz: ${CORPUSRAW}/%
 freq_counts: ${FREQ_COUNTS}
 
 ${CORPUSHTML}/freq/${CORPUS}.%.gz: ${CORPUSHTML}/mono/${CORPUS}.%.gz
-	mkdir -p `dirname $@`
+	@mkdir -p ${dir $@}
 	zcat $< | \
 	perl -e 'binmode(STDIN,":utf8");binmode(STDOUT,":utf8");while(<>){$$_=lc($$_);print;}' |\
 	tr ' ' "\n" | \
@@ -260,7 +275,7 @@ alg_samples: ${ALG_SAMPLES}
 # (they look messy and should actually be removed from the corpus)
 
 ${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%.xml.gz
-	mkdir -p `dirname $@`
+	@mkdir -p ${dir $@}
 	$(UPLUGTOOLS)/uplug-readalign \
 		-h -m 100 \
 		-N '\/0\/' \
@@ -271,6 +286,7 @@ ${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%.xml.gz
 corpus_samples: ${CORPUS_SAMPLES}
 
 ${CORPUS_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%
+	@mkdir -p ${dir $@}
 	echo '<html><head></head><body><pre>' >$@
 	find $</ -name '*.xml.gz' | \
 	xargs zcat | head -100 | recode utf8..html >> $@
@@ -292,6 +308,7 @@ tmx-strict: ${CORPUSHTML} $(TMX_STRICT)
 # $(TMX): 
 
 %.tmx.gz: %.txt.zip
+	@mkdir -p ${dir $@}
 	unzip $<
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
@@ -315,6 +332,7 @@ tmx-strict: ${CORPUSHTML} $(TMX_STRICT)
 moses: ${CORPUSHTML} $(MOSES)
 
 $(MOSES): ${CORPUSHTML}/%.txt.zip: ${CORPUSXML}/%.xml.gz
+	@mkdir -p ${dir $@}
 	( S=$(firstword $(subst -, ,$(patsubst ${CORPUSXML}/%.xml.gz,%,$<))); \
 	  T=$(lastword $(subst -, ,$(patsubst ${CORPUSXML}/%.xml.gz,%,$<))); \
 	  P=$$S-$$T; \
@@ -335,6 +353,7 @@ $(MOSES): ${CORPUSHTML}/%.txt.zip: ${CORPUSXML}/%.xml.gz
 moses-strict: ${CORPUSHTML} $(MOSES_STRICT)
 
 $(MOSES_STRICT): ${CORPUSHTML}/%.strict.txt.zip: ${CORPUSXML}/%.xml.gz
+	@mkdir -p ${dir $@}
 	uplug-readalign -c 1 -S 1 -T 1 -l $< > $(<:gz=11)
 	( S=$(firstword $(subst -, ,$(patsubst ${CORPUSXML}/%.xml.gz,%,$<))); \
 	  T=$(lastword $(subst -, ,$(patsubst ${CORPUSXML}/%.xml.gz,%,$<))); \
