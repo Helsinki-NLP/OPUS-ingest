@@ -44,8 +44,10 @@ TAB2TMX    = ${UPLUGHOME}/tools/tab2tmx
 OPUS2MOSES = $(UPLUGHOME)/tools/xces2moses
 
 # file with all packages that can be distributed
+# PACKDIRS = subdir's that will be included in tar-ball
 PACKAGES   = ${CORPUSPUB}/.packages
-
+PACKDIRS   = xml raw
+# PACKDIRS   = xml raw parsed
 
 html: 	${OPUSPUB}/${CORPUS}.php ${FREQ_COUNTS}
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
@@ -119,7 +121,7 @@ ${OPUSHTML}/${CORPUS}.tar.gz: $(CES)
 		--exclude='*.info' \
 		--exclude-vcs \
 		--transform 's#^#${CORPUS}/#' \
-		-chzf $(shell basename $@) xml raw parsed
+		-chzf $(shell basename $@) ${PACKDIRS}
 	mv -f $(shell basename $@) $@
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
