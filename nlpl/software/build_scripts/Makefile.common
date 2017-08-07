@@ -13,11 +13,20 @@ INSTALL_DATA = ${INSTALL} -m 644
 MKDIR = mkdir -p -m 755
 
 
+# NLPL_ABEL = /projects/nlpl
+NLPL_ABEL = /usit/abel/u1/joerg/nlpl
+
+
 ifeq (${shell hostname --domain},csc.fi)
   NLPL_HOME=/proj/nlpl
+  NLPL_PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/appl/bin::${NLPL_SOFTWARE}/bin
+  NLPL_PERL5LIB=
 else
-  NLPL_HOME=/projects/nlpl
+  NLPL_HOME=${NLPL_ABEL}
+  NLPL_PATH=/hpc/bin:/opt/gold/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ganglia/bin:/opt/ganglia/sbin:/usr/java/latest/bin:/opt/rocks/bin:/opt/rocks/sbin:/cluster/bin
+  NLPL_PERL5LIB=/hpc/lib/perl5:/cluster/lib/perl5:/cluster/software/VERSIONS/perlmodules-5.10_2/lib/perl5/x86_64-linux-thread-multi:/cluster/software/VERSIONS/perlmodules-5.10_2/lib/perl5
 endif
+
 
 NLPL_MODULES  = ${NLPL_HOME}/modules
 NLPL_CORPORA  = ${NLPL_HOME}/corpora
@@ -39,10 +48,10 @@ OPUS_TOOLS    = ${OPUS_HOME}/tools
 # basic environment variables
 export NLPL_HOME
 export MANPATH=/usr/local/share/man:/usr/share/man/overrides:/usr/share/man:/usr/man:${NLPL_SOFTWARE}/man
-export PERL5LIB=${NLPL_SOFTWARE}/share/perl5:${NLPL_SOFTWARE}/software/lib64/perl5
+export PERL5LIB=${NLPL_SOFTWARE}/share/perl5:${NLPL_SOFTWARE}/software/lib64/perl5:${NLPL_PERL5LIB}
 export LD_LIBRARY_PATH=${NLPL_SOFTWARE}/lib
 export USERAPPL=
-export PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/appl/bin::${NLPL_SOFTWARE}/bin
+export PATH=${NLPL_PATH}
 export BOOST_ROOT=
 ifndef JAVA_HOME
   export JAVA_HOME=/usr/lib/jvm/java
