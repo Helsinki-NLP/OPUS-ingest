@@ -16,15 +16,10 @@ MKDIR = mkdir -p -m 755
 # NLPL_ABEL = /projects/nlpl
 NLPL_ABEL = /usit/abel/u1/joerg/nlpl
 
-
 ifeq (${shell hostname --domain},csc.fi)
-  NLPL_HOME=/proj/nlpl
-  NLPL_PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/appl/bin::${NLPL_SOFTWARE}/bin
-  NLPL_PERL5LIB=
+  export NLPL_HOME=/proj/nlpl
 else
-  NLPL_HOME=${NLPL_ABEL}
-  NLPL_PATH=/hpc/bin:/opt/gold/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ganglia/bin:/opt/ganglia/sbin:/usr/java/latest/bin:/opt/rocks/bin:/opt/rocks/sbin:/cluster/bin
-  NLPL_PERL5LIB=/hpc/lib/perl5:/cluster/lib/perl5:/cluster/software/VERSIONS/perlmodules-5.10_2/lib/perl5/x86_64-linux-thread-multi:/cluster/software/VERSIONS/perlmodules-5.10_2/lib/perl5
+  export NLPL_HOME=${NLPL_ABEL}
 endif
 
 
@@ -45,13 +40,33 @@ OPUS_HOME     = ${NLPL_HOME}/corpora/OPUS
 OPUS_CORPORA  = ${OPUS_HOME}/corpus
 OPUS_TOOLS    = ${OPUS_HOME}/tools
 
-# basic environment variables
-export NLPL_HOME
+
+# make a clean environment (specific for each cluster environment)
+# (see also https://www.uio.no/english/services/it/research/hpc/abel/help/software/Perl_modules.html)
+
+ifeq (${shell hostname --domain},csc.fi)
+  export PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/appl/bin::${NLPL_SOFTWARE}/bin
+  export PERL5LIB=${NLPL_SOFTWARE}/share/perl5:${NLPL_SOFTWARE}/software/lib64/perl5
+  CPAN=cpan
+else
+  export PATH=${shell 	export PATH=PATH=/hpc/bin:/opt/gold/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ganglia/bin:/opt/ganglia/sbin:/usr/java/latest/bin:/opt/rocks/bin:/opt/rocks/sbin:/cluster/bin;\
+			module load perlmodules;\
+			eval $$(perl -Mlocal::lib=${NLPL_HOME}/software);\
+			echo $${PATH}}
+  export PERL5LIB=${NLPL_SOFTWARE}/share/perl5:${NLPL_SOFTWARE}/software/lib64/perl5:${shell export PERL5LIB=;\
+			module load perlmodules;\
+			eval $$(perl -Mlocal::lib=${NLPL_HOME}/software);\
+			echo $${PERL5LIB}}
+  export PERL_CPANM_HOME=${NLPL_HOME}/software/.cpanm
+  CPAN=cpanm
+endif
+
+
+
+# some other basic environment variables
 export MANPATH=/usr/local/share/man:/usr/share/man/overrides:/usr/share/man:/usr/man:${NLPL_SOFTWARE}/man
-export PERL5LIB=${NLPL_SOFTWARE}/share/perl5:${NLPL_SOFTWARE}/software/lib64/perl5:${NLPL_PERL5LIB}
 export LD_LIBRARY_PATH=${NLPL_SOFTWARE}/lib
 export USERAPPL=
-export PATH=${NLPL_PATH}
 export BOOST_ROOT=
 ifndef JAVA_HOME
   export JAVA_HOME=/usr/lib/jvm/java

@@ -26,9 +26,13 @@ if [ `hostname --domain` == "csc.fi" ]; then
 else
     export NLPL_HOME=$NLPL_ABEL
     export PATH=/hpc/bin:/opt/gold/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ganglia/bin:/opt/ganglia/sbin:/usr/java/latest/bin:/opt/rocks/bin:/opt/rocks/sbin:/cluster/bin
-    export PERL5LIB=$NLPL_HOME/software/share/perl5:$NLPL_HOME/software/lib64/perl5:/hpc/lib/perl5:/cluster/lib/perl5
+    export PERL5LIB=$NLPL_HOME/software/share/perl5:$NLPL_HOME/software/lib64/perl5
     module load perlmodules
+    eval $(perl -Mlocal::lib=$NLPL_HOME/software)
+    export PERL_CPANM_HOME=$NLPL_HOME/software/.cpanm
 fi
+
+#    export PERL5LIB=$NLPL_HOME/software/share/perl5:$NLPL_HOME/software/lib64/perl5:/hpc/lib/perl5:/cluster/lib/perl5
 
 # basic environment paths
 export MANPATH=/usr/local/share/man:/usr/share/man/overrides:/usr/share/man:/usr/man
