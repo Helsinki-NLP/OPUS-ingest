@@ -16,27 +16,27 @@ umask u=rwx,g=rx,o=rx
 
 # NLPL_ABEL=/projects/nlpl
 NLPL_ABEL=/usit/abel/u1/joerg/nlpl
-
+ME=$(whoami)
 
 if [ `hostname --domain` == "csc.fi" ]; then
     export NLPL_HOME=/proj/nlpl
-    export PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/appl/bin
-    export PERL5LIB=$NLPL_HOME/software/share/perl5:$NLPL_HOME/software/lib64/perl5
+    export PERL5LIB=$NLPL_HOME/software/share/perl5:$NLPL_HOME/software/lib64/perl5:$NLPL_HOME/software/lib/perl5
     module load StdEnv
 else
     export NLPL_HOME=$NLPL_ABEL
-    export PATH=/hpc/bin:/opt/gold/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ganglia/bin:/opt/ganglia/sbin:/usr/java/latest/bin:/opt/rocks/bin:/opt/rocks/sbin:/cluster/bin
-    export PERL5LIB=$NLPL_HOME/software/share/perl5:$NLPL_HOME/software/lib64/perl5
+    export PERL5LIB=$NLPL_HOME/software/share/perl5:$NLPL_HOME/software/lib64/perl5:$NLPL_HOME/software/lib/perl5
     module load perlmodules
     eval $(perl -Mlocal::lib=$NLPL_HOME/software)
     export PERL_CPANM_HOME=$NLPL_HOME/software/.cpanm
 fi
 
-#    export PERL5LIB=$NLPL_HOME/software/share/perl5:$NLPL_HOME/software/lib64/perl5:/hpc/lib/perl5:/cluster/lib/perl5
-
 # basic environment paths
-export MANPATH=/usr/local/share/man:/usr/share/man/overrides:/usr/share/man:/usr/man
-export LD_LIBRARY_PATH=
+
+export PATH=$(echo ${PATH} | sed "s/:[^:]*${ME}[^:]*//g")
+export MANPATH=$(echo ${MANPATH} | sed "s/:[^:]*${ME}[^:]*//g")
+export LD_LIBRARY_PATH=$(echo ${LD_LIBRARY_PATH} | sed "s/:[^:]*${ME}[^:]*//g")
+export LD_INCLUDE_PATH=$(echo ${LD_INCLUDE_PATH} | sed "s/:[^:]*${ME}[^:]*//g")
+export LD_RUN_PATH=$(echo ${LD_RUN_PATH} | sed "s/:[^:]*${ME}[^:]*//g")
 export USERAPPL=
 export BOOST_ROOT=
 

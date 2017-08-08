@@ -40,23 +40,23 @@ OPUS_HOME     = ${NLPL_HOME}/corpora/OPUS
 OPUS_CORPORA  = ${OPUS_HOME}/corpus
 OPUS_TOOLS    = ${OPUS_HOME}/tools
 
+ME = $(shell whoami)
 
 # make a clean environment (specific for each cluster environment)
 # (see also https://www.uio.no/english/services/it/research/hpc/abel/help/software/Perl_modules.html)
 
 ifeq (${shell hostname --domain},csc.fi)
-  export PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/appl/bin::${NLPL_SOFTWARE}/bin
-  export PERL5LIB=${NLPL_SOFTWARE}/share/perl5:${NLPL_SOFTWARE}/software/lib64/perl5
+  export PATH=$(shell echo $${PATH} | sed "s/:[^:]*${ME}[^:]*//g")
+  export PERL5LIB=${NLPL_SOFTWARE}/share/perl5:${NLPL_SOFTWARE}/lib64/perl5:${NLPL_SOFTWARE}/lib/perl5
   CPAN=cpan
 else
-  export PATH=${shell 	export PATH=PATH=/hpc/bin:/opt/gold/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ganglia/bin:/opt/ganglia/sbin:/usr/java/latest/bin:/opt/rocks/bin:/opt/rocks/sbin:/cluster/bin;\
+  export PATH=${shell 	module load perlmodules;\
+			eval $$(perl -Mlocal::lib=${NLPL_HOME}/software);\
+			echo $${PATH} | sed "s/:[^:]*${ME}[^:]*//g"}
+  export PERL5LIB=${NLPL_SOFTWARE}/share/perl5:${NLPL_SOFTWARE}/lib64/perl5:${NLPL_SOFTWARE}/lib/perl5:${shell \
 			module load perlmodules;\
 			eval $$(perl -Mlocal::lib=${NLPL_HOME}/software);\
-			echo $${PATH}}
-  export PERL5LIB=${NLPL_SOFTWARE}/share/perl5:${NLPL_SOFTWARE}/software/lib64/perl5:${shell export PERL5LIB=;\
-			module load perlmodules;\
-			eval $$(perl -Mlocal::lib=${NLPL_HOME}/software);\
-			echo $${PERL5LIB}}
+			echo $${PERL5LIB} | sed "s/:[^:]*${ME}[^:]*//g"}
   export PERL_CPANM_HOME=${NLPL_HOME}/software/.cpanm
   CPAN=cpanm
 endif
@@ -64,8 +64,10 @@ endif
 
 
 # some other basic environment variables
-export MANPATH=/usr/local/share/man:/usr/share/man/overrides:/usr/share/man:/usr/man:${NLPL_SOFTWARE}/man
-export LD_LIBRARY_PATH=${NLPL_SOFTWARE}/lib
+export MANPATH=$(shell echo $${MANPATH} | sed "s/:[^:]*${ME}[^:]*//g")
+export LD_LIBRARY_PATH=$(shell echo $${LD_LIBRARY_PATH} | sed "s/:[^:]*${ME}[^:]*//g")
+export LD_INCLUDE_PATH=$(shell echo $${LD_INCLUDE_PATH} | sed "s/:[^:]*${ME}[^:]*//g")
+export LD_RUN_PATH=$(shell echo $${LD_RUN_PATH} | sed "s/:[^:]*${ME}[^:]*//g")
 export USERAPPL=
 export BOOST_ROOT=
 ifndef JAVA_HOME
@@ -75,3 +77,4 @@ endif
 # make software home the home directory
 # for module installation via cpan or pip
 export HOME=${NLPL_HOME}/software
+
