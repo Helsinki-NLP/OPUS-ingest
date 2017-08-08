@@ -25,6 +25,7 @@ if [ `hostname --domain` == "csc.fi" ]; then
 else
     export NLPL_HOME=$NLPL_ABEL
     export PERL5LIB=$NLPL_HOME/software/share/perl5:$NLPL_HOME/software/lib64/perl5:$NLPL_HOME/software/lib/perl5
+    module load gcc
     module load perlmodules
     eval $(perl -Mlocal::lib=$NLPL_HOME/software)
     export PERL_CPANM_HOME=$NLPL_HOME/software/.cpanm
