@@ -25,10 +25,12 @@ if [ `hostname --domain` == "csc.fi" ]; then
 else
     export NLPL_HOME=$NLPL_ABEL
     export PERL5LIB=$NLPL_HOME/software/share/perl5:$NLPL_HOME/software/lib64/perl5:$NLPL_HOME/software/lib/perl5
-    module load gcc
+    module load gcc/4.9.1
     module load perlmodules
     eval $(perl -Mlocal::lib=$NLPL_HOME/software)
-    export PERL_CPANM_HOME=$NLPL_HOME/software/.cpanm
+    export PERL_CPANM_HOME=/tmp/cpanm_$USER
+    export PERL_MB_OPT="--prefix $NLPL_HOME/software"
+    export PERL_MM_OPT="PREFIX=$NLPL_HOME/software"
 fi
 
 # basic environment paths

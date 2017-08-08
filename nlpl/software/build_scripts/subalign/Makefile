@@ -57,7 +57,7 @@ ${PACKAGE_HOME}/bin/srtalign: ${PACKAGE_SOURCE}
 install-prerequisites:
 	@for m in ${PERLMODULES}; do \
 	  echo "test module $$m"; \
-	  perl -e "use $$m;" || cpan $$m; \
+	  perl -e "use $$m;" || ${CPAN} $$m; \
 	done
 
 uninstall:

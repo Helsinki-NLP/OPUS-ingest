@@ -60,7 +60,7 @@ PERLMODULES =	inc::latest \
 # Class::Sniff
 # Lingua::Identify::Blacklists
 
-CPAN = http://search.cpan.org/CPAN/authors/id/
+CPANURL = http://search.cpan.org/CPAN/authors/id/
 CPANMODULES = 	E/ET/ETJ/Inline-Java-0.58 \
 		T/TI/TIEDEMANN/Lingua-Identify-Blacklists-0.04b
 
@@ -85,7 +85,7 @@ PREREQUISITES = install-cpan-modules \
 install-prerequisites: ${PREREQUISITES}
 	@for m in ${PERLMODULES}; do \
 	  echo "test module $$m"; \
-	  perl -e "use $$m;" || cpan $$m; \
+	  perl -e "use $$m;" || ${CPAN} $$m; \
 	done
 
 ${PACKAGE_SOURCE}:
@@ -197,7 +197,7 @@ ${PACKAGE_HOME}/bin/tidy: ${NLPL_SOURCES}/tidy-html5
 .PHONY: install-cpan-modules
 install-cpan-modules:
 	@for m in ${CPANMODULES}; do \
-	  wget ${CPAN}/$$m.tar.gz; \
+	  wget ${CPANURL}/$$m.tar.gz; \
 	  tar -xzf `basename $$m | tr "\n" '.'`tar.gz; \
 	  cd `basename $$m` && perl Makefile.PL PREFIX=${NLPL_SOFTWARE};cd ..; \
 	  cd `basename $$m` && ${MAKE} all install;cd ..; \

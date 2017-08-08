@@ -57,7 +57,9 @@ else
 			module load perlmodules;\
 			eval $$(perl -Mlocal::lib=${NLPL_HOME}/software);\
 			echo $${PERL5LIB} | sed "s/:[^:]*${ME}[^:]*//g"}
-  export PERL_CPANM_HOME=${NLPL_HOME}/software/.cpanm
+  export PERL_CPANM_HOME=/tmp/cpanm_$USER
+  export PERL_MB_OPT=--prefix ${NLPL_HOME}/software
+  export PERL_MM_OPT=PREFIX=${NLPL_HOME}/software
   CPAN=cpanm
 endif
 
@@ -78,3 +80,6 @@ endif
 # for module installation via cpan or pip
 export HOME=${NLPL_HOME}/software
 
+ttt:
+	echo ${PERL_MB_OPT}
+	echo ${PERL_MM_OPT}
