@@ -93,30 +93,29 @@ while (<S>){
     # next if ($#trg != 0);
 
     if ($sdoc ne $srcdoc){
-	die "no ID for $sdoc" unless (exists $docid{$sdoc});
-	$sdocid = $docid{$sdoc};
+	## write sentences of current source and target document
 	if ($srcdoc){
 	    my @sent = ();
 	    ReadDocument($srcdoc,\@sent);
 	    AddAlignment($docid{$srcdoc},$docid{$trgdoc},\@sent,\%srcalg);
 	    PrintSentences($srcdoc,\@sent);
-	    ## read and convert srcdoc with alignments
 	    %srcalg = ();
 	}
-	$srcdoc = $sdoc;
-    }
-    if ($tdoc ne $trgdoc){
-	die "no ID for $tdoc" unless (exists $docid{$tdoc});
-	$tdocid = $docid{$tdoc};
 	if ($trgdoc){
 	    my @sent = ();
 	    ReadDocument($trgdoc,\@sent);
-	    AddAlignment($docid{$srcdoc},$docid{$trgdoc},\@sent,\%srcalg,1);
+	    AddAlignment($docid{$trgdoc},$docid{$srcdoc},\@sent,\%trgalg,1);
 	    PrintSentences($trgdoc,\@sent);
-	    ## read and convert srcdoc with alignments
-	    %srcalg = ();
+	    %trgalg = ();
 	}
+	die "no ID for $sdoc" unless (exists $docid{$sdoc});
+	$srcdoc = $sdoc;
+	$sdocid = $docid{$sdoc};
+    }
+    if ($tdoc ne $trgdoc){
+	die "no ID for $tdoc" unless (exists $docid{$tdoc});
 	$trgdoc = $tdoc;
+	$tdocid = $docid{$tdoc};
     }
 
     foreach my $s (@src){
@@ -125,9 +124,9 @@ while (<S>){
 	$srcalg{$s}[2] = $walign;
     }
     foreach my $t (@trg){
-	$srcalg{$t}[0] = $sids;
-	$srcalg{$t}[1] = $tids;
-	$srcalg{$t}[2] = $walign;
+	$trgalg{$t}[0] = $tids;
+	$trgalg{$t}[1] = $sids;
+	$trgalg{$t}[2] = $walign;
     }
 }
 
@@ -141,7 +140,7 @@ if ($srcdoc){
 if ($trgdoc){
     my @sent = ();
     ReadDocument($trgdoc,\@sent);
-    AddAlignment($docid{$srcdoc},$docid{$trgdoc},\@sent,\%srcalg,1);
+    AddAlignment($docid{$trgdoc},$docid{$srcdoc},\@sent,\%trgalg,1);
     PrintSentences($trgdoc,\@sent);
 }
 
@@ -154,7 +153,18 @@ sub PrintSentences{
     $lang =~s/^([a-z]+)\/.*$/$1/;
     foreach my $s (@{$sent}){
 	my $sid = $sentid[$did]{$$s[0][9]};
-	next if ($done{$sid});
+	next if ($done{"$did:$sid"});
+
+	## replace head with global token ID
+	foreach my $w (0..$#{$s}){
+	    my $head = $$s[$w][6];
+	    if ($head > 0){
+		my $headid = $wordid[$did]{$$s[$head-1][8]};
+		$$s[$w][6] = $headid;
+	    }
+	}
+
+	## set global IDs (token, sentence, doc)
 	foreach my $w (0..$#{$s}){
 	    my $wid = $wordid[$did]{$$s[$w][8]};
 	    if ($done{$wid}){
@@ -165,13 +175,14 @@ sub PrintSentences{
 	    $$s[$w][8] = $wid;
 	    $$s[$w][9] = $sid;
 	    $$s[$w][10] = $did;
-	    $$s[$w][11] = 0;
+	    $$s[$w][11] = '1' unless (defined $$s[$w][11]);
 	    $$s[$w][12] = $lang;
+	    $$s[$w][13] = '0' unless ($$s[$w][13]);  ## TODO: is that OK?
 	    $$s[$w][14] = '{}';
 	    print join("\t",@{$$s[$w]});
 	    print "\n";
 	}
-	$done{$sid}++;
+	$done{"$did:$sid"}++;
 #	print "\n";
     }
 }
@@ -187,9 +198,9 @@ sub AddAlignment{
 	my @alg = split(/\s+/,$$alg{$sid}[2]);
 	my %links = ();
 	foreach my $a (@alg){
-	    my ($s,$t) = split(/\-/,$a);
-	    ($s,$t) = ($t,$s) if ($reverse);
-	    $links{$s}{$t} = 1;
+	    my ($sl,$tl) = split(/\-/,$a);
+	    ($sl,$tl) = ($tl,$sl) if ($reverse);
+	    $links{$sl}{$tl} = 1;
 	}
 
 	## get all word IDs for all aligned sentences
@@ -201,7 +212,8 @@ sub AddAlignment{
 	    print '';
 	}
 	my @wids = ();
-	foreach my $id (@tids){
+	foreach (@tids){
+	    my $id = $_;
 	    $id =~s/^s/w/;
 	    my $wnr = 1;
 	    while (exists $wordid[$tdocid]{"$id.$wnr"}){
@@ -226,7 +238,6 @@ sub AddAlignment{
 		}
 	    }
 	    $$s[$w][13] = join('|',@links);
-	    $$s[$w][13] = '0' unless ($$s[$w][13]);  ## TODO: is that OK?
 	}
     }
 }
@@ -259,6 +270,7 @@ sub XmlTagStart{
 	$$p{SID} = $a{id};
 	my $idx = @{$$p{SENT}};
 	$$p{SENT}[$idx] = [];
+	$$p{SPACE} = 0;
     }
     elsif ($e eq 'w'){
 	my $idx = @{$$p{SENT}[-1]};
@@ -271,8 +283,15 @@ sub XmlTagStart{
 	$$p{SENT}[-1][$idx][7] = $a{deprel};
 	$$p{SENT}[-1][$idx][8] = $a{id};
 	$$p{SENT}[-1][$idx][9] = $$p{SID};
+	$$p{SENT}[-1][$idx][11] = $$p{SPACE};
 	$$p{WID}{$a{id}} = $idx+1;
 	$$p{OPENW} = 1;
+	if ($a{misc}=~/SpaceAfter=No/){
+	    $$p{SPACE} = 0;
+	}
+	else{
+	    $$p{SPACE} = 1;
+	}
     }
 }
 

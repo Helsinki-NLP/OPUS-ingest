@@ -1,11 +1,59 @@
 # -*-makefile-*-
 #
-# wordalign bitexts using GIZA++ & Moses
+# wordalign bitexts using efmaral & Moses
 #
 
+ifndef SRC
+  SRC = en
+endif
+ifndef TRG
+  TRG = fr
+endif
 
-# SRC=en
-# TRG=eo
+ifndef LANGPAIR
+  LANGPAIR=${SRC}-${TRG}
+endif
+
+# make it possible to align bitexts with identical SRC and TRG language as well!
+# SRCEXT and TRGEXT will add a suffix 1 and 2 as used in the plain text package in OPUS
+
+ifeq (${SRC},$(TRG))
+  SRCEXT=${SRC}1
+  TRGEXT=${SRC}2
+else
+  SRCEXT=${SRC}
+  TRGEXT=${TRG}
+endif
+
+
+# try to guess memory and time consumption for batch jobs
+# (based on size on source language tokens)
+
+CORPUS_SIZE = ${shell sed -n '2p' ${CORPUSXML}/${LANGPAIR}.txt.info}
+ALIGN_MEM = ${shell \
+	if [ ${CORPUS_SIZE} -gt 100000000 ]; then \
+	  echo "256g"; \
+	elif [ ${CORPUS_SIZE} -gt 10000000 ]; then \
+	  echo "128g"; \
+	elif [ ${CORPUS_SIZE} -gt 5000000 ]; then \
+	  echo "64g"; \
+	elif [ ${CORPUS_SIZE} -gt 1000000 ]; then \
+	  echo "32g"; \
+	else \
+	  echo "16g"; \
+	fi }
+ALIGN_TIME = ${shell \
+	if [ ${CORPUS_SIZE} -gt 100000000 ]; then \
+	  echo "72"; \
+	elif [ ${CORPUS_SIZE} -gt 10000000 ]; then \
+	  echo "48"; \
+	elif [ ${CORPUS_SIZE} -gt 5000000 ]; then \
+	  echo "12"; \
+	elif [ ${CORPUS_SIZE} -gt 1000000 ]; then \
+	  echo "6"; \
+	else \
+	  echo "4"; \
+	fi }
 
 # max_phr_length ... for phrase tabel extraction
 # alignment ........ default alignment symmetrization heuristics
@@ -13,8 +61,7 @@
 
 MAX_PHR_LENGTH = 7
 ALIGNMENT      = grow-diag-final-and
-ALIGNMENTS     = intersect grow
-# ALIGNMENTS     = srctotgt tgttosrc intersect grow
+ALIGNMENTS     = intersect grow-diag grow-diag-final
 
 # parameters for corpus cleaning (min & max sentence lengths)
 
@@ -46,24 +93,98 @@ LMRAWTEXT = $(patsubst %,${CORPUSWORDALIGN}/lm/${CORPUS}.raw.%.gz, ${LANGUAGES})
 .PHONY: all-wordalign
 all-wordalign: ${TRUECASER} ${LANGPAIRS} clean
 
-${LANGPAIRS}:
-	-make 	SRC=$(firstword $(subst -, ,$@)) \
-		TRG=$(lastword $(subst -, ,$@)) \
-		wordalign
 
+## submit batch jobs of various kinds
+## - do prepare first
+## - align requires more memory! (second step after prepare is done)
+## - tm creates the phrase tables and requires less memory!
 
-# make it possible to align bitexts with identical SRC and TRG language as well!
-# SRCEXT and TRGEXT will add a suffix 1 and 2 as used in the plain text package in OPUS
+.PHONY: submit-all-prepare 
+submit-all-prepare:
+	${MAKE} ACTION=wordalign-prepare submit-all
 
-.PHONY: wordalign
-wordalign: truecaser
-	if [ "${SRC}" != "${TRG}" ]; then \
-	  ${MAKE} SRCEXT=$(SRC) TRGEXT=$(TRG) ${SRC}-${TRG}/model/phrase-table-filtered.gz; \
-	else \
-	  ${MAKE} SRCEXT=$(SRC)1 TRGEXT=$(TRG)2 ${SRC}-${TRG}/model/phrase-table-filtered.gz; \
+.PHONY: submit-all-align
+submit-all-align:
+	${MAKE} ACTION=wordalign-align submit-all
+
+.PHONY: submit-all-tm
+submit-all-tm:
+	${MAKE} ACTION=wordalign submit-all
+
+.PHONY: submit-all
+submit-all:
+	for l in ${LANGPAIRS}; do \
+	  ${MAKE} LANGPAIR=$$l submit-${ACTION}; \
+	done
+
+# batch job for preparing the corpus data
+# --> single core, little memory
+.PHONY: submit-wordalign-prepare
+submit-wordalign-prepare:
+	if [ ! -e ${LANGPAIR}/.wordalign-prepare ]; then \
+	  ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
+		  HPC_MEM=4g \
+		  MAKEARGS="ACTION=wordalign-prepare" \
+	  ${LANGPAIR}.submit;\
 	fi
 
-# wordalign: truecaser ${SRC}-${TRG}/model/phrase-table.gz
+# batch job for word alignment
+# --> high memory consumption!
+.PHONY: submit-wordalign-align
+submit-wordalign-align:
+	if [ ! -e ${LANGPAIR}/.wordalign-align ]; then \
+	  ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
+		  HPC_MEM=${ALIGN_MEM} \
+		  HPC_CORES=4 \
+		  HPC_MODULES=python-env/3.4.1 \
+		  MAKEARGS="ACTION=wordalign-align" \
+	  ${LANGPAIR}.submit;\
+	fi
+
+# batch job for creating filtered phrase-tables
+# (assume that word alignment is done already!)
+.PHONY: submit-wordalign
+submit-wordalign:
+	if [ ! -e ${LANGPAIR}/.wordalign ]; then \
+	  ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
+		  HPC_CORES=4 \
+		  MAKEARGS="ACTION=wordalign" \
+	  ${LANGPAIR}.submit;\
+	fi
+
+
+
+
+
+# action to be done when calling LANGPAIRS
+ACTION = wordalign
+
+${LANGPAIRS}: %: %/.${ACTION}
+
+%/.${ACTION}:
+	mkdir -p ${CORPUSWORDALIGN}/${@:/.${ACTION}=}
+	if [ ! -e ${@:/.${ACTION}=} ]; then \
+	  ln -s ${CORPUSWORDALIGN}/${@:/.${ACTION}=} ${@:/.${ACTION}=}; \
+	fi
+	${MAKE} SRC=$(firstword $(subst -, ,${@:/.${ACTION}=})) \
+		TRG=$(lastword $(subst -, ,${@:/.${ACTION}=})) \
+	${ACTION}
+	touch $@
+
+
+## define some actions (prepare, align, ...)
+
+.PHONY: wordalign-prepare
+wordalign-prepare: ${SRC}-${TRG}/c.${SRCEXT}.gz
+
+.PHONY: wordalign-align
+wordalign-align: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
+
+.PHONY: wordalign
+wordalign: ${SRC}-${TRG}/model/phrase-table-filtered.gz
+
+
+
 
 .PHONY: all-monolingual all-raw-monolingual
 all-monolingual: ${LMTEXT}
@@ -89,6 +210,9 @@ alignments:
 # extract phrases and create phrase-table
 
 ${SRC}-${TRG}/model/phrase-table.gz: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
+	mkdir -p ${dir $@}
+	gzip -cd ${SRC}-${TRG}/c.${SRCEXT}.gz > $@.${SRCEXT}
+	gzip -cd ${SRC}-${TRG}/c.${TRGEXT}.gz > $@.${TRGEXT}
 	${SCRIPTS_ROOTDIR}/training/train-model.perl \
 		-parallel \
 		-external-bin-dir=${HOME}/projects/SMT/bin \
@@ -96,9 +220,11 @@ ${SRC}-${TRG}/model/phrase-table.gz: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
 		-scripts-root-dir ${SCRIPTS_ROOTDIR} \
 		-root-dir ${SRC}-${TRG} \
 		-temp-dir tmp \
-		-corpus ${SRC}-${TRG}/c.true -f ${SRCEXT} -e ${TRGEXT} \
+		-corpus $@ -f ${SRCEXT} -e ${TRGEXT} \
 		-alignment ${ALIGNMENT} \
 		--do-steps 4-6
+	gzip -f ${SRC}-${TRG}/model/lex.*
+	rm -f $@.${SRCEXT} $@.${TRGEXT}
 	${MAKE} alignments
 	${MAKE} cleanup
 
@@ -106,7 +232,7 @@ ${SRC}-${TRG}/model/phrase-table.gz: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
 # create clean and truecased data (source and target language)
 
 ${SRC}-${TRG}/c.true.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
-	make ${SRC}-${TRG} tmp
+	mkdir -p ${dir $@}
 	$(OPUS2MOSES) -d ${CORPUSXML} -s ${SRCEXT} -t ${TRGEXT} \
 		-p ${SRC}-${TRG}/ids.txt \
 		$< ${SRC}-${TRG}/c
@@ -134,34 +260,95 @@ ${SRC}-${TRG}/c.true.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	rm -f ${SRC}-${TRG}/c.${SRCEXT} ${SRC}-${TRG}/c.${TRGEXT}
 	rm -f ${SRC}-${TRG}/c.clean.${SRCEXT} ${SRC}-${TRG}/c.clean.${TRGEXT}
 
+# without truecasing
+
+${SRC}-${TRG}/clean.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
+	mkdir -p ${dir $@}
+	$(OPUS2MOSES) -d ${CORPUSXML} -s ${SRCEXT} -t ${TRGEXT} \
+		-p ${SRC}-${TRG}/ids.txt \
+		$< ${SRC}-${TRG}/c
+	${SCRIPTS_ROOTDIR}/training/clean-corpus-n.perl \
+		${SRC}-${TRG}/c ${SRCEXT} ${TRGEXT} \
+		${SRC}-${TRG}/c.clean ${MIN} ${MAX} \
+		${SRC}-${TRG}/line_numbers.txt
+	${OPUSTOOLS}/wordalign/retained-sentences.pl \
+		${SRC}-${TRG}/ids.txt \
+		${SRC}-${TRG}/line_numbers.txt |\
+		gzip -c > ${SRC}-${TRG}/ids.gz
+	rm -f ${SRC}-${TRG}/ids.txt ${SRC}-${TRG}/line_numbers.txt
+	rm -f ${SRC}-${TRG}/c.${SRCEXT} ${SRC}-${TRG}/c.${TRGEXT}
+	gzip -f ${SRC}-${TRG}/c.clean.${SRCEXT} ${SRC}-${TRG}/c.clean.${TRGEXT}
+
+
+
+# without truecasing nor cleaning
+
+${SRC}-${TRG}/c.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
+	mkdir -p ${dir $@}
+	$(OPUS2MOSES) -d ${CORPUSXML} -s ${SRCEXT} -t ${TRGEXT} \
+		-P ${SRC}-${TRG}/ids \
+		$< ${SRC}-${TRG}/c
+	gzip -f ${SRC}-${TRG}/c.${SRCEXT}
+	gzip -f ${SRC}-${TRG}/c.${TRGEXT}
+	gzip -f ${SRC}-${TRG}/ids
+
+
+# ## directly from download directory
+# ## without converting again
+# ## (don't do this because we may want to align different 
+# ##  versions of the corpus, e.g. the UDpipe version)
+
+# ${SRC}-${TRG}/c.${SRCEXT}.gz: ${CORPUSHTML}/${SRC}-${TRG}.txt.zip
+# 	mkdir -p ${dir $@}
+# 	unzip -d ${dir $@} $<
+# 	mv ${wildcard ${dir $@}${CORPUS}.*.${SRCEXT}} ${SRC}-${TRG}/c.${SRCEXT}
+# 	mv ${wildcard ${dir $@}${CORPUS}.*.${TRGEXT}} ${SRC}-${TRG}/c.${TRGEXT}
+# 	rm -f ${dir $@}${CORPUS}.*.ids.gz
+# 	gzip -f ${SRC}-${TRG}/c.${SRCEXT}
+# 	gzip -f ${SRC}-${TRG}/c.${TRGEXT}
+
+
 
 # symmetrised word alignments
 
-${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz: ${SRC}-${TRG}/model/aligned.srctotgt.gz
+${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz: \
+		${SRC}-${TRG}/model/aligned.srctotgt.gz \
+		${SRC}-${TRG}/model/aligned.tgttosrc.gz
 	gzip -cd < ${SRC}-${TRG}/model/aligned.srctotgt.gz > $@.s2t
 	gzip -cd < ${SRC}-${TRG}/model/aligned.tgttosrc.gz > $@.t2s
 	$(ATOOLS) -c ${ALIGNMENT} -i $@.s2t -j $@.t2s | gzip -c > $@
 	rm -f $@.s2t $@.t2s
 
-
 # wordalignment with efmaral (both directions)
+# use prefix-stemming and lowercasing to improve statistics
 
-${SRC}-${TRG}/model/aligned.srctotgt.gz: ${SRC}-${TRG}/c.true.${SRCEXT}.gz
-	mkdir -p $(dir $@)
-	gzip -cd ${SRC}-${TRG}/c.true.${SRCEXT}.gz > $@.${SRCEXT}
-	gzip -cd ${SRC}-${TRG}/c.true.${TRGEXT}.gz > $@.${TRGEXT}
-	${MOSESSCRIPTS}/training/wrappers/make-factor-stem.perl 4 \
-		$@.${SRCEXT} $@.stem4.${SRCEXT}
-	${MOSESSCRIPTS}/training/wrappers/make-factor-stem.perl 4 \
-		$@.${TRGEXT} $@.stem4.${TRGEXT}
-	paste -d ' ||| ' $@.stem4.${SRCEXT} /dev/null /dev/null /dev/null /dev/null $@.stem4.${TRGEXT} > $@.bitext
-	${EFMARAL} -i $@.bitext > ${SRC}-${TRG}/model/aligned.srctotgt
-	${EFMARAL} -i $@.bitext -r > ${SRC}-${TRG}/model/aligned.tgttosrc
-	gzip -f ${SRC}-${TRG}/model/aligned.srctotgt
-	gzip -f ${SRC}-${TRG}/model/aligned.tgttosrc
-	rm -f $@.${SRCEXT} $@.${TRGEXT} 
-	rm -f $@.stem4.${SRCEXT} $@.stem4.${TRGEXT} $@.bitext
+%/model/aligned.${SRCEXT}: %/c.${SRCEXT}.gz
+	mkdir -p ${dir $@}
+	gzip -cd $< > $@.tmp
+	${MOSESSCRIPTS}/training/wrappers/make-factor-stem.perl 4 $@.tmp $@.stem4
+	${MOSESSCRIPTS}/tokenizer/lowercase.perl < $@.stem4 > $@
+	rm -f $@.tmp $@.stem4
 
+%/model/aligned.${TRGEXT}: %/c.${SRCEXT}.gz
+	mkdir -p ${dir $@}
+	gzip -cd ${<:${SRCEXT}.gz=${TRGEXT}.gz} > $@.tmp
+	${MOSESSCRIPTS}/training/wrappers/make-factor-stem.perl 4 $@.tmp $@.stem4
+	${MOSESSCRIPTS}/tokenizer/lowercase.perl < $@.stem4 > $@
+	rm -f $@.tmp $@.stem4
+
+4COL = /dev/null /dev/null /dev/null /dev/null
+%/aligned.${SRCEXT}-${TRGEXT}: %/aligned.${SRCEXT} %/aligned.${TRGEXT}
+	paste -d ' ||| ' ${word 1,$^} ${4COL} ${word 2,$^} > $@
+
+
+# don't delete those intermediate files
+.SECONDARY: ${SRC}-${TRG}/model/aligned.srctotgt.gz ${SRC}-${TRG}/model/aligned.tgttosrc.gz
+
+%.srctotgt.gz: %.${SRCEXT}-${TRGEXT}
+	${EFMARAL} -i $< | gzip -c > $@
+
+%.tgttosrc.gz: %.${SRCEXT}-${TRGEXT}
+	${EFMARAL} -i $< -r | gzip -c > $@
 
 
 # grep phrase pairs with only alphabetic characters and freq>1 for both
@@ -179,25 +366,11 @@ ${SRC}-${TRG}/phrases-alpha.gz: ${SRC}-${TRG}/model/phrase-table.gz
 
 
 cleanup:
-	rm -f ${SRC}-${TRG}/c.${SRC} ${SRC}-${TRG}/c.${TRG}
-	rm -f ${SRC}-${TRG}/c.${SRCEXT} ${SRC}-${TRG}/c.${TRGEXT}
 	rm -f ${SRC}-${TRG}/c.clean.*
 	rm -f ${SRC}-${TRG}/model/extract*
 	rm -f ${SRC}-${TRG}/model/tmp.*
 	rm -fr ${SRC}-${TRG}/corpus
 	rm -fr ${SRC}-${TRG}/giza.*
-
-#	rm -f ${SRC}-${TRG}/model/lex*
-# 	-gzip ${SRC}-${TRG}/c.true.*
-
-
-#	-gzip ${SRC}-${TRG}/line_numbers.txt
-#	rm -f ${SRC}-${TRG}/giza*/*.cooc
-#	rm -f ${SRC}-${TRG}/c.*
-
-${SRC}-${TRG}: 
-	mkdir -p ${CORPUSWORDALIGN}/${SRC}-${TRG}
-	ln -s ${CORPUSWORDALIGN}/${SRC}-${TRG} ${SRC}-${TRG}
 
 tmp: 
 	mkdir -p ${CORPUSWORDALIGN}/tmp
@@ -307,157 +480,16 @@ filter-phrase-table: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 
 %.src.sa_suffix:
 	if [ $(word 1,$(subst -, ,$@)) != $(word 2,$(subst -, ,$(subst /, ,$@))) ]; then \
-	  gzip -cd < $(dir $@)c.true.$(word 1,$(subst -, ,$@)).gz > $@; \
+	  gzip -cd < $(dir $@)c.$(word 1,$(subst -, ,$@)).gz > $@; \
 	else \
-	  gzip -cd < $(dir $@)c.true.$(word 1,$(subst -, ,$@))1.gz > $@; \
+	  gzip -cd < $(dir $@)c.$(word 1,$(subst -, ,$@))1.gz > $@; \
 	fi
 	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
 
 %.trg.sa_suffix:
 	if [ $(word 1,$(subst -, ,$@)) != $(word 2,$(subst -, ,$(subst /, ,$@))) ]; then \
-	  gzip -cd < $(dir $@)c.true.$(word 2,$(subst -, ,$(subst /, ,$@))).gz > $@; \
+	  gzip -cd < $(dir $@)c.$(word 2,$(subst -, ,$(subst /, ,$@))).gz > $@; \
 	else \
-	  gzip -cd < $(dir $@)c.true.$(word 2,$(subst -, ,$(subst /, ,$@)))2.gz > $@; \
+	  gzip -cd < $(dir $@)c.$(word 2,$(subst -, ,$(subst /, ,$@)))2.gz > $@; \
 	fi
 	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
-
-
-
-
-
-
-#########################################
-## make some missing files .....
-#########################################
-
-
-# make the clean, truecased corpus once again and check
-# if this the same as last time (when running GIZA++)
-
-make-corpus:
-	$(OPUS2MOSES) -d ${CORPUSXML} -s ${SRC} -t ${TRG} \
-		${CORPUSXML}/${SRC}-${TRG}.xml.gz ${SRC}-${TRG}/c
-	${SCRIPTS_ROOTDIR}/training/clean-corpus-n.perl \
-		${SRC}-${TRG}/c ${SRC} ${TRG} \
-		${SRC}-${TRG}/c.clean ${MIN} ${MAX} \
-		${SRC}-${TRG}/line_numbers_new.txt
-	${TOOLS}/public/preprocess/recaser/mytruecase.perl \
-                -model ${CORPUSWORDALIGN}/truecaser/${SRC} \
-		< ${SRC}-${TRG}/c.clean.${SRC} \
-		> ${SRC}-${TRG}/c.true.${SRC} 2>/dev/null
-	${TOOLS}/public/preprocess/recaser/mytruecase.perl \
-                -model ${CORPUSWORDALIGN}/truecaser/${TRG} \
-		< ${SRC}-${TRG}/c.clean.${TRG} \
-		> ${SRC}-${TRG}/c.true.${TRG} 2>/dev/null
-	-gunzip ${SRC}-${TRG}/line_numbers.txt.gz
-	diff 	${SRC}-${TRG}/line_numbers.txt \
-		${SRC}-${TRG}/line_numbers_new.txt \
-		> ${SRC}-${TRG}/line_numbers.diff
-	@if [ -s ${SRC}-${TRG}/line_numbers.diff ]; then \
-		echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"; \
-		echo "!!!!! WARNING ! clean-corpus made a difference for ${SRC}-${TRG}"; \
-		echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"; \
-		gzip ${SRC}-${TRG}/line_numbers.txt; \
-		gzip ${SRC}-${TRG}/line_numbers_new.txt; \
-		gzip ${SRC}-${TRG}/line_numbers.diff; \
-		rm -f ${SRC}-${TRG}/c.*; \
-		exit 1; \
-	fi
-	rm -f ${SRC}-${TRG}/line_numbers_new.txt
-	rm -f ${SRC}-${TRG}/line_numbers.diff
-
-
-id-file: ${SRC}-${TRG}/ids.txt
-
-${SRC}-${TRG}/ids.txt: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
-	make ${SRC}-${TRG} tmp
-	$(OPUS2MOSES) -d ${CORPUSXML} -s ${SRC} -t ${TRG} \
-		-p ${SRC}-${TRG}/ids.txt \
-		$< ${SRC}-${TRG}/c
-	${SCRIPTS_ROOTDIR}/training/clean-corpus-n.perl \
-		${SRC}-${TRG}/c ${SRC} ${TRG} \
-		${SRC}-${TRG}/c.clean ${MIN} ${MAX} \
-		${SRC}-${TRG}/line_numbers.txt
-	${OPUSTOOLS}/wordalign/retained-sentences.pl \
-		${SRC}-${TRG}/ids.txt \
-		${SRC}-${TRG}/line_numbers.txt |\
-		gzip -c > ${SRC}-${TRG}/ids.gz
-	rm -f ${SRC}-${TRG}/ids.txt ${SRC}-${TRG}/line_numbers.txt
-
-
-
-
-
-
-
-
-
-
-### old: alignment with GIZA++ and standard Moses pipeline
-
-
-# convert from XML to Moses format
-# run clean-corpus
-# run truecaser
-# make Moses steps 1-6
-# extract other alignment heuristics
-# cleanup
-
-#	rm -fr ${SRC}-${TRG}/*
-
-# ${SRC}-${TRG}/model/phrase-table.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
-# 	make ${SRC}-${TRG} tmp
-# 	$(OPUS2MOSES) -d ${CORPUSXML} -s ${SRCEXT} -t ${TRGEXT} \
-# 		-p ${SRC}-${TRG}/ids.txt \
-# 		$< ${SRC}-${TRG}/c
-# 	${SCRIPTS_ROOTDIR}/training/clean-corpus-n.perl \
-# 		${SRC}-${TRG}/c ${SRCEXT} ${TRGEXT} \
-# 		${SRC}-${TRG}/c.clean ${MIN} ${MAX} \
-# 		${SRC}-${TRG}/line_numbers.txt
-# 	${OPUSTOOLS}/wordalign/retained-sentences.pl \
-# 		${SRC}-${TRG}/ids.txt \
-# 		${SRC}-${TRG}/line_numbers.txt |\
-# 		gzip -c > ${SRC}-${TRG}/ids.gz
-# 	rm -f ${SRC}-${TRG}/ids.txt ${SRC}-${TRG}/line_numbers.txt
-# 	${MAKE} ${CORPUSWORDALIGN}/truecaser/${SRC}
-# 	${TOOLS}/public/preprocess/recaser/mytruecase.perl \
-#                 -model ${CORPUSWORDALIGN}/truecaser/${SRC} \
-# 		< ${SRC}-${TRG}/c.clean.${SRCEXT} \
-# 		> ${SRC}-${TRG}/c.true.${SRCEXT} 2>/dev/null
-# 	${MAKE} ${CORPUSWORDALIGN}/truecaser/${TRG}
-# 	${TOOLS}/public/preprocess/recaser/mytruecase.perl \
-#                 -model ${CORPUSWORDALIGN}/truecaser/${TRG} \
-# 		< ${SRC}-${TRG}/c.clean.${TRGEXT} \
-# 		> ${SRC}-${TRG}/c.true.${TRGEXT} 2>/dev/null
-# 	${MAKE} ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
-# 	${SCRIPTS_ROOTDIR}/training/train-model.perl \
-# 		-parallel \
-# 		-external-bin-dir=${HOME}/projects/SMT/bin \
-# 		-max-phrase-length=${MAX_PHR_LENGTH} \
-# 		-scripts-root-dir ${SCRIPTS_ROOTDIR} \
-# 		-root-dir ${SRC}-${TRG} \
-# 		-temp-dir tmp \
-# 		-corpus ${SRC}-${TRG}/c.true -f ${SRCEXT} -e ${TRGEXT} \
-# 		-alignment ${ALIGNMENT} \
-# 		--first-step 4 \
-# 		--last-step 6
-# 	${MAKE} alignments
-# 	${MAKE} cleanup
-
-
-# from old Moses:
-#
-# 		-phrase-word-alignment \
-
-
-# ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz:
-# 	${SCRIPTS_ROOTDIR}/training/train-model.perl \
-# 		-scripts-root-dir ${SCRIPTS_ROOTDIR} \
-# 		-root-dir ${SRC}-${TRG} \
-# 		-temp-dir tmp \
-# 		-corpus ${SRC}-${TRG}/c.true -f ${SRCEXT} -e ${TRGEXT} \
-# 		-alignment ${ALIGNMENT} \
-# 		--do-steps 3
-# 	gzip ${SRC}-${TRG}/model/aligned.${ALIGNMENT}
-
-
