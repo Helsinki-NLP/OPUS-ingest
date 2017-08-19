@@ -4,6 +4,9 @@
 # make all download packages and the website
 # (including all data formats we provide)
 
+PARSED_LANGUAGES = $(sort $(notdir $(wildcard ${CORPUSPARSED}/??)) \
+                          $(notdir $(wildcard ${CORPUSPARSED}/???)) \
+                          $(notdir $(wildcard ${CORPUSPARSED}/??_??)))
 
 CES      = $(wildcard ${CORPUSXML}/*.xml.gz)
 ALG      = $(patsubst ${CORPUSXML}/%,${CORPUSHTML}/%,$(CES))
@@ -11,7 +14,7 @@ TMX      = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSHTML}/%.tmx.gz,$(CES))
 MOSES    = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSHTML}/%.txt.zip,$(CES))
 LANG_TAR = $(patsubst %,${CORPUSHTML}/%.tar.gz,${LANGUAGES})
 LANG_RAW = $(patsubst %,${CORPUSHTML}/%.raw.tar.gz,${LANGUAGES})
-LANG_UD  = $(patsubst %,${CORPUSHTML}/%.parsed.tar.gz,${LANGUAGES})
+LANG_UD  = $(patsubst %,${CORPUSHTML}/%.parsed.tar.gz,${PARSED_LANGUAGES})
 
 ## strict = bitexts with "high-quality" alignments only
 ## (1:1, hunalign link score > 1)
@@ -96,11 +99,10 @@ ${OPUSPUB}/${CORPUS}.php: ${PACKAGES} \
 	    -e 's#<h1>${CORPUS}</h1>#<h1>${CORPUS}</h1>${SRCHTML}#' > $@
 
 ${PACKAGES}:	${ALG} \
-		${LANG_TAR} ${LANG_RAW} \
+		${LANG_TAR} ${LANG_RAW} ${LANG_UD} \
 		${MONO_TOK} ${MONO_RAW} \
 		$(TMX) $(MOSES) ${FREQ_COUNTS} \
 		${OPUSHTML}/${CORPUS}.tar.gz
-	${MAKE} lang_parsed_tar
 	echo "$^" | tr ' ' "\n" | sed "s#${OPUSHTML}/##" >> $@
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
 	mv -f ${PACKAGES}.uniq ${PACKAGES}
@@ -109,7 +111,6 @@ ${PACKAGES}:	${ALG} \
 ## make an archive with all xml-files!
 
 pack: ${OPUSHTML}/${CORPUS}.tar.gz
-
 
 ### just pack everything in xml and raw!
 
@@ -121,8 +122,8 @@ ${OPUSHTML}/${CORPUS}.tar.gz: $(CES)
 		--exclude='*.info' \
 		--exclude-vcs \
 		--transform 's#^#${CORPUS}/#' \
-		-chzf $(shell basename $@) ${PACKDIRS}
-	mv -f $(shell basename $@) $@
+		-chzf $(notdir $@) ${PACKDIRS}
+	mv -f $(notdir $@) $@
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 

@@ -11,11 +11,20 @@ include ../Makefile.common
 
 PACKAGE = udpipe
 VERSION = latest
-MODELS  = ud-2.0-conll17-170315
+GITURL  = https://github.com/ufal/udpipe.git
 
 
-GITURL = https://github.com/ufal/udpipe.git
-MODELS_URL = https://lindat.mff.cuni.cz/repository/xmlui/bitstream/handle/11234/1-1990/udpipe-${MODELS}.tar
+## latest models
+MODELS-170801     = ud-2.0-170801
+MODELS-170801_URL = https://lindat.mff.cuni.cz/repository/xmlui/bitstream/handle/11234/1-2364/udpipe-${MODELS}.zip
+
+## previous version
+MODELS-170315     = ud-2.0-conll17-170315
+MODELS_170315-URL = https://lindat.mff.cuni.cz/repository/xmlui/bitstream/handle/11234/1-1990/udpipe-${MODELS}.tar
+
+
+MODELS     = ${MODELS-170801}
+MODELS_URL = ${MODELS-170801_URL}
 
 
 PACKAGE_SOURCE = ${NLPL_SOURCES}/${PACKAGE}/${VERSION}
@@ -54,7 +63,13 @@ ${PACKAGE_HOME}/models: ${PACKAGE_HOME}/${MODELS}
 
 ${PACKAGE_HOME}/${MODELS}:
 	${MKDIR} $@
-	wget -O $@.tar ${MODELS_URL}
+	wget -O $@.zip ${MODELS_URL}
+	unzip -d $@ $@.zip
+	mv $@/udpipe-${MODELS} $@/models
+	rm -f $@.zip
+
+${PACKAGE_HOME}/${MODELS-170315}:
+	wget -O $@.tar ${MODELS-170315_URL}
 	tar -C $@ -xf $@.tar
 	rm -f $@.tar
 

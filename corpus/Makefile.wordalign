@@ -25,16 +25,24 @@ else
   TRGEXT=${TRG}
 endif
 
+## set CORPUSBASE depending on preprocessing to be done
+## - c.true  = cleanup and truecasing
+## - c.clean = cleanup
+## - c       = all (no cleanup nor truecasing)
+
+# CORPUSBASE = c
+# CORPUSBASE = c.true
+CORPUSBASE = c.clean
 
 # try to guess memory and time consumption for batch jobs
 # (based on size on source language tokens)
 
-CORPUS_SIZE = ${shell sed -n '2p' ${CORPUSXML}/${LANGPAIR}.txt.info}
+CORPUS_SIZE = ${shell sed -n '2p' ${CORPUSHOME}/xml/${LANGPAIR}.txt.info}
 ALIGN_MEM = ${shell \
 	if [ ${CORPUS_SIZE} -gt 100000000 ]; then \
-	  echo "256g"; \
+	  echo "250g"; \
 	elif [ ${CORPUS_SIZE} -gt 10000000 ]; then \
-	  echo "128g"; \
+	  echo "120g"; \
 	elif [ ${CORPUS_SIZE} -gt 5000000 ]; then \
 	  echo "64g"; \
 	elif [ ${CORPUS_SIZE} -gt 1000000 ]; then \
@@ -91,7 +99,8 @@ LMRAWTEXT = $(patsubst %,${CORPUSWORDALIGN}/lm/${CORPUS}.raw.%.gz, ${LANGUAGES})
 
 
 .PHONY: all-wordalign
-all-wordalign: ${TRUECASER} ${LANGPAIRS} clean
+all-wordalign: ${LANGPAIRS} clean
+# all-wordalign: ${TRUECASER} ${LANGPAIRS} clean
 
 
 ## submit batch jobs of various kinds
@@ -122,8 +131,10 @@ submit-all:
 .PHONY: submit-wordalign-prepare
 submit-wordalign-prepare:
 	if [ ! -e ${LANGPAIR}/.wordalign-prepare ]; then \
+	  rm -f ${LANGPAIR}.submit; \
 	  ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
 		  HPC_MEM=4g \
+		  EMAIL= \
 		  MAKEARGS="ACTION=wordalign-prepare" \
 	  ${LANGPAIR}.submit;\
 	fi
@@ -133,10 +144,12 @@ submit-wordalign-prepare:
 .PHONY: submit-wordalign-align
 submit-wordalign-align:
 	if [ ! -e ${LANGPAIR}/.wordalign-align ]; then \
+	  rm -f ${LANGPAIR}.submit; \
 	  ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
 		  HPC_MEM=${ALIGN_MEM} \
 		  HPC_CORES=4 \
 		  HPC_MODULES=python-env/3.4.1 \
+		  EMAIL= \
 		  MAKEARGS="ACTION=wordalign-align" \
 	  ${LANGPAIR}.submit;\
 	fi
@@ -145,9 +158,13 @@ submit-wordalign-align:
 # (assume that word alignment is done already!)
 .PHONY: submit-wordalign
 submit-wordalign:
-	if [ ! -e ${LANGPAIR}/.wordalign ]; then \
+	if [ ! -e ${LANGPAIR}/.wordalign-align ]; then \
+	  echo "run alignment for ${LANGPAIR} first!"; \
+	elif [ ! -e ${LANGPAIR}/.wordalign ]; then \
+	  rm -f ${LANGPAIR}.submit; \
 	  ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
 		  HPC_CORES=4 \
+		  EMAIL= \
 		  MAKEARGS="ACTION=wordalign" \
 	  ${LANGPAIR}.submit;\
 	fi
@@ -175,7 +192,7 @@ ${LANGPAIRS}: %: %/.${ACTION}
 ## define some actions (prepare, align, ...)
 
 .PHONY: wordalign-prepare
-wordalign-prepare: ${SRC}-${TRG}/c.${SRCEXT}.gz
+wordalign-prepare: ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
 
 .PHONY: wordalign-align
 wordalign-align: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
@@ -211,8 +228,8 @@ alignments:
 
 ${SRC}-${TRG}/model/phrase-table.gz: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
 	mkdir -p ${dir $@}
-	gzip -cd ${SRC}-${TRG}/c.${SRCEXT}.gz > $@.${SRCEXT}
-	gzip -cd ${SRC}-${TRG}/c.${TRGEXT}.gz > $@.${TRGEXT}
+	gzip -cd ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz > $@.${SRCEXT}
+	gzip -cd ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz > $@.${TRGEXT}
 	${SCRIPTS_ROOTDIR}/training/train-model.perl \
 		-parallel \
 		-external-bin-dir=${HOME}/projects/SMT/bin \
@@ -262,7 +279,7 @@ ${SRC}-${TRG}/c.true.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 
 # without truecasing
 
-${SRC}-${TRG}/clean.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
+${SRC}-${TRG}/c.clean.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	mkdir -p ${dir $@}
 	$(OPUS2MOSES) -d ${CORPUSXML} -s ${SRCEXT} -t ${TRGEXT} \
 		-p ${SRC}-${TRG}/ids.txt \
@@ -322,14 +339,14 @@ ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz: \
 # wordalignment with efmaral (both directions)
 # use prefix-stemming and lowercasing to improve statistics
 
-%/model/aligned.${SRCEXT}: %/c.${SRCEXT}.gz
+%/model/aligned.${SRCEXT}: %/${CORPUSBASE}.${SRCEXT}.gz
 	mkdir -p ${dir $@}
 	gzip -cd $< > $@.tmp
 	${MOSESSCRIPTS}/training/wrappers/make-factor-stem.perl 4 $@.tmp $@.stem4
 	${MOSESSCRIPTS}/tokenizer/lowercase.perl < $@.stem4 > $@
 	rm -f $@.tmp $@.stem4
 
-%/model/aligned.${TRGEXT}: %/c.${SRCEXT}.gz
+%/model/aligned.${TRGEXT}: %/${CORPUSBASE}.${SRCEXT}.gz
 	mkdir -p ${dir $@}
 	gzip -cd ${<:${SRCEXT}.gz=${TRGEXT}.gz} > $@.tmp
 	${MOSESSCRIPTS}/training/wrappers/make-factor-stem.perl 4 $@.tmp $@.stem4
@@ -366,7 +383,6 @@ ${SRC}-${TRG}/phrases-alpha.gz: ${SRC}-${TRG}/model/phrase-table.gz
 
 
 cleanup:
-	rm -f ${SRC}-${TRG}/c.clean.*
 	rm -f ${SRC}-${TRG}/model/extract*
 	rm -f ${SRC}-${TRG}/model/tmp.*
 	rm -fr ${SRC}-${TRG}/corpus
@@ -480,16 +496,16 @@ filter-phrase-table: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 
 %.src.sa_suffix:
 	if [ $(word 1,$(subst -, ,$@)) != $(word 2,$(subst -, ,$(subst /, ,$@))) ]; then \
-	  gzip -cd < $(dir $@)c.$(word 1,$(subst -, ,$@)).gz > $@; \
+	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 1,$(subst -, ,$@)).gz > $@; \
 	else \
-	  gzip -cd < $(dir $@)c.$(word 1,$(subst -, ,$@))1.gz > $@; \
+	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 1,$(subst -, ,$@))1.gz > $@; \
 	fi
 	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
 
 %.trg.sa_suffix:
 	if [ $(word 1,$(subst -, ,$@)) != $(word 2,$(subst -, ,$(subst /, ,$@))) ]; then \
-	  gzip -cd < $(dir $@)c.$(word 2,$(subst -, ,$(subst /, ,$@))).gz > $@; \
+	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 2,$(subst -, ,$(subst /, ,$@))).gz > $@; \
 	else \
-	  gzip -cd < $(dir $@)c.$(word 2,$(subst -, ,$(subst /, ,$@)))2.gz > $@; \
+	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 2,$(subst -, ,$(subst /, ,$@)))2.gz > $@; \
 	fi
 	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@

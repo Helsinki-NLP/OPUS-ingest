@@ -36,9 +36,23 @@ udparse:
 		${MAKE} LANGUAGE=$$l udparse_files; \
 	  fi; \
 	done
+	${MAKE} link-sentalign-files-to-parsed
 
 udparse_files: ${XMLFILES}
 
 ${CORPUSPARSED}/${LANGUAGE}/%: ${CORPUSRAW}/${LANGUAGE}/%
 	mkdir -p $(shell dirname $@)
 	zcat "$<" | ${UDPARSE} -l ${LANGUAGE} | gzip -c > "$@"
+
+
+LANGPAIRS = $(patsubst $(CORPUSXML)/%.xml.gz,%,\
+			$(wildcard $(CORPUSXML)/*-*.xml.gz))
+
+link-sentalign-files-to-parsed:
+	for l in ${LANGPAIRS}; do \
+	  if [ -d ${CORPUSPARSED}/`echo -n "$$l" | sed 's/^.*-//'` ]; then \
+	    if [ -d ${CORPUSPARSED}/`echo -n "$$l" | sed 's/-.*$$//'` ]; then \
+		ln -s ../xml/$$l.xml.gz ${CORPUSPARSED}/; \
+	    fi \
+	  fi \
+	done
