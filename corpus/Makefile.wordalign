@@ -178,11 +178,13 @@ ACTION = wordalign
 
 ${LANGPAIRS}: %: %/.${ACTION}
 
+## NEW: remove empty files before runing action
 %/.${ACTION}:
 	mkdir -p ${CORPUSWORDALIGN}/${@:/.${ACTION}=}
 	if [ ! -e ${@:/.${ACTION}=} ]; then \
 	  ln -s ${CORPUSWORDALIGN}/${@:/.${ACTION}=} ${@:/.${ACTION}=}; \
 	fi
+	find ${dir $@} -type f -empty ! -iname '.*'
 	${MAKE} SRC=$(firstword $(subst -, ,${@:/.${ACTION}=})) \
 		TRG=$(lastword $(subst -, ,${@:/.${ACTION}=})) \
 	${ACTION}
