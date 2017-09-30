@@ -3,6 +3,7 @@
 
 include ../../Makefile.def
 include ../Makefile.def
+include ../../Makefile.submit
 
 
 # all language sub directories
@@ -24,24 +25,53 @@ SMALLLANG = af bn br ca eo eu fa gl hi hy is id ja ka kk ko lt lv mk ml ms no si
 
 all: ${LANGUAGES}
 
-${HOME}/work/OpenSubtitles2016/raw/%:
-	mkdir -p ${HOME}/work/OpenSubtitles2016/raw/${notdir $@}
-	../scripts/copy_raw_files.pl ${HOME}/work/OpenSubtitles2016 \
-		${notdir $@}
-	tar -C $@ --skip-old-files -xvzf $@/*.tar.gz
-	rm -f $@/*.tar.gz
+# move files from abel from Pierre's workdir
+
+${LANGUAGES}:
+	mkdir -p $@
+	rsync ${ABEL_USER}@${ABEL}:${ABEL_TARDIR}/$@-raw.tar.gz $@/
+	tar -C $@ --skip-old-files -xvzf $@/$@-raw.tar.gz
+	rm -f $@/$@-raw.tar.gz
 	find $@ -name '*.xml' | xargs -P 8 gzip -f
 
-#	find $@ -name '*.xml' | xargs -P $$(( ${CORES}/2  )) gzip -f
+
+## zh_tw has different name on abel
+
+zh_tw:
+	mkdir -p $@
+	rsync ${ABEL_USER}@${ABEL}:${ABEL_TARDIR}/zt-raw.tar.gz $@/$@-raw.tar.gz
+	tar -C $@ --skip-old-files -xvzf $@/$@-raw.tar.gz
+	rm -f $@/$@-raw.tar.gz
+	find $@ -name '*.xml' | xargs -P 8 gzip -f
 
 
-${LANGUAGES}: %: ${HOME}/work/OpenSubtitles2016/raw/%
-	rm -f $@
-	ln -s $< .
+copy:
+	${MAKE} HPC_MEM=4g HPC_TIME=72:00 all.submit
 
-submit:
-	echo '#! /bin/bash' > copy.sh; \
-	echo 'make all' >> copy.sh; \
-	sbatch  -A nn9447k -c 1 --mem-per-cpu=2G \
-		-t 48:00:00 copy.sh; \
+
+
+
+# ## OLD: move to workdir
+
+# ${HOME}/work/OpenSubtitles2016/raw/%:
+# 	mkdir -p ${HOME}/work/OpenSubtitles2016/raw/${notdir $@}
+# 	../scripts/copy_raw_files.pl ${HOME}/work/OpenSubtitles2016 \
+# 		${notdir $@}
+# 	tar -C $@ --skip-old-files -xvzf $@/*.tar.gz
+# 	rm -f $@/*.tar.gz
+# 	find $@ -name '*.xml' | xargs -P 8 gzip -f
+
+# #	find $@ -name '*.xml' | xargs -P $$(( ${CORES}/2  )) gzip -f
+
+
+# ${LANGUAGES}: %: ${HOME}/work/OpenSubtitles2016/raw/%
+# 	rm -f $@
+# 	ln -s $< .
+
+
+# submit:
+# 	echo '#! /bin/bash' > copy.sh; \
+# 	echo 'make all' >> copy.sh; \
+# 	sbatch  -A nn9447k -c 1 --mem-per-cpu=2G \
+# 		-t 48:00:00 copy.sh; \
 

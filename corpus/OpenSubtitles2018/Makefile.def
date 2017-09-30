@@ -13,3 +13,11 @@ VERSION =
 SRCHTML=<p>This is a new collection of translated movie subtitles from <a href="http://www.opensubtitles.org/">http://www.opensubtitles.org/</a>. <br/><b>IMPORTANT:</b> If you use the OpenSubtitle corpus: <br/>Please, add a link to <b>http://www.opensubtitles.org/</b> to your website and to your reports and publications produced with the data! I promised this when I got the data from the providers of that website!</p> <p> This is a slightly cleaner version of the subtitle collection using improved sentence alignment and better language checking.</p>
 
 EXTRAHTML= <p><b>WARNING!</b> This collection is not ready yet! Data sets will still change a lot. Use with care!!</p>
+
+
+## directory on abel with the converted subtitle files.
+
+ABEL         = abel.uio.no
+ABEL_USER    = joerg
+ABEL_TARDIR  = /projects/researchers/researchers01/plison/data/opensubs2018
+ABEL_WORKDIR = /work/users/joerg/OPUS/corpus/OpenSubtitles2018

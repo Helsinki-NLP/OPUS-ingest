@@ -3,6 +3,8 @@
 
 include ../../Makefile.def
 include ../Makefile.def
+include ../../Makefile.submit
+
 
 ## project on abel
 PROJECT = nn9442k
@@ -129,6 +131,8 @@ all:
 	make all-align
 
 
+
+
 ICXML = $(wildcard *ic*.xml.gz)
 
 fix:
@@ -144,6 +148,25 @@ available:
 	    echo "$$l not found"; \
 	  fi \
 	done
+
+
+sync-from-abel:
+	for l in ${LANGUAGES}; do \
+	  if [ ! -d $$l ]; then \
+	    echo "copy and unpack $$l";\
+	    rsync ${ABEL_USER}@${ABEL}:${ABEL_WORKDIR}/xml/$$l.tar .;\
+	    tar -xf $$l.tar;\
+	    rm -f $$l.tar;\
+	  fi \
+	done
+	rsync -aLv ${ABEL_USER}@${ABEL}:${ABEL_WORKDIR}/xml/*.xml.gz .
+	mkdir -p ../log
+	rsync -aLv ${ABEL_USER}@${ABEL}:${ABEL_WORKDIR}/xml/align-* ../log/
+
+
+sync-job:
+	${MAKE} HPC_MEM=4g HPC_TIME=72:00 sync-from-abel.submit
+
 
 
 # all: all-align
