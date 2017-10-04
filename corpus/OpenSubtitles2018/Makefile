@@ -3,6 +3,7 @@
 include Makefile.def
 include ../Makefile.def
 
+
 SRC = xx
 TRG = xx
 
@@ -15,6 +16,7 @@ all: ${UNRELIABLE}
 	${MAKE} html
 	${MAKE} cwb-index
 	rm -fr data
+
 
 move: ${UNRELIABLE}
 
@@ -50,6 +52,7 @@ include ../Makefile.annotate
 include ../Makefile.parse
 include ../Makefile.cwb
 include ../Makefile.html
+include ../Makefile.submit
 
 
 

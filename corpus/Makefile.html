@@ -103,6 +103,7 @@ ${PACKAGES}:	${ALG} \
 		${MONO_TOK} ${MONO_RAW} \
 		$(TMX) $(MOSES) ${FREQ_COUNTS} \
 		${OPUSHTML}/${CORPUS}.tar.gz
+	mkdir -p ${dir $@}
 	echo "$^" | tr ' ' "\n" | sed "s#${OPUSHTML}/##" >> $@
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
 	mv -f ${PACKAGES}.uniq ${PACKAGES}
@@ -124,6 +125,7 @@ ${OPUSHTML}/${CORPUS}.tar.gz: $(CES)
 		--transform 's#^#${CORPUS}/#' \
 		-chzf $(notdir $@) ${PACKDIRS}
 	mv -f $(notdir $@) $@
+	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
@@ -182,6 +184,7 @@ ${LANG_TAR}: ${CORPUSHTML}/%.tar.gz: ${CORPUSXML}/%
 	find $</ -name '*.xml.gz' > $<.files
 	-tar -T $<.files -P --transform='s#${CORPUSXML}#${CORPUS}/xml#' -czf $@
 	rm -f $<.files
+	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 # raw corpus files
@@ -193,6 +196,7 @@ ${LANG_RAW}: ${CORPUSHTML}/%.raw.tar.gz: ${CORPUSRAW}/%
 	find $</ -name '*.xml.gz' > $<.files
 	-tar -T $<.files -P --transform='s#${CORPUSRAW}#${CORPUS}/raw#' -czf $@
 	rm -f $<.files
+	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 # parsed corpus files (not all languages need to be parsed)
@@ -209,6 +213,7 @@ ${LANG_UD}: ${CORPUSHTML}/%.parsed.tar.gz: ${CORPUSPARSED}/%
 	find $</ -name '*.xml.gz' > $<.files
 	-tar -T $<.files -P --transform='s#${CORPUSRAW}#${CORPUS}/parsed#' -czf $@
 	rm -f $<.files
+	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
@@ -232,6 +237,7 @@ ${CORPUSHTML}/mono/${CORPUS}.%.gz: ${CORPUSXML}/%
 	perl ${TOOLS}/opus/xml2text.pl | \
 	sed 's/  */ /g;s/^ *//;s/ *$$//' |\
 	gzip -c > $@
+	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
@@ -243,6 +249,7 @@ ${CORPUSHTML}/mono/${CORPUS}.raw.%.gz: ${CORPUSRAW}/%
 	perl ${TOOLS}/opus/rawxml2text.pl | \
 	sed 's/  */ /g;s/^ *//;s/ *$$//' |\
 	gzip -c > $@
+	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
@@ -260,6 +267,7 @@ ${CORPUSHTML}/freq/${CORPUS}.%.gz: ${CORPUSHTML}/mono/${CORPUS}.%.gz
 	tr ' ' "\n" | \
 	sort | uniq -c | sort -nr | \
 	gzip -c > $@
+	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
@@ -324,6 +332,7 @@ tmx-strict: ${CORPUSHTML} $(TMX_STRICT)
 	  $(TAB2TMX) -s $$S -t $$T |\
 	  gzip -c > $@; \
 	  rm -f ${CORPUS}.$$P.$$SEXT ${CORPUS}.$$P.$$TEXT ${CORPUS}.$$P.ids; )
+	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
@@ -350,6 +359,7 @@ $(MOSES): ${CORPUSHTML}/%.txt.zip: ${CORPUSXML}/%.xml.gz
 	  mv ${CORPUS}.$$P.$$T.tmp ${CORPUS}.$$P.$$T; \
 	  zip $@ ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; \
 	  rm -f ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; )
+	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
@@ -369,6 +379,7 @@ $(MOSES_STRICT): ${CORPUSHTML}/%.strict.txt.zip: ${CORPUSXML}/%.xml.gz
 	  zip $@ ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; \
 	  rm -f ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; )
 	rm -f $(<:gz=11)
+	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
