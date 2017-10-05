@@ -45,7 +45,7 @@ my @subs = grep { /\.xml.gz$/ && -f "$srtdir/$_" } readdir($dh);
 closedir $dh;
 
 unless ($#subs){
-    print STDERR "I need more than 1 subtitle as input!\n";
+    print STDERR "I need more than 1 subtitle as input!\n" if ($opt_v);
     exit 0;
 }
 

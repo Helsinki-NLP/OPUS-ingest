@@ -37,7 +37,7 @@ SUBMIT = submit-taito
 
 SENTALIGN  = ../scripts/find_translation_alternatives.pl -m
 walltime = 24
-MEM      = 4G
+MEM      = 8G
 HPC_CORES = 8
 HPC_TIME = ${walltime}
 HPC_MEM  = ${MEM}
@@ -61,6 +61,18 @@ all:
 	  ${MAKE} LANGUAGE=$$l align; \
 	done
 	${MAKE} remove_empty remove_empty_align remove_empty_dir
+
+
+pack-log:
+	for l in ${LANGUAGES}; do \
+	  if [ ! -e $$l-$$l.log.tar.gz ]; then \
+	  echo "process $$l";\
+	  find $$l-$$l/ -name '*.log.gz' > $$l-$$l.files;\
+	  tar -czf $$l-$$l.log.tar.gz -T $$l-$$l.files; \
+	  rm -f $$l-$$l.files; \
+	  rm -fr $$l-$$l; \
+	  fi \
+	done
 
 
 submit-all:
@@ -187,6 +199,7 @@ submit-taito:
 		echo 'tar -C $$TMPDIR/OPUS/corpus/${CORPUS}/alt --strip-components 2 -xzf ${CORPUSHTML}/${LANGUAGE}.tar.gz' >> ${LANGUAGE}.sh; \
 		echo 'make -C $$TMPDIR/OPUS/corpus/${CORPUS}/alt/ -j ${HPC_CORES} LANGUAGE=${LANGUAGE} NRJOBS=${HPC_CORES} align' >> ${LANGUAGE}.sh; \
 		echo 'mv $$TMPDIR/OPUS/corpus/${CORPUS}/alt/*.xml.gz .' >> ${LANGUAGE}.sh; \
+		echo 'mv $$TMPDIR/OPUS/corpus/${CORPUS}/alt/*.log.tar.gz .' >> ${LANGUAGE}.sh; \
 		echo 'rm -fr $$TMPDIR/OPUS' >> ${LANGUAGE}.sh; \
 		echo 'rm -f ${LANGUAGE}.running ${LANGUAGE}.sh' >> ${LANGUAGE}.sh; \
 		echo 'echo "Finishing at `date`"' >> ${LANGUAGE}.sh; \
@@ -207,6 +220,11 @@ align:
 	${MAKE} ${LANGUAGE}-${LANGUAGE}.insert.xml.gz
 	${MAKE} ${LANGUAGE}-${LANGUAGE}.spell.xml.gz
 	${MAKE} ${LANGUAGE}-${LANGUAGE}.misaligned.xml.gz
+	find ${LANGUAGE}-${LANGUAGE}/ -name '*.log.gz' > ${LANGUAGE}-${LANGUAGE}.files
+	tar -czf ${LANGUAGE}-${LANGUAGE}.log.tar.gz -T ${LANGUAGE}-${LANGUAGE}.files
+	rm -f ${LANGUAGE}-${LANGUAGE}.files
+	rm -fr ${LANGUAGE}-${LANGUAGE}
+
 
 ${LANGUAGE}-${LANGUAGE}.xml.gz: 
 	${MAKE} align-files

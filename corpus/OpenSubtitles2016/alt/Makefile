@@ -1,6 +1,7 @@
 # -*-makefile-*-
 #
 
+
 include ../../Makefile.def
 include ../Makefile.def
 
@@ -37,13 +38,13 @@ walltime = 24
 LANGUAGES = $(sort $(wildcard ??) $(wildcard ??_??))
 BIGLANG   = ar bg cs el en es fr he hr hu it nl pl pt pt_br ro ru sr tr
 MEDLANG   = ar bs da de et fi sv sk sl zh
-SMALLLANG = af bn br ca eo eu fa gl hi hy is id ja ka kk ko lt lv mk ml ms no si sq ta te th tl uk ur vi zh_en zh_zh zh_tw
+SMALLLANG = af bn br ca eo eu fa gl hi hy ic id ja ka kk ko lt lv mk ml ms no si sq ta te th tl uk ur vi zh_en zh_zh zh_tw
 
 
 LANGUAGE = af
 MEM=2G
 
-ALGFILES = $(addsuffix .all.xml.gz,\
+ALGFILES = $(addsuffix .xml.gz,\
 	   $(addprefix $(LANGUAGE)-,\
 	   $(shell find $(LANGUAGE)/ -maxdepth 2 -mindepth 2 -type d)))
 
@@ -53,16 +54,6 @@ all:
 	done
 	${MAKE} remove_empty remove_empty_align remove_empty_dir
 
-pack-log:
-	for l in ${LANGUAGES}; do \
-	  if [ ! -e $$l-$$l.log.tar.gz ]; then \
-	  echo "process $$l";\
-	  find $$l-$$l/ -name '*.log.gz' > $$l-$$l.files;\
-	  tar -czf $$l-$$l.log.tar.gz -T $$l-$$l.files; \
-	  rm -f $$l-$$l.files; \
-	  rm -fr $$l-$$l; \
-	  fi \
-	done
 
 submit-all:
 	for l in ${BIGLANG}; do \
@@ -137,7 +128,7 @@ submit:
 	    echo 'rm -f ${LANGUAGE}-${LANGUAGE}.running' >> $(LANGUAGE).sh; \
 	    echo 'rm -f ${LANGUAGE}-${LANGUAGE}.scheduled' >> $(LANGUAGE).sh; \
 	    touch ${LANGUAGE}-${LANGUAGE}.scheduled; \
-	    sbatch  -A nn9447k -c 1 --mem-per-cpu=${MEM} \
+	    sbatch  -A nn9106k -c 1 --mem-per-cpu=${MEM} \
 		-t ${walltime}:00:00 $(LANGUAGE).sh || \
 	    rm -f ${LANGUAGE}-${LANGUAGE}.scheduled; \
 	      fi \
@@ -252,16 +243,13 @@ ${LANGUAGE}-${LANGUAGE}.misaligned.xml.gz:
 align-files: ${ALGFILES}
 	-find ${LANGUAGE}-${LANGUAGE} -type d -empty -exec rmdir {} \;
 
-print-align-files:
-	echo ${ALGFILES}
-
 # sentence alignment for each movie
 
-${ALGFILES}: ${LANGUAGE}-${LANGUAGE}/%.all.xml.gz: ${LANGUAGE}/%
+${ALGFILES}: ${LANGUAGE}-${LANGUAGE}/%.xml.gz: ${LANGUAGE}/%
 	mkdir -p $(dir $@)
-	-${SENTALIGN} $< $(@:.all.xml.gz=) > ${@:.all.xml.gz=.log}
-	if [ ! -s $(@:.all.xml.gz=.log) ]; then \
-	  rm -f $(@:.all.xml.gz=.log); else gzip -f $(@:.all.xml.gz=.log); \
+	-${SENTALIGN} $< $(@:.xml.gz=) > ${@:.xml.gz=.log}
+	if [ ! -s $(@:.xml.gz=.log) ]; then \
+	  rm -f $(@:.xml.gz=.log); else gzip -f $(@:.xml.gz=.log); \
 	fi
 # 	if [ -s $(@:.gz=) ]; then gzip $(@:.gz=); else rm -f $(@:.gz=); fi
 
@@ -318,8 +306,8 @@ mo-other: $(MOOTHER)
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  P=$$S-$$T; \
-	  SEXT=$$S; TEXT=$$T; \
-	  if [ "$$SEXT" == "$$TEXT" ]; then SEXT=$${SEXT}1;TEXT=$${TEXT}2; fi; \
+	  SEXT="$$S"; TEXT="$$T"; \
+	  if [ "$$SEXT" = "$$TEXT" ]; then SEXT=$${SEXT}1;TEXT=$${TEXT}2; fi; \
 	  paste ${CORPUS}.$$P.$$SEXT ${CORPUS}.$$P.$$TEXT |\
 	  sed = - | sed 'N;s/\n/\t/' | sort -k 2 | uniq -f 1 | sort -n |\
 	  cut -f2,3 |\
@@ -328,10 +316,10 @@ mo-other: $(MOOTHER)
 	  rm -f ${CORPUS}.$$P.$$SEXT ${CORPUS}.$$P.$$TEXT ${CORPUS}.$$P.ids; )
 
 ${CORPUSHTML}/%.txt.zip: %.xml.gz
-	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
-	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	( S="$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))))";\
+	  T="$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))))";\
 	  P=$$S-$$T; \
-	  if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
+	  if [ "$$S" = "$$T" ]; then S="$${S}1";T="$${T}2"; fi; \
 	  $(OPUS2MOSES) -d ${CORPUSRAW} -s $$S -t $$T \
 		-P ${CORPUS}.$$P.ids \
 		$< ${CORPUS}.$$P; \
