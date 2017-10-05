@@ -163,12 +163,15 @@ ${OPUSHTML}/${CORPUS}.tar.gz: $(CES)
 
 
 ## copy sentence alignment files
+## NEW 2017-10-05: move and link instead of copy
+## (attention: relative path in link assumes some stable file structure in OPUS)
 
 alg_files: ${ALG}
 
 ${ALG}: ${CORPUSHTML}/%: ${CORPUSXML}/%
 	@mkdir -p ${dir $@}
-	cp $< $@
+	mv -f $< $@
+	( cd ${dir $<} && ln -s ${subst ${OPUSHOME},../../..,$@} ${notdir $<} )
 
 
 #----------------------------------------------------------------------------

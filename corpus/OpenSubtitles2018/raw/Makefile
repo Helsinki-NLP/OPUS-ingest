@@ -35,11 +35,19 @@ ${LANGUAGES}:
 	find $@ -name '*.xml' | xargs -P 8 gzip -f
 
 
-## zh_tw has different name on abel
+## zh_tw has different name on abel (zt)
+## zh_cn is just zh on abel
 
 zh_tw:
 	mkdir -p $@
 	rsync ${ABEL_USER}@${ABEL}:${ABEL_TARDIR}/zt-raw.tar.gz $@/$@-raw.tar.gz
+	tar -C $@ --skip-old-files -xvzf $@/$@-raw.tar.gz
+	rm -f $@/$@-raw.tar.gz
+	find $@ -name '*.xml' | xargs -P 8 gzip -f
+
+zh_cn:
+	mkdir -p $@
+	rsync ${ABEL_USER}@${ABEL}:${ABEL_TARDIR}/zh-raw.tar.gz $@/$@-raw.tar.gz
 	tar -C $@ --skip-old-files -xvzf $@/$@-raw.tar.gz
 	rm -f $@/$@-raw.tar.gz
 	find $@ -name '*.xml' | xargs -P 8 gzip -f

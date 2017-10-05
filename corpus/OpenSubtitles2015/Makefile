@@ -32,6 +32,11 @@ do-more:
 	make -C xml SRC=en NRJOBS=8 alltrg
 	make -C xml NRJOBS=8 all
 
+src.tar:
+	tar -cf $@ src/?? src/??_?? src/??_? \
+		src/wrong src/mistagged src/multiple src/unreliable src/*txt
+
+
 ## create symbolic links to OpenSubtitles2013 files
 ## -> this is necessary to find alignments also between
 ##    new files and old ones in the 2013 release
@@ -126,6 +131,8 @@ include ../Makefile.annotate
 include ../Makefile.parse
 include ../Makefile.cwb
 include ../Makefile.html
+include ../Makefile.submit
+
 
 # convert all files for all languages (subdirectories in src/)
 

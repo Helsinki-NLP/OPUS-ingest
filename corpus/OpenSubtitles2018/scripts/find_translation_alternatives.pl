@@ -8,8 +8,8 @@ use IO::File;
 use Getopt::Std;
 use File::Basename qw/dirname/;
 
-use vars qw($opt_a $opt_t $opt_b $opt_m $opt_B $opt_v $opt_M);
-getopts('a:t:b:B:mM:v');
+use vars qw($opt_T $opt_a $opt_t $opt_b $opt_m $opt_B $opt_v $opt_M);
+getopts('a:t:b:B:mM:vT:');
 
 binmode(STDOUT,":utf8");
 binmode(STDERR,":utf8");
@@ -27,8 +27,9 @@ binmode(STDERR,":utf8");
 
 my $MIN_ALG_SCORE = $opt_a || 1;
 my $MIN_TIME_OVERLAP = $opt_t || 0.5;
-my $MIN_BLEU = $opt_b || 0.5;
-my $LOW_BLEU = $opt_B || 0.8;
+my $BLEU_THR = $opt_T || 0.5;          # BLEU threshold for aligning
+my $MIN_BLEU = $opt_b || 0.2;          # BLEU threshold for skipping before synchronising
+my $LOW_BLEU = $opt_B || 0.8;          # BLEU threshold for when to try synchronising
 my $MAX_ALTERNATIVES = $opt_M || 20;
 
 my $srtdir  = shift(@ARGV) || 'en/2001/14818';
@@ -149,49 +150,52 @@ foreach my $s (0..$#subs){
 		$bleu = &compute_bleu(\@srcalg,\@trgalg);
 	    }
 
-	    if ($bleu > $MIN_BLEU){
+	    next if ($bleu < $MIN_BLEU);
 
-		print STDERR "bleu ( $subs[$s],$subs[$t] ) = $bleu\n";
+	    print STDERR "bleu ( $subs[$s],$subs[$t] ) = $bleu\n";
 
-		## if the BLEU score is quite low:
-		## check if we need to synchronize!
-		if ($bleu < $LOW_BLEU){
+	    ## if the BLEU score is quite low:
+	    ## check if we need to synchronize!
+	    if ($bleu < $LOW_BLEU){
 
-		    print STDERR "re-align with lexical time-syncing\n" if ($opt_v);
-		    my @alignments2=();
-		    my $score = &align("$srtdir/$subs[$s]",
-				       "$srtdir/$subs[$t]",
+		print STDERR "re-align with lexical time-syncing\n" if ($opt_v);
+		my @alignments2=();
+		my $score = &align("$srtdir/$subs[$s]",
+				   "$srtdir/$subs[$t]",
+				   \@alignments2,
+				   VERBOSE       => $opt_v,
+				   BEST_ALIGN    => $opt_m,
+				   USE_IDENTICAL => 1,
+				   TOK_LEN       => 5,
+				   MAX_MATCHES   => 10,
+				   # UPPER_CASE    => 1,
+				   WINDOW        => 20);
+
+		my @srcalg2 = ();
+		my @trgalg2 = ();
+
+		print STDERR "make TU's and compute new BLEU\n" if ($opt_v);
+		make_translation_units(\%srcsent,\%trgsent,
 				       \@alignments2,
-				       VERBOSE       => $opt_v,
-				       BEST_ALIGN    => $opt_m,
-				       USE_IDENTICAL => 1,
-				       TOK_LEN       => 5,
-				       MAX_MATCHES   => 10,
-				       # UPPER_CASE    => 1,
-				       WINDOW        => 20);
-
-		    my @srcalg2 = ();
-		    my @trgalg2 = ();
-
-		    print STDERR "make TU's and compute new BLEU\n" if ($opt_v);
-		    make_translation_units(\%srcsent,\%trgsent,
-					   \@alignments2,
-					   \@srcalg2,\@trgalg2);
-
-		    my $bleu2 = 0;
-		    if (@srcalg2 && @trgalg2){
-			$bleu2 = &compute_bleu(\@srcalg2,\@trgalg2);
-		    }
-		    # my $bleu2 = &compute_bleu(\@srcalg2,\@trgalg2);
-
-		    ## better BLEU score? --> use this alignment
-		    if ($bleu2 > $bleu){
-			print STDERR "bleu2( $subs[$s],$subs[$t] ) = $bleu2\n";
-			@alignments = @alignments2;
-			@srcalg = @srcalg2;
-			@trgalg = @trgalg2;
-		    }
+				       \@srcalg2,\@trgalg2);
+		
+		my $bleu2 = 0;
+		if (@srcalg2 && @trgalg2){
+		    $bleu2 = &compute_bleu(\@srcalg2,\@trgalg2);
 		}
+		# my $bleu2 = &compute_bleu(\@srcalg2,\@trgalg2);
+
+		## better BLEU score? --> use this alignment
+		if ($bleu2 > $bleu){
+		    print STDERR "bleu2( $subs[$s],$subs[$t] ) = $bleu2\n";
+		    @alignments = @alignments2;
+		    @srcalg = @srcalg2;
+		    @trgalg = @trgalg2;
+		    $bleu = $bleu2;
+		}
+	    }
+
+	    if ($bleu > $BLEU_THR){
 
 		## yet another check with the algignment:
 		## see if neighboring sentences are better matches.
