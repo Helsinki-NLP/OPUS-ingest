@@ -1,0 +1,19 @@
+
+How to restore installed packages on another computer:
+http://askubuntu.com/questions/17823/how-to-list-all-installed-packages
+
+
+-------------------------------
+Create a backup of what packages are currently installed:
+sudo dpkg --get-selections > installed-packages.txt
+
+Then (on another system) restore installations from that list:
+sudo dpkg --clear-selections
+sudo dpkg --set-selections < installed-packages.txt
+
+To get rid of stale packages
+sudo apt-get autoremove
+
+To get installed like at backup time
+sudo apt-get dselect-upgrade
+--------------------------------
