@@ -160,6 +160,8 @@ sync-from-abel:
 	  fi \
 	done
 	rsync -aLv ${ABEL_USER}@${ABEL}:${ABEL_WORKDIR}/xml/*.xml.gz .
+	mkdir -p ../alt
+	mv *alt.xml.gz ../alt/
 	mkdir -p ../log
 	rsync -aLv ${ABEL_USER}@${ABEL}:${ABEL_WORKDIR}/xml/align-* ../log/
 
@@ -354,13 +356,6 @@ submit-again:
 	  done \
 	done
 
-submit-ca-small:
-	for t in ${SMALLLANG}; do \
-	    make CORES=2 WALLTIME=8 SRC=xx TRG=xx XXSRC=ca XXTRG=$$t submit-xx; \
-	    make CORES=2 WALLTIME=8 SRC=xx TRG=xx XXSRC=$$t XXTRG=ca submit-xx; \
-	done
-
-
 
 ## submit jobs for all language pairs
 
@@ -374,16 +369,9 @@ submit-all:
 
 
 
-submit-all-simple:
-	for s in ${LANGUAGES}; do \
-	  for t in ${LANGUAGES}; do \
-		make SRC=xx TRG=xx XXSRC=$$s XXTRG=$$t submit-xx; \
-	  done \
-	done
-
 
 ## submit only language pairs with English
-## (set EN if you wnat to use a different target language)
+## (set EN if you want to use a different target language)
 EN = en
 
 submit-en:

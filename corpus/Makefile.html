@@ -319,6 +319,9 @@ tmx: ${CORPUSHTML} $(TMX)
 
 tmx-strict: ${CORPUSHTML} $(TMX_STRICT)
 
+
+
+
 # $(TMX): 
 
 %.tmx.gz: %.txt.zip
@@ -326,15 +329,15 @@ tmx-strict: ${CORPUSHTML} $(TMX_STRICT)
 	unzip $<
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
-	  P=$$S-$$T; \
+	  BASE=${CORPUS}.$(patsubst %.txt.zip,%,$(notdir $<));\
 	  SEXT=$$S; TEXT=$$T; \
 	  if [ "$$SEXT" == "$$TEXT" ]; then SEXT=$${SEXT}1;TEXT=$${TEXT}2; fi; \
-	  paste ${CORPUS}.$$P.$$SEXT ${CORPUS}.$$P.$$TEXT |\
+	  paste $$BASE.$$SEXT $$BASE.$$TEXT |\
 	  sed = - | sed 'N;s/\n/\t/' | sort -k 2 | uniq -f 1 | sort -n |\
 	  cut -f2,3 |\
 	  $(TAB2TMX) -s $$S -t $$T |\
 	  gzip -c > $@; \
-	  rm -f ${CORPUS}.$$P.$$SEXT ${CORPUS}.$$P.$$TEXT ${CORPUS}.$$P.ids; )
+	  rm -f $$BASE.$$SEXT $$BASE.$$TEXT $$BASE.ids; )
 	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
@@ -348,20 +351,20 @@ moses: ${CORPUSHTML} $(MOSES)
 
 $(MOSES): ${CORPUSHTML}/%.txt.zip: ${CORPUSXML}/%.xml.gz
 	@mkdir -p ${dir $@}
-	( S=$(firstword $(subst -, ,$(patsubst ${CORPUSXML}/%.xml.gz,%,$<))); \
-	  T=$(lastword $(subst -, ,$(patsubst ${CORPUSXML}/%.xml.gz,%,$<))); \
-	  P=$$S-$$T; \
+	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	  BASE=${CORPUS}.$(patsubst %.xml.gz,%,$(notdir $<));\
 	  if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
 	  $(OPUS2MOSES) -d ${CORPUSRAW} -s $$S -t $$T \
-		-P ${CORPUS}.$$P.ids \
-		$< ${CORPUS}.$$P; \
+		-P $$BASE.ids \
+		$< $$BASE; \
 	  rm -f $@; \
-	  sed 's/  */ /g' < ${CORPUS}.$$P.$$S > ${CORPUS}.$$P.$$S.tmp; \
-	  sed 's/  */ /g' < ${CORPUS}.$$P.$$T > ${CORPUS}.$$P.$$T.tmp; \
-	  mv ${CORPUS}.$$P.$$S.tmp ${CORPUS}.$$P.$$S; \
-	  mv ${CORPUS}.$$P.$$T.tmp ${CORPUS}.$$P.$$T; \
-	  zip $@ ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; \
-	  rm -f ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; )
+	  sed 's/  */ /g' < $$BASE.$$S > $$BASE.$$S.tmp; \
+	  sed 's/  */ /g' < $$BASE.$$T > $$BASE.$$T.tmp; \
+	  mv $$BASE.$$S.tmp $$BASE.$$S; \
+	  mv $$BASE.$$T.tmp $$BASE.$$T; \
+	  zip $@ $$BASE.$$S $$BASE.$$T $$BASE.ids; \
+	  rm -f $$BASE.$$S $$BASE.$$T $$BASE.ids; )
 	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
@@ -371,16 +374,16 @@ moses-strict: ${CORPUSHTML} $(MOSES_STRICT)
 $(MOSES_STRICT): ${CORPUSHTML}/%.strict.txt.zip: ${CORPUSXML}/%.xml.gz
 	@mkdir -p ${dir $@}
 	uplug-readalign -c 1 -S 1 -T 1 -l $< > $(<:gz=11)
-	( S=$(firstword $(subst -, ,$(patsubst ${CORPUSXML}/%.xml.gz,%,$<))); \
-	  T=$(lastword $(subst -, ,$(patsubst ${CORPUSXML}/%.xml.gz,%,$<))); \
-	  P=$$S-$$T; \
+	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	  BASE=${CORPUS}.$(patsubst %.xml.gz,%,$(notdir $<));\
 	  if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
 	  $(OPUS2MOSES) -d ${CORPUSRAW} -s $$S -t $$T \
-		-P ${CORPUS}.$$P.ids \
-		$(<:gz=11) ${CORPUS}.$$P; \
+		-P $$BASE.ids \
+		$(<:gz=11) $$BASE; \
 	  rm -f $@; \
-	  zip $@ ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; \
-	  rm -f ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; )
+	  zip $@ $$BASE.$$S $$BASE.$$T $$BASE.ids; \
+	  rm -f $$BASE.$$S $$BASE.$$T $$BASE.ids; )
 	rm -f $(<:gz=11)
 	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
@@ -423,8 +426,8 @@ txt_info: ${TXT_INFO}
 
 ${TXT_INFO}: ${CORPUSXML}/%.txt.info: ${CORPUSHTML}/%.txt.zip
 	-unzip -d . $<
-	(S=$(firstword $(subst -, ,$(patsubst ${CORPUSXML}/%.txt.info,%,$@)));\
-	 T=$(lastword $(subst -, ,$(patsubst ${CORPUSXML}/%.txt.info,%,$@)));\
+	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  P=$$S-$$T; \
 	  if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
 	  if [ ! -e ${CORPUS}.$$P.$$S ]; then \
@@ -442,8 +445,8 @@ ${TXT_INFO}: ${CORPUSXML}/%.txt.info: ${CORPUSHTML}/%.txt.zip
 tmx_info: ${TMX_INFO}
 
 ${TMX_INFO}: ${CORPUSXML}/%.tmx.info: ${CORPUSHTML}/%.tmx.gz
-	(S=$(firstword $(subst -, ,$(patsubst ${CORPUSXML}/%.tmx.info,%,$@)));\
-	 T=$(lastword $(subst -, ,$(patsubst ${CORPUSXML}/%.tmx.info,%,$@)));\
+	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	 zgrep '</tu>' $< | wc -l > $@; \
 	 zgrep "xml:lang=\"$$S\"" $< | \
 	  	sed 's|^.*<seg>||;s|</seg>.*$$||;' | \

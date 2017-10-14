@@ -65,6 +65,13 @@ submit-all-tmx: $(TMXSH)
 submit-all-info: $(INFOSH)
 submit-all-pack: $(LANGSH)
 
+submit-udparse:
+	${MAKE} HPC_TIME=72:00 HPC_CORES=16 MAKEARGS='LANGUAGE=${L}' udparse_files.submit
+	rm -f udparse_files.submit
+
+udparse-en:
+	${MAKE} L=en submit-udparse
+
 
 $(TMXSH):
 	if [ ! -e $(patsubst %.sh,%.tmx.gz,$@) ]; then \

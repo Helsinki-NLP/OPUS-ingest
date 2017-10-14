@@ -36,11 +36,11 @@ SUBMIT = submit-taito
 ## --> at least one file has to be a new one (src or trg)
 
 SENTALIGN  = ../scripts/find_translation_alternatives.pl -m
-walltime = 24
-MEM      = 8G
-HPC_CORES = 8
-HPC_TIME = ${walltime}
-HPC_MEM  = ${MEM}
+walltime   = 24
+MEM        = 8G
+HPC_CORES  = 8
+HPC_TIME   = ${walltime}:00
+HPC_MEM    = ${MEM}
 
 
 LANGUAGES = $(sort $(wildcard ??) $(wildcard ??_??))
@@ -77,7 +77,7 @@ pack-log:
 
 submit-all:
 	for l in ${BIGLANG}; do \
-		make walltime=96 LANGUAGE=$$l ${SUBMIT}; \
+		make walltime=72 LANGUAGE=$$l ${SUBMIT}; \
 	done
 	for l in ${MEDLANG}; do \
 		make walltime=48 LANGUAGE=$$l ${SUBMIT}; \
@@ -163,11 +163,13 @@ submit-abel:
 LOCALTMP = /tmp
 
 submit-taito:
-	-ln -s ../xml/${LANGUAGE} .
+	if [ ! -e "$(LANGUAGE)" ]; then \
+	  ln -s ../xml/${LANGUAGE} .; \
+	fi
 	if [ -e "$(LANGUAGE)" ]; then \
 	  if [ ! -e "$(LANGUAGE)-$(LANGUAGE).xml.gz" ]; then \
-	    if [ ! -e "$(LANGUAGE)-$(LANGUAGE).scheduled" ]; then \
-	      if [ ! -e "$(LANGUAGE)-$(LANGUAGE).running" ]; then \
+	    if [ ! -e "$(LANGUAGE).scheduled" ]; then \
+	      if [ ! -e "$(LANGUAGE).running" ]; then \
 	    	echo '#! /bin/bash' > $(LANGUAGE).sh; \
 		echo '#SBATCH -J "${LANGUAGE}-${LANGUAGE}"' >> $(LANGUAGE).sh; \
 		echo '#SBATCH -o ${LANGUAGE}-${LANGUAGE}.out.%j' >> $(LANGUAGE).sh; \

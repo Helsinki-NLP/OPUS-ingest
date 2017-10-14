@@ -53,8 +53,11 @@ include ../Makefile.parse
 include ../Makefile.cwb
 include ../Makefile.html
 include ../Makefile.submit
+include ../Makefile.udparse
 
 
+pack:
+	@echo '!!!!!!!! skip this for subtitles because it is too big !!!!!!!!!!'
 
 
 TMXSH=$(patsubst %.tmx.gz,%.sh,${TMX})
