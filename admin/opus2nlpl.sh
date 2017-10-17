@@ -16,7 +16,7 @@
 OPUSDIR=/proj/OPUS
 NLPLDIR=/proj/nlpl
 OPUSNLPL=$NLPLDIR/corpora/OPUS
-SUBDIR='admin annotated cwb cwb-ud data download img incoming public_html tools trac udwordalign wordalign wordalign-multi'
+SUBDIR='admin annotated cwb cwb-ud data download img incoming public_html tools trac wordalign wordalign-multi'
 
 cd $OPUSDIR
 echo -n $SUBDIR | parallel -d ' ' rsync --delete -ahv {} ${OPUSNLPL}/
@@ -25,8 +25,8 @@ mkdir -p ${OPUSNLPL}/corpus
 
 ## new: sync files and subdirs from corpus but not symbolic links!
 
-find . -maxdepth 1 -type f -not -name '.*' | parallel rsync --delete -ahv {} ${OPUSNLPL}/corpus/
-find . -maxdepth 1 -type d -not -name '.*' | parallel rsync --delete -ahv {} ${OPUSNLPL}/corpus/
+find . -maxdepth 1 -type f -not -name '.*' | sort | parallel rsync --delete -ahv {} ${OPUSNLPL}/corpus/
+find . -maxdepth 1 -type d -not -name '.*' | sort | parallel rsync --delete -ahv {} ${OPUSNLPL}/corpus/
 
 ## old: would also include symbolic links
 #

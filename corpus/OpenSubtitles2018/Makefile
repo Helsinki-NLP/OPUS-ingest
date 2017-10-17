@@ -49,11 +49,11 @@ submit-convert:
 # include som standard OPUS variables/targets
 
 include ../Makefile.annotate
-include ../Makefile.parse
 include ../Makefile.cwb
 include ../Makefile.html
 include ../Makefile.submit
 include ../Makefile.udparse
+# include ../Makefile.parse
 
 
 pack:
