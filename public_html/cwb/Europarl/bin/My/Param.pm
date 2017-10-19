@@ -156,8 +156,8 @@ sub Matching {
 			    },
 	      "casefold" => {			# case-folding (for simple search and word lists)
 			     type => "code",
-			     values => ["", "c", "cd"],
-			     desc => ["literal", "case-folded", "case + diac."],
+			     values => ["", "c"],
+			     desc => ["literal", "case-folded"],
 			     default => "",
 			    },
 	      "wordlemma" => {			# search on word forms or lemmata? (simple search)
