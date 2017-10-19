@@ -89,6 +89,7 @@ ALGEXT = xml.gz
 
 TOOLS      = ${OPUSHOME}/tools
 OPUSTOOLS  = ${TOOLS}/opus
+OPUS-TOOLS = ${TOOLS}/public/opus-tools
 CORPUSTOOLS= ${OPUSTOOLS}/${CORPUS}
 
 ISO639     = $(TOOLS)/opus/iso639.pl

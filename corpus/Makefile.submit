@@ -24,7 +24,7 @@ HPC_TIME    = 12:00
 HPC_NODES   = 1
 HPC_CORES   = 1
 HPC_QUEUE   = serial
-HPC_MODULES = nlpl-opus
+HPC_MODULES = nlpl-opus python-env/3.4.1
 HPC_EXTRA   = 
 
 
@@ -52,6 +52,6 @@ endif
 	echo 'cd $${SLURM_SUBMIT_DIR:-.}' >> $@
 	echo 'pwd' >> $@
 	echo 'echo "Starting at `date`"' >> $@
-	echo '${MAKE} -j ${HPC_CORES} ${@:.submit=}' >> $@
+	echo '${MAKE} -j ${HPC_CORES} ${MAKEARGS} ${@:.submit=}' >> $@
 	echo 'echo "Finishing at `date`"' >> $@
 	sbatch $@

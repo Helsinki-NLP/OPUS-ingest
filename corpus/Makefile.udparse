@@ -30,15 +30,51 @@ endif
 RAWDIR   = ${CORPUSRAW}/${LANGUAGE}
 XMLFILES = $(subst :,\:,$(patsubst ${CORPUSRAW}/%,${CORPUSPARSED}/%,$(shell find ${RAWDIR}/ -name '*.${XMLEXT}')))
 
+
+.PHONY: udparse
 udparse:
 	for l in ${UDLANGUAGES}; do \
 	  if [ -d ${CORPUSRAW}/$$l ]; then \
 		${MAKE} LANGUAGE=$$l udparse_files; \
 	  fi; \
 	done
+	${MAKE} link-sentalign-files-to-parsed
 
+.PHONY: submit-all-udparse
+submit-all-udparse:
+	for l in ${UDLANGUAGES}; do \
+	  if [ -d ${CORPUSRAW}/$$l ]; then \
+		${MAKE} L=$$l submit-udparse; \
+	  fi; \
+	done
+
+.PHONY: submit-udparse
+submit-udparse:
+	${MAKE} HPC_TIME=72:00 HPC_CORES=16 MAKEARGS='LANGUAGE=${L}' udparse_files.submit
+	rm -f udparse_files.submit
+
+.PHONY: link-udparsed
+link-udparsed:
+	${MAKE} link-sentalign-files-to-parsed
+
+
+.PHONY: udparse_files
 udparse_files: ${XMLFILES}
 
 ${CORPUSPARSED}/${LANGUAGE}/%: ${CORPUSRAW}/${LANGUAGE}/%
 	mkdir -p $(shell dirname $@)
 	zcat "$<" | ${UDPARSE} -l ${LANGUAGE} | gzip -c > "$@"
+
+
+LANGPAIRS = $(patsubst $(CORPUSXML)/%.xml.gz,%,\
+			$(wildcard $(CORPUSXML)/*-*.xml.gz))
+
+PHONY: link-sentalign-files-to-parsed
+link-sentalign-files-to-parsed:
+	for l in ${LANGPAIRS}; do \
+	  if [ -d ${CORPUSPARSED}/`echo -n "$$l" | sed 's/^.*-//'` ]; then \
+	    if [ -d ${CORPUSPARSED}/`echo -n "$$l" | sed 's/-.*$$//'` ]; then \
+		ln -s ../xml/$$l.xml.gz ${CORPUSPARSED}/; \
+	    fi \
+	  fi \
+	done

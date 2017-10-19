@@ -46,9 +46,9 @@ submit-convert:
 # include som standard OPUS variables/targets
 
 include ../Makefile.annotate
-include ../Makefile.parse
 include ../Makefile.cwb
 include ../Makefile.html
+# include ../Makefile.parse
 include ../Makefile.udparse
 
 
@@ -64,6 +64,13 @@ LANGSH = $(patsubst %,%.sh,${LANGUAGES})
 submit-all-tmx: $(TMXSH)
 submit-all-info: $(INFOSH)
 submit-all-pack: $(LANGSH)
+
+submit-udparse:
+	${MAKE} HPC_TIME=72:00 HPC_CORES=16 MAKEARGS='LANGUAGE=${L}' udparse_files.submit
+	rm -f udparse_files.submit
+
+udparse-en:
+	${MAKE} L=en submit-udparse
 
 
 $(TMXSH):

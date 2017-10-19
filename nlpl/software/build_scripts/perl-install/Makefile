@@ -12,7 +12,7 @@ PACKAGE = perl-install
 
 ## Perl installation modules
 
-CPAN = http://search.cpan.org/CPAN/authors/id
+CPANURL = http://search.cpan.org/CPAN/authors/id
 
 MODULES = 	version \
 		Module::Metadata \
@@ -58,9 +58,9 @@ install-with-cpan:
 	@for m in ${MODULES}; do \
 	  echo "test module $$m"; \
 	  if [ "$$m" == "Module::Install" ]; then \
-	    perl -e "use inc::$$m;" || cpan $$m; \
+	    perl -e "use inc::$$m;" || ${CPAN} $$m; \
 	  else \
-	    perl -e "use $$m;" || cpan $$m; \
+	    perl -e "use $$m;" || ${CPAN} $$m; \
 	  fi; \
 	done
 
@@ -68,13 +68,13 @@ install-with-cpan:
 force-install-with-cpan:
 	@for m in ${FORCEMODULES}; do \
 	  echo "test module $$m"; \
-	  perl -e "use $$m;" || cpan -fi $$m; \
+	  perl -e "use $$m;" || ${CPAN} -fi $$m; \
 	done
 
 .PHONY: install-from-source
 install-from-source:
 	@for m in ${CPANMODULES}; do \
-	  wget ${CPAN}/$$m.tar.gz; \
+	  wget ${CPANURL}/$$m.tar.gz; \
 	  tar -xzf `basename $$m | tr "\n" '.'`tar.gz; \
 	  cd `basename $$m` && perl Makefile.PL PREFIX=${NLPL_SOFTWARE};cd ..; \
 	  cd `basename $$m` && ${MAKE} all install;cd ..; \

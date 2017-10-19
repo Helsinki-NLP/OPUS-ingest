@@ -14,19 +14,33 @@ module purge
 # make everything writeable for nlpl-members
 umask u=rwx,g=rx,o=rx
 
+# NLPL_ABEL=/projects/nlpl
+NLPL_ABEL=/usit/abel/u1/joerg/nlpl
+ME=$(whoami)
+
 if [ `hostname --domain` == "csc.fi" ]; then
     export NLPL_HOME=/proj/nlpl
+    export PERL5LIB=$NLPL_HOME/software/share/perl5:$NLPL_HOME/software/lib64/perl5:$NLPL_HOME/software/lib/perl5
     module load StdEnv
 else
-    export NLPL_HOME=/projects/nlpl
+    export NLPL_HOME=$NLPL_ABEL
+    export PERL5LIB=$NLPL_HOME/software/share/perl5:$NLPL_HOME/software/lib64/perl5:$NLPL_HOME/software/lib/perl5
+    module load gcc/4.9.1
+    module load perlmodules
+    eval $(perl -Mlocal::lib=$NLPL_HOME/software)
+    export PERL_CPANM_HOME=/tmp/cpanm_$USER
+    export PERL_MB_OPT="--prefix $NLPL_HOME/software"
+    export PERL_MM_OPT="PREFIX=$NLPL_HOME/software"
 fi
 
 # basic environment paths
-export MANPATH=/usr/local/share/man:/usr/share/man/overrides:/usr/share/man:/usr/man
-export PERL5LIB=$NLPL_HOME/software/share/perl5:$NLPL_HOME/software/lib64/perl5
-export LD_LIBRARY_PATH=
+
+export PATH=$(echo ${PATH} | sed "s/:[^:]*${ME}[^:]*//g")
+export MANPATH=$(echo ${MANPATH} | sed "s/:[^:]*${ME}[^:]*//g")
+export LD_LIBRARY_PATH=$(echo ${LD_LIBRARY_PATH} | sed "s/:[^:]*${ME}[^:]*//g")
+export LD_INCLUDE_PATH=$(echo ${LD_INCLUDE_PATH} | sed "s/:[^:]*${ME}[^:]*//g")
+export LD_RUN_PATH=$(echo ${LD_RUN_PATH} | sed "s/:[^:]*${ME}[^:]*//g")
 export USERAPPL=
-export PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/appl/bin
 export BOOST_ROOT=
 
 # make software home the home directory

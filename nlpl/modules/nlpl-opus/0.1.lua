@@ -5,6 +5,12 @@ whatis("Version: 0.1")
 whatis("URL: https://bitbucket.org/hy-crossNLP/nlpl-opus")
 whatis("Description: Tools for OPUS")
 
+
+-- getting host information to make different settings:
+-- local hostname = GetConVarString("hostname");
+-- local address = GetConVarString("ip");
+
+
 -- load other relevant modules
 
 load("StdEnv")

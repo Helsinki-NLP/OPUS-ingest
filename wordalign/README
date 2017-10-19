@@ -1,0 +1,9 @@
+
+word alignments and SMT phrase-tables
+-------------------------------------
+
+
+- old version using mainly GIZA++ and standard Moses pipeline
+- new version of word alignments are stored in download dir
+  (word alignment using efmaral)
+

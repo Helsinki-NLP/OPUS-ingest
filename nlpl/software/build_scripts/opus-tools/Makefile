@@ -40,7 +40,7 @@ ${PACKAGE_SOURCE}:
 
 ${PACKAGE_HOME}/bin/opus-read: ${PACKAGE_SOURCE}
 	@perl -e 'use inc::Module::Install;' || ${MAKE} -C ../perl-install all
-	@perl -e 'use XML::Parser;' || cpan XML::Parser
+	@perl -e 'use XML::Parser;' || ${CPAN} XML::Parser
 	${MKDIR} ${PACKAGE_HOME}
 	cd $< && perl Makefile.PL PREFIX=${PACKAGE_HOME}
 	make -C $< install clean

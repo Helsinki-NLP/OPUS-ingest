@@ -1,0 +1,134 @@
+OPUS - an open source parallel corpus
+
+
+OPUS is an attempt to collect translated texts from the web, to
+convert and align the entire collection, to add linguistic data, and
+to provide the community with a publicly available parallel
+corpus. OPUS is based on open source products and is also delivered as
+an open source package. We used several tools to compile the
+current corpus. Manual corrections have not been made at all.
+Contributions are welcome!
+
+OPUS so far includes about 6,000,000 words in two collections:
+OpenOffice.org documentation (OO) and PHP manuals (PHP).
+
+
+
+home page:  http://folk.uio.no/larsnyg/opus/
+
+download:    OO -     http://stp.ling.uu.se/opus/OPUSv0.1/OO.tar.gz
+	    PHP -     http://stp.ling.uu.se/opus/OPUSv0.1/PHP.tar.gz
+browse:	     OO -     http://stp.ling.uu.se/opus/oo.html
+		      http://stp.ling.uu.se/opus/search.html
+	    PHP -     http://stp.ling.uu.se/opus/php.html
+
+
+
+		      ---------------------------
+		      Jörg Tiedemann (http://stp.ling.uu.se/~joerg/)
+		      Lars Nygaard  (http://folk.uio.no/larsnyg/)
+
+
+OO - the OpenOffice.org corpus
+
+The original documentation of the office package OpenOffice.org
+(http://www.openoffice.org/) contains 2014 English documents which
+have been partly translated into 5 languages: French, Spanish,
+Swedish, German, and Japanese. The original documentation in English
+comprises about 500,000 words and translations contain between 400,000
+and 500,000 words per language. All documents have been tokenized and,
+except of the Spanish part, tagged with parts of speech. The English
+part of the corpus has been marked with syntactic chunks as well.
+
+PHP - the PHP manual corpus
+
+PHP manuals and translations have been downloaded from
+(http://www.php.net/download-docs.php). The original documents are
+written in English and have been partly translated into 21
+languages. The original manuals contain about 500,000 words.
+The amount of actually translated texts varies for different languages
+between 50,000 and 380,000 words. The corpus is rather noisy and may
+include parts from the English original in some of the
+translations. The corpus is tokenized and each language pair has been 
+sentence aligned.
+
+
+=======================================================================
+
+The following tools have been used (not including standard GNU-tools):
+
+* Uplug - tokenizer, sentence-splitter, XML-tools
+  http://stp.ling.uu.se/plug/
+
+* align - sentence aligner (based on Gale&Church, 1993)
+
+* OpenNLP & Grok
+  http://grok.sourceforge.net/
+  Jason Baldridge and Gann Bierner
+
+        tool     language    trained on     tained by
+        tagger   English     WSJ+Brown      Gann Bierner
+        chunker  English     Penn Tree Bank Jörg Tiedemann
+
+* TnT - Statistical Part-of-Speech Tagging
+  http://www.coli.uni-sb.de/~thorsten/tnt/
+  Thorsten Brants
+
+       tool     language    trained on     trained by
+        -------------------------------------------------------
+        tagger   German      NEGRA          Thorsten Brants
+                 English     WSJ            Thorsten Brants
+                 Swedish     SUC            Beáta Megyesi 
+					    (http://www.speech.kth.se/~bea/)
+
+* TreeTagger - Decision Tree Tagger
+  http://www.ims.uni-stuttgart.de/projekte/corplex/TreeTagger/
+  Helmut Schmid
+
+        tool            language    trained on      trained by
+        -------------------------------------------------------------
+        tagger &        German      NEGRA           Helmut Schmid
+        tokenizer &     English     WSJ             Helmut Schmid
+        lemmatizer      French                      Achim Stein
+                        Italian                     Achim Stein
+
+* ChaSen - japanese tokenizer + tagger
+  http://chasen.aist-nara.ac.jp/
+
+      tokenizer
+      POS-tagger
+      lemmatizer
+      sentence splitter
+
+* recode - convert between various character encodings
+  (http://www.iro.umontreal.ca/contrib/recode/HTML/)
+
+* tidy - validate, correct, and pretty-print XML-files
+  (http://www.w3.org/People/Raggett/tidy/)
+
+
+
+=============================================================================
+Open      sentence
+Office    splitter  tokenizer   tagger (attr)   lemmatizer     chunker (tag)
+----------------------------------------------------------------------------
+english   Uplug     TreeTag     TreeTag (tree)  TreeTag (lem)  Grok  (chunk)
+                                TnT     (tnt)
+                                Grok    (grok)
+french    Uplug     TreeTag     TreeTag (tree)  TreeTag (lem)  -
+spanish   Uplug     Uplug       -               -              -
+swedish   Uplug     Uplug       TnT     (tnt)   -              -
+german    Uplug     TreeTag     TreeTag (tree)  TreeTag (lem)  -
+                                TnT     (tnt)
+japanese  -         ChaSen      ChaSen  (pos)   ChaSen (base)  -
+=============================================================================
+PHP       sentence
+          splitter  tokenizer
+-----------------------------------------------------------------------------
+all 
+languages
+(except
+ Japanese  Uplug    Uplug
+ Chinese
+ Korean)
+=============================================================================
