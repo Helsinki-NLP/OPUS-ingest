@@ -252,13 +252,8 @@ ${SRC}-${TRG}/model/phrase-table.gz: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
 
 ${SRC}-${TRG}/c.true.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	mkdir -p ${dir $@}
-	$(OPUS2MOSES) -d ${CORPUSXML} -s ${SRCEXT} -t ${TRGEXT} \
-		-p ${SRC}-${TRG}/ids.txt \
-		$< ${SRC}-${TRG}/c
-	${SCRIPTS_ROOTDIR}/training/clean-corpus-n.perl \
-		${SRC}-${TRG}/c ${SRCEXT} ${TRGEXT} \
-		${SRC}-${TRG}/c.clean ${MIN} ${MAX} \
-		${SRC}-${TRG}/line_numbers.txt
+	${MAKE} ${SRC}-${TRG}/c.${SRCEXT}
+	${MAKE} ${SRC}-${TRG}/c.clean.${SRCEXT}
 	${OPUSTOOLS}/wordalign/retained-sentences.pl \
 		${SRC}-${TRG}/ids.txt \
 		${SRC}-${TRG}/line_numbers.txt |\
@@ -283,13 +278,8 @@ ${SRC}-${TRG}/c.true.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 
 ${SRC}-${TRG}/c.clean.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	mkdir -p ${dir $@}
-	$(OPUS2MOSES) -d ${CORPUSXML} -s ${SRCEXT} -t ${TRGEXT} \
-		-p ${SRC}-${TRG}/ids.txt \
-		$< ${SRC}-${TRG}/c
-	${SCRIPTS_ROOTDIR}/training/clean-corpus-n.perl \
-		${SRC}-${TRG}/c ${SRCEXT} ${TRGEXT} \
-		${SRC}-${TRG}/c.clean ${MIN} ${MAX} \
-		${SRC}-${TRG}/line_numbers.txt
+	${MAKE} ${SRC}-${TRG}/c.${SRCEXT}
+	${MAKE} ${SRC}-${TRG}/c.clean.${SRCEXT}
 	${OPUSTOOLS}/wordalign/retained-sentences.pl \
 		${SRC}-${TRG}/ids.txt \
 		${SRC}-${TRG}/line_numbers.txt |\
@@ -297,8 +287,6 @@ ${SRC}-${TRG}/c.clean.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	rm -f ${SRC}-${TRG}/ids.txt ${SRC}-${TRG}/line_numbers.txt
 	rm -f ${SRC}-${TRG}/c.${SRCEXT} ${SRC}-${TRG}/c.${TRGEXT}
 	gzip -f ${SRC}-${TRG}/c.clean.${SRCEXT} ${SRC}-${TRG}/c.clean.${TRGEXT}
-
-
 
 # without truecasing nor cleaning
 
@@ -310,6 +298,25 @@ ${SRC}-${TRG}/c.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	gzip -f ${SRC}-${TRG}/c.${SRCEXT}
 	gzip -f ${SRC}-${TRG}/c.${TRGEXT}
 	gzip -f ${SRC}-${TRG}/ids
+
+
+
+
+# intermediate files for cleanup/truecasing (will be deleted later)
+
+${SRC}-${TRG}/c.${SRCEXT}: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
+	mkdir -p ${dir $@}
+	$(OPUS2MOSES) -d ${CORPUSXML} -s ${SRCEXT} -t ${TRGEXT} \
+		-p $@ $< ${SRC}-${TRG}/c
+
+${SRC}-${TRG}/c.clean.${SRCEXT}: ${SRC}-${TRG}/c.${SRCEXT}
+	${SCRIPTS_ROOTDIR}/training/clean-corpus-n.perl \
+		${SRC}-${TRG}/c ${SRCEXT} ${TRGEXT} \
+		${SRC}-${TRG}/c.clean ${MIN} ${MAX} \
+		${SRC}-${TRG}/line_numbers.txt
+
+
+
 
 
 # ## directly from download directory

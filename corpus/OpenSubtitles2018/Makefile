@@ -17,6 +17,18 @@ all: ${UNRELIABLE}
 	${MAKE} cwb-index
 	rm -fr data
 
+## index with ALL sentence alignments (also alternative ones
+## NOTE: this is probably not going to work for CWB as documents are 
+##       aligned to several other documents in the same language
+
+cwb-all-index:
+	${MAKE} -C xml complete-align-files
+	${MAKE} ALGEXT=all.xml.gz cwb-index
+
+cwb-all-index-ud:
+	${MAKE} -C xml complete-align-files
+	${MAKE} ALGEXT=all.xml.gz cwb-index-ud
+
 
 move: ${UNRELIABLE}
 
