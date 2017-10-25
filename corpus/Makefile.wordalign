@@ -62,6 +62,17 @@ ALIGN_TIME = ${shell \
 	else \
 	  echo "4"; \
 	fi }
+EXTRACT_MEM = ${shell \
+	if [ ${CORPUS_SIZE} -gt 100000000 ]; then \
+	  echo "32g"; \
+	elif [ ${CORPUS_SIZE} -gt 5000000 ]; then \
+	  echo "16g"; \
+	elif [ ${CORPUS_SIZE} -gt 1000000 ]; then \
+	  echo "8g"; \
+	else \
+	  echo "4g"; \
+	fi }
+
 
 # max_phr_length ... for phrase tabel extraction
 # alignment ........ default alignment symmetrization heuristics
@@ -163,6 +174,7 @@ submit-wordalign:
 	elif [ ! -e ${LANGPAIR}/.wordalign ]; then \
 	  rm -f ${LANGPAIR}.submit; \
 	  ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
+		  HPC_MEM=${EXTRACT_MEM} \
 		  HPC_CORES=4 \
 		  EMAIL= \
 		  MAKEARGS="ACTION=wordalign" \
@@ -393,9 +405,12 @@ ${SRC}-${TRG}/phrases-alpha.gz: ${SRC}-${TRG}/model/phrase-table.gz
 
 cleanup:
 	rm -f ${SRC}-${TRG}/model/extract*
-	rm -f ${SRC}-${TRG}/model/tmp.*
+	rm -fr ${SRC}-${TRG}/model/tmp.*
 	rm -fr ${SRC}-${TRG}/corpus
 	rm -fr ${SRC}-${TRG}/giza.*
+	rm -fr ${SRC}-${TRG}/model.src.*
+	rm -fr ${SRC}-${TRG}/model.trg.*
+	rm -fr ${SRC}-${TRG}/model/*.gz.*
 
 tmp: 
 	mkdir -p ${CORPUSWORDALIGN}/tmp
