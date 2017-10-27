@@ -129,7 +129,7 @@
 
         <ul>
           <li><a href="trac/wiki">OPUS Wiki</a></li>
-
+	  <li><a href="https://github.com/yonkornilov/opus-api">OPUS API</a> by Yonathan Koren</li>
           <li><a href="trac/wiki/Tagging%20and%20Parsing">Tools for tagging and parsing</a></li>
 
           <li><a href="trac/wiki/Tagging%20and%20Parsing"></a><a href="trac/wiki/Tagging%20and%20Parsing"></a><a href="trac/wiki/DownloadTools">Downloads (tools and models)</a></li>
@@ -311,12 +311,21 @@
 
             <dd>Parallel Data, Tools and Interfaces in OPUS. <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf">[pdf]</a><br>
             In <cite>Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC'2012)</cite></dd>
+
+	    <dt>J&ouml;rg Tiedemann, 2016a</dt>
+	    <dd><a href="http://www.bjmc.lu.lv/fileadmin/user_upload/lu_portal/projekti/bjmc/Contents/4_2_28_Products.pdf">OPUS - Parallel Corpora for Everyone.</a> In <cite>Baltic Journal of Modern Computing</cite> (BJMC), Vol 4, No. 2, Special Issue: Proceedings of the 19th Annual Conference of the European Association of Machine Translation (EAMT), 2016</dd>
+
+	    <dt>J&ouml;rg Tiedemann, 2016b</dt>
+	    <dd><a href="http://www.lrec-conf.org/proceedings/lrec2016/pdf/62_Paper.pdf">Finding Alternative Translations in a Large Corpus of Movie Subtitles.</a> In <cite>Proceedings of the 10th International Conference on Language Resources and Evaluation</cite> (LREC-2016), 2016.</dd>
+
+	    <dt>Pierre Lison and J&ouml;rg Tiedemann, 2016</dt>
+	    <dd><a href="http://www.lrec-conf.org/proceedings/lrec2016/pdf/947_Paper.pdf">OpenSubtitles2016: Extracting Large Parallel Corpora from Movie and TV Subtitles.</a> In <cite>Proceedings of the 10th International Conference on Language Resources and Evaluation</cite> (LREC-2016), 2016.</dd>
+
 	    <dt>Raivis Skadi&ncedil;&#X0161;, J&ouml;rg Tiedemann, Roberts Rozis and Daiga Deksne, 2014</dt> 
 	    <dd>Billions of Parallel Words for Free [<a href="eubookshop-lrec2014.txt">bib</a>] [<a href="eubookshop-lrec2014.pdf">pdf</a>]</br> 
             In <cite>Proceedings of the 9th International Conference on Language Resources and Evaluation (LREC'2014)</cite>, Reykjavik, Iceland</dd>
 
             <dt>J&ouml;rg Tiedemann, 2009,</dt>
-
             <dd>News from OPUS - A Collection of Multilingual Parallel Corpora with Tools and Interfaces <a href="http://stp.lingfil.uu.se/~joerg/published/ranlp-V.pdf">[pdf]</a><br>
             In N. Nicolov and K. Bontcheva and G. Angelova and R. Mitkov (eds.) <cite>Recent Advances in Natural Language Processing</cite> (vol V), pages 237-248, John Benjamins, Amsterdam/Philadelphia</dd>
 
