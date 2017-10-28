@@ -16,6 +16,7 @@ GITURL = https://bitbucket.org/tiedemann/uplug.git
 
 PERLMODULES =	Class::Inspector \
 		File::ShareDir \
+		HTML::Entities \
 		IPC::Run \
 		XML::Parser \
 		XML::Simple \

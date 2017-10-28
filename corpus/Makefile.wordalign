@@ -281,11 +281,13 @@ all-raw-monolingual: ${LMRAWTEXT}
 .PHONY: clean
 clean:
 	rm -f ${TRUECASER}
-	rm -fr ${LANGPAIR}/model/*.gz.*
-	rm -f ${LANGPAIR}/model/lex.e2f ${LANGPAIR}/model/lex.f2e
-	rm -f ${LANGPAIR}/model/aligned.grow-diag-final-and
-	rm -fr ${LANGPAIR}/model.src.*
-	rm -fr ${LANGPAIR}/model.trg.*
+	for l in ${LANGPAIRS}; do \
+	  rm -fr $$l/model/*.gz.*; \
+	  rm -f $$l/model/lex.e2f $$l/model/lex.f2e; \
+	  rm -f $$l/model/aligned.grow-diag-final-and; \
+	  rm -fr $$l/model.src.*; \
+	  rm -fr $$l/model.trg.*; \
+	done
 
 
 .PHONY: alignments
