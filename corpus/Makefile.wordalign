@@ -64,6 +64,8 @@ ALIGN_TIME = ${shell \
 	fi }
 EXTRACT_MEM = ${shell \
 	if [ ${CORPUS_SIZE} -gt 100000000 ]; then \
+	  echo "64g"; \
+	elif [ ${CORPUS_SIZE} -gt 10000000 ]; then \
 	  echo "32g"; \
 	elif [ ${CORPUS_SIZE} -gt 5000000 ]; then \
 	  echo "16g"; \
@@ -113,11 +115,17 @@ LMRAWTEXT = $(patsubst %,${CORPUSWORDALIGN}/lm/${CORPUS}.raw.%.gz, ${LANGUAGES})
 all-wordalign: ${LANGPAIRS} clean
 # all-wordalign: ${TRUECASER} ${LANGPAIRS} clean
 
+.PHONY: all-cleanup
+all-cleanup:
+	for l in ${LANGPAIRS}; do \
+	  ${MAKE} LANGPAIR=$$l cleanup; \
+	done
 
 ## submit batch jobs of various kinds
 ## - do prepare first
 ## - align requires more memory! (second step after prepare is done)
-## - tm creates the phrase tables and requires less memory!
+## - pt creates the phrase tables and requires less memory!
+## - filter runs only on one thread
 
 .PHONY: submit-all-prepare 
 submit-all-prepare:
@@ -127,9 +135,14 @@ submit-all-prepare:
 submit-all-align:
 	${MAKE} ACTION=wordalign-align submit-all
 
-.PHONY: submit-all-tm
-submit-all-tm:
-	${MAKE} ACTION=wordalign submit-all
+.PHONY: submit-all-pt
+submit-all-pt:
+	${MAKE} ACTION=wordalign-pt submit-all
+
+.PHONY: submit-all-filter
+submit-all-filter:
+	${MAKE} ACTION=wordalign-filter submit-all
+
 
 .PHONY: submit-all
 submit-all:
@@ -145,6 +158,7 @@ submit-wordalign-prepare:
 	  rm -f ${LANGPAIR}.submit; \
 	  ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
 		  HPC_MEM=4g \
+		  HPC_CORES=1 \
 		  EMAIL= \
 		  MAKEARGS="ACTION=wordalign-prepare" \
 	  ${LANGPAIR}.submit;\
@@ -165,22 +179,51 @@ submit-wordalign-align:
 	  ${LANGPAIR}.submit;\
 	fi
 
-# batch job for creating filtered phrase-tables
+# batch job for creating phrase-tables
 # (assume that word alignment is done already!)
-.PHONY: submit-wordalign
-submit-wordalign:
+.PHONY: submit-wordalign-pt
+submit-wordalign-pt:
 	if [ ! -e ${LANGPAIR}/.wordalign-align ]; then \
 	  echo "run alignment for ${LANGPAIR} first!"; \
-	elif [ ! -e ${LANGPAIR}/.wordalign ]; then \
+	elif [ ! -e ${LANGPAIR}/.wordalign-pt ]; then \
+	  if [ ! -e ${LANGPAIR}/.wordalign ]; then \
+	    rm -f ${LANGPAIR}.submit; \
+	    ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
+		    HPC_MEM=${EXTRACT_MEM} \
+		    HPC_CORES=4 \
+		    EMAIL= \
+		    MAKEARGS="ACTION=wordalign-pt" \
+	    ${LANGPAIR}.submit;\
+	  fi; \
+	fi
+
+# batch job for filtering phrase-tables
+# (assume that phrase extraction is done already!)
+.PHONY: submit-wordalign-filter
+submit-wordalign-filter:
+	if [ ! -e ${LANGPAIR}/.wordalign-pt ]; then \
+	  echo "run phrase extraction for ${LANGPAIR} first!"; \
+	elif [ ! -e ${LANGPAIR}/.wordalign-filter ]; then \
+	  if [ ! -e ${LANGPAIR}/.wordalign ]; then \
+	    rm -f ${LANGPAIR}.submit; \
+	    ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
+		    HPC_MEM=${EXTRACT_MEM} \
+		    HPC_CORES=1 \
+		    EMAIL= \
+		    MAKEARGS="ACTION=wordalign-filter" \
+	    ${LANGPAIR}.submit;\
+	  fi;\
+	fi
+
+# batch job for word alignment
+.PHONY: submit-wordalign
+submit-wordalign:
+	if [ ! -e ${LANGPAIR}/.wordalign ]; then \
 	  rm -f ${LANGPAIR}.submit; \
-	  ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
-		  HPC_MEM=${EXTRACT_MEM} \
-		  HPC_CORES=4 \
-		  EMAIL= \
+	  ${MAKE} EMAIL= \
 		  MAKEARGS="ACTION=wordalign" \
 	  ${LANGPAIR}.submit;\
 	fi
-
 
 
 
@@ -211,6 +254,13 @@ wordalign-prepare: ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
 .PHONY: wordalign-align
 wordalign-align: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
 
+.PHONY: wordalign-pt
+wordalign-pt: ${SRC}-${TRG}/model/phrase-table.gz
+
+.PHONY: wordalign-filter
+wordalign-filter: ${SRC}-${TRG}/model/phrase-table-filtered.gz
+	rm -f ${SRC}-${TRG}/model/phrase-table.gz
+
 .PHONY: wordalign
 wordalign: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 
@@ -235,8 +285,8 @@ alignments:
 	for a in ${ALIGNMENTS}; do \
 		make ALIGNMENT=$$a ${SRC}-${TRG}/model/aligned.$$a.gz; \
 	done
-	gzip ${SRC}-${TRG}/model/aligned.${ALIGNMENT}
-
+	-gzip ${SRC}-${TRG}/model/aligned.${ALIGNMENT}
+	rm -f ${SRC}-${TRG}/model/aligned.${ALIGNMENT}
 
 # extract phrases and create phrase-table
 
@@ -404,13 +454,15 @@ ${SRC}-${TRG}/phrases-alpha.gz: ${SRC}-${TRG}/model/phrase-table.gz
 
 
 cleanup:
-	rm -f ${SRC}-${TRG}/model/extract*
-	rm -fr ${SRC}-${TRG}/model/tmp.*
-	rm -fr ${SRC}-${TRG}/corpus
-	rm -fr ${SRC}-${TRG}/giza.*
-	rm -fr ${SRC}-${TRG}/model.src.*
-	rm -fr ${SRC}-${TRG}/model.trg.*
-	rm -fr ${SRC}-${TRG}/model/*.gz.*
+	rm -f ${LANGPAIR}/model/extract*
+	rm -fr ${LANGPAIR}/model/tmp.*
+	rm -fr ${LANGPAIR}/corpus
+	rm -fr ${LANGPAIR}/giza.*
+	rm -fr ${LANGPAIR}/model.src.*
+	rm -fr ${LANGPAIR}/model.trg.*
+	rm -fr ${LANGPAIR}/model/*.gz.*
+	rm -f ${LANGPAIR}/model/lex.e2f ${LANGPAIR}/model/lex.f2e
+	rm -f ${LANGPAIR}/model/aligned.grow-diag-final-and
 
 tmp: 
 	mkdir -p ${CORPUSWORDALIGN}/tmp

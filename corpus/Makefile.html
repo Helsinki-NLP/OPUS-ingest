@@ -101,8 +101,8 @@ ${OPUSPUB}/${CORPUS}.php: ${PACKAGES} \
 ${PACKAGES}:	${ALG} \
 		${LANG_TAR} ${LANG_RAW} ${LANG_UD} \
 		${MONO_TOK} ${MONO_RAW} \
-		$(TMX) $(MOSES) ${FREQ_COUNTS} \
-		${OPUSHTML}/${CORPUS}.tar.gz
+		$(TMX) $(MOSES) ${FREQ_COUNTS}
+	${MAKE} pack
 	mkdir -p ${dir $@}
 	echo "$^" | tr ' ' "\n" | sed "s#${OPUSHTML}/##" >> $@
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
@@ -214,7 +214,7 @@ lang_parsed_tar:
 ${LANG_UD}: ${CORPUSHTML}/%.parsed.tar.gz: ${CORPUSPARSED}/%
 	@mkdir -p ${dir $@}
 	find $</ -name '*.xml.gz' > $<.files
-	-tar -T $<.files -P --transform='s#${CORPUSRAW}#${CORPUS}/parsed#' -czf $@
+	-tar -T $<.files -P --transform='s#${CORPUSPARSED}#${CORPUS}/parsed#' -czf $@
 	rm -f $<.files
 	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
