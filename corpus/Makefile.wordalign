@@ -33,6 +33,8 @@ endif
 # CORPUSBASE = c
 # CORPUSBASE = c.true
 CORPUSBASE = c.clean
+SRCCORPUS  = ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
+TRGCORPUS  = ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
 
 # try to guess memory and time consumption for batch jobs
 # (based on size on source language tokens)
@@ -279,6 +281,12 @@ all-raw-monolingual: ${LMRAWTEXT}
 .PHONY: clean
 clean:
 	rm -f ${TRUECASER}
+	rm -fr ${LANGPAIR}/model/*.gz.*
+	rm -f ${LANGPAIR}/model/lex.e2f ${LANGPAIR}/model/lex.f2e
+	rm -f ${LANGPAIR}/model/aligned.grow-diag-final-and
+	rm -fr ${LANGPAIR}/model.src.*
+	rm -fr ${LANGPAIR}/model.trg.*
+
 
 .PHONY: alignments
 alignments:
@@ -314,8 +322,8 @@ ${SRC}-${TRG}/model/phrase-table.gz: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
 
 ${SRC}-${TRG}/c.true.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	mkdir -p ${dir $@}
-	${MAKE} ${SRC}-${TRG}/c.${SRCEXT}
-	${MAKE} ${SRC}-${TRG}/c.clean.${SRCEXT}
+	${MAKE} ${SRC}-${TRG}/c.${SRCEXT} ${SRC}-${TRG}/c.${TRGEXT}
+	${MAKE} ${SRC}-${TRG}/c.clean.${SRCEXT} ${SRC}-${TRG}/c.clean.${TRGEXT}
 	${OPUSTOOLS}/wordalign/retained-sentences.pl \
 		${SRC}-${TRG}/ids.txt \
 		${SRC}-${TRG}/line_numbers.txt |\
@@ -340,8 +348,8 @@ ${SRC}-${TRG}/c.true.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 
 ${SRC}-${TRG}/c.clean.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	mkdir -p ${dir $@}
-	${MAKE} ${SRC}-${TRG}/c.${SRCEXT}
-	${MAKE} ${SRC}-${TRG}/c.clean.${SRCEXT}
+	${MAKE} ${SRC}-${TRG}/c.${SRCEXT} ${SRC}-${TRG}/c.${TRGEXT}
+	${MAKE} ${SRC}-${TRG}/c.clean.${SRCEXT} ${SRC}-${TRG}/c.clean.${TRGEXT}
 	${OPUSTOOLS}/wordalign/retained-sentences.pl \
 		${SRC}-${TRG}/ids.txt \
 		${SRC}-${TRG}/line_numbers.txt |\
@@ -361,7 +369,7 @@ ${SRC}-${TRG}/c.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	gzip -f ${SRC}-${TRG}/c.${TRGEXT}
 	gzip -f ${SRC}-${TRG}/ids
 
-
+${TRGCORPUS}: ${SRCCORPUS}
 
 
 # intermediate files for cleanup/truecasing (will be deleted later)
@@ -369,7 +377,10 @@ ${SRC}-${TRG}/c.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 ${SRC}-${TRG}/c.${SRCEXT}: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	mkdir -p ${dir $@}
 	$(OPUS2MOSES) -d ${CORPUSXML} -s ${SRCEXT} -t ${TRGEXT} \
-		-p $@ $< ${SRC}-${TRG}/c
+		-p ${SRC}-${TRG}/ids.txt \
+		$< ${SRC}-${TRG}/c
+
+${SRC}-${TRG}/c.${TRGEXT}: ${SRC}-${TRG}/c.${SRCEXT}
 
 ${SRC}-${TRG}/c.clean.${SRCEXT}: ${SRC}-${TRG}/c.${SRCEXT}
 	${SCRIPTS_ROOTDIR}/training/clean-corpus-n.perl \
@@ -377,7 +388,7 @@ ${SRC}-${TRG}/c.clean.${SRCEXT}: ${SRC}-${TRG}/c.${SRCEXT}
 		${SRC}-${TRG}/c.clean ${MIN} ${MAX} \
 		${SRC}-${TRG}/line_numbers.txt
 
-
+${SRC}-${TRG}/c.clean.${TRGEXT}: ${SRC}-${TRG}/c.clean.${SRCEXT}
 
 
 
@@ -458,11 +469,6 @@ cleanup:
 	rm -fr ${LANGPAIR}/model/tmp.*
 	rm -fr ${LANGPAIR}/corpus
 	rm -fr ${LANGPAIR}/giza.*
-	rm -fr ${LANGPAIR}/model.src.*
-	rm -fr ${LANGPAIR}/model.trg.*
-	rm -fr ${LANGPAIR}/model/*.gz.*
-	rm -f ${LANGPAIR}/model/lex.e2f ${LANGPAIR}/model/lex.f2e
-	rm -f ${LANGPAIR}/model/aligned.grow-diag-final-and
 
 tmp: 
 	mkdir -p ${CORPUSWORDALIGN}/tmp
@@ -563,25 +569,35 @@ filter-phrase-table: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 	${MOSESCONTRIB}/sigtest-filter/filter-pt \
 		-f $< \
 		-e $(subst src,trg,$<) \
-		-l a+e -n 30 |\
+		-l a+e -n 30 2> $(@:.gz=.log) |\
 	gzip -c > $@
 	rm -f $<* $(subst src,trg,$<)*
 	rm -f $^
+	gzip -f $(@:.gz=.log)
 
 # create suffix arrays for the bitext (training corpus)
 
-%.src.sa_suffix:
-	if [ $(word 1,$(subst -, ,$@)) != $(word 2,$(subst -, ,$(subst /, ,$@))) ]; then \
-	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 1,$(subst -, ,$@)).gz > $@; \
-	else \
-	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 1,$(subst -, ,$@))1.gz > $@; \
-	fi
+%.src.sa_suffix: ${SRCCORPUS}
+	gzip -cd < $< > $@
 	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
 
-%.trg.sa_suffix:
-	if [ $(word 1,$(subst -, ,$@)) != $(word 2,$(subst -, ,$(subst /, ,$@))) ]; then \
-	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 2,$(subst -, ,$(subst /, ,$@))).gz > $@; \
-	else \
-	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 2,$(subst -, ,$(subst /, ,$@)))2.gz > $@; \
-	fi
+%.trg.sa_suffix: ${TRGCORPUS}
+	gzip -cd < $< > $@
 	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
+
+
+# %.src.sa_suffix: ${SRCCORPUS}
+# 	if [ $(word 1,$(subst -, ,$@)) != $(word 2,$(subst -, ,$(subst /, ,$@))) ]; then \
+# 	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 1,$(subst -, ,$@)).gz > $@; \
+# 	else \
+# 	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 1,$(subst -, ,$@))1.gz > $@; \
+# 	fi
+# 	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
+
+# %.trg.sa_suffix: ${TRGCORPUS}
+# 	if [ $(word 1,$(subst -, ,$@)) != $(word 2,$(subst -, ,$(subst /, ,$@))) ]; then \
+# 	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 2,$(subst -, ,$(subst /, ,$@))).gz > $@; \
+# 	else \
+# 	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 2,$(subst -, ,$(subst /, ,$@)))2.gz > $@; \
+# 	fi
+# 	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@

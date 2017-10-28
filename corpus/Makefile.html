@@ -303,7 +303,7 @@ ${CORPUS_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%
 	@mkdir -p ${dir $@}
 	echo '<html><head></head><body><pre>' >$@
 	find $</ -name '*.xml.gz' | \
-	xargs zcat | head -100 | recode utf8..html >> $@
+	xargs zcat | head -100 | recode utf8..utf16 | recode utf16..html >> $@
 	echo '</pre></body></html>' >> $@
 
 #----------------------------------------------------------------------------
