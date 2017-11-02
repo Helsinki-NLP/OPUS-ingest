@@ -42,6 +42,8 @@ install: ${PACKAGE_SOURCE}
 	${MAKE} install-prerequisites
 	${MKDIR} ${PACKAGE_HOME}
 	make -C $< PREFIX=${PACKAGE_HOME} all test install
+	-cd ${NLPL_SOFTWARE}/${PACKAGE} && ln -s ${VERSION} latest
+
 
 clean: ${PACKAGE_SOURCE}
 	make -C $< clean

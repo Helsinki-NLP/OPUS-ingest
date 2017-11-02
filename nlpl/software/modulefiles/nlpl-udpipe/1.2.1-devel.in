@@ -7,7 +7,7 @@ whatis("Description: UDPipe")
 
 local basepath = "%%NLP_SOFTWARE%%"
 local package = "udpipe"
-local version = "ud-2.0-170801"
+local version = "1.2.1-devel"
 
 -- add binaries and libraries to env
 

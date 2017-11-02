@@ -11,7 +11,7 @@ include ../Makefile.common
 
 PACKAGE = udpipe
 # VERSION = latest
-VERSION = ud-2.0-170801
+VERSION = 1.2.1-devel
 GITURL  = https://github.com/ufal/udpipe.git
 
 
@@ -45,6 +45,7 @@ fetch: 	${PACKAGE_SOURCE} ${PACKAGE_HOME}/${MODELS}
 install: ${PACKAGE_HOME}/bin/udpipe \
 	${PACKAGE_HOME}/models \
 	${PACKAGE_HOME}/share/perl5/Ufal/UDPipe.pm
+	-cd ${NLPL_SOFTWARE}/${PACKAGE} && ln -s ${VERSION} latest
 
 re-install:
 	rm -fr ${PACKAGE_SOURCE}
