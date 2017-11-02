@@ -1,13 +1,13 @@
 help([[
-This module loads UDPipe.
+This module loads the corpus work bench CWB with various tools.
 ]])
 whatis("Version: latest")
-whatis("URL: https://github.com/ufal/udpipe.git/")
-whatis("Description: UDPipe")
+whatis("URL: http://cwb.sourceforge.net/")
+whatis("Description: Corpus Workbench CWB")
 
 local basepath = "/proj/nlpl/software"
-local package = "udpipe"
-local version = "latest"
+local package = "cwb"
+local version = "3.4.12"
 
 -- add binaries and libraries to env
 
@@ -24,5 +24,3 @@ prepend_path("PERL5LIB", pathJoin(basepath, package, version, "share/perl5"))
 
 prepend_path("MANPATH", pathJoin(basepath, "share/man"))
 prepend_path("MANPATH", pathJoin(basepath, package, version, "man"))
-
-prepend_path("UDPIPE_MODELS", pathJoin(basepath, package, version, "models"))

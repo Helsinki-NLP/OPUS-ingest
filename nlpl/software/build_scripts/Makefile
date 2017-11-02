@@ -12,7 +12,7 @@ include Makefile.common
 CPANCONFIG = ${NLPL_SOFTWARE}/.cpan/CPAN/MyConfig.pm
 
 # nlpl modules
-MODULEDIR = ../../modules
+MODULEDIR = ../modulefiles
 MODULES = ${patsubst ${MODULEDIR}/%,${NLPL_MODULES}/%,${wildcard ${MODULEDIR}/*/*lua}}
 
 # nlpl build scripts

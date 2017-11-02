@@ -44,7 +44,24 @@ cwb-index:
 	chmod o+rX $(CWBREG)/${CORPUS}
 	-gzip -f cwb/*
 
-# (add -k to keep temporary file for cwb encoding!)
+cwb-convert:
+	mkdir -p cwb
+	-gunzip -f cwb/*.gz
+	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
+	mkdir -p $(CWBDATA)
+	mkdir -p $(CWBREG)
+	$(INDEXER) -C -v -c ${CORPUS} \
+	           -d $(CWBDATA) \
+		   -m cwb \
+	           -r $(CWBREG) \
+		   -P $(CWB_DISALLOW_POSATTR) \
+	           -t $(ALGEXT) \
+		   ${CWB_EXTRA_ARGS} \
+	           $(LANGUAGES)
+	chmod -R o+rX $(CWBDATA)/${CORPUS}
+	chmod o+rX $(CWBREG)/${CORPUS}
+	-gzip -f cwb/*
+
 
 
 # create index of UD-parsed data
@@ -68,30 +85,59 @@ cwb-index-ud:
 	chmod o+rX $(UDCWBREG)/${CORPUS}
 	-gzip -f cwb-ud/*
 
-
-## only convert to vertical format!
-## in UTF-8
-
-cwb-convert:
+## convert only for UD parsed data
+cwb-convert-ud:
+	mkdir -p cwb-ud
+	-gunzip -f cwb/*.gz
+	-cd parsed && ln -s ../xml/*.xml.gz .
 	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
-	mkdir -p $(CWBDATA)
-	mkdir -p $(CWBREG)
-	$(INDEXER) -C -k -v -c ${CORPUS} \
-		   -e utf8 \
-		   -P '(id|alternative|emphasis|initial)' \
-	           -d $(CWBDATA) \
-		   -m cwb \
-	           -r $(CWBREG) \
+	mkdir -p $(UDCWBDATA)
+	mkdir -p $(UDCWBREG)
+	$(INDEXER) -C -v -c ${CORPUS} \
+	           -d $(UDCWBDATA) \
+		   -m cwb-ud \
+	           -r $(UDCWBREG) \
+		   -x parsed \
+		   -P $(UD_CWB_DISALLOW_POSATTR) \
 	           -t $(ALGEXT) \
+		   ${CWB_EXTRA_ARGS} \
 	           $(LANGUAGES)
+	chmod -R o+rX $(UDCWBDATA)/${CORPUS}
+	chmod o+rX $(UDCWBREG)/${CORPUS}
+	-gzip -f cwb-ud/*
 
 
 
-#		   -p '(tree|lem)' \
+
+
+
+
+## OLD: convert only ....
+
+
+# ## only convert to vertical format!
+# ## in UTF-8
+
+# cwb-convert:
+# 	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
+# 	mkdir -p $(CWBDATA)
+# 	mkdir -p $(CWBREG)
+# 	$(INDEXER) -C -k -v -c ${CORPUS} \
+# 		   -e utf8 \
 # 		   -P '(id|alternative|emphasis|initial)' \
+# 	           -d $(CWBDATA) \
+# 		   -m cwb \
+# 	           -r $(CWBREG) \
+# 	           -t $(ALGEXT) \
+# 	           $(LANGUAGES)
 
-#	perl -pi.orig -e 's|HOME ${CWBDATA}|HOME /home/opus/public_html/cwb/data|' ${CWBREG}/${CORPUS}/*
-#	rm ${CWBREG}/${CORPUS}/*.orig
+
+
+# #		   -p '(tree|lem)' \
+# # 		   -P '(id|alternative|emphasis|initial)' \
+
+# #	perl -pi.orig -e 's|HOME ${CWBDATA}|HOME /home/opus/public_html/cwb/data|' ${CWBREG}/${CORPUS}/*
+# #	rm ${CWBREG}/${CORPUS}/*.orig
 
 
 

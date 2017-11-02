@@ -10,7 +10,7 @@ include ../Makefile.common
 
 
 PACKAGE = cwb
-VERSION = latest
+VERSION = 3.4.12
 
 PACKAGE_SOURCE = ${NLPL_SOURCES}/${PACKAGE}/${VERSION}
 PACKAGE_HOME = ${NLPL_SOFTWARE}/${PACKAGE}/${VERSION}
@@ -101,6 +101,7 @@ ${PACKAGE_HOME}/bin/cqp: ${PACKAGE_SOURCE} ${PACKAGE_SOURCE}/pcre-8.40
 
 .PHONY: install-prerequistes
 install-prerequistes: ${PACKAGE_SOURCE}/pcre-8.40
+	echo ${PACKAGE_SOURCE}/pcre-8.40
 
 ${PACKAGE_SOURCE}/pcre-8.40:
 	wget -O $@.tar.gz https://ftp.pcre.org/pub/pcre/pcre-8.40.tar.gz

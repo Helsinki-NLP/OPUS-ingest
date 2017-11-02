@@ -10,7 +10,8 @@ include ../Makefile.common
 
 
 PACKAGE = udpipe
-VERSION = latest
+# VERSION = latest
+VERSION = ud-2.0-170801
 GITURL  = https://github.com/ufal/udpipe.git
 
 

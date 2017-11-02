@@ -10,7 +10,7 @@ include ../Makefile.common
 
 
 PACKAGE = uplug
-VERSION = latest
+VERSION = 0.3.8dev
 
 GITURL = https://bitbucket.org/tiedemann/uplug.git
 
