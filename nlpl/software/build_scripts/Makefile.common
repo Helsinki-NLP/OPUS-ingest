@@ -13,8 +13,7 @@ INSTALL_DATA = ${INSTALL} -m 644
 MKDIR = mkdir -p -m 755
 
 
-# NLPL_ABEL = /projects/nlpl
-NLPL_ABEL = /usit/abel/u1/joerg/nlpl
+NLPL_ABEL = /projects/nlpl
 
 ifeq (${shell hostname --domain},csc.fi)
   export NLPL_HOME=/proj/nlpl
