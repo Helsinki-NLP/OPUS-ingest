@@ -13,8 +13,7 @@ INSTALL_DATA = ${INSTALL} -m 644
 MKDIR = mkdir -p -m 755
 
 
-# NLPL_ABEL = /projects/nlpl
-NLPL_ABEL = /usit/abel/u1/joerg/nlpl
+NLPL_ABEL = /projects/nlpl
 
 ifeq (${shell hostname --domain},csc.fi)
   export NLPL_HOME=/proj/nlpl
@@ -61,7 +60,7 @@ else
   export PERL_CPANM_HOME=/tmp/cpanm_$USER
   export PERL_MB_OPT=--prefix ${NLPL_HOME}/software
   export PERL_MM_OPT=PREFIX=${NLPL_HOME}/software
-  CPAN=cpanm
+  CPAN=cpanm -n
 endif
 
 
