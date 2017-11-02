@@ -47,6 +47,8 @@ install: ${PACKAGE_HOME}/bin/cqp
 	perl -e 'use CWB::CL;'  || ${MAKE} CWB-CL
 	perl -e 'use CWB::CQI;'  || ${MAKE} CWB-CQI
 	perl -e 'use CWB::Web::Query;' || ${MAKE} CWB-Web
+	-cd ${NLPL_SOFTWARE}/${PACKAGE} && ln -s ${VERSION} latest
+
 
 ## make test fails for CWB::CL ...
 CWB CWB-CL CWB-CQI CWB-Web: ${PACKAGE_SOURCE}/perl

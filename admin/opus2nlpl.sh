@@ -15,7 +15,7 @@
 
 OPUSDIR=/proj/OPUS
 NLPLDIR=/proj/nlpl
-OPUSNLPL=$NLPLDIR/corpora/OPUS
+OPUSNLPL=$NLPLDIR/data/OPUS
 SUBDIR='admin annotated cwb cwb-ud data download img incoming public_html tools trac wordalign wordalign-multi'
 
 cd $OPUSDIR
