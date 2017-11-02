@@ -13,7 +13,7 @@ CPANCONFIG = ${NLPL_SOFTWARE}/.cpan/CPAN/MyConfig.pm
 
 # nlpl modules
 MODULEDIR = ../modulefiles
-MODULES = ${patsubst ${MODULEDIR}/%,${NLPL_MODULES}/%,${wildcard ${MODULEDIR}/*/*lua}}
+MODULES = ${patsubst ${MODULEDIR}/%.in,${NLPL_MODULES}/%.lua,${wildcard ${MODULEDIR}/*/*in}}
 
 # nlpl build scripts
 # TODO: do we need more than Makfiles in subdirs?
@@ -60,3 +60,8 @@ ${MODULES}: ${NLPL_MODULES}/%: ${MODULEDIR}/%
 ${BUILDSCRIPTS}: ${NLPL_BUILD}/%: %
 	${MKDIR} ${dir $@}
 	${INSTALL_DATA} $< $@
+
+
+## replace local basedir
+${MODULEDIR}/%.lua: ${MODULEDIR}/%.in
+	sed 's#%%NLP_SOFTWARE%%#${NLPL_SOFTWARE}#' < $< > $@

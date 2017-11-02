@@ -20,7 +20,7 @@ load("nlpl-udpipe")
 
 -- some basic information
 
-local basepath = "/proj/nlpl/software"
+local basepath = "%%NLP_SOFTWARE%%"
 local package = "opus"
 local version = "0.1"
 

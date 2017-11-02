@@ -5,7 +5,7 @@ whatis("Version: latest")
 whatis("URL: http://cwb.sourceforge.net/")
 whatis("Description: Corpus Workbench CWB")
 
-local basepath = "/proj/nlpl/software"
+local basepath = "%%NLP_SOFTWARE%%"
 local package = "cwb"
 local version = "3.4.12"
 
