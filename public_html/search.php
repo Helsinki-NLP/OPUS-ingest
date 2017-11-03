@@ -55,7 +55,7 @@ echo "</form></div>\n";
 
 if (isset($src) && isset($trg) && $src != 'unknown' && $trg != 'unknown'){
   echo '<div class="query">';
-  echo '<b>Language resources: </b>click on [ tmx | moses | xces | lang-id ] to download the data! (raw = untokenized, true = truecaser model, TM = phrase-based translation model)</br></br>';
+  echo '<b>Language resources: </b>click on [ tmx | moses | xces | lang-id ] to download the data! (raw = untokenized, ud = parsed with universal dependencies, alg = word alignments and phrase tables)</br></br>';
   echo '</div>';
   echo '<div class="counts">';
   show_resources($src,$trg,$minsize);
@@ -95,8 +95,8 @@ function table_header(){
   echo "<th>src tokens</th>";
   echo "<th>trg tokens</th>";
   echo "<th>XCES/XML</th><th>raw</th><th>TMX</th><th>Moses</th><th>mono</th><th>raw</th>";
-  echo "<th>true</th><th>TM</th><th>dic</th><th>freq</th>";
-  echo "<th></th><th></th><th>Browse Files</th></tr>";
+  echo "<th>ud</th><th>alg</th><th>dic</th><th>freq</th>";
+  echo "<th></th><th></th><th>other files</th></tr>";
 
   $TotalDocs=0;
   $TotalLinks=0;
@@ -342,6 +342,17 @@ function print_resource($corpus,$src,$trg,$resource){
     echo '</td>';
 
     echo '<td>';
+    $srcparsed = $corpus.'/'.$src.'.parsed.tar.gz';
+    if (file_exists($opusdownloads.$srcparsed)){
+      $link = 'download.php?f='.urlencode($srcparsed);
+      echo '<a href="'.$link.'" title="parsed '.$src.'">'.$src."</a>&nbsp;";
+    }
+    $trgparsed = $corpus.'/'.$trg.'.parsed.tar.gz';
+    if (file_exists($opusdownloads.$trgparsed)){
+      $link = 'download.php?f='.urlencode($trgparsed);
+      echo '<a href="'.$link.'" title="parsed '.$trg.'">'.$trg."</a>&nbsp;";
+    }
+    /*
     $truedir = $corpus.'/wordalign/truecaser/';
     if (file_exists($opusdownloads.$truedir.$src.'.gz')){
       $link = 'download.php?f='.urlencode($truedir.$src.'.gz');
@@ -351,6 +362,7 @@ function print_resource($corpus,$src,$trg,$resource){
       $link = 'download.php?f='.urlencode($truedir.$trg.'.gz');
       echo '<a href="'.$link.'" title="truecaser '.$trg.'">'.$trg."</a>&nbsp;";
     }
+    */
     echo '</td>';
 
     echo '<td>';
@@ -405,6 +417,23 @@ function print_resource($corpus,$src,$trg,$resource){
     else{ echo '<td></td>'; }
 
     echo '<td style="text-align:left;">';
+
+    // alternative alignments
+    $altlinks = $corpus.'/'.$src.'-'.$trg.'.alt.xml.gz';
+    if (file_exists($opusdownloads.$altlinks)){
+      echo "[<a rel='nofollow' href='$altlinks'>alt</a>]";
+    }
+
+    // intra-lingual links with different categories
+    $ext = array( 'insert', 'pct' , 'spell', 'other');     
+    foreach( $ext as $e ) {
+        $altlinks = $corpus.'/'.$src.'-'.$trg.'.'.$e.'.txt.zip';
+   	if (file_exists($opusdownloads.$altlinks)){
+      	   echo "[<a rel='nofollow' href='$altlinks'>$e</a>]";
+    	}
+    }
+
+    // source directories of the exist
     if (is_dir("$corpus/xml/$src")){
       echo "[<a rel='nofollow' href='$corpus/xml/$src'>xml/$src</a>]";
     }
