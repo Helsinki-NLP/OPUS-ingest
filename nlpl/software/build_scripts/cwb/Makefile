@@ -94,6 +94,12 @@ ${PACKAGE_HOME}/bin/cqp: ${PACKAGE_SOURCE} ${PACKAGE_SOURCE}/pcre-8.40
 	    -e 's|# PREFIX = .*$$|PREFIX = ${PACKAGE_HOME}|' \
 	    -e 's|# DEFAULT_REGISTRY .*$$|DEFAULT_REGISTRY = ${NLPL_DATASETS}/cwb|' \
 	< $</config.original > $</config.mk
+ifeq (${shell hostname --domain},csc.fi)
+	cp $</config/platform/unix $</config/platform/unix.original
+	sed 's/\(TERMCAP_LIBS = .*$$\)/\1 -ltinfo/' \
+		< $</config/platform/unix.original \
+		> $</config/platform/unix
+endif
 	${MKDIR} ${NLPL_DATASETS}/cwb
 	${MAKE} -C $< clean
 	${MAKE} -C $< depend
