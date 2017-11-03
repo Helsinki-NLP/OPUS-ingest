@@ -165,9 +165,10 @@
         <ul>
           <li>The <a href="http://statmt.org/europarl/">EuroParl corpus</a> and <a href="http://www.statmt.org/wmt13/translation-task.html">WMT data</a></li>
 	  <li><a href="https://pub.cl.uzh.ch/wiki/public/costep/start">CoStEP</a>: A cleaner and structured version of the Europarl corpus</li>
+	  <li><a href="https://conferences.unite.un.org/uncorpus">United Nations Parallel Corpus</a></li>
           <li><a href="http://ipsc.jrc.ec.europa.eu/?id=198">JRC-Acquis</a> and related resources</li>
-
-          <li><a href="http://pelcra.pl/res/parallel/">Parallel corpora at PELCRA</a> (<a href="http://pelcra.pl/res/parallel/word-aligned/">word-aligned data</a>)</li>
+	  <li><a href="http://casmacat.eu/corpus/global-voices.html">Global Voices Parallel Corpus</a> (CASMACAT)</li>
+          <li><a href="http://paralela.clarin-pl.eu">Parallel corpora at PELCRA</a> <!-- (<a href="http://pelcra.pl/res/parallel/word-aligned/">word-aligned data</a>) --> </li>
 	  <li><a href="http://nlp2ct.cis.umac.mo/um-corpus/">UM - a domain specific Chinese-English parallel corpus</a></li>
           <li><a href="https://www.letsmt.eu">Let's MT!</a> and its <a href="/letsmt-trac/">Resource Repository Software</a></li>
 
