@@ -68,14 +68,16 @@ for c in ${CORPORA}; do
     fi
 done
 
+
 for c in ${OTHER}; do
-    if [ -f "$SRCDIR/$c" ]; then
-	iput_wrapper -c -l $SRCDIR/$c  -r $TRGDIR
-    fi
-    if [ -d "$SRCDIR/$c" ]; then
-	iput_wrapper -c -l $SRCDIR/$c  -r $TRGDIR/$c
+    if [ -f "$SRCDIR/$c.tar.gz" ]; then
+	iput_wrapper -v -c -l $SRCDIR/$c.tar.gz  -r $TRGDIR
+    elif [ -d "$SRCDIR/$c" ]; then
+	echo "packing $c into $c.tar ..."
+	tar -C $SRCDIR -cf $c.tar $c
+	iput_wrapper -c -l $c.tar  -r $TRGDIR
+	rm -f $c.tar
     fi
 done
-
 
 echo "Finishing at `date`"
