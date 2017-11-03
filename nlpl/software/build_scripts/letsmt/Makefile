@@ -24,7 +24,9 @@ export LD_LIBRARY_PATH:=${PACKAGE_HOME}/lib:${LD_LIBRARY_PATH}
 export MANPATH:=${PACKAGE_HOME}/man:${MANPATH}
 export PERL5LIB:=${PACKAGE_HOME}/share/perl5:${PACKAGE_HOME}/lib64/perl5:${PERL5LIB}
 export PYTHONPATH:=${PACKAGE_HOME}/lib/python2.6/site-packages:${PYTHONPATH}
-export JAVA_HOME=/usr/lib/jvm/java
+ifndef JAVA_HOME
+  export JAVA_HOME=/usr/lib/jvm/java
+endif
 
 
 

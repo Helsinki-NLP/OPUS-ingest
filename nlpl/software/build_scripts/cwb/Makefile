@@ -10,7 +10,7 @@ include ../Makefile.common
 
 
 PACKAGE = cwb
-VERSION = latest
+VERSION = 3.4.12
 
 PACKAGE_SOURCE = ${NLPL_SOURCES}/${PACKAGE}/${VERSION}
 PACKAGE_HOME = ${NLPL_SOFTWARE}/${PACKAGE}/${VERSION}
@@ -47,6 +47,8 @@ install: ${PACKAGE_HOME}/bin/cqp
 	perl -e 'use CWB::CL;'  || ${MAKE} CWB-CL
 	perl -e 'use CWB::CQI;'  || ${MAKE} CWB-CQI
 	perl -e 'use CWB::Web::Query;' || ${MAKE} CWB-Web
+	-cd ${NLPL_SOFTWARE}/${PACKAGE} && ln -s ${VERSION} latest
+
 
 ## make test fails for CWB::CL ...
 CWB CWB-CL CWB-CQI CWB-Web: ${PACKAGE_SOURCE}/perl
@@ -92,6 +94,12 @@ ${PACKAGE_HOME}/bin/cqp: ${PACKAGE_SOURCE} ${PACKAGE_SOURCE}/pcre-8.40
 	    -e 's|# PREFIX = .*$$|PREFIX = ${PACKAGE_HOME}|' \
 	    -e 's|# DEFAULT_REGISTRY .*$$|DEFAULT_REGISTRY = ${NLPL_DATASETS}/cwb|' \
 	< $</config.original > $</config.mk
+ifeq (${shell hostname --domain},csc.fi)
+	cp $</config/platform/unix $</config/platform/unix.original
+	sed 's/\(TERMCAP_LIBS = .*$$\)/\1 -ltinfo/' \
+		< $</config/platform/unix.original \
+		> $</config/platform/unix
+endif
 	${MKDIR} ${NLPL_DATASETS}/cwb
 	${MAKE} -C $< clean
 	${MAKE} -C $< depend
@@ -101,6 +109,7 @@ ${PACKAGE_HOME}/bin/cqp: ${PACKAGE_SOURCE} ${PACKAGE_SOURCE}/pcre-8.40
 
 .PHONY: install-prerequistes
 install-prerequistes: ${PACKAGE_SOURCE}/pcre-8.40
+	echo ${PACKAGE_SOURCE}/pcre-8.40
 
 ${PACKAGE_SOURCE}/pcre-8.40:
 	wget -O $@.tar.gz https://ftp.pcre.org/pub/pcre/pcre-8.40.tar.gz

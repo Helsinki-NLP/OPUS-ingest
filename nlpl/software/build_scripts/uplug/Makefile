@@ -10,12 +10,13 @@ include ../Makefile.common
 
 
 PACKAGE = uplug
-VERSION = latest
+VERSION = 0.3.8dev
 
 GITURL = https://bitbucket.org/tiedemann/uplug.git
 
 PERLMODULES =	Class::Inspector \
 		File::ShareDir \
+		HTML::Entities \
 		IPC::Run \
 		XML::Parser \
 		XML::Simple \
@@ -41,6 +42,8 @@ install: ${PACKAGE_SOURCE}
 	${MAKE} install-prerequisites
 	${MKDIR} ${PACKAGE_HOME}
 	make -C $< PREFIX=${PACKAGE_HOME} all test install
+	-cd ${NLPL_SOFTWARE}/${PACKAGE} && ln -s ${VERSION} latest
+
 
 clean: ${PACKAGE_SOURCE}
 	make -C $< clean

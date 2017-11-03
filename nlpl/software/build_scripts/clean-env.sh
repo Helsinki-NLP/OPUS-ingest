@@ -14,8 +14,7 @@ module purge
 # make everything writeable for nlpl-members
 umask u=rwx,g=rx,o=rx
 
-# NLPL_ABEL=/projects/nlpl
-NLPL_ABEL=/usit/abel/u1/joerg/nlpl
+NLPL_ABEL=/projects/nlpl
 ME=$(whoami)
 
 if [ `hostname --domain` == "csc.fi" ]; then
