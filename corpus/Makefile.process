@@ -1,0 +1,80 @@
+# -*-makefile-*-
+#
+# Makefile targets for processing corpus data
+#
+# - create essential makefiles
+# - pre-process data
+# - sentence alignment
+# - word alignment
+#
+
+ifndef LANGUAGE
+	LANGUAGE=$(firstword ${LANGUAGES})
+endif
+
+SRCDIR   = src/${LANGUAGE}
+RAWFILES = $(patsubst src/%.${TXTEXT},raw/%.${XMLEXT}, \
+		$(shell find ${SRCDIR} -name '*.${TXTEXT}'))
+
+.PHONY: corpus
+corpus:
+	${MAKE} preprocess
+	${MAKE} annotate
+	${MAKE} align
+	${MAKE} udparse
+	${MAKE} wordalign
+
+.PHONY: publish
+publish: packages webpage cwb-index
+
+.PHONY: prepare
+prepare: xml/Makefile wordalign/Makefile
+
+.PHONY: preprocess
+preprocess:
+	for l in ${LANGUAGES}; do \
+		${MAKE} LANGUAGE=$$l preprocess_files; \
+	done
+
+.PHONY: align sentalign
+align sentalign: xml/Makefile
+	${MAKE} -C xml all
+
+.PHONY: wordalign
+wordalign: wordalign/Makefile
+	${MAKE} -C wordalign all
+
+
+
+
+xml/Makefile:
+	mkdir -p ${dir $@}
+	echo "# -*-makefile-*-" > $@
+	echo "include ../Makefile.def" >> $@
+	echo "all: align-all" >> $@
+	echo "include ../../Makefile.def" >> $@
+	echo "include ../../Makefile.align" >> $@
+
+wordalign/Makefile:
+	mkdir -p ${dir $@}
+	echo "# -*-makefile-*-" > $@
+	echo "include ../Makefile.def" >> $@
+	echo "all: wordalign-all" >> $@
+	echo "include ../../Makefile.def" >> $@
+	echo "include ../../Makefile.wordalign" >> $@
+
+.PHONY: preprocess_files
+preprocess_files: ${RAWFILES}
+
+raw/${LANGUAGE}/%.${XMLEXT}: src/${LANGUAGE}/%.${TXTEXT}
+	mkdir -p $(shell dirname $@)
+	${PRE} -in $< -out $@
+
+.PHONY: clean-raw
+clean-raw:
+	for l in ${LANGUAGES}; do \
+	    if [ -d "raw/$$l" ]; then \
+		rm -fr raw/$$l; \
+	    fi \
+	done
+

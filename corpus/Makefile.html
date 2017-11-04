@@ -1,8 +1,15 @@
 # -*-makefile-*-
 #
 #
-# make all download packages and the website
-# (including all data formats we provide)
+#----------------------------------------------
+#
+#  make website ........ make website
+#  make html ........... make website and counts
+#  make refresh-html ... remove old html and make new
+#  make packages ....... make download packages
+#
+#----------------------------------------------
+
 
 PARSED_LANGUAGES = $(sort $(notdir $(wildcard ${CORPUSPARSED}/??)) \
                           $(notdir $(wildcard ${CORPUSPARSED}/???)) \
@@ -52,6 +59,8 @@ PACKAGES   = ${CORPUSPUB}/.packages
 PACKDIRS   = xml raw
 # PACKDIRS   = xml raw parsed
 
+
+.PHONY: html packages refresh-html download-dirs webpage
 html: 	${OPUSPUB}/${CORPUS}.php ${FREQ_COUNTS}
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
 	mv -f ${PACKAGES}.uniq ${PACKAGES}
@@ -64,10 +73,13 @@ refresh-html:
 	touch $(CES)
 	make html
 
-
 download-dirs: ${CORPUS} ${CORPUSHTML} # ${CORPUSHTML}/xml
 
 webpage: ${OPUSPUB}/${CORPUS}.php
+
+
+
+## TODO: do we still need the following targets
 
 ${CORPUS}:
 	ln -s xml $@
@@ -77,6 +89,7 @@ ${CORPUSHTML}:
 
 ${CORPUSHTML}/xml:
 	ln -s $(CORPUSXML) $@
+
 
 
 ## citation note to be added to website
@@ -111,6 +124,7 @@ ${PACKAGES}:	${ALG} \
 
 ## make an archive with all xml-files!
 
+.PHONY: pack
 pack: ${OPUSHTML}/${CORPUS}.tar.gz
 
 ### just pack everything in xml and raw!
@@ -166,6 +180,7 @@ ${OPUSHTML}/${CORPUS}.tar.gz: $(CES)
 ## NEW 2017-10-05: move and link instead of copy
 ## (attention: relative path in link assumes some stable file structure in OPUS)
 
+.PHONY: alg_files
 alg_files: ${ALG}
 
 ${ALG}: ${CORPUSHTML}/%: ${CORPUSXML}/%
@@ -180,6 +195,7 @@ ${ALG}: ${CORPUSHTML}/%: ${CORPUSXML}/%
 
 # tokenized version (same as above but file path including /xml/)
 
+.PHONY: lang_tar lang_tok_tar
 lang_tar lang_tok_tar: ${LANG_TAR}
 
 ${LANG_TAR}: ${CORPUSHTML}/%.tar.gz: ${CORPUSXML}/%
@@ -192,6 +208,7 @@ ${LANG_TAR}: ${CORPUSHTML}/%.tar.gz: ${CORPUSXML}/%
 
 # raw corpus files
 
+.PHONY: lang_raw_tar
 lang_raw_tar: ${LANG_RAW}
 
 ${LANG_RAW}: ${CORPUSHTML}/%.raw.tar.gz: ${CORPUSRAW}/%
@@ -204,6 +221,7 @@ ${LANG_RAW}: ${CORPUSHTML}/%.raw.tar.gz: ${CORPUSRAW}/%
 
 # parsed corpus files (not all languages need to be parsed)
 
+.PHONY: lang_parsed_tar
 lang_parsed_tar:
 	for l in ${LANGUAGES}; do \
 	  if [ -d ${CORPUSPARSED}/$$l ]; then \
@@ -225,6 +243,7 @@ ${LANG_UD}: ${CORPUSHTML}/%.parsed.tar.gz: ${CORPUSPARSED}/%
 # make monolingual plain text files
 #----------------------------------------------------------------------------
 
+.PHONY: mono_tok mono_raw
 mono_tok: ${MONO_TOK}
 mono_raw: ${MONO_RAW}
 
@@ -347,6 +366,7 @@ tmx-strict: ${CORPUSHTML} $(TMX_STRICT)
 #----------------------------------------------------------------------------
 
 
+.PHONY: moses
 moses: ${CORPUSHTML} $(MOSES)
 
 $(MOSES): ${CORPUSHTML}/%.txt.zip: ${CORPUSXML}/%.xml.gz
@@ -369,6 +389,8 @@ $(MOSES): ${CORPUSHTML}/%.txt.zip: ${CORPUSXML}/%.xml.gz
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
 
+## plain text bitexts with 1:1 sentence alignments
+.PHONY: moses-strict
 moses-strict: ${CORPUSHTML} $(MOSES_STRICT)
 
 $(MOSES_STRICT): ${CORPUSHTML}/%.strict.txt.zip: ${CORPUSXML}/%.xml.gz
@@ -392,8 +414,8 @@ $(MOSES_STRICT): ${CORPUSHTML}/%.strict.txt.zip: ${CORPUSXML}/%.xml.gz
 
 # create bitext info files (some basic statistics)
 
+.PHONY: info lang_info ces_info txt_info tmx_info
 info: lang_info ces_info txt_info tmx_info
-
 
 lang_info: ${LANG_INFO}
 

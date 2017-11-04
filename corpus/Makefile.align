@@ -39,11 +39,12 @@ ALLTRG = $(addsuffix .trg,$(LANGUAGES))
 #
 # (translate.txt is created by hunalign - don't know why ...)
 
-
-all-align: ${ALLSRC}
+.PHONY: align-all all-align
+align-all all-align: ${ALLSRC}
 	rm -f translate.txt
 	rm -fr data
 
+.PHONY: clean-align
 clean-align:
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
@@ -72,12 +73,13 @@ endif
 
 
 ## align all files for the current language pair
-## (if not already aligned in opposite direction)
+## (only for different languages and sorted by lang ID)
 
+.PHONY: align
 align:
-	if `perl -e "exit 0 if ('${SRC}' lt '${TRG}');exit 1;"`; then \
-	    ${MAKE} ${SRC}-${TRG}.xml.gz; \
-	fi
+ifneq (${SRC},${lastword ${sort ${SRC} ${TRG}}})
+	${MAKE} ${SRC}-${TRG}.xml.gz
+endif
 
 
 ## call 'make $ALLTRG' for all languages once as source language
@@ -143,7 +145,7 @@ ${ALGFILES}: ${SRC}-${TRG}/%: ${SRC}/% ${TRG}/%
 
 # make only the alignment files for each language pair
 
-
+.PHONY: create-align-files
 create-align-files:
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
@@ -151,6 +153,7 @@ create-align-files:
 	  done \
 	done
 
+.PHONY: create-align-file
 create-align-file:
 	if [ "${SRC}" != "${TRG}" ]; then \
 	  if [ -d "${SRC}-${TRG}" ]; then \

@@ -2,6 +2,49 @@
 #
 # wordalign bitexts using efmaral & Moses
 #
+#--------------------------------------------------------------------
+#
+# make SRC=de TRG=en wordalign . align & extract phrase-table for "de-en" 
+# make wordalign-all ........... run wordalign for all language pairs
+# make cleanup-all ............. cleanup for all language pairs
+#
+#--------------------------------------------------------------------
+#
+# individual steps for one bitext (set SRC and TRG like above):
+# (must run them in the given order)
+#
+# make wordalign-prepare ......  convert and preprocess bitext
+# make wordalign-align ......... run word-aligner
+# make wordalign-pt ............ extract phrase-table
+# make wordalign-filter ........ significance filtering
+#
+#--------------------------------------------------------------------
+#
+# start jobs on HPC cluster for a selected language pair:
+# (set language pair with SRC and TRG)
+#
+#   make submit-wordalign
+#
+# This will trigger all sub-tasks below by submitting new jobs
+# at the end of the previous task. Each sub-task may require 
+# different resources (in terms of memory or walltime)
+#
+#   make submit-wordalign-prepare
+#   make submit-wordalign-align
+#   make submit-wordalign-pt
+#   make submit-wordalign-filter
+#
+#--------------------------------------------------------------------
+#
+# start jobs on HPC cluster for all language pairs:
+#
+# make submit-all .............. run ACTION (default=wordalign) for all bitexts
+# make submit-all-prepare ...... convert & preprocess all bitexts
+# make submit-all-align ........ word-align all bitext
+# make submit-all-pt ........... extract all phrase tables
+# make submit-all-filter ....... significance filtering for all bitexts
+#
+#--------------------------------------------------------------------
 
 ifndef SRC
   SRC = en
@@ -113,15 +156,21 @@ LMTEXT = $(patsubst %,${CORPUSWORDALIGN}/lm/${CORPUS}.%.gz, ${LANGUAGES})
 LMRAWTEXT = $(patsubst %,${CORPUSWORDALIGN}/lm/${CORPUS}.raw.%.gz, ${LANGUAGES})
 
 
-.PHONY: all-wordalign
-all-wordalign: ${LANGPAIRS} clean
+.PHONY: all-wordalign wordalign-all
+wordalign-all all-wordalign: ${LANGPAIRS} clean
 # all-wordalign: ${TRUECASER} ${LANGPAIRS} clean
 
-.PHONY: all-cleanup
-all-cleanup:
+.PHONY: all-cleanup cleanup-all
+claenup-all all-cleanup:
 	for l in ${LANGPAIRS}; do \
 	  ${MAKE} LANGPAIR=$$l cleanup; \
 	done
+
+
+
+# action to be done when calling LANGPAIRS
+ACTION = wordalign
+
 
 ## submit batch jobs of various kinds
 ## - do prepare first
@@ -162,7 +211,8 @@ submit-wordalign-prepare:
 		  HPC_MEM=4g \
 		  HPC_CORES=1 \
 		  EMAIL= \
-		  MAKEARGS="ACTION=wordalign-prepare" \
+		  NEXTJOB=${NEXTJOB} \
+		  MAKEARGS="ACTION=wordalign-prepare NEXTJOB=${NEXTJOB}" \
 	  ${LANGPAIR}.submit;\
 	fi
 
@@ -177,7 +227,8 @@ submit-wordalign-align:
 		  HPC_CORES=4 \
 		  HPC_MODULES=python-env/3.4.1 \
 		  EMAIL= \
-		  MAKEARGS="ACTION=wordalign-align" \
+		  NEXTJOB=${NEXTJOB} \
+		  MAKEARGS="ACTION=wordalign-align NEXTJOB=${NEXTJOB}" \
 	  ${LANGPAIR}.submit;\
 	fi
 
@@ -194,7 +245,8 @@ submit-wordalign-pt:
 		    HPC_MEM=${EXTRACT_MEM} \
 		    HPC_CORES=4 \
 		    EMAIL= \
-		    MAKEARGS="ACTION=wordalign-pt" \
+		    NEXTJOB=${NEXTJOB} \
+		    MAKEARGS="ACTION=wordalign-pt NEXTJOB=${NEXTJOB}" \
 	    ${LANGPAIR}.submit;\
 	  fi; \
 	fi
@@ -212,30 +264,31 @@ submit-wordalign-filter:
 		    HPC_MEM=${EXTRACT_MEM} \
 		    HPC_CORES=1 \
 		    EMAIL= \
-		    MAKEARGS="ACTION=wordalign-filter" \
+		    NEXTJOB=${NEXTJOB} \
+		    MAKEARGS="ACTION=wordalign-filter NEXTJOB=${NEXTJOB}" \
 	    ${LANGPAIR}.submit;\
 	  fi;\
 	fi
 
 # batch job for word alignment
+# NEW: start with prepare but set NEXTJOB
 .PHONY: submit-wordalign
 submit-wordalign:
 	if [ ! -e ${LANGPAIR}/.wordalign ]; then \
 	  rm -f ${LANGPAIR}.submit; \
 	  ${MAKE} EMAIL= \
-		  MAKEARGS="ACTION=wordalign" \
+		  MAKEARGS="ACTION=wordalign-prepare" \
+		  NEXTJOB=1 \
 	  ${LANGPAIR}.submit;\
 	fi
 
 
 
 
-# action to be done when calling LANGPAIRS
-ACTION = wordalign
-
 ${LANGPAIRS}: %: %/.${ACTION}
 
 ## NEW: remove empty files before runing action
+## NEW: submit next job if NEXTJOB is set
 %/.${ACTION}:
 	mkdir -p ${CORPUSWORDALIGN}/${@:/.${ACTION}=}
 	if [ ! -e ${@:/.${ACTION}=} ]; then \
@@ -246,6 +299,22 @@ ${LANGPAIRS}: %: %/.${ACTION}
 		TRG=$(lastword $(subst -, ,${@:/.${ACTION}=})) \
 	${ACTION}
 	touch $@
+ifdef NEXTJOB
+	sleep 1
+ifeq (${ACTION},wordalign-prepare)
+	${MAKE} SRC=$(firstword $(subst -, ,${@:/.${ACTION}=})) \
+		TRG=$(lastword $(subst -, ,${@:/.${ACTION}=})) \
+	submit-wordalign-align
+else ifeq (${ACTION},wordalign-align)
+	${MAKE} SRC=$(firstword $(subst -, ,${@:/.${ACTION}=})) \
+		TRG=$(lastword $(subst -, ,${@:/.${ACTION}=})) \
+	submit-wordalign-pt
+else ifeq (${ACTION},wordalign-pt)
+	${MAKE} SRC=$(firstword $(subst -, ,${@:/.${ACTION}=})) \
+		TRG=$(lastword $(subst -, ,${@:/.${ACTION}=})) \
+	submit-wordalign-filter
+endif
+endif
 
 
 ## define some actions (prepare, align, ...)

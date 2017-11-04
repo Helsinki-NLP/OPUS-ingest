@@ -12,12 +12,12 @@ RAWDIR   = raw/${LANGUAGE}
 XMLFILES = $(patsubst raw/%,xml/%,$(shell find ${RAWDIR} -name '*.${XMLEXT}'))
 
 
-tokenize:
+tokenize annotate:
 	for l in ${LANGUAGES}; do \
 		${MAKE} LANGUAGE=$$l tokenize_files; \
 	done
 
-tokenize_files: ${XMLFILES}
+tokenize_files annotate_files: ${XMLFILES}
 
 xml/${LANGUAGE}/%: raw/${LANGUAGE}/%
 	mkdir -p $(shell dirname $@)
