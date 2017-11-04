@@ -49,7 +49,9 @@ LANG_INFO = $(patsubst %,${CORPUSXML}/%.info,${LANGUAGES})
 ## TODO: check if we have more updated versions
 # MAKEHTML   = ${TOOLS}/opus/make-download-page.pl
 # MAKEHTML   = ${HOME}/research/nlpl/opus-tools/scripts/admin/generate-website.pl
-MAKEHTML   = ${TOOLS}/public/opus-tools/scripts/admin/generate-website.pl
+# MAKEHTML   = ${TOOLS}/public/opus-tools/scripts/admin/generate-website.pl
+MAKEHTML   = opus-make-website
+
 TAB2TMX    = ${UPLUGHOME}/tools/tab2tmx
 OPUS2MOSES = $(UPLUGHOME)/tools/xces2moses
 

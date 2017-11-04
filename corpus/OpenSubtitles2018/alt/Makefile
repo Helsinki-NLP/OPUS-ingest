@@ -17,6 +17,10 @@ MOPCT   = $(patsubst %.xml.gz,${CORPUSHTML}/%.txt.zip,$(wildcard *.pct.xml.gz))
 MOSPELL = $(patsubst %.xml.gz,${CORPUSHTML}/%.txt.zip,$(wildcard *.spell.xml.gz))
 MOOTHER = $(patsubst %.xml.gz,${CORPUSHTML}/%.txt.zip,$(wildcard *.other.xml.gz))
 
+CES      = $(wildcard *.xml.gz)
+CES_INFO = $(patsubst %.xml.gz,../xml/%.info,${CES})
+CES_PUB  = $(patsubst %,${CORPUSHTML}/%,${CES})
+
 
 TAB2TMX    = ${UPLUGHOME}/tools/tab2tmx
 OPUS2MOSES = $(UPLUGHOME)/tools/xces2moses
@@ -61,6 +65,13 @@ all:
 	  ${MAKE} LANGUAGE=$$l align; \
 	done
 	${MAKE} remove_empty remove_empty_align remove_empty_dir
+
+## create count files
+ces_info: ${CES_INFO}
+
+## publish data files
+publish: ${CES_INFO} ${CES_PUB}
+	opus-refresh-info ${CORPUS}
 
 
 pack-log:
@@ -412,3 +423,22 @@ ${CORPUSHTML}/%.txt.zip: %.xml.gz
 	  mv ${CORPUS}.$$P.$$T.tmp ${CORPUS}.$$P.$$T; \
 	  zip $@ ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; \
 	  rm -f ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; )
+
+
+${CES_INFO}: ../xml/%.info: %.xml.gz
+	zgrep 'fromDoc' $< | wc -l > $@
+	zgrep 'xtargets' $< | wc -l >> $@
+	( zgrep 'fromDoc' $< | \
+	  tr ' ' "\n" | grep 'fromDoc' | cut -f2 -d '"' |\
+	  xargs zcat | \
+	  grep '</w>' | wc -l >> $@ )
+	( zgrep 'toDoc' $< | \
+	  tr ' ' "\n" | grep 'toDoc' | cut -f2 -d '"' |\
+	  xargs zcat | \
+	  grep '</w>' | wc -l >> $@ )
+
+
+${CES_PUB}: ${CORPUSHTML}/%: %
+	-mv $< $@
+	-ln -s ${subst ${OPUSHOME},../../..,$@} $<
+
