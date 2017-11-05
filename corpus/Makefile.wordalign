@@ -47,10 +47,10 @@
 #--------------------------------------------------------------------
 
 ifndef SRC
-  SRC = en
+  SRC = xx
 endif
 ifndef TRG
-  TRG = fr
+  TRG = yy
 endif
 
 ifndef LANGPAIR
@@ -154,6 +154,9 @@ TRUECASER    = $(patsubst %,${CORPUSWORDALIGN}/truecaser/%, ${LANGUAGES})
 
 LMTEXT = $(patsubst %,${CORPUSWORDALIGN}/lm/${CORPUS}.%.gz, ${LANGUAGES})
 LMRAWTEXT = $(patsubst %,${CORPUSWORDALIGN}/lm/${CORPUS}.raw.%.gz, ${LANGUAGES})
+
+DICFILES = $(patsubst %/model/phrase-table-filtered.gz,${CORPUSHTML}/dic/%.dic.gz,\
+		$(wildcard */model/phrase-table-filtered.gz))
 
 
 .PHONY: all-wordalign wordalign-all
@@ -329,14 +332,14 @@ wordalign-align: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
 wordalign-pt: ${SRC}-${TRG}/model/phrase-table.gz
 
 .PHONY: wordalign-filter
-wordalign-filter: ${SRC}-${TRG}/model/phrase-table-filtered.gz
+wordalign-filter: ${SRC}-${TRG}/model/phrase-table-filtered.gz ${CORPUSHOME}/dic ${CORPUSHTML}/dic/${SRC}-${TRG}.dic.gz
 	rm -f ${SRC}-${TRG}/model/phrase-table.gz
 
 .PHONY: wordalign
-wordalign: ${SRC}-${TRG}/model/phrase-table-filtered.gz
+wordalign: ${SRC}-${TRG}/model/phrase-table-filtered.gz ${CORPUSHOME}/dic ${CORPUSHTML}/dic/${SRC}-${TRG}.dic.gz
 
-
-
+.PHONY: dictionaries
+dictionaries: $(DICFILES)
 
 .PHONY: all-monolingual all-raw-monolingual
 all-monolingual: ${LMTEXT}
@@ -672,3 +675,20 @@ filter-phrase-table: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 # 	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 2,$(subst -, ,$(subst /, ,$@)))2.gz > $@; \
 # 	fi
 # 	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
+
+
+
+${CORPUSHTML}/dic/%.dic.gz: | %/model/phrase-table-filtered.gz ${CORPUSHOME}/dic
+	mkdir -p ${dir $@}
+	zcat ${firstword $|} |\
+	perl ${OPUSTOOLS}/phrase2dic.pl \
+	    -s $(word 1,$(subst -, ,$(subst ., ,$@))) \
+	    -t $(word 2,$(subst -, ,$(subst ., ,$@))) |\
+	gzip -c > $@
+
+${CORPUSHOME}/dic: ${CORPUSHTML}/dic
+	if [ -d $@ ]; then mv -f $@ $@.old; fi
+	ln -s $< $@
+
+${CORPUSHTML}/dic:
+	mkdir -p $@

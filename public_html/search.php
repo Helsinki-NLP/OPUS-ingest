@@ -387,7 +387,7 @@ function print_resource($corpus,$src,$trg,$resource){
     echo '</td>';
 
     // dictionary files
-    $dicfile = $corpus.'/dic/'.$src.'-'.$trg.'.dic';
+    $dicfile = $corpus.'/dic/'.$src.'-'.$trg.'.dic.gz';
     echo '<td>';
     if (file_exists($opusdownloads.$dicfile)){
       $link = 'download.php?f='.urlencode($dicfile);

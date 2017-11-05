@@ -79,6 +79,7 @@ alg_samples: ${ALG_SAMPLES}
 
 ## create count files
 ces_info: ${CES_INFO}
+	echo ${CES_INFO}
 
 
 pack-log:
