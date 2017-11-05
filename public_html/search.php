@@ -74,7 +74,7 @@ function show_resources($src,$trg,$minsize='all'){
     $trglangs = array($trg => $trg);
   }
 
-  table_header();  
+  table_header($src,$trg);  
   foreach ($trglangs as $trg => $TrgName){
     print_resources($src,$trg,$minsize);
   }
@@ -83,7 +83,7 @@ function show_resources($src,$trg,$minsize='all'){
 
 
 
-function table_header(){
+function table_header($src,$trg){
 
   global $TotalDocs,$TotalLinks,$TotalSrcTok,$TotalTrgTok,
     $TotalTmxLinks,$TotalTxtLinks;
@@ -92,9 +92,11 @@ function table_header(){
   echo "<tr><th>corpus</th>";
   echo "<th>doc's</th>";
   echo "<th>sent's</th>";
-  echo "<th>src tokens</th>";
-  echo "<th>trg tokens</th>";
-  echo "<th>XCES/XML</th><th>raw</th><th>TMX</th><th>Moses</th><th>mono</th><th>raw</th>";
+  echo "<th>$src tokens</th><th>";
+  if ( $src != $trg ){
+     echo "$trg tokens";
+  }
+  echo "</th><th>XCES/XML</th><th>raw</th><th>TMX</th><th>Moses</th><th>mono</th><th>raw</th>";
   echo "<th>ud</th><th>alg</th><th>dic</th><th>freq</th>";
   echo "<th></th><th></th><th>other files</th></tr>";
 
@@ -115,9 +117,11 @@ function table_tail(){
   echo '<tr><th><i>total</i></th>';
   echo "<th align='right'>$TotalDocs</td>";
   echo "<th align='right'>".pretty_number($TotalLinks)."</th>";
-  echo "<th align='right'>".pretty_number($TotalSrcTok)."</th>";
-  echo "<th align='right'>".pretty_number($TotalTrgTok)."</th>";
-  echo "<th align='right'>".pretty_number($TotalLinks)."</th>";
+  echo "<th align='right'>".pretty_number($TotalSrcTok)."</th><th align='right'>";
+  if ($TotalTrgTok > 0){
+    echo pretty_number($TotalTrgTok);
+  }
+  echo "</th><th align='right'>".pretty_number($TotalLinks)."</th>";
   echo '<th></th>';
   echo "<th align='right'>".pretty_number($TotalTmxLinks)."</th>";
   echo "<th align='right'>".pretty_number($TotalTxtLinks)."</th>";
@@ -210,26 +214,28 @@ function print_resource($corpus,$src,$trg,$resource){
 	$title = pretty_number($nrSrcTok)." source language tokens";
 	$link = 'download.php?f='.urlencode($parts[1]);
 	$ResourceHtml[$format].='<a href="'.$link.'" title="'.$title.'">';
-	$ResourceHtml[$format].=$src."</a>&nbsp;";
+	$ResourceHtml[$format].=$src."</a>";
 
 	$rawsrc = preg_replace('/\.tar\.gz/','.raw.tar.gz',$parts[1]);
 	if (file_exists($opusdownloads.$rawsrc)){
 	  $link = 'download.php?f='.urlencode($rawsrc);
 	  $ResourceHtml['raw']='<a href="'.$link.'" title="'.$title.'">';
-	  $ResourceHtml['raw'].=$src."</a>&nbsp;";
+	  $ResourceHtml['raw'].=$src."</a>";
 	}
 
-	$nrTrgTok=$parts[6];
-	$title = pretty_number($nrTrgTok)." target language tokens";
-	$link = 'download.php?f='.urlencode($parts[2]);
-	$ResourceHtml[$format].='<a href="'.$link.'" title="'.$title.'">';
-	$ResourceHtml[$format].=$trg."</a>";
+	if ( $src != $trg ){
+	  $nrTrgTok=$parts[6];
+	  $title = pretty_number($nrTrgTok)." target language tokens";
+	  $link = 'download.php?f='.urlencode($parts[2]);
+	  $ResourceHtml[$format].='&nbsp;<a href="'.$link.'" title="'.$title.'">';
+	  $ResourceHtml[$format].=$trg."</a>";
 
-	$rawtrg = preg_replace('/\.tar\.gz/','.raw.tar.gz',$parts[2]);
-	if (file_exists($opusdownloads.$rawtrg)){
-	  $link = 'download.php?f='.urlencode($rawtrg);
-	  $ResourceHtml['raw'].='<a href="'.$link.'" title="'.$title.'">';
-	  $ResourceHtml['raw'].=$trg."</a>";
+	  $rawtrg = preg_replace('/\.tar\.gz/','.raw.tar.gz',$parts[2]);
+	  if (file_exists($opusdownloads.$rawtrg)){
+	     $link = 'download.php?f='.urlencode($rawtrg);
+	     $ResourceHtml['raw'].='&nbsp;<a href="'.$link.'" title="'.$title.'">';
+	     $ResourceHtml['raw'].=$trg."</a>";
+	  }
 	}
       }
 
@@ -324,9 +330,11 @@ function print_resource($corpus,$src,$trg,$resource){
       $link = 'download.php?f='.urlencode($monobase.$src.'.gz');
       echo '<a href="'.$link.'" title="tokenized '.$src.'">'.$src."</a>&nbsp;";
     }
-    if (file_exists($opusdownloads.$monobase.$trg.'.gz')){
-      $link = 'download.php?f='.urlencode($monobase.$trg.'.gz');
-      echo '<a href="'.$link.'" title="tokenized '.$trg.'">'.$trg."</a>&nbsp;";
+    if ( $src != $trg ){
+       if (file_exists($opusdownloads.$monobase.$trg.'.gz')){
+       	  $link = 'download.php?f='.urlencode($monobase.$trg.'.gz');
+      	  echo '<a href="'.$link.'" title="tokenized '.$trg.'">'.$trg."</a>&nbsp;";
+       }
     }
     echo '</td>';
     $monobase = $corpus.'/mono/'.$corpus.'.raw.';
@@ -335,9 +343,11 @@ function print_resource($corpus,$src,$trg,$resource){
       $link = 'download.php?f='.urlencode($monobase.$src.'.gz');
       echo '<a href="'.$link.'" title="tokenized '.$src.'">'.$src."</a>&nbsp;";
     }
-    if (file_exists($opusdownloads.$monobase.$trg.'.gz')){
-      $link = 'download.php?f='.urlencode($monobase.$trg.'.gz');
-      echo '<a href="'.$link.'" title="tokenized '.$trg.'">'.$trg."</a>&nbsp;";
+    if ( $src != $trg ){
+       if (file_exists($opusdownloads.$monobase.$trg.'.gz')){
+       	  $link = 'download.php?f='.urlencode($monobase.$trg.'.gz');
+      	  echo '<a href="'.$link.'" title="tokenized '.$trg.'">'.$trg."</a>&nbsp;";
+       }
     }
     echo '</td>';
 
@@ -347,10 +357,12 @@ function print_resource($corpus,$src,$trg,$resource){
       $link = 'download.php?f='.urlencode($srcparsed);
       echo '<a href="'.$link.'" title="parsed '.$src.'">'.$src."</a>&nbsp;";
     }
-    $trgparsed = $corpus.'/'.$trg.'.parsed.tar.gz';
-    if (file_exists($opusdownloads.$trgparsed)){
-      $link = 'download.php?f='.urlencode($trgparsed);
-      echo '<a href="'.$link.'" title="parsed '.$trg.'">'.$trg."</a>&nbsp;";
+    if ( $src != $trg ){
+       $trgparsed = $corpus.'/'.$trg.'.parsed.tar.gz';
+       if (file_exists($opusdownloads.$trgparsed)){
+       	  $link = 'download.php?f='.urlencode($trgparsed);
+      	  echo '<a href="'.$link.'" title="parsed '.$trg.'">'.$trg."</a>&nbsp;";
+       }
     }
     /*
     $truedir = $corpus.'/wordalign/truecaser/';
@@ -374,7 +386,6 @@ function print_resource($corpus,$src,$trg,$resource){
     }
     echo '</td>';
 
-
     // dictionary files
     $dicfile = $corpus.'/dic/'.$src.'-'.$trg.'.dic';
     echo '<td>';
@@ -391,9 +402,11 @@ function print_resource($corpus,$src,$trg,$resource){
       $link = 'download.php?f='.urlencode($freqbase.$src.'.gz');
       echo '<a href="'.$link.'" title="lowercased frequencies '.$src.'">'.$src."</a>&nbsp;";
     }
-    if (file_exists($opusdownloads.$freqbase.$trg.'.gz')){
-      $link = 'download.php?f='.urlencode($freqbase.$trg.'.gz');
-      echo '<a href="'.$link.'" title="lowercased frequencies '.$trg.'">'.$trg."</a>&nbsp;";
+    if ( $src != $trg ){
+       if (file_exists($opusdownloads.$freqbase.$trg.'.gz')){
+       	  $link = 'download.php?f='.urlencode($freqbase.$trg.'.gz');
+      	  echo '<a href="'.$link.'" title="lowercased frequencies '.$trg.'">'.$trg."</a>&nbsp;";
+       }
     }
     echo '</td>';
 
@@ -427,9 +440,18 @@ function print_resource($corpus,$src,$trg,$resource){
     // intra-lingual links with different categories
     $ext = array( 'insert', 'pct' , 'spell', 'other');     
     foreach( $ext as $e ) {
-        $altlinks = $corpus.'/'.$src.'-'.$trg.'.'.$e.'.txt.zip';
+        $altlinks = $corpus.'/'.$src.'-'.$trg.'.'.$e.'.xml.gz';
+        $alttmx   = $corpus.'/'.$src.'-'.$trg.'.'.$e.'.tmx.gz';
+        $altmoses = $corpus.'/'.$src.'-'.$trg.'.'.$e.'.txt.zip';
    	if (file_exists($opusdownloads.$altlinks)){
-      	   echo "[<a rel='nofollow' href='$altlinks'>$e</a>]";
+      	   echo "[<a rel='nofollow' href='$altlinks'>$e</a>";
+   	   if (file_exists($opusdownloads.$alttmx)){
+      	      echo " <a rel='nofollow' href='$alttmx'>tmx</a>";
+	   }
+   	   if (file_exists($opusdownloads.$altmoses)){
+      	      echo " <a rel='nofollow' href='$altmoses'>txt</a>";
+	   }
+	   echo "]";
     	}
     }
 
