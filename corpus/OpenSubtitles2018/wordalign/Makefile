@@ -20,6 +20,8 @@ failed = es-pl  fr-pl  he-pt     hu-nl  it-ru  pt_br-ru  ro-tr\
 	fr-pl  fr-tr  hr-ro     it-ru  pl-pt  ro-sl
 
 fix:
-	for l in ${failed}; do \
-	  make LANGPAIR=$$l submit-wordalign-align;\
+	for l in $(sort ${failed}); do \
+	  rm -fr ../../../download/OpenSubtitles2018/$$l; \
+	  rm -f $$l; \
+	  make LANGPAIR=$$l submit-wordalign;\
 	done

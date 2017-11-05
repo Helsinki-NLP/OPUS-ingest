@@ -21,6 +21,9 @@ CES      = $(wildcard *.xml.gz)
 CES_INFO = $(patsubst %.xml.gz,../xml/%.info,${CES})
 CES_PUB  = $(patsubst %,${CORPUSHTML}/%,${CES})
 
+## sample from "other"
+ALG_SAMPLES = $(patsubst %.other.xml.gz,${CORPUSPUB}/%_sample.html, ${wildcard *.other.xml.gz})
+
 
 TAB2TMX    = ${UPLUGHOME}/tools/tab2tmx
 OPUS2MOSES = $(UPLUGHOME)/tools/xces2moses
@@ -66,12 +69,16 @@ all:
 	done
 	${MAKE} remove_empty remove_empty_align remove_empty_dir
 
-## create count files
-ces_info: ${CES_INFO}
 
 ## publish data files
 publish: ${CES_INFO} ${CES_PUB}
 	opus-refresh-info ${CORPUS}
+
+.PHONY: alg_samples
+alg_samples: ${ALG_SAMPLES}
+
+## create count files
+ces_info: ${CES_INFO}
 
 
 pack-log:
@@ -442,3 +449,14 @@ ${CES_PUB}: ${CORPUSHTML}/%: %
 	-mv $< $@
 	-ln -s ${subst ${OPUSHOME},../../..,$@} $<
 
+
+# -N '\/0\/' is used to filter out some strange files in OpenSubtitles2012
+# which would be used for many sample files (year = 0)
+# (they look messy and should actually be removed from the corpus)
+
+${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: %.other.xml.gz
+	@mkdir -p ${dir $@}
+	$(UPLUGTOOLS)/uplug-readalign \
+		-h -m 100 \
+		-N '\/(0|11.*)\/' \
+	$< > $@
