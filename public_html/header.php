@@ -21,7 +21,7 @@
       [<a href="/MultiUN.php">MultiUN</a>] 
       [<a href="News-Commentary.php">NCv9</a>/<a href="News-Commentary11.php">v11</a>]
       [<a href="/OpenOffice.php">OO</a>/<a href="/OpenOffice3.php">OO3</a>] 
-      [<a href="/OpenSubtitles.php">subs<a>/<a href="/OpenSubtitles2012.php">12</a>/<a href="/OpenSubtitles2013.php">13</a>/<a href="/OpenSubtitles2016.php">16</a>/<a href="/OpenSubtitles2016.php">18</a>]
+      [<a href="/OpenSubtitles.php">subs<a>/<a href="/OpenSubtitles2012.php">12</a>/<a href="/OpenSubtitles2013.php">13</a>/<a href="/OpenSubtitles2016.php">16</a>/<a href="/OpenSubtitles2018.php">18</a>]
       [<a href="/ParCor">ParCor</a>]
       [<a href="/PHP.php">PHP</a>]
       [<a href="/SETIMES2.php">SETIMES</a>] 
