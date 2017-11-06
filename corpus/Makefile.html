@@ -102,13 +102,19 @@ ifndef CITENOTE
   CITENOTE=Please <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J\&ouml;rg Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)<br/>
 endif
 
+## additional information about the downloads
+
+ifndef DOWNLOADINFO
+  DOWNLOADINFO=<p>Below you can download data files for all language pairs in different formats and with different kind of annotation (if available). You can click on the various links as explained below. There are additional packages that are not listed here but become available if you search for resources with the form on the <a href="/index.php">top-level website of OPUS</a>. Select the language pair that you are interested in and the search result will list all resources that are available for that language pair. Please, use that service if you want to get most out of OPUS!</p>
+endif
+
 
 ${OPUSPUB}/${CORPUS}.php: ${PACKAGES} \
 			${CORPUS_SAMPLES} ${ALG_SAMPLES} \
 			${LANG_INFO} ${CES_INFO} ${TXT_INFO} ${TMX_INFO}
 	mkdir -p $(shell dirname $@)
 	${MAKEHTML} -e $(ALGEXT:.gz=) -o ${OPUSHOME} ${CORPUS} |\
-	sed -e 's#<h3>Download</h3>#<h3>Download</h3>${EXTRAHTML}#' \
+	sed -e 's#<h3>Download</h3>#<h3>Download</h3>${DOWNLOADINFO}${EXTRAHTML}#' \
 	    -e 's#<h3>Download</h3>#${CITENOTE}<h3>Download</h3>#' \
 	    -e 's#<h1>${CORPUS}${VERSION}</h1>#<h1>${CORPUS}</h1>#' \
 	    -e 's#<h1>${CORPUS}</h1>#<h1>${CORPUS}</h1>${SRCHTML}#' > $@

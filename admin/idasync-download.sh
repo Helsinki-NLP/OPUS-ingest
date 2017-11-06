@@ -17,9 +17,6 @@ cd ${SLURM_SUBMIT_DIR:-.}
 pwd
 echo "Starting at `date`"
 
-## uncomment if you want to sync the whole download dir (this takes forever!)
-# iput_wrapper -c -l /proj/nlpl/corpora/OPUS/download  -r /ida/sa/clarin/corpora/OPUS
-
 
 SRCDIR=/proj/nlpl/corpora/OPUS/download
 TRGDIR=/ida/sa/clarin/corpora/OPUS
@@ -30,7 +27,7 @@ CORPORA="Books DGT DOGC EMEA EUbookshop \
     Europarl2 Europarl3-clean Europarl \
     hrenWaC JRC-Acquis \
     MBS MultiUN News-Commentary11 OfisPublik OpenOffice3 \
-    OpenSubtitles OpenSubtitles2016 \
+    OpenSubtitles OpenSubtitles2016 OpenSubtitles2018 \
     RF Tanzil TED2013 TedTalks TEP \
     UN Wikipedia WikiSource WMT-News"
 
@@ -39,12 +36,6 @@ CORPORA="Books DGT DOGC EMEA EUbookshop \
 TARCORPORA="ECB EUconst GlobalVoices GNOME KDE4 KDEdoc \
             OpenSubtitles2011 OpenSubtitles2012 OpenSubtitles2013 OpenSubtitles2015 \
             Tatoeba PHP Ubuntu"
-
-
-## other things that we want to store
-
-OTHER="DiscoMT2015 DiscoMT2016 EACL2012"
-
 
 
 for c in ${TARCORPORA}; do
@@ -65,18 +56,6 @@ for c in ${CORPORA}; do
     fi
     if [ -d "$SRCDIR/$c" ]; then
 	iput_wrapper -c -l $SRCDIR/$c  -r $TRGDIR/$c
-    fi
-done
-
-
-for c in ${OTHER}; do
-    if [ -f "$SRCDIR/$c.tar.gz" ]; then
-	iput_wrapper -v -c -l $SRCDIR/$c.tar.gz  -r $TRGDIR
-    elif [ -d "$SRCDIR/$c" ]; then
-	echo "packing $c into $c.tar ..."
-	tar -C $SRCDIR -cf $c.tar $c
-	iput_wrapper -c -l $c.tar  -r $TRGDIR
-	rm -f $c.tar
     fi
 done
 

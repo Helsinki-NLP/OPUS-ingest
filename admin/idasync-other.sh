@@ -17,32 +17,30 @@ cd ${SLURM_SUBMIT_DIR:-.}
 pwd
 echo "Starting at `date`"
 
-## uncomment if you want to sync the whole download dir (this takes forever!)
-# iput_wrapper -c -l /proj/nlpl/corpora/OPUS/download  -r /ida/sa/clarin/corpora/OPUS
+## some additional data sets (mainly for backup purposes)
+## - source data for various corpora
+## - incoming data
+## - html files from the web server
+## - various tools
+## - trac snapshots (wiki page)
 
-SRCDIR=/proj/nlpl/corpora/OPUS/download
+SRCDIR=/proj/nlpl/corpora/OPUS
 TRGDIR=/ida/sa/clarin/corpora/OPUS
 
-## other things that we want to store
 
-OTHER="DiscoMT2015 DiscoMT2016 EACL2012"
+iput_wrapper -c -l $SRCDIR/data  -r $TRGDIR/OPUS-data
+
+OTHER="img incoming public_html tools trac"
 
 for c in ${OTHER}; do
     if [ -f "$SRCDIR/$c.tar.gz" ]; then
 	iput_wrapper -v -c -l $SRCDIR/$c.tar.gz  -r $TRGDIR
     elif [ -d "$SRCDIR/$c" ]; then
-	echo "packing $c into $c.tar ..."
-	tar -C $SRCDIR -cf $c.tar $c
-	iput_wrapper -c -l $c.tar  -r $TRGDIR
-	rm -f $c.tar
+	echo "packing $c into OPUS-$c.tar ..."
+	tar -C $SRCDIR -czf OPUS-$c.tar.gz $c
+	iput_wrapper -c -l OPUS-$c.tar.gz  -r $TRGDIR
+	rm -f OPUS-$c.tar.gz
     fi
 done
-
-
-## some additional data sets
-## - source data for various corpora
-
-iput_wrapper -c -l /proj/nlpl/corpora/OPUS/data  -r $TRGDIR/OPUS-data
-
 
 echo "Finishing at `date`"

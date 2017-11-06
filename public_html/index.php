@@ -30,6 +30,8 @@
     <h3>Latest News</h3>
 
     <ul>
+    <li>2017-11-06: New version: <a href="OpenSubtitles2018.php">OpenSubtitles2018</a></li>
+    <li>2017-11-01: New server location: <a href="http://opus.nlpl.eu">http://opus.nlpl.eu</a></li>
     <li>2016-01-08: New version: <a href="OpenSubtitles2016.php">OpenSubtitles2016</a></li>
     <li>2015-10-15: New versions of <a href="/TED2013.php">TED2013</a>, <a href="/News-Commentary.php">NCv9</a></li>
     <li>2014-10-24: New: <a href="/JRC-Acquis.php">JRC-Acquis</a></li>
@@ -235,6 +237,8 @@
 
           <li><a href="OpenSubtitles2013.php">OpenSubtitles2013</a> - opensubtitles.org 2013 (extending OpenSubtitles2012) <!--(<a href="http://opus.lingfil.uu.se/download.php?f=OpenSubtitles2012/OpenSubtitles2012.tar.gz">OpenSubtitles2012.tar.gz</a> - 123 GB)--></li>
           <li><a href="OpenSubtitles2016.php">OpenSubtitles2016</a> - opensubtitles.org 2016 (including all previous data files)</li>
+          <li><a href="OpenSubtitles2018.php">OpenSubtitles2018</a> - opensubtitles.org 2018 (including all previous data files)</li>
+
 
           <li><a href="PHP.php">PHP - the PHP manual corpus</a> ( <a href="download.php?f=PHP/PHP.tar.gz" rel="nofollow">PHP.tar.gz</a> - 172 MB)</li>
 	  <li><a href="ParCor">ParCor - A Parallel Pronoun-Coreference Corpus</a></li>
