@@ -24,33 +24,33 @@
 <th></th>
 <td><a rel="nofollow" title="Arabic-English (sample file)" href="UN/ar-en_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Spanish (sample file)" href="UN/ar-es_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-French (sample file)" href="UN/ar-fr_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Russian (sample file)" href="UN/ar-ru_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Chinese (sample file)" href="UN/ar-zh_sample.html">view</a></td><th>ar</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=UN/en.tar.gz">en</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (74.1k links, 7.0M tokens)" href="download.php?f=UN/xml/ar-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (74.1k links, 7.0M tokens)" href="download.php?f=UN/ar-en.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="English-Spanish (sample file)" href="UN/en-es_sample.html">view</a></td><td><a rel="nofollow" title="English-French (sample file)" href="UN/en-fr_sample.html">view</a></td><td><a rel="nofollow" title="English-Russian (sample file)" href="UN/en-ru_sample.html">view</a></td><td><a rel="nofollow" title="English-Chinese (sample file)" href="UN/en-zh_sample.html">view</a></td><th>en</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=UN/es.tar.gz">es</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Arabic' (74.1k links, 7.3M tokens)" href="download.php?f=UN/xml/ar-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (74.1k links, 7.6M tokens)" href="download.php?f=UN/xml/en-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Arabic' (74.1k links, 7.3M tokens)" href="download.php?f=UN/ar-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (74.1k links, 7.6M tokens)" href="download.php?f=UN/en-es.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Spanish-French (sample file)" href="UN/es-fr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Russian (sample file)" href="UN/es-ru_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Chinese (sample file)" href="UN/es-zh_sample.html">view</a></td><th>es</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=UN/fr.tar.gz">fr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'French-Arabic' (74.1k links, 6.8M tokens)" href="download.php?f=UN/xml/ar-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English' (74.1k links, 7.1M tokens)" href="download.php?f=UN/xml/en-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (74.1k links, 7.4M tokens)" href="download.php?f=UN/xml/es-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Arabic' (74.1k links, 6.8M tokens)" href="download.php?f=UN/ar-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English' (74.1k links, 7.1M tokens)" href="download.php?f=UN/en-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (74.1k links, 7.4M tokens)" href="download.php?f=UN/es-fr.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="French-Russian (sample file)" href="UN/fr-ru_sample.html">view</a></td><td><a rel="nofollow" title="French-Chinese (sample file)" href="UN/fr-zh_sample.html">view</a></td><th>fr</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=UN/ru.tar.gz">ru</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Arabic' (74.1k links, 6.7M tokens)" href="download.php?f=UN/xml/ar-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (74.1k links, 7.0M tokens)" href="download.php?f=UN/xml/en-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (74.1k links, 7.3M tokens)" href="download.php?f=UN/xml/es-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (74.1k links, 6.7M tokens)" href="download.php?f=UN/xml/fr-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Arabic' (74.1k links, 6.7M tokens)" href="download.php?f=UN/ar-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (74.1k links, 7.0M tokens)" href="download.php?f=UN/en-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (74.1k links, 7.3M tokens)" href="download.php?f=UN/es-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (74.1k links, 6.7M tokens)" href="download.php?f=UN/fr-ru.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Russian-Chinese (sample file)" href="UN/ru-zh_sample.html">view</a></td><th>ru</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=UN/zh.tar.gz">zh</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Arabic' (74.1k links, 4.5M tokens)" href="download.php?f=UN/xml/ar-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (74.1k links, 4.8M tokens)" href="download.php?f=UN/xml/en-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (74.1k links, 5.1M tokens)" href="download.php?f=UN/xml/es-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-French' (74.1k links, 4.6M tokens)" href="download.php?f=UN/xml/fr-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Russian' (74.1k links, 4.5M tokens)" href="download.php?f=UN/xml/ru-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Arabic' (74.1k links, 4.5M tokens)" href="download.php?f=UN/ar-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (74.1k links, 4.8M tokens)" href="download.php?f=UN/en-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (74.1k links, 5.1M tokens)" href="download.php?f=UN/es-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-French' (74.1k links, 4.6M tokens)" href="download.php?f=UN/fr-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Russian' (74.1k links, 4.5M tokens)" href="download.php?f=UN/ru-zh.xml.gz">ces</a></td>
 <th></th>
 <th>zh</th></tr>
 <tr><th></th>

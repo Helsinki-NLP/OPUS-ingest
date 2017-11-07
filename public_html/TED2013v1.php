@@ -37,27 +37,27 @@
 <th></th>
 <td><a rel="nofollow" title="German-English (sample file)" href="TED2013/de-en_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=TED2013/de.raw.tar.gz">de</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=TED2013/en.tar.gz">en</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (0.2M links, 5.1M tokens)" href="download.php?f=TED2013/xml/ar-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-German' (0.1M links, 5.2M tokens)" href="download.php?f=TED2013/xml/de-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (0.2M links, 5.1M tokens)" href="download.php?f=TED2013/ar-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-German' (0.1M links, 5.2M tokens)" href="download.php?f=TED2013/de-en.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="English-Spanish (sample file)" href="TED2013/en-es_sample.html">view</a></td><td><a rel="nofollow" title="English-Persian (sample file)" href="TED2013/en-fa_sample.html">view</a></td><td><a rel="nofollow" title="English-French (sample file)" href="TED2013/en-fr_sample.html">view</a></td><td><a rel="nofollow" title="English-Italian (sample file)" href="TED2013/en-it_sample.html">view</a></td><td><a rel="nofollow" title="English-Dutch (sample file)" href="TED2013/en-nl_sample.html">view</a></td><td><a rel="nofollow" title="English-Polish (sample file)" href="TED2013/en-pl_sample.html">view</a></td><td><a rel="nofollow" title="English-Portuguese (sample file)" href="TED2013/en-pt_sample.html">view</a></td><td><a rel="nofollow" title="English-Romanian (sample file)" href="TED2013/en-ro_sample.html">view</a></td><td><a rel="nofollow" title="English-Russian (sample file)" href="TED2013/en-ru_sample.html">view</a></td><td><a rel="nofollow" title="English-Slovenian (sample file)" href="TED2013/en-sl_sample.html">view</a></td><td><a rel="nofollow" title="English-Turkish (sample file)" href="TED2013/en-tr_sample.html">view</a></td><td><a rel="nofollow" title="English-Chinese (sample file)" href="TED2013/en-zh_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=TED2013/en.raw.tar.gz">en</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=TED2013/es.tar.gz">es</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (0.2M links, 5.7M tokens)" href="download.php?f=TED2013/xml/en-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (0.2M links, 5.7M tokens)" href="download.php?f=TED2013/en-es.xml.gz">ces</a></td>
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=TED2013/es.raw.tar.gz">es</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=TED2013/fa.tar.gz">fa</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Persian-English' (81.9k links, 3.2M tokens)" href="download.php?f=TED2013/xml/en-fa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Persian-English' (81.9k links, 3.2M tokens)" href="download.php?f=TED2013/en-fa.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=TED2013/fa.raw.tar.gz">fa</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=TED2013/fr.tar.gz">fr</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English' (0.2M links, 4.1M tokens)" href="download.php?f=TED2013/xml/en-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English' (0.2M links, 4.1M tokens)" href="download.php?f=TED2013/en-fr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th></th>
@@ -65,7 +65,7 @@
 <tr><th><a rel="nofollow" href="download.php?f=TED2013/it.tar.gz">it</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (0.2M links, 5.5M tokens)" href="download.php?f=TED2013/xml/en-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (0.2M links, 5.5M tokens)" href="download.php?f=TED2013/en-it.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -74,7 +74,7 @@
 <tr><th><a rel="nofollow" href="download.php?f=TED2013/nl.tar.gz">nl</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (0.1M links, 5.3M tokens)" href="download.php?f=TED2013/xml/en-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (0.1M links, 5.3M tokens)" href="download.php?f=TED2013/en-nl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -84,7 +84,7 @@
 <tr><th><a rel="nofollow" href="download.php?f=TED2013/pl.tar.gz">pl</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-English' (0.2M links, 5.0M tokens)" href="download.php?f=TED2013/xml/en-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-English' (0.2M links, 5.0M tokens)" href="download.php?f=TED2013/en-pl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -95,7 +95,7 @@
 <tr><th><a rel="nofollow" href="download.php?f=TED2013/pt.tar.gz">pt</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (0.2M links, 5.7M tokens)" href="download.php?f=TED2013/xml/en-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (0.2M links, 5.7M tokens)" href="download.php?f=TED2013/en-pt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -107,7 +107,7 @@
 <tr><th><a rel="nofollow" href="download.php?f=TED2013/ro.tar.gz">ro</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-English' (0.2M links, 5.8M tokens)" href="download.php?f=TED2013/xml/en-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-English' (0.2M links, 5.8M tokens)" href="download.php?f=TED2013/en-ro.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -120,7 +120,7 @@
 <tr><th><a rel="nofollow" href="download.php?f=TED2013/ru.tar.gz">ru</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (0.1M links, 4.7M tokens)" href="download.php?f=TED2013/xml/en-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (0.1M links, 4.7M tokens)" href="download.php?f=TED2013/en-ru.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -134,7 +134,7 @@
 <tr><th><a rel="nofollow" href="download.php?f=TED2013/sl.tar.gz">sl</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-English' (15.2k links, 0.5M tokens)" href="download.php?f=TED2013/xml/en-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-English' (15.2k links, 0.5M tokens)" href="download.php?f=TED2013/en-sl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -149,7 +149,7 @@
 <tr><th><a rel="nofollow" href="download.php?f=TED2013/tr.tar.gz">tr</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-English' (0.1M links, 4.4M tokens)" href="download.php?f=TED2013/xml/en-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-English' (0.1M links, 4.4M tokens)" href="download.php?f=TED2013/en-tr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -165,7 +165,7 @@
 <tr><th><a rel="nofollow" href="download.php?f=TED2013/zh.tar.gz">zh</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (0.2M links, 3.8M tokens)" href="download.php?f=TED2013/xml/en-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (0.2M links, 3.8M tokens)" href="download.php?f=TED2013/en-zh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>

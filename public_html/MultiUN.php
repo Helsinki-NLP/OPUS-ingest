@@ -30,42 +30,42 @@
 <th></th>
 <td><a rel="nofollow" title="Arabic-German (sample file)" href="MultiUN/ar-de_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-English (sample file)" href="MultiUN/ar-en_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Spanish (sample file)" href="MultiUN/ar-es_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-French (sample file)" href="MultiUN/ar-fr_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Russian (sample file)" href="MultiUN/ar-ru_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Chinese (sample file)" href="MultiUN/ar-zh_sample.html">view</a></td><th>ar</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=MultiUN/de.tar.gz">de</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'German-Arabic' (3,784 aligned documents, 0.2M links, 11.4M tokens)" href="download.php?f=MultiUN/xml/ar-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Arabic' (3,784 aligned documents, 0.2M links, 11.4M tokens)" href="download.php?f=MultiUN/ar-de.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="German-English (sample file)" href="MultiUN/de-en_sample.html">view</a></td><td><a rel="nofollow" title="German-Spanish (sample file)" href="MultiUN/de-es_sample.html">view</a></td><td><a rel="nofollow" title="German-French (sample file)" href="MultiUN/de-fr_sample.html">view</a></td><td><a rel="nofollow" title="German-Russian (sample file)" href="MultiUN/de-ru_sample.html">view</a></td><td><a rel="nofollow" title="German-Chinese (sample file)" href="MultiUN/de-zh_sample.html">view</a></td><th>de</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=MultiUN/en.tar.gz">en</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (67,617 aligned documents, 10.6M links, 552.8M tokens)" href="download.php?f=MultiUN/xml/ar-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-German' (3,750 aligned documents, 0.2M links, 12.0M tokens)" href="download.php?f=MultiUN/xml/de-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (67,617 aligned documents, 10.6M links, 552.8M tokens)" href="download.php?f=MultiUN/ar-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-German' (3,750 aligned documents, 0.2M links, 12.0M tokens)" href="download.php?f=MultiUN/de-en.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="English-Spanish (sample file)" href="MultiUN/en-es_sample.html">view</a></td><td><a rel="nofollow" title="English-French (sample file)" href="MultiUN/en-fr_sample.html">view</a></td><td><a rel="nofollow" title="English-Russian (sample file)" href="MultiUN/en-ru_sample.html">view</a></td><td><a rel="nofollow" title="English-Chinese (sample file)" href="MultiUN/en-zh_sample.html">view</a></td><th>en</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=MultiUN/es.tar.gz">es</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Arabic' (67,567 aligned documents, 10.9M links, 288.5M tokens)" href="download.php?f=MultiUN/xml/ar-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (3,739 aligned documents, 0.2M links, 6.2M tokens)" href="download.php?f=MultiUN/xml/de-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (73,047 aligned documents, 12.2M links, 359.9M tokens)" href="download.php?f=MultiUN/xml/en-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Arabic' (67,567 aligned documents, 10.9M links, 288.5M tokens)" href="download.php?f=MultiUN/ar-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (3,739 aligned documents, 0.2M links, 6.2M tokens)" href="download.php?f=MultiUN/de-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (73,047 aligned documents, 12.2M links, 359.9M tokens)" href="download.php?f=MultiUN/en-es.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Spanish-French (sample file)" href="MultiUN/es-fr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Russian (sample file)" href="MultiUN/es-ru_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Chinese (sample file)" href="MultiUN/es-zh_sample.html">view</a></td><th>es</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=MultiUN/fr.tar.gz">fr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'French-Arabic' (67,523 aligned documents, 10.7M links, 617.0M tokens)" href="download.php?f=MultiUN/xml/ar-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-German' (3,738 aligned documents, 0.2M links, 13.3M tokens)" href="download.php?f=MultiUN/xml/de-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English' (87,480 aligned documents, 14.2M links, 828.4M tokens)" href="download.php?f=MultiUN/xml/en-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (72,681 aligned documents, 12.1M links, 429.8M tokens)" href="download.php?f=MultiUN/xml/es-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Arabic' (67,523 aligned documents, 10.7M links, 617.0M tokens)" href="download.php?f=MultiUN/ar-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-German' (3,738 aligned documents, 0.2M links, 13.3M tokens)" href="download.php?f=MultiUN/de-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English' (87,480 aligned documents, 14.2M links, 828.4M tokens)" href="download.php?f=MultiUN/en-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (72,681 aligned documents, 12.1M links, 429.8M tokens)" href="download.php?f=MultiUN/es-fr.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="French-Russian (sample file)" href="MultiUN/fr-ru_sample.html">view</a></td><td><a rel="nofollow" title="French-Chinese (sample file)" href="MultiUN/fr-zh_sample.html">view</a></td><th>fr</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=MultiUN/ru.tar.gz">ru</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Arabic' (67,529 aligned documents, 11.0M links, 541.0M tokens)" href="download.php?f=MultiUN/xml/ar-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (3,741 aligned documents, 0.2M links, 11.5M tokens)" href="download.php?f=MultiUN/xml/de-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (79,147 aligned documents, 13.0M links, 647.7M tokens)" href="download.php?f=MultiUN/xml/en-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (68,677 aligned documents, 11.6M links, 312.0M tokens)" href="download.php?f=MultiUN/xml/es-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (79,010 aligned documents, 13.0M links, 716.8M tokens)" href="download.php?f=MultiUN/xml/fr-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Arabic' (67,529 aligned documents, 11.0M links, 541.0M tokens)" href="download.php?f=MultiUN/ar-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (3,741 aligned documents, 0.2M links, 11.5M tokens)" href="download.php?f=MultiUN/de-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (79,147 aligned documents, 13.0M links, 647.7M tokens)" href="download.php?f=MultiUN/en-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (68,677 aligned documents, 11.6M links, 312.0M tokens)" href="download.php?f=MultiUN/es-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (79,010 aligned documents, 13.0M links, 716.8M tokens)" href="download.php?f=MultiUN/fr-ru.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Russian-Chinese (sample file)" href="MultiUN/ru-zh_sample.html">view</a></td><th>ru</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=MultiUN/zh.tar.gz">zh</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Arabic' (67,316 aligned documents, 10.9M links, 343.5M tokens)" href="download.php?f=MultiUN/xml/ar-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-German' (3,993 aligned documents, 0.2M links, 7.8M tokens)" href="download.php?f=MultiUN/xml/de-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (67,167 aligned documents, 10.5M links, 368.2M tokens)" href="download.php?f=MultiUN/xml/en-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (67,016 aligned documents, 10.8M links, 105.0M tokens)" href="download.php?f=MultiUN/xml/es-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-French' (67,052 aligned documents, 10.6M links, 431.5M tokens)" href="download.php?f=MultiUN/xml/fr-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Russian' (67,175 aligned documents, 11.2M links, 357.5M tokens)" href="download.php?f=MultiUN/xml/ru-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Arabic' (67,316 aligned documents, 10.9M links, 343.5M tokens)" href="download.php?f=MultiUN/ar-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-German' (3,993 aligned documents, 0.2M links, 7.8M tokens)" href="download.php?f=MultiUN/de-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (67,167 aligned documents, 10.5M links, 368.2M tokens)" href="download.php?f=MultiUN/en-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (67,016 aligned documents, 10.8M links, 105.0M tokens)" href="download.php?f=MultiUN/es-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-French' (67,052 aligned documents, 10.6M links, 431.5M tokens)" href="download.php?f=MultiUN/fr-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Russian' (67,175 aligned documents, 11.2M links, 357.5M tokens)" href="download.php?f=MultiUN/ru-zh.xml.gz">ces</a></td>
 <th></th>
 <th>zh</th></tr>
 <tr><th></th>

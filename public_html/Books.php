@@ -34,7 +34,7 @@
 <th></th>
 <td><a rel="nofollow" title="Catalan-German (sample file)" href="Books/ca-de_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Catalan-English (sample file)" href="Books/ca-en_sample.html">view</a></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Catalan-Hungarian (sample file)" href="Books/ca-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Catalan-Dutch (sample file)" href="Books/ca-nl_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Books/ca.raw.tar.gz">ca</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Books/de.tar.gz">de</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'German-Catalan' (4.6k links, 0.2M tokens)" href="download.php?f=Books/xml/ca-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Catalan' (4.6k links, 0.2M tokens)" href="download.php?f=Books/ca-de.xml.gz">ces</a></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="German-English (sample file)" href="Books/de-en_sample.html">view</a></td><td><a rel="nofollow" title="German-Esperanto (sample file)" href="Books/de-eo_sample.html">view</a></td><td><a rel="nofollow" title="German-Spanish (sample file)" href="Books/de-es_sample.html">view</a></td><td></td><td><a rel="nofollow" title="German-French (sample file)" href="Books/de-fr_sample.html">view</a></td><td><a rel="nofollow" title="German-Hungarian (sample file)" href="Books/de-hu_sample.html">view</a></td><td><a rel="nofollow" title="German-Italian (sample file)" href="Books/de-it_sample.html">view</a></td><td><a rel="nofollow" title="German-Dutch (sample file)" href="Books/de-nl_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="German-Portuguese (sample file)" href="Books/de-pt_sample.html">view</a></td><td><a rel="nofollow" title="German-Russian (sample file)" href="Books/de-ru_sample.html">view</a></td><td></td><th><a rel="nofollow" href="download.php?f=Books/de.raw.tar.gz">de</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Books/el.tar.gz">el</a></th>
@@ -43,91 +43,91 @@
 <th></th>
 <td><a rel="nofollow" title="Greek-English (sample file)" href="Books/el-en_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Greek-Spanish (sample file)" href="Books/el-es_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Greek-French (sample file)" href="Books/el-fr_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Hungarian (sample file)" href="Books/el-hu_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Books/el.raw.tar.gz">el</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Books/en.tar.gz">en</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'English-Catalan' (4.8k links, 0.2M tokens)" href="download.php?f=Books/xml/ca-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-German' (11 aligned documents, 52.3k links, 2.4M tokens)" href="download.php?f=Books/xml/de-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (1.3k links, 80.1k tokens)" href="download.php?f=Books/xml/el-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Catalan' (4.8k links, 0.2M tokens)" href="download.php?f=Books/ca-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-German' (11 aligned documents, 52.3k links, 2.4M tokens)" href="download.php?f=Books/de-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (1.3k links, 80.1k tokens)" href="download.php?f=Books/el-en.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="English-Esperanto (sample file)" href="Books/en-eo_sample.html">view</a></td><td><a rel="nofollow" title="English-Spanish (sample file)" href="Books/en-es_sample.html">view</a></td><td><a rel="nofollow" title="English-Finnish (sample file)" href="Books/en-fi_sample.html">view</a></td><td><a rel="nofollow" title="English-French (sample file)" href="Books/en-fr_sample.html">view</a></td><td><a rel="nofollow" title="English-Hungarian (sample file)" href="Books/en-hu_sample.html">view</a></td><td><a rel="nofollow" title="English-Italian (sample file)" href="Books/en-it_sample.html">view</a></td><td><a rel="nofollow" title="English-Dutch (sample file)" href="Books/en-nl_sample.html">view</a></td><td><a rel="nofollow" title="English-Norwegian (sample file)" href="Books/en-no_sample.html">view</a></td><td><a rel="nofollow" title="English-Polish (sample file)" href="Books/en-pl_sample.html">view</a></td><td><a rel="nofollow" title="English-Portuguese (sample file)" href="Books/en-pt_sample.html">view</a></td><td><a rel="nofollow" title="English-Russian (sample file)" href="Books/en-ru_sample.html">view</a></td><td><a rel="nofollow" title="English-Swedish (sample file)" href="Books/en-sv_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=Books/en.raw.tar.gz">en</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Books/eo.tar.gz">eo</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-German' (2 aligned documents, 1.5k links, 78.5k tokens)" href="download.php?f=Books/xml/de-eo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-German' (2 aligned documents, 1.5k links, 78.5k tokens)" href="download.php?f=Books/de-eo.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-English' (2 aligned documents, 1.6k links, 81.0k tokens)" href="download.php?f=Books/xml/en-eo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-English' (2 aligned documents, 1.6k links, 81.0k tokens)" href="download.php?f=Books/en-eo.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Esperanto-Spanish (sample file)" href="Books/eo-es_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Esperanto-French (sample file)" href="Books/eo-fr_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Hungarian (sample file)" href="Books/eo-hu_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Italian (sample file)" href="Books/eo-it_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Esperanto-Portuguese (sample file)" href="Books/eo-pt_sample.html">view</a></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Books/eo.raw.tar.gz">eo</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Books/es.tar.gz">es</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (6 aligned documents, 29.0k links, 1.4M tokens)" href="download.php?f=Books/xml/de-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Greek' (1.1k links, 73.5k tokens)" href="download.php?f=Books/xml/el-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (18 aligned documents, 97.1k links, 5.0M tokens)" href="download.php?f=Books/xml/en-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Esperanto' (2 aligned documents, 1.8k links, 78.7k tokens)" href="download.php?f=Books/xml/eo-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (6 aligned documents, 29.0k links, 1.4M tokens)" href="download.php?f=Books/de-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Greek' (1.1k links, 73.5k tokens)" href="download.php?f=Books/el-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (18 aligned documents, 97.1k links, 5.0M tokens)" href="download.php?f=Books/en-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Esperanto' (2 aligned documents, 1.8k links, 78.7k tokens)" href="download.php?f=Books/eo-es.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Spanish-Finnish (sample file)" href="Books/es-fi_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-French (sample file)" href="Books/es-fr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Hungarian (sample file)" href="Books/es-hu_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Italian (sample file)" href="Books/es-it_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Dutch (sample file)" href="Books/es-nl_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Norwegian (sample file)" href="Books/es-no_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Spanish-Portuguese (sample file)" href="Books/es-pt_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Russian (sample file)" href="Books/es-ru_sample.html">view</a></td><td></td><th><a rel="nofollow" href="download.php?f=Books/es.raw.tar.gz">es</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Books/fi.tar.gz">fi</a></th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-English' (3.7k links, 0.1M tokens)" href="download.php?f=Books/xml/en-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-English' (3.7k links, 0.1M tokens)" href="download.php?f=Books/en-fi.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Spanish' (3.5k links, 0.1M tokens)" href="download.php?f=Books/xml/es-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Spanish' (3.5k links, 0.1M tokens)" href="download.php?f=Books/es-fi.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Finnish-French (sample file)" href="Books/fi-fr_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Hungarian (sample file)" href="Books/fi-hu_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Finnish-Norwegian (sample file)" href="Books/fi-no_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Polish (sample file)" href="Books/fi-pl_sample.html">view</a></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Books/fi.raw.tar.gz">fi</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Books/fr.tar.gz">fr</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-German' (6 aligned documents, 35.7k links, 1.5M tokens)" href="download.php?f=Books/xml/de-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Greek' (1.3k links, 75.3k tokens)" href="download.php?f=Books/xml/el-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English' (26 aligned documents, 0.1M links, 6.4M tokens)" href="download.php?f=Books/xml/en-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Esperanto' (2 aligned documents, 1.6k links, 82.0k tokens)" href="download.php?f=Books/xml/eo-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (12 aligned documents, 58.4k links, 2.7M tokens)" href="download.php?f=Books/xml/es-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Finnish' (3.6k links, 0.1M tokens)" href="download.php?f=Books/xml/fi-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-German' (6 aligned documents, 35.7k links, 1.5M tokens)" href="download.php?f=Books/de-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Greek' (1.3k links, 75.3k tokens)" href="download.php?f=Books/el-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English' (26 aligned documents, 0.1M links, 6.4M tokens)" href="download.php?f=Books/en-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Esperanto' (2 aligned documents, 1.6k links, 82.0k tokens)" href="download.php?f=Books/eo-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (12 aligned documents, 58.4k links, 2.7M tokens)" href="download.php?f=Books/es-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Finnish' (3.6k links, 0.1M tokens)" href="download.php?f=Books/fi-fr.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="French-Hungarian (sample file)" href="Books/fr-hu_sample.html">view</a></td><td><a rel="nofollow" title="French-Italian (sample file)" href="Books/fr-it_sample.html">view</a></td><td><a rel="nofollow" title="French-Dutch (sample file)" href="Books/fr-nl_sample.html">view</a></td><td><a rel="nofollow" title="French-Norwegian (sample file)" href="Books/fr-no_sample.html">view</a></td><td><a rel="nofollow" title="French-Polish (sample file)" href="Books/fr-pl_sample.html">view</a></td><td><a rel="nofollow" title="French-Portuguese (sample file)" href="Books/fr-pt_sample.html">view</a></td><td><a rel="nofollow" title="French-Russian (sample file)" href="Books/fr-ru_sample.html">view</a></td><td><a rel="nofollow" title="French-Swedish (sample file)" href="Books/fr-sv_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=Books/fr.raw.tar.gz">fr</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Books/hu.tar.gz">hu</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Catalan' (4.9k links, 0.2M tokens)" href="download.php?f=Books/xml/ca-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-German' (10 aligned documents, 53.4k links, 2.3M tokens)" href="download.php?f=Books/xml/de-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Greek' (1.1k links, 68.3k tokens)" href="download.php?f=Books/xml/el-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (25 aligned documents, 0.1M links, 6.4M tokens)" href="download.php?f=Books/xml/en-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Esperanto' (2 aligned documents, 1.7k links, 70.8k tokens)" href="download.php?f=Books/xml/eo-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Spanish' (15 aligned documents, 82.2k links, 3.3M tokens)" href="download.php?f=Books/xml/es-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Finnish' (3.5k links, 0.1M tokens)" href="download.php?f=Books/xml/fi-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-French' (16 aligned documents, 92.4k links, 3.8M tokens)" href="download.php?f=Books/xml/fr-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Catalan' (4.9k links, 0.2M tokens)" href="download.php?f=Books/ca-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-German' (10 aligned documents, 53.4k links, 2.3M tokens)" href="download.php?f=Books/de-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Greek' (1.1k links, 68.3k tokens)" href="download.php?f=Books/el-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (25 aligned documents, 0.1M links, 6.4M tokens)" href="download.php?f=Books/en-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Esperanto' (2 aligned documents, 1.7k links, 70.8k tokens)" href="download.php?f=Books/eo-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Spanish' (15 aligned documents, 82.2k links, 3.3M tokens)" href="download.php?f=Books/es-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Finnish' (3.5k links, 0.1M tokens)" href="download.php?f=Books/fi-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-French' (16 aligned documents, 92.4k links, 3.8M tokens)" href="download.php?f=Books/fr-hu.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Hungarian-Italian (sample file)" href="Books/hu-it_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Dutch (sample file)" href="Books/hu-nl_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Norwegian (sample file)" href="Books/hu-no_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Polish (sample file)" href="Books/hu-pl_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Portuguese (sample file)" href="Books/hu-pt_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Russian (sample file)" href="Books/hu-ru_sample.html">view</a></td><td></td><th><a rel="nofollow" href="download.php?f=Books/hu.raw.tar.gz">hu</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Books/it.tar.gz">it</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-German' (6 aligned documents, 27.9k links, 1.4M tokens)" href="download.php?f=Books/xml/de-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-German' (6 aligned documents, 27.9k links, 1.4M tokens)" href="download.php?f=Books/de-it.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (8 aligned documents, 33.1k links, 1.8M tokens)" href="download.php?f=Books/xml/en-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Esperanto' (2 aligned documents, 1.5k links, 73.6k tokens)" href="download.php?f=Books/xml/eo-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Spanish' (6 aligned documents, 29.7k links, 1.4M tokens)" href="download.php?f=Books/xml/es-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (8 aligned documents, 33.1k links, 1.8M tokens)" href="download.php?f=Books/en-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Esperanto' (2 aligned documents, 1.5k links, 73.6k tokens)" href="download.php?f=Books/eo-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Spanish' (6 aligned documents, 29.7k links, 1.4M tokens)" href="download.php?f=Books/es-it.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (5 aligned documents, 15.3k links, 0.9M tokens)" href="download.php?f=Books/xml/fr-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Hungarian' (7 aligned documents, 31.5k links, 1.4M tokens)" href="download.php?f=Books/xml/hu-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (5 aligned documents, 15.3k links, 0.9M tokens)" href="download.php?f=Books/fr-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Hungarian' (7 aligned documents, 31.5k links, 1.4M tokens)" href="download.php?f=Books/hu-it.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Italian-Dutch (sample file)" href="Books/it-nl_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Italian-Portuguese (sample file)" href="Books/it-pt_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Russian (sample file)" href="Books/it-ru_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Swedish (sample file)" href="Books/it-sv_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=Books/it.raw.tar.gz">it</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Books/nl.tar.gz">nl</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Catalan' (4.7k links, 0.2M tokens)" href="download.php?f=Books/xml/ca-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (2 aligned documents, 16.2k links, 0.6M tokens)" href="download.php?f=Books/xml/de-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Catalan' (4.7k links, 0.2M tokens)" href="download.php?f=Books/ca-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (2 aligned documents, 16.2k links, 0.6M tokens)" href="download.php?f=Books/de-nl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (8 aligned documents, 40.3k links, 2.1M tokens)" href="download.php?f=Books/xml/en-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (8 aligned documents, 40.3k links, 2.1M tokens)" href="download.php?f=Books/en-nl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (6 aligned documents, 33.4k links, 1.7M tokens)" href="download.php?f=Books/xml/es-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (6 aligned documents, 33.4k links, 1.7M tokens)" href="download.php?f=Books/es-nl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (6 aligned documents, 41.2k links, 2.0M tokens)" href="download.php?f=Books/xml/fr-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hungarian' (7 aligned documents, 45.3k links, 1.9M tokens)" href="download.php?f=Books/xml/hu-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (2.4k links, 0.3M tokens)" href="download.php?f=Books/xml/it-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (6 aligned documents, 41.2k links, 2.0M tokens)" href="download.php?f=Books/fr-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hungarian' (7 aligned documents, 45.3k links, 1.9M tokens)" href="download.php?f=Books/hu-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (2.4k links, 0.3M tokens)" href="download.php?f=Books/it-nl.xml.gz">ces</a></td>
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Books/nl.raw.tar.gz">nl</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Books/no.tar.gz">no</a></th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Norwegian-English' (3.7k links, 0.1M tokens)" href="download.php?f=Books/xml/en-no.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Norwegian-English' (3.7k links, 0.1M tokens)" href="download.php?f=Books/en-no.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Norwegian-Spanish' (3.6k links, 0.1M tokens)" href="download.php?f=Books/xml/es-no.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Norwegian-Finnish' (3.6k links, 0.1M tokens)" href="download.php?f=Books/xml/fi-no.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Norwegian-French' (3.7k links, 0.1M tokens)" href="download.php?f=Books/xml/fr-no.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Norwegian-Hungarian' (3.6k links, 0.1M tokens)" href="download.php?f=Books/xml/hu-no.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Norwegian-Spanish' (3.6k links, 0.1M tokens)" href="download.php?f=Books/es-no.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Norwegian-Finnish' (3.6k links, 0.1M tokens)" href="download.php?f=Books/fi-no.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Norwegian-French' (3.7k links, 0.1M tokens)" href="download.php?f=Books/fr-no.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Norwegian-Hungarian' (3.6k links, 0.1M tokens)" href="download.php?f=Books/hu-no.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th></th>
@@ -136,12 +136,12 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-English' (3.0k links, 0.1M tokens)" href="download.php?f=Books/xml/en-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-English' (3.0k links, 0.1M tokens)" href="download.php?f=Books/en-pl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Finnish' (3.0k links, 98.0k tokens)" href="download.php?f=Books/xml/fi-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-French' (3.0k links, 0.1M tokens)" href="download.php?f=Books/xml/fr-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Hungarian' (3.0k links, 0.1M tokens)" href="download.php?f=Books/xml/hu-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Finnish' (3.0k links, 98.0k tokens)" href="download.php?f=Books/fi-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-French' (3.0k links, 0.1M tokens)" href="download.php?f=Books/fr-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Hungarian' (3.0k links, 0.1M tokens)" href="download.php?f=Books/hu-pl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -149,15 +149,15 @@
 <td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Books/pl.raw.tar.gz">pl</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Books/pt.tar.gz">pt</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (1.2k links, 64.5k tokens)" href="download.php?f=Books/xml/de-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (1.2k links, 64.5k tokens)" href="download.php?f=Books/de-pt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (1.4k links, 66.1k tokens)" href="download.php?f=Books/xml/en-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Esperanto' (1.3k links, 63.8k tokens)" href="download.php?f=Books/xml/eo-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (1.3k links, 64.3k tokens)" href="download.php?f=Books/xml/es-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (1.4k links, 66.1k tokens)" href="download.php?f=Books/en-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Esperanto' (1.3k links, 63.8k tokens)" href="download.php?f=Books/eo-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (1.3k links, 64.3k tokens)" href="download.php?f=Books/es-pt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (1.3k links, 66.7k tokens)" href="download.php?f=Books/xml/fr-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hungarian' (1.2k links, 57.8k tokens)" href="download.php?f=Books/xml/hu-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (1.2k links, 59.1k tokens)" href="download.php?f=Books/xml/it-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (1.3k links, 66.7k tokens)" href="download.php?f=Books/fr-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hungarian' (1.2k links, 57.8k tokens)" href="download.php?f=Books/hu-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (1.2k links, 59.1k tokens)" href="download.php?f=Books/it-pt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -165,15 +165,15 @@
 <td></td><td></td><th><a rel="nofollow" href="download.php?f=Books/pt.raw.tar.gz">pt</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Books/ru.tar.gz">ru</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (2 aligned documents, 17.4k links, 0.8M tokens)" href="download.php?f=Books/xml/de-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (2 aligned documents, 17.4k links, 0.8M tokens)" href="download.php?f=Books/de-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (2 aligned documents, 17.6k links, 0.8M tokens)" href="download.php?f=Books/xml/en-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (2 aligned documents, 17.6k links, 0.8M tokens)" href="download.php?f=Books/en-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (2 aligned documents, 17.0k links, 0.7M tokens)" href="download.php?f=Books/xml/es-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (2 aligned documents, 17.0k links, 0.7M tokens)" href="download.php?f=Books/es-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (8.3k links, 0.3M tokens)" href="download.php?f=Books/xml/fr-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Hungarian' (3 aligned documents, 26.2k links, 1.0M tokens)" href="download.php?f=Books/xml/hu-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Italian' (2 aligned documents, 17.9k links, 0.7M tokens)" href="download.php?f=Books/xml/it-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (8.3k links, 0.3M tokens)" href="download.php?f=Books/fr-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Hungarian' (3 aligned documents, 26.2k links, 1.0M tokens)" href="download.php?f=Books/hu-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Italian' (2 aligned documents, 17.9k links, 0.7M tokens)" href="download.php?f=Books/it-ru.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -184,13 +184,13 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (3.1k links, 0.2M tokens)" href="download.php?f=Books/xml/en-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (3.1k links, 0.2M tokens)" href="download.php?f=Books/en-sv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (3.0k links, 0.2M tokens)" href="download.php?f=Books/xml/fr-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (3.0k links, 0.2M tokens)" href="download.php?f=Books/fr-sv.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Italian' (3.0k links, 0.1M tokens)" href="download.php?f=Books/xml/it-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Italian' (3.0k links, 0.1M tokens)" href="download.php?f=Books/it-sv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>

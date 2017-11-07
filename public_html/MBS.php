@@ -32,7 +32,7 @@ provided by Tom Vanallemeersch. See Vanallemeersch (2010)
 <th></th>
 <td><a rel="nofollow" title="French-Dutch (sample file)" href="MBS/fr-nl_sample.html">view</a></td><th>fr</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=MBS/nl.tar.gz">nl</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (10 aligned documents, 5.0M links, 169.6M tokens)" href="download.php?f=MBS/xml/fr-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (10 aligned documents, 5.0M links, 169.6M tokens)" href="download.php?f=MBS/fr-nl.xml.gz">ces</a></td>
 <th></th>
 <th>nl</th></tr>
 <tr><th></th>

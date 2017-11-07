@@ -25,41 +25,41 @@
 <th></th>
 <td><a rel="nofollow" title="Czech-German (sample file)" href="WMT-News/cs-de_sample.html">view</a></td><td><a rel="nofollow" title="Czech-English (sample file)" href="WMT-News/cs-en_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Spanish (sample file)" href="WMT-News/cs-es_sample.html">view</a></td><td><a rel="nofollow" title="Czech-French (sample file)" href="WMT-News/cs-fr_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Czech-Russian (sample file)" href="WMT-News/cs-ru_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=WMT-News/cs.raw.tar.gz">cs</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=WMT-News/de.tar.gz">de</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'German-Czech' (7 aligned documents, 16.6k links, 0.7M tokens)" href="download.php?f=WMT-News/xml/cs-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Czech' (7 aligned documents, 16.6k links, 0.7M tokens)" href="download.php?f=WMT-News/cs-de.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="German-English (sample file)" href="WMT-News/de-en_sample.html">view</a></td><td><a rel="nofollow" title="German-Spanish (sample file)" href="WMT-News/de-es_sample.html">view</a></td><td><a rel="nofollow" title="German-French (sample file)" href="WMT-News/de-fr_sample.html">view</a></td><td></td><td><a rel="nofollow" title="German-Russian (sample file)" href="WMT-News/de-ru_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=WMT-News/de.raw.tar.gz">de</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=WMT-News/en.tar.gz">en</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'English-Czech' (8 aligned documents, 19.6k links, 0.9M tokens)" href="download.php?f=WMT-News/xml/cs-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-German' (8 aligned documents, 19.6k links, 0.9M tokens)" href="download.php?f=WMT-News/xml/de-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Czech' (8 aligned documents, 19.6k links, 0.9M tokens)" href="download.php?f=WMT-News/cs-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-German' (8 aligned documents, 19.6k links, 0.9M tokens)" href="download.php?f=WMT-News/de-en.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="English-Spanish (sample file)" href="WMT-News/en-es_sample.html">view</a></td><td><a rel="nofollow" title="English-French (sample file)" href="WMT-News/en-fr_sample.html">view</a></td><td><a rel="nofollow" title="English-Hindi (sample file)" href="WMT-News/en-hi_sample.html">view</a></td><td><a rel="nofollow" title="English-Russian (sample file)" href="WMT-News/en-ru_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=WMT-News/en.raw.tar.gz">en</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=WMT-News/es.tar.gz">es</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Czech' (7 aligned documents, 16.6k links, 0.8M tokens)" href="download.php?f=WMT-News/xml/cs-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (7 aligned documents, 16.6k links, 0.8M tokens)" href="download.php?f=WMT-News/xml/de-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (7 aligned documents, 16.6k links, 0.8M tokens)" href="download.php?f=WMT-News/xml/en-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Czech' (7 aligned documents, 16.6k links, 0.8M tokens)" href="download.php?f=WMT-News/cs-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (7 aligned documents, 16.6k links, 0.8M tokens)" href="download.php?f=WMT-News/de-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (7 aligned documents, 16.6k links, 0.8M tokens)" href="download.php?f=WMT-News/en-es.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Spanish-French (sample file)" href="WMT-News/es-fr_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Spanish-Russian (sample file)" href="WMT-News/es-ru_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=WMT-News/es.raw.tar.gz">es</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=WMT-News/fr.tar.gz">fr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'French-Czech' (7 aligned documents, 16.6k links, 0.8M tokens)" href="download.php?f=WMT-News/xml/cs-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-German' (7 aligned documents, 16.6k links, 0.8M tokens)" href="download.php?f=WMT-News/xml/de-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English' (8 aligned documents, 19.6k links, 1.0M tokens)" href="download.php?f=WMT-News/xml/en-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (7 aligned documents, 16.6k links, 0.9M tokens)" href="download.php?f=WMT-News/xml/es-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Czech' (7 aligned documents, 16.6k links, 0.8M tokens)" href="download.php?f=WMT-News/cs-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-German' (7 aligned documents, 16.6k links, 0.8M tokens)" href="download.php?f=WMT-News/de-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English' (8 aligned documents, 19.6k links, 1.0M tokens)" href="download.php?f=WMT-News/en-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (7 aligned documents, 16.6k links, 0.9M tokens)" href="download.php?f=WMT-News/es-fr.xml.gz">ces</a></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="French-Russian (sample file)" href="WMT-News/fr-ru_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=WMT-News/fr.raw.tar.gz">fr</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=WMT-News/hi.tar.gz">hi</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-English' (2 aligned documents, 3.0k links, 0.2M tokens)" href="download.php?f=WMT-News/xml/en-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-English' (2 aligned documents, 3.0k links, 0.2M tokens)" href="download.php?f=WMT-News/en-hi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th></th>
 <td></td><th><a rel="nofollow" href="download.php?f=WMT-News/hi.raw.tar.gz">hi</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=WMT-News/ru.tar.gz">ru</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Czech' (2 aligned documents, 6.0k links, 0.2M tokens)" href="download.php?f=WMT-News/xml/cs-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (2 aligned documents, 6.0k links, 0.3M tokens)" href="download.php?f=WMT-News/xml/de-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (3 aligned documents, 9.0k links, 0.4M tokens)" href="download.php?f=WMT-News/xml/en-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (2 aligned documents, 6.0k links, 0.3M tokens)" href="download.php?f=WMT-News/xml/es-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (2 aligned documents, 6.0k links, 0.3M tokens)" href="download.php?f=WMT-News/xml/fr-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Czech' (2 aligned documents, 6.0k links, 0.2M tokens)" href="download.php?f=WMT-News/cs-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (2 aligned documents, 6.0k links, 0.3M tokens)" href="download.php?f=WMT-News/de-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (3 aligned documents, 9.0k links, 0.4M tokens)" href="download.php?f=WMT-News/en-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (2 aligned documents, 6.0k links, 0.3M tokens)" href="download.php?f=WMT-News/es-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (2 aligned documents, 6.0k links, 0.3M tokens)" href="download.php?f=WMT-News/fr-ru.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <th><a rel="nofollow" href="download.php?f=WMT-News/ru.raw.tar.gz">ru</a></th></tr>

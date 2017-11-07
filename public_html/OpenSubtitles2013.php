@@ -106,8 +106,8 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Belarusian-Portuguese (sample file)" href="OpenSubtitles2013/be-pt_sample.html">view</a></td><td></td><td></td><th>be</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Belarusian-Turkish (sample file)" href="OpenSubtitles2013/be-tr_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><th>be</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/bg.tar.gz">bg</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Bulgarian-Afrikaans' (0.7k links, 14.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/af-bg.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Bulgarian-Arabic' (9,151 aligned documents, 6.7M links, 99.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-bg.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Bulgarian-Afrikaans' (0.7k links, 14.9k tokens)" href="download.php?f=OpenSubtitles2013/af-bg.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Bulgarian-Arabic' (9,151 aligned documents, 6.7M links, 99.2M tokens)" href="download.php?f=OpenSubtitles2013/ar-bg.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="Bulgarian-Bosnian (sample file)" href="OpenSubtitles2013/bg-bs_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Catalan (sample file)" href="OpenSubtitles2013/bg-ca_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Czech (sample file)" href="OpenSubtitles2013/bg-cs_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Danish (sample file)" href="OpenSubtitles2013/bg-da_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-German (sample file)" href="OpenSubtitles2013/bg-de_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Greek (sample file)" href="OpenSubtitles2013/bg-el_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-English (sample file)" href="OpenSubtitles2013/bg-en_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Spanish (sample file)" href="OpenSubtitles2013/bg-es_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Estonian (sample file)" href="OpenSubtitles2013/bg-et_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Basque (sample file)" href="OpenSubtitles2013/bg-eu_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Persian (sample file)" href="OpenSubtitles2013/bg-fa_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Finnish (sample file)" href="OpenSubtitles2013/bg-fi_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-French (sample file)" href="OpenSubtitles2013/bg-fr_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Hebrew (sample file)" href="OpenSubtitles2013/bg-he_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Hindi (sample file)" href="OpenSubtitles2013/bg-hi_sample.html">view</a></td><th>bg</th>
@@ -115,7 +115,7 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td><a rel="nofollow" title="Bulgarian-Russian (sample file)" href="OpenSubtitles2013/bg-ru_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Sinhala (sample file)" href="OpenSubtitles2013/bg-si_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Slovak (sample file)" href="OpenSubtitles2013/bg-sk_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Slovenian (sample file)" href="OpenSubtitles2013/bg-sl_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Albanian (sample file)" href="OpenSubtitles2013/bg-sq_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Serbian (sample file)" href="OpenSubtitles2013/bg-sr_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Swedish (sample file)" href="OpenSubtitles2013/bg-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Bulgarian-Thai (sample file)" href="OpenSubtitles2013/bg-th_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Turkish (sample file)" href="OpenSubtitles2013/bg-tr_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Ukrainian (sample file)" href="OpenSubtitles2013/bg-uk_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Urdu (sample file)" href="OpenSubtitles2013/bg-ur_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Vietnamese (sample file)" href="OpenSubtitles2013/bg-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Bulgarian-Chinese (sample file)" href="OpenSubtitles2013/bg-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Chinese (sample file)" href="OpenSubtitles2013/bg-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/bg.raw.tar.gz">bg</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/bn.tar.gz">bn</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Bengali-Arabic' (3 aligned documents, 2.5k links, 42.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-bn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Bengali-Arabic' (3 aligned documents, 2.5k links, 42.6k tokens)" href="download.php?f=OpenSubtitles2013/ar-bn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th></th>
@@ -124,9 +124,9 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Bengali-Serbian (sample file)" href="OpenSubtitles2013/bn-sr_sample.html">view</a></td><td><a rel="nofollow" title="Bengali-Swedish (sample file)" href="OpenSubtitles2013/bn-sv_sample.html">view</a></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Bengali-Turkish (sample file)" href="OpenSubtitles2013/bn-tr_sample.html">view</a></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Bengali-Chinese (sample file)" href="OpenSubtitles2013/bn-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Bengali-Chinese (sample file)" href="OpenSubtitles2013/bn-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/bn.raw.tar.gz">bn</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/bs.tar.gz">bs</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Bosnian-Arabic' (1,130 aligned documents, 0.9M links, 12.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-bs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Bosnian-Arabic' (1,130 aligned documents, 0.9M links, 12.4M tokens)" href="download.php?f=OpenSubtitles2013/ar-bs.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Bosnian-Bulgarian' (1,375 aligned documents, 1.2M links, 16.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-bs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Bosnian-Bulgarian' (1,375 aligned documents, 1.2M links, 16.0M tokens)" href="download.php?f=OpenSubtitles2013/bg-bs.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td><a rel="nofollow" title="Bosnian-Catalan (sample file)" href="OpenSubtitles2013/bs-ca_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Czech (sample file)" href="OpenSubtitles2013/bs-cs_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Danish (sample file)" href="OpenSubtitles2013/bs-da_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-German (sample file)" href="OpenSubtitles2013/bs-de_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Greek (sample file)" href="OpenSubtitles2013/bs-el_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-English (sample file)" href="OpenSubtitles2013/bs-en_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Spanish (sample file)" href="OpenSubtitles2013/bs-es_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Estonian (sample file)" href="OpenSubtitles2013/bs-et_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Basque (sample file)" href="OpenSubtitles2013/bs-eu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Bosnian-Finnish (sample file)" href="OpenSubtitles2013/bs-fi_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-French (sample file)" href="OpenSubtitles2013/bs-fr_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Hebrew (sample file)" href="OpenSubtitles2013/bs-he_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Hindi (sample file)" href="OpenSubtitles2013/bs-hi_sample.html">view</a></td><th>bs</th>
@@ -134,153 +134,153 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td><a rel="nofollow" title="Bosnian-Russian (sample file)" href="OpenSubtitles2013/bs-ru_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Sinhala (sample file)" href="OpenSubtitles2013/bs-si_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Slovak (sample file)" href="OpenSubtitles2013/bs-sk_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Slovenian (sample file)" href="OpenSubtitles2013/bs-sl_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Albanian (sample file)" href="OpenSubtitles2013/bs-sq_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Serbian (sample file)" href="OpenSubtitles2013/bs-sr_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Swedish (sample file)" href="OpenSubtitles2013/bs-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Bosnian-Thai (sample file)" href="OpenSubtitles2013/bs-th_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Turkish (sample file)" href="OpenSubtitles2013/bs-tr_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Ukrainian (sample file)" href="OpenSubtitles2013/bs-uk_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Urdu (sample file)" href="OpenSubtitles2013/bs-ur_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Vietnamese (sample file)" href="OpenSubtitles2013/bs-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Bosnian-Chinese (sample file)" href="OpenSubtitles2013/bs-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Chinese (sample file)" href="OpenSubtitles2013/bs-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/bs.raw.tar.gz">bs</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ca.tar.gz">ca</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Catalan-Arabic' (138 aligned documents, 85.6k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-ca.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Catalan-Arabic' (138 aligned documents, 85.6k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/ar-ca.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Catalan-Bulgarian' (132 aligned documents, 90.7k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-ca.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Catalan-Bulgarian' (132 aligned documents, 90.7k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/bg-ca.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Catalan-Bosnian' (26 aligned documents, 15.6k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-ca.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Catalan-Bosnian' (26 aligned documents, 15.6k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/bs-ca.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Catalan-Czech (sample file)" href="OpenSubtitles2013/ca-cs_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Danish (sample file)" href="OpenSubtitles2013/ca-da_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-German (sample file)" href="OpenSubtitles2013/ca-de_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Greek (sample file)" href="OpenSubtitles2013/ca-el_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-English (sample file)" href="OpenSubtitles2013/ca-en_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Spanish (sample file)" href="OpenSubtitles2013/ca-es_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Estonian (sample file)" href="OpenSubtitles2013/ca-et_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Catalan-Finnish (sample file)" href="OpenSubtitles2013/ca-fi_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-French (sample file)" href="OpenSubtitles2013/ca-fr_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Hebrew (sample file)" href="OpenSubtitles2013/ca-he_sample.html">view</a></td><td></td><th>ca</th>
 <td><a rel="nofollow" title="Catalan-Croatian (sample file)" href="OpenSubtitles2013/ca-hr_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Hungarian (sample file)" href="OpenSubtitles2013/ca-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Catalan-Indonesian (sample file)" href="OpenSubtitles2013/ca-id_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Icelandic (sample file)" href="OpenSubtitles2013/ca-is_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Italian (sample file)" href="OpenSubtitles2013/ca-it_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Japanese (sample file)" href="OpenSubtitles2013/ca-ja_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Catalan-Korean (sample file)" href="OpenSubtitles2013/ca-ko_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Lithuanian (sample file)" href="OpenSubtitles2013/ca-lt_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Latvian (sample file)" href="OpenSubtitles2013/ca-lv_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Macedonian (sample file)" href="OpenSubtitles2013/ca-mk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Catalan-Malay (sample file)" href="OpenSubtitles2013/ca-ms_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/ca-nb_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Dutch (sample file)" href="OpenSubtitles2013/ca-nl_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Polish (sample file)" href="OpenSubtitles2013/ca-pl_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Portuguese (sample file)" href="OpenSubtitles2013/ca-pt_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Portuguese (sample file)" href="OpenSubtitles2013/ca-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Romanian (sample file)" href="OpenSubtitles2013/ca-ro_sample.html">view</a></td><th>ca</th>
 <td><a rel="nofollow" title="Catalan-Russian (sample file)" href="OpenSubtitles2013/ca-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Catalan-Slovak (sample file)" href="OpenSubtitles2013/ca-sk_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Slovenian (sample file)" href="OpenSubtitles2013/ca-sl_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Albanian (sample file)" href="OpenSubtitles2013/ca-sq_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Serbian (sample file)" href="OpenSubtitles2013/ca-sr_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Swedish (sample file)" href="OpenSubtitles2013/ca-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Catalan-Thai (sample file)" href="OpenSubtitles2013/ca-th_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Turkish (sample file)" href="OpenSubtitles2013/ca-tr_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Ukrainian (sample file)" href="OpenSubtitles2013/ca-uk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Catalan-Vietnamese (sample file)" href="OpenSubtitles2013/ca-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Catalan-Chinese (sample file)" href="OpenSubtitles2013/ca-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Chinese (sample file)" href="OpenSubtitles2013/ca-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ca.raw.tar.gz">ca</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/cs.tar.gz">cs</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-Afrikaans' (0.7k links, 14.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/af-cs.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-Arabic' (9,936 aligned documents, 7.1M links, 104.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-cs.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-Belarusian' (1.1k links, 6.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/be-cs.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-Bulgarian' (12,369 aligned documents, 10.2M links, 142.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-cs.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-Bengali' (1.6k links, 22.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-cs.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-Bosnian' (1,431 aligned documents, 1.2M links, 16.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-cs.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-Catalan' (149 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-Afrikaans' (0.7k links, 14.1k tokens)" href="download.php?f=OpenSubtitles2013/af-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-Arabic' (9,936 aligned documents, 7.1M links, 104.1M tokens)" href="download.php?f=OpenSubtitles2013/ar-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-Belarusian' (1.1k links, 6.3k tokens)" href="download.php?f=OpenSubtitles2013/be-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-Bulgarian' (12,369 aligned documents, 10.2M links, 142.1M tokens)" href="download.php?f=OpenSubtitles2013/bg-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-Bengali' (1.6k links, 22.1k tokens)" href="download.php?f=OpenSubtitles2013/bn-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-Bosnian' (1,431 aligned documents, 1.2M links, 16.0M tokens)" href="download.php?f=OpenSubtitles2013/bs-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-Catalan' (149 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/ca-cs.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Czech-Danish (sample file)" href="OpenSubtitles2013/cs-da_sample.html">view</a></td><td><a rel="nofollow" title="Czech-German (sample file)" href="OpenSubtitles2013/cs-de_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Greek (sample file)" href="OpenSubtitles2013/cs-el_sample.html">view</a></td><td><a rel="nofollow" title="Czech-English (sample file)" href="OpenSubtitles2013/cs-en_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Spanish (sample file)" href="OpenSubtitles2013/cs-es_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Estonian (sample file)" href="OpenSubtitles2013/cs-et_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Basque (sample file)" href="OpenSubtitles2013/cs-eu_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Persian (sample file)" href="OpenSubtitles2013/cs-fa_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Finnish (sample file)" href="OpenSubtitles2013/cs-fi_sample.html">view</a></td><td><a rel="nofollow" title="Czech-French (sample file)" href="OpenSubtitles2013/cs-fr_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Hebrew (sample file)" href="OpenSubtitles2013/cs-he_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Hindi (sample file)" href="OpenSubtitles2013/cs-hi_sample.html">view</a></td><th>cs</th>
 <td><a rel="nofollow" title="Czech-Croatian (sample file)" href="OpenSubtitles2013/cs-hr_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Hungarian (sample file)" href="OpenSubtitles2013/cs-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Czech-Indonesian (sample file)" href="OpenSubtitles2013/cs-id_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Icelandic (sample file)" href="OpenSubtitles2013/cs-is_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Italian (sample file)" href="OpenSubtitles2013/cs-it_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Japanese (sample file)" href="OpenSubtitles2013/cs-ja_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Czech-Korean (sample file)" href="OpenSubtitles2013/cs-ko_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Lithuanian (sample file)" href="OpenSubtitles2013/cs-lt_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Latvian (sample file)" href="OpenSubtitles2013/cs-lv_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Macedonian (sample file)" href="OpenSubtitles2013/cs-mk_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Malayalam (sample file)" href="OpenSubtitles2013/cs-ml_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Malay (sample file)" href="OpenSubtitles2013/cs-ms_sample.html">view</a></td><td><a rel="nofollow" title="Czech-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/cs-nb_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Dutch (sample file)" href="OpenSubtitles2013/cs-nl_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Polish (sample file)" href="OpenSubtitles2013/cs-pl_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Portuguese (sample file)" href="OpenSubtitles2013/cs-pt_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Portuguese (sample file)" href="OpenSubtitles2013/cs-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Romanian (sample file)" href="OpenSubtitles2013/cs-ro_sample.html">view</a></td><th>cs</th>
 <td><a rel="nofollow" title="Czech-Russian (sample file)" href="OpenSubtitles2013/cs-ru_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Sinhala (sample file)" href="OpenSubtitles2013/cs-si_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Slovak (sample file)" href="OpenSubtitles2013/cs-sk_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Slovenian (sample file)" href="OpenSubtitles2013/cs-sl_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Albanian (sample file)" href="OpenSubtitles2013/cs-sq_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Serbian (sample file)" href="OpenSubtitles2013/cs-sr_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Swedish (sample file)" href="OpenSubtitles2013/cs-sv_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Czech-Tamil (sample file)" href="OpenSubtitles2013/cs-ta_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Telugu (sample file)" href="OpenSubtitles2013/cs-te_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Thai (sample file)" href="OpenSubtitles2013/cs-th_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Turkish (sample file)" href="OpenSubtitles2013/cs-tr_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Ukrainian (sample file)" href="OpenSubtitles2013/cs-uk_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Urdu (sample file)" href="OpenSubtitles2013/cs-ur_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Vietnamese (sample file)" href="OpenSubtitles2013/cs-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Czech-Chinese (sample file)" href="OpenSubtitles2013/cs-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Chinese (sample file)" href="OpenSubtitles2013/cs-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/cs.raw.tar.gz">cs</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/da.tar.gz">da</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Danish-Arabic' (4,087 aligned documents, 3.3M links, 49.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-da.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Danish-Arabic' (4,087 aligned documents, 3.3M links, 49.8M tokens)" href="download.php?f=OpenSubtitles2013/ar-da.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Danish-Bulgarian' (4,087 aligned documents, 3.8M links, 54.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-da.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Danish-Bengali' (1.7k links, 23.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-da.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Danish-Bosnian' (534 aligned documents, 0.5M links, 6.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-da.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Danish-Catalan' (95 aligned documents, 60.9k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-da.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Danish-Czech' (4,521 aligned documents, 4.2M links, 58.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-da.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Danish-Bulgarian' (4,087 aligned documents, 3.8M links, 54.6M tokens)" href="download.php?f=OpenSubtitles2013/bg-da.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Danish-Bengali' (1.7k links, 23.7k tokens)" href="download.php?f=OpenSubtitles2013/bn-da.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Danish-Bosnian' (534 aligned documents, 0.5M links, 6.9M tokens)" href="download.php?f=OpenSubtitles2013/bs-da.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Danish-Catalan' (95 aligned documents, 60.9k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/ca-da.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Danish-Czech' (4,521 aligned documents, 4.2M links, 58.9M tokens)" href="download.php?f=OpenSubtitles2013/cs-da.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Danish-German (sample file)" href="OpenSubtitles2013/da-de_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Greek (sample file)" href="OpenSubtitles2013/da-el_sample.html">view</a></td><td><a rel="nofollow" title="Danish-English (sample file)" href="OpenSubtitles2013/da-en_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Spanish (sample file)" href="OpenSubtitles2013/da-es_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Estonian (sample file)" href="OpenSubtitles2013/da-et_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Basque (sample file)" href="OpenSubtitles2013/da-eu_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Persian (sample file)" href="OpenSubtitles2013/da-fa_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Finnish (sample file)" href="OpenSubtitles2013/da-fi_sample.html">view</a></td><td><a rel="nofollow" title="Danish-French (sample file)" href="OpenSubtitles2013/da-fr_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Hebrew (sample file)" href="OpenSubtitles2013/da-he_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Hindi (sample file)" href="OpenSubtitles2013/da-hi_sample.html">view</a></td><th>da</th>
 <td><a rel="nofollow" title="Danish-Croatian (sample file)" href="OpenSubtitles2013/da-hr_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Hungarian (sample file)" href="OpenSubtitles2013/da-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Danish-Indonesian (sample file)" href="OpenSubtitles2013/da-id_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Icelandic (sample file)" href="OpenSubtitles2013/da-is_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Italian (sample file)" href="OpenSubtitles2013/da-it_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Japanese (sample file)" href="OpenSubtitles2013/da-ja_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Danish-Kazakh (sample file)" href="OpenSubtitles2013/da-kk_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Korean (sample file)" href="OpenSubtitles2013/da-ko_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Lithuanian (sample file)" href="OpenSubtitles2013/da-lt_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Latvian (sample file)" href="OpenSubtitles2013/da-lv_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Macedonian (sample file)" href="OpenSubtitles2013/da-mk_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Malayalam (sample file)" href="OpenSubtitles2013/da-ml_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Malay (sample file)" href="OpenSubtitles2013/da-ms_sample.html">view</a></td><td><a rel="nofollow" title="Danish-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/da-nb_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Dutch (sample file)" href="OpenSubtitles2013/da-nl_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Polish (sample file)" href="OpenSubtitles2013/da-pl_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Portuguese (sample file)" href="OpenSubtitles2013/da-pt_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Portuguese (sample file)" href="OpenSubtitles2013/da-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Romanian (sample file)" href="OpenSubtitles2013/da-ro_sample.html">view</a></td><th>da</th>
 <td><a rel="nofollow" title="Danish-Russian (sample file)" href="OpenSubtitles2013/da-ru_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Sinhala (sample file)" href="OpenSubtitles2013/da-si_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Slovak (sample file)" href="OpenSubtitles2013/da-sk_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Slovenian (sample file)" href="OpenSubtitles2013/da-sl_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Albanian (sample file)" href="OpenSubtitles2013/da-sq_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Serbian (sample file)" href="OpenSubtitles2013/da-sr_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Swedish (sample file)" href="OpenSubtitles2013/da-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Danish-Thai (sample file)" href="OpenSubtitles2013/da-th_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Turkish (sample file)" href="OpenSubtitles2013/da-tr_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Ukrainian (sample file)" href="OpenSubtitles2013/da-uk_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Urdu (sample file)" href="OpenSubtitles2013/da-ur_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Vietnamese (sample file)" href="OpenSubtitles2013/da-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Danish-Chinese (sample file)" href="OpenSubtitles2013/da-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Chinese (sample file)" href="OpenSubtitles2013/da-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/da.raw.tar.gz">da</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/de.tar.gz">de</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Arabic' (2,414 aligned documents, 2.1M links, 30.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Arabic' (2,414 aligned documents, 2.1M links, 30.9M tokens)" href="download.php?f=OpenSubtitles2013/ar-de.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Bulgarian' (2,924 aligned documents, 2.9M links, 41.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Bengali' (1.8k links, 24.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Bosnian' (372 aligned documents, 0.4M links, 5.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Catalan' (93 aligned documents, 74.8k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Czech' (3,307 aligned documents, 3.3M links, 46.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Danish' (1,686 aligned documents, 1.7M links, 25.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Bulgarian' (2,924 aligned documents, 2.9M links, 41.0M tokens)" href="download.php?f=OpenSubtitles2013/bg-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Bengali' (1.8k links, 24.4k tokens)" href="download.php?f=OpenSubtitles2013/bn-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Bosnian' (372 aligned documents, 0.4M links, 5.1M tokens)" href="download.php?f=OpenSubtitles2013/bs-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Catalan' (93 aligned documents, 74.8k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/ca-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Czech' (3,307 aligned documents, 3.3M links, 46.1M tokens)" href="download.php?f=OpenSubtitles2013/cs-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Danish' (1,686 aligned documents, 1.7M links, 25.1M tokens)" href="download.php?f=OpenSubtitles2013/da-de.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="German-Greek (sample file)" href="OpenSubtitles2013/de-el_sample.html">view</a></td><td><a rel="nofollow" title="German-English (sample file)" href="OpenSubtitles2013/de-en_sample.html">view</a></td><td><a rel="nofollow" title="German-Spanish (sample file)" href="OpenSubtitles2013/de-es_sample.html">view</a></td><td><a rel="nofollow" title="German-Estonian (sample file)" href="OpenSubtitles2013/de-et_sample.html">view</a></td><td><a rel="nofollow" title="German-Basque (sample file)" href="OpenSubtitles2013/de-eu_sample.html">view</a></td><td><a rel="nofollow" title="German-Persian (sample file)" href="OpenSubtitles2013/de-fa_sample.html">view</a></td><td><a rel="nofollow" title="German-Finnish (sample file)" href="OpenSubtitles2013/de-fi_sample.html">view</a></td><td><a rel="nofollow" title="German-French (sample file)" href="OpenSubtitles2013/de-fr_sample.html">view</a></td><td><a rel="nofollow" title="German-Hebrew (sample file)" href="OpenSubtitles2013/de-he_sample.html">view</a></td><td></td><th>de</th>
 <td><a rel="nofollow" title="German-Croatian (sample file)" href="OpenSubtitles2013/de-hr_sample.html">view</a></td><td><a rel="nofollow" title="German-Hungarian (sample file)" href="OpenSubtitles2013/de-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="German-Indonesian (sample file)" href="OpenSubtitles2013/de-id_sample.html">view</a></td><td><a rel="nofollow" title="German-Icelandic (sample file)" href="OpenSubtitles2013/de-is_sample.html">view</a></td><td><a rel="nofollow" title="German-Italian (sample file)" href="OpenSubtitles2013/de-it_sample.html">view</a></td><td><a rel="nofollow" title="German-Japanese (sample file)" href="OpenSubtitles2013/de-ja_sample.html">view</a></td><td></td><td><a rel="nofollow" title="German-Kazakh (sample file)" href="OpenSubtitles2013/de-kk_sample.html">view</a></td><td><a rel="nofollow" title="German-Korean (sample file)" href="OpenSubtitles2013/de-ko_sample.html">view</a></td><td><a rel="nofollow" title="German-Lithuanian (sample file)" href="OpenSubtitles2013/de-lt_sample.html">view</a></td><td><a rel="nofollow" title="German-Latvian (sample file)" href="OpenSubtitles2013/de-lv_sample.html">view</a></td><td><a rel="nofollow" title="German-Macedonian (sample file)" href="OpenSubtitles2013/de-mk_sample.html">view</a></td><td><a rel="nofollow" title="German-Malayalam (sample file)" href="OpenSubtitles2013/de-ml_sample.html">view</a></td><td><a rel="nofollow" title="German-Malay (sample file)" href="OpenSubtitles2013/de-ms_sample.html">view</a></td><td><a rel="nofollow" title="German-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/de-nb_sample.html">view</a></td><td><a rel="nofollow" title="German-Dutch (sample file)" href="OpenSubtitles2013/de-nl_sample.html">view</a></td><td><a rel="nofollow" title="German-Polish (sample file)" href="OpenSubtitles2013/de-pl_sample.html">view</a></td><td><a rel="nofollow" title="German-Portuguese (sample file)" href="OpenSubtitles2013/de-pt_sample.html">view</a></td><td><a rel="nofollow" title="German-Portuguese (sample file)" href="OpenSubtitles2013/de-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="German-Romanian (sample file)" href="OpenSubtitles2013/de-ro_sample.html">view</a></td><th>de</th>
 <td><a rel="nofollow" title="German-Russian (sample file)" href="OpenSubtitles2013/de-ru_sample.html">view</a></td><td><a rel="nofollow" title="German-Sinhala (sample file)" href="OpenSubtitles2013/de-si_sample.html">view</a></td><td><a rel="nofollow" title="German-Slovak (sample file)" href="OpenSubtitles2013/de-sk_sample.html">view</a></td><td><a rel="nofollow" title="German-Slovenian (sample file)" href="OpenSubtitles2013/de-sl_sample.html">view</a></td><td><a rel="nofollow" title="German-Albanian (sample file)" href="OpenSubtitles2013/de-sq_sample.html">view</a></td><td><a rel="nofollow" title="German-Serbian (sample file)" href="OpenSubtitles2013/de-sr_sample.html">view</a></td><td><a rel="nofollow" title="German-Swedish (sample file)" href="OpenSubtitles2013/de-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="German-Thai (sample file)" href="OpenSubtitles2013/de-th_sample.html">view</a></td><td><a rel="nofollow" title="German-Turkish (sample file)" href="OpenSubtitles2013/de-tr_sample.html">view</a></td><td><a rel="nofollow" title="German-Ukrainian (sample file)" href="OpenSubtitles2013/de-uk_sample.html">view</a></td><td><a rel="nofollow" title="German-Urdu (sample file)" href="OpenSubtitles2013/de-ur_sample.html">view</a></td><td><a rel="nofollow" title="German-Vietnamese (sample file)" href="OpenSubtitles2013/de-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="German-Chinese (sample file)" href="OpenSubtitles2013/de-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="German-Chinese (sample file)" href="OpenSubtitles2013/de-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/de.raw.tar.gz">de</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/el.tar.gz">el</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Arabic' (11,373 aligned documents, 7.9M links, 121.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Arabic' (11,373 aligned documents, 7.9M links, 121.1M tokens)" href="download.php?f=OpenSubtitles2013/ar-el.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Bulgarian' (13,840 aligned documents, 11.2M links, 165.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Bulgarian' (13,840 aligned documents, 11.2M links, 165.1M tokens)" href="download.php?f=OpenSubtitles2013/bg-el.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Bosnian' (1,778 aligned documents, 1.4M links, 20.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-el.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Catalan' (157 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-el.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Czech' (15,641 aligned documents, 12.4M links, 179.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-el.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Danish' (5,452 aligned documents, 4.9M links, 72.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-el.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-German' (3,920 aligned documents, 3.7M links, 55.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Bosnian' (1,778 aligned documents, 1.4M links, 20.6M tokens)" href="download.php?f=OpenSubtitles2013/bs-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Catalan' (157 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/ca-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Czech' (15,641 aligned documents, 12.4M links, 179.7M tokens)" href="download.php?f=OpenSubtitles2013/cs-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Danish' (5,452 aligned documents, 4.9M links, 72.5M tokens)" href="download.php?f=OpenSubtitles2013/da-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-German' (3,920 aligned documents, 3.7M links, 55.3M tokens)" href="download.php?f=OpenSubtitles2013/de-el.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Greek-English (sample file)" href="OpenSubtitles2013/el-en_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Spanish (sample file)" href="OpenSubtitles2013/el-es_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Estonian (sample file)" href="OpenSubtitles2013/el-et_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Basque (sample file)" href="OpenSubtitles2013/el-eu_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Persian (sample file)" href="OpenSubtitles2013/el-fa_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Finnish (sample file)" href="OpenSubtitles2013/el-fi_sample.html">view</a></td><td><a rel="nofollow" title="Greek-French (sample file)" href="OpenSubtitles2013/el-fr_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Hebrew (sample file)" href="OpenSubtitles2013/el-he_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Hindi (sample file)" href="OpenSubtitles2013/el-hi_sample.html">view</a></td><th>el</th>
 <td><a rel="nofollow" title="Greek-Croatian (sample file)" href="OpenSubtitles2013/el-hr_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Hungarian (sample file)" href="OpenSubtitles2013/el-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Greek-Indonesian (sample file)" href="OpenSubtitles2013/el-id_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Icelandic (sample file)" href="OpenSubtitles2013/el-is_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Italian (sample file)" href="OpenSubtitles2013/el-it_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Japanese (sample file)" href="OpenSubtitles2013/el-ja_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Greek-Kazakh (sample file)" href="OpenSubtitles2013/el-kk_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Korean (sample file)" href="OpenSubtitles2013/el-ko_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Lithuanian (sample file)" href="OpenSubtitles2013/el-lt_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Latvian (sample file)" href="OpenSubtitles2013/el-lv_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Macedonian (sample file)" href="OpenSubtitles2013/el-mk_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Malayalam (sample file)" href="OpenSubtitles2013/el-ml_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Malay (sample file)" href="OpenSubtitles2013/el-ms_sample.html">view</a></td><td><a rel="nofollow" title="Greek-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/el-nb_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Dutch (sample file)" href="OpenSubtitles2013/el-nl_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Polish (sample file)" href="OpenSubtitles2013/el-pl_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Portuguese (sample file)" href="OpenSubtitles2013/el-pt_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Portuguese (sample file)" href="OpenSubtitles2013/el-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Romanian (sample file)" href="OpenSubtitles2013/el-ro_sample.html">view</a></td><th>el</th>
 <td><a rel="nofollow" title="Greek-Russian (sample file)" href="OpenSubtitles2013/el-ru_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Sinhala (sample file)" href="OpenSubtitles2013/el-si_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Slovak (sample file)" href="OpenSubtitles2013/el-sk_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Slovenian (sample file)" href="OpenSubtitles2013/el-sl_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Albanian (sample file)" href="OpenSubtitles2013/el-sq_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Serbian (sample file)" href="OpenSubtitles2013/el-sr_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Swedish (sample file)" href="OpenSubtitles2013/el-sv_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Swahili (sample file)" href="OpenSubtitles2013/el-sw_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Tamil (sample file)" href="OpenSubtitles2013/el-ta_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Telugu (sample file)" href="OpenSubtitles2013/el-te_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Thai (sample file)" href="OpenSubtitles2013/el-th_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Turkish (sample file)" href="OpenSubtitles2013/el-tr_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Ukrainian (sample file)" href="OpenSubtitles2013/el-uk_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Urdu (sample file)" href="OpenSubtitles2013/el-ur_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Vietnamese (sample file)" href="OpenSubtitles2013/el-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Greek-Chinese (sample file)" href="OpenSubtitles2013/el-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Chinese (sample file)" href="OpenSubtitles2013/el-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/el.raw.tar.gz">el</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/en.tar.gz">en</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (13,694 aligned documents, 10.5M links, 167.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (13,694 aligned documents, 10.5M links, 167.5M tokens)" href="download.php?f=OpenSubtitles2013/ar-en.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Bulgarian' (19,324 aligned documents, 17.8M links, 264.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Bengali' (1.8k links, 25.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Bosnian' (2,303 aligned documents, 2.0M links, 29.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Catalan' (173 aligned documents, 0.1M links, 2.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Czech' (21,972 aligned documents, 19.5M links, 285.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Danish' (7,011 aligned documents, 7.2M links, 108.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-German' (5,517 aligned documents, 5.8M links, 86.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (25,381 aligned documents, 22.2M links, 345.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Bulgarian' (19,324 aligned documents, 17.8M links, 264.5M tokens)" href="download.php?f=OpenSubtitles2013/bg-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Bengali' (1.8k links, 25.5k tokens)" href="download.php?f=OpenSubtitles2013/bn-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Bosnian' (2,303 aligned documents, 2.0M links, 29.8M tokens)" href="download.php?f=OpenSubtitles2013/bs-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Catalan' (173 aligned documents, 0.1M links, 2.3M tokens)" href="download.php?f=OpenSubtitles2013/ca-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Czech' (21,972 aligned documents, 19.5M links, 285.4M tokens)" href="download.php?f=OpenSubtitles2013/cs-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Danish' (7,011 aligned documents, 7.2M links, 108.2M tokens)" href="download.php?f=OpenSubtitles2013/da-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-German' (5,517 aligned documents, 5.8M links, 86.1M tokens)" href="download.php?f=OpenSubtitles2013/de-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (25,381 aligned documents, 22.2M links, 345.1M tokens)" href="download.php?f=OpenSubtitles2013/el-en.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="English-Spanish (sample file)" href="OpenSubtitles2013/en-es_sample.html">view</a></td><td><a rel="nofollow" title="English-Estonian (sample file)" href="OpenSubtitles2013/en-et_sample.html">view</a></td><td><a rel="nofollow" title="English-Basque (sample file)" href="OpenSubtitles2013/en-eu_sample.html">view</a></td><td><a rel="nofollow" title="English-Persian (sample file)" href="OpenSubtitles2013/en-fa_sample.html">view</a></td><td><a rel="nofollow" title="English-Finnish (sample file)" href="OpenSubtitles2013/en-fi_sample.html">view</a></td><td><a rel="nofollow" title="English-French (sample file)" href="OpenSubtitles2013/en-fr_sample.html">view</a></td><td><a rel="nofollow" title="English-Hebrew (sample file)" href="OpenSubtitles2013/en-he_sample.html">view</a></td><td><a rel="nofollow" title="English-Hindi (sample file)" href="OpenSubtitles2013/en-hi_sample.html">view</a></td><th>en</th>
 <td><a rel="nofollow" title="English-Croatian (sample file)" href="OpenSubtitles2013/en-hr_sample.html">view</a></td><td><a rel="nofollow" title="English-Hungarian (sample file)" href="OpenSubtitles2013/en-hu_sample.html">view</a></td><td><a rel="nofollow" title="English-Armenian (sample file)" href="OpenSubtitles2013/en-hy_sample.html">view</a></td><td><a rel="nofollow" title="English-Indonesian (sample file)" href="OpenSubtitles2013/en-id_sample.html">view</a></td><td><a rel="nofollow" title="English-Icelandic (sample file)" href="OpenSubtitles2013/en-is_sample.html">view</a></td><td><a rel="nofollow" title="English-Italian (sample file)" href="OpenSubtitles2013/en-it_sample.html">view</a></td><td><a rel="nofollow" title="English-Japanese (sample file)" href="OpenSubtitles2013/en-ja_sample.html">view</a></td><td></td><td><a rel="nofollow" title="English-Kazakh (sample file)" href="OpenSubtitles2013/en-kk_sample.html">view</a></td><td><a rel="nofollow" title="English-Korean (sample file)" href="OpenSubtitles2013/en-ko_sample.html">view</a></td><td><a rel="nofollow" title="English-Lithuanian (sample file)" href="OpenSubtitles2013/en-lt_sample.html">view</a></td><td><a rel="nofollow" title="English-Latvian (sample file)" href="OpenSubtitles2013/en-lv_sample.html">view</a></td><td><a rel="nofollow" title="English-Macedonian (sample file)" href="OpenSubtitles2013/en-mk_sample.html">view</a></td><td><a rel="nofollow" title="English-Malayalam (sample file)" href="OpenSubtitles2013/en-ml_sample.html">view</a></td><td><a rel="nofollow" title="English-Malay (sample file)" href="OpenSubtitles2013/en-ms_sample.html">view</a></td><td><a rel="nofollow" title="English-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/en-nb_sample.html">view</a></td><td><a rel="nofollow" title="English-Dutch (sample file)" href="OpenSubtitles2013/en-nl_sample.html">view</a></td><td><a rel="nofollow" title="English-Polish (sample file)" href="OpenSubtitles2013/en-pl_sample.html">view</a></td><td><a rel="nofollow" title="English-Portuguese (sample file)" href="OpenSubtitles2013/en-pt_sample.html">view</a></td><td><a rel="nofollow" title="English-Portuguese (sample file)" href="OpenSubtitles2013/en-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="English-Romanian (sample file)" href="OpenSubtitles2013/en-ro_sample.html">view</a></td><th>en</th>
 <td><a rel="nofollow" title="English-Russian (sample file)" href="OpenSubtitles2013/en-ru_sample.html">view</a></td><td><a rel="nofollow" title="English-Sinhala (sample file)" href="OpenSubtitles2013/en-si_sample.html">view</a></td><td><a rel="nofollow" title="English-Slovak (sample file)" href="OpenSubtitles2013/en-sk_sample.html">view</a></td><td><a rel="nofollow" title="English-Slovenian (sample file)" href="OpenSubtitles2013/en-sl_sample.html">view</a></td><td><a rel="nofollow" title="English-Albanian (sample file)" href="OpenSubtitles2013/en-sq_sample.html">view</a></td><td><a rel="nofollow" title="English-Serbian (sample file)" href="OpenSubtitles2013/en-sr_sample.html">view</a></td><td><a rel="nofollow" title="English-Swedish (sample file)" href="OpenSubtitles2013/en-sv_sample.html">view</a></td><td></td><td><a rel="nofollow" title="English-Tamil (sample file)" href="OpenSubtitles2013/en-ta_sample.html">view</a></td><td><a rel="nofollow" title="English-Telugu (sample file)" href="OpenSubtitles2013/en-te_sample.html">view</a></td><td><a rel="nofollow" title="English-Thai (sample file)" href="OpenSubtitles2013/en-th_sample.html">view</a></td><td><a rel="nofollow" title="English-Turkish (sample file)" href="OpenSubtitles2013/en-tr_sample.html">view</a></td><td><a rel="nofollow" title="English-Ukrainian (sample file)" href="OpenSubtitles2013/en-uk_sample.html">view</a></td><td><a rel="nofollow" title="English-Urdu (sample file)" href="OpenSubtitles2013/en-ur_sample.html">view</a></td><td><a rel="nofollow" title="English-Vietnamese (sample file)" href="OpenSubtitles2013/en-vi_sample.html">view</a></td><td><a rel="nofollow" title="English-Chinese (sample file)" href="OpenSubtitles2013/en-zh_sample.html">view</a></td><td><a rel="nofollow" title="English-Chinese (sample file)" href="OpenSubtitles2013/en-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="English-Chinese (sample file)" href="OpenSubtitles2013/en-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/en.raw.tar.gz">en</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/es.tar.gz">es</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Afrikaans' (0.7k links, 14.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/af-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Arabic' (12,415 aligned documents, 8.9M links, 138.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Afrikaans' (0.7k links, 14.7k tokens)" href="download.php?f=OpenSubtitles2013/af-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Arabic' (12,415 aligned documents, 8.9M links, 138.9M tokens)" href="download.php?f=OpenSubtitles2013/ar-es.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Bulgarian' (16,020 aligned documents, 13.4M links, 201.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Bengali' (1.6k links, 23.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Bosnian' (1,890 aligned documents, 1.5M links, 22.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Catalan' (166 aligned documents, 0.1M links, 1.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Czech' (18,634 aligned documents, 15.0M links, 221.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Danish' (5,718 aligned documents, 5.3M links, 79.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (4,440 aligned documents, 4.4M links, 64.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Greek' (21,691 aligned documents, 17.3M links, 269.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (35,617 aligned documents, 32.8M links, 513.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Bulgarian' (16,020 aligned documents, 13.4M links, 201.2M tokens)" href="download.php?f=OpenSubtitles2013/bg-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Bengali' (1.6k links, 23.1k tokens)" href="download.php?f=OpenSubtitles2013/bn-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Bosnian' (1,890 aligned documents, 1.5M links, 22.3M tokens)" href="download.php?f=OpenSubtitles2013/bs-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Catalan' (166 aligned documents, 0.1M links, 1.9M tokens)" href="download.php?f=OpenSubtitles2013/ca-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Czech' (18,634 aligned documents, 15.0M links, 221.8M tokens)" href="download.php?f=OpenSubtitles2013/cs-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Danish' (5,718 aligned documents, 5.3M links, 79.9M tokens)" href="download.php?f=OpenSubtitles2013/da-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (4,440 aligned documents, 4.4M links, 64.9M tokens)" href="download.php?f=OpenSubtitles2013/de-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Greek' (21,691 aligned documents, 17.3M links, 269.5M tokens)" href="download.php?f=OpenSubtitles2013/el-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (35,617 aligned documents, 32.8M links, 513.6M tokens)" href="download.php?f=OpenSubtitles2013/en-es.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Spanish-Estonian (sample file)" href="OpenSubtitles2013/es-et_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Basque (sample file)" href="OpenSubtitles2013/es-eu_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Persian (sample file)" href="OpenSubtitles2013/es-fa_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Finnish (sample file)" href="OpenSubtitles2013/es-fi_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-French (sample file)" href="OpenSubtitles2013/es-fr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Hebrew (sample file)" href="OpenSubtitles2013/es-he_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Hindi (sample file)" href="OpenSubtitles2013/es-hi_sample.html">view</a></td><th>es</th>
 <td><a rel="nofollow" title="Spanish-Croatian (sample file)" href="OpenSubtitles2013/es-hr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Hungarian (sample file)" href="OpenSubtitles2013/es-hu_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Armenian (sample file)" href="OpenSubtitles2013/es-hy_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Indonesian (sample file)" href="OpenSubtitles2013/es-id_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Icelandic (sample file)" href="OpenSubtitles2013/es-is_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Italian (sample file)" href="OpenSubtitles2013/es-it_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Japanese (sample file)" href="OpenSubtitles2013/es-ja_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Spanish-Kazakh (sample file)" href="OpenSubtitles2013/es-kk_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Korean (sample file)" href="OpenSubtitles2013/es-ko_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Lithuanian (sample file)" href="OpenSubtitles2013/es-lt_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Latvian (sample file)" href="OpenSubtitles2013/es-lv_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Macedonian (sample file)" href="OpenSubtitles2013/es-mk_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Malayalam (sample file)" href="OpenSubtitles2013/es-ml_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Malay (sample file)" href="OpenSubtitles2013/es-ms_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/es-nb_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Dutch (sample file)" href="OpenSubtitles2013/es-nl_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Polish (sample file)" href="OpenSubtitles2013/es-pl_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Portuguese (sample file)" href="OpenSubtitles2013/es-pt_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Portuguese (sample file)" href="OpenSubtitles2013/es-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Romanian (sample file)" href="OpenSubtitles2013/es-ro_sample.html">view</a></td><th>es</th>
 <td><a rel="nofollow" title="Spanish-Russian (sample file)" href="OpenSubtitles2013/es-ru_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Sinhala (sample file)" href="OpenSubtitles2013/es-si_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Slovak (sample file)" href="OpenSubtitles2013/es-sk_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Slovenian (sample file)" href="OpenSubtitles2013/es-sl_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Albanian (sample file)" href="OpenSubtitles2013/es-sq_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Serbian (sample file)" href="OpenSubtitles2013/es-sr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Swedish (sample file)" href="OpenSubtitles2013/es-sv_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Swahili (sample file)" href="OpenSubtitles2013/es-sw_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Tamil (sample file)" href="OpenSubtitles2013/es-ta_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Telugu (sample file)" href="OpenSubtitles2013/es-te_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Thai (sample file)" href="OpenSubtitles2013/es-th_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Turkish (sample file)" href="OpenSubtitles2013/es-tr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Ukrainian (sample file)" href="OpenSubtitles2013/es-uk_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Urdu (sample file)" href="OpenSubtitles2013/es-ur_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Vietnamese (sample file)" href="OpenSubtitles2013/es-vi_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Chinese (sample file)" href="OpenSubtitles2013/es-zh_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Chinese (sample file)" href="OpenSubtitles2013/es-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Chinese (sample file)" href="OpenSubtitles2013/es-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/es.raw.tar.gz">es</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/et.tar.gz">et</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Arabic' (3,807 aligned documents, 3.0M links, 43.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Arabic' (3,807 aligned documents, 3.0M links, 43.3M tokens)" href="download.php?f=OpenSubtitles2013/ar-et.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Bulgarian' (3,865 aligned documents, 3.6M links, 47.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Bengali' (1.6k links, 21.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Bosnian' (534 aligned documents, 0.5M links, 6.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Catalan' (88 aligned documents, 64.3k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Czech' (4,292 aligned documents, 4.0M links, 51.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Danish' (2,354 aligned documents, 2.2M links, 31.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-German' (1,458 aligned documents, 1.5M links, 20.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Greek' (5,104 aligned documents, 4.5M links, 62.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-English' (5,938 aligned documents, 6.0M links, 84.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Spanish' (5,231 aligned documents, 4.8M links, 67.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Bulgarian' (3,865 aligned documents, 3.6M links, 47.4M tokens)" href="download.php?f=OpenSubtitles2013/bg-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Bengali' (1.6k links, 21.7k tokens)" href="download.php?f=OpenSubtitles2013/bn-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Bosnian' (534 aligned documents, 0.5M links, 6.7M tokens)" href="download.php?f=OpenSubtitles2013/bs-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Catalan' (88 aligned documents, 64.3k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/ca-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Czech' (4,292 aligned documents, 4.0M links, 51.7M tokens)" href="download.php?f=OpenSubtitles2013/cs-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Danish' (2,354 aligned documents, 2.2M links, 31.0M tokens)" href="download.php?f=OpenSubtitles2013/da-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-German' (1,458 aligned documents, 1.5M links, 20.7M tokens)" href="download.php?f=OpenSubtitles2013/de-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Greek' (5,104 aligned documents, 4.5M links, 62.3M tokens)" href="download.php?f=OpenSubtitles2013/el-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-English' (5,938 aligned documents, 6.0M links, 84.6M tokens)" href="download.php?f=OpenSubtitles2013/en-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Spanish' (5,231 aligned documents, 4.8M links, 67.2M tokens)" href="download.php?f=OpenSubtitles2013/es-et.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Estonian-Basque (sample file)" href="OpenSubtitles2013/et-eu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Estonian-Finnish (sample file)" href="OpenSubtitles2013/et-fi_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-French (sample file)" href="OpenSubtitles2013/et-fr_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Hebrew (sample file)" href="OpenSubtitles2013/et-he_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Hindi (sample file)" href="OpenSubtitles2013/et-hi_sample.html">view</a></td><th>et</th>
 <td><a rel="nofollow" title="Estonian-Croatian (sample file)" href="OpenSubtitles2013/et-hr_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Hungarian (sample file)" href="OpenSubtitles2013/et-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Estonian-Indonesian (sample file)" href="OpenSubtitles2013/et-id_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Icelandic (sample file)" href="OpenSubtitles2013/et-is_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Italian (sample file)" href="OpenSubtitles2013/et-it_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Japanese (sample file)" href="OpenSubtitles2013/et-ja_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Estonian-Korean (sample file)" href="OpenSubtitles2013/et-ko_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Lithuanian (sample file)" href="OpenSubtitles2013/et-lt_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Latvian (sample file)" href="OpenSubtitles2013/et-lv_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Macedonian (sample file)" href="OpenSubtitles2013/et-mk_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Malayalam (sample file)" href="OpenSubtitles2013/et-ml_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Malay (sample file)" href="OpenSubtitles2013/et-ms_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/et-nb_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Dutch (sample file)" href="OpenSubtitles2013/et-nl_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Polish (sample file)" href="OpenSubtitles2013/et-pl_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Portuguese (sample file)" href="OpenSubtitles2013/et-pt_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Portuguese (sample file)" href="OpenSubtitles2013/et-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Romanian (sample file)" href="OpenSubtitles2013/et-ro_sample.html">view</a></td><th>et</th>
 <td><a rel="nofollow" title="Estonian-Russian (sample file)" href="OpenSubtitles2013/et-ru_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Sinhala (sample file)" href="OpenSubtitles2013/et-si_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Slovak (sample file)" href="OpenSubtitles2013/et-sk_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Slovenian (sample file)" href="OpenSubtitles2013/et-sl_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Albanian (sample file)" href="OpenSubtitles2013/et-sq_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Serbian (sample file)" href="OpenSubtitles2013/et-sr_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Swedish (sample file)" href="OpenSubtitles2013/et-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Estonian-Thai (sample file)" href="OpenSubtitles2013/et-th_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Turkish (sample file)" href="OpenSubtitles2013/et-tr_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Ukrainian (sample file)" href="OpenSubtitles2013/et-uk_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Urdu (sample file)" href="OpenSubtitles2013/et-ur_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Vietnamese (sample file)" href="OpenSubtitles2013/et-vi_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Chinese (sample file)" href="OpenSubtitles2013/et-zh_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Chinese (sample file)" href="OpenSubtitles2013/et-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Chinese (sample file)" href="OpenSubtitles2013/et-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/et.raw.tar.gz">et</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/eu.tar.gz">eu</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Basque-Arabic' (99 aligned documents, 94.8k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-eu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Basque-Arabic' (99 aligned documents, 94.8k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/ar-eu.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Basque-Bulgarian' (119 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-eu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Basque-Bulgarian' (119 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/bg-eu.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Basque-Bosnian' (16 aligned documents, 16.0k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-eu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Basque-Bosnian' (16 aligned documents, 16.0k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/bs-eu.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Basque-Czech' (122 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-eu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Basque-Danish' (73 aligned documents, 83.8k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-eu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Basque-German' (48 aligned documents, 55.4k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-eu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Basque-Greek' (145 aligned documents, 0.1M links, 2.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-eu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Basque-English' (161 aligned documents, 0.2M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-eu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Basque-Spanish' (162 aligned documents, 0.2M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-eu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Basque-Estonian' (81 aligned documents, 88.7k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-eu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Basque-Czech' (122 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/cs-eu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Basque-Danish' (73 aligned documents, 83.8k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/da-eu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Basque-German' (48 aligned documents, 55.4k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/de-eu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Basque-Greek' (145 aligned documents, 0.1M links, 2.1M tokens)" href="download.php?f=OpenSubtitles2013/el-eu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Basque-English' (161 aligned documents, 0.2M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/en-eu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Basque-Spanish' (162 aligned documents, 0.2M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/es-eu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Basque-Estonian' (81 aligned documents, 88.7k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/et-eu.xml.gz">ces</a></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="Basque-Finnish (sample file)" href="OpenSubtitles2013/eu-fi_sample.html">view</a></td><td><a rel="nofollow" title="Basque-French (sample file)" href="OpenSubtitles2013/eu-fr_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Hebrew (sample file)" href="OpenSubtitles2013/eu-he_sample.html">view</a></td><td></td><th>eu</th>
 <td><a rel="nofollow" title="Basque-Croatian (sample file)" href="OpenSubtitles2013/eu-hr_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Hungarian (sample file)" href="OpenSubtitles2013/eu-hu_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Basque-Icelandic (sample file)" href="OpenSubtitles2013/eu-is_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Italian (sample file)" href="OpenSubtitles2013/eu-it_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Japanese (sample file)" href="OpenSubtitles2013/eu-ja_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Basque-Korean (sample file)" href="OpenSubtitles2013/eu-ko_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Lithuanian (sample file)" href="OpenSubtitles2013/eu-lt_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Latvian (sample file)" href="OpenSubtitles2013/eu-lv_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Macedonian (sample file)" href="OpenSubtitles2013/eu-mk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Basque-Malay (sample file)" href="OpenSubtitles2013/eu-ms_sample.html">view</a></td><td><a rel="nofollow" title="Basque-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/eu-nb_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Dutch (sample file)" href="OpenSubtitles2013/eu-nl_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Polish (sample file)" href="OpenSubtitles2013/eu-pl_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Portuguese (sample file)" href="OpenSubtitles2013/eu-pt_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Portuguese (sample file)" href="OpenSubtitles2013/eu-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Romanian (sample file)" href="OpenSubtitles2013/eu-ro_sample.html">view</a></td><th>eu</th>
 <td><a rel="nofollow" title="Basque-Russian (sample file)" href="OpenSubtitles2013/eu-ru_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Sinhala (sample file)" href="OpenSubtitles2013/eu-si_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Slovak (sample file)" href="OpenSubtitles2013/eu-sk_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Slovenian (sample file)" href="OpenSubtitles2013/eu-sl_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Albanian (sample file)" href="OpenSubtitles2013/eu-sq_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Serbian (sample file)" href="OpenSubtitles2013/eu-sr_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Swedish (sample file)" href="OpenSubtitles2013/eu-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Basque-Thai (sample file)" href="OpenSubtitles2013/eu-th_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Turkish (sample file)" href="OpenSubtitles2013/eu-tr_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Ukrainian (sample file)" href="OpenSubtitles2013/eu-uk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Basque-Vietnamese (sample file)" href="OpenSubtitles2013/eu-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Basque-Chinese (sample file)" href="OpenSubtitles2013/eu-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Basque-Chinese (sample file)" href="OpenSubtitles2013/eu-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/eu.raw.tar.gz">eu</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/fa.tar.gz">fa</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Persian-Arabic' (5 aligned documents, 2.9k links, 59.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-fa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Persian-Arabic' (5 aligned documents, 2.9k links, 59.6k tokens)" href="download.php?f=OpenSubtitles2013/ar-fa.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Persian-Bulgarian' (6 aligned documents, 2.0k links, 69.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-fa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Persian-Bengali' (0.3k links, 12.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-fa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Persian-Bulgarian' (6 aligned documents, 2.0k links, 69.4k tokens)" href="download.php?f=OpenSubtitles2013/bg-fa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Persian-Bengali' (0.3k links, 12.3k tokens)" href="download.php?f=OpenSubtitles2013/bn-fa.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Persian-Czech' (3 aligned documents, 1.5k links, 24.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-fa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Persian-Danish' (2 aligned documents, 1.7k links, 35.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/da-fa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Persian-German' (2 aligned documents, 0.8k links, 19.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/de-fa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Persian-Greek' (7 aligned documents, 3.5k links, 83.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/el-fa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Persian-English' (11 aligned documents, 4.1k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-fa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Persian-Spanish' (6 aligned documents, 2.0k links, 52.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/es-fa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Persian-Czech' (3 aligned documents, 1.5k links, 24.5k tokens)" href="download.php?f=OpenSubtitles2013/cs-fa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Persian-Danish' (2 aligned documents, 1.7k links, 35.2k tokens)" href="download.php?f=OpenSubtitles2013/da-fa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Persian-German' (2 aligned documents, 0.8k links, 19.8k tokens)" href="download.php?f=OpenSubtitles2013/de-fa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Persian-Greek' (7 aligned documents, 3.5k links, 83.2k tokens)" href="download.php?f=OpenSubtitles2013/el-fa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Persian-English' (11 aligned documents, 4.1k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/en-fa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Persian-Spanish' (6 aligned documents, 2.0k links, 52.3k tokens)" href="download.php?f=OpenSubtitles2013/es-fa.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th></th>
@@ -289,90 +289,90 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td><a rel="nofollow" title="Persian-Russian (sample file)" href="OpenSubtitles2013/fa-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Persian-Slovak (sample file)" href="OpenSubtitles2013/fa-sk_sample.html">view</a></td><td><a rel="nofollow" title="Persian-Slovenian (sample file)" href="OpenSubtitles2013/fa-sl_sample.html">view</a></td><td><a rel="nofollow" title="Persian-Albanian (sample file)" href="OpenSubtitles2013/fa-sq_sample.html">view</a></td><td><a rel="nofollow" title="Persian-Serbian (sample file)" href="OpenSubtitles2013/fa-sr_sample.html">view</a></td><td><a rel="nofollow" title="Persian-Swedish (sample file)" href="OpenSubtitles2013/fa-sv_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Persian-Tamil (sample file)" href="OpenSubtitles2013/fa-ta_sample.html">view</a></td><td><a rel="nofollow" title="Persian-Telugu (sample file)" href="OpenSubtitles2013/fa-te_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Persian-Turkish (sample file)" href="OpenSubtitles2013/fa-tr_sample.html">view</a></td><td><a rel="nofollow" title="Persian-Ukrainian (sample file)" href="OpenSubtitles2013/fa-uk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Persian-Vietnamese (sample file)" href="OpenSubtitles2013/fa-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Persian-Chinese (sample file)" href="OpenSubtitles2013/fa-zh_cn_sample.html">view</a></td><td></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/fa.raw.tar.gz">fa</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/fi.tar.gz">fi</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Arabic' (5,113 aligned documents, 4.2M links, 54.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Arabic' (5,113 aligned documents, 4.2M links, 54.8M tokens)" href="download.php?f=OpenSubtitles2013/ar-fi.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Bulgarian' (6,156 aligned documents, 5.8M links, 73.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Bengali' (1.8k links, 22.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Bosnian' (835 aligned documents, 0.8M links, 9.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Catalan' (67 aligned documents, 53.6k links, 0.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Czech' (6,460 aligned documents, 6.0M links, 75.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Danish' (3,900 aligned documents, 3.7M links, 47.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-German' (2,307 aligned documents, 2.5M links, 31.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Greek' (8,183 aligned documents, 7.3M links, 96.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-English' (10,875 aligned documents, 10.9M links, 149.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Spanish' (9,001 aligned documents, 8.2M links, 111.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Estonian' (3,047 aligned documents, 3.0M links, 36.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Basque' (95 aligned documents, 0.1M links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Persian' (2 aligned documents, 0.8k links, 15.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Bulgarian' (6,156 aligned documents, 5.8M links, 73.5M tokens)" href="download.php?f=OpenSubtitles2013/bg-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Bengali' (1.8k links, 22.6k tokens)" href="download.php?f=OpenSubtitles2013/bn-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Bosnian' (835 aligned documents, 0.8M links, 9.5M tokens)" href="download.php?f=OpenSubtitles2013/bs-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Catalan' (67 aligned documents, 53.6k links, 0.8M tokens)" href="download.php?f=OpenSubtitles2013/ca-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Czech' (6,460 aligned documents, 6.0M links, 75.4M tokens)" href="download.php?f=OpenSubtitles2013/cs-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Danish' (3,900 aligned documents, 3.7M links, 47.8M tokens)" href="download.php?f=OpenSubtitles2013/da-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-German' (2,307 aligned documents, 2.5M links, 31.6M tokens)" href="download.php?f=OpenSubtitles2013/de-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Greek' (8,183 aligned documents, 7.3M links, 96.2M tokens)" href="download.php?f=OpenSubtitles2013/el-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-English' (10,875 aligned documents, 10.9M links, 149.8M tokens)" href="download.php?f=OpenSubtitles2013/en-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Spanish' (9,001 aligned documents, 8.2M links, 111.8M tokens)" href="download.php?f=OpenSubtitles2013/es-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Estonian' (3,047 aligned documents, 3.0M links, 36.9M tokens)" href="download.php?f=OpenSubtitles2013/et-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Basque' (95 aligned documents, 0.1M links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/eu-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Persian' (2 aligned documents, 0.8k links, 15.0k tokens)" href="download.php?f=OpenSubtitles2013/fa-fi.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Finnish-French (sample file)" href="OpenSubtitles2013/fi-fr_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Hebrew (sample file)" href="OpenSubtitles2013/fi-he_sample.html">view</a></td><td></td><th>fi</th>
 <td><a rel="nofollow" title="Finnish-Croatian (sample file)" href="OpenSubtitles2013/fi-hr_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Hungarian (sample file)" href="OpenSubtitles2013/fi-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Finnish-Indonesian (sample file)" href="OpenSubtitles2013/fi-id_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Icelandic (sample file)" href="OpenSubtitles2013/fi-is_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Italian (sample file)" href="OpenSubtitles2013/fi-it_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Japanese (sample file)" href="OpenSubtitles2013/fi-ja_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Finnish-Kazakh (sample file)" href="OpenSubtitles2013/fi-kk_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Korean (sample file)" href="OpenSubtitles2013/fi-ko_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Lithuanian (sample file)" href="OpenSubtitles2013/fi-lt_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Latvian (sample file)" href="OpenSubtitles2013/fi-lv_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Macedonian (sample file)" href="OpenSubtitles2013/fi-mk_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Malayalam (sample file)" href="OpenSubtitles2013/fi-ml_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Malay (sample file)" href="OpenSubtitles2013/fi-ms_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/fi-nb_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Dutch (sample file)" href="OpenSubtitles2013/fi-nl_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Polish (sample file)" href="OpenSubtitles2013/fi-pl_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Portuguese (sample file)" href="OpenSubtitles2013/fi-pt_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Portuguese (sample file)" href="OpenSubtitles2013/fi-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Romanian (sample file)" href="OpenSubtitles2013/fi-ro_sample.html">view</a></td><th>fi</th>
 <td><a rel="nofollow" title="Finnish-Russian (sample file)" href="OpenSubtitles2013/fi-ru_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Sinhala (sample file)" href="OpenSubtitles2013/fi-si_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Slovak (sample file)" href="OpenSubtitles2013/fi-sk_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Slovenian (sample file)" href="OpenSubtitles2013/fi-sl_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Albanian (sample file)" href="OpenSubtitles2013/fi-sq_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Serbian (sample file)" href="OpenSubtitles2013/fi-sr_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Swedish (sample file)" href="OpenSubtitles2013/fi-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Finnish-Thai (sample file)" href="OpenSubtitles2013/fi-th_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Turkish (sample file)" href="OpenSubtitles2013/fi-tr_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Ukrainian (sample file)" href="OpenSubtitles2013/fi-uk_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Urdu (sample file)" href="OpenSubtitles2013/fi-ur_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Vietnamese (sample file)" href="OpenSubtitles2013/fi-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Finnish-Chinese (sample file)" href="OpenSubtitles2013/fi-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Chinese (sample file)" href="OpenSubtitles2013/fi-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/fi.raw.tar.gz">fi</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/fr.tar.gz">fr</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Arabic' (9,862 aligned documents, 7.0M links, 111.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Belarusian' (1.1k links, 7.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/be-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Bulgarian' (12,012 aligned documents, 10.0M links, 150.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Bengali' (0.4k links, 11.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Bosnian' (1,452 aligned documents, 1.2M links, 17.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Catalan' (144 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Czech' (13,348 aligned documents, 10.8M links, 160.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Danish' (4,466 aligned documents, 4.0M links, 60.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-German' (3,774 aligned documents, 3.7M links, 54.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Greek' (16,701 aligned documents, 13.1M links, 205.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English' (26,504 aligned documents, 23.9M links, 371.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (21,627 aligned documents, 17.8M links, 280.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Estonian' (3,979 aligned documents, 3.7M links, 51.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Basque' (118 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Arabic' (9,862 aligned documents, 7.0M links, 111.7M tokens)" href="download.php?f=OpenSubtitles2013/ar-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Belarusian' (1.1k links, 7.5k tokens)" href="download.php?f=OpenSubtitles2013/be-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Bulgarian' (12,012 aligned documents, 10.0M links, 150.2M tokens)" href="download.php?f=OpenSubtitles2013/bg-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Bengali' (0.4k links, 11.3k tokens)" href="download.php?f=OpenSubtitles2013/bn-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Bosnian' (1,452 aligned documents, 1.2M links, 17.5M tokens)" href="download.php?f=OpenSubtitles2013/bs-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Catalan' (144 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/ca-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Czech' (13,348 aligned documents, 10.8M links, 160.8M tokens)" href="download.php?f=OpenSubtitles2013/cs-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Danish' (4,466 aligned documents, 4.0M links, 60.7M tokens)" href="download.php?f=OpenSubtitles2013/da-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-German' (3,774 aligned documents, 3.7M links, 54.7M tokens)" href="download.php?f=OpenSubtitles2013/de-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Greek' (16,701 aligned documents, 13.1M links, 205.5M tokens)" href="download.php?f=OpenSubtitles2013/el-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English' (26,504 aligned documents, 23.9M links, 371.6M tokens)" href="download.php?f=OpenSubtitles2013/en-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (21,627 aligned documents, 17.8M links, 280.6M tokens)" href="download.php?f=OpenSubtitles2013/es-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Estonian' (3,979 aligned documents, 3.7M links, 51.6M tokens)" href="download.php?f=OpenSubtitles2013/et-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Basque' (118 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/eu-fr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Finnish' (7,427 aligned documents, 6.7M links, 89.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Finnish' (7,427 aligned documents, 6.7M links, 89.5M tokens)" href="download.php?f=OpenSubtitles2013/fi-fr.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="French-Hebrew (sample file)" href="OpenSubtitles2013/fr-he_sample.html">view</a></td><td><a rel="nofollow" title="French-Hindi (sample file)" href="OpenSubtitles2013/fr-hi_sample.html">view</a></td><th>fr</th>
 <td><a rel="nofollow" title="French-Croatian (sample file)" href="OpenSubtitles2013/fr-hr_sample.html">view</a></td><td><a rel="nofollow" title="French-Hungarian (sample file)" href="OpenSubtitles2013/fr-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="French-Indonesian (sample file)" href="OpenSubtitles2013/fr-id_sample.html">view</a></td><td><a rel="nofollow" title="French-Icelandic (sample file)" href="OpenSubtitles2013/fr-is_sample.html">view</a></td><td><a rel="nofollow" title="French-Italian (sample file)" href="OpenSubtitles2013/fr-it_sample.html">view</a></td><td><a rel="nofollow" title="French-Japanese (sample file)" href="OpenSubtitles2013/fr-ja_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="French-Korean (sample file)" href="OpenSubtitles2013/fr-ko_sample.html">view</a></td><td><a rel="nofollow" title="French-Lithuanian (sample file)" href="OpenSubtitles2013/fr-lt_sample.html">view</a></td><td><a rel="nofollow" title="French-Latvian (sample file)" href="OpenSubtitles2013/fr-lv_sample.html">view</a></td><td><a rel="nofollow" title="French-Macedonian (sample file)" href="OpenSubtitles2013/fr-mk_sample.html">view</a></td><td><a rel="nofollow" title="French-Malayalam (sample file)" href="OpenSubtitles2013/fr-ml_sample.html">view</a></td><td><a rel="nofollow" title="French-Malay (sample file)" href="OpenSubtitles2013/fr-ms_sample.html">view</a></td><td><a rel="nofollow" title="French-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/fr-nb_sample.html">view</a></td><td><a rel="nofollow" title="French-Dutch (sample file)" href="OpenSubtitles2013/fr-nl_sample.html">view</a></td><td><a rel="nofollow" title="French-Polish (sample file)" href="OpenSubtitles2013/fr-pl_sample.html">view</a></td><td><a rel="nofollow" title="French-Portuguese (sample file)" href="OpenSubtitles2013/fr-pt_sample.html">view</a></td><td><a rel="nofollow" title="French-Portuguese (sample file)" href="OpenSubtitles2013/fr-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="French-Romanian (sample file)" href="OpenSubtitles2013/fr-ro_sample.html">view</a></td><th>fr</th>
 <td><a rel="nofollow" title="French-Russian (sample file)" href="OpenSubtitles2013/fr-ru_sample.html">view</a></td><td><a rel="nofollow" title="French-Sinhala (sample file)" href="OpenSubtitles2013/fr-si_sample.html">view</a></td><td><a rel="nofollow" title="French-Slovak (sample file)" href="OpenSubtitles2013/fr-sk_sample.html">view</a></td><td><a rel="nofollow" title="French-Slovenian (sample file)" href="OpenSubtitles2013/fr-sl_sample.html">view</a></td><td><a rel="nofollow" title="French-Albanian (sample file)" href="OpenSubtitles2013/fr-sq_sample.html">view</a></td><td><a rel="nofollow" title="French-Serbian (sample file)" href="OpenSubtitles2013/fr-sr_sample.html">view</a></td><td><a rel="nofollow" title="French-Swedish (sample file)" href="OpenSubtitles2013/fr-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="French-Thai (sample file)" href="OpenSubtitles2013/fr-th_sample.html">view</a></td><td><a rel="nofollow" title="French-Turkish (sample file)" href="OpenSubtitles2013/fr-tr_sample.html">view</a></td><td><a rel="nofollow" title="French-Ukrainian (sample file)" href="OpenSubtitles2013/fr-uk_sample.html">view</a></td><td><a rel="nofollow" title="French-Urdu (sample file)" href="OpenSubtitles2013/fr-ur_sample.html">view</a></td><td><a rel="nofollow" title="French-Vietnamese (sample file)" href="OpenSubtitles2013/fr-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="French-Chinese (sample file)" href="OpenSubtitles2013/fr-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="French-Chinese (sample file)" href="OpenSubtitles2013/fr-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/fr.raw.tar.gz">fr</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/he.tar.gz">he</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Arabic' (9,177 aligned documents, 6.7M links, 95.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Arabic' (9,177 aligned documents, 6.7M links, 95.2M tokens)" href="download.php?f=OpenSubtitles2013/ar-he.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Bulgarian' (10,018 aligned documents, 7.5M links, 114.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Bulgarian' (10,018 aligned documents, 7.5M links, 114.5M tokens)" href="download.php?f=OpenSubtitles2013/bg-he.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Bosnian' (1,301 aligned documents, 1.0M links, 14.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-he.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Catalan' (128 aligned documents, 84.5k links, 1.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-he.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Czech' (11,340 aligned documents, 8.3M links, 126.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-he.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Danish' (4,101 aligned documents, 3.5M links, 53.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-he.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-German' (2,588 aligned documents, 2.3M links, 36.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-he.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Greek' (12,928 aligned documents, 9.2M links, 146.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-he.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-English' (16,079 aligned documents, 12.8M links, 211.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-he.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Spanish' (14,229 aligned documents, 10.4M links, 169.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-he.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Estonian' (4,060 aligned documents, 3.4M links, 49.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-he.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Basque' (102 aligned documents, 0.1M links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-he.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Persian' (4 aligned documents, 2.2k links, 56.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-he.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Finnish' (5,506 aligned documents, 4.7M links, 64.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-he.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-French' (11,564 aligned documents, 8.4M links, 137.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Bosnian' (1,301 aligned documents, 1.0M links, 14.7M tokens)" href="download.php?f=OpenSubtitles2013/bs-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Catalan' (128 aligned documents, 84.5k links, 1.3M tokens)" href="download.php?f=OpenSubtitles2013/ca-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Czech' (11,340 aligned documents, 8.3M links, 126.6M tokens)" href="download.php?f=OpenSubtitles2013/cs-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Danish' (4,101 aligned documents, 3.5M links, 53.8M tokens)" href="download.php?f=OpenSubtitles2013/da-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-German' (2,588 aligned documents, 2.3M links, 36.1M tokens)" href="download.php?f=OpenSubtitles2013/de-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Greek' (12,928 aligned documents, 9.2M links, 146.1M tokens)" href="download.php?f=OpenSubtitles2013/el-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-English' (16,079 aligned documents, 12.8M links, 211.1M tokens)" href="download.php?f=OpenSubtitles2013/en-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Spanish' (14,229 aligned documents, 10.4M links, 169.0M tokens)" href="download.php?f=OpenSubtitles2013/es-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Estonian' (4,060 aligned documents, 3.4M links, 49.2M tokens)" href="download.php?f=OpenSubtitles2013/et-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Basque' (102 aligned documents, 0.1M links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/eu-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Persian' (4 aligned documents, 2.2k links, 56.9k tokens)" href="download.php?f=OpenSubtitles2013/fa-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Finnish' (5,506 aligned documents, 4.7M links, 64.3M tokens)" href="download.php?f=OpenSubtitles2013/fi-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-French' (11,564 aligned documents, 8.4M links, 137.6M tokens)" href="download.php?f=OpenSubtitles2013/fr-he.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Hebrew-Hindi (sample file)" href="OpenSubtitles2013/he-hi_sample.html">view</a></td><th>he</th>
 <td><a rel="nofollow" title="Hebrew-Croatian (sample file)" href="OpenSubtitles2013/he-hr_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Hungarian (sample file)" href="OpenSubtitles2013/he-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Hebrew-Indonesian (sample file)" href="OpenSubtitles2013/he-id_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Icelandic (sample file)" href="OpenSubtitles2013/he-is_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Italian (sample file)" href="OpenSubtitles2013/he-it_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Japanese (sample file)" href="OpenSubtitles2013/he-ja_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Hebrew-Kazakh (sample file)" href="OpenSubtitles2013/he-kk_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Korean (sample file)" href="OpenSubtitles2013/he-ko_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Lithuanian (sample file)" href="OpenSubtitles2013/he-lt_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Latvian (sample file)" href="OpenSubtitles2013/he-lv_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Macedonian (sample file)" href="OpenSubtitles2013/he-mk_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Malayalam (sample file)" href="OpenSubtitles2013/he-ml_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Malay (sample file)" href="OpenSubtitles2013/he-ms_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/he-nb_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Dutch (sample file)" href="OpenSubtitles2013/he-nl_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Polish (sample file)" href="OpenSubtitles2013/he-pl_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Portuguese (sample file)" href="OpenSubtitles2013/he-pt_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Portuguese (sample file)" href="OpenSubtitles2013/he-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Romanian (sample file)" href="OpenSubtitles2013/he-ro_sample.html">view</a></td><th>he</th>
 <td><a rel="nofollow" title="Hebrew-Russian (sample file)" href="OpenSubtitles2013/he-ru_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Sinhala (sample file)" href="OpenSubtitles2013/he-si_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Slovak (sample file)" href="OpenSubtitles2013/he-sk_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Slovenian (sample file)" href="OpenSubtitles2013/he-sl_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Albanian (sample file)" href="OpenSubtitles2013/he-sq_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Serbian (sample file)" href="OpenSubtitles2013/he-sr_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Swedish (sample file)" href="OpenSubtitles2013/he-sv_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Hebrew-Tamil (sample file)" href="OpenSubtitles2013/he-ta_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Telugu (sample file)" href="OpenSubtitles2013/he-te_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Thai (sample file)" href="OpenSubtitles2013/he-th_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Turkish (sample file)" href="OpenSubtitles2013/he-tr_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Ukrainian (sample file)" href="OpenSubtitles2013/he-uk_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Urdu (sample file)" href="OpenSubtitles2013/he-ur_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Vietnamese (sample file)" href="OpenSubtitles2013/he-vi_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Chinese (sample file)" href="OpenSubtitles2013/he-zh_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Chinese (sample file)" href="OpenSubtitles2013/he-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Chinese (sample file)" href="OpenSubtitles2013/he-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/he.raw.tar.gz">he</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/hi.tar.gz">hi</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-Arabic' (5 aligned documents, 2.6k links, 57.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-Arabic' (5 aligned documents, 2.6k links, 57.0k tokens)" href="download.php?f=OpenSubtitles2013/ar-hi.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-Bulgarian' (0.4k links, 7.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-Bulgarian' (0.4k links, 7.0k tokens)" href="download.php?f=OpenSubtitles2013/bg-hi.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-Bosnian' (0.6k links, 10.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-Bosnian' (0.6k links, 10.3k tokens)" href="download.php?f=OpenSubtitles2013/bs-hi.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-Czech' (3 aligned documents, 1.2k links, 22.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-hi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-Danish' (0.4k links, 7.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/da-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-Czech' (3 aligned documents, 1.2k links, 22.8k tokens)" href="download.php?f=OpenSubtitles2013/cs-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-Danish' (0.4k links, 7.3k tokens)" href="download.php?f=OpenSubtitles2013/da-hi.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-Greek' (4 aligned documents, 1.2k links, 23.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/el-hi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-English' (13 aligned documents, 5.8k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-hi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-Spanish' (5 aligned documents, 2.3k links, 48.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/es-hi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-Estonian' (0.4k links, 7.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/et-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-Greek' (4 aligned documents, 1.2k links, 23.3k tokens)" href="download.php?f=OpenSubtitles2013/el-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-English' (13 aligned documents, 5.8k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/en-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-Spanish' (5 aligned documents, 2.3k links, 48.3k tokens)" href="download.php?f=OpenSubtitles2013/es-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-Estonian' (0.4k links, 7.2k tokens)" href="download.php?f=OpenSubtitles2013/et-hi.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-Persian' (6 aligned documents, 1.6k links, 76.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-Persian' (6 aligned documents, 1.6k links, 76.3k tokens)" href="download.php?f=OpenSubtitles2013/fa-hi.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-French' (4 aligned documents, 2.1k links, 45.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-hi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-Hebrew' (3 aligned documents, 1.3k links, 29.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/he-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-French' (4 aligned documents, 2.1k links, 45.5k tokens)" href="download.php?f=OpenSubtitles2013/fr-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-Hebrew' (3 aligned documents, 1.3k links, 29.4k tokens)" href="download.php?f=OpenSubtitles2013/he-hi.xml.gz">ces</a></td>
 <th></th>
 <th>hi</th>
 <td><a rel="nofollow" title="Hindi-Croatian (sample file)" href="OpenSubtitles2013/hi-hr_sample.html">view</a></td><td><a rel="nofollow" title="Hindi-Hungarian (sample file)" href="OpenSubtitles2013/hi-hu_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Hindi-Italian (sample file)" href="OpenSubtitles2013/hi-it_sample.html">view</a></td><td><a rel="nofollow" title="Hindi-Japanese (sample file)" href="OpenSubtitles2013/hi-ja_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Hindi-Macedonian (sample file)" href="OpenSubtitles2013/hi-mk_sample.html">view</a></td><td><a rel="nofollow" title="Hindi-Malayalam (sample file)" href="OpenSubtitles2013/hi-ml_sample.html">view</a></td><td><a rel="nofollow" title="Hindi-Malay (sample file)" href="OpenSubtitles2013/hi-ms_sample.html">view</a></td><td><a rel="nofollow" title="Hindi-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/hi-nb_sample.html">view</a></td><td><a rel="nofollow" title="Hindi-Dutch (sample file)" href="OpenSubtitles2013/hi-nl_sample.html">view</a></td><td><a rel="nofollow" title="Hindi-Polish (sample file)" href="OpenSubtitles2013/hi-pl_sample.html">view</a></td><td><a rel="nofollow" title="Hindi-Portuguese (sample file)" href="OpenSubtitles2013/hi-pt_sample.html">view</a></td><td><a rel="nofollow" title="Hindi-Portuguese (sample file)" href="OpenSubtitles2013/hi-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Hindi-Romanian (sample file)" href="OpenSubtitles2013/hi-ro_sample.html">view</a></td><th>hi</th>
@@ -442,52 +442,52 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <th></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/hr.tar.gz">hr</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Arabic' (8,545 aligned documents, 6.1M links, 88.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Arabic' (8,545 aligned documents, 6.1M links, 88.6M tokens)" href="download.php?f=OpenSubtitles2013/ar-hr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Bulgarian' (10,139 aligned documents, 8.5M links, 117.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Bulgarian' (10,139 aligned documents, 8.5M links, 117.3M tokens)" href="download.php?f=OpenSubtitles2013/bg-hr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Bosnian' (893 aligned documents, 0.8M links, 10.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Catalan' (136 aligned documents, 100.0k links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Czech' (11,507 aligned documents, 9.4M links, 128.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Danish' (4,316 aligned documents, 4.0M links, 55.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-German' (2,770 aligned documents, 2.8M links, 38.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Greek' (14,145 aligned documents, 11.1M links, 160.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-English' (18,640 aligned documents, 16.6M links, 242.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Spanish' (15,893 aligned documents, 12.9M links, 189.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Estonian' (4,045 aligned documents, 3.7M links, 48.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Basque' (108 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Persian' (3 aligned documents, 1.4k links, 36.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Finnish' (6,163 aligned documents, 5.7M links, 70.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-French' (12,340 aligned documents, 9.9M links, 146.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Hebrew' (9,942 aligned documents, 7.4M links, 110.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Hindi' (2 aligned documents, 0.9k links, 15.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Bosnian' (893 aligned documents, 0.8M links, 10.4M tokens)" href="download.php?f=OpenSubtitles2013/bs-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Catalan' (136 aligned documents, 100.0k links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/ca-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Czech' (11,507 aligned documents, 9.4M links, 128.1M tokens)" href="download.php?f=OpenSubtitles2013/cs-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Danish' (4,316 aligned documents, 4.0M links, 55.4M tokens)" href="download.php?f=OpenSubtitles2013/da-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-German' (2,770 aligned documents, 2.8M links, 38.3M tokens)" href="download.php?f=OpenSubtitles2013/de-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Greek' (14,145 aligned documents, 11.1M links, 160.1M tokens)" href="download.php?f=OpenSubtitles2013/el-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-English' (18,640 aligned documents, 16.6M links, 242.5M tokens)" href="download.php?f=OpenSubtitles2013/en-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Spanish' (15,893 aligned documents, 12.9M links, 189.5M tokens)" href="download.php?f=OpenSubtitles2013/es-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Estonian' (4,045 aligned documents, 3.7M links, 48.4M tokens)" href="download.php?f=OpenSubtitles2013/et-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Basque' (108 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/eu-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Persian' (3 aligned documents, 1.4k links, 36.3k tokens)" href="download.php?f=OpenSubtitles2013/fa-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Finnish' (6,163 aligned documents, 5.7M links, 70.1M tokens)" href="download.php?f=OpenSubtitles2013/fi-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-French' (12,340 aligned documents, 9.9M links, 146.1M tokens)" href="download.php?f=OpenSubtitles2013/fr-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Hebrew' (9,942 aligned documents, 7.4M links, 110.7M tokens)" href="download.php?f=OpenSubtitles2013/he-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Hindi' (2 aligned documents, 0.9k links, 15.3k tokens)" href="download.php?f=OpenSubtitles2013/hi-hr.xml.gz">ces</a></td>
 <th>hr</th>
 <th></th>
 <td><a rel="nofollow" title="Croatian-Hungarian (sample file)" href="OpenSubtitles2013/hr-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Croatian-Indonesian (sample file)" href="OpenSubtitles2013/hr-id_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Icelandic (sample file)" href="OpenSubtitles2013/hr-is_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Italian (sample file)" href="OpenSubtitles2013/hr-it_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Japanese (sample file)" href="OpenSubtitles2013/hr-ja_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Croatian-Korean (sample file)" href="OpenSubtitles2013/hr-ko_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Lithuanian (sample file)" href="OpenSubtitles2013/hr-lt_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Latvian (sample file)" href="OpenSubtitles2013/hr-lv_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Macedonian (sample file)" href="OpenSubtitles2013/hr-mk_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Malayalam (sample file)" href="OpenSubtitles2013/hr-ml_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Malay (sample file)" href="OpenSubtitles2013/hr-ms_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/hr-nb_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Dutch (sample file)" href="OpenSubtitles2013/hr-nl_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Polish (sample file)" href="OpenSubtitles2013/hr-pl_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Portuguese (sample file)" href="OpenSubtitles2013/hr-pt_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Portuguese (sample file)" href="OpenSubtitles2013/hr-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Romanian (sample file)" href="OpenSubtitles2013/hr-ro_sample.html">view</a></td><th>hr</th>
 <td><a rel="nofollow" title="Croatian-Russian (sample file)" href="OpenSubtitles2013/hr-ru_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Sinhala (sample file)" href="OpenSubtitles2013/hr-si_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Slovak (sample file)" href="OpenSubtitles2013/hr-sk_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Slovenian (sample file)" href="OpenSubtitles2013/hr-sl_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Albanian (sample file)" href="OpenSubtitles2013/hr-sq_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Serbian (sample file)" href="OpenSubtitles2013/hr-sr_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Swedish (sample file)" href="OpenSubtitles2013/hr-sv_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Croatian-Tamil (sample file)" href="OpenSubtitles2013/hr-ta_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Telugu (sample file)" href="OpenSubtitles2013/hr-te_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Thai (sample file)" href="OpenSubtitles2013/hr-th_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Turkish (sample file)" href="OpenSubtitles2013/hr-tr_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Ukrainian (sample file)" href="OpenSubtitles2013/hr-uk_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Urdu (sample file)" href="OpenSubtitles2013/hr-ur_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Vietnamese (sample file)" href="OpenSubtitles2013/hr-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Croatian-Chinese (sample file)" href="OpenSubtitles2013/hr-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Chinese (sample file)" href="OpenSubtitles2013/hr-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/hr.raw.tar.gz">hr</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/hu.tar.gz">hu</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Arabic' (9,773 aligned documents, 7.0M links, 99.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Arabic' (9,773 aligned documents, 7.0M links, 99.1M tokens)" href="download.php?f=OpenSubtitles2013/ar-hu.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Bulgarian' (12,589 aligned documents, 10.3M links, 139.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Bulgarian' (12,589 aligned documents, 10.3M links, 139.5M tokens)" href="download.php?f=OpenSubtitles2013/bg-hu.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Bosnian' (1,370 aligned documents, 1.1M links, 14.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Catalan' (147 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Czech' (14,151 aligned documents, 11.3M links, 150.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Danish' (4,397 aligned documents, 4.0M links, 55.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-German' (3,208 aligned documents, 3.2M links, 43.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Greek' (15,486 aligned documents, 12.1M links, 171.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (23,394 aligned documents, 20.5M links, 292.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Spanish' (19,081 aligned documents, 15.3M links, 220.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Estonian' (4,012 aligned documents, 3.7M links, 46.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Basque' (128 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Persian' (5 aligned documents, 2.1k links, 48.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Finnish' (6,538 aligned documents, 6.0M links, 72.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-French' (16,074 aligned documents, 12.7M links, 183.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Hebrew' (11,019 aligned documents, 8.0M links, 117.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Hindi' (2 aligned documents, 0.8k links, 14.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Bosnian' (1,370 aligned documents, 1.1M links, 14.6M tokens)" href="download.php?f=OpenSubtitles2013/bs-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Catalan' (147 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/ca-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Czech' (14,151 aligned documents, 11.3M links, 150.5M tokens)" href="download.php?f=OpenSubtitles2013/cs-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Danish' (4,397 aligned documents, 4.0M links, 55.0M tokens)" href="download.php?f=OpenSubtitles2013/da-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-German' (3,208 aligned documents, 3.2M links, 43.1M tokens)" href="download.php?f=OpenSubtitles2013/de-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Greek' (15,486 aligned documents, 12.1M links, 171.8M tokens)" href="download.php?f=OpenSubtitles2013/el-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (23,394 aligned documents, 20.5M links, 292.5M tokens)" href="download.php?f=OpenSubtitles2013/en-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Spanish' (19,081 aligned documents, 15.3M links, 220.2M tokens)" href="download.php?f=OpenSubtitles2013/es-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Estonian' (4,012 aligned documents, 3.7M links, 46.6M tokens)" href="download.php?f=OpenSubtitles2013/et-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Basque' (128 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/eu-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Persian' (5 aligned documents, 2.1k links, 48.7k tokens)" href="download.php?f=OpenSubtitles2013/fa-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Finnish' (6,538 aligned documents, 6.0M links, 72.5M tokens)" href="download.php?f=OpenSubtitles2013/fi-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-French' (16,074 aligned documents, 12.7M links, 183.2M tokens)" href="download.php?f=OpenSubtitles2013/fr-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Hebrew' (11,019 aligned documents, 8.0M links, 117.9M tokens)" href="download.php?f=OpenSubtitles2013/he-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Hindi' (2 aligned documents, 0.8k links, 14.9k tokens)" href="download.php?f=OpenSubtitles2013/hi-hu.xml.gz">ces</a></td>
 <th>hu</th>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Croatian' (11,554 aligned documents, 9.3M links, 123.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Croatian' (11,554 aligned documents, 9.3M links, 123.0M tokens)" href="download.php?f=OpenSubtitles2013/hr-hu.xml.gz">ces</a></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="Hungarian-Indonesian (sample file)" href="OpenSubtitles2013/hu-id_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Icelandic (sample file)" href="OpenSubtitles2013/hu-is_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Italian (sample file)" href="OpenSubtitles2013/hu-it_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Japanese (sample file)" href="OpenSubtitles2013/hu-ja_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Hungarian-Kazakh (sample file)" href="OpenSubtitles2013/hu-kk_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Korean (sample file)" href="OpenSubtitles2013/hu-ko_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Lithuanian (sample file)" href="OpenSubtitles2013/hu-lt_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Latvian (sample file)" href="OpenSubtitles2013/hu-lv_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Macedonian (sample file)" href="OpenSubtitles2013/hu-mk_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Malayalam (sample file)" href="OpenSubtitles2013/hu-ml_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Malay (sample file)" href="OpenSubtitles2013/hu-ms_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/hu-nb_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Dutch (sample file)" href="OpenSubtitles2013/hu-nl_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Polish (sample file)" href="OpenSubtitles2013/hu-pl_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Portuguese (sample file)" href="OpenSubtitles2013/hu-pt_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Portuguese (sample file)" href="OpenSubtitles2013/hu-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Romanian (sample file)" href="OpenSubtitles2013/hu-ro_sample.html">view</a></td><th>hu</th>
 <td><a rel="nofollow" title="Hungarian-Russian (sample file)" href="OpenSubtitles2013/hu-ru_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Sinhala (sample file)" href="OpenSubtitles2013/hu-si_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Slovak (sample file)" href="OpenSubtitles2013/hu-sk_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Slovenian (sample file)" href="OpenSubtitles2013/hu-sl_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Albanian (sample file)" href="OpenSubtitles2013/hu-sq_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Serbian (sample file)" href="OpenSubtitles2013/hu-sr_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Swedish (sample file)" href="OpenSubtitles2013/hu-sv_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Hungarian-Tamil (sample file)" href="OpenSubtitles2013/hu-ta_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Telugu (sample file)" href="OpenSubtitles2013/hu-te_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Thai (sample file)" href="OpenSubtitles2013/hu-th_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Turkish (sample file)" href="OpenSubtitles2013/hu-tr_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Ukrainian (sample file)" href="OpenSubtitles2013/hu-uk_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Urdu (sample file)" href="OpenSubtitles2013/hu-ur_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Vietnamese (sample file)" href="OpenSubtitles2013/hu-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Hungarian-Chinese (sample file)" href="OpenSubtitles2013/hu-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Chinese (sample file)" href="OpenSubtitles2013/hu-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/hu.raw.tar.gz">hu</a></th></tr>
@@ -503,8 +503,8 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Armenian-English' (1.0k links, 15.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/en-hy.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Armenian-Spanish' (1.1k links, 15.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/es-hy.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Armenian-English' (1.0k links, 15.6k tokens)" href="download.php?f=OpenSubtitles2013/en-hy.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Armenian-Spanish' (1.1k links, 15.7k tokens)" href="download.php?f=OpenSubtitles2013/es-hy.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -520,119 +520,119 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Armenian-Turkish (sample file)" href="OpenSubtitles2013/hy-tr_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/hy.raw.tar.gz">hy</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/id.tar.gz">id</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Arabic' (47 aligned documents, 41.3k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Arabic' (47 aligned documents, 41.3k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/ar-id.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Bulgarian' (50 aligned documents, 46.8k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Bulgarian' (50 aligned documents, 46.8k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/bg-id.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Bosnian' (10 aligned documents, 9.6k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-id.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Catalan' (5 aligned documents, 4.2k links, 65.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-id.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Czech' (50 aligned documents, 49.8k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-id.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Danish' (42 aligned documents, 42.0k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-id.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-German' (29 aligned documents, 29.2k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-id.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Greek' (49 aligned documents, 45.7k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-id.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-English' (58 aligned documents, 56.3k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-id.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Spanish' (58 aligned documents, 53.7k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-id.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Estonian' (35 aligned documents, 33.0k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Bosnian' (10 aligned documents, 9.6k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/bs-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Catalan' (5 aligned documents, 4.2k links, 65.7k tokens)" href="download.php?f=OpenSubtitles2013/ca-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Czech' (50 aligned documents, 49.8k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/cs-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Danish' (42 aligned documents, 42.0k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/da-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-German' (29 aligned documents, 29.2k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/de-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Greek' (49 aligned documents, 45.7k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/el-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-English' (58 aligned documents, 56.3k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/en-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Spanish' (58 aligned documents, 53.7k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/es-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Estonian' (35 aligned documents, 33.0k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/et-id.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Persian' (0.3k links, 17.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-id.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Finnish' (41 aligned documents, 39.3k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-id.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-French' (40 aligned documents, 37.5k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-id.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Hebrew' (47 aligned documents, 44.3k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Persian' (0.3k links, 17.9k tokens)" href="download.php?f=OpenSubtitles2013/fa-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Finnish' (41 aligned documents, 39.3k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/fi-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-French' (40 aligned documents, 37.5k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/fr-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Hebrew' (47 aligned documents, 44.3k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/he-id.xml.gz">ces</a></td>
 <td></td>
 <th>id</th>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Croatian' (44 aligned documents, 41.8k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-id.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Hungarian' (49 aligned documents, 48.7k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Croatian' (44 aligned documents, 41.8k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/hr-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Hungarian' (49 aligned documents, 48.7k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/hu-id.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td><a rel="nofollow" title="Indonesian-Icelandic (sample file)" href="OpenSubtitles2013/id-is_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Italian (sample file)" href="OpenSubtitles2013/id-it_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Japanese (sample file)" href="OpenSubtitles2013/id-ja_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Indonesian-Lithuanian (sample file)" href="OpenSubtitles2013/id-lt_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Latvian (sample file)" href="OpenSubtitles2013/id-lv_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Macedonian (sample file)" href="OpenSubtitles2013/id-mk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Indonesian-Malay (sample file)" href="OpenSubtitles2013/id-ms_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/id-nb_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Dutch (sample file)" href="OpenSubtitles2013/id-nl_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Polish (sample file)" href="OpenSubtitles2013/id-pl_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Portuguese (sample file)" href="OpenSubtitles2013/id-pt_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Portuguese (sample file)" href="OpenSubtitles2013/id-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Romanian (sample file)" href="OpenSubtitles2013/id-ro_sample.html">view</a></td><th>id</th>
 <td><a rel="nofollow" title="Indonesian-Russian (sample file)" href="OpenSubtitles2013/id-ru_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Sinhala (sample file)" href="OpenSubtitles2013/id-si_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Slovak (sample file)" href="OpenSubtitles2013/id-sk_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Slovenian (sample file)" href="OpenSubtitles2013/id-sl_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Albanian (sample file)" href="OpenSubtitles2013/id-sq_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Serbian (sample file)" href="OpenSubtitles2013/id-sr_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Swedish (sample file)" href="OpenSubtitles2013/id-sv_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Swahili (sample file)" href="OpenSubtitles2013/id-sw_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Indonesian-Thai (sample file)" href="OpenSubtitles2013/id-th_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Turkish (sample file)" href="OpenSubtitles2013/id-tr_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Indonesian-Vietnamese (sample file)" href="OpenSubtitles2013/id-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Indonesian-Chinese (sample file)" href="OpenSubtitles2013/id-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Indonesian-Chinese (sample file)" href="OpenSubtitles2013/id-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/id.raw.tar.gz">id</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/is.tar.gz">is</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Arabic' (554 aligned documents, 0.6M links, 8.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Arabic' (554 aligned documents, 0.6M links, 8.9M tokens)" href="download.php?f=OpenSubtitles2013/ar-is.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Bulgarian' (615 aligned documents, 0.8M links, 10.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Bulgarian' (615 aligned documents, 0.8M links, 10.4M tokens)" href="download.php?f=OpenSubtitles2013/bg-is.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Bosnian' (94 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Catalan' (3 aligned documents, 4.3k links, 70.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Czech' (671 aligned documents, 0.9M links, 11.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Danish' (499 aligned documents, 0.6M links, 8.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-German' (361 aligned documents, 0.5M links, 6.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Greek' (720 aligned documents, 0.9M links, 12.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-English' (889 aligned documents, 1.2M links, 16.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Spanish' (739 aligned documents, 0.9M links, 13.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Estonian' (450 aligned documents, 0.6M links, 7.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Basque' (19 aligned documents, 23.8k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Bosnian' (94 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/bs-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Catalan' (3 aligned documents, 4.3k links, 70.4k tokens)" href="download.php?f=OpenSubtitles2013/ca-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Czech' (671 aligned documents, 0.9M links, 11.3M tokens)" href="download.php?f=OpenSubtitles2013/cs-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Danish' (499 aligned documents, 0.6M links, 8.7M tokens)" href="download.php?f=OpenSubtitles2013/da-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-German' (361 aligned documents, 0.5M links, 6.4M tokens)" href="download.php?f=OpenSubtitles2013/de-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Greek' (720 aligned documents, 0.9M links, 12.3M tokens)" href="download.php?f=OpenSubtitles2013/el-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-English' (889 aligned documents, 1.2M links, 16.9M tokens)" href="download.php?f=OpenSubtitles2013/en-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Spanish' (739 aligned documents, 0.9M links, 13.3M tokens)" href="download.php?f=OpenSubtitles2013/es-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Estonian' (450 aligned documents, 0.6M links, 7.4M tokens)" href="download.php?f=OpenSubtitles2013/et-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Basque' (19 aligned documents, 23.8k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/eu-is.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Finnish' (662 aligned documents, 0.8M links, 10.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-French' (629 aligned documents, 0.8M links, 11.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Hebrew' (585 aligned documents, 0.7M links, 10.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Finnish' (662 aligned documents, 0.8M links, 10.1M tokens)" href="download.php?f=OpenSubtitles2013/fi-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-French' (629 aligned documents, 0.8M links, 11.1M tokens)" href="download.php?f=OpenSubtitles2013/fr-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Hebrew' (585 aligned documents, 0.7M links, 10.0M tokens)" href="download.php?f=OpenSubtitles2013/he-is.xml.gz">ces</a></td>
 <td></td>
 <th>is</th>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Croatian' (633 aligned documents, 0.8M links, 10.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Hungarian' (630 aligned documents, 0.8M links, 10.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Croatian' (633 aligned documents, 0.8M links, 10.6M tokens)" href="download.php?f=OpenSubtitles2013/hr-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Hungarian' (630 aligned documents, 0.8M links, 10.3M tokens)" href="download.php?f=OpenSubtitles2013/hu-is.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Indonesian' (8 aligned documents, 10.3k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Indonesian' (8 aligned documents, 10.3k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/id-is.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Icelandic-Italian (sample file)" href="OpenSubtitles2013/is-it_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Japanese (sample file)" href="OpenSubtitles2013/is-ja_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Icelandic-Kazakh (sample file)" href="OpenSubtitles2013/is-kk_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Korean (sample file)" href="OpenSubtitles2013/is-ko_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Lithuanian (sample file)" href="OpenSubtitles2013/is-lt_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Latvian (sample file)" href="OpenSubtitles2013/is-lv_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Macedonian (sample file)" href="OpenSubtitles2013/is-mk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Icelandic-Malay (sample file)" href="OpenSubtitles2013/is-ms_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/is-nb_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Dutch (sample file)" href="OpenSubtitles2013/is-nl_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Polish (sample file)" href="OpenSubtitles2013/is-pl_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Portuguese (sample file)" href="OpenSubtitles2013/is-pt_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Portuguese (sample file)" href="OpenSubtitles2013/is-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Romanian (sample file)" href="OpenSubtitles2013/is-ro_sample.html">view</a></td><th>is</th>
 <td><a rel="nofollow" title="Icelandic-Russian (sample file)" href="OpenSubtitles2013/is-ru_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Sinhala (sample file)" href="OpenSubtitles2013/is-si_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Slovak (sample file)" href="OpenSubtitles2013/is-sk_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Slovenian (sample file)" href="OpenSubtitles2013/is-sl_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Albanian (sample file)" href="OpenSubtitles2013/is-sq_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Serbian (sample file)" href="OpenSubtitles2013/is-sr_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Swedish (sample file)" href="OpenSubtitles2013/is-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Icelandic-Thai (sample file)" href="OpenSubtitles2013/is-th_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Turkish (sample file)" href="OpenSubtitles2013/is-tr_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Ukrainian (sample file)" href="OpenSubtitles2013/is-uk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Icelandic-Vietnamese (sample file)" href="OpenSubtitles2013/is-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Icelandic-Chinese (sample file)" href="OpenSubtitles2013/is-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Chinese (sample file)" href="OpenSubtitles2013/is-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/is.raw.tar.gz">is</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/it.tar.gz">it</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Arabic' (7,592 aligned documents, 5.2M links, 82.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Arabic' (7,592 aligned documents, 5.2M links, 82.2M tokens)" href="download.php?f=OpenSubtitles2013/ar-it.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Bulgarian' (9,616 aligned documents, 7.4M links, 111.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Bulgarian' (9,616 aligned documents, 7.4M links, 111.4M tokens)" href="download.php?f=OpenSubtitles2013/bg-it.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Bosnian' (1,130 aligned documents, 0.8M links, 12.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Catalan' (141 aligned documents, 0.1M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Czech' (11,158 aligned documents, 8.5M links, 125.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Danish' (3,093 aligned documents, 2.7M links, 39.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-German' (2,486 aligned documents, 2.4M links, 34.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Greek' (11,783 aligned documents, 8.9M links, 137.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (21,227 aligned documents, 17.0M links, 268.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Spanish' (14,727 aligned documents, 11.3M links, 178.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Estonian' (2,756 aligned documents, 2.4M links, 33.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Basque' (89 aligned documents, 98.2k links, 1.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Persian' (2 aligned documents, 1.2k links, 22.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Finnish' (4,221 aligned documents, 3.8M links, 50.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (12,590 aligned documents, 9.6M links, 151.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Hebrew' (8,808 aligned documents, 6.1M links, 98.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Hindi' (2 aligned documents, 0.5k links, 10.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Bosnian' (1,130 aligned documents, 0.8M links, 12.3M tokens)" href="download.php?f=OpenSubtitles2013/bs-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Catalan' (141 aligned documents, 0.1M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/ca-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Czech' (11,158 aligned documents, 8.5M links, 125.5M tokens)" href="download.php?f=OpenSubtitles2013/cs-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Danish' (3,093 aligned documents, 2.7M links, 39.9M tokens)" href="download.php?f=OpenSubtitles2013/da-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-German' (2,486 aligned documents, 2.4M links, 34.7M tokens)" href="download.php?f=OpenSubtitles2013/de-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Greek' (11,783 aligned documents, 8.9M links, 137.6M tokens)" href="download.php?f=OpenSubtitles2013/el-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (21,227 aligned documents, 17.0M links, 268.5M tokens)" href="download.php?f=OpenSubtitles2013/en-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Spanish' (14,727 aligned documents, 11.3M links, 178.7M tokens)" href="download.php?f=OpenSubtitles2013/es-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Estonian' (2,756 aligned documents, 2.4M links, 33.2M tokens)" href="download.php?f=OpenSubtitles2013/et-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Basque' (89 aligned documents, 98.2k links, 1.3M tokens)" href="download.php?f=OpenSubtitles2013/eu-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Persian' (2 aligned documents, 1.2k links, 22.7k tokens)" href="download.php?f=OpenSubtitles2013/fa-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Finnish' (4,221 aligned documents, 3.8M links, 50.5M tokens)" href="download.php?f=OpenSubtitles2013/fi-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (12,590 aligned documents, 9.6M links, 151.8M tokens)" href="download.php?f=OpenSubtitles2013/fr-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Hebrew' (8,808 aligned documents, 6.1M links, 98.9M tokens)" href="download.php?f=OpenSubtitles2013/he-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Hindi' (2 aligned documents, 0.5k links, 10.0k tokens)" href="download.php?f=OpenSubtitles2013/hi-it.xml.gz">ces</a></td>
 <th>it</th>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Croatian' (8,947 aligned documents, 6.9M links, 100.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Hungarian' (11,832 aligned documents, 8.9M links, 127.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Croatian' (8,947 aligned documents, 6.9M links, 100.7M tokens)" href="download.php?f=OpenSubtitles2013/hr-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Hungarian' (11,832 aligned documents, 8.9M links, 127.4M tokens)" href="download.php?f=OpenSubtitles2013/hu-it.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Indonesian' (46 aligned documents, 41.3k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Icelandic' (403 aligned documents, 0.5M links, 7.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Indonesian' (46 aligned documents, 41.3k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/id-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Icelandic' (403 aligned documents, 0.5M links, 7.3M tokens)" href="download.php?f=OpenSubtitles2013/is-it.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Italian-Japanese (sample file)" href="OpenSubtitles2013/it-ja_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Italian-Kazakh (sample file)" href="OpenSubtitles2013/it-kk_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Korean (sample file)" href="OpenSubtitles2013/it-ko_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Lithuanian (sample file)" href="OpenSubtitles2013/it-lt_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Latvian (sample file)" href="OpenSubtitles2013/it-lv_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Macedonian (sample file)" href="OpenSubtitles2013/it-mk_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Malayalam (sample file)" href="OpenSubtitles2013/it-ml_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Malay (sample file)" href="OpenSubtitles2013/it-ms_sample.html">view</a></td><td><a rel="nofollow" title="Italian-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/it-nb_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Dutch (sample file)" href="OpenSubtitles2013/it-nl_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Polish (sample file)" href="OpenSubtitles2013/it-pl_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Portuguese (sample file)" href="OpenSubtitles2013/it-pt_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Portuguese (sample file)" href="OpenSubtitles2013/it-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Romanian (sample file)" href="OpenSubtitles2013/it-ro_sample.html">view</a></td><th>it</th>
 <td><a rel="nofollow" title="Italian-Russian (sample file)" href="OpenSubtitles2013/it-ru_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Sinhala (sample file)" href="OpenSubtitles2013/it-si_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Slovak (sample file)" href="OpenSubtitles2013/it-sk_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Slovenian (sample file)" href="OpenSubtitles2013/it-sl_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Albanian (sample file)" href="OpenSubtitles2013/it-sq_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Serbian (sample file)" href="OpenSubtitles2013/it-sr_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Swedish (sample file)" href="OpenSubtitles2013/it-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Italian-Thai (sample file)" href="OpenSubtitles2013/it-th_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Turkish (sample file)" href="OpenSubtitles2013/it-tr_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Ukrainian (sample file)" href="OpenSubtitles2013/it-uk_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Urdu (sample file)" href="OpenSubtitles2013/it-ur_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Vietnamese (sample file)" href="OpenSubtitles2013/it-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Italian-Chinese (sample file)" href="OpenSubtitles2013/it-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Chinese (sample file)" href="OpenSubtitles2013/it-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/it.raw.tar.gz">it</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ja.tar.gz">ja</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Arabic' (420 aligned documents, 0.3M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Arabic' (420 aligned documents, 0.3M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/ar-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Bulgarian' (408 aligned documents, 0.3M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Bulgarian' (408 aligned documents, 0.3M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/bg-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Bosnian' (46 aligned documents, 36.6k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Catalan' (34 aligned documents, 24.6k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Czech' (442 aligned documents, 0.4M links, 2.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Danish' (254 aligned documents, 0.2M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-German' (214 aligned documents, 0.1M links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Greek' (525 aligned documents, 0.4M links, 3.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-English' (593 aligned documents, 0.4M links, 4.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Spanish' (549 aligned documents, 0.4M links, 3.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Estonian' (244 aligned documents, 0.2M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Basque' (17 aligned documents, 17.6k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Bosnian' (46 aligned documents, 36.6k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/bs-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Catalan' (34 aligned documents, 24.6k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/ca-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Czech' (442 aligned documents, 0.4M links, 2.7M tokens)" href="download.php?f=OpenSubtitles2013/cs-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Danish' (254 aligned documents, 0.2M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/da-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-German' (214 aligned documents, 0.1M links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/de-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Greek' (525 aligned documents, 0.4M links, 3.2M tokens)" href="download.php?f=OpenSubtitles2013/el-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-English' (593 aligned documents, 0.4M links, 4.2M tokens)" href="download.php?f=OpenSubtitles2013/en-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Spanish' (549 aligned documents, 0.4M links, 3.5M tokens)" href="download.php?f=OpenSubtitles2013/es-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Estonian' (244 aligned documents, 0.2M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/et-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Basque' (17 aligned documents, 17.6k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/eu-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Finnish' (208 aligned documents, 0.2M links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-French' (476 aligned documents, 0.3M links, 3.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Hebrew' (428 aligned documents, 0.4M links, 2.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Hindi' (0.7k links, 9.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Finnish' (208 aligned documents, 0.2M links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/fi-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-French' (476 aligned documents, 0.3M links, 3.1M tokens)" href="download.php?f=OpenSubtitles2013/fr-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Hebrew' (428 aligned documents, 0.4M links, 2.6M tokens)" href="download.php?f=OpenSubtitles2013/he-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Hindi' (0.7k links, 9.8k tokens)" href="download.php?f=OpenSubtitles2013/hi-ja.xml.gz">ces</a></td>
 <th>ja</th>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Croatian' (394 aligned documents, 0.3M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Hungarian' (442 aligned documents, 0.3M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Croatian' (394 aligned documents, 0.3M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/hr-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Hungarian' (442 aligned documents, 0.3M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/hu-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Indonesian' (6 aligned documents, 6.6k links, 50.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/id-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Icelandic' (21 aligned documents, 26.0k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Italian' (392 aligned documents, 0.3M links, 2.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Indonesian' (6 aligned documents, 6.6k links, 50.6k tokens)" href="download.php?f=OpenSubtitles2013/id-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Icelandic' (21 aligned documents, 26.0k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/is-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Italian' (392 aligned documents, 0.3M links, 2.2M tokens)" href="download.php?f=OpenSubtitles2013/it-ja.xml.gz">ces</a></td>
 <th></th>
 <td></td><td></td><td><a rel="nofollow" title="Japanese-Korean (sample file)" href="OpenSubtitles2013/ja-ko_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Lithuanian (sample file)" href="OpenSubtitles2013/ja-lt_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Latvian (sample file)" href="OpenSubtitles2013/ja-lv_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Macedonian (sample file)" href="OpenSubtitles2013/ja-mk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Japanese-Malay (sample file)" href="OpenSubtitles2013/ja-ms_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/ja-nb_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Dutch (sample file)" href="OpenSubtitles2013/ja-nl_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Polish (sample file)" href="OpenSubtitles2013/ja-pl_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Portuguese (sample file)" href="OpenSubtitles2013/ja-pt_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Portuguese (sample file)" href="OpenSubtitles2013/ja-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Romanian (sample file)" href="OpenSubtitles2013/ja-ro_sample.html">view</a></td><th>ja</th>
 <td><a rel="nofollow" title="Japanese-Russian (sample file)" href="OpenSubtitles2013/ja-ru_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Sinhala (sample file)" href="OpenSubtitles2013/ja-si_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Slovak (sample file)" href="OpenSubtitles2013/ja-sk_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Slovenian (sample file)" href="OpenSubtitles2013/ja-sl_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Albanian (sample file)" href="OpenSubtitles2013/ja-sq_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Serbian (sample file)" href="OpenSubtitles2013/ja-sr_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Swedish (sample file)" href="OpenSubtitles2013/ja-sv_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Japanese-Tamil (sample file)" href="OpenSubtitles2013/ja-ta_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Telugu (sample file)" href="OpenSubtitles2013/ja-te_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Thai (sample file)" href="OpenSubtitles2013/ja-th_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Turkish (sample file)" href="OpenSubtitles2013/ja-tr_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Ukrainian (sample file)" href="OpenSubtitles2013/ja-uk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Japanese-Vietnamese (sample file)" href="OpenSubtitles2013/ja-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Japanese-Chinese (sample file)" href="OpenSubtitles2013/ja-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Chinese (sample file)" href="OpenSubtitles2013/ja-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ja.raw.tar.gz">ja</a></th></tr>
@@ -652,7 +652,7 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Georgian-Persian' (0.2k links, 9.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-ka.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Georgian-Persian' (0.2k links, 9.1k tokens)" href="download.php?f=OpenSubtitles2013/fa-ka.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -672,30 +672,30 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Bulgarian' (1.2k links, 14.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-kk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Bulgarian' (1.2k links, 14.4k tokens)" href="download.php?f=OpenSubtitles2013/bg-kk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Danish' (1.3k links, 15.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/da-kk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kazakh-German' (2 aligned documents, 2.8k links, 34.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/de-kk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Greek' (1.1k links, 12.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/el-kk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kazakh-English' (1.3k links, 16.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/en-kk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Spanish' (2 aligned documents, 2.4k links, 30.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/es-kk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Danish' (1.3k links, 15.5k tokens)" href="download.php?f=OpenSubtitles2013/da-kk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kazakh-German' (2 aligned documents, 2.8k links, 34.5k tokens)" href="download.php?f=OpenSubtitles2013/de-kk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Greek' (1.1k links, 12.6k tokens)" href="download.php?f=OpenSubtitles2013/el-kk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kazakh-English' (1.3k links, 16.6k tokens)" href="download.php?f=OpenSubtitles2013/en-kk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Spanish' (2 aligned documents, 2.4k links, 30.8k tokens)" href="download.php?f=OpenSubtitles2013/es-kk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Finnish' (1.3k links, 13.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-kk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Finnish' (1.3k links, 13.9k tokens)" href="download.php?f=OpenSubtitles2013/fi-kk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Hebrew' (1.0k links, 14.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/he-kk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Hebrew' (1.0k links, 14.3k tokens)" href="download.php?f=OpenSubtitles2013/he-kk.xml.gz">ces</a></td>
 <td></td>
 <th>kk</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Hungarian' (1.3k links, 14.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-kk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Hungarian' (1.3k links, 14.7k tokens)" href="download.php?f=OpenSubtitles2013/hu-kk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Icelandic' (1.3k links, 15.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/is-kk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Italian' (1.2k links, 15.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/it-kk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Icelandic' (1.3k links, 15.5k tokens)" href="download.php?f=OpenSubtitles2013/is-kk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Italian' (1.2k links, 15.4k tokens)" href="download.php?f=OpenSubtitles2013/it-kk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th></th>
@@ -703,33 +703,33 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td><a rel="nofollow" title="Kazakh-Russian (sample file)" href="OpenSubtitles2013/kk-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Kazakh-Slovak (sample file)" href="OpenSubtitles2013/kk-sk_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Kazakh-Swedish (sample file)" href="OpenSubtitles2013/kk-sv_sample.html">view</a></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Kazakh-Turkish (sample file)" href="OpenSubtitles2013/kk-tr_sample.html">view</a></td><td><a rel="nofollow" title="Kazakh-Ukrainian (sample file)" href="OpenSubtitles2013/kk-uk_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/kk.raw.tar.gz">kk</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ko.tar.gz">ko</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Arabic' (22 aligned documents, 17.5k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Arabic' (22 aligned documents, 17.5k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/ar-ko.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Bulgarian' (17 aligned documents, 14.0k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Bulgarian' (17 aligned documents, 14.0k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/bg-ko.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Catalan' (0.8k links, 11.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-ko.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Czech' (19 aligned documents, 15.1k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-ko.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Danish' (10 aligned documents, 8.9k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-ko.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-German' (8 aligned documents, 9.7k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-ko.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Greek' (24 aligned documents, 20.6k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-ko.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-English' (28 aligned documents, 28.1k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-ko.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Spanish' (18 aligned documents, 14.6k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-ko.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Estonian' (9 aligned documents, 7.9k links, 92.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/et-ko.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Basque' (1.5k links, 19.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Catalan' (0.8k links, 11.6k tokens)" href="download.php?f=OpenSubtitles2013/ca-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Czech' (19 aligned documents, 15.1k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/cs-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Danish' (10 aligned documents, 8.9k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/da-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-German' (8 aligned documents, 9.7k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/de-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Greek' (24 aligned documents, 20.6k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/el-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-English' (28 aligned documents, 28.1k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/en-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Spanish' (18 aligned documents, 14.6k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/es-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Estonian' (9 aligned documents, 7.9k links, 92.7k tokens)" href="download.php?f=OpenSubtitles2013/et-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Basque' (1.5k links, 19.3k tokens)" href="download.php?f=OpenSubtitles2013/eu-ko.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Finnish' (11 aligned documents, 10.5k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-ko.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-French' (15 aligned documents, 11.5k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-ko.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Hebrew' (16 aligned documents, 13.8k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Finnish' (11 aligned documents, 10.5k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/fi-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-French' (15 aligned documents, 11.5k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/fr-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Hebrew' (16 aligned documents, 13.8k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/he-ko.xml.gz">ces</a></td>
 <td></td>
 <th>ko</th>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Croatian' (17 aligned documents, 13.2k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-ko.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Hungarian' (18 aligned documents, 15.0k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Croatian' (17 aligned documents, 13.2k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/hr-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Hungarian' (18 aligned documents, 15.0k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/hu-ko.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Icelandic' (0.8k links, 10.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/is-ko.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Italian' (11 aligned documents, 9.6k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-ko.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Japanese' (5 aligned documents, 5.1k links, 31.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Icelandic' (0.8k links, 10.4k tokens)" href="download.php?f=OpenSubtitles2013/is-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Italian' (11 aligned documents, 9.6k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/it-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Japanese' (5 aligned documents, 5.1k links, 31.4k tokens)" href="download.php?f=OpenSubtitles2013/ja-ko.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th></th>
@@ -737,441 +737,441 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td><a rel="nofollow" title="Korean-Russian (sample file)" href="OpenSubtitles2013/ko-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Korean-Slovak (sample file)" href="OpenSubtitles2013/ko-sk_sample.html">view</a></td><td><a rel="nofollow" title="Korean-Slovenian (sample file)" href="OpenSubtitles2013/ko-sl_sample.html">view</a></td><td><a rel="nofollow" title="Korean-Albanian (sample file)" href="OpenSubtitles2013/ko-sq_sample.html">view</a></td><td><a rel="nofollow" title="Korean-Serbian (sample file)" href="OpenSubtitles2013/ko-sr_sample.html">view</a></td><td><a rel="nofollow" title="Korean-Swedish (sample file)" href="OpenSubtitles2013/ko-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Korean-Thai (sample file)" href="OpenSubtitles2013/ko-th_sample.html">view</a></td><td><a rel="nofollow" title="Korean-Turkish (sample file)" href="OpenSubtitles2013/ko-tr_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Korean-Vietnamese (sample file)" href="OpenSubtitles2013/ko-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Korean-Chinese (sample file)" href="OpenSubtitles2013/ko-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Korean-Chinese (sample file)" href="OpenSubtitles2013/ko-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ko.raw.tar.gz">ko</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/lt.tar.gz">lt</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Arabic' (334 aligned documents, 0.4M links, 5.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Arabic' (334 aligned documents, 0.4M links, 5.0M tokens)" href="download.php?f=OpenSubtitles2013/ar-lt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Bulgarian' (336 aligned documents, 0.4M links, 5.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Bulgarian' (336 aligned documents, 0.4M links, 5.2M tokens)" href="download.php?f=OpenSubtitles2013/bg-lt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Bosnian' (47 aligned documents, 57.1k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Catalan' (7 aligned documents, 7.8k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Czech' (361 aligned documents, 0.4M links, 5.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Danish' (246 aligned documents, 0.3M links, 4.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-German' (162 aligned documents, 0.2M links, 2.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Greek' (431 aligned documents, 0.5M links, 6.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-English' (504 aligned documents, 0.7M links, 8.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Spanish' (431 aligned documents, 0.5M links, 6.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Estonian' (253 aligned documents, 0.3M links, 3.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Basque' (15 aligned documents, 17.8k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Bosnian' (47 aligned documents, 57.1k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/bs-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Catalan' (7 aligned documents, 7.8k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/ca-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Czech' (361 aligned documents, 0.4M links, 5.5M tokens)" href="download.php?f=OpenSubtitles2013/cs-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Danish' (246 aligned documents, 0.3M links, 4.1M tokens)" href="download.php?f=OpenSubtitles2013/da-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-German' (162 aligned documents, 0.2M links, 2.8M tokens)" href="download.php?f=OpenSubtitles2013/de-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Greek' (431 aligned documents, 0.5M links, 6.7M tokens)" href="download.php?f=OpenSubtitles2013/el-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-English' (504 aligned documents, 0.7M links, 8.9M tokens)" href="download.php?f=OpenSubtitles2013/en-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Spanish' (431 aligned documents, 0.5M links, 6.9M tokens)" href="download.php?f=OpenSubtitles2013/es-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Estonian' (253 aligned documents, 0.3M links, 3.9M tokens)" href="download.php?f=OpenSubtitles2013/et-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Basque' (15 aligned documents, 17.8k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/eu-lt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Finnish' (314 aligned documents, 0.4M links, 4.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-French' (314 aligned documents, 0.4M links, 5.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Hebrew' (355 aligned documents, 0.4M links, 5.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Finnish' (314 aligned documents, 0.4M links, 4.4M tokens)" href="download.php?f=OpenSubtitles2013/fi-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-French' (314 aligned documents, 0.4M links, 5.3M tokens)" href="download.php?f=OpenSubtitles2013/fr-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Hebrew' (355 aligned documents, 0.4M links, 5.5M tokens)" href="download.php?f=OpenSubtitles2013/he-lt.xml.gz">ces</a></td>
 <td></td>
 <th>lt</th>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Croatian' (346 aligned documents, 0.4M links, 5.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Hungarian' (334 aligned documents, 0.4M links, 5.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Croatian' (346 aligned documents, 0.4M links, 5.3M tokens)" href="download.php?f=OpenSubtitles2013/hr-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Hungarian' (334 aligned documents, 0.4M links, 5.0M tokens)" href="download.php?f=OpenSubtitles2013/hu-lt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Indonesian' (6 aligned documents, 8.2k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Icelandic' (106 aligned documents, 0.2M links, 1.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Italian' (207 aligned documents, 0.3M links, 3.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Japanese' (40 aligned documents, 44.7k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Indonesian' (6 aligned documents, 8.2k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/id-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Icelandic' (106 aligned documents, 0.2M links, 1.9M tokens)" href="download.php?f=OpenSubtitles2013/is-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Italian' (207 aligned documents, 0.3M links, 3.5M tokens)" href="download.php?f=OpenSubtitles2013/it-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Japanese' (40 aligned documents, 44.7k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/ja-lt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Korean' (1.1k links, 14.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Korean' (1.1k links, 14.3k tokens)" href="download.php?f=OpenSubtitles2013/ko-lt.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Lithuanian-Latvian (sample file)" href="OpenSubtitles2013/lt-lv_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Macedonian (sample file)" href="OpenSubtitles2013/lt-mk_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Malayalam (sample file)" href="OpenSubtitles2013/lt-ml_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Malay (sample file)" href="OpenSubtitles2013/lt-ms_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/lt-nb_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Dutch (sample file)" href="OpenSubtitles2013/lt-nl_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Polish (sample file)" href="OpenSubtitles2013/lt-pl_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Portuguese (sample file)" href="OpenSubtitles2013/lt-pt_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Portuguese (sample file)" href="OpenSubtitles2013/lt-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Romanian (sample file)" href="OpenSubtitles2013/lt-ro_sample.html">view</a></td><th>lt</th>
 <td><a rel="nofollow" title="Lithuanian-Russian (sample file)" href="OpenSubtitles2013/lt-ru_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Sinhala (sample file)" href="OpenSubtitles2013/lt-si_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Slovak (sample file)" href="OpenSubtitles2013/lt-sk_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Slovenian (sample file)" href="OpenSubtitles2013/lt-sl_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Albanian (sample file)" href="OpenSubtitles2013/lt-sq_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Serbian (sample file)" href="OpenSubtitles2013/lt-sr_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Swedish (sample file)" href="OpenSubtitles2013/lt-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Lithuanian-Thai (sample file)" href="OpenSubtitles2013/lt-th_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Turkish (sample file)" href="OpenSubtitles2013/lt-tr_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Ukrainian (sample file)" href="OpenSubtitles2013/lt-uk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Lithuanian-Vietnamese (sample file)" href="OpenSubtitles2013/lt-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Lithuanian-Chinese (sample file)" href="OpenSubtitles2013/lt-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Chinese (sample file)" href="OpenSubtitles2013/lt-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/lt.raw.tar.gz">lt</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/lv.tar.gz">lv</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Arabic' (177 aligned documents, 0.2M links, 2.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Arabic' (177 aligned documents, 0.2M links, 2.5M tokens)" href="download.php?f=OpenSubtitles2013/ar-lv.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Bulgarian' (145 aligned documents, 0.2M links, 2.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Bulgarian' (145 aligned documents, 0.2M links, 2.2M tokens)" href="download.php?f=OpenSubtitles2013/bg-lv.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Bosnian' (12 aligned documents, 15.2k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Catalan' (1.6k links, 26.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Czech' (185 aligned documents, 0.2M links, 2.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Danish' (91 aligned documents, 0.1M links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-German' (70 aligned documents, 89.5k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Greek' (207 aligned documents, 0.2M links, 3.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-English' (241 aligned documents, 0.3M links, 4.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Spanish' (189 aligned documents, 0.2M links, 3.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Estonian' (85 aligned documents, 0.1M links, 1.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Basque' (3 aligned documents, 2.6k links, 30.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Bosnian' (12 aligned documents, 15.2k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/bs-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Catalan' (1.6k links, 26.1k tokens)" href="download.php?f=OpenSubtitles2013/ca-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Czech' (185 aligned documents, 0.2M links, 2.6M tokens)" href="download.php?f=OpenSubtitles2013/cs-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Danish' (91 aligned documents, 0.1M links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/da-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-German' (70 aligned documents, 89.5k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/de-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Greek' (207 aligned documents, 0.2M links, 3.1M tokens)" href="download.php?f=OpenSubtitles2013/el-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-English' (241 aligned documents, 0.3M links, 4.0M tokens)" href="download.php?f=OpenSubtitles2013/en-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Spanish' (189 aligned documents, 0.2M links, 3.0M tokens)" href="download.php?f=OpenSubtitles2013/es-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Estonian' (85 aligned documents, 0.1M links, 1.3M tokens)" href="download.php?f=OpenSubtitles2013/et-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Basque' (3 aligned documents, 2.6k links, 30.8k tokens)" href="download.php?f=OpenSubtitles2013/eu-lv.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Finnish' (106 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-French' (152 aligned documents, 0.2M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Hebrew' (186 aligned documents, 0.2M links, 2.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Finnish' (106 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/fi-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-French' (152 aligned documents, 0.2M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/fr-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Hebrew' (186 aligned documents, 0.2M links, 2.7M tokens)" href="download.php?f=OpenSubtitles2013/he-lv.xml.gz">ces</a></td>
 <td></td>
 <th>lv</th>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Croatian' (166 aligned documents, 0.2M links, 2.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Hungarian' (155 aligned documents, 0.2M links, 2.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Croatian' (166 aligned documents, 0.2M links, 2.5M tokens)" href="download.php?f=OpenSubtitles2013/hr-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Hungarian' (155 aligned documents, 0.2M links, 2.2M tokens)" href="download.php?f=OpenSubtitles2013/hu-lv.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Indonesian' (5 aligned documents, 5.4k links, 82.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/id-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Icelandic' (39 aligned documents, 51.9k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Italian' (118 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Japanese' (14 aligned documents, 15.0k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Indonesian' (5 aligned documents, 5.4k links, 82.9k tokens)" href="download.php?f=OpenSubtitles2013/id-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Icelandic' (39 aligned documents, 51.9k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/is-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Italian' (118 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/it-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Japanese' (14 aligned documents, 15.0k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/ja-lv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Lithuanian' (32 aligned documents, 44.4k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Lithuanian' (32 aligned documents, 44.4k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/lt-lv.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Latvian-Macedonian (sample file)" href="OpenSubtitles2013/lv-mk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Latvian-Malay (sample file)" href="OpenSubtitles2013/lv-ms_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/lv-nb_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Dutch (sample file)" href="OpenSubtitles2013/lv-nl_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Polish (sample file)" href="OpenSubtitles2013/lv-pl_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Portuguese (sample file)" href="OpenSubtitles2013/lv-pt_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Portuguese (sample file)" href="OpenSubtitles2013/lv-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Romanian (sample file)" href="OpenSubtitles2013/lv-ro_sample.html">view</a></td><th>lv</th>
 <td><a rel="nofollow" title="Latvian-Russian (sample file)" href="OpenSubtitles2013/lv-ru_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Sinhala (sample file)" href="OpenSubtitles2013/lv-si_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Slovak (sample file)" href="OpenSubtitles2013/lv-sk_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Slovenian (sample file)" href="OpenSubtitles2013/lv-sl_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Albanian (sample file)" href="OpenSubtitles2013/lv-sq_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Serbian (sample file)" href="OpenSubtitles2013/lv-sr_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Swedish (sample file)" href="OpenSubtitles2013/lv-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Latvian-Thai (sample file)" href="OpenSubtitles2013/lv-th_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Turkish (sample file)" href="OpenSubtitles2013/lv-tr_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Ukrainian (sample file)" href="OpenSubtitles2013/lv-uk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Latvian-Vietnamese (sample file)" href="OpenSubtitles2013/lv-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Latvian-Chinese (sample file)" href="OpenSubtitles2013/lv-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Chinese (sample file)" href="OpenSubtitles2013/lv-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/lv.raw.tar.gz">lv</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/mk.tar.gz">mk</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Afrikaans' (0.7k links, 13.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/af-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Arabic' (628 aligned documents, 0.5M links, 7.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Afrikaans' (0.7k links, 13.8k tokens)" href="download.php?f=OpenSubtitles2013/af-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Arabic' (628 aligned documents, 0.5M links, 7.8M tokens)" href="download.php?f=OpenSubtitles2013/ar-mk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Bulgarian' (583 aligned documents, 0.6M links, 7.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Bulgarian' (583 aligned documents, 0.6M links, 7.8M tokens)" href="download.php?f=OpenSubtitles2013/bg-mk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Bosnian' (111 aligned documents, 0.1M links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Catalan' (10 aligned documents, 7.1k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Czech' (624 aligned documents, 0.6M links, 8.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Danish' (416 aligned documents, 0.4M links, 6.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-German' (289 aligned documents, 0.3M links, 4.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Greek' (864 aligned documents, 0.8M links, 11.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-English' (922 aligned documents, 1.0M links, 14.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Spanish' (811 aligned documents, 0.8M links, 11.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Estonian' (416 aligned documents, 0.4M links, 5.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Basque' (9 aligned documents, 7.8k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Bosnian' (111 aligned documents, 0.1M links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/bs-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Catalan' (10 aligned documents, 7.1k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/ca-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Czech' (624 aligned documents, 0.6M links, 8.3M tokens)" href="download.php?f=OpenSubtitles2013/cs-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Danish' (416 aligned documents, 0.4M links, 6.0M tokens)" href="download.php?f=OpenSubtitles2013/da-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-German' (289 aligned documents, 0.3M links, 4.4M tokens)" href="download.php?f=OpenSubtitles2013/de-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Greek' (864 aligned documents, 0.8M links, 11.5M tokens)" href="download.php?f=OpenSubtitles2013/el-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-English' (922 aligned documents, 1.0M links, 14.4M tokens)" href="download.php?f=OpenSubtitles2013/en-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Spanish' (811 aligned documents, 0.8M links, 11.4M tokens)" href="download.php?f=OpenSubtitles2013/es-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Estonian' (416 aligned documents, 0.4M links, 5.6M tokens)" href="download.php?f=OpenSubtitles2013/et-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Basque' (9 aligned documents, 7.8k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/eu-mk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Finnish' (492 aligned documents, 0.5M links, 6.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-French' (620 aligned documents, 0.6M links, 8.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Hebrew' (638 aligned documents, 0.6M links, 8.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Hindi' (0.4k links, 7.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Finnish' (492 aligned documents, 0.5M links, 6.5M tokens)" href="download.php?f=OpenSubtitles2013/fi-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-French' (620 aligned documents, 0.6M links, 8.6M tokens)" href="download.php?f=OpenSubtitles2013/fr-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Hebrew' (638 aligned documents, 0.6M links, 8.4M tokens)" href="download.php?f=OpenSubtitles2013/he-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Hindi' (0.4k links, 7.2k tokens)" href="download.php?f=OpenSubtitles2013/hi-mk.xml.gz">ces</a></td>
 <th>mk</th>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Croatian' (697 aligned documents, 0.7M links, 8.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Hungarian' (596 aligned documents, 0.6M links, 7.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Croatian' (697 aligned documents, 0.7M links, 8.8M tokens)" href="download.php?f=OpenSubtitles2013/hr-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Hungarian' (596 aligned documents, 0.6M links, 7.7M tokens)" href="download.php?f=OpenSubtitles2013/hu-mk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Indonesian' (5 aligned documents, 5.6k links, 72.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/id-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Icelandic' (110 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Italian' (429 aligned documents, 0.4M links, 5.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Japanese' (46 aligned documents, 41.3k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Indonesian' (5 aligned documents, 5.6k links, 72.3k tokens)" href="download.php?f=OpenSubtitles2013/id-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Icelandic' (110 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/is-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Italian' (429 aligned documents, 0.4M links, 5.7M tokens)" href="download.php?f=OpenSubtitles2013/it-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Japanese' (46 aligned documents, 41.3k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/ja-mk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Korean' (3 aligned documents, 1.7k links, 25.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Lithuanian' (67 aligned documents, 80.5k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Latvian' (25 aligned documents, 28.8k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Korean' (3 aligned documents, 1.7k links, 25.2k tokens)" href="download.php?f=OpenSubtitles2013/ko-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Lithuanian' (67 aligned documents, 80.5k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/lt-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Latvian' (25 aligned documents, 28.8k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/lv-mk.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Macedonian-Malayalam (sample file)" href="OpenSubtitles2013/mk-ml_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Malay (sample file)" href="OpenSubtitles2013/mk-ms_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/mk-nb_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Dutch (sample file)" href="OpenSubtitles2013/mk-nl_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Polish (sample file)" href="OpenSubtitles2013/mk-pl_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Portuguese (sample file)" href="OpenSubtitles2013/mk-pt_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Portuguese (sample file)" href="OpenSubtitles2013/mk-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Romanian (sample file)" href="OpenSubtitles2013/mk-ro_sample.html">view</a></td><th>mk</th>
 <td><a rel="nofollow" title="Macedonian-Russian (sample file)" href="OpenSubtitles2013/mk-ru_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Sinhala (sample file)" href="OpenSubtitles2013/mk-si_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Slovak (sample file)" href="OpenSubtitles2013/mk-sk_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Slovenian (sample file)" href="OpenSubtitles2013/mk-sl_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Albanian (sample file)" href="OpenSubtitles2013/mk-sq_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Serbian (sample file)" href="OpenSubtitles2013/mk-sr_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Swedish (sample file)" href="OpenSubtitles2013/mk-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Macedonian-Thai (sample file)" href="OpenSubtitles2013/mk-th_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Turkish (sample file)" href="OpenSubtitles2013/mk-tr_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Ukrainian (sample file)" href="OpenSubtitles2013/mk-uk_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Urdu (sample file)" href="OpenSubtitles2013/mk-ur_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Vietnamese (sample file)" href="OpenSubtitles2013/mk-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Macedonian-Chinese (sample file)" href="OpenSubtitles2013/mk-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Chinese (sample file)" href="OpenSubtitles2013/mk-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/mk.raw.tar.gz">mk</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ml.tar.gz">ml</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Arabic' (4 aligned documents, 1.3k links, 17.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Arabic' (4 aligned documents, 1.3k links, 17.0k tokens)" href="download.php?f=OpenSubtitles2013/ar-ml.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Bulgarian' (3 aligned documents, 1.1k links, 16.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Bulgarian' (3 aligned documents, 1.1k links, 16.8k tokens)" href="download.php?f=OpenSubtitles2013/bg-ml.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Bosnian' (0.4k links, 4.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Bosnian' (0.4k links, 4.5k tokens)" href="download.php?f=OpenSubtitles2013/bs-ml.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Czech' (3 aligned documents, 0.7k links, 9.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-ml.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Danish' (2 aligned documents, 1.0k links, 16.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/da-ml.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-German' (0.6k links, 11.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/de-ml.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Greek' (5 aligned documents, 1.4k links, 25.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/el-ml.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-English' (4 aligned documents, 1.1k links, 21.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/en-ml.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Spanish' (5 aligned documents, 1.5k links, 26.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/es-ml.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Estonian' (2 aligned documents, 0.9k links, 15.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/et-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Czech' (3 aligned documents, 0.7k links, 9.0k tokens)" href="download.php?f=OpenSubtitles2013/cs-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Danish' (2 aligned documents, 1.0k links, 16.3k tokens)" href="download.php?f=OpenSubtitles2013/da-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-German' (0.6k links, 11.4k tokens)" href="download.php?f=OpenSubtitles2013/de-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Greek' (5 aligned documents, 1.4k links, 25.0k tokens)" href="download.php?f=OpenSubtitles2013/el-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-English' (4 aligned documents, 1.1k links, 21.2k tokens)" href="download.php?f=OpenSubtitles2013/en-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Spanish' (5 aligned documents, 1.5k links, 26.0k tokens)" href="download.php?f=OpenSubtitles2013/es-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Estonian' (2 aligned documents, 0.9k links, 15.1k tokens)" href="download.php?f=OpenSubtitles2013/et-ml.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Persian' (6 aligned documents, 1.2k links, 45.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-ml.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Finnish' (2 aligned documents, 0.9k links, 13.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-ml.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-French' (2 aligned documents, 0.9k links, 15.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-ml.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Hebrew' (3 aligned documents, 1.6k links, 24.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/he-ml.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Hindi' (2 aligned documents, 0.3k links, 9.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Persian' (6 aligned documents, 1.2k links, 45.0k tokens)" href="download.php?f=OpenSubtitles2013/fa-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Finnish' (2 aligned documents, 0.9k links, 13.6k tokens)" href="download.php?f=OpenSubtitles2013/fi-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-French' (2 aligned documents, 0.9k links, 15.6k tokens)" href="download.php?f=OpenSubtitles2013/fr-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Hebrew' (3 aligned documents, 1.6k links, 24.7k tokens)" href="download.php?f=OpenSubtitles2013/he-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Hindi' (2 aligned documents, 0.3k links, 9.7k tokens)" href="download.php?f=OpenSubtitles2013/hi-ml.xml.gz">ces</a></td>
 <th>ml</th>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Croatian' (5 aligned documents, 1.4k links, 23.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-ml.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Hungarian' (3 aligned documents, 1.1k links, 16.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Croatian' (5 aligned documents, 1.4k links, 23.8k tokens)" href="download.php?f=OpenSubtitles2013/hr-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Hungarian' (3 aligned documents, 1.1k links, 16.6k tokens)" href="download.php?f=OpenSubtitles2013/hu-ml.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Italian' (2 aligned documents, 0.9k links, 18.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/it-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Italian' (2 aligned documents, 0.9k links, 18.7k tokens)" href="download.php?f=OpenSubtitles2013/it-ml.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Lithuanian' (0.4k links, 4.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Lithuanian' (0.4k links, 4.3k tokens)" href="download.php?f=OpenSubtitles2013/lt-ml.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Macedonian' (0.4k links, 4.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Macedonian' (0.4k links, 4.6k tokens)" href="download.php?f=OpenSubtitles2013/mk-ml.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Malayalam-Malay (sample file)" href="OpenSubtitles2013/ml-ms_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Malayalam-Dutch (sample file)" href="OpenSubtitles2013/ml-nl_sample.html">view</a></td><td><a rel="nofollow" title="Malayalam-Polish (sample file)" href="OpenSubtitles2013/ml-pl_sample.html">view</a></td><td><a rel="nofollow" title="Malayalam-Portuguese (sample file)" href="OpenSubtitles2013/ml-pt_sample.html">view</a></td><td><a rel="nofollow" title="Malayalam-Portuguese (sample file)" href="OpenSubtitles2013/ml-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Malayalam-Romanian (sample file)" href="OpenSubtitles2013/ml-ro_sample.html">view</a></td><th>ml</th>
 <td><a rel="nofollow" title="Malayalam-Russian (sample file)" href="OpenSubtitles2013/ml-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Malayalam-Slovak (sample file)" href="OpenSubtitles2013/ml-sk_sample.html">view</a></td><td><a rel="nofollow" title="Malayalam-Slovenian (sample file)" href="OpenSubtitles2013/ml-sl_sample.html">view</a></td><td><a rel="nofollow" title="Malayalam-Albanian (sample file)" href="OpenSubtitles2013/ml-sq_sample.html">view</a></td><td><a rel="nofollow" title="Malayalam-Serbian (sample file)" href="OpenSubtitles2013/ml-sr_sample.html">view</a></td><td><a rel="nofollow" title="Malayalam-Swedish (sample file)" href="OpenSubtitles2013/ml-sv_sample.html">view</a></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Malayalam-Turkish (sample file)" href="OpenSubtitles2013/ml-tr_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Malayalam-Vietnamese (sample file)" href="OpenSubtitles2013/ml-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Malayalam-Chinese (sample file)" href="OpenSubtitles2013/ml-zh_cn_sample.html">view</a></td><td></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ml.raw.tar.gz">ml</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ms.tar.gz">ms</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Arabic' (1,489 aligned documents, 1.4M links, 20.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Arabic' (1,489 aligned documents, 1.4M links, 20.4M tokens)" href="download.php?f=OpenSubtitles2013/ar-ms.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Bulgarian' (1,545 aligned documents, 1.7M links, 22.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Bulgarian' (1,545 aligned documents, 1.7M links, 22.4M tokens)" href="download.php?f=OpenSubtitles2013/bg-ms.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Bosnian' (244 aligned documents, 0.3M links, 3.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Catalan' (37 aligned documents, 28.6k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Czech' (1,555 aligned documents, 1.7M links, 22.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Danish' (1,060 aligned documents, 1.2M links, 16.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-German' (663 aligned documents, 0.8M links, 10.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Greek' (1,857 aligned documents, 1.9M links, 27.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-English' (2,575 aligned documents, 3.0M links, 42.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Spanish' (1,957 aligned documents, 2.1M links, 30.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Estonian' (1,031 aligned documents, 1.1M links, 15.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Basque' (55 aligned documents, 60.1k links, 0.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Persian' (9 aligned documents, 2.9k links, 92.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Finnish' (1,163 aligned documents, 1.3M links, 16.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-French' (1,440 aligned documents, 1.6M links, 22.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Hebrew' (1,460 aligned documents, 1.5M links, 21.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Hindi' (0.3k links, 7.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Bosnian' (244 aligned documents, 0.3M links, 3.5M tokens)" href="download.php?f=OpenSubtitles2013/bs-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Catalan' (37 aligned documents, 28.6k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/ca-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Czech' (1,555 aligned documents, 1.7M links, 22.6M tokens)" href="download.php?f=OpenSubtitles2013/cs-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Danish' (1,060 aligned documents, 1.2M links, 16.8M tokens)" href="download.php?f=OpenSubtitles2013/da-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-German' (663 aligned documents, 0.8M links, 10.5M tokens)" href="download.php?f=OpenSubtitles2013/de-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Greek' (1,857 aligned documents, 1.9M links, 27.1M tokens)" href="download.php?f=OpenSubtitles2013/el-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-English' (2,575 aligned documents, 3.0M links, 42.5M tokens)" href="download.php?f=OpenSubtitles2013/en-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Spanish' (1,957 aligned documents, 2.1M links, 30.0M tokens)" href="download.php?f=OpenSubtitles2013/es-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Estonian' (1,031 aligned documents, 1.1M links, 15.0M tokens)" href="download.php?f=OpenSubtitles2013/et-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Basque' (55 aligned documents, 60.1k links, 0.8M tokens)" href="download.php?f=OpenSubtitles2013/eu-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Persian' (9 aligned documents, 2.9k links, 92.6k tokens)" href="download.php?f=OpenSubtitles2013/fa-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Finnish' (1,163 aligned documents, 1.3M links, 16.1M tokens)" href="download.php?f=OpenSubtitles2013/fi-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-French' (1,440 aligned documents, 1.6M links, 22.1M tokens)" href="download.php?f=OpenSubtitles2013/fr-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Hebrew' (1,460 aligned documents, 1.5M links, 21.5M tokens)" href="download.php?f=OpenSubtitles2013/he-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Hindi' (0.3k links, 7.1k tokens)" href="download.php?f=OpenSubtitles2013/hi-ms.xml.gz">ces</a></td>
 <th>ms</th>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Croatian' (1,535 aligned documents, 1.7M links, 22.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Hungarian' (1,506 aligned documents, 1.6M links, 21.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Croatian' (1,535 aligned documents, 1.7M links, 22.6M tokens)" href="download.php?f=OpenSubtitles2013/hr-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Hungarian' (1,506 aligned documents, 1.6M links, 21.2M tokens)" href="download.php?f=OpenSubtitles2013/hu-ms.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Indonesian' (29 aligned documents, 30.2k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Icelandic' (267 aligned documents, 0.4M links, 4.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Italian' (970 aligned documents, 1.0M links, 14.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Japanese' (155 aligned documents, 0.1M links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Indonesian' (29 aligned documents, 30.2k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/id-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Icelandic' (267 aligned documents, 0.4M links, 4.7M tokens)" href="download.php?f=OpenSubtitles2013/is-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Italian' (970 aligned documents, 1.0M links, 14.6M tokens)" href="download.php?f=OpenSubtitles2013/it-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Japanese' (155 aligned documents, 0.1M links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/ja-ms.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Korean' (11 aligned documents, 11.8k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Lithuanian' (166 aligned documents, 0.2M links, 2.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Latvian' (59 aligned documents, 77.1k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Macedonian' (268 aligned documents, 0.3M links, 4.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Malayalam' (2 aligned documents, 0.9k links, 15.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/ml-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Korean' (11 aligned documents, 11.8k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/ko-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Lithuanian' (166 aligned documents, 0.2M links, 2.8M tokens)" href="download.php?f=OpenSubtitles2013/lt-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Latvian' (59 aligned documents, 77.1k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/lv-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Macedonian' (268 aligned documents, 0.3M links, 4.0M tokens)" href="download.php?f=OpenSubtitles2013/mk-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Malayalam' (2 aligned documents, 0.9k links, 15.0k tokens)" href="download.php?f=OpenSubtitles2013/ml-ms.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Malay-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2013/ms-nb_sample.html">view</a></td><td><a rel="nofollow" title="Malay-Dutch (sample file)" href="OpenSubtitles2013/ms-nl_sample.html">view</a></td><td><a rel="nofollow" title="Malay-Polish (sample file)" href="OpenSubtitles2013/ms-pl_sample.html">view</a></td><td><a rel="nofollow" title="Malay-Portuguese (sample file)" href="OpenSubtitles2013/ms-pt_sample.html">view</a></td><td><a rel="nofollow" title="Malay-Portuguese (sample file)" href="OpenSubtitles2013/ms-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Malay-Romanian (sample file)" href="OpenSubtitles2013/ms-ro_sample.html">view</a></td><th>ms</th>
 <td><a rel="nofollow" title="Malay-Russian (sample file)" href="OpenSubtitles2013/ms-ru_sample.html">view</a></td><td><a rel="nofollow" title="Malay-Sinhala (sample file)" href="OpenSubtitles2013/ms-si_sample.html">view</a></td><td><a rel="nofollow" title="Malay-Slovak (sample file)" href="OpenSubtitles2013/ms-sk_sample.html">view</a></td><td><a rel="nofollow" title="Malay-Slovenian (sample file)" href="OpenSubtitles2013/ms-sl_sample.html">view</a></td><td><a rel="nofollow" title="Malay-Albanian (sample file)" href="OpenSubtitles2013/ms-sq_sample.html">view</a></td><td><a rel="nofollow" title="Malay-Serbian (sample file)" href="OpenSubtitles2013/ms-sr_sample.html">view</a></td><td><a rel="nofollow" title="Malay-Swedish (sample file)" href="OpenSubtitles2013/ms-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Malay-Thai (sample file)" href="OpenSubtitles2013/ms-th_sample.html">view</a></td><td><a rel="nofollow" title="Malay-Turkish (sample file)" href="OpenSubtitles2013/ms-tr_sample.html">view</a></td><td><a rel="nofollow" title="Malay-Ukrainian (sample file)" href="OpenSubtitles2013/ms-uk_sample.html">view</a></td><td><a rel="nofollow" title="Malay-Urdu (sample file)" href="OpenSubtitles2013/ms-ur_sample.html">view</a></td><td><a rel="nofollow" title="Malay-Vietnamese (sample file)" href="OpenSubtitles2013/ms-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Malay-Chinese (sample file)" href="OpenSubtitles2013/ms-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Malay-Chinese (sample file)" href="OpenSubtitles2013/ms-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ms.raw.tar.gz">ms</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/nb.tar.gz">nb</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Arabic' (1,626 aligned documents, 1.4M links, 21.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Arabic' (1,626 aligned documents, 1.4M links, 21.0M tokens)" href="download.php?f=OpenSubtitles2013/ar-nb.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Bulgarian' (1,700 aligned documents, 1.7M links, 23.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Bengali' (1.5k links, 22.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Bosnian' (220 aligned documents, 0.2M links, 2.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Catalan' (48 aligned documents, 34.7k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Czech' (1,941 aligned documents, 1.9M links, 26.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Danish' (2,172 aligned documents, 2.0M links, 27.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-German' (981 aligned documents, 1.0M links, 14.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Greek' (2,325 aligned documents, 2.2M links, 32.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-English' (3,176 aligned documents, 3.4M links, 49.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Spanish' (2,496 aligned documents, 2.4M links, 35.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Estonian' (1,011 aligned documents, 1.0M links, 13.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Basque' (34 aligned documents, 41.3k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Persian' (1.0k links, 18.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Finnish' (2,309 aligned documents, 2.2M links, 27.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-French' (1,894 aligned documents, 1.8M links, 26.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Hebrew' (1,664 aligned documents, 1.5M links, 23.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Hindi' (0.4k links, 7.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Bulgarian' (1,700 aligned documents, 1.7M links, 23.4M tokens)" href="download.php?f=OpenSubtitles2013/bg-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Bengali' (1.5k links, 22.4k tokens)" href="download.php?f=OpenSubtitles2013/bn-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Bosnian' (220 aligned documents, 0.2M links, 2.9M tokens)" href="download.php?f=OpenSubtitles2013/bs-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Catalan' (48 aligned documents, 34.7k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/ca-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Czech' (1,941 aligned documents, 1.9M links, 26.2M tokens)" href="download.php?f=OpenSubtitles2013/cs-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Danish' (2,172 aligned documents, 2.0M links, 27.0M tokens)" href="download.php?f=OpenSubtitles2013/da-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-German' (981 aligned documents, 1.0M links, 14.5M tokens)" href="download.php?f=OpenSubtitles2013/de-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Greek' (2,325 aligned documents, 2.2M links, 32.1M tokens)" href="download.php?f=OpenSubtitles2013/el-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-English' (3,176 aligned documents, 3.4M links, 49.4M tokens)" href="download.php?f=OpenSubtitles2013/en-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Spanish' (2,496 aligned documents, 2.4M links, 35.9M tokens)" href="download.php?f=OpenSubtitles2013/es-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Estonian' (1,011 aligned documents, 1.0M links, 13.7M tokens)" href="download.php?f=OpenSubtitles2013/et-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Basque' (34 aligned documents, 41.3k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/eu-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Persian' (1.0k links, 18.3k tokens)" href="download.php?f=OpenSubtitles2013/fa-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Finnish' (2,309 aligned documents, 2.2M links, 27.1M tokens)" href="download.php?f=OpenSubtitles2013/fi-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-French' (1,894 aligned documents, 1.8M links, 26.6M tokens)" href="download.php?f=OpenSubtitles2013/fr-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Hebrew' (1,664 aligned documents, 1.5M links, 23.1M tokens)" href="download.php?f=OpenSubtitles2013/he-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Hindi' (0.4k links, 7.7k tokens)" href="download.php?f=OpenSubtitles2013/hi-nb.xml.gz">ces</a></td>
 <th>nb</th>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Croatian' (1,807 aligned documents, 1.8M links, 24.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Hungarian' (1,845 aligned documents, 1.8M links, 23.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Croatian' (1,807 aligned documents, 1.8M links, 24.1M tokens)" href="download.php?f=OpenSubtitles2013/hr-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Hungarian' (1,845 aligned documents, 1.8M links, 23.6M tokens)" href="download.php?f=OpenSubtitles2013/hu-nb.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Indonesian' (13 aligned documents, 15.9k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Icelandic' (307 aligned documents, 0.4M links, 5.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Italian' (1,241 aligned documents, 1.2M links, 17.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Japanese' (117 aligned documents, 0.1M links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Indonesian' (13 aligned documents, 15.9k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/id-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Icelandic' (307 aligned documents, 0.4M links, 5.0M tokens)" href="download.php?f=OpenSubtitles2013/is-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Italian' (1,241 aligned documents, 1.2M links, 17.0M tokens)" href="download.php?f=OpenSubtitles2013/it-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Japanese' (117 aligned documents, 0.1M links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/ja-nb.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Kazakh' (1.2k links, 14.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/kk-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Korean' (6 aligned documents, 6.7k links, 99.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Lithuanian' (137 aligned documents, 0.2M links, 2.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Latvian' (56 aligned documents, 71.2k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Macedonian' (238 aligned documents, 0.2M links, 3.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Kazakh' (1.2k links, 14.8k tokens)" href="download.php?f=OpenSubtitles2013/kk-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Korean' (6 aligned documents, 6.7k links, 99.9k tokens)" href="download.php?f=OpenSubtitles2013/ko-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Lithuanian' (137 aligned documents, 0.2M links, 2.3M tokens)" href="download.php?f=OpenSubtitles2013/lt-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Latvian' (56 aligned documents, 71.2k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/lv-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Macedonian' (238 aligned documents, 0.2M links, 3.4M tokens)" href="download.php?f=OpenSubtitles2013/mk-nb.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Malay' (526 aligned documents, 0.6M links, 8.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Malay' (526 aligned documents, 0.6M links, 8.6M tokens)" href="download.php?f=OpenSubtitles2013/ms-nb.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Dutch (sample file)" href="OpenSubtitles2013/nb-nl_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Polish (sample file)" href="OpenSubtitles2013/nb-pl_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Portuguese (sample file)" href="OpenSubtitles2013/nb-pt_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Portuguese (sample file)" href="OpenSubtitles2013/nb-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Romanian (sample file)" href="OpenSubtitles2013/nb-ro_sample.html">view</a></td><th>nb</th>
 <td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Russian (sample file)" href="OpenSubtitles2013/nb-ru_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Sinhala (sample file)" href="OpenSubtitles2013/nb-si_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Slovak (sample file)" href="OpenSubtitles2013/nb-sk_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Slovenian (sample file)" href="OpenSubtitles2013/nb-sl_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Albanian (sample file)" href="OpenSubtitles2013/nb-sq_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Serbian (sample file)" href="OpenSubtitles2013/nb-sr_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Swedish (sample file)" href="OpenSubtitles2013/nb-sv_sample.html">view</a></td><td></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Tamil (sample file)" href="OpenSubtitles2013/nb-ta_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Telugu (sample file)" href="OpenSubtitles2013/nb-te_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Thai (sample file)" href="OpenSubtitles2013/nb-th_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Turkish (sample file)" href="OpenSubtitles2013/nb-tr_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Ukrainian (sample file)" href="OpenSubtitles2013/nb-uk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Vietnamese (sample file)" href="OpenSubtitles2013/nb-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Chinese (sample file)" href="OpenSubtitles2013/nb-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Chinese (sample file)" href="OpenSubtitles2013/nb-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/nb.raw.tar.gz">nb</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/nl.tar.gz">nl</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Arabic' (9,574 aligned documents, 6.8M links, 104.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Arabic' (9,574 aligned documents, 6.8M links, 104.9M tokens)" href="download.php?f=OpenSubtitles2013/ar-nl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Bulgarian' (11,437 aligned documents, 9.4M links, 138.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Bengali' (1.7k links, 22.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Bosnian' (1,329 aligned documents, 1.1M links, 15.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Catalan' (132 aligned documents, 91.9k links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Czech' (12,464 aligned documents, 10.1M links, 146.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Danish' (4,692 aligned documents, 4.1M links, 61.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (3,149 aligned documents, 3.0M links, 43.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Greek' (14,935 aligned documents, 11.8M links, 182.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (20,852 aligned documents, 18.9M links, 292.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (16,958 aligned documents, 13.8M links, 215.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Estonian' (4,342 aligned documents, 3.9M links, 53.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Basque' (123 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Persian' (8 aligned documents, 3.3k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Finnish' (6,858 aligned documents, 6.2M links, 82.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (13,910 aligned documents, 11.0M links, 173.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hebrew' (11,165 aligned documents, 8.2M links, 130.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hindi' (2 aligned documents, 0.8k links, 16.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Bulgarian' (11,437 aligned documents, 9.4M links, 138.7M tokens)" href="download.php?f=OpenSubtitles2013/bg-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Bengali' (1.7k links, 22.7k tokens)" href="download.php?f=OpenSubtitles2013/bn-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Bosnian' (1,329 aligned documents, 1.1M links, 15.6M tokens)" href="download.php?f=OpenSubtitles2013/bs-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Catalan' (132 aligned documents, 91.9k links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/ca-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Czech' (12,464 aligned documents, 10.1M links, 146.5M tokens)" href="download.php?f=OpenSubtitles2013/cs-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Danish' (4,692 aligned documents, 4.1M links, 61.5M tokens)" href="download.php?f=OpenSubtitles2013/da-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (3,149 aligned documents, 3.0M links, 43.9M tokens)" href="download.php?f=OpenSubtitles2013/de-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Greek' (14,935 aligned documents, 11.8M links, 182.1M tokens)" href="download.php?f=OpenSubtitles2013/el-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (20,852 aligned documents, 18.9M links, 292.1M tokens)" href="download.php?f=OpenSubtitles2013/en-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (16,958 aligned documents, 13.8M links, 215.0M tokens)" href="download.php?f=OpenSubtitles2013/es-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Estonian' (4,342 aligned documents, 3.9M links, 53.6M tokens)" href="download.php?f=OpenSubtitles2013/et-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Basque' (123 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/eu-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Persian' (8 aligned documents, 3.3k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/fa-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Finnish' (6,858 aligned documents, 6.2M links, 82.0M tokens)" href="download.php?f=OpenSubtitles2013/fi-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (13,910 aligned documents, 11.0M links, 173.2M tokens)" href="download.php?f=OpenSubtitles2013/fr-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hebrew' (11,165 aligned documents, 8.2M links, 130.4M tokens)" href="download.php?f=OpenSubtitles2013/he-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hindi' (2 aligned documents, 0.8k links, 16.2k tokens)" href="download.php?f=OpenSubtitles2013/hi-nl.xml.gz">ces</a></td>
 <th>nl</th>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Croatian' (11,300 aligned documents, 9.2M links, 133.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hungarian' (12,725 aligned documents, 10.1M links, 142.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Croatian' (11,300 aligned documents, 9.2M links, 133.0M tokens)" href="download.php?f=OpenSubtitles2013/hr-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hungarian' (12,725 aligned documents, 10.1M links, 142.4M tokens)" href="download.php?f=OpenSubtitles2013/hu-nl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Indonesian' (47 aligned documents, 46.5k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Icelandic' (645 aligned documents, 0.8M links, 11.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (9,623 aligned documents, 7.3M links, 114.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Japanese' (464 aligned documents, 0.3M links, 2.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Indonesian' (47 aligned documents, 46.5k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/id-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Icelandic' (645 aligned documents, 0.8M links, 11.2M tokens)" href="download.php?f=OpenSubtitles2013/is-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (9,623 aligned documents, 7.3M links, 114.5M tokens)" href="download.php?f=OpenSubtitles2013/it-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Japanese' (464 aligned documents, 0.3M links, 2.9M tokens)" href="download.php?f=OpenSubtitles2013/ja-nl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Korean' (15 aligned documents, 12.8k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Lithuanian' (356 aligned documents, 0.4M links, 5.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Latvian' (181 aligned documents, 0.2M links, 2.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Macedonian' (616 aligned documents, 0.6M links, 8.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Malayalam' (2 aligned documents, 0.9k links, 15.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/ml-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Malay' (1,597 aligned documents, 1.7M links, 23.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-BokmÃ¥l, Norwegian' (1,932 aligned documents, 1.8M links, 26.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Korean' (15 aligned documents, 12.8k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/ko-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Lithuanian' (356 aligned documents, 0.4M links, 5.6M tokens)" href="download.php?f=OpenSubtitles2013/lt-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Latvian' (181 aligned documents, 0.2M links, 2.7M tokens)" href="download.php?f=OpenSubtitles2013/lv-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Macedonian' (616 aligned documents, 0.6M links, 8.5M tokens)" href="download.php?f=OpenSubtitles2013/mk-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Malayalam' (2 aligned documents, 0.9k links, 15.1k tokens)" href="download.php?f=OpenSubtitles2013/ml-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Malay' (1,597 aligned documents, 1.7M links, 23.5M tokens)" href="download.php?f=OpenSubtitles2013/ms-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-BokmÃ¥l, Norwegian' (1,932 aligned documents, 1.8M links, 26.2M tokens)" href="download.php?f=OpenSubtitles2013/nb-nl.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Dutch-Polish (sample file)" href="OpenSubtitles2013/nl-pl_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Portuguese (sample file)" href="OpenSubtitles2013/nl-pt_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Portuguese (sample file)" href="OpenSubtitles2013/nl-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Romanian (sample file)" href="OpenSubtitles2013/nl-ro_sample.html">view</a></td><th>nl</th>
 <td><a rel="nofollow" title="Dutch-Russian (sample file)" href="OpenSubtitles2013/nl-ru_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Sinhala (sample file)" href="OpenSubtitles2013/nl-si_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Slovak (sample file)" href="OpenSubtitles2013/nl-sk_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Slovenian (sample file)" href="OpenSubtitles2013/nl-sl_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Albanian (sample file)" href="OpenSubtitles2013/nl-sq_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Serbian (sample file)" href="OpenSubtitles2013/nl-sr_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Swedish (sample file)" href="OpenSubtitles2013/nl-sv_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Dutch-Tamil (sample file)" href="OpenSubtitles2013/nl-ta_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Telugu (sample file)" href="OpenSubtitles2013/nl-te_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Thai (sample file)" href="OpenSubtitles2013/nl-th_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Turkish (sample file)" href="OpenSubtitles2013/nl-tr_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Ukrainian (sample file)" href="OpenSubtitles2013/nl-uk_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Urdu (sample file)" href="OpenSubtitles2013/nl-ur_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Vietnamese (sample file)" href="OpenSubtitles2013/nl-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Dutch-Chinese (sample file)" href="OpenSubtitles2013/nl-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Chinese (sample file)" href="OpenSubtitles2013/nl-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/nl.raw.tar.gz">nl</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/pl.tar.gz">pl</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Arabic' (5,045 aligned documents, 4.0M links, 56.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Arabic' (5,045 aligned documents, 4.0M links, 56.6M tokens)" href="download.php?f=OpenSubtitles2013/ar-pl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Bulgarian' (6,016 aligned documents, 5.5M links, 74.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Bengali' (1.5k links, 20.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Bosnian' (731 aligned documents, 0.7M links, 8.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Catalan' (83 aligned documents, 59.4k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Czech' (6,493 aligned documents, 5.9M links, 77.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Danish' (2,649 aligned documents, 2.6M links, 35.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-German' (2,352 aligned documents, 2.4M links, 33.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Greek' (8,157 aligned documents, 7.2M links, 100.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-English' (10,573 aligned documents, 10.9M links, 154.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Spanish' (8,806 aligned documents, 8.0M links, 114.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Estonian' (2,540 aligned documents, 2.5M links, 31.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Basque' (90 aligned documents, 95.8k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Persian' (2 aligned documents, 1.2k links, 21.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Finnish' (3,992 aligned documents, 4.0M links, 48.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-French' (6,794 aligned documents, 6.2M links, 87.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Hebrew' (5,597 aligned documents, 4.6M links, 67.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Hindi' (3 aligned documents, 1.4k links, 28.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Bulgarian' (6,016 aligned documents, 5.5M links, 74.0M tokens)" href="download.php?f=OpenSubtitles2013/bg-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Bengali' (1.5k links, 20.0k tokens)" href="download.php?f=OpenSubtitles2013/bn-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Bosnian' (731 aligned documents, 0.7M links, 8.7M tokens)" href="download.php?f=OpenSubtitles2013/bs-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Catalan' (83 aligned documents, 59.4k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/ca-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Czech' (6,493 aligned documents, 5.9M links, 77.9M tokens)" href="download.php?f=OpenSubtitles2013/cs-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Danish' (2,649 aligned documents, 2.6M links, 35.4M tokens)" href="download.php?f=OpenSubtitles2013/da-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-German' (2,352 aligned documents, 2.4M links, 33.1M tokens)" href="download.php?f=OpenSubtitles2013/de-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Greek' (8,157 aligned documents, 7.2M links, 100.8M tokens)" href="download.php?f=OpenSubtitles2013/el-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-English' (10,573 aligned documents, 10.9M links, 154.5M tokens)" href="download.php?f=OpenSubtitles2013/en-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Spanish' (8,806 aligned documents, 8.0M links, 114.1M tokens)" href="download.php?f=OpenSubtitles2013/es-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Estonian' (2,540 aligned documents, 2.5M links, 31.8M tokens)" href="download.php?f=OpenSubtitles2013/et-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Basque' (90 aligned documents, 95.8k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/eu-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Persian' (2 aligned documents, 1.2k links, 21.2k tokens)" href="download.php?f=OpenSubtitles2013/fa-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Finnish' (3,992 aligned documents, 4.0M links, 48.8M tokens)" href="download.php?f=OpenSubtitles2013/fi-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-French' (6,794 aligned documents, 6.2M links, 87.3M tokens)" href="download.php?f=OpenSubtitles2013/fr-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Hebrew' (5,597 aligned documents, 4.6M links, 67.4M tokens)" href="download.php?f=OpenSubtitles2013/he-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Hindi' (3 aligned documents, 1.4k links, 28.0k tokens)" href="download.php?f=OpenSubtitles2013/hi-pl.xml.gz">ces</a></td>
 <th>pl</th>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Croatian' (5,745 aligned documents, 5.2M links, 68.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Hungarian' (6,299 aligned documents, 5.7M links, 72.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Armenian' (1.0k links, 14.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/hy-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Indonesian' (35 aligned documents, 35.4k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Icelandic' (564 aligned documents, 0.7M links, 9.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Italian' (4,381 aligned documents, 3.8M links, 53.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Japanese' (271 aligned documents, 0.2M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Croatian' (5,745 aligned documents, 5.2M links, 68.8M tokens)" href="download.php?f=OpenSubtitles2013/hr-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Hungarian' (6,299 aligned documents, 5.7M links, 72.7M tokens)" href="download.php?f=OpenSubtitles2013/hu-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Armenian' (1.0k links, 14.5k tokens)" href="download.php?f=OpenSubtitles2013/hy-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Indonesian' (35 aligned documents, 35.4k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/id-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Icelandic' (564 aligned documents, 0.7M links, 9.1M tokens)" href="download.php?f=OpenSubtitles2013/is-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Italian' (4,381 aligned documents, 3.8M links, 53.0M tokens)" href="download.php?f=OpenSubtitles2013/it-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Japanese' (271 aligned documents, 0.2M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/ja-pl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Kazakh' (1.2k links, 15.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/kk-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Korean' (13 aligned documents, 11.8k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Lithuanian' (273 aligned documents, 0.3M links, 4.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Latvian' (129 aligned documents, 0.1M links, 1.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Macedonian' (486 aligned documents, 0.5M links, 6.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Malayalam' (2 aligned documents, 0.5k links, 8.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/ml-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Malay' (1,170 aligned documents, 1.3M links, 17.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-BokmÃ¥l, Norwegian' (1,290 aligned documents, 1.3M links, 17.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Dutch' (6,123 aligned documents, 5.3M links, 74.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Kazakh' (1.2k links, 15.1k tokens)" href="download.php?f=OpenSubtitles2013/kk-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Korean' (13 aligned documents, 11.8k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/ko-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Lithuanian' (273 aligned documents, 0.3M links, 4.1M tokens)" href="download.php?f=OpenSubtitles2013/lt-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Latvian' (129 aligned documents, 0.1M links, 1.9M tokens)" href="download.php?f=OpenSubtitles2013/lv-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Macedonian' (486 aligned documents, 0.5M links, 6.4M tokens)" href="download.php?f=OpenSubtitles2013/mk-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Malayalam' (2 aligned documents, 0.5k links, 8.8k tokens)" href="download.php?f=OpenSubtitles2013/ml-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Malay' (1,170 aligned documents, 1.3M links, 17.2M tokens)" href="download.php?f=OpenSubtitles2013/ms-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-BokmÃ¥l, Norwegian' (1,290 aligned documents, 1.3M links, 17.5M tokens)" href="download.php?f=OpenSubtitles2013/nb-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Dutch' (6,123 aligned documents, 5.3M links, 74.5M tokens)" href="download.php?f=OpenSubtitles2013/nl-pl.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Polish-Portuguese (sample file)" href="OpenSubtitles2013/pl-pt_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Portuguese (sample file)" href="OpenSubtitles2013/pl-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Romanian (sample file)" href="OpenSubtitles2013/pl-ro_sample.html">view</a></td><th>pl</th>
 <td><a rel="nofollow" title="Polish-Russian (sample file)" href="OpenSubtitles2013/pl-ru_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Sinhala (sample file)" href="OpenSubtitles2013/pl-si_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Slovak (sample file)" href="OpenSubtitles2013/pl-sk_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Slovenian (sample file)" href="OpenSubtitles2013/pl-sl_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Albanian (sample file)" href="OpenSubtitles2013/pl-sq_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Serbian (sample file)" href="OpenSubtitles2013/pl-sr_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Swedish (sample file)" href="OpenSubtitles2013/pl-sv_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Polish-Tamil (sample file)" href="OpenSubtitles2013/pl-ta_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Telugu (sample file)" href="OpenSubtitles2013/pl-te_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Thai (sample file)" href="OpenSubtitles2013/pl-th_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Turkish (sample file)" href="OpenSubtitles2013/pl-tr_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Ukrainian (sample file)" href="OpenSubtitles2013/pl-uk_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Urdu (sample file)" href="OpenSubtitles2013/pl-ur_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Vietnamese (sample file)" href="OpenSubtitles2013/pl-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Polish-Chinese (sample file)" href="OpenSubtitles2013/pl-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Chinese (sample file)" href="OpenSubtitles2013/pl-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/pl.raw.tar.gz">pl</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/pt.tar.gz">pt</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Arabic' (9,879 aligned documents, 7.4M links, 112.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Belarusian' (1.1k links, 7.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/be-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Bulgarian' (11,910 aligned documents, 10.5M links, 150.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Bengali' (1.7k links, 24.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Bosnian' (1,551 aligned documents, 1.4M links, 19.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Catalan' (142 aligned documents, 0.1M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Czech' (13,338 aligned documents, 11.6M links, 163.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Danish' (5,174 aligned documents, 5.0M links, 72.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (3,386 aligned documents, 3.5M links, 50.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Greek' (16,281 aligned documents, 13.5M links, 203.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (23,392 aligned documents, 22.4M links, 336.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (18,524 aligned documents, 16.1M links, 243.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Estonian' (4,954 aligned documents, 4.7M links, 64.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Basque' (141 aligned documents, 0.2M links, 2.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Persian' (6 aligned documents, 2.8k links, 61.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Finnish' (7,382 aligned documents, 7.2M links, 92.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (14,156 aligned documents, 12.2M links, 184.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hebrew' (11,699 aligned documents, 9.0M links, 141.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hindi' (3 aligned documents, 1.6k links, 33.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Arabic' (9,879 aligned documents, 7.4M links, 112.6M tokens)" href="download.php?f=OpenSubtitles2013/ar-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Belarusian' (1.1k links, 7.1k tokens)" href="download.php?f=OpenSubtitles2013/be-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Bulgarian' (11,910 aligned documents, 10.5M links, 150.7M tokens)" href="download.php?f=OpenSubtitles2013/bg-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Bengali' (1.7k links, 24.0k tokens)" href="download.php?f=OpenSubtitles2013/bn-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Bosnian' (1,551 aligned documents, 1.4M links, 19.0M tokens)" href="download.php?f=OpenSubtitles2013/bs-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Catalan' (142 aligned documents, 0.1M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/ca-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Czech' (13,338 aligned documents, 11.6M links, 163.3M tokens)" href="download.php?f=OpenSubtitles2013/cs-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Danish' (5,174 aligned documents, 5.0M links, 72.6M tokens)" href="download.php?f=OpenSubtitles2013/da-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (3,386 aligned documents, 3.5M links, 50.1M tokens)" href="download.php?f=OpenSubtitles2013/de-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Greek' (16,281 aligned documents, 13.5M links, 203.0M tokens)" href="download.php?f=OpenSubtitles2013/el-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (23,392 aligned documents, 22.4M links, 336.6M tokens)" href="download.php?f=OpenSubtitles2013/en-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (18,524 aligned documents, 16.1M links, 243.4M tokens)" href="download.php?f=OpenSubtitles2013/es-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Estonian' (4,954 aligned documents, 4.7M links, 64.0M tokens)" href="download.php?f=OpenSubtitles2013/et-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Basque' (141 aligned documents, 0.2M links, 2.1M tokens)" href="download.php?f=OpenSubtitles2013/eu-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Persian' (6 aligned documents, 2.8k links, 61.7k tokens)" href="download.php?f=OpenSubtitles2013/fa-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Finnish' (7,382 aligned documents, 7.2M links, 92.9M tokens)" href="download.php?f=OpenSubtitles2013/fi-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (14,156 aligned documents, 12.2M links, 184.4M tokens)" href="download.php?f=OpenSubtitles2013/fr-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hebrew' (11,699 aligned documents, 9.0M links, 141.6M tokens)" href="download.php?f=OpenSubtitles2013/he-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hindi' (3 aligned documents, 1.6k links, 33.5k tokens)" href="download.php?f=OpenSubtitles2013/hi-pt.xml.gz">ces</a></td>
 <th>pt</th>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Croatian' (12,265 aligned documents, 10.6M links, 149.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hungarian' (13,173 aligned documents, 11.4M links, 155.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Armenian' (1.0k links, 15.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/hy-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Indonesian' (51 aligned documents, 47.9k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Icelandic' (727 aligned documents, 1.0M links, 13.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (10,989 aligned documents, 8.8M links, 132.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Japanese' (496 aligned documents, 0.4M links, 3.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Croatian' (12,265 aligned documents, 10.6M links, 149.1M tokens)" href="download.php?f=OpenSubtitles2013/hr-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hungarian' (13,173 aligned documents, 11.4M links, 155.8M tokens)" href="download.php?f=OpenSubtitles2013/hu-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Armenian' (1.0k links, 15.6k tokens)" href="download.php?f=OpenSubtitles2013/hy-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Indonesian' (51 aligned documents, 47.9k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/id-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Icelandic' (727 aligned documents, 1.0M links, 13.0M tokens)" href="download.php?f=OpenSubtitles2013/is-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (10,989 aligned documents, 8.8M links, 132.1M tokens)" href="download.php?f=OpenSubtitles2013/it-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Japanese' (496 aligned documents, 0.4M links, 3.2M tokens)" href="download.php?f=OpenSubtitles2013/ja-pt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Kazakh' (1.2k links, 15.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/kk-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Korean' (12 aligned documents, 11.4k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Lithuanian' (427 aligned documents, 0.5M links, 6.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Latvian' (192 aligned documents, 0.2M links, 2.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Macedonian' (762 aligned documents, 0.8M links, 11.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Malayalam' (4 aligned documents, 1.8k links, 31.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/ml-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Malay' (1,867 aligned documents, 2.1M links, 28.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-BokmÃ¥l, Norwegian' (2,178 aligned documents, 2.3M links, 31.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (13,818 aligned documents, 11.9M links, 177.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Polish' (7,112 aligned documents, 6.8M links, 93.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Kazakh' (1.2k links, 15.6k tokens)" href="download.php?f=OpenSubtitles2013/kk-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Korean' (12 aligned documents, 11.4k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/ko-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Lithuanian' (427 aligned documents, 0.5M links, 6.8M tokens)" href="download.php?f=OpenSubtitles2013/lt-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Latvian' (192 aligned documents, 0.2M links, 2.9M tokens)" href="download.php?f=OpenSubtitles2013/lv-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Macedonian' (762 aligned documents, 0.8M links, 11.2M tokens)" href="download.php?f=OpenSubtitles2013/mk-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Malayalam' (4 aligned documents, 1.8k links, 31.7k tokens)" href="download.php?f=OpenSubtitles2013/ml-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Malay' (1,867 aligned documents, 2.1M links, 28.7M tokens)" href="download.php?f=OpenSubtitles2013/ms-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-BokmÃ¥l, Norwegian' (2,178 aligned documents, 2.3M links, 31.9M tokens)" href="download.php?f=OpenSubtitles2013/nb-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (13,818 aligned documents, 11.9M links, 177.2M tokens)" href="download.php?f=OpenSubtitles2013/nl-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Polish' (7,112 aligned documents, 6.8M links, 93.6M tokens)" href="download.php?f=OpenSubtitles2013/pl-pt.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Portuguese-Portuguese (sample file)" href="OpenSubtitles2013/pt-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Romanian (sample file)" href="OpenSubtitles2013/pt-ro_sample.html">view</a></td><th>pt</th>
 <td><a rel="nofollow" title="Portuguese-Russian (sample file)" href="OpenSubtitles2013/pt-ru_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Sinhala (sample file)" href="OpenSubtitles2013/pt-si_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Slovak (sample file)" href="OpenSubtitles2013/pt-sk_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Slovenian (sample file)" href="OpenSubtitles2013/pt-sl_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Albanian (sample file)" href="OpenSubtitles2013/pt-sq_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Serbian (sample file)" href="OpenSubtitles2013/pt-sr_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Swedish (sample file)" href="OpenSubtitles2013/pt-sv_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Swahili (sample file)" href="OpenSubtitles2013/pt-sw_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Tamil (sample file)" href="OpenSubtitles2013/pt-ta_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Telugu (sample file)" href="OpenSubtitles2013/pt-te_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Thai (sample file)" href="OpenSubtitles2013/pt-th_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Turkish (sample file)" href="OpenSubtitles2013/pt-tr_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Ukrainian (sample file)" href="OpenSubtitles2013/pt-uk_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Urdu (sample file)" href="OpenSubtitles2013/pt-ur_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Vietnamese (sample file)" href="OpenSubtitles2013/pt-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Portuguese-Chinese (sample file)" href="OpenSubtitles2013/pt-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Chinese (sample file)" href="OpenSubtitles2013/pt-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/pt.raw.tar.gz">pt</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/pt_br.tar.gz">pt_br</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Arabic' (12,414 aligned documents, 9.0M links, 135.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Arabic' (12,414 aligned documents, 9.0M links, 135.5M tokens)" href="download.php?f=OpenSubtitles2013/ar-pt_br.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Bulgarian' (16,565 aligned documents, 14.1M links, 201.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Bengali' (1.8k links, 25.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Bosnian' (2,024 aligned documents, 1.7M links, 23.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Catalan' (167 aligned documents, 0.1M links, 1.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Czech' (19,171 aligned documents, 15.8M links, 222.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Danish' (5,737 aligned documents, 5.5M links, 79.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (4,306 aligned documents, 4.4M links, 62.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Greek' (22,584 aligned documents, 18.2M links, 271.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (40,332 aligned documents, 37.1M links, 554.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (29,705 aligned documents, 25.2M links, 378.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Estonian' (5,314 aligned documents, 5.0M links, 66.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Basque' (163 aligned documents, 0.2M links, 2.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Persian' (6 aligned documents, 1.4k links, 41.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Finnish' (9,103 aligned documents, 8.5M links, 109.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (22,480 aligned documents, 18.5M links, 278.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hebrew' (14,711 aligned documents, 10.9M links, 170.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hindi' (5 aligned documents, 2.3k links, 43.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Bulgarian' (16,565 aligned documents, 14.1M links, 201.3M tokens)" href="download.php?f=OpenSubtitles2013/bg-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Bengali' (1.8k links, 25.4k tokens)" href="download.php?f=OpenSubtitles2013/bn-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Bosnian' (2,024 aligned documents, 1.7M links, 23.4M tokens)" href="download.php?f=OpenSubtitles2013/bs-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Catalan' (167 aligned documents, 0.1M links, 1.9M tokens)" href="download.php?f=OpenSubtitles2013/ca-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Czech' (19,171 aligned documents, 15.8M links, 222.1M tokens)" href="download.php?f=OpenSubtitles2013/cs-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Danish' (5,737 aligned documents, 5.5M links, 79.0M tokens)" href="download.php?f=OpenSubtitles2013/da-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (4,306 aligned documents, 4.4M links, 62.2M tokens)" href="download.php?f=OpenSubtitles2013/de-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Greek' (22,584 aligned documents, 18.2M links, 271.1M tokens)" href="download.php?f=OpenSubtitles2013/el-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (40,332 aligned documents, 37.1M links, 554.5M tokens)" href="download.php?f=OpenSubtitles2013/en-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (29,705 aligned documents, 25.2M links, 378.2M tokens)" href="download.php?f=OpenSubtitles2013/es-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Estonian' (5,314 aligned documents, 5.0M links, 66.6M tokens)" href="download.php?f=OpenSubtitles2013/et-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Basque' (163 aligned documents, 0.2M links, 2.2M tokens)" href="download.php?f=OpenSubtitles2013/eu-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Persian' (6 aligned documents, 1.4k links, 41.9k tokens)" href="download.php?f=OpenSubtitles2013/fa-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Finnish' (9,103 aligned documents, 8.5M links, 109.9M tokens)" href="download.php?f=OpenSubtitles2013/fi-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (22,480 aligned documents, 18.5M links, 278.1M tokens)" href="download.php?f=OpenSubtitles2013/fr-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hebrew' (14,711 aligned documents, 10.9M links, 170.1M tokens)" href="download.php?f=OpenSubtitles2013/he-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hindi' (5 aligned documents, 2.3k links, 43.5k tokens)" href="download.php?f=OpenSubtitles2013/hi-pt_br.xml.gz">ces</a></td>
 <th>pt_br</th>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Croatian' (16,538 aligned documents, 13.7M links, 191.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hungarian' (20,082 aligned documents, 16.4M links, 223.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Armenian' (1.1k links, 15.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/hy-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Indonesian' (54 aligned documents, 50.9k links, 0.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Icelandic' (756 aligned documents, 1.0M links, 13.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (19,573 aligned documents, 14.7M links, 220.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Japanese' (543 aligned documents, 0.4M links, 3.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Croatian' (16,538 aligned documents, 13.7M links, 191.3M tokens)" href="download.php?f=OpenSubtitles2013/hr-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hungarian' (20,082 aligned documents, 16.4M links, 223.0M tokens)" href="download.php?f=OpenSubtitles2013/hu-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Armenian' (1.1k links, 15.6k tokens)" href="download.php?f=OpenSubtitles2013/hy-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Indonesian' (54 aligned documents, 50.9k links, 0.8M tokens)" href="download.php?f=OpenSubtitles2013/id-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Icelandic' (756 aligned documents, 1.0M links, 13.5M tokens)" href="download.php?f=OpenSubtitles2013/is-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (19,573 aligned documents, 14.7M links, 220.5M tokens)" href="download.php?f=OpenSubtitles2013/it-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Japanese' (543 aligned documents, 0.4M links, 3.3M tokens)" href="download.php?f=OpenSubtitles2013/ja-pt_br.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Korean' (19 aligned documents, 17.6k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Lithuanian' (451 aligned documents, 0.6M links, 7.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Latvian' (210 aligned documents, 0.2M links, 3.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Macedonian' (809 aligned documents, 0.8M links, 11.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Malayalam' (5 aligned documents, 1.4k links, 25.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/ml-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Malay' (1,982 aligned documents, 2.2M links, 30.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-BokmÃ¥l, Norwegian' (2,538 aligned documents, 2.5M links, 35.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (18,023 aligned documents, 15.1M links, 222.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Polish' (8,836 aligned documents, 8.3M links, 112.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Portuguese' (21,013 aligned documents, 19.0M links, 267.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Korean' (19 aligned documents, 17.6k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/ko-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Lithuanian' (451 aligned documents, 0.6M links, 7.1M tokens)" href="download.php?f=OpenSubtitles2013/lt-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Latvian' (210 aligned documents, 0.2M links, 3.3M tokens)" href="download.php?f=OpenSubtitles2013/lv-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Macedonian' (809 aligned documents, 0.8M links, 11.3M tokens)" href="download.php?f=OpenSubtitles2013/mk-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Malayalam' (5 aligned documents, 1.4k links, 25.4k tokens)" href="download.php?f=OpenSubtitles2013/ml-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Malay' (1,982 aligned documents, 2.2M links, 30.3M tokens)" href="download.php?f=OpenSubtitles2013/ms-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-BokmÃ¥l, Norwegian' (2,538 aligned documents, 2.5M links, 35.6M tokens)" href="download.php?f=OpenSubtitles2013/nb-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (18,023 aligned documents, 15.1M links, 222.8M tokens)" href="download.php?f=OpenSubtitles2013/nl-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Polish' (8,836 aligned documents, 8.3M links, 112.7M tokens)" href="download.php?f=OpenSubtitles2013/pl-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Portuguese' (21,013 aligned documents, 19.0M links, 267.4M tokens)" href="download.php?f=OpenSubtitles2013/pt-pt_br.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Portuguese-Romanian (sample file)" href="OpenSubtitles2013/pt_br-ro_sample.html">view</a></td><th>pt_br</th>
 <td><a rel="nofollow" title="Portuguese-Russian (sample file)" href="OpenSubtitles2013/pt_br-ru_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Sinhala (sample file)" href="OpenSubtitles2013/pt_br-si_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Slovak (sample file)" href="OpenSubtitles2013/pt_br-sk_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Slovenian (sample file)" href="OpenSubtitles2013/pt_br-sl_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Albanian (sample file)" href="OpenSubtitles2013/pt_br-sq_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Serbian (sample file)" href="OpenSubtitles2013/pt_br-sr_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Swedish (sample file)" href="OpenSubtitles2013/pt_br-sv_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Portuguese-Tamil (sample file)" href="OpenSubtitles2013/pt_br-ta_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Telugu (sample file)" href="OpenSubtitles2013/pt_br-te_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Thai (sample file)" href="OpenSubtitles2013/pt_br-th_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Turkish (sample file)" href="OpenSubtitles2013/pt_br-tr_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Ukrainian (sample file)" href="OpenSubtitles2013/pt_br-uk_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Urdu (sample file)" href="OpenSubtitles2013/pt_br-ur_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Vietnamese (sample file)" href="OpenSubtitles2013/pt_br-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Portuguese-Chinese (sample file)" href="OpenSubtitles2013/pt_br-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Chinese (sample file)" href="OpenSubtitles2013/pt_br-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/pt_br.raw.tar.gz">pt_br</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ro.tar.gz">ro</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Arabic' (12,162 aligned documents, 9.1M links, 139.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Arabic' (12,162 aligned documents, 9.1M links, 139.9M tokens)" href="download.php?f=OpenSubtitles2013/ar-ro.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Bulgarian' (16,420 aligned documents, 14.5M links, 209.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Bulgarian' (16,420 aligned documents, 14.5M links, 209.8M tokens)" href="download.php?f=OpenSubtitles2013/bg-ro.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Bosnian' (1,968 aligned documents, 1.7M links, 24.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Catalan' (160 aligned documents, 0.1M links, 1.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Czech' (17,152 aligned documents, 14.9M links, 212.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Danish' (5,929 aligned documents, 5.9M links, 86.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-German' (3,822 aligned documents, 4.0M links, 57.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Greek' (20,942 aligned documents, 17.5M links, 265.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-English' (31,879 aligned documents, 31.3M links, 471.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Spanish' (24,683 aligned documents, 21.8M links, 332.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Estonian' (5,510 aligned documents, 5.4M links, 73.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Basque' (141 aligned documents, 0.2M links, 2.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Persian' (8 aligned documents, 3.2k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Finnish' (8,888 aligned documents, 8.8M links, 114.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-French' (17,969 aligned documents, 15.6M links, 238.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Hebrew' (14,171 aligned documents, 10.9M links, 174.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Hindi' (3 aligned documents, 1.6k links, 34.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Bosnian' (1,968 aligned documents, 1.7M links, 24.2M tokens)" href="download.php?f=OpenSubtitles2013/bs-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Catalan' (160 aligned documents, 0.1M links, 1.9M tokens)" href="download.php?f=OpenSubtitles2013/ca-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Czech' (17,152 aligned documents, 14.9M links, 212.2M tokens)" href="download.php?f=OpenSubtitles2013/cs-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Danish' (5,929 aligned documents, 5.9M links, 86.4M tokens)" href="download.php?f=OpenSubtitles2013/da-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-German' (3,822 aligned documents, 4.0M links, 57.4M tokens)" href="download.php?f=OpenSubtitles2013/de-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Greek' (20,942 aligned documents, 17.5M links, 265.4M tokens)" href="download.php?f=OpenSubtitles2013/el-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-English' (31,879 aligned documents, 31.3M links, 471.3M tokens)" href="download.php?f=OpenSubtitles2013/en-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Spanish' (24,683 aligned documents, 21.8M links, 332.4M tokens)" href="download.php?f=OpenSubtitles2013/es-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Estonian' (5,510 aligned documents, 5.4M links, 73.4M tokens)" href="download.php?f=OpenSubtitles2013/et-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Basque' (141 aligned documents, 0.2M links, 2.0M tokens)" href="download.php?f=OpenSubtitles2013/eu-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Persian' (8 aligned documents, 3.2k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/fa-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Finnish' (8,888 aligned documents, 8.8M links, 114.9M tokens)" href="download.php?f=OpenSubtitles2013/fi-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-French' (17,969 aligned documents, 15.6M links, 238.8M tokens)" href="download.php?f=OpenSubtitles2013/fr-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Hebrew' (14,171 aligned documents, 10.9M links, 174.1M tokens)" href="download.php?f=OpenSubtitles2013/he-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Hindi' (3 aligned documents, 1.6k links, 34.0k tokens)" href="download.php?f=OpenSubtitles2013/hi-ro.xml.gz">ces</a></td>
 <th>ro</th>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Croatian' (15,831 aligned documents, 13.7M links, 194.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Hungarian' (17,453 aligned documents, 15.0M links, 208.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Armenian' (1.0k links, 15.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/hy-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Indonesian' (50 aligned documents, 48.1k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Icelandic' (798 aligned documents, 1.1M links, 14.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Italian' (13,425 aligned documents, 10.8M links, 164.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Japanese' (484 aligned documents, 0.4M links, 3.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Croatian' (15,831 aligned documents, 13.7M links, 194.0M tokens)" href="download.php?f=OpenSubtitles2013/hr-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Hungarian' (17,453 aligned documents, 15.0M links, 208.3M tokens)" href="download.php?f=OpenSubtitles2013/hu-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Armenian' (1.0k links, 15.6k tokens)" href="download.php?f=OpenSubtitles2013/hy-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Indonesian' (50 aligned documents, 48.1k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/id-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Icelandic' (798 aligned documents, 1.1M links, 14.5M tokens)" href="download.php?f=OpenSubtitles2013/is-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Italian' (13,425 aligned documents, 10.8M links, 164.5M tokens)" href="download.php?f=OpenSubtitles2013/it-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Japanese' (484 aligned documents, 0.4M links, 3.3M tokens)" href="download.php?f=OpenSubtitles2013/ja-ro.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Kazakh' (1.3k links, 15.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/kk-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Korean' (22 aligned documents, 20.3k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Lithuanian' (472 aligned documents, 0.6M links, 7.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Latvian' (225 aligned documents, 0.3M links, 3.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Macedonian' (956 aligned documents, 1.0M links, 13.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Malayalam' (5 aligned documents, 1.5k links, 26.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/ml-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Malay' (2,254 aligned documents, 2.6M links, 35.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-BokmÃ¥l, Norwegian' (2,425 aligned documents, 2.6M links, 36.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Dutch' (17,353 aligned documents, 15.2M links, 229.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Polish' (8,880 aligned documents, 8.7M links, 119.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Portuguese' (19,069 aligned documents, 17.6M links, 258.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Portuguese' (26,899 aligned documents, 24.5M links, 355.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt_br-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Kazakh' (1.3k links, 15.4k tokens)" href="download.php?f=OpenSubtitles2013/kk-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Korean' (22 aligned documents, 20.3k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/ko-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Lithuanian' (472 aligned documents, 0.6M links, 7.7M tokens)" href="download.php?f=OpenSubtitles2013/lt-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Latvian' (225 aligned documents, 0.3M links, 3.4M tokens)" href="download.php?f=OpenSubtitles2013/lv-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Macedonian' (956 aligned documents, 1.0M links, 13.9M tokens)" href="download.php?f=OpenSubtitles2013/mk-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Malayalam' (5 aligned documents, 1.5k links, 26.1k tokens)" href="download.php?f=OpenSubtitles2013/ml-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Malay' (2,254 aligned documents, 2.6M links, 35.4M tokens)" href="download.php?f=OpenSubtitles2013/ms-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-BokmÃ¥l, Norwegian' (2,425 aligned documents, 2.6M links, 36.7M tokens)" href="download.php?f=OpenSubtitles2013/nb-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Dutch' (17,353 aligned documents, 15.2M links, 229.6M tokens)" href="download.php?f=OpenSubtitles2013/nl-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Polish' (8,880 aligned documents, 8.7M links, 119.6M tokens)" href="download.php?f=OpenSubtitles2013/pl-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Portuguese' (19,069 aligned documents, 17.6M links, 258.3M tokens)" href="download.php?f=OpenSubtitles2013/pt-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Portuguese' (26,899 aligned documents, 24.5M links, 355.7M tokens)" href="download.php?f=OpenSubtitles2013/pt_br-ro.xml.gz">ces</a></td>
 <th></th>
 <th>ro</th>
 <td><a rel="nofollow" title="Romanian-Russian (sample file)" href="OpenSubtitles2013/ro-ru_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Sinhala (sample file)" href="OpenSubtitles2013/ro-si_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Slovak (sample file)" href="OpenSubtitles2013/ro-sk_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Slovenian (sample file)" href="OpenSubtitles2013/ro-sl_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Albanian (sample file)" href="OpenSubtitles2013/ro-sq_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Serbian (sample file)" href="OpenSubtitles2013/ro-sr_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Swedish (sample file)" href="OpenSubtitles2013/ro-sv_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Romanian-Tamil (sample file)" href="OpenSubtitles2013/ro-ta_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Telugu (sample file)" href="OpenSubtitles2013/ro-te_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Thai (sample file)" href="OpenSubtitles2013/ro-th_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Turkish (sample file)" href="OpenSubtitles2013/ro-tr_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Ukrainian (sample file)" href="OpenSubtitles2013/ro-uk_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Urdu (sample file)" href="OpenSubtitles2013/ro-ur_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Vietnamese (sample file)" href="OpenSubtitles2013/ro-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Romanian-Chinese (sample file)" href="OpenSubtitles2013/ro-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Chinese (sample file)" href="OpenSubtitles2013/ro-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ro.raw.tar.gz">ro</a></th></tr>
@@ -1240,345 +1240,345 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <th></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ru.tar.gz">ru</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Arabic' (3,843 aligned documents, 2.8M links, 41.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Arabic' (3,843 aligned documents, 2.8M links, 41.4M tokens)" href="download.php?f=OpenSubtitles2013/ar-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Bulgarian' (4,512 aligned documents, 3.7M links, 52.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Bulgarian' (4,512 aligned documents, 3.7M links, 52.1M tokens)" href="download.php?f=OpenSubtitles2013/bg-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Bosnian' (413 aligned documents, 0.4M links, 4.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Catalan' (100 aligned documents, 70.4k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Czech' (4,598 aligned documents, 3.7M links, 51.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Danish' (1,720 aligned documents, 1.6M links, 22.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (1,538 aligned documents, 1.5M links, 20.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Greek' (5,280 aligned documents, 4.2M links, 62.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (7,982 aligned documents, 7.1M links, 105.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (6,790 aligned documents, 5.6M links, 83.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Estonian' (1,513 aligned documents, 1.4M links, 18.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Basque' (48 aligned documents, 54.2k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Persian' (4 aligned documents, 2.0k links, 73.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Finnish' (2,248 aligned documents, 2.0M links, 25.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (5,485 aligned documents, 4.5M links, 67.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Hebrew' (4,183 aligned documents, 3.1M links, 47.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Hindi' (0.2k links, 5.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Bosnian' (413 aligned documents, 0.4M links, 4.8M tokens)" href="download.php?f=OpenSubtitles2013/bs-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Catalan' (100 aligned documents, 70.4k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/ca-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Czech' (4,598 aligned documents, 3.7M links, 51.4M tokens)" href="download.php?f=OpenSubtitles2013/cs-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Danish' (1,720 aligned documents, 1.6M links, 22.4M tokens)" href="download.php?f=OpenSubtitles2013/da-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (1,538 aligned documents, 1.5M links, 20.6M tokens)" href="download.php?f=OpenSubtitles2013/de-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Greek' (5,280 aligned documents, 4.2M links, 62.5M tokens)" href="download.php?f=OpenSubtitles2013/el-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (7,982 aligned documents, 7.1M links, 105.0M tokens)" href="download.php?f=OpenSubtitles2013/en-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (6,790 aligned documents, 5.6M links, 83.9M tokens)" href="download.php?f=OpenSubtitles2013/es-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Estonian' (1,513 aligned documents, 1.4M links, 18.9M tokens)" href="download.php?f=OpenSubtitles2013/et-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Basque' (48 aligned documents, 54.2k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/eu-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Persian' (4 aligned documents, 2.0k links, 73.9k tokens)" href="download.php?f=OpenSubtitles2013/fa-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Finnish' (2,248 aligned documents, 2.0M links, 25.8M tokens)" href="download.php?f=OpenSubtitles2013/fi-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (5,485 aligned documents, 4.5M links, 67.1M tokens)" href="download.php?f=OpenSubtitles2013/fr-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Hebrew' (4,183 aligned documents, 3.1M links, 47.5M tokens)" href="download.php?f=OpenSubtitles2013/he-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Hindi' (0.2k links, 5.3k tokens)" href="download.php?f=OpenSubtitles2013/hi-ru.xml.gz">ces</a></td>
 <th>ru</th>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Croatian' (3,997 aligned documents, 3.3M links, 45.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Hungarian' (5,204 aligned documents, 4.2M links, 56.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Croatian' (3,997 aligned documents, 3.3M links, 45.9M tokens)" href="download.php?f=OpenSubtitles2013/hr-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Hungarian' (5,204 aligned documents, 4.2M links, 56.6M tokens)" href="download.php?f=OpenSubtitles2013/hu-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Indonesian' (32 aligned documents, 32.6k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Icelandic' (235 aligned documents, 0.3M links, 4.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Italian' (4,472 aligned documents, 3.5M links, 51.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Japanese' (317 aligned documents, 0.2M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Indonesian' (32 aligned documents, 32.6k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/id-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Icelandic' (235 aligned documents, 0.3M links, 4.1M tokens)" href="download.php?f=OpenSubtitles2013/is-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Italian' (4,472 aligned documents, 3.5M links, 51.9M tokens)" href="download.php?f=OpenSubtitles2013/it-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Japanese' (317 aligned documents, 0.2M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/ja-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Kazakh' (1.2k links, 14.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/kk-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Korean' (9 aligned documents, 8.1k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Lithuanian' (148 aligned documents, 0.2M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Latvian' (103 aligned documents, 0.1M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Macedonian' (277 aligned documents, 0.3M links, 3.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Malayalam' (2 aligned documents, 0.9k links, 14.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/ml-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Malay' (676 aligned documents, 0.8M links, 10.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-BokmÃ¥l, Norwegian' (783 aligned documents, 0.8M links, 10.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Dutch' (4,387 aligned documents, 3.5M links, 51.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Polish' (2,403 aligned documents, 2.1M links, 28.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Portuguese' (4,448 aligned documents, 3.8M links, 55.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Portuguese' (6,517 aligned documents, 5.5M links, 78.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt_br-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Romanian' (5,617 aligned documents, 4.8M links, 70.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ro-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Kazakh' (1.2k links, 14.7k tokens)" href="download.php?f=OpenSubtitles2013/kk-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Korean' (9 aligned documents, 8.1k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/ko-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Lithuanian' (148 aligned documents, 0.2M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/lt-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Latvian' (103 aligned documents, 0.1M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/lv-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Macedonian' (277 aligned documents, 0.3M links, 3.9M tokens)" href="download.php?f=OpenSubtitles2013/mk-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Malayalam' (2 aligned documents, 0.9k links, 14.8k tokens)" href="download.php?f=OpenSubtitles2013/ml-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Malay' (676 aligned documents, 0.8M links, 10.0M tokens)" href="download.php?f=OpenSubtitles2013/ms-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-BokmÃ¥l, Norwegian' (783 aligned documents, 0.8M links, 10.8M tokens)" href="download.php?f=OpenSubtitles2013/nb-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Dutch' (4,387 aligned documents, 3.5M links, 51.9M tokens)" href="download.php?f=OpenSubtitles2013/nl-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Polish' (2,403 aligned documents, 2.1M links, 28.7M tokens)" href="download.php?f=OpenSubtitles2013/pl-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Portuguese' (4,448 aligned documents, 3.8M links, 55.2M tokens)" href="download.php?f=OpenSubtitles2013/pt-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Portuguese' (6,517 aligned documents, 5.5M links, 78.3M tokens)" href="download.php?f=OpenSubtitles2013/pt_br-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Romanian' (5,617 aligned documents, 4.8M links, 70.2M tokens)" href="download.php?f=OpenSubtitles2013/ro-ru.xml.gz">ces</a></td>
 <th>ru</th>
 <th></th>
 <td><a rel="nofollow" title="Russian-Sinhala (sample file)" href="OpenSubtitles2013/ru-si_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Slovak (sample file)" href="OpenSubtitles2013/ru-sk_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Slovenian (sample file)" href="OpenSubtitles2013/ru-sl_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Albanian (sample file)" href="OpenSubtitles2013/ru-sq_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Serbian (sample file)" href="OpenSubtitles2013/ru-sr_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Swedish (sample file)" href="OpenSubtitles2013/ru-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Russian-Thai (sample file)" href="OpenSubtitles2013/ru-th_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Turkish (sample file)" href="OpenSubtitles2013/ru-tr_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Ukrainian (sample file)" href="OpenSubtitles2013/ru-uk_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Urdu (sample file)" href="OpenSubtitles2013/ru-ur_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Vietnamese (sample file)" href="OpenSubtitles2013/ru-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Russian-Chinese (sample file)" href="OpenSubtitles2013/ru-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Chinese (sample file)" href="OpenSubtitles2013/ru-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ru.raw.tar.gz">ru</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/si.tar.gz">si</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Arabic' (107 aligned documents, 0.1M links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Arabic' (107 aligned documents, 0.1M links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/ar-si.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Bulgarian' (98 aligned documents, 96.2k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Bulgarian' (98 aligned documents, 96.2k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/bg-si.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Bosnian' (5 aligned documents, 5.4k links, 86.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Bosnian' (5 aligned documents, 5.4k links, 86.8k tokens)" href="download.php?f=OpenSubtitles2013/bs-si.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Czech' (101 aligned documents, 94.0k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Danish' (91 aligned documents, 88.5k links, 1.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-German' (38 aligned documents, 36.8k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Greek' (109 aligned documents, 95.3k links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-English' (123 aligned documents, 0.1M links, 1.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Spanish' (116 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Estonian' (66 aligned documents, 63.8k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Basque' (10 aligned documents, 8.9k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Czech' (101 aligned documents, 94.0k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/cs-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Danish' (91 aligned documents, 88.5k links, 1.3M tokens)" href="download.php?f=OpenSubtitles2013/da-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-German' (38 aligned documents, 36.8k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/de-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Greek' (109 aligned documents, 95.3k links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/el-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-English' (123 aligned documents, 0.1M links, 1.9M tokens)" href="download.php?f=OpenSubtitles2013/en-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Spanish' (116 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/es-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Estonian' (66 aligned documents, 63.8k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/et-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Basque' (10 aligned documents, 8.9k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/eu-si.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Finnish' (66 aligned documents, 60.5k links, 0.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-French' (79 aligned documents, 74.6k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Hebrew' (101 aligned documents, 97.0k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Finnish' (66 aligned documents, 60.5k links, 0.8M tokens)" href="download.php?f=OpenSubtitles2013/fi-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-French' (79 aligned documents, 74.6k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/fr-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Hebrew' (101 aligned documents, 97.0k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/he-si.xml.gz">ces</a></td>
 <td></td>
 <th>si</th>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Croatian' (89 aligned documents, 83.2k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Hungarian' (96 aligned documents, 97.4k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Croatian' (89 aligned documents, 83.2k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/hr-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Hungarian' (96 aligned documents, 97.4k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/hu-si.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Indonesian' (1.3k links, 20.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/id-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Icelandic' (24 aligned documents, 26.4k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Italian' (75 aligned documents, 64.4k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Japanese' (30 aligned documents, 28.2k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Indonesian' (1.3k links, 20.5k tokens)" href="download.php?f=OpenSubtitles2013/id-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Icelandic' (24 aligned documents, 26.4k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/is-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Italian' (75 aligned documents, 64.4k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/it-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Japanese' (30 aligned documents, 28.2k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/ja-si.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Lithuanian' (21 aligned documents, 24.0k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Latvian' (3 aligned documents, 2.3k links, 34.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Macedonian' (30 aligned documents, 26.9k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Lithuanian' (21 aligned documents, 24.0k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/lt-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Latvian' (3 aligned documents, 2.3k links, 34.0k tokens)" href="download.php?f=OpenSubtitles2013/lv-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Macedonian' (30 aligned documents, 26.9k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/mk-si.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Malay' (60 aligned documents, 66.3k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-BokmÃ¥l, Norwegian' (40 aligned documents, 41.0k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Dutch' (95 aligned documents, 82.6k links, 1.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Polish' (83 aligned documents, 76.9k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Portuguese' (115 aligned documents, 0.1M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Portuguese' (107 aligned documents, 0.1M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt_br-si.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Romanian' (117 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/ro-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Malay' (60 aligned documents, 66.3k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/ms-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-BokmÃ¥l, Norwegian' (40 aligned documents, 41.0k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/nb-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Dutch' (95 aligned documents, 82.6k links, 1.3M tokens)" href="download.php?f=OpenSubtitles2013/nl-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Polish' (83 aligned documents, 76.9k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/pl-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Portuguese' (115 aligned documents, 0.1M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/pt-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Portuguese' (107 aligned documents, 0.1M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/pt_br-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Romanian' (117 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/ro-si.xml.gz">ces</a></td>
 <th>si</th>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Russian' (45 aligned documents, 44.3k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/ru-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Russian' (45 aligned documents, 44.3k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/ru-si.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Sinhala-Slovak (sample file)" href="OpenSubtitles2013/si-sk_sample.html">view</a></td><td><a rel="nofollow" title="Sinhala-Slovenian (sample file)" href="OpenSubtitles2013/si-sl_sample.html">view</a></td><td><a rel="nofollow" title="Sinhala-Albanian (sample file)" href="OpenSubtitles2013/si-sq_sample.html">view</a></td><td><a rel="nofollow" title="Sinhala-Serbian (sample file)" href="OpenSubtitles2013/si-sr_sample.html">view</a></td><td><a rel="nofollow" title="Sinhala-Swedish (sample file)" href="OpenSubtitles2013/si-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Sinhala-Thai (sample file)" href="OpenSubtitles2013/si-th_sample.html">view</a></td><td><a rel="nofollow" title="Sinhala-Turkish (sample file)" href="OpenSubtitles2013/si-tr_sample.html">view</a></td><td><a rel="nofollow" title="Sinhala-Ukrainian (sample file)" href="OpenSubtitles2013/si-uk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Sinhala-Vietnamese (sample file)" href="OpenSubtitles2013/si-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Sinhala-Chinese (sample file)" href="OpenSubtitles2013/si-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Sinhala-Chinese (sample file)" href="OpenSubtitles2013/si-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/si.raw.tar.gz">si</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/sk.tar.gz">sk</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Arabic' (1,766 aligned documents, 1.3M links, 19.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Arabic' (1,766 aligned documents, 1.3M links, 19.2M tokens)" href="download.php?f=OpenSubtitles2013/ar-sk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Bulgarian' (2,031 aligned documents, 1.7M links, 23.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Bulgarian' (2,031 aligned documents, 1.7M links, 23.0M tokens)" href="download.php?f=OpenSubtitles2013/bg-sk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Bosnian' (229 aligned documents, 0.2M links, 2.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Catalan' (30 aligned documents, 19.3k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Czech' (2,131 aligned documents, 1.8M links, 24.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Danish' (905 aligned documents, 0.8M links, 11.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-German' (575 aligned documents, 0.6M links, 7.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Greek' (2,508 aligned documents, 2.0M links, 29.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-English' (3,243 aligned documents, 3.0M links, 43.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Spanish' (2,734 aligned documents, 2.3M links, 33.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Estonian' (865 aligned documents, 0.8M links, 10.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Basque' (41 aligned documents, 41.5k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Persian' (0.2k links, 3.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Finnish' (1,179 aligned documents, 1.1M links, 13.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-French' (2,152 aligned documents, 1.8M links, 26.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Hebrew' (1,830 aligned documents, 1.4M links, 20.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Hindi' (0.4k links, 7.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Bosnian' (229 aligned documents, 0.2M links, 2.5M tokens)" href="download.php?f=OpenSubtitles2013/bs-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Catalan' (30 aligned documents, 19.3k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/ca-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Czech' (2,131 aligned documents, 1.8M links, 24.5M tokens)" href="download.php?f=OpenSubtitles2013/cs-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Danish' (905 aligned documents, 0.8M links, 11.2M tokens)" href="download.php?f=OpenSubtitles2013/da-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-German' (575 aligned documents, 0.6M links, 7.7M tokens)" href="download.php?f=OpenSubtitles2013/de-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Greek' (2,508 aligned documents, 2.0M links, 29.4M tokens)" href="download.php?f=OpenSubtitles2013/el-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-English' (3,243 aligned documents, 3.0M links, 43.1M tokens)" href="download.php?f=OpenSubtitles2013/en-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Spanish' (2,734 aligned documents, 2.3M links, 33.3M tokens)" href="download.php?f=OpenSubtitles2013/es-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Estonian' (865 aligned documents, 0.8M links, 10.0M tokens)" href="download.php?f=OpenSubtitles2013/et-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Basque' (41 aligned documents, 41.5k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/eu-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Persian' (0.2k links, 3.3k tokens)" href="download.php?f=OpenSubtitles2013/fa-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Finnish' (1,179 aligned documents, 1.1M links, 13.6M tokens)" href="download.php?f=OpenSubtitles2013/fi-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-French' (2,152 aligned documents, 1.8M links, 26.0M tokens)" href="download.php?f=OpenSubtitles2013/fr-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Hebrew' (1,830 aligned documents, 1.4M links, 20.7M tokens)" href="download.php?f=OpenSubtitles2013/he-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Hindi' (0.4k links, 7.0k tokens)" href="download.php?f=OpenSubtitles2013/hi-sk.xml.gz">ces</a></td>
 <th>sk</th>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Croatian' (1,830 aligned documents, 1.5M links, 20.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Hungarian' (2,239 aligned documents, 1.8M links, 24.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Croatian' (1,830 aligned documents, 1.5M links, 20.8M tokens)" href="download.php?f=OpenSubtitles2013/hr-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Hungarian' (2,239 aligned documents, 1.8M links, 24.1M tokens)" href="download.php?f=OpenSubtitles2013/hu-sk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Indonesian' (15 aligned documents, 17.1k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Icelandic' (125 aligned documents, 0.2M links, 2.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Italian' (1,652 aligned documents, 1.3M links, 18.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Japanese' (108 aligned documents, 86.7k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Indonesian' (15 aligned documents, 17.1k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/id-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Icelandic' (125 aligned documents, 0.2M links, 2.1M tokens)" href="download.php?f=OpenSubtitles2013/is-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Italian' (1,652 aligned documents, 1.3M links, 18.5M tokens)" href="download.php?f=OpenSubtitles2013/it-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Japanese' (108 aligned documents, 86.7k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/ja-sk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Kazakh' (1.2k links, 14.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/kk-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Korean' (2 aligned documents, 1.6k links, 22.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Lithuanian' (65 aligned documents, 86.5k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Latvian' (42 aligned documents, 46.6k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Macedonian' (113 aligned documents, 0.1M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Malayalam' (0.4k links, 4.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/ml-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Malay' (352 aligned documents, 0.4M links, 5.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-BokmÃ¥l, Norwegian' (322 aligned documents, 0.3M links, 4.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Dutch' (2,033 aligned documents, 1.6M links, 23.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Polish' (1,026 aligned documents, 0.9M links, 11.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Portuguese' (2,154 aligned documents, 1.9M links, 27.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Portuguese' (2,781 aligned documents, 2.4M links, 33.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt_br-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Romanian' (2,706 aligned documents, 2.4M links, 34.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/ro-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Kazakh' (1.2k links, 14.2k tokens)" href="download.php?f=OpenSubtitles2013/kk-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Korean' (2 aligned documents, 1.6k links, 22.4k tokens)" href="download.php?f=OpenSubtitles2013/ko-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Lithuanian' (65 aligned documents, 86.5k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/lt-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Latvian' (42 aligned documents, 46.6k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/lv-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Macedonian' (113 aligned documents, 0.1M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/mk-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Malayalam' (0.4k links, 4.2k tokens)" href="download.php?f=OpenSubtitles2013/ml-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Malay' (352 aligned documents, 0.4M links, 5.1M tokens)" href="download.php?f=OpenSubtitles2013/ms-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-BokmÃ¥l, Norwegian' (322 aligned documents, 0.3M links, 4.4M tokens)" href="download.php?f=OpenSubtitles2013/nb-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Dutch' (2,033 aligned documents, 1.6M links, 23.4M tokens)" href="download.php?f=OpenSubtitles2013/nl-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Polish' (1,026 aligned documents, 0.9M links, 11.9M tokens)" href="download.php?f=OpenSubtitles2013/pl-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Portuguese' (2,154 aligned documents, 1.9M links, 27.3M tokens)" href="download.php?f=OpenSubtitles2013/pt-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Portuguese' (2,781 aligned documents, 2.4M links, 33.4M tokens)" href="download.php?f=OpenSubtitles2013/pt_br-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Romanian' (2,706 aligned documents, 2.4M links, 34.6M tokens)" href="download.php?f=OpenSubtitles2013/ro-sk.xml.gz">ces</a></td>
 <th>sk</th>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Russian' (898 aligned documents, 0.7M links, 9.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ru-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Sinhala' (25 aligned documents, 24.7k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/si-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Russian' (898 aligned documents, 0.7M links, 9.9M tokens)" href="download.php?f=OpenSubtitles2013/ru-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Sinhala' (25 aligned documents, 24.7k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/si-sk.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Slovak-Slovenian (sample file)" href="OpenSubtitles2013/sk-sl_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Albanian (sample file)" href="OpenSubtitles2013/sk-sq_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Serbian (sample file)" href="OpenSubtitles2013/sk-sr_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Swedish (sample file)" href="OpenSubtitles2013/sk-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Slovak-Thai (sample file)" href="OpenSubtitles2013/sk-th_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Turkish (sample file)" href="OpenSubtitles2013/sk-tr_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Ukrainian (sample file)" href="OpenSubtitles2013/sk-uk_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Urdu (sample file)" href="OpenSubtitles2013/sk-ur_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Vietnamese (sample file)" href="OpenSubtitles2013/sk-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Slovak-Chinese (sample file)" href="OpenSubtitles2013/sk-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Chinese (sample file)" href="OpenSubtitles2013/sk-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/sk.raw.tar.gz">sk</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/sl.tar.gz">sl</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Arabic' (6,211 aligned documents, 4.8M links, 68.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Arabic' (6,211 aligned documents, 4.8M links, 68.7M tokens)" href="download.php?f=OpenSubtitles2013/ar-sl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Bulgarian' (7,050 aligned documents, 6.5M links, 87.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Bulgarian' (7,050 aligned documents, 6.5M links, 87.1M tokens)" href="download.php?f=OpenSubtitles2013/bg-sl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Bosnian' (978 aligned documents, 0.9M links, 11.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Catalan' (115 aligned documents, 86.3k links, 1.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Czech' (7,537 aligned documents, 6.9M links, 91.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Danish' (3,697 aligned documents, 3.6M links, 49.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-German' (2,338 aligned documents, 2.4M links, 32.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Greek' (9,050 aligned documents, 7.9M links, 110.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-English' (11,212 aligned documents, 11.4M links, 161.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Spanish' (9,717 aligned documents, 8.8M links, 125.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Estonian' (3,641 aligned documents, 3.6M links, 45.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Basque' (103 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Persian' (0.9k links, 23.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Finnish' (5,106 aligned documents, 5.1M links, 61.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-French' (7,237 aligned documents, 6.6M links, 93.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Hebrew' (6,971 aligned documents, 5.7M links, 83.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Hindi' (0.4k links, 7.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Bosnian' (978 aligned documents, 0.9M links, 11.9M tokens)" href="download.php?f=OpenSubtitles2013/bs-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Catalan' (115 aligned documents, 86.3k links, 1.3M tokens)" href="download.php?f=OpenSubtitles2013/ca-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Czech' (7,537 aligned documents, 6.9M links, 91.3M tokens)" href="download.php?f=OpenSubtitles2013/cs-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Danish' (3,697 aligned documents, 3.6M links, 49.4M tokens)" href="download.php?f=OpenSubtitles2013/da-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-German' (2,338 aligned documents, 2.4M links, 32.9M tokens)" href="download.php?f=OpenSubtitles2013/de-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Greek' (9,050 aligned documents, 7.9M links, 110.9M tokens)" href="download.php?f=OpenSubtitles2013/el-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-English' (11,212 aligned documents, 11.4M links, 161.7M tokens)" href="download.php?f=OpenSubtitles2013/en-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Spanish' (9,717 aligned documents, 8.8M links, 125.0M tokens)" href="download.php?f=OpenSubtitles2013/es-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Estonian' (3,641 aligned documents, 3.6M links, 45.9M tokens)" href="download.php?f=OpenSubtitles2013/et-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Basque' (103 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/eu-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Persian' (0.9k links, 23.5k tokens)" href="download.php?f=OpenSubtitles2013/fa-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Finnish' (5,106 aligned documents, 5.1M links, 61.5M tokens)" href="download.php?f=OpenSubtitles2013/fi-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-French' (7,237 aligned documents, 6.6M links, 93.1M tokens)" href="download.php?f=OpenSubtitles2013/fr-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Hebrew' (6,971 aligned documents, 5.7M links, 83.5M tokens)" href="download.php?f=OpenSubtitles2013/he-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Hindi' (0.4k links, 7.0k tokens)" href="download.php?f=OpenSubtitles2013/hi-sl.xml.gz">ces</a></td>
 <th>sl</th>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Croatian' (7,231 aligned documents, 6.6M links, 86.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Hungarian' (7,229 aligned documents, 6.5M links, 83.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Croatian' (7,231 aligned documents, 6.6M links, 86.3M tokens)" href="download.php?f=OpenSubtitles2013/hr-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Hungarian' (7,229 aligned documents, 6.5M links, 83.7M tokens)" href="download.php?f=OpenSubtitles2013/hu-sl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Indonesian' (37 aligned documents, 35.9k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Icelandic' (649 aligned documents, 0.9M links, 10.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Italian' (4,520 aligned documents, 4.0M links, 56.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Japanese' (292 aligned documents, 0.2M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Indonesian' (37 aligned documents, 35.9k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/id-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Icelandic' (649 aligned documents, 0.9M links, 10.9M tokens)" href="download.php?f=OpenSubtitles2013/is-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Italian' (4,520 aligned documents, 4.0M links, 56.4M tokens)" href="download.php?f=OpenSubtitles2013/it-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Japanese' (292 aligned documents, 0.2M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/ja-sl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Korean' (14 aligned documents, 11.9k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Lithuanian' (363 aligned documents, 0.5M links, 5.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Latvian' (127 aligned documents, 0.2M links, 2.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Macedonian' (699 aligned documents, 0.7M links, 9.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Malayalam' (3 aligned documents, 1.1k links, 17.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/ml-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Malay' (1,453 aligned documents, 1.6M links, 21.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-BokmÃ¥l, Norwegian' (1,634 aligned documents, 1.7M links, 22.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Dutch' (8,020 aligned documents, 7.1M links, 99.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Polish' (4,821 aligned documents, 4.7M links, 60.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Portuguese' (8,913 aligned documents, 8.5M links, 115.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Portuguese' (9,743 aligned documents, 9.1M links, 123.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt_br-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Romanian' (10,343 aligned documents, 10.0M links, 137.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ro-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Korean' (14 aligned documents, 11.9k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/ko-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Lithuanian' (363 aligned documents, 0.5M links, 5.6M tokens)" href="download.php?f=OpenSubtitles2013/lt-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Latvian' (127 aligned documents, 0.2M links, 2.0M tokens)" href="download.php?f=OpenSubtitles2013/lv-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Macedonian' (699 aligned documents, 0.7M links, 9.3M tokens)" href="download.php?f=OpenSubtitles2013/mk-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Malayalam' (3 aligned documents, 1.1k links, 17.2k tokens)" href="download.php?f=OpenSubtitles2013/ml-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Malay' (1,453 aligned documents, 1.6M links, 21.3M tokens)" href="download.php?f=OpenSubtitles2013/ms-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-BokmÃ¥l, Norwegian' (1,634 aligned documents, 1.7M links, 22.7M tokens)" href="download.php?f=OpenSubtitles2013/nb-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Dutch' (8,020 aligned documents, 7.1M links, 99.5M tokens)" href="download.php?f=OpenSubtitles2013/nl-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Polish' (4,821 aligned documents, 4.7M links, 60.4M tokens)" href="download.php?f=OpenSubtitles2013/pl-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Portuguese' (8,913 aligned documents, 8.5M links, 115.4M tokens)" href="download.php?f=OpenSubtitles2013/pt-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Portuguese' (9,743 aligned documents, 9.1M links, 123.4M tokens)" href="download.php?f=OpenSubtitles2013/pt_br-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Romanian' (10,343 aligned documents, 10.0M links, 137.3M tokens)" href="download.php?f=OpenSubtitles2013/ro-sl.xml.gz">ces</a></td>
 <th>sl</th>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Russian' (2,586 aligned documents, 2.3M links, 31.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/ru-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Sinhala' (86 aligned documents, 78.5k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/si-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Slovak' (1,442 aligned documents, 1.3M links, 17.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/sk-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Russian' (2,586 aligned documents, 2.3M links, 31.0M tokens)" href="download.php?f=OpenSubtitles2013/ru-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Sinhala' (86 aligned documents, 78.5k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/si-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Slovak' (1,442 aligned documents, 1.3M links, 17.4M tokens)" href="download.php?f=OpenSubtitles2013/sk-sl.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Slovenian-Albanian (sample file)" href="OpenSubtitles2013/sl-sq_sample.html">view</a></td><td><a rel="nofollow" title="Slovenian-Serbian (sample file)" href="OpenSubtitles2013/sl-sr_sample.html">view</a></td><td><a rel="nofollow" title="Slovenian-Swedish (sample file)" href="OpenSubtitles2013/sl-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Slovenian-Thai (sample file)" href="OpenSubtitles2013/sl-th_sample.html">view</a></td><td><a rel="nofollow" title="Slovenian-Turkish (sample file)" href="OpenSubtitles2013/sl-tr_sample.html">view</a></td><td><a rel="nofollow" title="Slovenian-Ukrainian (sample file)" href="OpenSubtitles2013/sl-uk_sample.html">view</a></td><td><a rel="nofollow" title="Slovenian-Urdu (sample file)" href="OpenSubtitles2013/sl-ur_sample.html">view</a></td><td><a rel="nofollow" title="Slovenian-Vietnamese (sample file)" href="OpenSubtitles2013/sl-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Slovenian-Chinese (sample file)" href="OpenSubtitles2013/sl-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Slovenian-Chinese (sample file)" href="OpenSubtitles2013/sl-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/sl.raw.tar.gz">sl</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/sq.tar.gz">sq</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Arabic' (1,180 aligned documents, 1.1M links, 17.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Arabic' (1,180 aligned documents, 1.1M links, 17.0M tokens)" href="download.php?f=OpenSubtitles2013/ar-sq.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Bulgarian' (1,274 aligned documents, 1.4M links, 19.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Bulgarian' (1,274 aligned documents, 1.4M links, 19.7M tokens)" href="download.php?f=OpenSubtitles2013/bg-sq.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Bosnian' (216 aligned documents, 0.2M links, 3.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Catalan' (16 aligned documents, 20.0k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Czech' (1,254 aligned documents, 1.4M links, 19.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Danish' (886 aligned documents, 1.0M links, 15.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-German' (493 aligned documents, 0.6M links, 8.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Greek' (1,415 aligned documents, 1.5M links, 21.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-English' (1,772 aligned documents, 2.1M links, 30.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Spanish' (1,487 aligned documents, 1.6M links, 24.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Estonian' (929 aligned documents, 1.1M links, 14.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Basque' (55 aligned documents, 60.2k links, 0.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Persian' (3 aligned documents, 1.6k links, 47.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Finnish' (1,089 aligned documents, 1.2M links, 15.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-French' (1,160 aligned documents, 1.3M links, 19.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Hebrew' (1,169 aligned documents, 1.2M links, 18.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Hindi' (0.4k links, 7.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Bosnian' (216 aligned documents, 0.2M links, 3.5M tokens)" href="download.php?f=OpenSubtitles2013/bs-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Catalan' (16 aligned documents, 20.0k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/ca-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Czech' (1,254 aligned documents, 1.4M links, 19.5M tokens)" href="download.php?f=OpenSubtitles2013/cs-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Danish' (886 aligned documents, 1.0M links, 15.0M tokens)" href="download.php?f=OpenSubtitles2013/da-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-German' (493 aligned documents, 0.6M links, 8.6M tokens)" href="download.php?f=OpenSubtitles2013/de-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Greek' (1,415 aligned documents, 1.5M links, 21.6M tokens)" href="download.php?f=OpenSubtitles2013/el-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-English' (1,772 aligned documents, 2.1M links, 30.3M tokens)" href="download.php?f=OpenSubtitles2013/en-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Spanish' (1,487 aligned documents, 1.6M links, 24.0M tokens)" href="download.php?f=OpenSubtitles2013/es-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Estonian' (929 aligned documents, 1.1M links, 14.7M tokens)" href="download.php?f=OpenSubtitles2013/et-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Basque' (55 aligned documents, 60.2k links, 0.8M tokens)" href="download.php?f=OpenSubtitles2013/eu-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Persian' (3 aligned documents, 1.6k links, 47.6k tokens)" href="download.php?f=OpenSubtitles2013/fa-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Finnish' (1,089 aligned documents, 1.2M links, 15.8M tokens)" href="download.php?f=OpenSubtitles2013/fi-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-French' (1,160 aligned documents, 1.3M links, 19.3M tokens)" href="download.php?f=OpenSubtitles2013/fr-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Hebrew' (1,169 aligned documents, 1.2M links, 18.4M tokens)" href="download.php?f=OpenSubtitles2013/he-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Hindi' (0.4k links, 7.4k tokens)" href="download.php?f=OpenSubtitles2013/hi-sq.xml.gz">ces</a></td>
 <th>sq</th>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Croatian' (1,211 aligned documents, 1.3M links, 18.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Hungarian' (1,244 aligned documents, 1.4M links, 18.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Croatian' (1,211 aligned documents, 1.3M links, 18.5M tokens)" href="download.php?f=OpenSubtitles2013/hr-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Hungarian' (1,244 aligned documents, 1.4M links, 18.5M tokens)" href="download.php?f=OpenSubtitles2013/hu-sq.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Indonesian' (14 aligned documents, 17.0k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Icelandic' (219 aligned documents, 0.3M links, 3.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Italian' (811 aligned documents, 0.9M links, 13.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Japanese' (115 aligned documents, 0.1M links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Indonesian' (14 aligned documents, 17.0k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/id-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Icelandic' (219 aligned documents, 0.3M links, 3.9M tokens)" href="download.php?f=OpenSubtitles2013/is-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Italian' (811 aligned documents, 0.9M links, 13.2M tokens)" href="download.php?f=OpenSubtitles2013/it-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Japanese' (115 aligned documents, 0.1M links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/ja-sq.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Korean' (7 aligned documents, 7.1k links, 95.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Lithuanian' (189 aligned documents, 0.2M links, 3.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Latvian' (56 aligned documents, 71.1k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Macedonian' (281 aligned documents, 0.3M links, 4.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Malayalam' (0.4k links, 4.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/ml-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Malay' (606 aligned documents, 0.7M links, 10.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-BokmÃ¥l, Norwegian' (474 aligned documents, 0.6M links, 8.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Dutch' (1,415 aligned documents, 1.5M links, 22.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Polish' (1,084 aligned documents, 1.2M links, 16.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Portuguese' (1,505 aligned documents, 1.7M links, 24.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Portuguese' (1,582 aligned documents, 1.8M links, 24.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt_br-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Romanian' (1,750 aligned documents, 2.0M links, 28.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ro-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Korean' (7 aligned documents, 7.1k links, 95.8k tokens)" href="download.php?f=OpenSubtitles2013/ko-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Lithuanian' (189 aligned documents, 0.2M links, 3.2M tokens)" href="download.php?f=OpenSubtitles2013/lt-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Latvian' (56 aligned documents, 71.1k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/lv-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Macedonian' (281 aligned documents, 0.3M links, 4.4M tokens)" href="download.php?f=OpenSubtitles2013/mk-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Malayalam' (0.4k links, 4.8k tokens)" href="download.php?f=OpenSubtitles2013/ml-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Malay' (606 aligned documents, 0.7M links, 10.1M tokens)" href="download.php?f=OpenSubtitles2013/ms-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-BokmÃ¥l, Norwegian' (474 aligned documents, 0.6M links, 8.0M tokens)" href="download.php?f=OpenSubtitles2013/nb-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Dutch' (1,415 aligned documents, 1.5M links, 22.2M tokens)" href="download.php?f=OpenSubtitles2013/nl-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Polish' (1,084 aligned documents, 1.2M links, 16.8M tokens)" href="download.php?f=OpenSubtitles2013/pl-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Portuguese' (1,505 aligned documents, 1.7M links, 24.0M tokens)" href="download.php?f=OpenSubtitles2013/pt-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Portuguese' (1,582 aligned documents, 1.8M links, 24.8M tokens)" href="download.php?f=OpenSubtitles2013/pt_br-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Romanian' (1,750 aligned documents, 2.0M links, 28.1M tokens)" href="download.php?f=OpenSubtitles2013/ro-sq.xml.gz">ces</a></td>
 <th>sq</th>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Russian' (531 aligned documents, 0.6M links, 8.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/ru-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Sinhala' (43 aligned documents, 46.0k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/si-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Slovak' (341 aligned documents, 0.4M links, 5.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/sk-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Slovenian' (1,231 aligned documents, 1.4M links, 19.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/sl-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Russian' (531 aligned documents, 0.6M links, 8.7M tokens)" href="download.php?f=OpenSubtitles2013/ru-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Sinhala' (43 aligned documents, 46.0k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/si-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Slovak' (341 aligned documents, 0.4M links, 5.5M tokens)" href="download.php?f=OpenSubtitles2013/sk-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Slovenian' (1,231 aligned documents, 1.4M links, 19.0M tokens)" href="download.php?f=OpenSubtitles2013/sl-sq.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Albanian-Serbian (sample file)" href="OpenSubtitles2013/sq-sr_sample.html">view</a></td><td><a rel="nofollow" title="Albanian-Swedish (sample file)" href="OpenSubtitles2013/sq-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Albanian-Thai (sample file)" href="OpenSubtitles2013/sq-th_sample.html">view</a></td><td><a rel="nofollow" title="Albanian-Turkish (sample file)" href="OpenSubtitles2013/sq-tr_sample.html">view</a></td><td><a rel="nofollow" title="Albanian-Ukrainian (sample file)" href="OpenSubtitles2013/sq-uk_sample.html">view</a></td><td><a rel="nofollow" title="Albanian-Urdu (sample file)" href="OpenSubtitles2013/sq-ur_sample.html">view</a></td><td><a rel="nofollow" title="Albanian-Vietnamese (sample file)" href="OpenSubtitles2013/sq-vi_sample.html">view</a></td><td><a rel="nofollow" title="Albanian-Chinese (sample file)" href="OpenSubtitles2013/sq-zh_sample.html">view</a></td><td><a rel="nofollow" title="Albanian-Chinese (sample file)" href="OpenSubtitles2013/sq-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Albanian-Chinese (sample file)" href="OpenSubtitles2013/sq-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/sq.raw.tar.gz">sq</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/sr.tar.gz">sr</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Arabic' (7,124 aligned documents, 5.3M links, 77.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Arabic' (7,124 aligned documents, 5.3M links, 77.9M tokens)" href="download.php?f=OpenSubtitles2013/ar-sr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Bulgarian' (9,120 aligned documents, 7.8M links, 109.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Bengali' (1.6k links, 22.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Bosnian' (760 aligned documents, 0.7M links, 9.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Catalan' (95 aligned documents, 69.2k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Czech' (9,659 aligned documents, 8.2M links, 112.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Danish' (3,359 aligned documents, 3.2M links, 45.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-German' (2,528 aligned documents, 2.6M links, 36.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Greek' (11,480 aligned documents, 9.6M links, 139.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-English' (15,228 aligned documents, 14.5M links, 211.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Spanish' (12,896 aligned documents, 11.2M links, 165.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Estonian' (3,355 aligned documents, 3.1M links, 41.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Basque' (121 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Persian' (7 aligned documents, 2.5k links, 65.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Finnish' (5,286 aligned documents, 5.1M links, 64.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-French' (9,806 aligned documents, 8.4M links, 123.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Hebrew' (7,835 aligned documents, 6.0M links, 90.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Hindi' (0.4k links, 6.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Bulgarian' (9,120 aligned documents, 7.8M links, 109.4M tokens)" href="download.php?f=OpenSubtitles2013/bg-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Bengali' (1.6k links, 22.5k tokens)" href="download.php?f=OpenSubtitles2013/bn-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Bosnian' (760 aligned documents, 0.7M links, 9.2M tokens)" href="download.php?f=OpenSubtitles2013/bs-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Catalan' (95 aligned documents, 69.2k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/ca-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Czech' (9,659 aligned documents, 8.2M links, 112.4M tokens)" href="download.php?f=OpenSubtitles2013/cs-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Danish' (3,359 aligned documents, 3.2M links, 45.5M tokens)" href="download.php?f=OpenSubtitles2013/da-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-German' (2,528 aligned documents, 2.6M links, 36.4M tokens)" href="download.php?f=OpenSubtitles2013/de-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Greek' (11,480 aligned documents, 9.6M links, 139.5M tokens)" href="download.php?f=OpenSubtitles2013/el-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-English' (15,228 aligned documents, 14.5M links, 211.8M tokens)" href="download.php?f=OpenSubtitles2013/en-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Spanish' (12,896 aligned documents, 11.2M links, 165.4M tokens)" href="download.php?f=OpenSubtitles2013/es-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Estonian' (3,355 aligned documents, 3.1M links, 41.4M tokens)" href="download.php?f=OpenSubtitles2013/et-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Basque' (121 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/eu-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Persian' (7 aligned documents, 2.5k links, 65.8k tokens)" href="download.php?f=OpenSubtitles2013/fa-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Finnish' (5,286 aligned documents, 5.1M links, 64.3M tokens)" href="download.php?f=OpenSubtitles2013/fi-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-French' (9,806 aligned documents, 8.4M links, 123.9M tokens)" href="download.php?f=OpenSubtitles2013/fr-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Hebrew' (7,835 aligned documents, 6.0M links, 90.6M tokens)" href="download.php?f=OpenSubtitles2013/he-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Hindi' (0.4k links, 6.9k tokens)" href="download.php?f=OpenSubtitles2013/hi-sr.xml.gz">ces</a></td>
 <th>sr</th>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Croatian' (6,795 aligned documents, 6.2M links, 82.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Hungarian' (9,313 aligned documents, 7.8M links, 104.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Croatian' (6,795 aligned documents, 6.2M links, 82.3M tokens)" href="download.php?f=OpenSubtitles2013/hr-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Hungarian' (9,313 aligned documents, 7.8M links, 104.3M tokens)" href="download.php?f=OpenSubtitles2013/hu-sr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Indonesian' (42 aligned documents, 39.2k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Icelandic' (584 aligned documents, 0.7M links, 9.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Italian' (6,671 aligned documents, 5.5M links, 80.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Japanese' (321 aligned documents, 0.3M links, 2.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Indonesian' (42 aligned documents, 39.2k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/id-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Icelandic' (584 aligned documents, 0.7M links, 9.8M tokens)" href="download.php?f=OpenSubtitles2013/is-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Italian' (6,671 aligned documents, 5.5M links, 80.5M tokens)" href="download.php?f=OpenSubtitles2013/it-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Japanese' (321 aligned documents, 0.3M links, 2.0M tokens)" href="download.php?f=OpenSubtitles2013/ja-sr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Korean' (13 aligned documents, 11.7k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Lithuanian' (309 aligned documents, 0.4M links, 4.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Latvian' (129 aligned documents, 0.1M links, 2.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Macedonian' (520 aligned documents, 0.5M links, 7.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Malayalam' (3 aligned documents, 1.6k links, 24.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/ml-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Malay' (1,317 aligned documents, 1.4M links, 19.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-BokmÃ¥l, Norwegian' (1,494 aligned documents, 1.6M links, 21.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Dutch' (9,079 aligned documents, 7.6M links, 110.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Polish' (4,897 aligned documents, 4.5M links, 60.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Portuguese' (8,861 aligned documents, 8.1M links, 114.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Portuguese' (13,285 aligned documents, 11.7M links, 164.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt_br-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Romanian' (12,721 aligned documents, 11.5M links, 164.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/ro-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Korean' (13 aligned documents, 11.7k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/ko-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Lithuanian' (309 aligned documents, 0.4M links, 4.8M tokens)" href="download.php?f=OpenSubtitles2013/lt-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Latvian' (129 aligned documents, 0.1M links, 2.0M tokens)" href="download.php?f=OpenSubtitles2013/lv-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Macedonian' (520 aligned documents, 0.5M links, 7.2M tokens)" href="download.php?f=OpenSubtitles2013/mk-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Malayalam' (3 aligned documents, 1.6k links, 24.4k tokens)" href="download.php?f=OpenSubtitles2013/ml-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Malay' (1,317 aligned documents, 1.4M links, 19.4M tokens)" href="download.php?f=OpenSubtitles2013/ms-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-BokmÃ¥l, Norwegian' (1,494 aligned documents, 1.6M links, 21.4M tokens)" href="download.php?f=OpenSubtitles2013/nb-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Dutch' (9,079 aligned documents, 7.6M links, 110.3M tokens)" href="download.php?f=OpenSubtitles2013/nl-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Polish' (4,897 aligned documents, 4.5M links, 60.5M tokens)" href="download.php?f=OpenSubtitles2013/pl-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Portuguese' (8,861 aligned documents, 8.1M links, 114.4M tokens)" href="download.php?f=OpenSubtitles2013/pt-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Portuguese' (13,285 aligned documents, 11.7M links, 164.4M tokens)" href="download.php?f=OpenSubtitles2013/pt_br-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Romanian' (12,721 aligned documents, 11.5M links, 164.8M tokens)" href="download.php?f=OpenSubtitles2013/ro-sr.xml.gz">ces</a></td>
 <th>sr</th>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Russian' (3,280 aligned documents, 2.8M links, 39.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/ru-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Sinhala' (104 aligned documents, 96.5k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/si-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Slovak' (1,534 aligned documents, 1.3M links, 17.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/sk-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Slovenian' (5,802 aligned documents, 5.5M links, 72.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/sl-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Albanian' (1,233 aligned documents, 1.4M links, 18.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/sq-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Russian' (3,280 aligned documents, 2.8M links, 39.6M tokens)" href="download.php?f=OpenSubtitles2013/ru-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Sinhala' (104 aligned documents, 96.5k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/si-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Slovak' (1,534 aligned documents, 1.3M links, 17.7M tokens)" href="download.php?f=OpenSubtitles2013/sk-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Slovenian' (5,802 aligned documents, 5.5M links, 72.3M tokens)" href="download.php?f=OpenSubtitles2013/sl-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Albanian' (1,233 aligned documents, 1.4M links, 18.7M tokens)" href="download.php?f=OpenSubtitles2013/sq-sr.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Serbian-Swedish (sample file)" href="OpenSubtitles2013/sr-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Serbian-Thai (sample file)" href="OpenSubtitles2013/sr-th_sample.html">view</a></td><td><a rel="nofollow" title="Serbian-Turkish (sample file)" href="OpenSubtitles2013/sr-tr_sample.html">view</a></td><td><a rel="nofollow" title="Serbian-Ukrainian (sample file)" href="OpenSubtitles2013/sr-uk_sample.html">view</a></td><td><a rel="nofollow" title="Serbian-Urdu (sample file)" href="OpenSubtitles2013/sr-ur_sample.html">view</a></td><td><a rel="nofollow" title="Serbian-Vietnamese (sample file)" href="OpenSubtitles2013/sr-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Serbian-Chinese (sample file)" href="OpenSubtitles2013/sr-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Serbian-Chinese (sample file)" href="OpenSubtitles2013/sr-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/sr.raw.tar.gz">sr</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/sv.tar.gz">sv</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Arabic' (4,099 aligned documents, 3.2M links, 46.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Arabic' (4,099 aligned documents, 3.2M links, 46.9M tokens)" href="download.php?f=OpenSubtitles2013/ar-sv.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Bulgarian' (4,200 aligned documents, 3.7M links, 53.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Bengali' (1.5k links, 22.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Bosnian' (556 aligned documents, 0.5M links, 6.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Catalan' (88 aligned documents, 58.5k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Czech' (4,705 aligned documents, 4.2M links, 58.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Danish' (3,290 aligned documents, 2.9M links, 41.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-German' (1,846 aligned documents, 1.8M links, 26.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Greek' (5,851 aligned documents, 5.0M links, 74.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (7,346 aligned documents, 7.2M links, 108.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Spanish' (6,233 aligned documents, 5.4M links, 82.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Estonian' (2,287 aligned documents, 2.1M links, 28.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Basque' (73 aligned documents, 76.7k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Persian' (3 aligned documents, 2.4k links, 57.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Finnish' (4,257 aligned documents, 3.8M links, 48.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (4,951 aligned documents, 4.3M links, 64.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Hebrew' (4,238 aligned documents, 3.4M links, 52.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Hindi' (0.4k links, 7.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Bulgarian' (4,200 aligned documents, 3.7M links, 53.1M tokens)" href="download.php?f=OpenSubtitles2013/bg-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Bengali' (1.5k links, 22.3k tokens)" href="download.php?f=OpenSubtitles2013/bn-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Bosnian' (556 aligned documents, 0.5M links, 6.6M tokens)" href="download.php?f=OpenSubtitles2013/bs-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Catalan' (88 aligned documents, 58.5k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/ca-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Czech' (4,705 aligned documents, 4.2M links, 58.7M tokens)" href="download.php?f=OpenSubtitles2013/cs-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Danish' (3,290 aligned documents, 2.9M links, 41.7M tokens)" href="download.php?f=OpenSubtitles2013/da-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-German' (1,846 aligned documents, 1.8M links, 26.4M tokens)" href="download.php?f=OpenSubtitles2013/de-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Greek' (5,851 aligned documents, 5.0M links, 74.1M tokens)" href="download.php?f=OpenSubtitles2013/el-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (7,346 aligned documents, 7.2M links, 108.0M tokens)" href="download.php?f=OpenSubtitles2013/en-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Spanish' (6,233 aligned documents, 5.4M links, 82.4M tokens)" href="download.php?f=OpenSubtitles2013/es-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Estonian' (2,287 aligned documents, 2.1M links, 28.4M tokens)" href="download.php?f=OpenSubtitles2013/et-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Basque' (73 aligned documents, 76.7k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/eu-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Persian' (3 aligned documents, 2.4k links, 57.7k tokens)" href="download.php?f=OpenSubtitles2013/fa-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Finnish' (4,257 aligned documents, 3.8M links, 48.9M tokens)" href="download.php?f=OpenSubtitles2013/fi-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (4,951 aligned documents, 4.3M links, 64.9M tokens)" href="download.php?f=OpenSubtitles2013/fr-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Hebrew' (4,238 aligned documents, 3.4M links, 52.4M tokens)" href="download.php?f=OpenSubtitles2013/he-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Hindi' (0.4k links, 7.5k tokens)" href="download.php?f=OpenSubtitles2013/hi-sv.xml.gz">ces</a></td>
 <th>sv</th>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Croatian' (4,411 aligned documents, 3.8M links, 52.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Hungarian' (4,697 aligned documents, 4.0M links, 54.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Croatian' (4,411 aligned documents, 3.8M links, 52.9M tokens)" href="download.php?f=OpenSubtitles2013/hr-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Hungarian' (4,697 aligned documents, 4.0M links, 54.5M tokens)" href="download.php?f=OpenSubtitles2013/hu-sv.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Indonesian' (28 aligned documents, 30.4k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Icelandic' (472 aligned documents, 0.6M links, 7.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Italian' (3,094 aligned documents, 2.6M links, 39.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Japanese' (209 aligned documents, 0.2M links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Indonesian' (28 aligned documents, 30.4k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/id-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Icelandic' (472 aligned documents, 0.6M links, 7.8M tokens)" href="download.php?f=OpenSubtitles2013/is-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Italian' (3,094 aligned documents, 2.6M links, 39.1M tokens)" href="download.php?f=OpenSubtitles2013/it-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Japanese' (209 aligned documents, 0.2M links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/ja-sv.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Kazakh' (1.1k links, 14.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/kk-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Korean' (10 aligned documents, 9.2k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Lithuanian' (211 aligned documents, 0.3M links, 3.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Latvian' (74 aligned documents, 89.7k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Macedonian' (363 aligned documents, 0.4M links, 5.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Malayalam' (2 aligned documents, 0.8k links, 12.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/ml-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Malay' (960 aligned documents, 1.0M links, 14.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-BokmÃ¥l, Norwegian' (2,163 aligned documents, 1.9M links, 26.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Dutch' (4,922 aligned documents, 4.1M links, 60.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Polish' (2,691 aligned documents, 2.5M links, 34.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Portuguese' (5,305 aligned documents, 4.9M links, 71.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Portuguese' (6,174 aligned documents, 5.5M links, 79.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt_br-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Romanian' (6,235 aligned documents, 5.8M links, 85.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/ro-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Kazakh' (1.1k links, 14.3k tokens)" href="download.php?f=OpenSubtitles2013/kk-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Korean' (10 aligned documents, 9.2k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/ko-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Lithuanian' (211 aligned documents, 0.3M links, 3.5M tokens)" href="download.php?f=OpenSubtitles2013/lt-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Latvian' (74 aligned documents, 89.7k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/lv-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Macedonian' (363 aligned documents, 0.4M links, 5.1M tokens)" href="download.php?f=OpenSubtitles2013/mk-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Malayalam' (2 aligned documents, 0.8k links, 12.2k tokens)" href="download.php?f=OpenSubtitles2013/ml-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Malay' (960 aligned documents, 1.0M links, 14.2M tokens)" href="download.php?f=OpenSubtitles2013/ms-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-BokmÃ¥l, Norwegian' (2,163 aligned documents, 1.9M links, 26.3M tokens)" href="download.php?f=OpenSubtitles2013/nb-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Dutch' (4,922 aligned documents, 4.1M links, 60.6M tokens)" href="download.php?f=OpenSubtitles2013/nl-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Polish' (2,691 aligned documents, 2.5M links, 34.3M tokens)" href="download.php?f=OpenSubtitles2013/pl-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Portuguese' (5,305 aligned documents, 4.9M links, 71.0M tokens)" href="download.php?f=OpenSubtitles2013/pt-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Portuguese' (6,174 aligned documents, 5.5M links, 79.8M tokens)" href="download.php?f=OpenSubtitles2013/pt_br-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Romanian' (6,235 aligned documents, 5.8M links, 85.6M tokens)" href="download.php?f=OpenSubtitles2013/ro-sv.xml.gz">ces</a></td>
 <th>sv</th>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Russian' (1,733 aligned documents, 1.5M links, 21.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/ru-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Sinhala' (63 aligned documents, 61.7k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/si-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Slovak' (874 aligned documents, 0.7M links, 10.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/sk-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Slovenian' (3,910 aligned documents, 3.6M links, 49.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/sl-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Albanian' (813 aligned documents, 0.9M links, 13.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/sq-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Serbian' (3,768 aligned documents, 3.4M links, 47.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/sr-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Russian' (1,733 aligned documents, 1.5M links, 21.6M tokens)" href="download.php?f=OpenSubtitles2013/ru-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Sinhala' (63 aligned documents, 61.7k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/si-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Slovak' (874 aligned documents, 0.7M links, 10.6M tokens)" href="download.php?f=OpenSubtitles2013/sk-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Slovenian' (3,910 aligned documents, 3.6M links, 49.3M tokens)" href="download.php?f=OpenSubtitles2013/sl-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Albanian' (813 aligned documents, 0.9M links, 13.3M tokens)" href="download.php?f=OpenSubtitles2013/sq-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Serbian' (3,768 aligned documents, 3.4M links, 47.4M tokens)" href="download.php?f=OpenSubtitles2013/sr-sv.xml.gz">ces</a></td>
 <th></th>
 <td></td><td></td><td></td><td><a rel="nofollow" title="Swedish-Thai (sample file)" href="OpenSubtitles2013/sv-th_sample.html">view</a></td><td><a rel="nofollow" title="Swedish-Turkish (sample file)" href="OpenSubtitles2013/sv-tr_sample.html">view</a></td><td><a rel="nofollow" title="Swedish-Ukrainian (sample file)" href="OpenSubtitles2013/sv-uk_sample.html">view</a></td><td><a rel="nofollow" title="Swedish-Urdu (sample file)" href="OpenSubtitles2013/sv-ur_sample.html">view</a></td><td><a rel="nofollow" title="Swedish-Vietnamese (sample file)" href="OpenSubtitles2013/sv-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Swedish-Chinese (sample file)" href="OpenSubtitles2013/sv-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Swedish-Chinese (sample file)" href="OpenSubtitles2013/sv-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/sv.raw.tar.gz">sv</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/sw.tar.gz">sw</a></th>
@@ -1592,9 +1592,9 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Greek' (0.3k links, 13.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/el-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Greek' (0.3k links, 13.6k tokens)" href="download.php?f=OpenSubtitles2013/el-sw.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Spanish' (0.3k links, 14.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/es-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Spanish' (0.3k links, 14.5k tokens)" href="download.php?f=OpenSubtitles2013/es-sw.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1606,7 +1606,7 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Indonesian' (0.4k links, 13.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/id-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Indonesian' (0.4k links, 13.6k tokens)" href="download.php?f=OpenSubtitles2013/id-sw.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1621,7 +1621,7 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Portuguese' (0.3k links, 15.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Portuguese' (0.3k links, 15.0k tokens)" href="download.php?f=OpenSubtitles2013/pt-sw.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th>sw</th>
@@ -1636,33 +1636,33 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Swahili-Chinese (sample file)" href="OpenSubtitles2013/sw-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/sw.raw.tar.gz">sw</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ta.tar.gz">ta</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-Arabic' (2 aligned documents, 1.1k links, 19.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-Arabic' (2 aligned documents, 1.1k links, 19.1k tokens)" href="download.php?f=OpenSubtitles2013/ar-ta.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-Czech' (2 aligned documents, 0.9k links, 13.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-Czech' (2 aligned documents, 0.9k links, 13.3k tokens)" href="download.php?f=OpenSubtitles2013/cs-ta.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-Greek' (0.5k links, 6.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/el-ta.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-English' (3 aligned documents, 1.8k links, 31.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/en-ta.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-Spanish' (2 aligned documents, 1.3k links, 23.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/es-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-Greek' (0.5k links, 6.8k tokens)" href="download.php?f=OpenSubtitles2013/el-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-English' (3 aligned documents, 1.8k links, 31.3k tokens)" href="download.php?f=OpenSubtitles2013/en-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-Spanish' (2 aligned documents, 1.3k links, 23.2k tokens)" href="download.php?f=OpenSubtitles2013/es-ta.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-Persian' (3 aligned documents, 1.0k links, 35.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-Persian' (3 aligned documents, 1.0k links, 35.7k tokens)" href="download.php?f=OpenSubtitles2013/fa-ta.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-Hebrew' (0.5k links, 6.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/he-ta.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-Hindi' (15 aligned documents, 6.8k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-Hebrew' (0.5k links, 6.9k tokens)" href="download.php?f=OpenSubtitles2013/he-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-Hindi' (15 aligned documents, 6.8k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/hi-ta.xml.gz">ces</a></td>
 <th>ta</th>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-Croatian' (0.5k links, 7.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-ta.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-Hungarian' (0.5k links, 6.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-Croatian' (0.5k links, 7.1k tokens)" href="download.php?f=OpenSubtitles2013/hr-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-Hungarian' (0.5k links, 6.8k tokens)" href="download.php?f=OpenSubtitles2013/hu-ta.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-Japanese' (0.7k links, 7.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-Japanese' (0.7k links, 7.5k tokens)" href="download.php?f=OpenSubtitles2013/ja-ta.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1671,12 +1671,12 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-BokmÃ¥l, Norwegian' (0.4k links, 6.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-ta.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-Dutch' (0.4k links, 7.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-ta.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-Polish' (2 aligned documents, 1.1k links, 18.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-ta.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-Portuguese' (2 aligned documents, 1.2k links, 23.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-ta.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-Portuguese' (2 aligned documents, 0.9k links, 14.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/pt_br-ta.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-Romanian' (2 aligned documents, 1.2k links, 23.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/ro-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-BokmÃ¥l, Norwegian' (0.4k links, 6.6k tokens)" href="download.php?f=OpenSubtitles2013/nb-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-Dutch' (0.4k links, 7.3k tokens)" href="download.php?f=OpenSubtitles2013/nl-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-Polish' (2 aligned documents, 1.1k links, 18.0k tokens)" href="download.php?f=OpenSubtitles2013/pl-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-Portuguese' (2 aligned documents, 1.2k links, 23.3k tokens)" href="download.php?f=OpenSubtitles2013/pt-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-Portuguese' (2 aligned documents, 0.9k links, 14.8k tokens)" href="download.php?f=OpenSubtitles2013/pt_br-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-Romanian' (2 aligned documents, 1.2k links, 23.9k tokens)" href="download.php?f=OpenSubtitles2013/ro-ta.xml.gz">ces</a></td>
 <th>ta</th>
 <td></td>
 <td></td>
@@ -1690,33 +1690,33 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td><a rel="nofollow" title="Tamil-Telugu (sample file)" href="OpenSubtitles2013/ta-te_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Tamil-Turkish (sample file)" href="OpenSubtitles2013/ta-tr_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ta.raw.tar.gz">ta</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/te.tar.gz">te</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-Arabic' (3 aligned documents, 1.8k links, 30.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-Arabic' (3 aligned documents, 1.8k links, 30.4k tokens)" href="download.php?f=OpenSubtitles2013/ar-te.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-Czech' (3 aligned documents, 1.6k links, 26.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-Czech' (3 aligned documents, 1.6k links, 26.0k tokens)" href="download.php?f=OpenSubtitles2013/cs-te.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-Greek' (0.5k links, 6.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/el-te.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-English' (4 aligned documents, 2.5k links, 45.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/en-te.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-Spanish' (3 aligned documents, 2.1k links, 37.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/es-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-Greek' (0.5k links, 6.7k tokens)" href="download.php?f=OpenSubtitles2013/el-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-English' (4 aligned documents, 2.5k links, 45.6k tokens)" href="download.php?f=OpenSubtitles2013/en-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-Spanish' (3 aligned documents, 2.1k links, 37.1k tokens)" href="download.php?f=OpenSubtitles2013/es-te.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-Persian' (3 aligned documents, 1.0k links, 35.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-Persian' (3 aligned documents, 1.0k links, 35.7k tokens)" href="download.php?f=OpenSubtitles2013/fa-te.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-Hebrew' (2 aligned documents, 1.2k links, 21.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/he-te.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-Hindi' (17 aligned documents, 7.6k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-Hebrew' (2 aligned documents, 1.2k links, 21.4k tokens)" href="download.php?f=OpenSubtitles2013/he-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-Hindi' (17 aligned documents, 7.6k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/hi-te.xml.gz">ces</a></td>
 <th>te</th>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-Croatian' (0.5k links, 7.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-te.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-Hungarian' (0.5k links, 6.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-Croatian' (0.5k links, 7.0k tokens)" href="download.php?f=OpenSubtitles2013/hr-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-Hungarian' (0.5k links, 6.7k tokens)" href="download.php?f=OpenSubtitles2013/hu-te.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-Japanese' (0.7k links, 7.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-Japanese' (0.7k links, 7.5k tokens)" href="download.php?f=OpenSubtitles2013/ja-te.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1725,12 +1725,12 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-BokmÃ¥l, Norwegian' (0.4k links, 6.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-te.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-Dutch' (0.4k links, 7.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-te.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-Polish' (2 aligned documents, 1.1k links, 17.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-te.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-Portuguese' (2 aligned documents, 1.2k links, 23.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-te.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-Portuguese' (2 aligned documents, 0.9k links, 14.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/pt_br-te.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-Romanian' (2 aligned documents, 1.3k links, 23.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/ro-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-BokmÃ¥l, Norwegian' (0.4k links, 6.7k tokens)" href="download.php?f=OpenSubtitles2013/nb-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-Dutch' (0.4k links, 7.2k tokens)" href="download.php?f=OpenSubtitles2013/nl-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-Polish' (2 aligned documents, 1.1k links, 17.9k tokens)" href="download.php?f=OpenSubtitles2013/pl-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-Portuguese' (2 aligned documents, 1.2k links, 23.3k tokens)" href="download.php?f=OpenSubtitles2013/pt-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-Portuguese' (2 aligned documents, 0.9k links, 14.8k tokens)" href="download.php?f=OpenSubtitles2013/pt_br-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-Romanian' (2 aligned documents, 1.3k links, 23.7k tokens)" href="download.php?f=OpenSubtitles2013/ro-te.xml.gz">ces</a></td>
 <th>te</th>
 <td></td>
 <td></td>
@@ -1740,60 +1740,60 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-Tamil' (15 aligned documents, 7.0k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ta-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-Tamil' (15 aligned documents, 7.0k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/ta-te.xml.gz">ces</a></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="Telugu-Turkish (sample file)" href="OpenSubtitles2013/te-tr_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/te.raw.tar.gz">te</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/th.tar.gz">th</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Arabic' (1,169 aligned documents, 0.8M links, 6.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Arabic' (1,169 aligned documents, 0.8M links, 6.7M tokens)" href="download.php?f=OpenSubtitles2013/ar-th.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Bulgarian' (971 aligned documents, 0.6M links, 5.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Bulgarian' (971 aligned documents, 0.6M links, 5.9M tokens)" href="download.php?f=OpenSubtitles2013/bg-th.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Bosnian' (121 aligned documents, 72.2k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Catalan' (40 aligned documents, 24.7k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Czech' (1,157 aligned documents, 0.7M links, 7.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Danish' (421 aligned documents, 0.3M links, 2.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-German' (256 aligned documents, 0.1M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Greek' (1,257 aligned documents, 0.8M links, 7.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-English' (1,474 aligned documents, 1.0M links, 10.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Spanish' (1,445 aligned documents, 0.9M links, 9.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Estonian' (454 aligned documents, 0.3M links, 2.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Basque' (1.5k links, 13.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Bosnian' (121 aligned documents, 72.2k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/bs-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Catalan' (40 aligned documents, 24.7k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/ca-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Czech' (1,157 aligned documents, 0.7M links, 7.3M tokens)" href="download.php?f=OpenSubtitles2013/cs-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Danish' (421 aligned documents, 0.3M links, 2.8M tokens)" href="download.php?f=OpenSubtitles2013/da-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-German' (256 aligned documents, 0.1M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/de-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Greek' (1,257 aligned documents, 0.8M links, 7.9M tokens)" href="download.php?f=OpenSubtitles2013/el-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-English' (1,474 aligned documents, 1.0M links, 10.7M tokens)" href="download.php?f=OpenSubtitles2013/en-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Spanish' (1,445 aligned documents, 0.9M links, 9.7M tokens)" href="download.php?f=OpenSubtitles2013/es-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Estonian' (454 aligned documents, 0.3M links, 2.8M tokens)" href="download.php?f=OpenSubtitles2013/et-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Basque' (1.5k links, 13.2k tokens)" href="download.php?f=OpenSubtitles2013/eu-th.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Finnish' (419 aligned documents, 0.3M links, 2.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-French' (1,202 aligned documents, 0.7M links, 8.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Hebrew' (1,057 aligned documents, 0.7M links, 6.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Finnish' (419 aligned documents, 0.3M links, 2.3M tokens)" href="download.php?f=OpenSubtitles2013/fi-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-French' (1,202 aligned documents, 0.7M links, 8.3M tokens)" href="download.php?f=OpenSubtitles2013/fr-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Hebrew' (1,057 aligned documents, 0.7M links, 6.4M tokens)" href="download.php?f=OpenSubtitles2013/he-th.xml.gz">ces</a></td>
 <td></td>
 <th>th</th>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Croatian' (1,010 aligned documents, 0.6M links, 6.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Hungarian' (1,050 aligned documents, 0.7M links, 6.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Croatian' (1,010 aligned documents, 0.6M links, 6.0M tokens)" href="download.php?f=OpenSubtitles2013/hr-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Hungarian' (1,050 aligned documents, 0.7M links, 6.3M tokens)" href="download.php?f=OpenSubtitles2013/hu-th.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Indonesian' (2 aligned documents, 1.7k links, 15.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/id-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Icelandic' (2 aligned documents, 2.2k links, 18.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/is-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Italian' (989 aligned documents, 0.6M links, 6.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Japanese' (131 aligned documents, 74.1k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Indonesian' (2 aligned documents, 1.7k links, 15.0k tokens)" href="download.php?f=OpenSubtitles2013/id-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Icelandic' (2 aligned documents, 2.2k links, 18.4k tokens)" href="download.php?f=OpenSubtitles2013/is-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Italian' (989 aligned documents, 0.6M links, 6.8M tokens)" href="download.php?f=OpenSubtitles2013/it-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Japanese' (131 aligned documents, 74.1k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/ja-th.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Korean' (2 aligned documents, 1.9k links, 19.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Lithuanian' (11 aligned documents, 11.8k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Latvian' (27 aligned documents, 24.9k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Macedonian' (57 aligned documents, 39.5k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Korean' (2 aligned documents, 1.9k links, 19.9k tokens)" href="download.php?f=OpenSubtitles2013/ko-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Lithuanian' (11 aligned documents, 11.8k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/lt-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Latvian' (27 aligned documents, 24.9k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/lv-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Macedonian' (57 aligned documents, 39.5k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/mk-th.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Malay' (167 aligned documents, 0.1M links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-BokmÃ¥l, Norwegian' (183 aligned documents, 0.1M links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Dutch' (1,125 aligned documents, 0.7M links, 7.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Polish' (491 aligned documents, 0.3M links, 2.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Portuguese' (1,122 aligned documents, 0.7M links, 7.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Portuguese' (1,337 aligned documents, 0.9M links, 8.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt_br-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Romanian' (1,306 aligned documents, 0.8M links, 8.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/ro-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Malay' (167 aligned documents, 0.1M links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/ms-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-BokmÃ¥l, Norwegian' (183 aligned documents, 0.1M links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/nb-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Dutch' (1,125 aligned documents, 0.7M links, 7.5M tokens)" href="download.php?f=OpenSubtitles2013/nl-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Polish' (491 aligned documents, 0.3M links, 2.9M tokens)" href="download.php?f=OpenSubtitles2013/pl-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Portuguese' (1,122 aligned documents, 0.7M links, 7.5M tokens)" href="download.php?f=OpenSubtitles2013/pt-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Portuguese' (1,337 aligned documents, 0.9M links, 8.5M tokens)" href="download.php?f=OpenSubtitles2013/pt_br-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Romanian' (1,306 aligned documents, 0.8M links, 8.7M tokens)" href="download.php?f=OpenSubtitles2013/ro-th.xml.gz">ces</a></td>
 <th>th</th>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Russian' (579 aligned documents, 0.4M links, 3.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/ru-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Sinhala' (15 aligned documents, 10.0k links, 85.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/si-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Slovak' (272 aligned documents, 0.2M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/sk-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Slovenian' (734 aligned documents, 0.5M links, 4.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/sl-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Albanian' (81 aligned documents, 61.9k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/sq-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Serbian' (654 aligned documents, 0.4M links, 4.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/sr-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Swedish' (496 aligned documents, 0.3M links, 2.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/sv-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Russian' (579 aligned documents, 0.4M links, 3.6M tokens)" href="download.php?f=OpenSubtitles2013/ru-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Sinhala' (15 aligned documents, 10.0k links, 85.1k tokens)" href="download.php?f=OpenSubtitles2013/si-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Slovak' (272 aligned documents, 0.2M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/sk-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Slovenian' (734 aligned documents, 0.5M links, 4.4M tokens)" href="download.php?f=OpenSubtitles2013/sl-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Albanian' (81 aligned documents, 61.9k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/sq-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Serbian' (654 aligned documents, 0.4M links, 4.1M tokens)" href="download.php?f=OpenSubtitles2013/sr-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Swedish' (496 aligned documents, 0.3M links, 2.9M tokens)" href="download.php?f=OpenSubtitles2013/sv-th.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1801,235 +1801,235 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td><a rel="nofollow" title="Thai-Turkish (sample file)" href="OpenSubtitles2013/th-tr_sample.html">view</a></td><td><a rel="nofollow" title="Thai-Ukrainian (sample file)" href="OpenSubtitles2013/th-uk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Thai-Vietnamese (sample file)" href="OpenSubtitles2013/th-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Thai-Chinese (sample file)" href="OpenSubtitles2013/th-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Thai-Chinese (sample file)" href="OpenSubtitles2013/th-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/th.raw.tar.gz">th</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/tr.tar.gz">tr</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Arabic' (10,662 aligned documents, 7.7M links, 106.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Belarusian' (1.1k links, 5.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/be-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Bulgarian' (13,085 aligned documents, 10.9M links, 142.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Bengali' (1.6k links, 21.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Bosnian' (1,497 aligned documents, 1.2M links, 16.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Catalan' (143 aligned documents, 0.1M links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Czech' (14,388 aligned documents, 11.9M links, 151.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Danish' (4,929 aligned documents, 4.6M links, 61.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-German' (3,460 aligned documents, 3.5M links, 45.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Greek' (16,600 aligned documents, 13.3M links, 181.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-English' (22,631 aligned documents, 20.6M links, 283.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Spanish' (19,117 aligned documents, 15.8M links, 219.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Estonian' (4,606 aligned documents, 4.3M links, 52.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Basque' (138 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Persian' (4 aligned documents, 1.3k links, 22.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Finnish' (7,026 aligned documents, 6.6M links, 77.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-French' (14,391 aligned documents, 12.0M links, 166.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Hebrew' (11,808 aligned documents, 8.8M links, 125.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Hindi' (2 aligned documents, 0.8k links, 14.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/hi-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Arabic' (10,662 aligned documents, 7.7M links, 106.3M tokens)" href="download.php?f=OpenSubtitles2013/ar-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Belarusian' (1.1k links, 5.3k tokens)" href="download.php?f=OpenSubtitles2013/be-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Bulgarian' (13,085 aligned documents, 10.9M links, 142.4M tokens)" href="download.php?f=OpenSubtitles2013/bg-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Bengali' (1.6k links, 21.7k tokens)" href="download.php?f=OpenSubtitles2013/bn-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Bosnian' (1,497 aligned documents, 1.2M links, 16.0M tokens)" href="download.php?f=OpenSubtitles2013/bs-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Catalan' (143 aligned documents, 0.1M links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/ca-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Czech' (14,388 aligned documents, 11.9M links, 151.9M tokens)" href="download.php?f=OpenSubtitles2013/cs-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Danish' (4,929 aligned documents, 4.6M links, 61.4M tokens)" href="download.php?f=OpenSubtitles2013/da-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-German' (3,460 aligned documents, 3.5M links, 45.3M tokens)" href="download.php?f=OpenSubtitles2013/de-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Greek' (16,600 aligned documents, 13.3M links, 181.9M tokens)" href="download.php?f=OpenSubtitles2013/el-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-English' (22,631 aligned documents, 20.6M links, 283.2M tokens)" href="download.php?f=OpenSubtitles2013/en-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Spanish' (19,117 aligned documents, 15.8M links, 219.0M tokens)" href="download.php?f=OpenSubtitles2013/es-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Estonian' (4,606 aligned documents, 4.3M links, 52.7M tokens)" href="download.php?f=OpenSubtitles2013/et-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Basque' (138 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/eu-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Persian' (4 aligned documents, 1.3k links, 22.7k tokens)" href="download.php?f=OpenSubtitles2013/fa-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Finnish' (7,026 aligned documents, 6.6M links, 77.7M tokens)" href="download.php?f=OpenSubtitles2013/fi-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-French' (14,391 aligned documents, 12.0M links, 166.0M tokens)" href="download.php?f=OpenSubtitles2013/fr-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Hebrew' (11,808 aligned documents, 8.8M links, 125.4M tokens)" href="download.php?f=OpenSubtitles2013/he-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Hindi' (2 aligned documents, 0.8k links, 14.8k tokens)" href="download.php?f=OpenSubtitles2013/hi-tr.xml.gz">ces</a></td>
 <th>tr</th>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Croatian' (12,229 aligned documents, 10.2M links, 129.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Hungarian' (14,334 aligned documents, 11.8M links, 147.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Armenian' (1.1k links, 14.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/hy-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Indonesian' (51 aligned documents, 49.3k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Icelandic' (669 aligned documents, 0.9M links, 10.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Italian' (10,738 aligned documents, 8.4M links, 115.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Japanese' (480 aligned documents, 0.4M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Croatian' (12,229 aligned documents, 10.2M links, 129.9M tokens)" href="download.php?f=OpenSubtitles2013/hr-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Hungarian' (14,334 aligned documents, 11.8M links, 147.0M tokens)" href="download.php?f=OpenSubtitles2013/hu-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Armenian' (1.1k links, 14.6k tokens)" href="download.php?f=OpenSubtitles2013/hy-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Indonesian' (51 aligned documents, 49.3k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/id-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Icelandic' (669 aligned documents, 0.9M links, 10.9M tokens)" href="download.php?f=OpenSubtitles2013/is-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Italian' (10,738 aligned documents, 8.4M links, 115.4M tokens)" href="download.php?f=OpenSubtitles2013/it-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Japanese' (480 aligned documents, 0.4M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/ja-tr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Kazakh' (2 aligned documents, 2.3k links, 26.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/kk-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Korean' (20 aligned documents, 16.6k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Lithuanian' (391 aligned documents, 0.5M links, 5.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Latvian' (185 aligned documents, 0.2M links, 2.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Macedonian' (692 aligned documents, 0.7M links, 8.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Malayalam' (3 aligned documents, 0.7k links, 10.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/ml-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Malay' (1,756 aligned documents, 1.9M links, 24.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-BokmÃ¥l, Norwegian' (1,991 aligned documents, 2.0M links, 26.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Dutch' (13,244 aligned documents, 11.0M links, 149.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Polish' (7,145 aligned documents, 6.6M links, 81.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Portuguese' (14,516 aligned documents, 12.8M links, 169.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Portuguese' (19,651 aligned documents, 16.7M links, 218.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt_br-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Romanian' (18,190 aligned documents, 16.1M links, 215.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ro-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Kazakh' (2 aligned documents, 2.3k links, 26.2k tokens)" href="download.php?f=OpenSubtitles2013/kk-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Korean' (20 aligned documents, 16.6k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/ko-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Lithuanian' (391 aligned documents, 0.5M links, 5.8M tokens)" href="download.php?f=OpenSubtitles2013/lt-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Latvian' (185 aligned documents, 0.2M links, 2.6M tokens)" href="download.php?f=OpenSubtitles2013/lv-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Macedonian' (692 aligned documents, 0.7M links, 8.8M tokens)" href="download.php?f=OpenSubtitles2013/mk-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Malayalam' (3 aligned documents, 0.7k links, 10.8k tokens)" href="download.php?f=OpenSubtitles2013/ml-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Malay' (1,756 aligned documents, 1.9M links, 24.0M tokens)" href="download.php?f=OpenSubtitles2013/ms-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-BokmÃ¥l, Norwegian' (1,991 aligned documents, 2.0M links, 26.0M tokens)" href="download.php?f=OpenSubtitles2013/nb-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Dutch' (13,244 aligned documents, 11.0M links, 149.8M tokens)" href="download.php?f=OpenSubtitles2013/nl-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Polish' (7,145 aligned documents, 6.6M links, 81.9M tokens)" href="download.php?f=OpenSubtitles2013/pl-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Portuguese' (14,516 aligned documents, 12.8M links, 169.7M tokens)" href="download.php?f=OpenSubtitles2013/pt-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Portuguese' (19,651 aligned documents, 16.7M links, 218.5M tokens)" href="download.php?f=OpenSubtitles2013/pt_br-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Romanian' (18,190 aligned documents, 16.1M links, 215.1M tokens)" href="download.php?f=OpenSubtitles2013/ro-tr.xml.gz">ces</a></td>
 <th>tr</th>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Russian' (4,991 aligned documents, 4.1M links, 53.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ru-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Sinhala' (108 aligned documents, 0.1M links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/si-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Slovak' (2,235 aligned documents, 1.9M links, 24.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/sk-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Slovenian' (8,332 aligned documents, 7.7M links, 95.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/sl-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Albanian' (1,383 aligned documents, 1.5M links, 20.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/sq-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Serbian' (10,106 aligned documents, 8.8M links, 112.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/sr-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Swedish' (4,988 aligned documents, 4.5M links, 59.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/sv-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Russian' (4,991 aligned documents, 4.1M links, 53.9M tokens)" href="download.php?f=OpenSubtitles2013/ru-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Sinhala' (108 aligned documents, 0.1M links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/si-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Slovak' (2,235 aligned documents, 1.9M links, 24.3M tokens)" href="download.php?f=OpenSubtitles2013/sk-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Slovenian' (8,332 aligned documents, 7.7M links, 95.0M tokens)" href="download.php?f=OpenSubtitles2013/sl-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Albanian' (1,383 aligned documents, 1.5M links, 20.2M tokens)" href="download.php?f=OpenSubtitles2013/sq-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Serbian' (10,106 aligned documents, 8.8M links, 112.6M tokens)" href="download.php?f=OpenSubtitles2013/sr-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Swedish' (4,988 aligned documents, 4.5M links, 59.2M tokens)" href="download.php?f=OpenSubtitles2013/sv-tr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Tamil' (0.5k links, 6.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/ta-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Telugu' (0.5k links, 6.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/te-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Thai' (1,264 aligned documents, 0.8M links, 7.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/th-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Tamil' (0.5k links, 6.7k tokens)" href="download.php?f=OpenSubtitles2013/ta-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Telugu' (0.5k links, 6.6k tokens)" href="download.php?f=OpenSubtitles2013/te-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Thai' (1,264 aligned documents, 0.8M links, 7.0M tokens)" href="download.php?f=OpenSubtitles2013/th-tr.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Turkish-Ukrainian (sample file)" href="OpenSubtitles2013/tr-uk_sample.html">view</a></td><td><a rel="nofollow" title="Turkish-Urdu (sample file)" href="OpenSubtitles2013/tr-ur_sample.html">view</a></td><td><a rel="nofollow" title="Turkish-Vietnamese (sample file)" href="OpenSubtitles2013/tr-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Turkish-Chinese (sample file)" href="OpenSubtitles2013/tr-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Turkish-Chinese (sample file)" href="OpenSubtitles2013/tr-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/tr.raw.tar.gz">tr</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/uk.tar.gz">uk</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Arabic' (58 aligned documents, 54.2k links, 0.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Arabic' (58 aligned documents, 54.2k links, 0.8M tokens)" href="download.php?f=OpenSubtitles2013/ar-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Bulgarian' (80 aligned documents, 84.2k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Bulgarian' (80 aligned documents, 84.2k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/bg-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Bosnian' (9 aligned documents, 8.8k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Catalan' (2 aligned documents, 1.2k links, 18.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Czech' (92 aligned documents, 99.3k links, 1.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Danish' (46 aligned documents, 50.2k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-German' (54 aligned documents, 53.6k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Greek' (101 aligned documents, 0.1M links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-English' (134 aligned documents, 0.1M links, 2.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Spanish' (103 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Estonian' (53 aligned documents, 57.0k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Basque' (5 aligned documents, 6.7k links, 89.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Persian' (0.1k links, 4.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Finnish' (68 aligned documents, 74.2k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-French' (92 aligned documents, 97.6k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Hebrew' (73 aligned documents, 71.5k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Bosnian' (9 aligned documents, 8.8k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/bs-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Catalan' (2 aligned documents, 1.2k links, 18.4k tokens)" href="download.php?f=OpenSubtitles2013/ca-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Czech' (92 aligned documents, 99.3k links, 1.3M tokens)" href="download.php?f=OpenSubtitles2013/cs-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Danish' (46 aligned documents, 50.2k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/da-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-German' (54 aligned documents, 53.6k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/de-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Greek' (101 aligned documents, 0.1M links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/el-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-English' (134 aligned documents, 0.1M links, 2.1M tokens)" href="download.php?f=OpenSubtitles2013/en-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Spanish' (103 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/es-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Estonian' (53 aligned documents, 57.0k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/et-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Basque' (5 aligned documents, 6.7k links, 89.8k tokens)" href="download.php?f=OpenSubtitles2013/eu-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Persian' (0.1k links, 4.6k tokens)" href="download.php?f=OpenSubtitles2013/fa-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Finnish' (68 aligned documents, 74.2k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/fi-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-French' (92 aligned documents, 97.6k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/fr-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Hebrew' (73 aligned documents, 71.5k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/he-uk.xml.gz">ces</a></td>
 <td></td>
 <th>uk</th>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Croatian' (75 aligned documents, 81.1k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Hungarian' (83 aligned documents, 87.9k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Croatian' (75 aligned documents, 81.1k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/hr-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Hungarian' (83 aligned documents, 87.9k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/hu-uk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Icelandic' (12 aligned documents, 14.6k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Italian' (62 aligned documents, 65.5k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Japanese' (7 aligned documents, 7.0k links, 53.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Icelandic' (12 aligned documents, 14.6k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/is-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Italian' (62 aligned documents, 65.5k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/it-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Japanese' (7 aligned documents, 7.0k links, 53.2k tokens)" href="download.php?f=OpenSubtitles2013/ja-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Kazakh' (1.3k links, 15.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/kk-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Kazakh' (1.3k links, 15.0k tokens)" href="download.php?f=OpenSubtitles2013/kk-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Lithuanian' (10 aligned documents, 10.5k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Latvian' (4 aligned documents, 4.4k links, 52.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Macedonian' (8 aligned documents, 8.4k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Lithuanian' (10 aligned documents, 10.5k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/lt-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Latvian' (4 aligned documents, 4.4k links, 52.4k tokens)" href="download.php?f=OpenSubtitles2013/lv-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Macedonian' (8 aligned documents, 8.4k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/mk-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Malay' (33 aligned documents, 43.1k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-BokmÃ¥l, Norwegian' (35 aligned documents, 39.6k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Dutch' (81 aligned documents, 88.8k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Polish' (75 aligned documents, 78.0k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Portuguese' (98 aligned documents, 0.1M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Portuguese' (100 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt_br-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Romanian' (111 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/ro-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Malay' (33 aligned documents, 43.1k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2013/ms-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-BokmÃ¥l, Norwegian' (35 aligned documents, 39.6k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/nb-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Dutch' (81 aligned documents, 88.8k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/nl-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Polish' (75 aligned documents, 78.0k links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/pl-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Portuguese' (98 aligned documents, 0.1M links, 1.6M tokens)" href="download.php?f=OpenSubtitles2013/pt-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Portuguese' (100 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2013/pt_br-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Romanian' (111 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/ro-uk.xml.gz">ces</a></td>
 <th>uk</th>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Russian' (60 aligned documents, 69.8k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ru-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Sinhala' (4 aligned documents, 3.4k links, 46.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/si-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Slovak' (14 aligned documents, 13.8k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/sk-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Slovenian' (83 aligned documents, 90.6k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/sl-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Albanian' (29 aligned documents, 34.5k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/sq-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Serbian' (77 aligned documents, 80.6k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/sr-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Swedish' (52 aligned documents, 58.5k links, 0.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/sv-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Russian' (60 aligned documents, 69.8k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/ru-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Sinhala' (4 aligned documents, 3.4k links, 46.0k tokens)" href="download.php?f=OpenSubtitles2013/si-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Slovak' (14 aligned documents, 13.8k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/sk-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Slovenian' (83 aligned documents, 90.6k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/sl-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Albanian' (29 aligned documents, 34.5k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/sq-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Serbian' (77 aligned documents, 80.6k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/sr-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Swedish' (52 aligned documents, 58.5k links, 0.8M tokens)" href="download.php?f=OpenSubtitles2013/sv-uk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Thai' (5 aligned documents, 3.7k links, 38.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/th-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Turkish' (91 aligned documents, 99.5k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/tr-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Thai' (5 aligned documents, 3.7k links, 38.1k tokens)" href="download.php?f=OpenSubtitles2013/th-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Turkish' (91 aligned documents, 99.5k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/tr-uk.xml.gz">ces</a></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="Ukrainian-Vietnamese (sample file)" href="OpenSubtitles2013/uk-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Ukrainian-Chinese (sample file)" href="OpenSubtitles2013/uk-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Ukrainian-Chinese (sample file)" href="OpenSubtitles2013/uk-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/uk.raw.tar.gz">uk</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ur.tar.gz">ur</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Arabic' (4 aligned documents, 4.0k links, 72.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Arabic' (4 aligned documents, 4.0k links, 72.0k tokens)" href="download.php?f=OpenSubtitles2013/ar-ur.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Bulgarian' (2 aligned documents, 2.3k links, 40.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Bulgarian' (2 aligned documents, 2.3k links, 40.2k tokens)" href="download.php?f=OpenSubtitles2013/bg-ur.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Bosnian' (0.5k links, 9.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Bosnian' (0.5k links, 9.2k tokens)" href="download.php?f=OpenSubtitles2013/bs-ur.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Czech' (3 aligned documents, 3.8k links, 66.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Danish' (2 aligned documents, 2.2k links, 38.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/da-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-German' (3 aligned documents, 3.8k links, 69.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/de-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Greek' (4 aligned documents, 4.5k links, 85.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/el-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-English' (6 aligned documents, 6.0k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Spanish' (3 aligned documents, 3.4k links, 62.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/es-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Estonian' (2 aligned documents, 2.5k links, 41.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/et-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Czech' (3 aligned documents, 3.8k links, 66.9k tokens)" href="download.php?f=OpenSubtitles2013/cs-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Danish' (2 aligned documents, 2.2k links, 38.9k tokens)" href="download.php?f=OpenSubtitles2013/da-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-German' (3 aligned documents, 3.8k links, 69.9k tokens)" href="download.php?f=OpenSubtitles2013/de-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Greek' (4 aligned documents, 4.5k links, 85.9k tokens)" href="download.php?f=OpenSubtitles2013/el-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-English' (6 aligned documents, 6.0k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/en-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Spanish' (3 aligned documents, 3.4k links, 62.6k tokens)" href="download.php?f=OpenSubtitles2013/es-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Estonian' (2 aligned documents, 2.5k links, 41.2k tokens)" href="download.php?f=OpenSubtitles2013/et-ur.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Finnish' (2 aligned documents, 2.3k links, 38.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-French' (3 aligned documents, 3.3k links, 64.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Hebrew' (4 aligned documents, 4.1k links, 73.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/he-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Finnish' (2 aligned documents, 2.3k links, 38.9k tokens)" href="download.php?f=OpenSubtitles2013/fi-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-French' (3 aligned documents, 3.3k links, 64.2k tokens)" href="download.php?f=OpenSubtitles2013/fr-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Hebrew' (4 aligned documents, 4.1k links, 73.4k tokens)" href="download.php?f=OpenSubtitles2013/he-ur.xml.gz">ces</a></td>
 <td></td>
 <th>ur</th>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Croatian' (2 aligned documents, 2.2k links, 40.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Hungarian' (3 aligned documents, 4.0k links, 64.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Croatian' (2 aligned documents, 2.2k links, 40.3k tokens)" href="download.php?f=OpenSubtitles2013/hr-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Hungarian' (3 aligned documents, 4.0k links, 64.7k tokens)" href="download.php?f=OpenSubtitles2013/hu-ur.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Italian' (3 aligned documents, 3.3k links, 62.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/it-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Italian' (3 aligned documents, 3.3k links, 62.9k tokens)" href="download.php?f=OpenSubtitles2013/it-ur.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Macedonian' (2 aligned documents, 2.1k links, 38.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Macedonian' (2 aligned documents, 2.1k links, 38.9k tokens)" href="download.php?f=OpenSubtitles2013/mk-ur.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Malay' (3 aligned documents, 3.2k links, 59.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Malay' (3 aligned documents, 3.2k links, 59.5k tokens)" href="download.php?f=OpenSubtitles2013/ms-ur.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Dutch' (2 aligned documents, 2.2k links, 40.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Polish' (4 aligned documents, 4.4k links, 76.7k tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Portuguese' (4 aligned documents, 4.4k links, 86.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Portuguese' (4 aligned documents, 4.4k links, 80.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/pt_br-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Romanian' (4 aligned documents, 4.5k links, 86.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/ro-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Dutch' (2 aligned documents, 2.2k links, 40.8k tokens)" href="download.php?f=OpenSubtitles2013/nl-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Polish' (4 aligned documents, 4.4k links, 76.7k tokens)" href="download.php?f=OpenSubtitles2013/pl-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Portuguese' (4 aligned documents, 4.4k links, 86.1k tokens)" href="download.php?f=OpenSubtitles2013/pt-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Portuguese' (4 aligned documents, 4.4k links, 80.8k tokens)" href="download.php?f=OpenSubtitles2013/pt_br-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Romanian' (4 aligned documents, 4.5k links, 86.5k tokens)" href="download.php?f=OpenSubtitles2013/ro-ur.xml.gz">ces</a></td>
 <th>ur</th>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Russian' (3 aligned documents, 2.9k links, 51.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/ru-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Russian' (3 aligned documents, 2.9k links, 51.9k tokens)" href="download.php?f=OpenSubtitles2013/ru-ur.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Slovak' (2 aligned documents, 2.5k links, 42.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/sk-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Slovenian' (3 aligned documents, 3.4k links, 61.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/sl-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Albanian' (3 aligned documents, 2.9k links, 54.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/sq-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Serbian' (2 aligned documents, 2.3k links, 40.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/sr-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Swedish' (2 aligned documents, 2.3k links, 40.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/sv-ur.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Slovak' (2 aligned documents, 2.5k links, 42.0k tokens)" href="download.php?f=OpenSubtitles2013/sk-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Slovenian' (3 aligned documents, 3.4k links, 61.2k tokens)" href="download.php?f=OpenSubtitles2013/sl-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Albanian' (3 aligned documents, 2.9k links, 54.9k tokens)" href="download.php?f=OpenSubtitles2013/sq-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Serbian' (2 aligned documents, 2.3k links, 40.5k tokens)" href="download.php?f=OpenSubtitles2013/sr-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Swedish' (2 aligned documents, 2.3k links, 40.8k tokens)" href="download.php?f=OpenSubtitles2013/sv-ur.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Turkish' (4 aligned documents, 4.8k links, 79.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/tr-ur.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Turkish' (4 aligned documents, 4.8k links, 79.5k tokens)" href="download.php?f=OpenSubtitles2013/tr-ur.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/ur.raw.tar.gz">ur</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/vi.tar.gz">vi</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Arabic' (500 aligned documents, 0.5M links, 8.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Arabic' (500 aligned documents, 0.5M links, 8.3M tokens)" href="download.php?f=OpenSubtitles2013/ar-vi.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Bulgarian' (522 aligned documents, 0.6M links, 8.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Bulgarian' (522 aligned documents, 0.6M links, 8.8M tokens)" href="download.php?f=OpenSubtitles2013/bg-vi.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Bosnian' (69 aligned documents, 79.3k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Catalan' (21 aligned documents, 19.6k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Czech' (566 aligned documents, 0.6M links, 9.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Danish' (372 aligned documents, 0.4M links, 6.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-German' (319 aligned documents, 0.4M links, 6.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Greek' (672 aligned documents, 0.7M links, 11.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-English' (839 aligned documents, 1.0M links, 15.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Spanish' (695 aligned documents, 0.8M links, 12.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Estonian' (369 aligned documents, 0.4M links, 6.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Basque' (14 aligned documents, 16.0k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Persian' (4 aligned documents, 2.4k links, 64.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Finnish' (455 aligned documents, 0.5M links, 7.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-French' (543 aligned documents, 0.6M links, 9.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Hebrew' (495 aligned documents, 0.5M links, 8.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Bosnian' (69 aligned documents, 79.3k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/bs-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Catalan' (21 aligned documents, 19.6k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/ca-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Czech' (566 aligned documents, 0.6M links, 9.8M tokens)" href="download.php?f=OpenSubtitles2013/cs-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Danish' (372 aligned documents, 0.4M links, 6.7M tokens)" href="download.php?f=OpenSubtitles2013/da-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-German' (319 aligned documents, 0.4M links, 6.0M tokens)" href="download.php?f=OpenSubtitles2013/de-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Greek' (672 aligned documents, 0.7M links, 11.5M tokens)" href="download.php?f=OpenSubtitles2013/el-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-English' (839 aligned documents, 1.0M links, 15.9M tokens)" href="download.php?f=OpenSubtitles2013/en-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Spanish' (695 aligned documents, 0.8M links, 12.3M tokens)" href="download.php?f=OpenSubtitles2013/es-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Estonian' (369 aligned documents, 0.4M links, 6.4M tokens)" href="download.php?f=OpenSubtitles2013/et-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Basque' (14 aligned documents, 16.0k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/eu-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Persian' (4 aligned documents, 2.4k links, 64.6k tokens)" href="download.php?f=OpenSubtitles2013/fa-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Finnish' (455 aligned documents, 0.5M links, 7.4M tokens)" href="download.php?f=OpenSubtitles2013/fi-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-French' (543 aligned documents, 0.6M links, 9.8M tokens)" href="download.php?f=OpenSubtitles2013/fr-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Hebrew' (495 aligned documents, 0.5M links, 8.6M tokens)" href="download.php?f=OpenSubtitles2013/he-vi.xml.gz">ces</a></td>
 <td></td>
 <th>vi</th>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Croatian' (512 aligned documents, 0.6M links, 8.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Hungarian' (504 aligned documents, 0.6M links, 8.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Croatian' (512 aligned documents, 0.6M links, 8.8M tokens)" href="download.php?f=OpenSubtitles2013/hr-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Hungarian' (504 aligned documents, 0.6M links, 8.4M tokens)" href="download.php?f=OpenSubtitles2013/hu-vi.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Indonesian' (11 aligned documents, 12.4k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Icelandic' (90 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Italian' (382 aligned documents, 0.4M links, 6.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Japanese' (52 aligned documents, 50.7k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Indonesian' (11 aligned documents, 12.4k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/id-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Icelandic' (90 aligned documents, 0.1M links, 1.7M tokens)" href="download.php?f=OpenSubtitles2013/is-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Italian' (382 aligned documents, 0.4M links, 6.9M tokens)" href="download.php?f=OpenSubtitles2013/it-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Japanese' (52 aligned documents, 50.7k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/ja-vi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Korean' (0.8k links, 13.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Lithuanian' (53 aligned documents, 76.2k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Latvian' (24 aligned documents, 31.1k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Macedonian' (102 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Malayalam' (2 aligned documents, 0.9k links, 17.0k tokens)" href="download.php?f=OpenSubtitles2013/xml/ml-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Malay' (282 aligned documents, 0.3M links, 5.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-BokmÃ¥l, Norwegian' (253 aligned documents, 0.3M links, 4.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Dutch' (524 aligned documents, 0.6M links, 9.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Polish' (467 aligned documents, 0.5M links, 8.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Portuguese' (679 aligned documents, 0.8M links, 12.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Portuguese' (717 aligned documents, 0.8M links, 12.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt_br-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Romanian' (770 aligned documents, 0.9M links, 13.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ro-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Korean' (0.8k links, 13.1k tokens)" href="download.php?f=OpenSubtitles2013/ko-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Lithuanian' (53 aligned documents, 76.2k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/lt-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Latvian' (24 aligned documents, 31.1k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/lv-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Macedonian' (102 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/mk-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Malayalam' (2 aligned documents, 0.9k links, 17.0k tokens)" href="download.php?f=OpenSubtitles2013/ml-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Malay' (282 aligned documents, 0.3M links, 5.1M tokens)" href="download.php?f=OpenSubtitles2013/ms-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-BokmÃ¥l, Norwegian' (253 aligned documents, 0.3M links, 4.7M tokens)" href="download.php?f=OpenSubtitles2013/nb-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Dutch' (524 aligned documents, 0.6M links, 9.1M tokens)" href="download.php?f=OpenSubtitles2013/nl-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Polish' (467 aligned documents, 0.5M links, 8.1M tokens)" href="download.php?f=OpenSubtitles2013/pl-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Portuguese' (679 aligned documents, 0.8M links, 12.2M tokens)" href="download.php?f=OpenSubtitles2013/pt-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Portuguese' (717 aligned documents, 0.8M links, 12.6M tokens)" href="download.php?f=OpenSubtitles2013/pt_br-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Romanian' (770 aligned documents, 0.9M links, 13.9M tokens)" href="download.php?f=OpenSubtitles2013/ro-vi.xml.gz">ces</a></td>
 <th>vi</th>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Russian' (244 aligned documents, 0.3M links, 4.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/ru-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Sinhala' (29 aligned documents, 31.5k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/si-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Slovak' (100 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/sk-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Slovenian' (493 aligned documents, 0.6M links, 8.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/sl-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Albanian' (208 aligned documents, 0.2M links, 4.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/sq-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Serbian' (492 aligned documents, 0.6M links, 8.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/sr-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Swedish' (359 aligned documents, 0.4M links, 6.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/sv-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Russian' (244 aligned documents, 0.3M links, 4.5M tokens)" href="download.php?f=OpenSubtitles2013/ru-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Sinhala' (29 aligned documents, 31.5k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/si-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Slovak' (100 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/sk-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Slovenian' (493 aligned documents, 0.6M links, 8.7M tokens)" href="download.php?f=OpenSubtitles2013/sl-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Albanian' (208 aligned documents, 0.2M links, 4.0M tokens)" href="download.php?f=OpenSubtitles2013/sq-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Serbian' (492 aligned documents, 0.6M links, 8.5M tokens)" href="download.php?f=OpenSubtitles2013/sr-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Swedish' (359 aligned documents, 0.4M links, 6.3M tokens)" href="download.php?f=OpenSubtitles2013/sv-vi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Thai' (39 aligned documents, 32.3k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/th-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Turkish' (590 aligned documents, 0.7M links, 9.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/tr-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Ukrainian' (16 aligned documents, 19.9k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/uk-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Thai' (39 aligned documents, 32.3k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/th-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Turkish' (590 aligned documents, 0.7M links, 9.6M tokens)" href="download.php?f=OpenSubtitles2013/tr-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Ukrainian' (16 aligned documents, 19.9k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/uk-vi.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="Vietnamese-Chinese (sample file)" href="OpenSubtitles2013/vi-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Vietnamese-Chinese (sample file)" href="OpenSubtitles2013/vi-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/vi.raw.tar.gz">vi</a></th></tr>
@@ -2045,43 +2045,43 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (1.0k links, 9.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/en-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (0.9k links, 7.1k tokens)" href="download.php?f=OpenSubtitles2013/xml/es-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Estonian' (0.9k links, 7.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/et-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (1.0k links, 9.1k tokens)" href="download.php?f=OpenSubtitles2013/en-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (0.9k links, 7.1k tokens)" href="download.php?f=OpenSubtitles2013/es-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Estonian' (0.9k links, 7.3k tokens)" href="download.php?f=OpenSubtitles2013/et-zh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Hebrew' (1.0k links, 7.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/he-zh.xml.gz">ces</a></td>
-<td></td>
-<th>zh</th>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Hebrew' (1.0k links, 7.6k tokens)" href="download.php?f=OpenSubtitles2013/he-zh.xml.gz">ces</a></td>
 <td></td>
 <th>zh</th>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Albanian' (1.0k links, 9.2k tokens)" href="download.php?f=OpenSubtitles2013/xml/sq-zh.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>zh</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Albanian' (1.0k links, 9.2k tokens)" href="download.php?f=OpenSubtitles2013/sq-zh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2096,127 +2096,127 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <td></td><td></td><th>zh</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/zh_cn.tar.gz">zh_cn</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Arabic' (838 aligned documents, 0.9M links, 12.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Arabic' (838 aligned documents, 0.9M links, 12.8M tokens)" href="download.php?f=OpenSubtitles2013/ar-zh_cn.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Bulgarian' (941 aligned documents, 1.0M links, 15.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Bengali' (1.0k links, 22.3k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Bosnian' (117 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Catalan' (13 aligned documents, 14.0k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Czech' (966 aligned documents, 1.0M links, 15.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Danish' (624 aligned documents, 0.7M links, 11.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-German' (505 aligned documents, 0.5M links, 8.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Greek' (1,103 aligned documents, 1.1M links, 17.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (1,518 aligned documents, 1.5M links, 25.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (1,219 aligned documents, 1.2M links, 19.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Estonian' (610 aligned documents, 0.7M links, 10.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Basque' (30 aligned documents, 33.1k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Persian' (0.5k links, 13.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/fa-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Finnish' (779 aligned documents, 0.8M links, 11.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-French' (930 aligned documents, 0.9M links, 15.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Hebrew' (871 aligned documents, 0.9M links, 14.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Bulgarian' (941 aligned documents, 1.0M links, 15.0M tokens)" href="download.php?f=OpenSubtitles2013/bg-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Bengali' (1.0k links, 22.3k tokens)" href="download.php?f=OpenSubtitles2013/bn-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Bosnian' (117 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/bs-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Catalan' (13 aligned documents, 14.0k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/ca-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Czech' (966 aligned documents, 1.0M links, 15.4M tokens)" href="download.php?f=OpenSubtitles2013/cs-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Danish' (624 aligned documents, 0.7M links, 11.0M tokens)" href="download.php?f=OpenSubtitles2013/da-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-German' (505 aligned documents, 0.5M links, 8.0M tokens)" href="download.php?f=OpenSubtitles2013/de-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Greek' (1,103 aligned documents, 1.1M links, 17.4M tokens)" href="download.php?f=OpenSubtitles2013/el-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (1,518 aligned documents, 1.5M links, 25.9M tokens)" href="download.php?f=OpenSubtitles2013/en-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (1,219 aligned documents, 1.2M links, 19.5M tokens)" href="download.php?f=OpenSubtitles2013/es-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Estonian' (610 aligned documents, 0.7M links, 10.1M tokens)" href="download.php?f=OpenSubtitles2013/et-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Basque' (30 aligned documents, 33.1k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/eu-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Persian' (0.5k links, 13.5k tokens)" href="download.php?f=OpenSubtitles2013/fa-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Finnish' (779 aligned documents, 0.8M links, 11.9M tokens)" href="download.php?f=OpenSubtitles2013/fi-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-French' (930 aligned documents, 0.9M links, 15.2M tokens)" href="download.php?f=OpenSubtitles2013/fr-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Hebrew' (871 aligned documents, 0.9M links, 14.2M tokens)" href="download.php?f=OpenSubtitles2013/he-zh_cn.xml.gz">ces</a></td>
 <td></td>
 <th>zh_cn</th>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Croatian' (873 aligned documents, 0.9M links, 13.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Hungarian' (857 aligned documents, 0.9M links, 13.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Croatian' (873 aligned documents, 0.9M links, 13.9M tokens)" href="download.php?f=OpenSubtitles2013/hr-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Hungarian' (857 aligned documents, 0.9M links, 13.3M tokens)" href="download.php?f=OpenSubtitles2013/hu-zh_cn.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Indonesian' (7 aligned documents, 9.6k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Icelandic' (103 aligned documents, 0.1M links, 1.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Italian' (600 aligned documents, 0.6M links, 9.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Japanese' (149 aligned documents, 0.1M links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Indonesian' (7 aligned documents, 9.6k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/id-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Icelandic' (103 aligned documents, 0.1M links, 1.9M tokens)" href="download.php?f=OpenSubtitles2013/is-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Italian' (600 aligned documents, 0.6M links, 9.5M tokens)" href="download.php?f=OpenSubtitles2013/it-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Japanese' (149 aligned documents, 0.1M links, 1.0M tokens)" href="download.php?f=OpenSubtitles2013/ja-zh_cn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Korean' (4 aligned documents, 3.7k links, 58.5k tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Lithuanian' (101 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Latvian' (42 aligned documents, 48.5k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Macedonian' (134 aligned documents, 0.2M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Malayalam' (0.7k links, 12.8k tokens)" href="download.php?f=OpenSubtitles2013/xml/ml-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Malay' (411 aligned documents, 0.5M links, 7.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-BokmÃ¥l, Norwegian' (339 aligned documents, 0.4M links, 5.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Dutch' (968 aligned documents, 1.0M links, 15.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Polish' (693 aligned documents, 0.7M links, 10.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Portuguese' (1,092 aligned documents, 1.1M links, 18.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Portuguese' (1,203 aligned documents, 1.2M links, 19.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt_br-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Romanian' (1,208 aligned documents, 1.3M links, 20.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/ro-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Korean' (4 aligned documents, 3.7k links, 58.5k tokens)" href="download.php?f=OpenSubtitles2013/ko-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Lithuanian' (101 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2013/lt-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Latvian' (42 aligned documents, 48.5k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2013/lv-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Macedonian' (134 aligned documents, 0.2M links, 2.4M tokens)" href="download.php?f=OpenSubtitles2013/mk-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Malayalam' (0.7k links, 12.8k tokens)" href="download.php?f=OpenSubtitles2013/ml-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Malay' (411 aligned documents, 0.5M links, 7.2M tokens)" href="download.php?f=OpenSubtitles2013/ms-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-BokmÃ¥l, Norwegian' (339 aligned documents, 0.4M links, 5.8M tokens)" href="download.php?f=OpenSubtitles2013/nb-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Dutch' (968 aligned documents, 1.0M links, 15.5M tokens)" href="download.php?f=OpenSubtitles2013/nl-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Polish' (693 aligned documents, 0.7M links, 10.9M tokens)" href="download.php?f=OpenSubtitles2013/pl-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Portuguese' (1,092 aligned documents, 1.1M links, 18.1M tokens)" href="download.php?f=OpenSubtitles2013/pt-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Portuguese' (1,203 aligned documents, 1.2M links, 19.4M tokens)" href="download.php?f=OpenSubtitles2013/pt_br-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Romanian' (1,208 aligned documents, 1.3M links, 20.5M tokens)" href="download.php?f=OpenSubtitles2013/ro-zh_cn.xml.gz">ces</a></td>
 <th>zh_cn</th>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Russian' (438 aligned documents, 0.4M links, 6.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/ru-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Sinhala' (28 aligned documents, 30.4k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/si-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Slovak' (208 aligned documents, 0.2M links, 3.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/sk-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Slovenian' (851 aligned documents, 0.9M links, 13.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/sl-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Albanian' (288 aligned documents, 0.3M links, 5.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/sq-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Serbian' (776 aligned documents, 0.8M links, 12.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/sr-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Swedish' (565 aligned documents, 0.6M links, 9.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/sv-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Russian' (438 aligned documents, 0.4M links, 6.6M tokens)" href="download.php?f=OpenSubtitles2013/ru-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Sinhala' (28 aligned documents, 30.4k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/si-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Slovak' (208 aligned documents, 0.2M links, 3.4M tokens)" href="download.php?f=OpenSubtitles2013/sk-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Slovenian' (851 aligned documents, 0.9M links, 13.5M tokens)" href="download.php?f=OpenSubtitles2013/sl-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Albanian' (288 aligned documents, 0.3M links, 5.5M tokens)" href="download.php?f=OpenSubtitles2013/sq-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Serbian' (776 aligned documents, 0.8M links, 12.7M tokens)" href="download.php?f=OpenSubtitles2013/sr-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Swedish' (565 aligned documents, 0.6M links, 9.7M tokens)" href="download.php?f=OpenSubtitles2013/sv-zh_cn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Thai' (77 aligned documents, 39.6k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/th-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Turkish' (1,060 aligned documents, 1.1M links, 15.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/tr-zh_cn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Ukrainian' (20 aligned documents, 20.6k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/uk-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Thai' (77 aligned documents, 39.6k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2013/th-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Turkish' (1,060 aligned documents, 1.1M links, 15.7M tokens)" href="download.php?f=OpenSubtitles2013/tr-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Ukrainian' (20 aligned documents, 20.6k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/uk-zh_cn.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Vietnamese' (162 aligned documents, 0.2M links, 3.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/vi-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Vietnamese' (162 aligned documents, 0.2M links, 3.3M tokens)" href="download.php?f=OpenSubtitles2013/vi-zh_cn.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td><a rel="nofollow" title="Chinese-Chinese (sample file)" href="OpenSubtitles2013/zh_cn-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/zh_cn.raw.tar.gz">zh_cn</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/zh_tw.tar.gz">zh_tw</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Arabic' (348 aligned documents, 0.4M links, 5.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/ar-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Arabic' (348 aligned documents, 0.4M links, 5.0M tokens)" href="download.php?f=OpenSubtitles2013/ar-zh_tw.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Bulgarian' (364 aligned documents, 0.4M links, 5.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/bg-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Bengali' (0.5k links, 9.6k tokens)" href="download.php?f=OpenSubtitles2013/xml/bn-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Bosnian' (32 aligned documents, 31.7k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/bs-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Catalan' (7 aligned documents, 6.1k links, 99.9k tokens)" href="download.php?f=OpenSubtitles2013/xml/ca-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Czech' (380 aligned documents, 0.4M links, 5.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/cs-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Danish' (246 aligned documents, 0.3M links, 4.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/da-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-German' (228 aligned documents, 0.2M links, 3.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/de-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Greek' (461 aligned documents, 0.4M links, 6.6M tokens)" href="download.php?f=OpenSubtitles2013/xml/el-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (671 aligned documents, 0.6M links, 10.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/en-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (555 aligned documents, 0.5M links, 7.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/es-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Estonian' (279 aligned documents, 0.3M links, 4.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/et-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Basque' (20 aligned documents, 21.0k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/eu-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Bulgarian' (364 aligned documents, 0.4M links, 5.4M tokens)" href="download.php?f=OpenSubtitles2013/bg-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Bengali' (0.5k links, 9.6k tokens)" href="download.php?f=OpenSubtitles2013/bn-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Bosnian' (32 aligned documents, 31.7k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/bs-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Catalan' (7 aligned documents, 6.1k links, 99.9k tokens)" href="download.php?f=OpenSubtitles2013/ca-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Czech' (380 aligned documents, 0.4M links, 5.7M tokens)" href="download.php?f=OpenSubtitles2013/cs-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Danish' (246 aligned documents, 0.3M links, 4.0M tokens)" href="download.php?f=OpenSubtitles2013/da-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-German' (228 aligned documents, 0.2M links, 3.1M tokens)" href="download.php?f=OpenSubtitles2013/de-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Greek' (461 aligned documents, 0.4M links, 6.6M tokens)" href="download.php?f=OpenSubtitles2013/el-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (671 aligned documents, 0.6M links, 10.2M tokens)" href="download.php?f=OpenSubtitles2013/en-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (555 aligned documents, 0.5M links, 7.8M tokens)" href="download.php?f=OpenSubtitles2013/es-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Estonian' (279 aligned documents, 0.3M links, 4.1M tokens)" href="download.php?f=OpenSubtitles2013/et-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Basque' (20 aligned documents, 21.0k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/eu-zh_tw.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Finnish' (271 aligned documents, 0.3M links, 3.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/fi-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-French' (428 aligned documents, 0.4M links, 6.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/fr-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Hebrew' (385 aligned documents, 0.4M links, 5.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/he-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Finnish' (271 aligned documents, 0.3M links, 3.9M tokens)" href="download.php?f=OpenSubtitles2013/fi-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-French' (428 aligned documents, 0.4M links, 6.1M tokens)" href="download.php?f=OpenSubtitles2013/fr-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Hebrew' (385 aligned documents, 0.4M links, 5.8M tokens)" href="download.php?f=OpenSubtitles2013/he-zh_tw.xml.gz">ces</a></td>
 <td></td>
 <th>zh_tw</th>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Croatian' (351 aligned documents, 0.4M links, 5.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/hr-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Hungarian' (392 aligned documents, 0.4M links, 5.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/hu-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Croatian' (351 aligned documents, 0.4M links, 5.1M tokens)" href="download.php?f=OpenSubtitles2013/hr-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Hungarian' (392 aligned documents, 0.4M links, 5.5M tokens)" href="download.php?f=OpenSubtitles2013/hu-zh_tw.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Indonesian' (7 aligned documents, 7.2k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/id-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Icelandic' (66 aligned documents, 78.0k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/is-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Italian' (287 aligned documents, 0.2M links, 3.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/it-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Japanese' (108 aligned documents, 64.5k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/ja-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Indonesian' (7 aligned documents, 7.2k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2013/id-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Icelandic' (66 aligned documents, 78.0k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/is-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Italian' (287 aligned documents, 0.2M links, 3.8M tokens)" href="download.php?f=OpenSubtitles2013/it-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Japanese' (108 aligned documents, 64.5k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2013/ja-zh_tw.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Korean' (2 aligned documents, 1.7k links, 19.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/ko-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Lithuanian' (52 aligned documents, 64.2k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/lt-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Latvian' (21 aligned documents, 25.0k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/lv-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Macedonian' (65 aligned documents, 75.5k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/mk-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Korean' (2 aligned documents, 1.7k links, 19.4k tokens)" href="download.php?f=OpenSubtitles2013/ko-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Lithuanian' (52 aligned documents, 64.2k links, 0.9M tokens)" href="download.php?f=OpenSubtitles2013/lt-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Latvian' (21 aligned documents, 25.0k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/lv-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Macedonian' (65 aligned documents, 75.5k links, 1.1M tokens)" href="download.php?f=OpenSubtitles2013/mk-zh_tw.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Malay' (177 aligned documents, 0.2M links, 2.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ms-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-BokmÃ¥l, Norwegian' (160 aligned documents, 0.2M links, 2.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/nb-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Dutch' (351 aligned documents, 0.3M links, 5.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/nl-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Polish' (277 aligned documents, 0.3M links, 4.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/pl-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Portuguese' (439 aligned documents, 0.4M links, 6.7M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Portuguese' (518 aligned documents, 0.5M links, 7.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/pt_br-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Romanian' (494 aligned documents, 0.5M links, 7.9M tokens)" href="download.php?f=OpenSubtitles2013/xml/ro-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Malay' (177 aligned documents, 0.2M links, 2.9M tokens)" href="download.php?f=OpenSubtitles2013/ms-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-BokmÃ¥l, Norwegian' (160 aligned documents, 0.2M links, 2.5M tokens)" href="download.php?f=OpenSubtitles2013/nb-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Dutch' (351 aligned documents, 0.3M links, 5.2M tokens)" href="download.php?f=OpenSubtitles2013/nl-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Polish' (277 aligned documents, 0.3M links, 4.0M tokens)" href="download.php?f=OpenSubtitles2013/pl-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Portuguese' (439 aligned documents, 0.4M links, 6.7M tokens)" href="download.php?f=OpenSubtitles2013/pt-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Portuguese' (518 aligned documents, 0.5M links, 7.4M tokens)" href="download.php?f=OpenSubtitles2013/pt_br-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Romanian' (494 aligned documents, 0.5M links, 7.9M tokens)" href="download.php?f=OpenSubtitles2013/ro-zh_tw.xml.gz">ces</a></td>
 <th>zh_tw</th>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Russian' (263 aligned documents, 0.2M links, 3.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/ru-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Sinhala' (15 aligned documents, 17.9k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/si-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Slovak' (78 aligned documents, 81.4k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/sk-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Slovenian' (381 aligned documents, 0.4M links, 5.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/sl-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Albanian' (139 aligned documents, 0.2M links, 2.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/sq-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Serbian' (331 aligned documents, 0.3M links, 5.0M tokens)" href="download.php?f=OpenSubtitles2013/xml/sr-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Swedish' (218 aligned documents, 0.2M links, 3.5M tokens)" href="download.php?f=OpenSubtitles2013/xml/sv-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Swahili' (0.4k links, 14.4k tokens)" href="download.php?f=OpenSubtitles2013/xml/sw-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Russian' (263 aligned documents, 0.2M links, 3.4M tokens)" href="download.php?f=OpenSubtitles2013/ru-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Sinhala' (15 aligned documents, 17.9k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/si-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Slovak' (78 aligned documents, 81.4k links, 1.2M tokens)" href="download.php?f=OpenSubtitles2013/sk-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Slovenian' (381 aligned documents, 0.4M links, 5.5M tokens)" href="download.php?f=OpenSubtitles2013/sl-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Albanian' (139 aligned documents, 0.2M links, 2.5M tokens)" href="download.php?f=OpenSubtitles2013/sq-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Serbian' (331 aligned documents, 0.3M links, 5.0M tokens)" href="download.php?f=OpenSubtitles2013/sr-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Swedish' (218 aligned documents, 0.2M links, 3.5M tokens)" href="download.php?f=OpenSubtitles2013/sv-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Swahili' (0.4k links, 14.4k tokens)" href="download.php?f=OpenSubtitles2013/sw-zh_tw.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Thai' (65 aligned documents, 31.2k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/xml/th-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Turkish' (445 aligned documents, 0.4M links, 5.8M tokens)" href="download.php?f=OpenSubtitles2013/xml/tr-zh_tw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Ukrainian' (11 aligned documents, 10.9k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/xml/uk-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Thai' (65 aligned documents, 31.2k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2013/th-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Turkish' (445 aligned documents, 0.4M links, 5.8M tokens)" href="download.php?f=OpenSubtitles2013/tr-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Ukrainian' (11 aligned documents, 10.9k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2013/uk-zh_tw.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Vietnamese' (75 aligned documents, 85.4k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/xml/vi-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Vietnamese' (75 aligned documents, 85.4k links, 1.4M tokens)" href="download.php?f=OpenSubtitles2013/vi-zh_tw.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Chinese' (246 aligned documents, 0.2M links, 3.1M tokens)" href="download.php?f=OpenSubtitles2013/xml/zh_cn-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Chinese' (246 aligned documents, 0.2M links, 3.1M tokens)" href="download.php?f=OpenSubtitles2013/zh_cn-zh_tw.xml.gz">ces</a></td>
 <th></th>
 <th><a rel="nofollow" href="download.php?f=OpenSubtitles2013/zh_tw.raw.tar.gz">zh_tw</a></th></tr>
 <tr><th></th>

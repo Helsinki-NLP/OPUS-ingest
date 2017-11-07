@@ -20,7 +20,7 @@
 <th></th>
 <td><a rel="nofollow" title="Breton-French (sample file)" href="OfisPublik/br-fr_sample.html">view</a></td><th>br</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OfisPublik/fr.tar.gz">fr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'French-Breton' (139 aligned documents, 63.8k links, 2.1M tokens)" href="download.php?f=OfisPublik/xml/br-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Breton' (139 aligned documents, 63.8k links, 2.1M tokens)" href="download.php?f=OfisPublik/br-fr.xml.gz">ces</a></td>
 <th></th>
 <th>fr</th></tr>
 <tr><th></th>

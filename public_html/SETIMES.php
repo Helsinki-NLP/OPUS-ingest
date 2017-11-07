@@ -30,63 +30,63 @@
 <th></th>
 <td><a rel="nofollow" title="Bulgarian-Greek (sample file)" href="SETIMES/bg-el_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-English (sample file)" href="SETIMES/bg-en_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Croatian (sample file)" href="SETIMES/bg-hr_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Macedonian (sample file)" href="SETIMES/bg-mk_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Romanian (sample file)" href="SETIMES/bg-ro_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Albanian (sample file)" href="SETIMES/bg-sq_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Serbian (sample file)" href="SETIMES/bg-sr_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Turkish (sample file)" href="SETIMES/bg-tr_sample.html">view</a></td><th>bg</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=SETIMES/el.tar.gz">el</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Bulgarian' (0.2M links, 10.1M tokens)" href="download.php?f=SETIMES/xml/bg-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Bulgarian' (0.2M links, 10.1M tokens)" href="download.php?f=SETIMES/bg-el.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Greek-English (sample file)" href="SETIMES/el-en_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Croatian (sample file)" href="SETIMES/el-hr_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Macedonian (sample file)" href="SETIMES/el-mk_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Romanian (sample file)" href="SETIMES/el-ro_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Albanian (sample file)" href="SETIMES/el-sq_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Serbian (sample file)" href="SETIMES/el-sr_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Turkish (sample file)" href="SETIMES/el-tr_sample.html">view</a></td><th>el</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=SETIMES/en.tar.gz">en</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'English-Bulgarian' (0.2M links, 9.1M tokens)" href="download.php?f=SETIMES/xml/bg-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (0.2M links, 9.5M tokens)" href="download.php?f=SETIMES/xml/el-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Bulgarian' (0.2M links, 9.1M tokens)" href="download.php?f=SETIMES/bg-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (0.2M links, 9.5M tokens)" href="download.php?f=SETIMES/el-en.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="English-Croatian (sample file)" href="SETIMES/en-hr_sample.html">view</a></td><td><a rel="nofollow" title="English-Macedonian (sample file)" href="SETIMES/en-mk_sample.html">view</a></td><td><a rel="nofollow" title="English-Romanian (sample file)" href="SETIMES/en-ro_sample.html">view</a></td><td><a rel="nofollow" title="English-Albanian (sample file)" href="SETIMES/en-sq_sample.html">view</a></td><td><a rel="nofollow" title="English-Serbian (sample file)" href="SETIMES/en-sr_sample.html">view</a></td><td><a rel="nofollow" title="English-Turkish (sample file)" href="SETIMES/en-tr_sample.html">view</a></td><th><a rel="nofollow" href="SETIMES/en_parse_sample.html">en</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=SETIMES/hr.tar.gz">hr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Bulgarian' (0.2M links, 8.7M tokens)" href="download.php?f=SETIMES/xml/bg-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Greek' (0.2M links, 9.1M tokens)" href="download.php?f=SETIMES/xml/el-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-English' (0.2M links, 8.7M tokens)" href="download.php?f=SETIMES/xml/en-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Bulgarian' (0.2M links, 8.7M tokens)" href="download.php?f=SETIMES/bg-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Greek' (0.2M links, 9.1M tokens)" href="download.php?f=SETIMES/el-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-English' (0.2M links, 8.7M tokens)" href="download.php?f=SETIMES/en-hr.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Croatian-Macedonian (sample file)" href="SETIMES/hr-mk_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Romanian (sample file)" href="SETIMES/hr-ro_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Albanian (sample file)" href="SETIMES/hr-sq_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Serbian (sample file)" href="SETIMES/hr-sr_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Turkish (sample file)" href="SETIMES/hr-tr_sample.html">view</a></td><th>hr</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=SETIMES/mk.tar.gz">mk</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Bulgarian' (0.2M links, 9.2M tokens)" href="download.php?f=SETIMES/xml/bg-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Greek' (0.2M links, 9.8M tokens)" href="download.php?f=SETIMES/xml/el-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-English' (0.2M links, 8.8M tokens)" href="download.php?f=SETIMES/xml/en-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Croatian' (0.2M links, 9.2M tokens)" href="download.php?f=SETIMES/xml/hr-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Bulgarian' (0.2M links, 9.2M tokens)" href="download.php?f=SETIMES/bg-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Greek' (0.2M links, 9.8M tokens)" href="download.php?f=SETIMES/el-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-English' (0.2M links, 8.8M tokens)" href="download.php?f=SETIMES/en-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Croatian' (0.2M links, 9.2M tokens)" href="download.php?f=SETIMES/hr-mk.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Macedonian-Romanian (sample file)" href="SETIMES/mk-ro_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Albanian (sample file)" href="SETIMES/mk-sq_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Serbian (sample file)" href="SETIMES/mk-sr_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Turkish (sample file)" href="SETIMES/mk-tr_sample.html">view</a></td><th>mk</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=SETIMES/ro.tar.gz">ro</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Bulgarian' (0.2M links, 9.9M tokens)" href="download.php?f=SETIMES/xml/bg-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Greek' (0.2M links, 10.6M tokens)" href="download.php?f=SETIMES/xml/el-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-English' (0.2M links, 9.9M tokens)" href="download.php?f=SETIMES/xml/en-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Croatian' (0.2M links, 10.2M tokens)" href="download.php?f=SETIMES/xml/hr-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Macedonian' (0.2M links, 9.5M tokens)" href="download.php?f=SETIMES/xml/mk-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Bulgarian' (0.2M links, 9.9M tokens)" href="download.php?f=SETIMES/bg-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Greek' (0.2M links, 10.6M tokens)" href="download.php?f=SETIMES/el-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-English' (0.2M links, 9.9M tokens)" href="download.php?f=SETIMES/en-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Croatian' (0.2M links, 10.2M tokens)" href="download.php?f=SETIMES/hr-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Macedonian' (0.2M links, 9.5M tokens)" href="download.php?f=SETIMES/mk-ro.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Romanian-Albanian (sample file)" href="SETIMES/ro-sq_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Serbian (sample file)" href="SETIMES/ro-sr_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Turkish (sample file)" href="SETIMES/ro-tr_sample.html">view</a></td><th>ro</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=SETIMES/sq.tar.gz">sq</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Bulgarian' (0.2M links, 9.9M tokens)" href="download.php?f=SETIMES/xml/bg-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Greek' (0.2M links, 10.6M tokens)" href="download.php?f=SETIMES/xml/el-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-English' (0.2M links, 9.9M tokens)" href="download.php?f=SETIMES/xml/en-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Croatian' (0.2M links, 10.2M tokens)" href="download.php?f=SETIMES/xml/hr-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Macedonian' (0.2M links, 9.5M tokens)" href="download.php?f=SETIMES/xml/mk-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Romanian' (0.2M links, 10.7M tokens)" href="download.php?f=SETIMES/xml/ro-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Bulgarian' (0.2M links, 9.9M tokens)" href="download.php?f=SETIMES/bg-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Greek' (0.2M links, 10.6M tokens)" href="download.php?f=SETIMES/el-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-English' (0.2M links, 9.9M tokens)" href="download.php?f=SETIMES/en-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Croatian' (0.2M links, 10.2M tokens)" href="download.php?f=SETIMES/hr-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Macedonian' (0.2M links, 9.5M tokens)" href="download.php?f=SETIMES/mk-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Romanian' (0.2M links, 10.7M tokens)" href="download.php?f=SETIMES/ro-sq.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Albanian-Serbian (sample file)" href="SETIMES/sq-sr_sample.html">view</a></td><td><a rel="nofollow" title="Albanian-Turkish (sample file)" href="SETIMES/sq-tr_sample.html">view</a></td><th>sq</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=SETIMES/sr.tar.gz">sr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Bulgarian' (0.2M links, 9.2M tokens)" href="download.php?f=SETIMES/xml/bg-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Greek' (0.2M links, 9.7M tokens)" href="download.php?f=SETIMES/xml/el-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-English' (0.2M links, 9.0M tokens)" href="download.php?f=SETIMES/xml/en-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Croatian' (0.2M links, 9.5M tokens)" href="download.php?f=SETIMES/xml/hr-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Macedonian' (0.2M links, 9.2M tokens)" href="download.php?f=SETIMES/xml/mk-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Romanian' (0.2M links, 9.7M tokens)" href="download.php?f=SETIMES/xml/ro-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Albanian' (0.2M links, 9.8M tokens)" href="download.php?f=SETIMES/xml/sq-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Bulgarian' (0.2M links, 9.2M tokens)" href="download.php?f=SETIMES/bg-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Greek' (0.2M links, 9.7M tokens)" href="download.php?f=SETIMES/el-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-English' (0.2M links, 9.0M tokens)" href="download.php?f=SETIMES/en-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Croatian' (0.2M links, 9.5M tokens)" href="download.php?f=SETIMES/hr-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Macedonian' (0.2M links, 9.2M tokens)" href="download.php?f=SETIMES/mk-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Romanian' (0.2M links, 9.7M tokens)" href="download.php?f=SETIMES/ro-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Albanian' (0.2M links, 9.8M tokens)" href="download.php?f=SETIMES/sq-sr.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Serbian-Turkish (sample file)" href="SETIMES/sr-tr_sample.html">view</a></td><th>sr</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=SETIMES/tr.tar.gz">tr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Bulgarian' (0.2M links, 9.0M tokens)" href="download.php?f=SETIMES/xml/bg-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Greek' (0.2M links, 9.6M tokens)" href="download.php?f=SETIMES/xml/el-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-English' (0.2M links, 8.7M tokens)" href="download.php?f=SETIMES/xml/en-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Croatian' (0.2M links, 9.0M tokens)" href="download.php?f=SETIMES/xml/hr-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Macedonian' (0.2M links, 8.7M tokens)" href="download.php?f=SETIMES/xml/mk-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Romanian' (0.2M links, 9.4M tokens)" href="download.php?f=SETIMES/xml/ro-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Albanian' (0.2M links, 9.4M tokens)" href="download.php?f=SETIMES/xml/sq-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Serbian' (0.2M links, 8.8M tokens)" href="download.php?f=SETIMES/xml/sr-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Bulgarian' (0.2M links, 9.0M tokens)" href="download.php?f=SETIMES/bg-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Greek' (0.2M links, 9.6M tokens)" href="download.php?f=SETIMES/el-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-English' (0.2M links, 8.7M tokens)" href="download.php?f=SETIMES/en-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Croatian' (0.2M links, 9.0M tokens)" href="download.php?f=SETIMES/hr-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Macedonian' (0.2M links, 8.7M tokens)" href="download.php?f=SETIMES/mk-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Romanian' (0.2M links, 9.4M tokens)" href="download.php?f=SETIMES/ro-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Albanian' (0.2M links, 9.4M tokens)" href="download.php?f=SETIMES/sq-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Serbian' (0.2M links, 8.8M tokens)" href="download.php?f=SETIMES/sr-tr.xml.gz">ces</a></td>
 <th></th>
 <th>tr</th></tr>
 <tr><th></th>

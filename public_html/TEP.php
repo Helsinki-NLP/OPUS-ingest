@@ -23,7 +23,7 @@
 <th></th>
 <td><a rel="nofollow" title="English-Persian (sample file)" href="TEP/en-fa_sample.html">view</a></td><th>en</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=TEP/fa.tar.gz">fa</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Persian-English' (0.6M links, 8.9M tokens)" href="download.php?f=TEP/xml/en-fa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Persian-English' (0.6M links, 8.9M tokens)" href="download.php?f=TEP/en-fa.xml.gz">ces</a></td>
 <th></th>
 <th>fa</th></tr>
 <tr><th></th>

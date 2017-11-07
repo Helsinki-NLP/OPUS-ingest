@@ -78,21 +78,21 @@
 <td></td><td><a rel="nofollow" title="Afrikaans-Hebrew (sample file)" href="OpenSubtitles2015/af-he_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Afrikaans-Croatian (sample file)" href="OpenSubtitles2015/af-hr_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-Hungarian (sample file)" href="OpenSubtitles2015/af-hu_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Afrikaans-Italian (sample file)" href="OpenSubtitles2015/af-it_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-Japanese (sample file)" href="OpenSubtitles2015/af-ja_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Afrikaans-Korean (sample file)" href="OpenSubtitles2015/af-ko_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Afrikaans-Latvian (sample file)" href="OpenSubtitles2015/af-lv_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-Macedonian (sample file)" href="OpenSubtitles2015/af-mk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Afrikaans-Malay (sample file)" href="OpenSubtitles2015/af-ms_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2015/af-nb_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-Dutch (sample file)" href="OpenSubtitles2015/af-nl_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-Polish (sample file)" href="OpenSubtitles2015/af-pl_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-Portuguese (sample file)" href="OpenSubtitles2015/af-pt_sample.html">view</a></td><th>af</th>
 <td><a rel="nofollow" title="Afrikaans-Portuguese (sample file)" href="OpenSubtitles2015/af-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-Romanian (sample file)" href="OpenSubtitles2015/af-ro_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-Russian (sample file)" href="OpenSubtitles2015/af-ru_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-Sinhala (sample file)" href="OpenSubtitles2015/af-si_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-Slovak (sample file)" href="OpenSubtitles2015/af-sk_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-Slovenian (sample file)" href="OpenSubtitles2015/af-sl_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-Albanian (sample file)" href="OpenSubtitles2015/af-sq_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-Serbian (sample file)" href="OpenSubtitles2015/af-sr_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-Swedish (sample file)" href="OpenSubtitles2015/af-sv_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Afrikaans-Thai (sample file)" href="OpenSubtitles2015/af-th_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-Turkish (sample file)" href="OpenSubtitles2015/af-tr_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Afrikaans-Vietnamese (sample file)" href="OpenSubtitles2015/af-vi_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-Chinese (sample file)" href="OpenSubtitles2015/af-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Afrikaans-Chinese (sample file)" href="OpenSubtitles2015/af-zh_tw_sample.html">view</a></td><th>af</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/ar.tar.gz">ar</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Arabic-Afrikaans' (10 aligned documents, 7.7k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-ar.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Arabic-Afrikaans' (10 aligned documents, 7.7k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/af-ar.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Arabic-Belarusian (sample file)" href="OpenSubtitles2015/ar-be_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Bulgarian (sample file)" href="OpenSubtitles2015/ar-bg_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Bengali (sample file)" href="OpenSubtitles2015/ar-bn_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Bosnian (sample file)" href="OpenSubtitles2015/ar-bs_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Catalan (sample file)" href="OpenSubtitles2015/ar-ca_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Czech (sample file)" href="OpenSubtitles2015/ar-cs_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Danish (sample file)" href="OpenSubtitles2015/ar-da_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-German (sample file)" href="OpenSubtitles2015/ar-de_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Greek (sample file)" href="OpenSubtitles2015/ar-el_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-English (sample file)" href="OpenSubtitles2015/ar-en_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Arabic-Spanish (sample file)" href="OpenSubtitles2015/ar-es_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Estonian (sample file)" href="OpenSubtitles2015/ar-et_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Basque (sample file)" href="OpenSubtitles2015/ar-eu_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Persian (sample file)" href="OpenSubtitles2015/ar-fa_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Finnish (sample file)" href="OpenSubtitles2015/ar-fi_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-French (sample file)" href="OpenSubtitles2015/ar-fr_sample.html">view</a></td><th>ar</th>
 <td></td><td><a rel="nofollow" title="Arabic-Hebrew (sample file)" href="OpenSubtitles2015/ar-he_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Hindi (sample file)" href="OpenSubtitles2015/ar-hi_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Croatian (sample file)" href="OpenSubtitles2015/ar-hr_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Hungarian (sample file)" href="OpenSubtitles2015/ar-hu_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Indonesian (sample file)" href="OpenSubtitles2015/ar-id_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Icelandic (sample file)" href="OpenSubtitles2015/ar-is_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Italian (sample file)" href="OpenSubtitles2015/ar-it_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Japanese (sample file)" href="OpenSubtitles2015/ar-ja_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Georgian (sample file)" href="OpenSubtitles2015/ar-ka_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Korean (sample file)" href="OpenSubtitles2015/ar-ko_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Lithuanian (sample file)" href="OpenSubtitles2015/ar-lt_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Latvian (sample file)" href="OpenSubtitles2015/ar-lv_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Macedonian (sample file)" href="OpenSubtitles2015/ar-mk_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Malayalam (sample file)" href="OpenSubtitles2015/ar-ml_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Malay (sample file)" href="OpenSubtitles2015/ar-ms_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2015/ar-nb_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Dutch (sample file)" href="OpenSubtitles2015/ar-nl_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Polish (sample file)" href="OpenSubtitles2015/ar-pl_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Portuguese (sample file)" href="OpenSubtitles2015/ar-pt_sample.html">view</a></td><th>ar</th>
 <td><a rel="nofollow" title="Arabic-Portuguese (sample file)" href="OpenSubtitles2015/ar-pt_br_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Romanian (sample file)" href="OpenSubtitles2015/ar-ro_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>ar</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/be.tar.gz">be</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Belarusian-Arabic' (1.1k links, 21.0k tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-be.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Belarusian-Arabic' (1.1k links, 21.0k tokens)" href="download.php?f=OpenSubtitles2015/ar-be.xml.gz">ces</a></td>
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Belarusian-English (sample file)" href="OpenSubtitles2015/be-en_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>be</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>be</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>be</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/bg.tar.gz">bg</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Bulgarian-Afrikaans' (10 aligned documents, 7.9k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-bg.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Bulgarian-Arabic' (24,584 aligned documents, 17.4M links, 256.3M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-bg.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Bulgarian-Afrikaans' (10 aligned documents, 7.9k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/af-bg.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Bulgarian-Arabic' (24,584 aligned documents, 17.4M links, 256.3M tokens)" href="download.php?f=OpenSubtitles2015/ar-bg.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Bulgarian-English (sample file)" href="OpenSubtitles2015/bg-en_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>bg</th>
@@ -100,7 +100,7 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>bg</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/bn.tar.gz">bn</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Bengali-Arabic' (7 aligned documents, 4.8k links, 92.1k tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-bn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Bengali-Arabic' (7 aligned documents, 4.8k links, 92.1k tokens)" href="download.php?f=OpenSubtitles2015/ar-bn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th></th>
@@ -108,8 +108,8 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>bn</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>bn</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/bs.tar.gz">bs</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Bosnian-Afrikaans' (1.1k links, 14.9k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-bs.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Bosnian-Arabic' (3,742 aligned documents, 2.8M links, 40.8M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-bs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Bosnian-Afrikaans' (1.1k links, 14.9k tokens)" href="download.php?f=OpenSubtitles2015/af-bs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Bosnian-Arabic' (3,742 aligned documents, 2.8M links, 40.8M tokens)" href="download.php?f=OpenSubtitles2015/ar-bs.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -118,8 +118,8 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>bs</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>bs</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/ca.tar.gz">ca</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Catalan-Afrikaans' (0.7k links, 14.9k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-ca.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Catalan-Arabic' (450 aligned documents, 0.3M links, 4.3M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-ca.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Catalan-Afrikaans' (0.7k links, 14.9k tokens)" href="download.php?f=OpenSubtitles2015/af-ca.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Catalan-Arabic' (450 aligned documents, 0.3M links, 4.3M tokens)" href="download.php?f=OpenSubtitles2015/ar-ca.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -129,8 +129,8 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>ca</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>ca</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/cs.tar.gz">cs</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-Afrikaans' (16 aligned documents, 13.7k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-cs.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-Arabic' (27,865 aligned documents, 19.2M links, 282.6M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-Afrikaans' (16 aligned documents, 13.7k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/af-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-Arabic' (27,865 aligned documents, 19.2M links, 282.6M tokens)" href="download.php?f=OpenSubtitles2015/ar-cs.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -141,8 +141,8 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>cs</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>cs</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/da.tar.gz">da</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Danish-Afrikaans' (13 aligned documents, 9.9k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-da.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Danish-Arabic' (11,325 aligned documents, 8.8M links, 132.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-da.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Danish-Afrikaans' (13 aligned documents, 9.9k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/af-da.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Danish-Arabic' (11,325 aligned documents, 8.8M links, 132.1M tokens)" href="download.php?f=OpenSubtitles2015/ar-da.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -154,8 +154,8 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>da</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>da</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/de.tar.gz">de</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'German-Afrikaans' (10 aligned documents, 9.1k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Arabic' (8,940 aligned documents, 6.7M links, 103.5M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Afrikaans' (10 aligned documents, 9.1k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/af-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Arabic' (8,940 aligned documents, 6.7M links, 103.5M tokens)" href="download.php?f=OpenSubtitles2015/ar-de.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -168,8 +168,8 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>de</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>de</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/el.tar.gz">el</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Afrikaans' (15 aligned documents, 12.7k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-el.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Arabic' (28,493 aligned documents, 19.2M links, 294.7M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Afrikaans' (15 aligned documents, 12.7k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/af-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Arabic' (28,493 aligned documents, 19.2M links, 294.7M tokens)" href="download.php?f=OpenSubtitles2015/ar-el.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -183,17 +183,17 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>el</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>el</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/en.tar.gz">en</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'English-Afrikaans' (22 aligned documents, 19.2k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (36,766 aligned documents, 26.4M links, 423.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Belarusian' (1.2k links, 24.4k tokens)" href="download.php?f=OpenSubtitles2015/xml/be-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Bulgarian' (52,323 aligned documents, 44.7M links, 668.5M tokens)" href="download.php?f=OpenSubtitles2015/xml/bg-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Bengali' (1.8k links, 25.4k tokens)" href="download.php?f=OpenSubtitles2015/xml/bn-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Bosnian' (7,170 aligned documents, 6.3M links, 92.0M tokens)" href="download.php?f=OpenSubtitles2015/xml/bs-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Catalan' (558 aligned documents, 0.4M links, 6.3M tokens)" href="download.php?f=OpenSubtitles2015/xml/ca-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Czech' (65,232 aligned documents, 55.4M links, 809.0M tokens)" href="download.php?f=OpenSubtitles2015/xml/cs-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Danish' (19,010 aligned documents, 17.8M links, 267.9M tokens)" href="download.php?f=OpenSubtitles2015/xml/da-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-German' (18,642 aligned documents, 17.3M links, 260.6M tokens)" href="download.php?f=OpenSubtitles2015/xml/de-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (64,621 aligned documents, 53.4M links, 836.7M tokens)" href="download.php?f=OpenSubtitles2015/xml/el-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Afrikaans' (22 aligned documents, 19.2k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2015/af-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (36,766 aligned documents, 26.4M links, 423.2M tokens)" href="download.php?f=OpenSubtitles2015/ar-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Belarusian' (1.2k links, 24.4k tokens)" href="download.php?f=OpenSubtitles2015/be-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Bulgarian' (52,323 aligned documents, 44.7M links, 668.5M tokens)" href="download.php?f=OpenSubtitles2015/bg-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Bengali' (1.8k links, 25.4k tokens)" href="download.php?f=OpenSubtitles2015/bn-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Bosnian' (7,170 aligned documents, 6.3M links, 92.0M tokens)" href="download.php?f=OpenSubtitles2015/bs-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Catalan' (558 aligned documents, 0.4M links, 6.3M tokens)" href="download.php?f=OpenSubtitles2015/ca-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Czech' (65,232 aligned documents, 55.4M links, 809.0M tokens)" href="download.php?f=OpenSubtitles2015/cs-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Danish' (19,010 aligned documents, 17.8M links, 267.9M tokens)" href="download.php?f=OpenSubtitles2015/da-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-German' (18,642 aligned documents, 17.3M links, 260.6M tokens)" href="download.php?f=OpenSubtitles2015/de-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (64,621 aligned documents, 53.4M links, 836.7M tokens)" href="download.php?f=OpenSubtitles2015/el-en.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="English-Esperanto (sample file)" href="OpenSubtitles2015/en-eo_sample.html">view</a></td><td><a rel="nofollow" title="English-Spanish (sample file)" href="OpenSubtitles2015/en-es_sample.html">view</a></td><td><a rel="nofollow" title="English-Estonian (sample file)" href="OpenSubtitles2015/en-et_sample.html">view</a></td><td><a rel="nofollow" title="English-Basque (sample file)" href="OpenSubtitles2015/en-eu_sample.html">view</a></td><td><a rel="nofollow" title="English-Persian (sample file)" href="OpenSubtitles2015/en-fa_sample.html">view</a></td><td><a rel="nofollow" title="English-Finnish (sample file)" href="OpenSubtitles2015/en-fi_sample.html">view</a></td><td><a rel="nofollow" title="English-French (sample file)" href="OpenSubtitles2015/en-fr_sample.html">view</a></td><th>en</th>
 <td><a rel="nofollow" title="English-Galician (sample file)" href="OpenSubtitles2015/en-gl_sample.html">view</a></td><td><a rel="nofollow" title="English-Hebrew (sample file)" href="OpenSubtitles2015/en-he_sample.html">view</a></td><td><a rel="nofollow" title="English-Hindi (sample file)" href="OpenSubtitles2015/en-hi_sample.html">view</a></td><td><a rel="nofollow" title="English-Croatian (sample file)" href="OpenSubtitles2015/en-hr_sample.html">view</a></td><td><a rel="nofollow" title="English-Hungarian (sample file)" href="OpenSubtitles2015/en-hu_sample.html">view</a></td><td><a rel="nofollow" title="English-Indonesian (sample file)" href="OpenSubtitles2015/en-id_sample.html">view</a></td><td><a rel="nofollow" title="English-Icelandic (sample file)" href="OpenSubtitles2015/en-is_sample.html">view</a></td><td><a rel="nofollow" title="English-Italian (sample file)" href="OpenSubtitles2015/en-it_sample.html">view</a></td><td><a rel="nofollow" title="English-Japanese (sample file)" href="OpenSubtitles2015/en-ja_sample.html">view</a></td><td></td><td><a rel="nofollow" title="English-Korean (sample file)" href="OpenSubtitles2015/en-ko_sample.html">view</a></td><td><a rel="nofollow" title="English-Lithuanian (sample file)" href="OpenSubtitles2015/en-lt_sample.html">view</a></td><td><a rel="nofollow" title="English-Latvian (sample file)" href="OpenSubtitles2015/en-lv_sample.html">view</a></td><td><a rel="nofollow" title="English-Macedonian (sample file)" href="OpenSubtitles2015/en-mk_sample.html">view</a></td><td><a rel="nofollow" title="English-Malayalam (sample file)" href="OpenSubtitles2015/en-ml_sample.html">view</a></td><td><a rel="nofollow" title="English-Malay (sample file)" href="OpenSubtitles2015/en-ms_sample.html">view</a></td><td><a rel="nofollow" title="English-BokmÃ¥l, Norwegian (sample file)" href="OpenSubtitles2015/en-nb_sample.html">view</a></td><td><a rel="nofollow" title="English-Dutch (sample file)" href="OpenSubtitles2015/en-nl_sample.html">view</a></td><td><a rel="nofollow" title="English-Polish (sample file)" href="OpenSubtitles2015/en-pl_sample.html">view</a></td><td><a rel="nofollow" title="English-Portuguese (sample file)" href="OpenSubtitles2015/en-pt_sample.html">view</a></td><th>en</th>
@@ -210,14 +210,14 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-English' (0.3k links, 5.0k tokens)" href="download.php?f=OpenSubtitles2015/xml/en-eo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-English' (0.3k links, 5.0k tokens)" href="download.php?f=OpenSubtitles2015/en-eo.xml.gz">ces</a></td>
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><th>eo</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>eo</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>eo</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/es.tar.gz">es</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Afrikaans' (19 aligned documents, 16.4k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Arabic' (32,941 aligned documents, 22.8M links, 357.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Afrikaans' (19 aligned documents, 16.4k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2015/af-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Arabic' (32,941 aligned documents, 22.8M links, 357.1M tokens)" href="download.php?f=OpenSubtitles2015/ar-es.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -227,15 +227,15 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (105,986 aligned documents, 93.2M links, 1.5G tokens)" href="download.php?f=OpenSubtitles2015/xml/en-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (105,986 aligned documents, 93.2M links, 1.5G tokens)" href="download.php?f=OpenSubtitles2015/en-es.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><th>es</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>es</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>es</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/et.tar.gz">et</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Afrikaans' (2 aligned documents, 2.3k links, 31.8k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Arabic' (10,202 aligned documents, 7.7M links, 110.8M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Afrikaans' (2 aligned documents, 2.3k links, 31.8k tokens)" href="download.php?f=OpenSubtitles2015/af-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Arabic' (10,202 aligned documents, 7.7M links, 110.8M tokens)" href="download.php?f=OpenSubtitles2015/ar-et.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -245,7 +245,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-English' (15,686 aligned documents, 14.3M links, 201.4M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-English' (15,686 aligned documents, 14.3M links, 201.4M tokens)" href="download.php?f=OpenSubtitles2015/en-et.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th></th>
@@ -254,7 +254,7 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>et</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/eu.tar.gz">eu</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Basque-Arabic' (112 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-eu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Basque-Arabic' (112 aligned documents, 0.1M links, 1.5M tokens)" href="download.php?f=OpenSubtitles2015/ar-eu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -264,7 +264,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Basque-English' (166 aligned documents, 0.2M links, 2.5M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-eu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Basque-English' (166 aligned documents, 0.2M links, 2.5M tokens)" href="download.php?f=OpenSubtitles2015/en-eu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -274,7 +274,7 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>eu</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/fa.tar.gz">fa</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Persian-Arabic' (16 aligned documents, 7.4k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-fa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Persian-Arabic' (16 aligned documents, 7.4k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/ar-fa.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -284,7 +284,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Persian-English' (53 aligned documents, 15.3k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-fa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Persian-English' (53 aligned documents, 15.3k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2015/en-fa.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -294,8 +294,8 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>fa</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>fa</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/fi.tar.gz">fi</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Afrikaans' (3 aligned documents, 3.2k links, 37.7k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Arabic' (15,885 aligned documents, 11.7M links, 153.5M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Afrikaans' (3 aligned documents, 3.2k links, 37.7k tokens)" href="download.php?f=OpenSubtitles2015/af-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Arabic' (15,885 aligned documents, 11.7M links, 153.5M tokens)" href="download.php?f=OpenSubtitles2015/ar-fi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -305,7 +305,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-English' (32,253 aligned documents, 28.4M links, 391.8M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-English' (32,253 aligned documents, 28.4M links, 391.8M tokens)" href="download.php?f=OpenSubtitles2015/en-fi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -316,8 +316,8 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>fi</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>fi</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/fr.tar.gz">fr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'French-Afrikaans' (17 aligned documents, 13.4k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Arabic' (25,493 aligned documents, 17.5M links, 277.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Afrikaans' (17 aligned documents, 13.4k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/af-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Arabic' (25,493 aligned documents, 17.5M links, 277.2M tokens)" href="download.php?f=OpenSubtitles2015/ar-fr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -327,7 +327,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English' (65,989 aligned documents, 56.3M links, 881.0M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English' (65,989 aligned documents, 56.3M links, 881.0M tokens)" href="download.php?f=OpenSubtitles2015/en-fr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -411,7 +411,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Galician-English' (0.1k links, 1.8k tokens)" href="download.php?f=OpenSubtitles2015/xml/en-gl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Galician-English' (0.1k links, 1.8k tokens)" href="download.php?f=OpenSubtitles2015/en-gl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -424,8 +424,8 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>gl</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>gl</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/he.tar.gz">he</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Afrikaans' (11 aligned documents, 8.9k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-he.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Arabic' (24,127 aligned documents, 17.0M links, 241.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Afrikaans' (11 aligned documents, 8.9k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/af-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Arabic' (24,127 aligned documents, 17.0M links, 241.1M tokens)" href="download.php?f=OpenSubtitles2015/ar-he.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -435,7 +435,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-English' (45,255 aligned documents, 33.0M links, 550.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-English' (45,255 aligned documents, 33.0M links, 550.2M tokens)" href="download.php?f=OpenSubtitles2015/en-he.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -450,7 +450,7 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>he</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/hi.tar.gz">hi</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-Arabic' (6 aligned documents, 3.1k links, 66.1k tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-Arabic' (6 aligned documents, 3.1k links, 66.1k tokens)" href="download.php?f=OpenSubtitles2015/ar-hi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -460,7 +460,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-English' (13 aligned documents, 5.8k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-English' (13 aligned documents, 5.8k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/en-hi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -475,8 +475,8 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>hi</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>hi</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/hr.tar.gz">hr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Afrikaans' (12 aligned documents, 9.4k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Arabic' (24,465 aligned documents, 16.9M links, 246.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Afrikaans' (12 aligned documents, 9.4k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/af-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Arabic' (24,465 aligned documents, 16.9M links, 246.1M tokens)" href="download.php?f=OpenSubtitles2015/ar-hr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -486,7 +486,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-English' (60,123 aligned documents, 51.6M links, 756.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-English' (60,123 aligned documents, 51.6M links, 756.1M tokens)" href="download.php?f=OpenSubtitles2015/en-hr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -502,8 +502,8 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>hr</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>hr</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/hu.tar.gz">hu</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Afrikaans' (15 aligned documents, 13.8k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Arabic' (26,793 aligned documents, 18.4M links, 262.8M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Afrikaans' (15 aligned documents, 13.8k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/af-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Arabic' (26,793 aligned documents, 18.4M links, 262.8M tokens)" href="download.php?f=OpenSubtitles2015/ar-hu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -513,7 +513,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (63,109 aligned documents, 52.3M links, 748.8M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (63,109 aligned documents, 52.3M links, 748.8M tokens)" href="download.php?f=OpenSubtitles2015/en-hu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -531,7 +531,7 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>hu</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/id.tar.gz">id</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Arabic' (58 aligned documents, 48.2k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Arabic' (58 aligned documents, 48.2k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2015/ar-id.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -541,7 +541,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-English' (83 aligned documents, 72.4k links, 1.3M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-English' (83 aligned documents, 72.4k links, 1.3M tokens)" href="download.php?f=OpenSubtitles2015/en-id.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -560,7 +560,7 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>id</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/is.tar.gz">is</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Arabic' (817 aligned documents, 0.9M links, 13.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Arabic' (817 aligned documents, 0.9M links, 13.1M tokens)" href="download.php?f=OpenSubtitles2015/ar-is.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -570,7 +570,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-English' (1,244 aligned documents, 1.6M links, 23.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-English' (1,244 aligned documents, 1.6M links, 23.2M tokens)" href="download.php?f=OpenSubtitles2015/en-is.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -589,8 +589,8 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>is</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>is</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/it.tar.gz">it</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Afrikaans' (15 aligned documents, 10.9k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Arabic' (20,955 aligned documents, 14.0M links, 219.4M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Afrikaans' (15 aligned documents, 10.9k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/af-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Arabic' (20,955 aligned documents, 14.0M links, 219.4M tokens)" href="download.php?f=OpenSubtitles2015/ar-it.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -600,7 +600,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (54,322 aligned documents, 41.8M links, 658.8M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (54,322 aligned documents, 41.8M links, 658.8M tokens)" href="download.php?f=OpenSubtitles2015/en-it.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -620,8 +620,8 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>it</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>it</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/ja.tar.gz">ja</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Afrikaans' (1.0k links, 7.8k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Arabic' (1,552 aligned documents, 1.1M links, 8.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Afrikaans' (1.0k links, 7.8k tokens)" href="download.php?f=OpenSubtitles2015/af-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Arabic' (1,552 aligned documents, 1.1M links, 8.2M tokens)" href="download.php?f=OpenSubtitles2015/ar-ja.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -631,7 +631,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-English' (1,848 aligned documents, 1.4M links, 12.7M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-English' (1,848 aligned documents, 1.4M links, 12.7M tokens)" href="download.php?f=OpenSubtitles2015/en-ja.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -653,7 +653,7 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>ja</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/ka.tar.gz">ka</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Georgian-Arabic' (0.6k links, 12.8k tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-ka.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Georgian-Arabic' (0.6k links, 12.8k tokens)" href="download.php?f=OpenSubtitles2015/ar-ka.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -685,8 +685,8 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>ka</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>ka</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/ko.tar.gz">ko</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Afrikaans' (0.6k links, 12.9k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-ko.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Arabic' (167 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Afrikaans' (0.6k links, 12.9k tokens)" href="download.php?f=OpenSubtitles2015/af-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Arabic' (167 aligned documents, 0.1M links, 1.8M tokens)" href="download.php?f=OpenSubtitles2015/ar-ko.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -696,14 +696,14 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-English' (212 aligned documents, 0.2M links, 2.7M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-English' (212 aligned documents, 0.2M links, 2.7M tokens)" href="download.php?f=OpenSubtitles2015/en-ko.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-French' (235 aligned documents, 0.2M links, 2.8M tokens)" href="download.php?f=OpenSubtitles2015/xml/fr-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-French' (235 aligned documents, 0.2M links, 2.8M tokens)" href="download.php?f=OpenSubtitles2015/fr-ko.xml.gz">ces</a></td>
 <th>ko</th>
 <td></td>
 <td></td>
@@ -720,7 +720,7 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>ko</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/lt.tar.gz">lt</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Arabic' (883 aligned documents, 0.9M links, 12.3M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Arabic' (883 aligned documents, 0.9M links, 12.3M tokens)" href="download.php?f=OpenSubtitles2015/ar-lt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -730,7 +730,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-English' (1,078 aligned documents, 1.3M links, 17.4M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-English' (1,078 aligned documents, 1.3M links, 17.4M tokens)" href="download.php?f=OpenSubtitles2015/en-lt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -754,8 +754,8 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>lt</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>lt</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/lv.tar.gz">lv</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Afrikaans' (1.1k links, 14.5k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Arabic' (335 aligned documents, 0.3M links, 4.8M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Afrikaans' (1.1k links, 14.5k tokens)" href="download.php?f=OpenSubtitles2015/af-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Arabic' (335 aligned documents, 0.3M links, 4.8M tokens)" href="download.php?f=OpenSubtitles2015/ar-lv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -765,7 +765,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-English' (398 aligned documents, 0.5M links, 6.5M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-English' (398 aligned documents, 0.5M links, 6.5M tokens)" href="download.php?f=OpenSubtitles2015/en-lv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -790,8 +790,8 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>lv</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>lv</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/mk.tar.gz">mk</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Afrikaans' (3 aligned documents, 3.1k links, 48.5k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Arabic' (2,878 aligned documents, 2.3M links, 32.5M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Afrikaans' (3 aligned documents, 3.1k links, 48.5k tokens)" href="download.php?f=OpenSubtitles2015/af-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Arabic' (2,878 aligned documents, 2.3M links, 32.5M tokens)" href="download.php?f=OpenSubtitles2015/ar-mk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -801,7 +801,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-English' (3,689 aligned documents, 3.6M links, 51.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-English' (3,689 aligned documents, 3.6M links, 51.1M tokens)" href="download.php?f=OpenSubtitles2015/en-mk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -828,7 +828,7 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>mk</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/ml.tar.gz">ml</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Arabic' (18 aligned documents, 7.5k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Arabic' (18 aligned documents, 7.5k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/ar-ml.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -838,7 +838,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-English' (31 aligned documents, 10.6k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-English' (31 aligned documents, 10.6k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2015/en-ml.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -865,8 +865,8 @@
 <td></td><td></td><td></td><td></td><td></td><th>ml</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>ml</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/ms.tar.gz">ms</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Afrikaans' (2 aligned documents, 1.8k links, 29.4k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-ms.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-Arabic' (5,031 aligned documents, 4.4M links, 63.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Afrikaans' (2 aligned documents, 1.8k links, 29.4k tokens)" href="download.php?f=OpenSubtitles2015/af-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-Arabic' (5,031 aligned documents, 4.4M links, 63.2M tokens)" href="download.php?f=OpenSubtitles2015/ar-ms.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -876,7 +876,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malay-English' (7,593 aligned documents, 8.1M links, 114.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-ms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malay-English' (7,593 aligned documents, 8.1M links, 114.2M tokens)" href="download.php?f=OpenSubtitles2015/en-ms.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -904,8 +904,8 @@
 <td></td><td></td><td></td><td></td><th>ms</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>ms</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/nb.tar.gz">nb</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Afrikaans' (1.2k links, 18.3k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Arabic' (2,781 aligned documents, 2.4M links, 35.4M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Afrikaans' (1.2k links, 18.3k tokens)" href="download.php?f=OpenSubtitles2015/af-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Arabic' (2,781 aligned documents, 2.4M links, 35.4M tokens)" href="download.php?f=OpenSubtitles2015/ar-nb.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -915,7 +915,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-English' (5,290 aligned documents, 5.2M links, 77.3M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-English' (5,290 aligned documents, 5.2M links, 77.3M tokens)" href="download.php?f=OpenSubtitles2015/en-nb.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -944,8 +944,8 @@
 <td></td><td></td><td></td><th>nb</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>nb</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/nl.tar.gz">nl</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Afrikaans' (17 aligned documents, 14.0k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Arabic' (26,793 aligned documents, 18.3M links, 283.6M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Afrikaans' (17 aligned documents, 14.0k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/af-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Arabic' (26,793 aligned documents, 18.3M links, 283.6M tokens)" href="download.php?f=OpenSubtitles2015/ar-nl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -955,7 +955,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (64,481 aligned documents, 55.1M links, 855.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (64,481 aligned documents, 55.1M links, 855.2M tokens)" href="download.php?f=OpenSubtitles2015/en-nl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -985,8 +985,8 @@
 <td></td><td></td><th>nl</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>nl</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/pl.tar.gz">pl</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Afrikaans' (6 aligned documents, 5.0k links, 75.3k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Arabic' (17,054 aligned documents, 12.7M links, 179.4M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Afrikaans' (6 aligned documents, 5.0k links, 75.3k tokens)" href="download.php?f=OpenSubtitles2015/af-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Arabic' (17,054 aligned documents, 12.7M links, 179.4M tokens)" href="download.php?f=OpenSubtitles2015/ar-pl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -996,7 +996,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-English' (42,175 aligned documents, 38.7M links, 552.6M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-English' (42,175 aligned documents, 38.7M links, 552.6M tokens)" href="download.php?f=OpenSubtitles2015/en-pl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1027,8 +1027,8 @@
 <td></td><th>pl</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>pl</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/pt.tar.gz">pt</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Afrikaans' (20 aligned documents, 17.1k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Arabic' (25,516 aligned documents, 18.1M links, 277.7M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Afrikaans' (20 aligned documents, 17.1k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2015/af-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Arabic' (25,516 aligned documents, 18.1M links, 277.7M tokens)" href="download.php?f=OpenSubtitles2015/ar-pt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1038,7 +1038,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (63,981 aligned documents, 57.2M links, 862.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (63,981 aligned documents, 57.2M links, 862.2M tokens)" href="download.php?f=OpenSubtitles2015/en-pt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1131,8 +1131,8 @@
 <th>zh_tw</th>
 <th></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/pt_br.tar.gz">pt_br</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Afrikaans' (21 aligned documents, 17.9k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-pt_br.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Arabic' (33,474 aligned documents, 23.3M links, 351.5M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Afrikaans' (21 aligned documents, 17.9k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2015/af-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Arabic' (33,474 aligned documents, 23.3M links, 351.5M tokens)" href="download.php?f=OpenSubtitles2015/ar-pt_br.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1142,7 +1142,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (111,316 aligned documents, 97.7M links, 1.5G tokens)" href="download.php?f=OpenSubtitles2015/xml/en-pt_br.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (111,316 aligned documents, 97.7M links, 1.5G tokens)" href="download.php?f=OpenSubtitles2015/en-pt_br.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1175,8 +1175,8 @@
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>pt_br</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/ro.tar.gz">ro</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Afrikaans' (19 aligned documents, 16.7k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Arabic' (30,630 aligned documents, 21.7M links, 335.7M tokens)" href="download.php?f=OpenSubtitles2015/xml/ar-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Afrikaans' (19 aligned documents, 16.7k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2015/af-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Arabic' (30,630 aligned documents, 21.7M links, 335.7M tokens)" href="download.php?f=OpenSubtitles2015/ar-ro.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1186,7 +1186,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-English' (81,588 aligned documents, 74.8M links, 1.1G tokens)" href="download.php?f=OpenSubtitles2015/xml/en-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-English' (81,588 aligned documents, 74.8M links, 1.1G tokens)" href="download.php?f=OpenSubtitles2015/en-ro.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1220,7 +1220,7 @@
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>ro</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/ru.tar.gz">ru</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Afrikaans' (11 aligned documents, 9.4k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Afrikaans' (11 aligned documents, 9.4k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/af-ru.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1231,7 +1231,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (26,409 aligned documents, 21.3M links, 319.4M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (26,409 aligned documents, 21.3M links, 319.4M tokens)" href="download.php?f=OpenSubtitles2015/en-ru.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1266,7 +1266,7 @@
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>ru</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/si.tar.gz">si</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Afrikaans' (0.9k links, 15.3k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-Afrikaans' (0.9k links, 15.3k tokens)" href="download.php?f=OpenSubtitles2015/af-si.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1277,7 +1277,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sinhala-English' (369 aligned documents, 0.3M links, 5.3M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-si.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sinhala-English' (369 aligned documents, 0.3M links, 5.3M tokens)" href="download.php?f=OpenSubtitles2015/en-si.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1313,7 +1313,7 @@
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>si</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/sk.tar.gz">sk</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Afrikaans' (8 aligned documents, 5.7k links, 92.6k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Afrikaans' (8 aligned documents, 5.7k links, 92.6k tokens)" href="download.php?f=OpenSubtitles2015/af-sk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1324,7 +1324,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-English' (9,340 aligned documents, 8.1M links, 117.9M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-English' (9,340 aligned documents, 8.1M links, 117.9M tokens)" href="download.php?f=OpenSubtitles2015/en-sk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1361,7 +1361,7 @@
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>sk</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/sl.tar.gz">sl</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Afrikaans' (11 aligned documents, 8.5k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Afrikaans' (11 aligned documents, 8.5k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/af-sl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1372,7 +1372,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-English' (31,094 aligned documents, 28.3M links, 407.5M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-English' (31,094 aligned documents, 28.3M links, 407.5M tokens)" href="download.php?f=OpenSubtitles2015/en-sl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1410,7 +1410,7 @@
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>sl</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/sq.tar.gz">sq</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Afrikaans' (1.1k links, 15.9k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Afrikaans' (1.1k links, 15.9k tokens)" href="download.php?f=OpenSubtitles2015/af-sq.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1421,7 +1421,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-English' (2,589 aligned documents, 3.0M links, 43.3M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-English' (2,589 aligned documents, 3.0M links, 43.3M tokens)" href="download.php?f=OpenSubtitles2015/en-sq.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1460,7 +1460,7 @@
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>sq</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/sr.tar.gz">sr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Afrikaans' (4 aligned documents, 4.4k links, 60.6k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Afrikaans' (4 aligned documents, 4.4k links, 60.6k tokens)" href="download.php?f=OpenSubtitles2015/af-sr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1471,7 +1471,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-English' (48,853 aligned documents, 44.1M links, 648.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-English' (48,853 aligned documents, 44.1M links, 648.1M tokens)" href="download.php?f=OpenSubtitles2015/en-sr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1511,7 +1511,7 @@
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>sr</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/sv.tar.gz">sv</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Afrikaans' (3 aligned documents, 3.1k links, 41.7k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Afrikaans' (3 aligned documents, 3.1k links, 41.7k tokens)" href="download.php?f=OpenSubtitles2015/af-sv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1522,7 +1522,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (21,658 aligned documents, 19.1M links, 289.9M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (21,658 aligned documents, 19.1M links, 289.9M tokens)" href="download.php?f=OpenSubtitles2015/en-sv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1574,7 +1574,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tamil-English' (3 aligned documents, 1.8k links, 31.3k tokens)" href="download.php?f=OpenSubtitles2015/xml/en-ta.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tamil-English' (3 aligned documents, 1.8k links, 31.3k tokens)" href="download.php?f=OpenSubtitles2015/en-ta.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1627,7 +1627,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-English' (5 aligned documents, 3.3k links, 58.7k tokens)" href="download.php?f=OpenSubtitles2015/xml/en-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-English' (5 aligned documents, 3.3k links, 58.7k tokens)" href="download.php?f=OpenSubtitles2015/en-te.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1670,7 +1670,7 @@
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>te</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/th.tar.gz">th</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Afrikaans' (1.0k links, 10.1k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Afrikaans' (1.0k links, 10.1k tokens)" href="download.php?f=OpenSubtitles2015/af-th.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1681,7 +1681,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-English' (2,316 aligned documents, 1.6M links, 18.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-English' (2,316 aligned documents, 1.6M links, 18.1M tokens)" href="download.php?f=OpenSubtitles2015/en-th.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1725,7 +1725,7 @@
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><th>th</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/tr.tar.gz">tr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Afrikaans' (12 aligned documents, 10.0k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/xml/af-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Afrikaans' (12 aligned documents, 10.0k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2015/af-tr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1736,7 +1736,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-English' (78,215 aligned documents, 68.6M links, 942.9M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-English' (78,215 aligned documents, 68.6M links, 942.9M tokens)" href="download.php?f=OpenSubtitles2015/en-tr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1792,7 +1792,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-English' (331 aligned documents, 0.3M links, 4.3M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-English' (331 aligned documents, 0.3M links, 4.3M tokens)" href="download.php?f=OpenSubtitles2015/en-uk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1849,7 +1849,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-English' (9 aligned documents, 10.4k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-English' (9 aligned documents, 10.4k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2015/en-ur.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1896,7 +1896,7 @@
 <th></th>
 <td></td><td></td><td></td><th>ur</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/vi.tar.gz">vi</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Afrikaans' (2 aligned documents, 1.8k links, 35.3k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Afrikaans' (2 aligned documents, 1.8k links, 35.3k tokens)" href="download.php?f=OpenSubtitles2015/af-vi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1907,7 +1907,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-English' (2,306 aligned documents, 2.5M links, 39.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-English' (2,306 aligned documents, 2.5M links, 39.2M tokens)" href="download.php?f=OpenSubtitles2015/en-vi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1955,7 +1955,7 @@
 <th></th>
 <td></td><td></td><th>vi</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/zh_cn.tar.gz">zh_cn</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Afrikaans' (4 aligned documents, 4.1k links, 72.3k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Afrikaans' (4 aligned documents, 4.1k links, 72.3k tokens)" href="download.php?f=OpenSubtitles2015/af-zh_cn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1966,7 +1966,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (9,483 aligned documents, 9.2M links, 182.0M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-zh_cn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (9,483 aligned documents, 9.2M links, 182.0M tokens)" href="download.php?f=OpenSubtitles2015/en-zh_cn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2015,7 +2015,7 @@
 <th></th>
 <td></td><th>zh_cn</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2015/zh_tw.tar.gz">zh_tw</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Afrikaans' (2 aligned documents, 2.3k links, 40.4k tokens)" href="download.php?f=OpenSubtitles2015/xml/af-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Afrikaans' (2 aligned documents, 2.3k links, 40.4k tokens)" href="download.php?f=OpenSubtitles2015/af-zh_tw.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2026,7 +2026,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (4,589 aligned documents, 4.6M links, 87.2M tokens)" href="download.php?f=OpenSubtitles2015/xml/en-zh_tw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (4,589 aligned documents, 4.6M links, 87.2M tokens)" href="download.php?f=OpenSubtitles2015/en-zh_tw.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>

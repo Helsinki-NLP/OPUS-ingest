@@ -30,102 +30,102 @@
 <th></th>
 <td><a rel="nofollow" title="Arabic-Czech (sample file)" href="News-Commentary/ar-cs_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-German (sample file)" href="News-Commentary/ar-de_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-English (sample file)" href="News-Commentary/ar-en_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Spanish (sample file)" href="News-Commentary/ar-es_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-French (sample file)" href="News-Commentary/ar-fr_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Italian (sample file)" href="News-Commentary/ar-it_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Japanese (sample file)" href="News-Commentary/ar-ja_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Dutch (sample file)" href="News-Commentary/ar-nl_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Portuguese (sample file)" href="News-Commentary/ar-pt_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Russian (sample file)" href="News-Commentary/ar-ru_sample.html">view</a></td><td><a rel="nofollow" title="Arabic-Chinese (sample file)" href="News-Commentary/ar-zh_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=News-Commentary/ar.raw.tar.gz">ar</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=News-Commentary/cs.tar.gz">cs</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-Arabic' (0.1M links, 5.6M tokens)" href="download.php?f=News-Commentary/xml/ar-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-Arabic' (0.1M links, 5.6M tokens)" href="download.php?f=News-Commentary/ar-cs.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Czech-German (sample file)" href="News-Commentary/cs-de_sample.html">view</a></td><td><a rel="nofollow" title="Czech-English (sample file)" href="News-Commentary/cs-en_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Spanish (sample file)" href="News-Commentary/cs-es_sample.html">view</a></td><td><a rel="nofollow" title="Czech-French (sample file)" href="News-Commentary/cs-fr_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Italian (sample file)" href="News-Commentary/cs-it_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Japanese (sample file)" href="News-Commentary/cs-ja_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Dutch (sample file)" href="News-Commentary/cs-nl_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Portuguese (sample file)" href="News-Commentary/cs-pt_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Russian (sample file)" href="News-Commentary/cs-ru_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Chinese (sample file)" href="News-Commentary/cs-zh_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=News-Commentary/cs.raw.tar.gz">cs</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=News-Commentary/de.tar.gz">de</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'German-Arabic' (0.1M links, 7.8M tokens)" href="download.php?f=News-Commentary/xml/ar-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Czech' (0.1M links, 6.4M tokens)" href="download.php?f=News-Commentary/xml/cs-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Arabic' (0.1M links, 7.8M tokens)" href="download.php?f=News-Commentary/ar-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Czech' (0.1M links, 6.4M tokens)" href="download.php?f=News-Commentary/cs-de.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="German-English (sample file)" href="News-Commentary/de-en_sample.html">view</a></td><td><a rel="nofollow" title="German-Spanish (sample file)" href="News-Commentary/de-es_sample.html">view</a></td><td><a rel="nofollow" title="German-French (sample file)" href="News-Commentary/de-fr_sample.html">view</a></td><td><a rel="nofollow" title="German-Italian (sample file)" href="News-Commentary/de-it_sample.html">view</a></td><td><a rel="nofollow" title="German-Japanese (sample file)" href="News-Commentary/de-ja_sample.html">view</a></td><td><a rel="nofollow" title="German-Dutch (sample file)" href="News-Commentary/de-nl_sample.html">view</a></td><td><a rel="nofollow" title="German-Portuguese (sample file)" href="News-Commentary/de-pt_sample.html">view</a></td><td><a rel="nofollow" title="German-Russian (sample file)" href="News-Commentary/de-ru_sample.html">view</a></td><td><a rel="nofollow" title="German-Chinese (sample file)" href="News-Commentary/de-zh_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=News-Commentary/de.raw.tar.gz">de</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=News-Commentary/en.tar.gz">en</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (0.2M links, 9.2M tokens)" href="download.php?f=News-Commentary/xml/ar-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Czech' (0.1M links, 6.8M tokens)" href="download.php?f=News-Commentary/xml/cs-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-German' (0.2M links, 10.1M tokens)" href="download.php?f=News-Commentary/xml/de-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (0.2M links, 9.2M tokens)" href="download.php?f=News-Commentary/ar-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Czech' (0.1M links, 6.8M tokens)" href="download.php?f=News-Commentary/cs-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-German' (0.2M links, 10.1M tokens)" href="download.php?f=News-Commentary/de-en.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="English-Spanish (sample file)" href="News-Commentary/en-es_sample.html">view</a></td><td><a rel="nofollow" title="English-French (sample file)" href="News-Commentary/en-fr_sample.html">view</a></td><td><a rel="nofollow" title="English-Italian (sample file)" href="News-Commentary/en-it_sample.html">view</a></td><td><a rel="nofollow" title="English-Japanese (sample file)" href="News-Commentary/en-ja_sample.html">view</a></td><td><a rel="nofollow" title="English-Dutch (sample file)" href="News-Commentary/en-nl_sample.html">view</a></td><td><a rel="nofollow" title="English-Portuguese (sample file)" href="News-Commentary/en-pt_sample.html">view</a></td><td><a rel="nofollow" title="English-Russian (sample file)" href="News-Commentary/en-ru_sample.html">view</a></td><td><a rel="nofollow" title="English-Chinese (sample file)" href="News-Commentary/en-zh_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=News-Commentary/en.raw.tar.gz">en</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=News-Commentary/es.tar.gz">es</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Arabic' (0.2M links, 9.0M tokens)" href="download.php?f=News-Commentary/xml/ar-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Czech' (0.1M links, 7.0M tokens)" href="download.php?f=News-Commentary/xml/cs-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (0.2M links, 9.3M tokens)" href="download.php?f=News-Commentary/xml/de-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (0.2M links, 10.4M tokens)" href="download.php?f=News-Commentary/xml/en-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Arabic' (0.2M links, 9.0M tokens)" href="download.php?f=News-Commentary/ar-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Czech' (0.1M links, 7.0M tokens)" href="download.php?f=News-Commentary/cs-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (0.2M links, 9.3M tokens)" href="download.php?f=News-Commentary/de-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (0.2M links, 10.4M tokens)" href="download.php?f=News-Commentary/en-es.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Spanish-French (sample file)" href="News-Commentary/es-fr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Italian (sample file)" href="News-Commentary/es-it_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Japanese (sample file)" href="News-Commentary/es-ja_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Dutch (sample file)" href="News-Commentary/es-nl_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Portuguese (sample file)" href="News-Commentary/es-pt_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Russian (sample file)" href="News-Commentary/es-ru_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Chinese (sample file)" href="News-Commentary/es-zh_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=News-Commentary/es.raw.tar.gz">es</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=News-Commentary/fr.tar.gz">fr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'French-Arabic' (0.1M links, 8.2M tokens)" href="download.php?f=News-Commentary/xml/ar-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Czech' (0.1M links, 3.3M tokens)" href="download.php?f=News-Commentary/xml/cs-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-German' (0.2M links, 8.8M tokens)" href="download.php?f=News-Commentary/xml/de-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English' (0.2M links, 10.1M tokens)" href="download.php?f=News-Commentary/xml/en-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (0.2M links, 9.1M tokens)" href="download.php?f=News-Commentary/xml/es-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Arabic' (0.1M links, 8.2M tokens)" href="download.php?f=News-Commentary/ar-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Czech' (0.1M links, 3.3M tokens)" href="download.php?f=News-Commentary/cs-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-German' (0.2M links, 8.8M tokens)" href="download.php?f=News-Commentary/de-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English' (0.2M links, 10.1M tokens)" href="download.php?f=News-Commentary/en-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (0.2M links, 9.1M tokens)" href="download.php?f=News-Commentary/es-fr.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="French-Italian (sample file)" href="News-Commentary/fr-it_sample.html">view</a></td><td><a rel="nofollow" title="French-Japanese (sample file)" href="News-Commentary/fr-ja_sample.html">view</a></td><td><a rel="nofollow" title="French-Dutch (sample file)" href="News-Commentary/fr-nl_sample.html">view</a></td><td><a rel="nofollow" title="French-Portuguese (sample file)" href="News-Commentary/fr-pt_sample.html">view</a></td><td><a rel="nofollow" title="French-Russian (sample file)" href="News-Commentary/fr-ru_sample.html">view</a></td><td><a rel="nofollow" title="French-Chinese (sample file)" href="News-Commentary/fr-zh_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=News-Commentary/fr.raw.tar.gz">fr</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=News-Commentary/it.tar.gz">it</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Arabic' (26.4k links, 1.5M tokens)" href="download.php?f=News-Commentary/xml/ar-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Czech' (13.1k links, 0.7M tokens)" href="download.php?f=News-Commentary/xml/cs-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-German' (14.2k links, 0.8M tokens)" href="download.php?f=News-Commentary/xml/de-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (18.6k links, 1.0M tokens)" href="download.php?f=News-Commentary/xml/en-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Spanish' (18.3k links, 1.1M tokens)" href="download.php?f=News-Commentary/xml/es-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (13.6k links, 0.8M tokens)" href="download.php?f=News-Commentary/xml/fr-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Arabic' (26.4k links, 1.5M tokens)" href="download.php?f=News-Commentary/ar-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Czech' (13.1k links, 0.7M tokens)" href="download.php?f=News-Commentary/cs-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-German' (14.2k links, 0.8M tokens)" href="download.php?f=News-Commentary/de-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (18.6k links, 1.0M tokens)" href="download.php?f=News-Commentary/en-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Spanish' (18.3k links, 1.1M tokens)" href="download.php?f=News-Commentary/es-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (13.6k links, 0.8M tokens)" href="download.php?f=News-Commentary/fr-it.xml.gz">ces</a></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="Italian-Dutch (sample file)" href="News-Commentary/it-nl_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Portuguese (sample file)" href="News-Commentary/it-pt_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Russian (sample file)" href="News-Commentary/it-ru_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Chinese (sample file)" href="News-Commentary/it-zh_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=News-Commentary/it.raw.tar.gz">it</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=News-Commentary/ja.tar.gz">ja</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Arabic' (1.1k links, 52.2k tokens)" href="download.php?f=News-Commentary/xml/ar-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Czech' (1.2k links, 50.6k tokens)" href="download.php?f=News-Commentary/xml/cs-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-German' (1.2k links, 51.5k tokens)" href="download.php?f=News-Commentary/xml/de-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-English' (1.2k links, 57.2k tokens)" href="download.php?f=News-Commentary/xml/en-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Spanish' (1.2k links, 57.1k tokens)" href="download.php?f=News-Commentary/xml/es-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-French' (1.0k links, 51.5k tokens)" href="download.php?f=News-Commentary/xml/fr-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Arabic' (1.1k links, 52.2k tokens)" href="download.php?f=News-Commentary/ar-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Czech' (1.2k links, 50.6k tokens)" href="download.php?f=News-Commentary/cs-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-German' (1.2k links, 51.5k tokens)" href="download.php?f=News-Commentary/de-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-English' (1.2k links, 57.2k tokens)" href="download.php?f=News-Commentary/en-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Spanish' (1.2k links, 57.1k tokens)" href="download.php?f=News-Commentary/es-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-French' (1.0k links, 51.5k tokens)" href="download.php?f=News-Commentary/fr-ja.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td></td><td></td><td><a rel="nofollow" title="Japanese-Russian (sample file)" href="News-Commentary/ja-ru_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Chinese (sample file)" href="News-Commentary/ja-zh_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=News-Commentary/ja.raw.tar.gz">ja</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=News-Commentary/nl.tar.gz">nl</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Arabic' (9.9k links, 0.5M tokens)" href="download.php?f=News-Commentary/xml/ar-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Czech' (6.2k links, 0.3M tokens)" href="download.php?f=News-Commentary/xml/cs-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (0.5k links, 30.3k tokens)" href="download.php?f=News-Commentary/xml/de-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (1.8k links, 96.3k tokens)" href="download.php?f=News-Commentary/xml/en-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (3.7k links, 0.2M tokens)" href="download.php?f=News-Commentary/xml/es-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (0.5k links, 32.1k tokens)" href="download.php?f=News-Commentary/xml/fr-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (4.7k links, 0.3M tokens)" href="download.php?f=News-Commentary/xml/it-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Arabic' (9.9k links, 0.5M tokens)" href="download.php?f=News-Commentary/ar-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Czech' (6.2k links, 0.3M tokens)" href="download.php?f=News-Commentary/cs-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (0.5k links, 30.3k tokens)" href="download.php?f=News-Commentary/de-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (1.8k links, 96.3k tokens)" href="download.php?f=News-Commentary/en-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (3.7k links, 0.2M tokens)" href="download.php?f=News-Commentary/es-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (0.5k links, 32.1k tokens)" href="download.php?f=News-Commentary/fr-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (4.7k links, 0.3M tokens)" href="download.php?f=News-Commentary/it-nl.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td><a rel="nofollow" title="Dutch-Portuguese (sample file)" href="News-Commentary/nl-pt_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Russian (sample file)" href="News-Commentary/nl-ru_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Chinese (sample file)" href="News-Commentary/nl-zh_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=News-Commentary/nl.raw.tar.gz">nl</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=News-Commentary/pt.tar.gz">pt</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Arabic' (21.3k links, 1.2M tokens)" href="download.php?f=News-Commentary/xml/ar-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Czech' (10.0k links, 0.5M tokens)" href="download.php?f=News-Commentary/xml/cs-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (5.8k links, 0.3M tokens)" href="download.php?f=News-Commentary/xml/de-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (7.3k links, 0.4M tokens)" href="download.php?f=News-Commentary/xml/en-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (9.2k links, 0.5M tokens)" href="download.php?f=News-Commentary/xml/es-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (6.0k links, 0.4M tokens)" href="download.php?f=News-Commentary/xml/fr-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (3.7k links, 0.2M tokens)" href="download.php?f=News-Commentary/xml/it-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Arabic' (21.3k links, 1.2M tokens)" href="download.php?f=News-Commentary/ar-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Czech' (10.0k links, 0.5M tokens)" href="download.php?f=News-Commentary/cs-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (5.8k links, 0.3M tokens)" href="download.php?f=News-Commentary/de-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (7.3k links, 0.4M tokens)" href="download.php?f=News-Commentary/en-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (9.2k links, 0.5M tokens)" href="download.php?f=News-Commentary/es-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (6.0k links, 0.4M tokens)" href="download.php?f=News-Commentary/fr-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (3.7k links, 0.2M tokens)" href="download.php?f=News-Commentary/it-pt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (3.4k links, 0.2M tokens)" href="download.php?f=News-Commentary/xml/nl-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (3.4k links, 0.2M tokens)" href="download.php?f=News-Commentary/nl-pt.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Portuguese-Russian (sample file)" href="News-Commentary/pt-ru_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Chinese (sample file)" href="News-Commentary/pt-zh_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=News-Commentary/pt.raw.tar.gz">pt</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=News-Commentary/ru.tar.gz">ru</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Arabic' (0.1M links, 6.5M tokens)" href="download.php?f=News-Commentary/xml/ar-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Czech' (0.1M links, 6.0M tokens)" href="download.php?f=News-Commentary/xml/cs-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (0.2M links, 7.8M tokens)" href="download.php?f=News-Commentary/xml/de-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (0.2M links, 8.5M tokens)" href="download.php?f=News-Commentary/xml/en-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (0.2M links, 8.0M tokens)" href="download.php?f=News-Commentary/xml/es-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (0.1M links, 7.6M tokens)" href="download.php?f=News-Commentary/xml/fr-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Italian' (9.7k links, 0.5M tokens)" href="download.php?f=News-Commentary/xml/it-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Japanese' (1.2k links, 49.5k tokens)" href="download.php?f=News-Commentary/xml/ja-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Dutch' (0.5k links, 28.5k tokens)" href="download.php?f=News-Commentary/xml/nl-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Portuguese' (3.9k links, 0.2M tokens)" href="download.php?f=News-Commentary/xml/pt-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Arabic' (0.1M links, 6.5M tokens)" href="download.php?f=News-Commentary/ar-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Czech' (0.1M links, 6.0M tokens)" href="download.php?f=News-Commentary/cs-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (0.2M links, 7.8M tokens)" href="download.php?f=News-Commentary/de-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (0.2M links, 8.5M tokens)" href="download.php?f=News-Commentary/en-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (0.2M links, 8.0M tokens)" href="download.php?f=News-Commentary/es-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (0.1M links, 7.6M tokens)" href="download.php?f=News-Commentary/fr-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Italian' (9.7k links, 0.5M tokens)" href="download.php?f=News-Commentary/it-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Japanese' (1.2k links, 49.5k tokens)" href="download.php?f=News-Commentary/ja-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Dutch' (0.5k links, 28.5k tokens)" href="download.php?f=News-Commentary/nl-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Portuguese' (3.9k links, 0.2M tokens)" href="download.php?f=News-Commentary/pt-ru.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Russian-Chinese (sample file)" href="News-Commentary/ru-zh_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=News-Commentary/ru.raw.tar.gz">ru</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=News-Commentary/zh.tar.gz">zh</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Arabic' (84.4k links, 4.0M tokens)" href="download.php?f=News-Commentary/xml/ar-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Czech' (55.5k links, 2.3M tokens)" href="download.php?f=News-Commentary/xml/cs-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-German' (81.8k links, 3.6M tokens)" href="download.php?f=News-Commentary/xml/de-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (91.6k links, 4.2M tokens)" href="download.php?f=News-Commentary/xml/en-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (74.2k links, 3.8M tokens)" href="download.php?f=News-Commentary/xml/es-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-French' (77.8k links, 4.0M tokens)" href="download.php?f=News-Commentary/xml/fr-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Italian' (6.5k links, 0.3M tokens)" href="download.php?f=News-Commentary/xml/it-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Japanese' (0.6k links, 21.1k tokens)" href="download.php?f=News-Commentary/xml/ja-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Dutch' (1.7k links, 78.6k tokens)" href="download.php?f=News-Commentary/xml/nl-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Portuguese' (5.4k links, 0.3M tokens)" href="download.php?f=News-Commentary/xml/pt-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Russian' (70.6k links, 2.9M tokens)" href="download.php?f=News-Commentary/xml/ru-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Arabic' (84.4k links, 4.0M tokens)" href="download.php?f=News-Commentary/ar-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Czech' (55.5k links, 2.3M tokens)" href="download.php?f=News-Commentary/cs-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-German' (81.8k links, 3.6M tokens)" href="download.php?f=News-Commentary/de-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (91.6k links, 4.2M tokens)" href="download.php?f=News-Commentary/en-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (74.2k links, 3.8M tokens)" href="download.php?f=News-Commentary/es-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-French' (77.8k links, 4.0M tokens)" href="download.php?f=News-Commentary/fr-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Italian' (6.5k links, 0.3M tokens)" href="download.php?f=News-Commentary/it-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Japanese' (0.6k links, 21.1k tokens)" href="download.php?f=News-Commentary/ja-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Dutch' (1.7k links, 78.6k tokens)" href="download.php?f=News-Commentary/nl-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Portuguese' (5.4k links, 0.3M tokens)" href="download.php?f=News-Commentary/pt-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Russian' (70.6k links, 2.9M tokens)" href="download.php?f=News-Commentary/ru-zh.xml.gz">ces</a></td>
 <th></th>
 <th><a rel="nofollow" href="download.php?f=News-Commentary/zh.raw.tar.gz">zh</a></th></tr>
 <tr><th></th>

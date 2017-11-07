@@ -20,7 +20,7 @@
 <th></th>
 <td><a rel="nofollow" title="Catalan-Spanish (sample file)" href="DOGC/ca-es_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=DOGC/ca.raw.tar.gz">ca</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=DOGC/es.tar.gz">es</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Catalan' (16 aligned documents, 3.4M links, 80.4M tokens)" href="download.php?f=DOGC/xml/ca-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Catalan' (16 aligned documents, 3.4M links, 80.4M tokens)" href="download.php?f=DOGC/ca-es.xml.gz">ces</a></td>
 <th></th>
 <th><a rel="nofollow" href="download.php?f=DOGC/es.raw.tar.gz">es</a></th></tr>
 <tr><th></th>

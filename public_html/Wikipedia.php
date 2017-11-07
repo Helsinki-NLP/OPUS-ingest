@@ -60,11 +60,11 @@
 <th></th>
 <td><a rel="nofollow" title="Greek-English (sample file)" href="Wikipedia/el-en_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Greek-Polish (sample file)" href="Wikipedia/el-pl_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Wikipedia/el.raw.tar.gz">el</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Wikipedia/en.tar.gz">en</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (0.2M links, 6.7M tokens)" href="download.php?f=Wikipedia/xml/ar-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Bulgarian' (79.8k links, 3.1M tokens)" href="download.php?f=Wikipedia/xml/bg-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Czech' (27.7k links, 0.9M tokens)" href="download.php?f=Wikipedia/xml/cs-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-German' (6 aligned documents, 2.5M links, 101.9M tokens)" href="download.php?f=Wikipedia/xml/de-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (0.1M links, 4.4M tokens)" href="download.php?f=Wikipedia/xml/el-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (0.2M links, 6.7M tokens)" href="download.php?f=Wikipedia/ar-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Bulgarian' (79.8k links, 3.1M tokens)" href="download.php?f=Wikipedia/bg-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Czech' (27.7k links, 0.9M tokens)" href="download.php?f=Wikipedia/cs-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-German' (6 aligned documents, 2.5M links, 101.9M tokens)" href="download.php?f=Wikipedia/de-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (0.1M links, 4.4M tokens)" href="download.php?f=Wikipedia/el-en.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="English-Spanish (sample file)" href="Wikipedia/en-es_sample.html">view</a></td><td><a rel="nofollow" title="English-Persian (sample file)" href="Wikipedia/en-fa_sample.html">view</a></td><td><a rel="nofollow" title="English-French (sample file)" href="Wikipedia/en-fr_sample.html">view</a></td><td><a rel="nofollow" title="English-Hebrew (sample file)" href="Wikipedia/en-he_sample.html">view</a></td><td><a rel="nofollow" title="English-Hungarian (sample file)" href="Wikipedia/en-hu_sample.html">view</a></td><td><a rel="nofollow" title="English-Italian (sample file)" href="Wikipedia/en-it_sample.html">view</a></td><td><a rel="nofollow" title="English-Dutch (sample file)" href="Wikipedia/en-nl_sample.html">view</a></td><td><a rel="nofollow" title="English-Polish (sample file)" href="Wikipedia/en-pl_sample.html">view</a></td><td><a rel="nofollow" title="English-Portuguese (sample file)" href="Wikipedia/en-pt_sample.html">view</a></td><td><a rel="nofollow" title="English-Romanian (sample file)" href="Wikipedia/en-ro_sample.html">view</a></td><td><a rel="nofollow" title="English-Russian (sample file)" href="Wikipedia/en-ru_sample.html">view</a></td><td><a rel="nofollow" title="English-Slovenian (sample file)" href="Wikipedia/en-sl_sample.html">view</a></td><td><a rel="nofollow" title="English-Turkish (sample file)" href="Wikipedia/en-tr_sample.html">view</a></td><td><a rel="nofollow" title="English-Vietnamese (sample file)" href="Wikipedia/en-vi_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=Wikipedia/en.raw.tar.gz">en</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Wikipedia/es.tar.gz">es</a></th>
@@ -73,7 +73,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (5 aligned documents, 1.8M links, 86.1M tokens)" href="download.php?f=Wikipedia/xml/en-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (5 aligned documents, 1.8M links, 86.1M tokens)" href="download.php?f=Wikipedia/en-es.xml.gz">ces</a></td>
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Spanish-Polish (sample file)" href="Wikipedia/es-pl_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Wikipedia/es.raw.tar.gz">es</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Wikipedia/fa.tar.gz">fa</a></th>
@@ -82,7 +82,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Persian-English' (97.1k links, 5.1M tokens)" href="download.php?f=Wikipedia/xml/en-fa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Persian-English' (97.1k links, 5.1M tokens)" href="download.php?f=Wikipedia/en-fa.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Persian-Polish (sample file)" href="Wikipedia/fa-pl_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Wikipedia/fa.raw.tar.gz">fa</a></th></tr>
@@ -92,7 +92,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English' (2 aligned documents, 0.8M links, 40.8M tokens)" href="download.php?f=Wikipedia/xml/en-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English' (2 aligned documents, 0.8M links, 40.8M tokens)" href="download.php?f=Wikipedia/en-fr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th></th>
@@ -103,7 +103,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-English' (0.1M links, 6.2M tokens)" href="download.php?f=Wikipedia/xml/en-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-English' (0.1M links, 6.2M tokens)" href="download.php?f=Wikipedia/en-he.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -115,7 +115,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (61.5k links, 2.3M tokens)" href="download.php?f=Wikipedia/xml/en-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (61.5k links, 2.3M tokens)" href="download.php?f=Wikipedia/en-hu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -128,7 +128,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (3 aligned documents, 1.0M links, 48.8M tokens)" href="download.php?f=Wikipedia/xml/en-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (3 aligned documents, 1.0M links, 48.8M tokens)" href="download.php?f=Wikipedia/en-it.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -142,7 +142,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (2 aligned documents, 0.8M links, 37.6M tokens)" href="download.php?f=Wikipedia/xml/en-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (2 aligned documents, 0.8M links, 37.6M tokens)" href="download.php?f=Wikipedia/en-nl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -152,19 +152,19 @@
 <th></th>
 <td><a rel="nofollow" title="Dutch-Polish (sample file)" href="Wikipedia/nl-pl_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Wikipedia/nl.raw.tar.gz">nl</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Wikipedia/pl.tar.gz">pl</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Arabic' (2 aligned documents, 0.8M links, 38.8M tokens)" href="download.php?f=Wikipedia/xml/ar-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Arabic' (2 aligned documents, 0.8M links, 38.8M tokens)" href="download.php?f=Wikipedia/ar-pl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Czech' (62.5k links, 2.4M tokens)" href="download.php?f=Wikipedia/xml/cs-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-German' (0.2M links, 4.3M tokens)" href="download.php?f=Wikipedia/xml/de-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Greek' (12.2k links, 0.4M tokens)" href="download.php?f=Wikipedia/xml/el-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-English' (0.2M links, 15.5M tokens)" href="download.php?f=Wikipedia/xml/en-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Spanish' (0.2M links, 6.7M tokens)" href="download.php?f=Wikipedia/xml/es-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Persian' (6.1k links, 0.3M tokens)" href="download.php?f=Wikipedia/xml/fa-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-French' (51.7k links, 2.2M tokens)" href="download.php?f=Wikipedia/xml/fr-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Hebrew' (10.0k links, 0.3M tokens)" href="download.php?f=Wikipedia/xml/he-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Hungarian' (41.1k links, 1.4M tokens)" href="download.php?f=Wikipedia/xml/hu-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Italian' (0.2M links, 10.1M tokens)" href="download.php?f=Wikipedia/xml/it-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Dutch' (0.2M links, 7.5M tokens)" href="download.php?f=Wikipedia/xml/nl-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Czech' (62.5k links, 2.4M tokens)" href="download.php?f=Wikipedia/cs-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-German' (0.2M links, 4.3M tokens)" href="download.php?f=Wikipedia/de-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Greek' (12.2k links, 0.4M tokens)" href="download.php?f=Wikipedia/el-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-English' (0.2M links, 15.5M tokens)" href="download.php?f=Wikipedia/en-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Spanish' (0.2M links, 6.7M tokens)" href="download.php?f=Wikipedia/es-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Persian' (6.1k links, 0.3M tokens)" href="download.php?f=Wikipedia/fa-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-French' (51.7k links, 2.2M tokens)" href="download.php?f=Wikipedia/fr-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Hebrew' (10.0k links, 0.3M tokens)" href="download.php?f=Wikipedia/he-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Hungarian' (41.1k links, 1.4M tokens)" href="download.php?f=Wikipedia/hu-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Italian' (0.2M links, 10.1M tokens)" href="download.php?f=Wikipedia/it-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Dutch' (0.2M links, 7.5M tokens)" href="download.php?f=Wikipedia/nl-pl.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Polish-Portuguese (sample file)" href="Wikipedia/pl-pt_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Romanian (sample file)" href="Wikipedia/pl-ro_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Russian (sample file)" href="Wikipedia/pl-ru_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Slovenian (sample file)" href="Wikipedia/pl-sl_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Turkish (sample file)" href="Wikipedia/pl-tr_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Vietnamese (sample file)" href="Wikipedia/pl-vi_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=Wikipedia/pl.raw.tar.gz">pl</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Wikipedia/pt.tar.gz">pt</a></th>
@@ -173,7 +173,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (5 aligned documents, 1.8M links, 91.7M tokens)" href="download.php?f=Wikipedia/xml/en-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (5 aligned documents, 1.8M links, 91.7M tokens)" href="download.php?f=Wikipedia/en-pt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -181,7 +181,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Polish' (0.2M links, 10.1M tokens)" href="download.php?f=Wikipedia/xml/pl-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Polish' (0.2M links, 10.1M tokens)" href="download.php?f=Wikipedia/pl-pt.xml.gz">ces</a></td>
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Wikipedia/pt.raw.tar.gz">pt</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Wikipedia/ro.tar.gz">ro</a></th>
@@ -190,7 +190,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-English' (2 aligned documents, 0.4M links, 22.7M tokens)" href="download.php?f=Wikipedia/xml/en-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-English' (2 aligned documents, 0.4M links, 22.7M tokens)" href="download.php?f=Wikipedia/en-ro.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -198,7 +198,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Polish' (6.7k links, 0.3M tokens)" href="download.php?f=Wikipedia/xml/pl-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Polish' (6.7k links, 0.3M tokens)" href="download.php?f=Wikipedia/pl-ro.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Wikipedia/ro.raw.tar.gz">ro</a></th></tr>
@@ -208,7 +208,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (2 aligned documents, 0.6M links, 24.4M tokens)" href="download.php?f=Wikipedia/xml/en-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (2 aligned documents, 0.6M links, 24.4M tokens)" href="download.php?f=Wikipedia/en-ru.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -216,7 +216,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Polish' (0.2M links, 5.8M tokens)" href="download.php?f=Wikipedia/xml/pl-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Polish' (0.2M links, 5.8M tokens)" href="download.php?f=Wikipedia/pl-ru.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th></th>
@@ -227,7 +227,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-English' (0.1M links, 5.6M tokens)" href="download.php?f=Wikipedia/xml/en-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-English' (0.1M links, 5.6M tokens)" href="download.php?f=Wikipedia/en-sl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -235,7 +235,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Polish' (17.3k links, 0.7M tokens)" href="download.php?f=Wikipedia/xml/pl-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Polish' (17.3k links, 0.7M tokens)" href="download.php?f=Wikipedia/pl-sl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -247,7 +247,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-English' (2 aligned documents, 0.2M links, 9.0M tokens)" href="download.php?f=Wikipedia/xml/en-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-English' (2 aligned documents, 0.2M links, 9.0M tokens)" href="download.php?f=Wikipedia/en-tr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -255,7 +255,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Polish' (16.0k links, 0.9M tokens)" href="download.php?f=Wikipedia/xml/pl-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Polish' (16.0k links, 0.9M tokens)" href="download.php?f=Wikipedia/pl-tr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -268,7 +268,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-English' (58.1k links, 1.3M tokens)" href="download.php?f=Wikipedia/xml/en-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-English' (58.1k links, 1.3M tokens)" href="download.php?f=Wikipedia/en-vi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -276,7 +276,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Polish' (90.4k links, 3.8M tokens)" href="download.php?f=Wikipedia/xml/pl-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Polish' (90.4k links, 3.8M tokens)" href="download.php?f=Wikipedia/pl-vi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>

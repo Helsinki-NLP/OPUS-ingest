@@ -296,7 +296,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Berber languages)-Arabic' (1.6k links, 0.6M tokens)" href="download.php?f=Tatoeba/xml/ar-ber.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Berber languages)-Arabic' (1.6k links, 0.6M tokens)" href="download.php?f=Tatoeba/ar-ber.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -315,7 +315,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Bulgarian-Arabic' (7 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/ar-bg.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Bulgarian-Arabic' (7 links, 0.2M tokens)" href="download.php?f=Tatoeba/ar-bg.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -500,26 +500,26 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Tatoeba/ckt.raw.tar.gz">ckt</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Tatoeba/cmn.tar.gz">cmn</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'cmn-Afrikaans' (67 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/af-cmn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'cmn-Afrikaans' (67 links, 0.1M tokens)" href="download.php?f=Tatoeba/af-cmn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'cmn-Arabic' (57 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/ar-cmn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'cmn-Arabic' (57 links, 0.2M tokens)" href="download.php?f=Tatoeba/ar-cmn.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'cmn-arz' (7 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/arz-cmn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'cmn-arz' (7 links, 0.1M tokens)" href="download.php?f=Tatoeba/arz-cmn.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'cmn-avk' (6 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/avk-cmn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'cmn-Azerbaijani' (1 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/az-cmn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'cmn-Belarusian' (0.3k links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/be-cmn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'cmn-Berber languages)' (4 links, 0.6M tokens)" href="download.php?f=Tatoeba/xml/ber-cmn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'cmn-Bulgarian' (0.3k links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/bg-cmn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'cmn-Bengali' (4 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/bn-cmn.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'cmn-Bosnian' (32 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/bs-cmn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'cmn-Catalan' (79 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/ca-cmn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'cmn-avk' (6 links, 0.1M tokens)" href="download.php?f=Tatoeba/avk-cmn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'cmn-Azerbaijani' (1 links, 0.1M tokens)" href="download.php?f=Tatoeba/az-cmn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'cmn-Belarusian' (0.3k links, 0.1M tokens)" href="download.php?f=Tatoeba/be-cmn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'cmn-Berber languages)' (4 links, 0.6M tokens)" href="download.php?f=Tatoeba/ber-cmn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'cmn-Bulgarian' (0.3k links, 0.2M tokens)" href="download.php?f=Tatoeba/bg-cmn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'cmn-Bengali' (4 links, 0.1M tokens)" href="download.php?f=Tatoeba/bn-cmn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<th><a rel="nofollow" title="cmn-cmn (sample file)" href="Tatoeba/cmn-cmn_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'cmn-cmn' (0.2k links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-cmn.xml.gz">c</a>
+<td><a rel="nofollow" title="sentence alignments for 'cmn-Bosnian' (32 links, 0.1M tokens)" href="download.php?f=Tatoeba/bs-cmn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'cmn-Catalan' (79 links, 0.2M tokens)" href="download.php?f=Tatoeba/ca-cmn.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<th><a rel="nofollow" title="cmn-cmn (sample file)" href="Tatoeba/cmn-cmn_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'cmn-cmn' (0.2k links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-cmn.xml.gz">c</a>
 </th><td><a rel="nofollow" title="cmn-Czech (sample file)" href="Tatoeba/cmn-cs_sample.html">view</a></td><th>cmn</th>
 <td><a rel="nofollow" title="cmn-Welsh (sample file)" href="Tatoeba/cmn-cy_sample.html">view</a></td><td><a rel="nofollow" title="cmn-cycl (sample file)" href="Tatoeba/cmn-cycl_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Danish (sample file)" href="Tatoeba/cmn-da_sample.html">view</a></td><td><a rel="nofollow" title="cmn-German (sample file)" href="Tatoeba/cmn-de_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="cmn-Greek (sample file)" href="Tatoeba/cmn-el_sample.html">view</a></td><td><a rel="nofollow" title="cmn-English (sample file)" href="Tatoeba/cmn-en_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Esperanto (sample file)" href="Tatoeba/cmn-eo_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Spanish (sample file)" href="Tatoeba/cmn-es_sample.html">view</a></td><td></td><td><a rel="nofollow" title="cmn-Basque (sample file)" href="Tatoeba/cmn-eu_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Finnish (sample file)" href="Tatoeba/cmn-fi_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Faroese (sample file)" href="Tatoeba/cmn-fo_sample.html">view</a></td><td><a rel="nofollow" title="cmn-French (sample file)" href="Tatoeba/cmn-fr_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Western Frisian (sample file)" href="Tatoeba/cmn-fy_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="cmn-Galician (sample file)" href="Tatoeba/cmn-gl_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Guarani (sample file)" href="Tatoeba/cmn-gn_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Hebrew (sample file)" href="Tatoeba/cmn-he_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Hindi (sample file)" href="Tatoeba/cmn-hi_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Hiligaynon (sample file)" href="Tatoeba/cmn-hil_sample.html">view</a></td><th>cmn</th>
 <td><a rel="nofollow" title="cmn-Croatian (sample file)" href="Tatoeba/cmn-hr_sample.html">view</a></td><td></td><td><a rel="nofollow" title="cmn-Hungarian (sample file)" href="Tatoeba/cmn-hu_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Armenian (sample file)" href="Tatoeba/cmn-hy_sample.html">view</a></td><td></td><td><a rel="nofollow" title="cmn-Indonesian (sample file)" href="Tatoeba/cmn-id_sample.html">view</a></td><td></td><td><a rel="nofollow" title="cmn-Ido (sample file)" href="Tatoeba/cmn-io_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Icelandic (sample file)" href="Tatoeba/cmn-is_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Italian (sample file)" href="Tatoeba/cmn-it_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Japanese (sample file)" href="Tatoeba/cmn-ja_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Lojban (sample file)" href="Tatoeba/cmn-jbo_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="cmn-Central Khmer (sample file)" href="Tatoeba/cmn-km_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Korean (sample file)" href="Tatoeba/cmn-ko_sample.html">view</a></td><td></td><td><a rel="nofollow" title="cmn-Kurdish (sample file)" href="Tatoeba/cmn-ku_sample.html">view</a></td><td></td><td><a rel="nofollow" title="cmn-Latin (sample file)" href="Tatoeba/cmn-la_sample.html">view</a></td><td></td><td></td><td></td><th>cmn</th>
@@ -528,7 +528,7 @@
 <td></td><td><a rel="nofollow" title="cmn-Turkish (sample file)" href="Tatoeba/cmn-tr_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Tatar (sample file)" href="Tatoeba/cmn-tt_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Uighur (sample file)" href="Tatoeba/cmn-ug_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Ukrainian (sample file)" href="Tatoeba/cmn-uk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="cmn-Uzbek (sample file)" href="Tatoeba/cmn-uz_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Vietnamese (sample file)" href="Tatoeba/cmn-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="cmn-wuu (sample file)" href="Tatoeba/cmn-wuu_sample.html">view</a></td><td><a rel="nofollow" title="cmn-Kalmyk (sample file)" href="Tatoeba/cmn-xal_sample.html">view</a></td><td></td><td><a rel="nofollow" title="cmn-Yiddish (sample file)" href="Tatoeba/cmn-yi_sample.html">view</a></td><td><a rel="nofollow" title="cmn-yue (sample file)" href="Tatoeba/cmn-yue_sample.html">view</a></td><td><a rel="nofollow" title="cmn-zsm (sample file)" href="Tatoeba/cmn-zsm_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=Tatoeba/cmn.raw.tar.gz">cmn</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Tatoeba/cs.tar.gz">cs</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-Afrikaans' (1 links, 54.2k tokens)" href="download.php?f=Tatoeba/xml/af-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-Afrikaans' (1 links, 54.2k tokens)" href="download.php?f=Tatoeba/af-cs.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -537,17 +537,17 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-Belarusian' (6 links, 74.5k tokens)" href="download.php?f=Tatoeba/xml/be-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-Belarusian' (6 links, 74.5k tokens)" href="download.php?f=Tatoeba/be-cs.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-Breton' (1 links, 46.5k tokens)" href="download.php?f=Tatoeba/xml/br-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-Breton' (1 links, 46.5k tokens)" href="download.php?f=Tatoeba/br-cs.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-cmn' (47 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-cmn' (47 links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-cs.xml.gz">ces</a></td>
 <th></th>
 <th>cs</th>
 <td></td><td></td><td></td><td><a rel="nofollow" title="Czech-German (sample file)" href="Tatoeba/cs-de_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Czech-Greek (sample file)" href="Tatoeba/cs-el_sample.html">view</a></td><td><a rel="nofollow" title="Czech-English (sample file)" href="Tatoeba/cs-en_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Esperanto (sample file)" href="Tatoeba/cs-eo_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Spanish (sample file)" href="Tatoeba/cs-es_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Czech-Finnish (sample file)" href="Tatoeba/cs-fi_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Faroese (sample file)" href="Tatoeba/cs-fo_sample.html">view</a></td><td><a rel="nofollow" title="Czech-French (sample file)" href="Tatoeba/cs-fr_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Western Frisian (sample file)" href="Tatoeba/cs-fy_sample.html">view</a></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Czech-Hebrew (sample file)" href="Tatoeba/cs-he_sample.html">view</a></td><td></td><td></td><th>cs</th>
@@ -712,7 +712,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Welsh-cmn' (7 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-cy.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Welsh-cmn' (7 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-cy.xml.gz">ces</a></td>
 <td></td>
 <th>cy</th>
 <th></th>
@@ -742,7 +742,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'cycl-cmn' (2 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-cycl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'cycl-cmn' (2 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-cycl.xml.gz">ces</a></td>
 <td></td>
 <th>cycl</th>
 <td></td>
@@ -773,7 +773,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Danish-cmn' (0.1k links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-da.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Danish-cmn' (0.1k links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-da.xml.gz">ces</a></td>
 <td></td>
 <th>da</th>
 <td></td>
@@ -786,32 +786,32 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Tatoeba/da.raw.tar.gz">da</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Tatoeba/de.tar.gz">de</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Afrikaans' (0.3k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/af-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Afrikaans' (0.3k links, 2.4M tokens)" href="download.php?f=Tatoeba/af-de.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-English, Old (ca.450-1100)' (55 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/ang-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Arabic' (1.1k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/ar-de.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-English, Old (ca.450-1100)' (55 links, 2.4M tokens)" href="download.php?f=Tatoeba/ang-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Arabic' (1.1k links, 2.5M tokens)" href="download.php?f=Tatoeba/ar-de.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Belarusian' (0.5k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/be-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Berber languages)' (0.5k links, 2.9M tokens)" href="download.php?f=Tatoeba/xml/ber-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Bulgarian' (0.2k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/bg-de.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Breton' (18 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/br-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Bosnian' (25 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/bs-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Catalan' (0.6k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/ca-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Belarusian' (0.5k links, 2.4M tokens)" href="download.php?f=Tatoeba/be-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Berber languages)' (0.5k links, 2.9M tokens)" href="download.php?f=Tatoeba/ber-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Bulgarian' (0.2k links, 2.5M tokens)" href="download.php?f=Tatoeba/bg-de.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-cmn' (3.2k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/cmn-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Czech' (2.0k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/cs-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Breton' (18 links, 2.4M tokens)" href="download.php?f=Tatoeba/br-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Bosnian' (25 links, 2.4M tokens)" href="download.php?f=Tatoeba/bs-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Catalan' (0.6k links, 2.5M tokens)" href="download.php?f=Tatoeba/ca-de.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-cmn' (3.2k links, 2.5M tokens)" href="download.php?f=Tatoeba/cmn-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Czech' (2.0k links, 2.5M tokens)" href="download.php?f=Tatoeba/cs-de.xml.gz">ces</a></td>
 <th>de</th>
-<td><a rel="nofollow" title="sentence alignments for 'German-Welsh' (40 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/cy-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-cycl' (6 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/cycl-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Danish' (6.0k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/da-de.xml.gz">ces</a></td>
-<th><a rel="nofollow" title="German-German (sample file)" href="Tatoeba/de-de_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'German-German' (3.6k links, 4.8M tokens)" href="download.php?f=Tatoeba/xml/de-de.xml.gz">c</a>
+<td><a rel="nofollow" title="sentence alignments for 'German-Welsh' (40 links, 2.4M tokens)" href="download.php?f=Tatoeba/cy-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-cycl' (6 links, 2.4M tokens)" href="download.php?f=Tatoeba/cycl-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Danish' (6.0k links, 2.5M tokens)" href="download.php?f=Tatoeba/da-de.xml.gz">ces</a></td>
+<th><a rel="nofollow" title="German-German (sample file)" href="Tatoeba/de-de_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'German-German' (3.6k links, 4.8M tokens)" href="download.php?f=Tatoeba/de-de.xml.gz">c</a>
 </th><td><a rel="nofollow" title="German-Lower Sorbian (sample file)" href="Tatoeba/de-dsb_sample.html">view</a></td><td></td><td><a rel="nofollow" title="German-Greek (sample file)" href="Tatoeba/de-el_sample.html">view</a></td><td><a rel="nofollow" title="German-English (sample file)" href="Tatoeba/de-en_sample.html">view</a></td><td><a rel="nofollow" title="German-Esperanto (sample file)" href="Tatoeba/de-eo_sample.html">view</a></td><td><a rel="nofollow" title="German-Spanish (sample file)" href="Tatoeba/de-es_sample.html">view</a></td><td><a rel="nofollow" title="German-Estonian (sample file)" href="Tatoeba/de-et_sample.html">view</a></td><td><a rel="nofollow" title="German-Basque (sample file)" href="Tatoeba/de-eu_sample.html">view</a></td><td><a rel="nofollow" title="German-Finnish (sample file)" href="Tatoeba/de-fi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="German-French (sample file)" href="Tatoeba/de-fr_sample.html">view</a></td><td><a rel="nofollow" title="German-Western Frisian (sample file)" href="Tatoeba/de-fy_sample.html">view</a></td><td></td><td><a rel="nofollow" title="German-Gaelic (sample file)" href="Tatoeba/de-gd_sample.html">view</a></td><td><a rel="nofollow" title="German-Galician (sample file)" href="Tatoeba/de-gl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="German-Hebrew (sample file)" href="Tatoeba/de-he_sample.html">view</a></td><td><a rel="nofollow" title="German-Hindi (sample file)" href="Tatoeba/de-hi_sample.html">view</a></td><td></td><th>de</th>
 <td><a rel="nofollow" title="German-Croatian (sample file)" href="Tatoeba/de-hr_sample.html">view</a></td><td><a rel="nofollow" title="German-Upper Sorbian (sample file)" href="Tatoeba/de-hsb_sample.html">view</a></td><td><a rel="nofollow" title="German-Hungarian (sample file)" href="Tatoeba/de-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="German-Interlingua (International Auxiliary Language Association) (sample file)" href="Tatoeba/de-ia_sample.html">view</a></td><td><a rel="nofollow" title="German-Indonesian (sample file)" href="Tatoeba/de-id_sample.html">view</a></td><td><a rel="nofollow" title="German-Interlingue (sample file)" href="Tatoeba/de-ie_sample.html">view</a></td><td><a rel="nofollow" title="German-Ido (sample file)" href="Tatoeba/de-io_sample.html">view</a></td><td><a rel="nofollow" title="German-Icelandic (sample file)" href="Tatoeba/de-is_sample.html">view</a></td><td><a rel="nofollow" title="German-Italian (sample file)" href="Tatoeba/de-it_sample.html">view</a></td><td><a rel="nofollow" title="German-Japanese (sample file)" href="Tatoeba/de-ja_sample.html">view</a></td><td><a rel="nofollow" title="German-Lojban (sample file)" href="Tatoeba/de-jbo_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="German-Korean (sample file)" href="Tatoeba/de-ko_sample.html">view</a></td><td></td><td><a rel="nofollow" title="German-Kurdish (sample file)" href="Tatoeba/de-ku_sample.html">view</a></td><td></td><td><a rel="nofollow" title="German-Latin (sample file)" href="Tatoeba/de-la_sample.html">view</a></td><td><a rel="nofollow" title="German-Ladino (sample file)" href="Tatoeba/de-lad_sample.html">view</a></td><td></td><td></td><th>de</th>
 <td><a rel="nofollow" title="German-Lithuanian (sample file)" href="Tatoeba/de-lt_sample.html">view</a></td><td><a rel="nofollow" title="German-Latvian (sample file)" href="Tatoeba/de-lv_sample.html">view</a></td><td><a rel="nofollow" title="German-lzh (sample file)" href="Tatoeba/de-lzh_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="German-Maltese (sample file)" href="Tatoeba/de-mt_sample.html">view</a></td><td></td><td><a rel="nofollow" title="German-BokmÃ¥l, Norwegian (sample file)" href="Tatoeba/de-nb_sample.html">view</a></td><td><a rel="nofollow" title="German-Low German (sample file)" href="Tatoeba/de-nds_sample.html">view</a></td><td><a rel="nofollow" title="German-Dutch (sample file)" href="Tatoeba/de-nl_sample.html">view</a></td><td><a rel="nofollow" title="German-Norse, Old (sample file)" href="Tatoeba/de-non_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="German-Occitan (post 1500) (sample file)" href="Tatoeba/de-oc_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="German-pes (sample file)" href="Tatoeba/de-pes_sample.html">view</a></td><td><a rel="nofollow" title="German-Polish (sample file)" href="Tatoeba/de-pl_sample.html">view</a></td><td></td><th>de</th>
@@ -844,7 +844,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lower Sorbian-German' (0.3k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-dsb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lower Sorbian-German' (0.3k links, 2.4M tokens)" href="download.php?f=Tatoeba/de-dsb.xml.gz">ces</a></td>
 <th></th>
 <td></td><td></td><td><a rel="nofollow" title="Lower Sorbian-English (sample file)" href="Tatoeba/dsb-en_sample.html">view</a></td><td><a rel="nofollow" title="Lower Sorbian-Esperanto (sample file)" href="Tatoeba/dsb-eo_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>dsb</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Lower Sorbian-Japanese (sample file)" href="Tatoeba/dsb-ja_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>dsb</th>
@@ -891,69 +891,69 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Arabic' (0.4k links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/ar-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Arabic' (0.4k links, 0.1M tokens)" href="download.php?f=Tatoeba/ar-el.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-arz' (10 links, 58.6k tokens)" href="download.php?f=Tatoeba/xml/arz-el.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Bulgarian' (47 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/bg-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-arz' (10 links, 58.6k tokens)" href="download.php?f=Tatoeba/arz-el.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Catalan' (46 links, 98.2k tokens)" href="download.php?f=Tatoeba/xml/ca-el.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Bulgarian' (47 links, 0.1M tokens)" href="download.php?f=Tatoeba/bg-el.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-cmn' (8 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-el.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Czech' (13 links, 97.0k tokens)" href="download.php?f=Tatoeba/xml/cs-el.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Catalan' (46 links, 98.2k tokens)" href="download.php?f=Tatoeba/ca-el.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-cmn' (8 links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Czech' (13 links, 97.0k tokens)" href="download.php?f=Tatoeba/cs-el.xml.gz">ces</a></td>
 <th>el</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-German' (4.1k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/de-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-German' (4.1k links, 2.5M tokens)" href="download.php?f=Tatoeba/de-el.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<th><a rel="nofollow" title="Greek-Greek (sample file)" href="Tatoeba/el-el_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Greek-Greek' (61 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/el-el.xml.gz">c</a>
+<th><a rel="nofollow" title="Greek-Greek (sample file)" href="Tatoeba/el-el_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Greek-Greek' (61 links, 0.1M tokens)" href="download.php?f=Tatoeba/el-el.xml.gz">c</a>
 </th><td><a rel="nofollow" title="Greek-English (sample file)" href="Tatoeba/el-en_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Esperanto (sample file)" href="Tatoeba/el-eo_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Spanish (sample file)" href="Tatoeba/el-es_sample.html">view</a></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Greek-French (sample file)" href="Tatoeba/el-fr_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Greek-Galician (sample file)" href="Tatoeba/el-gl_sample.html">view</a></td><td></td><td></td><td></td><td></td><th>el</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Greek-Italian (sample file)" href="Tatoeba/el-it_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Japanese (sample file)" href="Tatoeba/el-ja_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>el</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Greek-Maltese (sample file)" href="Tatoeba/el-mt_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Greek-BokmÃ¥l, Norwegian (sample file)" href="Tatoeba/el-nb_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Low German (sample file)" href="Tatoeba/el-nds_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Dutch (sample file)" href="Tatoeba/el-nl_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Greek-pes (sample file)" href="Tatoeba/el-pes_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Polish (sample file)" href="Tatoeba/el-pl_sample.html">view</a></td><td></td><th>el</th>
 <td></td><td></td><td><a rel="nofollow" title="Greek-Portuguese (sample file)" href="Tatoeba/el-pt_sample.html">view</a></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Greek-Russian (sample file)" href="Tatoeba/el-ru_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>el</th>
 <td></td><td><a rel="nofollow" title="Greek-Turkish (sample file)" href="Tatoeba/el-tr_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Greek-Ukrainian (sample file)" href="Tatoeba/el-uk_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Tatoeba/el.raw.tar.gz">el</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Tatoeba/en.tar.gz">en</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'English-acm' (11 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/acm-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Afrikaans' (1.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/af-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Ainu' (12 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/ain-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-English, Old (ca.450-1100)' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/ang-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (13.0k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/ar-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-arq' (0.4k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/arq-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-arz' (0.5k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/arz-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Asturian' (17 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/ast-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-avk' (50 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/avk-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Azerbaijani' (0.4k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/az-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Belarusian' (2.7k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/be-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Berber languages)' (46.9k links, 4.2M tokens)" href="download.php?f=Tatoeba/xml/ber-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Bulgarian' (11.2k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/bg-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Bengali' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/bn-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Tibetan' (36 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/bod-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Breton' (98 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/br-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Bosnian' (0.3k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/bs-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Catalan' (1.0k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/ca-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Chamorro' (27 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/ch-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-ckt' (1 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/ckt-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-cmn' (31.0k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/cmn-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Czech' (1.5k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/cs-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-acm' (11 links, 3.6M tokens)" href="download.php?f=Tatoeba/acm-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Afrikaans' (1.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/af-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Ainu' (12 links, 3.6M tokens)" href="download.php?f=Tatoeba/ain-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-English, Old (ca.450-1100)' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/ang-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (13.0k links, 3.7M tokens)" href="download.php?f=Tatoeba/ar-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-arq' (0.4k links, 3.6M tokens)" href="download.php?f=Tatoeba/arq-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-arz' (0.5k links, 3.6M tokens)" href="download.php?f=Tatoeba/arz-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Asturian' (17 links, 3.6M tokens)" href="download.php?f=Tatoeba/ast-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-avk' (50 links, 3.6M tokens)" href="download.php?f=Tatoeba/avk-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Azerbaijani' (0.4k links, 3.6M tokens)" href="download.php?f=Tatoeba/az-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Belarusian' (2.7k links, 3.7M tokens)" href="download.php?f=Tatoeba/be-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Berber languages)' (46.9k links, 4.2M tokens)" href="download.php?f=Tatoeba/ber-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Bulgarian' (11.2k links, 3.7M tokens)" href="download.php?f=Tatoeba/bg-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Bengali' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/bn-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Tibetan' (36 links, 3.6M tokens)" href="download.php?f=Tatoeba/bod-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Breton' (98 links, 3.6M tokens)" href="download.php?f=Tatoeba/br-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Bosnian' (0.3k links, 3.6M tokens)" href="download.php?f=Tatoeba/bs-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Catalan' (1.0k links, 3.7M tokens)" href="download.php?f=Tatoeba/ca-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Chamorro' (27 links, 3.6M tokens)" href="download.php?f=Tatoeba/ch-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-ckt' (1 links, 3.6M tokens)" href="download.php?f=Tatoeba/ckt-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-cmn' (31.0k links, 3.7M tokens)" href="download.php?f=Tatoeba/cmn-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Czech' (1.5k links, 3.7M tokens)" href="download.php?f=Tatoeba/cs-en.xml.gz">ces</a></td>
 <th>en</th>
-<td><a rel="nofollow" title="sentence alignments for 'English-Welsh' (0.3k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/cy-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-cycl' (43 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/cycl-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Danish' (8.7k links, 3.8M tokens)" href="download.php?f=Tatoeba/xml/da-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-German' (0.1M links, 6.0M tokens)" href="download.php?f=Tatoeba/xml/de-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Lower Sorbian' (14 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/dsb-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Ewe' (1 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/ee-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (2.5k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/el-en.xml.gz">ces</a></td>
-<th><a rel="nofollow" title="English-English (sample file)" href="Tatoeba/en-en_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'English-English' (3.9k links, 7.3M tokens)" href="download.php?f=Tatoeba/xml/en-en.xml.gz">c</a>
+<td><a rel="nofollow" title="sentence alignments for 'English-Welsh' (0.3k links, 3.6M tokens)" href="download.php?f=Tatoeba/cy-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-cycl' (43 links, 3.6M tokens)" href="download.php?f=Tatoeba/cycl-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Danish' (8.7k links, 3.8M tokens)" href="download.php?f=Tatoeba/da-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-German' (0.1M links, 6.0M tokens)" href="download.php?f=Tatoeba/de-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Lower Sorbian' (14 links, 3.6M tokens)" href="download.php?f=Tatoeba/dsb-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Ewe' (1 links, 3.6M tokens)" href="download.php?f=Tatoeba/ee-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (2.5k links, 3.7M tokens)" href="download.php?f=Tatoeba/el-en.xml.gz">ces</a></td>
+<th><a rel="nofollow" title="English-English (sample file)" href="Tatoeba/en-en_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'English-English' (3.9k links, 7.3M tokens)" href="download.php?f=Tatoeba/en-en.xml.gz">c</a>
 </th><td><a rel="nofollow" title="English-Esperanto (sample file)" href="Tatoeba/en-eo_sample.html">view</a></td><td><a rel="nofollow" title="English-Spanish (sample file)" href="Tatoeba/en-es_sample.html">view</a></td><td><a rel="nofollow" title="English-Estonian (sample file)" href="Tatoeba/en-et_sample.html">view</a></td><td><a rel="nofollow" title="English-Basque (sample file)" href="Tatoeba/en-eu_sample.html">view</a></td><td><a rel="nofollow" title="English-Finnish (sample file)" href="Tatoeba/en-fi_sample.html">view</a></td><td><a rel="nofollow" title="English-Faroese (sample file)" href="Tatoeba/en-fo_sample.html">view</a></td><td><a rel="nofollow" title="English-French (sample file)" href="Tatoeba/en-fr_sample.html">view</a></td><td><a rel="nofollow" title="English-Western Frisian (sample file)" href="Tatoeba/en-fy_sample.html">view</a></td><td><a rel="nofollow" title="English-Irish (sample file)" href="Tatoeba/en-ga_sample.html">view</a></td><td><a rel="nofollow" title="English-Gaelic (sample file)" href="Tatoeba/en-gd_sample.html">view</a></td><td><a rel="nofollow" title="English-Galician (sample file)" href="Tatoeba/en-gl_sample.html">view</a></td><td><a rel="nofollow" title="English-Guarani (sample file)" href="Tatoeba/en-gn_sample.html">view</a></td><td><a rel="nofollow" title="English-Hebrew (sample file)" href="Tatoeba/en-he_sample.html">view</a></td><td><a rel="nofollow" title="English-Hindi (sample file)" href="Tatoeba/en-hi_sample.html">view</a></td><td></td><th>en</th>
 <td><a rel="nofollow" title="English-Croatian (sample file)" href="Tatoeba/en-hr_sample.html">view</a></td><td><a rel="nofollow" title="English-Upper Sorbian (sample file)" href="Tatoeba/en-hsb_sample.html">view</a></td><td><a rel="nofollow" title="English-Hungarian (sample file)" href="Tatoeba/en-hu_sample.html">view</a></td><td><a rel="nofollow" title="English-Armenian (sample file)" href="Tatoeba/en-hy_sample.html">view</a></td><td><a rel="nofollow" title="English-Interlingua (International Auxiliary Language Association) (sample file)" href="Tatoeba/en-ia_sample.html">view</a></td><td><a rel="nofollow" title="English-Indonesian (sample file)" href="Tatoeba/en-id_sample.html">view</a></td><td><a rel="nofollow" title="English-Interlingue (sample file)" href="Tatoeba/en-ie_sample.html">view</a></td><td><a rel="nofollow" title="English-Ido (sample file)" href="Tatoeba/en-io_sample.html">view</a></td><td><a rel="nofollow" title="English-Icelandic (sample file)" href="Tatoeba/en-is_sample.html">view</a></td><td><a rel="nofollow" title="English-Italian (sample file)" href="Tatoeba/en-it_sample.html">view</a></td><td><a rel="nofollow" title="English-Japanese (sample file)" href="Tatoeba/en-ja_sample.html">view</a></td><td><a rel="nofollow" title="English-Lojban (sample file)" href="Tatoeba/en-jbo_sample.html">view</a></td><td><a rel="nofollow" title="English-Georgian (sample file)" href="Tatoeba/en-ka_sample.html">view</a></td><td><a rel="nofollow" title="English-Kazakh (sample file)" href="Tatoeba/en-kk_sample.html">view</a></td><td><a rel="nofollow" title="English-Central Khmer (sample file)" href="Tatoeba/en-km_sample.html">view</a></td><td><a rel="nofollow" title="English-Korean (sample file)" href="Tatoeba/en-ko_sample.html">view</a></td><td><a rel="nofollow" title="English-ksh (sample file)" href="Tatoeba/en-ksh_sample.html">view</a></td><td><a rel="nofollow" title="English-Kurdish (sample file)" href="Tatoeba/en-ku_sample.html">view</a></td><td><a rel="nofollow" title="English-Cornish (sample file)" href="Tatoeba/en-kw_sample.html">view</a></td><td><a rel="nofollow" title="English-Latin (sample file)" href="Tatoeba/en-la_sample.html">view</a></td><td><a rel="nofollow" title="English-Ladino (sample file)" href="Tatoeba/en-lad_sample.html">view</a></td><td><a rel="nofollow" title="English-lld (sample file)" href="Tatoeba/en-lld_sample.html">view</a></td><td><a rel="nofollow" title="English-Lao (sample file)" href="Tatoeba/en-lo_sample.html">view</a></td><th>en</th>
 <td><a rel="nofollow" title="English-Lithuanian (sample file)" href="Tatoeba/en-lt_sample.html">view</a></td><td><a rel="nofollow" title="English-Latvian (sample file)" href="Tatoeba/en-lv_sample.html">view</a></td><td><a rel="nofollow" title="English-lzh (sample file)" href="Tatoeba/en-lzh_sample.html">view</a></td><td><a rel="nofollow" title="English-Malagasy (sample file)" href="Tatoeba/en-mg_sample.html">view</a></td><td><a rel="nofollow" title="English-Maori (sample file)" href="Tatoeba/en-mi_sample.html">view</a></td><td><a rel="nofollow" title="English-Malayalam (sample file)" href="Tatoeba/en-ml_sample.html">view</a></td><td><a rel="nofollow" title="English-Mongolian (sample file)" href="Tatoeba/en-mn_sample.html">view</a></td><td><a rel="nofollow" title="English-Marathi (sample file)" href="Tatoeba/en-mr_sample.html">view</a></td><td><a rel="nofollow" title="English-Maltese (sample file)" href="Tatoeba/en-mt_sample.html">view</a></td><td><a rel="nofollow" title="English-nan (sample file)" href="Tatoeba/en-nan_sample.html">view</a></td><td><a rel="nofollow" title="English-BokmÃ¥l, Norwegian (sample file)" href="Tatoeba/en-nb_sample.html">view</a></td><td><a rel="nofollow" title="English-Low German (sample file)" href="Tatoeba/en-nds_sample.html">view</a></td><td><a rel="nofollow" title="English-Dutch (sample file)" href="Tatoeba/en-nl_sample.html">view</a></td><td><a rel="nofollow" title="English-Norse, Old (sample file)" href="Tatoeba/en-non_sample.html">view</a></td><td><a rel="nofollow" title="English-nov (sample file)" href="Tatoeba/en-nov_sample.html">view</a></td><td><a rel="nofollow" title="English-npi (sample file)" href="Tatoeba/en-npi_sample.html">view</a></td><td><a rel="nofollow" title="English-Occitan (post 1500) (sample file)" href="Tatoeba/en-oc_sample.html">view</a></td><td><a rel="nofollow" title="English-orv (sample file)" href="Tatoeba/en-orv_sample.html">view</a></td><td><a rel="nofollow" title="English-Ossetian (sample file)" href="Tatoeba/en-os_sample.html">view</a></td><td></td><td><a rel="nofollow" title="English-pes (sample file)" href="Tatoeba/en-pes_sample.html">view</a></td><td><a rel="nofollow" title="English-Polish (sample file)" href="Tatoeba/en-pl_sample.html">view</a></td><td><a rel="nofollow" title="English-pms (sample file)" href="Tatoeba/en-pms_sample.html">view</a></td><th>en</th>
@@ -961,37 +961,37 @@
 <td><a rel="nofollow" title="English-tpw (sample file)" href="Tatoeba/en-tpw_sample.html">view</a></td><td><a rel="nofollow" title="English-Turkish (sample file)" href="Tatoeba/en-tr_sample.html">view</a></td><td><a rel="nofollow" title="English-Tatar (sample file)" href="Tatoeba/en-tt_sample.html">view</a></td><td><a rel="nofollow" title="English-Uighur (sample file)" href="Tatoeba/en-ug_sample.html">view</a></td><td><a rel="nofollow" title="English-Ukrainian (sample file)" href="Tatoeba/en-uk_sample.html">view</a></td><td><a rel="nofollow" title="English-Urdu (sample file)" href="Tatoeba/en-ur_sample.html">view</a></td><td><a rel="nofollow" title="English-Uzbek (sample file)" href="Tatoeba/en-uz_sample.html">view</a></td><td><a rel="nofollow" title="English-Vietnamese (sample file)" href="Tatoeba/en-vi_sample.html">view</a></td><td><a rel="nofollow" title="English-VolapÃ¼k (sample file)" href="Tatoeba/en-vo_sample.html">view</a></td><td><a rel="nofollow" title="English-wuu (sample file)" href="Tatoeba/en-wuu_sample.html">view</a></td><td><a rel="nofollow" title="English-Kalmyk (sample file)" href="Tatoeba/en-xal_sample.html">view</a></td><td><a rel="nofollow" title="English-Xhosa (sample file)" href="Tatoeba/en-xh_sample.html">view</a></td><td><a rel="nofollow" title="English-Yiddish (sample file)" href="Tatoeba/en-yi_sample.html">view</a></td><td><a rel="nofollow" title="English-yue (sample file)" href="Tatoeba/en-yue_sample.html">view</a></td><td><a rel="nofollow" title="English-zsm (sample file)" href="Tatoeba/en-zsm_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=Tatoeba/en.raw.tar.gz">en</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Tatoeba/eo.tar.gz">eo</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Afrikaans' (0.6k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/af-eo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Afrikaans' (0.6k links, 2.6M tokens)" href="download.php?f=Tatoeba/af-eo.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-English, Old (ca.450-1100)' (36 links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/ang-eo.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Arabic' (0.3k links, 2.7M tokens)" href="download.php?f=Tatoeba/xml/ar-eo.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-English, Old (ca.450-1100)' (36 links, 2.6M tokens)" href="download.php?f=Tatoeba/ang-eo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Arabic' (0.3k links, 2.7M tokens)" href="download.php?f=Tatoeba/ar-eo.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Belarusian' (0.6k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/be-eo.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Berber languages)' (1.4k links, 3.1M tokens)" href="download.php?f=Tatoeba/xml/ber-eo.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Bulgarian' (0.5k links, 2.7M tokens)" href="download.php?f=Tatoeba/xml/bg-eo.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Breton' (0.1k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/br-eo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Belarusian' (0.6k links, 2.6M tokens)" href="download.php?f=Tatoeba/be-eo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Berber languages)' (1.4k links, 3.1M tokens)" href="download.php?f=Tatoeba/ber-eo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Bulgarian' (0.5k links, 2.7M tokens)" href="download.php?f=Tatoeba/bg-eo.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Catalan' (0.4k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/ca-eo.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Breton' (0.1k links, 2.6M tokens)" href="download.php?f=Tatoeba/br-eo.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Catalan' (0.4k links, 2.6M tokens)" href="download.php?f=Tatoeba/ca-eo.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-cmn' (3.0k links, 2.7M tokens)" href="download.php?f=Tatoeba/xml/cmn-eo.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Czech' (1.8k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/cs-eo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-cmn' (3.0k links, 2.7M tokens)" href="download.php?f=Tatoeba/cmn-eo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Czech' (1.8k links, 2.6M tokens)" href="download.php?f=Tatoeba/cs-eo.xml.gz">ces</a></td>
 <th>eo</th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Danish' (10.3k links, 2.7M tokens)" href="download.php?f=Tatoeba/xml/da-eo.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-German' (0.1M links, 5.0M tokens)" href="download.php?f=Tatoeba/xml/de-eo.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Lower Sorbian' (73 links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/dsb-eo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Danish' (10.3k links, 2.7M tokens)" href="download.php?f=Tatoeba/da-eo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-German' (0.1M links, 5.0M tokens)" href="download.php?f=Tatoeba/de-eo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Lower Sorbian' (73 links, 2.6M tokens)" href="download.php?f=Tatoeba/dsb-eo.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Greek' (0.3k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/el-eo.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-English' (0.1M links, 6.2M tokens)" href="download.php?f=Tatoeba/xml/en-eo.xml.gz">ces</a></td>
-<th><a rel="nofollow" title="Esperanto-Esperanto (sample file)" href="Tatoeba/eo-eo_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Esperanto-Esperanto' (6.9k links, 5.1M tokens)" href="download.php?f=Tatoeba/xml/eo-eo.xml.gz">c</a>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Greek' (0.3k links, 2.6M tokens)" href="download.php?f=Tatoeba/el-eo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-English' (0.1M links, 6.2M tokens)" href="download.php?f=Tatoeba/en-eo.xml.gz">ces</a></td>
+<th><a rel="nofollow" title="Esperanto-Esperanto (sample file)" href="Tatoeba/eo-eo_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Esperanto-Esperanto' (6.9k links, 5.1M tokens)" href="download.php?f=Tatoeba/eo-eo.xml.gz">c</a>
 </th><td><a rel="nofollow" title="Esperanto-Spanish (sample file)" href="Tatoeba/eo-es_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Esperanto-Basque (sample file)" href="Tatoeba/eo-eu_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Finnish (sample file)" href="Tatoeba/eo-fi_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Faroese (sample file)" href="Tatoeba/eo-fo_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-French (sample file)" href="Tatoeba/eo-fr_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Western Frisian (sample file)" href="Tatoeba/eo-fy_sample.html">view</a></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Esperanto-Hebrew (sample file)" href="Tatoeba/eo-he_sample.html">view</a></td><td></td><td></td><th>eo</th>
 <td><a rel="nofollow" title="Esperanto-Croatian (sample file)" href="Tatoeba/eo-hr_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Upper Sorbian (sample file)" href="Tatoeba/eo-hsb_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Hungarian (sample file)" href="Tatoeba/eo-hu_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Armenian (sample file)" href="Tatoeba/eo-hy_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Interlingua (International Auxiliary Language Association) (sample file)" href="Tatoeba/eo-ia_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Indonesian (sample file)" href="Tatoeba/eo-id_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Interlingue (sample file)" href="Tatoeba/eo-ie_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Ido (sample file)" href="Tatoeba/eo-io_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Icelandic (sample file)" href="Tatoeba/eo-is_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Italian (sample file)" href="Tatoeba/eo-it_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Japanese (sample file)" href="Tatoeba/eo-ja_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Lojban (sample file)" href="Tatoeba/eo-jbo_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Esperanto-Kazakh (sample file)" href="Tatoeba/eo-kk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Esperanto-Korean (sample file)" href="Tatoeba/eo-ko_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Esperanto-Latin (sample file)" href="Tatoeba/eo-la_sample.html">view</a></td><td></td><td></td><td></td><th>eo</th>
 <td><a rel="nofollow" title="Esperanto-Lithuanian (sample file)" href="Tatoeba/eo-lt_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Esperanto-BokmÃ¥l, Norwegian (sample file)" href="Tatoeba/eo-nb_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Low German (sample file)" href="Tatoeba/eo-nds_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Dutch (sample file)" href="Tatoeba/eo-nl_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Norse, Old (sample file)" href="Tatoeba/eo-non_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Esperanto-orv (sample file)" href="Tatoeba/eo-orv_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Ossetian (sample file)" href="Tatoeba/eo-os_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Esperanto-pes (sample file)" href="Tatoeba/eo-pes_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Polish (sample file)" href="Tatoeba/eo-pl_sample.html">view</a></td><td></td><th>eo</th>
@@ -999,38 +999,38 @@
 <td></td><td><a rel="nofollow" title="Esperanto-Turkish (sample file)" href="Tatoeba/eo-tr_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-Tatar (sample file)" href="Tatoeba/eo-tt_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Esperanto-Ukrainian (sample file)" href="Tatoeba/eo-uk_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Esperanto-Vietnamese (sample file)" href="Tatoeba/eo-vi_sample.html">view</a></td><td><a rel="nofollow" title="Esperanto-VolapÃ¼k (sample file)" href="Tatoeba/eo-vo_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Tatoeba/eo.raw.tar.gz">eo</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Tatoeba/es.tar.gz">es</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Afrikaans' (0.2k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/af-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Afrikaans' (0.2k links, 1.7M tokens)" href="download.php?f=Tatoeba/af-es.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-English, Old (ca.450-1100)' (11 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/ang-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Arabic' (1.9k links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/ar-es.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Asturian' (30 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/ast-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-avk' (0.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/avk-es.xml.gz">ces</a></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Belarusian' (0.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/be-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Berber languages)' (9.2k links, 2.2M tokens)" href="download.php?f=Tatoeba/xml/ber-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Bulgarian' (0.1k links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/bg-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-English, Old (ca.450-1100)' (11 links, 1.7M tokens)" href="download.php?f=Tatoeba/ang-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Arabic' (1.9k links, 1.8M tokens)" href="download.php?f=Tatoeba/ar-es.xml.gz">ces</a></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Asturian' (30 links, 1.7M tokens)" href="download.php?f=Tatoeba/ast-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-avk' (0.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/avk-es.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Bosnian' (23 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/bs-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Catalan' (2.2k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/ca-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Belarusian' (0.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/be-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Berber languages)' (9.2k links, 2.2M tokens)" href="download.php?f=Tatoeba/ber-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Bulgarian' (0.1k links, 1.8M tokens)" href="download.php?f=Tatoeba/bg-es.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-cmn' (5.1k links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/cmn-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Czech' (93 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/cs-es.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Bosnian' (23 links, 1.7M tokens)" href="download.php?f=Tatoeba/bs-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Catalan' (2.2k links, 1.7M tokens)" href="download.php?f=Tatoeba/ca-es.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-cmn' (5.1k links, 1.8M tokens)" href="download.php?f=Tatoeba/cmn-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Czech' (93 links, 1.7M tokens)" href="download.php?f=Tatoeba/cs-es.xml.gz">ces</a></td>
 <th>es</th>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Welsh' (1 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/cy-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-cycl' (3 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/cycl-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Danish' (8.1k links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/da-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (63.4k links, 4.1M tokens)" href="download.php?f=Tatoeba/xml/de-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Welsh' (1 links, 1.7M tokens)" href="download.php?f=Tatoeba/cy-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-cycl' (3 links, 1.7M tokens)" href="download.php?f=Tatoeba/cycl-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Danish' (8.1k links, 1.8M tokens)" href="download.php?f=Tatoeba/da-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (63.4k links, 4.1M tokens)" href="download.php?f=Tatoeba/de-es.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Greek' (1.7k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/el-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (0.1M links, 5.3M tokens)" href="download.php?f=Tatoeba/xml/en-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Esperanto' (51.5k links, 4.2M tokens)" href="download.php?f=Tatoeba/xml/eo-es.xml.gz">ces</a></td>
-<th><a rel="nofollow" title="Spanish-Spanish (sample file)" href="Tatoeba/es-es_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Spanish-Spanish' (2.6k links, 3.4M tokens)" href="download.php?f=Tatoeba/xml/es-es.xml.gz">c</a>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Greek' (1.7k links, 1.7M tokens)" href="download.php?f=Tatoeba/el-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (0.1M links, 5.3M tokens)" href="download.php?f=Tatoeba/en-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Esperanto' (51.5k links, 4.2M tokens)" href="download.php?f=Tatoeba/eo-es.xml.gz">ces</a></td>
+<th><a rel="nofollow" title="Spanish-Spanish (sample file)" href="Tatoeba/es-es_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Spanish-Spanish' (2.6k links, 3.4M tokens)" href="download.php?f=Tatoeba/es-es.xml.gz">c</a>
 </th><td><a rel="nofollow" title="Spanish-Estonian (sample file)" href="Tatoeba/es-et_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Basque (sample file)" href="Tatoeba/es-eu_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Finnish (sample file)" href="Tatoeba/es-fi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Spanish-French (sample file)" href="Tatoeba/es-fr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Western Frisian (sample file)" href="Tatoeba/es-fy_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Spanish-Gaelic (sample file)" href="Tatoeba/es-gd_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Galician (sample file)" href="Tatoeba/es-gl_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Guarani (sample file)" href="Tatoeba/es-gn_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Hebrew (sample file)" href="Tatoeba/es-he_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Hindi (sample file)" href="Tatoeba/es-hi_sample.html">view</a></td><td></td><th>es</th>
 <td><a rel="nofollow" title="Spanish-Croatian (sample file)" href="Tatoeba/es-hr_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Spanish-Hungarian (sample file)" href="Tatoeba/es-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Spanish-Interlingua (International Auxiliary Language Association) (sample file)" href="Tatoeba/es-ia_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Indonesian (sample file)" href="Tatoeba/es-id_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Spanish-Ido (sample file)" href="Tatoeba/es-io_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Icelandic (sample file)" href="Tatoeba/es-is_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Italian (sample file)" href="Tatoeba/es-it_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Japanese (sample file)" href="Tatoeba/es-ja_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Lojban (sample file)" href="Tatoeba/es-jbo_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Spanish-Korean (sample file)" href="Tatoeba/es-ko_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Spanish-Latin (sample file)" href="Tatoeba/es-la_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Spanish-lld (sample file)" href="Tatoeba/es-lld_sample.html">view</a></td><td></td><th>es</th>
 <td><a rel="nofollow" title="Spanish-Lithuanian (sample file)" href="Tatoeba/es-lt_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Spanish-lzh (sample file)" href="Tatoeba/es-lzh_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Spanish-Mongolian (sample file)" href="Tatoeba/es-mn_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Spanish-Maltese (sample file)" href="Tatoeba/es-mt_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Spanish-BokmÃ¥l, Norwegian (sample file)" href="Tatoeba/es-nb_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Low German (sample file)" href="Tatoeba/es-nds_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Dutch (sample file)" href="Tatoeba/es-nl_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Norse, Old (sample file)" href="Tatoeba/es-non_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Spanish-Occitan (post 1500) (sample file)" href="Tatoeba/es-oc_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Spanish-pes (sample file)" href="Tatoeba/es-pes_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Polish (sample file)" href="Tatoeba/es-pl_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-pms (sample file)" href="Tatoeba/es-pms_sample.html">view</a></td><th>es</th>
@@ -1063,13 +1063,13 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-German' (53 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-German' (53 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-et.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-English' (0.7k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-English' (0.7k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-et.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Spanish' (10 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Spanish' (10 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-et.xml.gz">ces</a></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="Estonian-Finnish (sample file)" href="Tatoeba/et-fi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Estonian-French (sample file)" href="Tatoeba/et-fr_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>et</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Estonian-Japanese (sample file)" href="Tatoeba/et-ja_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>et</th>
@@ -1097,19 +1097,19 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Basque-cmn' (70 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-eu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Basque-cmn' (70 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-eu.xml.gz">ces</a></td>
 <td></td>
 <th>eu</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Basque-German' (48 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-eu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Basque-German' (48 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-eu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Basque-English' (0.4k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-eu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Basque-Esperanto' (59 links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-eu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Basque-Spanish' (0.9k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-eu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Basque-English' (0.4k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-eu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Basque-Esperanto' (59 links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-eu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Basque-Spanish' (0.9k links, 1.7M tokens)" href="download.php?f=Tatoeba/es-eu.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td></td><td></td><td><a rel="nofollow" title="Basque-French (sample file)" href="Tatoeba/eu-fr_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>eu</th>
@@ -1130,30 +1130,30 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Bulgarian' (3 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/bg-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Bulgarian' (3 links, 0.2M tokens)" href="download.php?f=Tatoeba/bg-fi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Catalan' (2 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/ca-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Catalan' (2 links, 0.2M tokens)" href="download.php?f=Tatoeba/ca-fi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-cmn' (95 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Czech' (6 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cs-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-cmn' (95 links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Czech' (6 links, 0.2M tokens)" href="download.php?f=Tatoeba/cs-fi.xml.gz">ces</a></td>
 <th>fi</th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Danish' (0.1k links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/da-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-German' (3.2k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/de-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Danish' (0.1k links, 0.3M tokens)" href="download.php?f=Tatoeba/da-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-German' (3.2k links, 2.5M tokens)" href="download.php?f=Tatoeba/de-fi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-English' (12.2k links, 3.8M tokens)" href="download.php?f=Tatoeba/xml/en-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Esperanto' (0.7k links, 2.7M tokens)" href="download.php?f=Tatoeba/xml/eo-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Spanish' (1.6k links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/es-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Estonian' (33 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/et-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-English' (12.2k links, 3.8M tokens)" href="download.php?f=Tatoeba/en-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Esperanto' (0.7k links, 2.7M tokens)" href="download.php?f=Tatoeba/eo-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Spanish' (1.6k links, 1.8M tokens)" href="download.php?f=Tatoeba/es-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Estonian' (33 links, 0.1M tokens)" href="download.php?f=Tatoeba/et-fi.xml.gz">ces</a></td>
 <td></td>
-<th><a rel="nofollow" title="Finnish-Finnish (sample file)" href="Tatoeba/fi-fi_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Finnish-Finnish' (73 links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/fi-fi.xml.gz">c</a>
+<th><a rel="nofollow" title="Finnish-Finnish (sample file)" href="Tatoeba/fi-fi_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Finnish-Finnish' (73 links, 0.3M tokens)" href="download.php?f=Tatoeba/fi-fi.xml.gz">c</a>
 </th><td></td><td><a rel="nofollow" title="Finnish-French (sample file)" href="Tatoeba/fi-fr_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Finnish-Hebrew (sample file)" href="Tatoeba/fi-he_sample.html">view</a></td><td></td><td></td><th>fi</th>
 <td></td><td></td><td><a rel="nofollow" title="Finnish-Hungarian (sample file)" href="Tatoeba/fi-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Finnish-Interlingua (International Auxiliary Language Association) (sample file)" href="Tatoeba/fi-ia_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Indonesian (sample file)" href="Tatoeba/fi-id_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Finnish-Italian (sample file)" href="Tatoeba/fi-it_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Japanese (sample file)" href="Tatoeba/fi-ja_sample.html">view</a></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Finnish-Korean (sample file)" href="Tatoeba/fi-ko_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>fi</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Finnish-Dutch (sample file)" href="Tatoeba/fi-nl_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Finnish-Polish (sample file)" href="Tatoeba/fi-pl_sample.html">view</a></td><td></td><th>fi</th>
@@ -1180,8 +1180,8 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Faroese-cmn' (1 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-fo.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Faroese-Czech' (1 links, 41.4k tokens)" href="download.php?f=Tatoeba/xml/cs-fo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Faroese-cmn' (1 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-fo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Faroese-Czech' (1 links, 41.4k tokens)" href="download.php?f=Tatoeba/cs-fo.xml.gz">ces</a></td>
 <th>fo</th>
 <td></td>
 <td></td>
@@ -1190,8 +1190,8 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Faroese-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-fo.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Faroese-Esperanto' (4 links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-fo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Faroese-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-fo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Faroese-Esperanto' (4 links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-fo.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1204,43 +1204,43 @@
 <td></td><td><a rel="nofollow" title="Faroese-Turkish (sample file)" href="Tatoeba/fo-tr_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Tatoeba/fo.raw.tar.gz">fo</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Tatoeba/fr.tar.gz">fr</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Afrikaans' (100 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/af-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Ainu' (6 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/ain-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English, Old (ca.450-1100)' (35 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/ang-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Arabic' (0.6k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/ar-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-arq' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/arq-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Afrikaans' (100 links, 1.3M tokens)" href="download.php?f=Tatoeba/af-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Ainu' (6 links, 1.3M tokens)" href="download.php?f=Tatoeba/ain-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English, Old (ca.450-1100)' (35 links, 1.3M tokens)" href="download.php?f=Tatoeba/ang-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Arabic' (0.6k links, 1.4M tokens)" href="download.php?f=Tatoeba/ar-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-arq' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/arq-fr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Asturian' (5 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/ast-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-avk' (0.9k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/avk-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Asturian' (5 links, 1.3M tokens)" href="download.php?f=Tatoeba/ast-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-avk' (0.9k links, 1.3M tokens)" href="download.php?f=Tatoeba/avk-fr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Belarusian' (86 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/be-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Berber languages)' (30.2k links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/ber-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Bulgarian' (0.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/bg-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Bengali' (4 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/bn-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Belarusian' (86 links, 1.3M tokens)" href="download.php?f=Tatoeba/be-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Berber languages)' (30.2k links, 1.8M tokens)" href="download.php?f=Tatoeba/ber-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Bulgarian' (0.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/bg-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Bengali' (4 links, 1.3M tokens)" href="download.php?f=Tatoeba/bn-fr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Breton' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/br-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Bosnian' (32 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/bs-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Catalan' (0.5k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/ca-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Chamorro' (1 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/ch-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Breton' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/br-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Bosnian' (32 links, 1.3M tokens)" href="download.php?f=Tatoeba/bs-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Catalan' (0.5k links, 1.3M tokens)" href="download.php?f=Tatoeba/ca-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Chamorro' (1 links, 1.3M tokens)" href="download.php?f=Tatoeba/ch-fr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-cmn' (15.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/cmn-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Czech' (0.1k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/cs-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-cmn' (15.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/cmn-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Czech' (0.1k links, 1.3M tokens)" href="download.php?f=Tatoeba/cs-fr.xml.gz">ces</a></td>
 <th>fr</th>
-<td><a rel="nofollow" title="sentence alignments for 'French-Welsh' (9 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/cy-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-cycl' (15 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/cycl-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Danish' (1.0k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/da-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-German' (66.4k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/de-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Welsh' (9 links, 1.3M tokens)" href="download.php?f=Tatoeba/cy-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-cycl' (15 links, 1.3M tokens)" href="download.php?f=Tatoeba/cycl-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Danish' (1.0k links, 1.4M tokens)" href="download.php?f=Tatoeba/da-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-German' (66.4k links, 3.7M tokens)" href="download.php?f=Tatoeba/de-fr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Greek' (0.6k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/el-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English' (0.1M links, 4.9M tokens)" href="download.php?f=Tatoeba/xml/en-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Esperanto' (0.1M links, 3.9M tokens)" href="download.php?f=Tatoeba/xml/eo-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (33.8k links, 3.0M tokens)" href="download.php?f=Tatoeba/xml/es-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Estonian' (6 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/et-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Basque' (92 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/eu-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Finnish' (0.5k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/fi-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Faroese' (1 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fo-fr.xml.gz">ces</a></td>
-<th><a rel="nofollow" title="French-French (sample file)" href="Tatoeba/fr-fr_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'French-French' (1.5k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/fr-fr.xml.gz">c</a>
+<td><a rel="nofollow" title="sentence alignments for 'French-Greek' (0.6k links, 1.4M tokens)" href="download.php?f=Tatoeba/el-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English' (0.1M links, 4.9M tokens)" href="download.php?f=Tatoeba/en-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Esperanto' (0.1M links, 3.9M tokens)" href="download.php?f=Tatoeba/eo-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (33.8k links, 3.0M tokens)" href="download.php?f=Tatoeba/es-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Estonian' (6 links, 1.3M tokens)" href="download.php?f=Tatoeba/et-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Basque' (92 links, 1.3M tokens)" href="download.php?f=Tatoeba/eu-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Finnish' (0.5k links, 1.4M tokens)" href="download.php?f=Tatoeba/fi-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Faroese' (1 links, 1.3M tokens)" href="download.php?f=Tatoeba/fo-fr.xml.gz">ces</a></td>
+<th><a rel="nofollow" title="French-French (sample file)" href="Tatoeba/fr-fr_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'French-French' (1.5k links, 2.6M tokens)" href="download.php?f=Tatoeba/fr-fr.xml.gz">c</a>
 </th><td><a rel="nofollow" title="French-Western Frisian (sample file)" href="Tatoeba/fr-fy_sample.html">view</a></td><td><a rel="nofollow" title="French-Irish (sample file)" href="Tatoeba/fr-ga_sample.html">view</a></td><td><a rel="nofollow" title="French-Gaelic (sample file)" href="Tatoeba/fr-gd_sample.html">view</a></td><td><a rel="nofollow" title="French-Galician (sample file)" href="Tatoeba/fr-gl_sample.html">view</a></td><td><a rel="nofollow" title="French-Guarani (sample file)" href="Tatoeba/fr-gn_sample.html">view</a></td><td><a rel="nofollow" title="French-Hebrew (sample file)" href="Tatoeba/fr-he_sample.html">view</a></td><td><a rel="nofollow" title="French-Hindi (sample file)" href="Tatoeba/fr-hi_sample.html">view</a></td><td></td><th>fr</th>
 <td><a rel="nofollow" title="French-Croatian (sample file)" href="Tatoeba/fr-hr_sample.html">view</a></td><td></td><td><a rel="nofollow" title="French-Hungarian (sample file)" href="Tatoeba/fr-hu_sample.html">view</a></td><td><a rel="nofollow" title="French-Armenian (sample file)" href="Tatoeba/fr-hy_sample.html">view</a></td><td><a rel="nofollow" title="French-Interlingua (International Auxiliary Language Association) (sample file)" href="Tatoeba/fr-ia_sample.html">view</a></td><td><a rel="nofollow" title="French-Indonesian (sample file)" href="Tatoeba/fr-id_sample.html">view</a></td><td><a rel="nofollow" title="French-Interlingue (sample file)" href="Tatoeba/fr-ie_sample.html">view</a></td><td><a rel="nofollow" title="French-Ido (sample file)" href="Tatoeba/fr-io_sample.html">view</a></td><td><a rel="nofollow" title="French-Icelandic (sample file)" href="Tatoeba/fr-is_sample.html">view</a></td><td><a rel="nofollow" title="French-Italian (sample file)" href="Tatoeba/fr-it_sample.html">view</a></td><td><a rel="nofollow" title="French-Japanese (sample file)" href="Tatoeba/fr-ja_sample.html">view</a></td><td><a rel="nofollow" title="French-Lojban (sample file)" href="Tatoeba/fr-jbo_sample.html">view</a></td><td></td><td><a rel="nofollow" title="French-Kazakh (sample file)" href="Tatoeba/fr-kk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="French-Korean (sample file)" href="Tatoeba/fr-ko_sample.html">view</a></td><td></td><td><a rel="nofollow" title="French-Kurdish (sample file)" href="Tatoeba/fr-ku_sample.html">view</a></td><td></td><td><a rel="nofollow" title="French-Latin (sample file)" href="Tatoeba/fr-la_sample.html">view</a></td><td></td><td><a rel="nofollow" title="French-lld (sample file)" href="Tatoeba/fr-lld_sample.html">view</a></td><td><a rel="nofollow" title="French-Lao (sample file)" href="Tatoeba/fr-lo_sample.html">view</a></td><th>fr</th>
 <td><a rel="nofollow" title="French-Lithuanian (sample file)" href="Tatoeba/fr-lt_sample.html">view</a></td><td><a rel="nofollow" title="French-Latvian (sample file)" href="Tatoeba/fr-lv_sample.html">view</a></td><td><a rel="nofollow" title="French-lzh (sample file)" href="Tatoeba/fr-lzh_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="French-Mongolian (sample file)" href="Tatoeba/fr-mn_sample.html">view</a></td><td></td><td><a rel="nofollow" title="French-Maltese (sample file)" href="Tatoeba/fr-mt_sample.html">view</a></td><td></td><td><a rel="nofollow" title="French-BokmÃ¥l, Norwegian (sample file)" href="Tatoeba/fr-nb_sample.html">view</a></td><td><a rel="nofollow" title="French-Low German (sample file)" href="Tatoeba/fr-nds_sample.html">view</a></td><td><a rel="nofollow" title="French-Dutch (sample file)" href="Tatoeba/fr-nl_sample.html">view</a></td><td><a rel="nofollow" title="French-Norse, Old (sample file)" href="Tatoeba/fr-non_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="French-Occitan (post 1500) (sample file)" href="Tatoeba/fr-oc_sample.html">view</a></td><td><a rel="nofollow" title="French-orv (sample file)" href="Tatoeba/fr-orv_sample.html">view</a></td><td><a rel="nofollow" title="French-Ossetian (sample file)" href="Tatoeba/fr-os_sample.html">view</a></td><td><a rel="nofollow" title="French-pcd (sample file)" href="Tatoeba/fr-pcd_sample.html">view</a></td><td><a rel="nofollow" title="French-pes (sample file)" href="Tatoeba/fr-pes_sample.html">view</a></td><td><a rel="nofollow" title="French-Polish (sample file)" href="Tatoeba/fr-pl_sample.html">view</a></td><td></td><th>fr</th>
@@ -1267,24 +1267,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Western Frisian-cmn' (9 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-fy.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Western Frisian-Czech' (4 links, 41.5k tokens)" href="download.php?f=Tatoeba/xml/cs-fy.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Western Frisian-cmn' (9 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-fy.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Western Frisian-Czech' (4 links, 41.5k tokens)" href="download.php?f=Tatoeba/cs-fy.xml.gz">ces</a></td>
 <th>fy</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Western Frisian-German' (48 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-fy.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Western Frisian-German' (48 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-fy.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Western Frisian-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-fy.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Western Frisian-Esperanto' (11 links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-fy.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Western Frisian-Spanish' (29 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-fy.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Western Frisian-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-fy.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Western Frisian-Esperanto' (11 links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-fy.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Western Frisian-Spanish' (29 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-fy.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Western Frisian-French' (42 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-fy.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Western Frisian-French' (42 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-fy.xml.gz">ces</a></td>
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>fy</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Western Frisian-Italian (sample file)" href="Tatoeba/fy-it_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>fy</th>
@@ -1322,14 +1322,14 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Irish-English' (0.5k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-ga.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Irish-English' (0.5k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-ga.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Irish-French' (5 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-ga.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Irish-French' (5 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-ga.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><th>ga</th>
@@ -1364,18 +1364,18 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Gaelic-German' (0.1k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-gd.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Gaelic-German' (0.1k links, 2.4M tokens)" href="download.php?f=Tatoeba/de-gd.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Gaelic-English' (0.3k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-gd.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Gaelic-English' (0.3k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-gd.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Spanish' (0.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-gd.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Spanish' (0.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/es-gd.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Gaelic-French' (0.1k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-gd.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Gaelic-French' (0.1k links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-gd.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th></th>
@@ -1405,24 +1405,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Galician-cmn' (8 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-gl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Galician-cmn' (8 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-gl.xml.gz">ces</a></td>
 <td></td>
 <th>gl</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Galician-German' (65 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-gl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Galician-German' (65 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-gl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Galician-Greek' (5 links, 87.2k tokens)" href="download.php?f=Tatoeba/xml/el-gl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Galician-English' (0.8k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-gl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Galician-Greek' (5 links, 87.2k tokens)" href="download.php?f=Tatoeba/el-gl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Galician-English' (0.8k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-gl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Galician-Spanish' (2.8k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-gl.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Galician-Spanish' (2.8k links, 1.7M tokens)" href="download.php?f=Tatoeba/es-gl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Galician-French' (73 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-gl.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Galician-French' (73 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-gl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1453,7 +1453,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Guarani-cmn' (20 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-gn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Guarani-cmn' (20 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-gn.xml.gz">ces</a></td>
 <td></td>
 <th>gn</th>
 <td></td>
@@ -1463,14 +1463,14 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Guarani-English' (81 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-gn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Guarani-English' (81 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-gn.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Guarani-Spanish' (0.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-gn.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Guarani-Spanish' (0.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/es-gn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Guarani-French' (9 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-gn.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Guarani-French' (9 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-gn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1486,13 +1486,13 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Arabic' (0.9k links, 0.7M tokens)" href="download.php?f=Tatoeba/xml/ar-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Arabic' (0.9k links, 0.7M tokens)" href="download.php?f=Tatoeba/ar-he.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Belarusian' (35 links, 0.7M tokens)" href="download.php?f=Tatoeba/xml/be-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Belarusian' (35 links, 0.7M tokens)" href="download.php?f=Tatoeba/be-he.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1502,30 +1502,30 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-cmn' (0.4k links, 0.7M tokens)" href="download.php?f=Tatoeba/xml/cmn-he.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Czech' (6 links, 0.7M tokens)" href="download.php?f=Tatoeba/xml/cs-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-cmn' (0.4k links, 0.7M tokens)" href="download.php?f=Tatoeba/cmn-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Czech' (6 links, 0.7M tokens)" href="download.php?f=Tatoeba/cs-he.xml.gz">ces</a></td>
 <th>he</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-German' (3.2k links, 3.0M tokens)" href="download.php?f=Tatoeba/xml/de-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-German' (3.2k links, 3.0M tokens)" href="download.php?f=Tatoeba/de-he.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-English' (54.4k links, 4.2M tokens)" href="download.php?f=Tatoeba/xml/en-he.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Esperanto' (20.9k links, 3.2M tokens)" href="download.php?f=Tatoeba/xml/eo-he.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Spanish' (2.5k links, 2.3M tokens)" href="download.php?f=Tatoeba/xml/es-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-English' (54.4k links, 4.2M tokens)" href="download.php?f=Tatoeba/en-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Esperanto' (20.9k links, 3.2M tokens)" href="download.php?f=Tatoeba/eo-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Spanish' (2.5k links, 2.3M tokens)" href="download.php?f=Tatoeba/es-he.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Finnish' (0.2k links, 0.8M tokens)" href="download.php?f=Tatoeba/xml/fi-he.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-Finnish' (0.2k links, 0.8M tokens)" href="download.php?f=Tatoeba/fi-he.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hebrew-French' (3.7k links, 1.9M tokens)" href="download.php?f=Tatoeba/xml/fr-he.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hebrew-French' (3.7k links, 1.9M tokens)" href="download.php?f=Tatoeba/fr-he.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<th><a rel="nofollow" title="Hebrew-Hebrew (sample file)" href="Tatoeba/he-he_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Hebrew-Hebrew' (1.6k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/he-he.xml.gz">c</a>
+<td></td>
+<td></td>
+<th><a rel="nofollow" title="Hebrew-Hebrew (sample file)" href="Tatoeba/he-he_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Hebrew-Hebrew' (1.6k links, 1.2M tokens)" href="download.php?f=Tatoeba/he-he.xml.gz">c</a>
 </th><td></td><td></td><th>he</th>
 <td></td><td></td><td><a rel="nofollow" title="Hebrew-Hungarian (sample file)" href="Tatoeba/he-hu_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Hebrew-Italian (sample file)" href="Tatoeba/he-it_sample.html">view</a></td><td><a rel="nofollow" title="Hebrew-Japanese (sample file)" href="Tatoeba/he-ja_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>he</th>
 <td></td><td></td><td><a rel="nofollow" title="Hebrew-lzh (sample file)" href="Tatoeba/he-lzh_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Hebrew-Dutch (sample file)" href="Tatoeba/he-nl_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Hebrew-Polish (sample file)" href="Tatoeba/he-pl_sample.html">view</a></td><td></td><th>he</th>
@@ -1552,24 +1552,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-cmn' (0.3k links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-cmn' (0.3k links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-hi.xml.gz">ces</a></td>
 <td></td>
 <th>hi</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-German' (33 links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/de-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-German' (33 links, 2.5M tokens)" href="download.php?f=Tatoeba/de-hi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-English' (4.7k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-hi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-English' (4.7k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-hi.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-Spanish' (25 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-hi.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-Spanish' (25 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-hi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hindi-French' (37 links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/fr-hi.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hindi-French' (37 links, 1.4M tokens)" href="download.php?f=Tatoeba/fr-hi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1603,7 +1603,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hiligaynon-cmn' (7 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-hil.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hiligaynon-cmn' (7 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-hil.xml.gz">ces</a></td>
 <td></td>
 <th>hil</th>
 <td></td>
@@ -1791,24 +1791,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-cmn' (0.1k links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Czech' (9 links, 61.9k tokens)" href="download.php?f=Tatoeba/xml/cs-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-cmn' (0.1k links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Czech' (9 links, 61.9k tokens)" href="download.php?f=Tatoeba/cs-hr.xml.gz">ces</a></td>
 <th>hr</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-German' (0.3k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-German' (0.3k links, 2.4M tokens)" href="download.php?f=Tatoeba/de-hr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-English' (0.9k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Esperanto' (0.8k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Spanish' (0.2k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-English' (0.9k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Esperanto' (0.8k links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Spanish' (0.2k links, 1.7M tokens)" href="download.php?f=Tatoeba/es-hr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-French' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-French' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-hr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1850,12 +1850,12 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Upper Sorbian-German' (0.3k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-hsb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Upper Sorbian-German' (0.3k links, 2.4M tokens)" href="download.php?f=Tatoeba/de-hsb.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Upper Sorbian-English' (14 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-hsb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Upper Sorbian-Esperanto' (87 links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-hsb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Upper Sorbian-English' (14 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-hsb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Upper Sorbian-Esperanto' (87 links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-hsb.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1890,7 +1890,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Bulgarian' (28 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/bg-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Bulgarian' (28 links, 0.4M tokens)" href="download.php?f=Tatoeba/bg-hu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1898,30 +1898,30 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-cmn' (0.2k links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/cmn-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Czech' (0.2k links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/cs-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-cmn' (0.2k links, 0.4M tokens)" href="download.php?f=Tatoeba/cmn-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Czech' (0.2k links, 0.3M tokens)" href="download.php?f=Tatoeba/cs-hu.xml.gz">ces</a></td>
 <th>hu</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-German' (4.8k links, 2.7M tokens)" href="download.php?f=Tatoeba/xml/de-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-German' (4.8k links, 2.7M tokens)" href="download.php?f=Tatoeba/de-hu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (10.0k links, 3.9M tokens)" href="download.php?f=Tatoeba/xml/en-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Esperanto' (15.5k links, 2.8M tokens)" href="download.php?f=Tatoeba/xml/eo-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Spanish' (0.9k links, 2.0M tokens)" href="download.php?f=Tatoeba/xml/es-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (10.0k links, 3.9M tokens)" href="download.php?f=Tatoeba/en-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Esperanto' (15.5k links, 2.8M tokens)" href="download.php?f=Tatoeba/eo-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Spanish' (0.9k links, 2.0M tokens)" href="download.php?f=Tatoeba/es-hu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Finnish' (24 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/fi-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Finnish' (24 links, 0.4M tokens)" href="download.php?f=Tatoeba/fi-hu.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-French' (0.8k links, 1.6M tokens)" href="download.php?f=Tatoeba/xml/fr-hu.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-French' (0.8k links, 1.6M tokens)" href="download.php?f=Tatoeba/fr-hu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Hebrew' (0.2k links, 0.9M tokens)" href="download.php?f=Tatoeba/xml/he-hu.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Hebrew' (0.2k links, 0.9M tokens)" href="download.php?f=Tatoeba/he-hu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th>hu</th>
@@ -1953,7 +1953,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Armenian-cmn' (13 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-hy.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Armenian-cmn' (13 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-hy.xml.gz">ces</a></td>
 <td></td>
 <th>hy</th>
 <td></td>
@@ -1963,14 +1963,14 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Armenian-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-hy.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Armenian-Esperanto' (6 links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-hy.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Armenian-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-hy.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Armenian-Esperanto' (6 links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-hy.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Armenian-French' (7 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-hy.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Armenian-French' (7 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-hy.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2015,18 +2015,18 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Interlingua (International Auxiliary Language Association)-German' (0.5k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/de-ia.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Interlingua (International Auxiliary Language Association)-German' (0.5k links, 2.5M tokens)" href="download.php?f=Tatoeba/de-ia.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Interlingua (International Auxiliary Language Association)-English' (3.0k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-ia.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Interlingua (International Auxiliary Language Association)-Esperanto' (1.0k links, 2.7M tokens)" href="download.php?f=Tatoeba/xml/eo-ia.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Interlingua (International Auxiliary Language Association)-Spanish' (0.4k links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/es-ia.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Interlingua (International Auxiliary Language Association)-English' (3.0k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-ia.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Interlingua (International Auxiliary Language Association)-Esperanto' (1.0k links, 2.7M tokens)" href="download.php?f=Tatoeba/eo-ia.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Interlingua (International Auxiliary Language Association)-Spanish' (0.4k links, 1.8M tokens)" href="download.php?f=Tatoeba/es-ia.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Interlingua (International Auxiliary Language Association)-Finnish' (4 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/fi-ia.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Interlingua (International Auxiliary Language Association)-Finnish' (4 links, 0.2M tokens)" href="download.php?f=Tatoeba/fi-ia.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Interlingua (International Auxiliary Language Association)-French' (0.6k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/fr-ia.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Interlingua (International Auxiliary Language Association)-French' (0.6k links, 1.4M tokens)" href="download.php?f=Tatoeba/fr-ia.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2066,24 +2066,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-cmn' (0.1k links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-id.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Czech' (1 links, 59.1k tokens)" href="download.php?f=Tatoeba/xml/cs-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-cmn' (0.1k links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Czech' (1 links, 59.1k tokens)" href="download.php?f=Tatoeba/cs-id.xml.gz">ces</a></td>
 <th>id</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-German' (0.2k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-German' (0.2k links, 2.4M tokens)" href="download.php?f=Tatoeba/de-id.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-English' (1.5k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-id.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Esperanto' (0.2k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-id.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Spanish' (58 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-English' (1.5k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Esperanto' (0.2k links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Spanish' (58 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-id.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Finnish' (9 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/fi-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Finnish' (9 links, 0.2M tokens)" href="download.php?f=Tatoeba/fi-id.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-French' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-French' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-id.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2095,7 +2095,7 @@
 <th>id</th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Hungarian' (25 links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/hu-id.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Indonesian-Hungarian' (25 links, 0.3M tokens)" href="download.php?f=Tatoeba/hu-id.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th></th>
@@ -2130,18 +2130,18 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Interlingue-German' (0.3k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-ie.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Interlingue-German' (0.3k links, 2.4M tokens)" href="download.php?f=Tatoeba/de-ie.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Interlingue-English' (0.6k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-ie.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Interlingue-Esperanto' (98 links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-ie.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Interlingue-English' (0.6k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-ie.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Interlingue-Esperanto' (98 links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-ie.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Interlingue-French' (0.3k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-ie.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Interlingue-French' (0.3k links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-ie.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2183,24 +2183,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ido-cmn' (27 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-io.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ido-cmn' (27 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-io.xml.gz">ces</a></td>
 <td></td>
 <th>io</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ido-German' (0.2k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-io.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ido-German' (0.2k links, 2.4M tokens)" href="download.php?f=Tatoeba/de-io.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ido-English' (2.0k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-io.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ido-Esperanto' (0.8k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-io.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ido-Spanish' (0.4k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-io.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ido-English' (2.0k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-io.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ido-Esperanto' (0.8k links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-io.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ido-Spanish' (0.4k links, 1.7M tokens)" href="download.php?f=Tatoeba/es-io.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ido-French' (81 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-io.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ido-French' (81 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-io.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2215,7 +2215,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ido-Indonesian' (22 links, 48.5k tokens)" href="download.php?f=Tatoeba/xml/id-io.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ido-Indonesian' (22 links, 48.5k tokens)" href="download.php?f=Tatoeba/id-io.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="Ido-Italian (sample file)" href="Tatoeba/io-it_sample.html">view</a></td><td><a rel="nofollow" title="Ido-Japanese (sample file)" href="Tatoeba/io-ja_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>io</th>
@@ -2243,24 +2243,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-cmn' (11 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-cmn' (11 links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-is.xml.gz">ces</a></td>
 <td></td>
 <th>is</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-German' (0.3k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/de-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-German' (0.3k links, 2.5M tokens)" href="download.php?f=Tatoeba/de-is.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-English' (8.1k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Esperanto' (0.2k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Spanish' (81 links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/es-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-English' (8.1k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Esperanto' (0.2k links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Spanish' (81 links, 1.8M tokens)" href="download.php?f=Tatoeba/es-is.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-French' (0.1k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/fr-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-French' (0.1k links, 1.4M tokens)" href="download.php?f=Tatoeba/fr-is.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2285,125 +2285,125 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Tatoeba/is.raw.tar.gz">is</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Tatoeba/it.tar.gz">it</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Afrikaans' (75 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/af-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Afrikaans' (75 links, 1.3M tokens)" href="download.php?f=Tatoeba/af-it.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-English, Old (ca.450-1100)' (9 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/ang-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Arabic' (0.1k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/ar-it.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-avk' (72 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/avk-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-English, Old (ca.450-1100)' (9 links, 1.3M tokens)" href="download.php?f=Tatoeba/ang-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Arabic' (0.1k links, 1.3M tokens)" href="download.php?f=Tatoeba/ar-it.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Berber languages)' (83 links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/ber-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Bulgarian' (0.8k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/bg-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Bengali' (11 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/bn-it.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Breton' (37 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/br-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Bosnian' (16 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/bs-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Catalan' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/ca-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-avk' (72 links, 1.3M tokens)" href="download.php?f=Tatoeba/avk-it.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-cmn' (1.4k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/cmn-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Czech' (0.7k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/cs-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Berber languages)' (83 links, 1.8M tokens)" href="download.php?f=Tatoeba/ber-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Bulgarian' (0.8k links, 1.3M tokens)" href="download.php?f=Tatoeba/bg-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Bengali' (11 links, 1.3M tokens)" href="download.php?f=Tatoeba/bn-it.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Breton' (37 links, 1.3M tokens)" href="download.php?f=Tatoeba/br-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Bosnian' (16 links, 1.3M tokens)" href="download.php?f=Tatoeba/bs-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Catalan' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/ca-it.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-cmn' (1.4k links, 1.4M tokens)" href="download.php?f=Tatoeba/cmn-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Czech' (0.7k links, 1.3M tokens)" href="download.php?f=Tatoeba/cs-it.xml.gz">ces</a></td>
 <th>it</th>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Welsh' (46 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/cy-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-cycl' (1 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/cycl-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Danish' (0.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/da-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-German' (10.3k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/de-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Welsh' (46 links, 1.3M tokens)" href="download.php?f=Tatoeba/cy-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-cycl' (1 links, 1.3M tokens)" href="download.php?f=Tatoeba/cycl-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Danish' (0.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/da-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-German' (10.3k links, 3.7M tokens)" href="download.php?f=Tatoeba/de-it.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Greek' (0.1k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/el-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (0.1M links, 4.9M tokens)" href="download.php?f=Tatoeba/xml/en-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Esperanto' (14.4k links, 3.8M tokens)" href="download.php?f=Tatoeba/xml/eo-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Spanish' (8.4k links, 2.9M tokens)" href="download.php?f=Tatoeba/xml/es-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Greek' (0.1k links, 1.3M tokens)" href="download.php?f=Tatoeba/el-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (0.1M links, 4.9M tokens)" href="download.php?f=Tatoeba/en-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Esperanto' (14.4k links, 3.8M tokens)" href="download.php?f=Tatoeba/eo-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Spanish' (8.4k links, 2.9M tokens)" href="download.php?f=Tatoeba/es-it.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Basque' (37 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/eu-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Finnish' (0.1k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/fi-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Basque' (37 links, 1.3M tokens)" href="download.php?f=Tatoeba/eu-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Finnish' (0.1k links, 1.4M tokens)" href="download.php?f=Tatoeba/fi-it.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (25.8k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/fr-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Western Frisian' (27 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fy-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (25.8k links, 2.6M tokens)" href="download.php?f=Tatoeba/fr-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Western Frisian' (27 links, 1.3M tokens)" href="download.php?f=Tatoeba/fy-it.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Gaelic' (83 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/gd-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Gaelic' (83 links, 1.3M tokens)" href="download.php?f=Tatoeba/gd-it.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Hebrew' (0.9k links, 1.9M tokens)" href="download.php?f=Tatoeba/xml/he-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Hebrew' (0.9k links, 1.9M tokens)" href="download.php?f=Tatoeba/he-it.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th>it</th>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Croatian' (84 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/hr-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Croatian' (84 links, 1.3M tokens)" href="download.php?f=Tatoeba/hr-it.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Hungarian' (0.7k links, 1.5M tokens)" href="download.php?f=Tatoeba/xml/hu-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Hungarian' (0.7k links, 1.5M tokens)" href="download.php?f=Tatoeba/hu-it.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Interlingua (International Auxiliary Language Association)' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/ia-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Indonesian' (0.1k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/id-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Interlingua (International Auxiliary Language Association)' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/ia-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Indonesian' (0.1k links, 1.3M tokens)" href="download.php?f=Tatoeba/id-it.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Ido' (1.4k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/io-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Icelandic' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/is-it.xml.gz">ces</a></td>
-<th><a rel="nofollow" title="Italian-Italian (sample file)" href="Tatoeba/it-it_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Italian-Italian' (0.6k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/it-it.xml.gz">c</a>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Ido' (1.4k links, 1.3M tokens)" href="download.php?f=Tatoeba/io-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Icelandic' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/is-it.xml.gz">ces</a></td>
+<th><a rel="nofollow" title="Italian-Italian (sample file)" href="Tatoeba/it-it_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Italian-Italian' (0.6k links, 2.5M tokens)" href="download.php?f=Tatoeba/it-it.xml.gz">c</a>
 </th><td><a rel="nofollow" title="Italian-Japanese (sample file)" href="Tatoeba/it-ja_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Lojban (sample file)" href="Tatoeba/it-jbo_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Italian-Korean (sample file)" href="Tatoeba/it-ko_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Italian-Kurdish (sample file)" href="Tatoeba/it-ku_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Italian-Latin (sample file)" href="Tatoeba/it-la_sample.html">view</a></td><td></td><td></td><td></td><th>it</th>
 <td><a rel="nofollow" title="Italian-Lithuanian (sample file)" href="Tatoeba/it-lt_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Latvian (sample file)" href="Tatoeba/it-lv_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Italian-Maltese (sample file)" href="Tatoeba/it-mt_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Italian-BokmÃ¥l, Norwegian (sample file)" href="Tatoeba/it-nb_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Low German (sample file)" href="Tatoeba/it-nds_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Dutch (sample file)" href="Tatoeba/it-nl_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Italian-Polish (sample file)" href="Tatoeba/it-pl_sample.html">view</a></td><td></td><th>it</th>
 <td></td><td></td><td><a rel="nofollow" title="Italian-Portuguese (sample file)" href="Tatoeba/it-pt_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Italian-Romanian (sample file)" href="Tatoeba/it-ro_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Russian (sample file)" href="Tatoeba/it-ru_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Italian-Slovenian (sample file)" href="Tatoeba/it-sl_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Albanian (sample file)" href="Tatoeba/it-sq_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Serbian (sample file)" href="Tatoeba/it-sr_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Swedish (sample file)" href="Tatoeba/it-sv_sample.html">view</a></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Italian-Tagalog (sample file)" href="Tatoeba/it-tl_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Klingon (sample file)" href="Tatoeba/it-tlh_sample.html">view</a></td><td><a rel="nofollow" title="Italian-toki (sample file)" href="Tatoeba/it-toki_sample.html">view</a></td><td></td><th>it</th>
 <td></td><td><a rel="nofollow" title="Italian-Turkish (sample file)" href="Tatoeba/it-tr_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Tatar (sample file)" href="Tatoeba/it-tt_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Uighur (sample file)" href="Tatoeba/it-ug_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Ukrainian (sample file)" href="Tatoeba/it-uk_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Italian-Vietnamese (sample file)" href="Tatoeba/it-vi_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Italian-wuu (sample file)" href="Tatoeba/it-wuu_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Italian-Yiddish (sample file)" href="Tatoeba/it-yi_sample.html">view</a></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Tatoeba/it.raw.tar.gz">it</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Tatoeba/ja.tar.gz">ja</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-acm' (25 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/acm-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Afrikaans' (18 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/af-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-acm' (25 links, 0.4M tokens)" href="download.php?f=Tatoeba/acm-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Afrikaans' (18 links, 0.5M tokens)" href="download.php?f=Tatoeba/af-ja.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Arabic' (1.1k links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ar-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-arq' (9 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/arq-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-arz' (12 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/arz-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Arabic' (1.1k links, 0.5M tokens)" href="download.php?f=Tatoeba/ar-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-arq' (9 links, 0.4M tokens)" href="download.php?f=Tatoeba/arq-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-arz' (12 links, 0.4M tokens)" href="download.php?f=Tatoeba/arz-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-avk' (15 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/avk-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Azerbaijani' (5 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/az-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Belarusian' (0.1k links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/be-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Berber languages)' (14 links, 1.0M tokens)" href="download.php?f=Tatoeba/xml/ber-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Bulgarian' (0.3k links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/bg-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Bengali' (14 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/bn-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-avk' (15 links, 0.5M tokens)" href="download.php?f=Tatoeba/avk-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Azerbaijani' (5 links, 0.4M tokens)" href="download.php?f=Tatoeba/az-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Belarusian' (0.1k links, 0.5M tokens)" href="download.php?f=Tatoeba/be-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Berber languages)' (14 links, 1.0M tokens)" href="download.php?f=Tatoeba/ber-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Bulgarian' (0.3k links, 0.5M tokens)" href="download.php?f=Tatoeba/bg-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Bengali' (14 links, 0.4M tokens)" href="download.php?f=Tatoeba/bn-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Breton' (4 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/br-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Breton' (4 links, 0.4M tokens)" href="download.php?f=Tatoeba/br-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Catalan' (0.1k links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ca-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Catalan' (0.1k links, 0.5M tokens)" href="download.php?f=Tatoeba/ca-ja.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-cmn' (2.9k links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/cmn-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Czech' (29 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/cs-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-cmn' (2.9k links, 0.5M tokens)" href="download.php?f=Tatoeba/cmn-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Czech' (29 links, 0.5M tokens)" href="download.php?f=Tatoeba/cs-ja.xml.gz">ces</a></td>
 <th>ja</th>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Welsh' (2 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/cy-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-cycl' (4 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/cycl-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Danish' (0.8k links, 0.6M tokens)" href="download.php?f=Tatoeba/xml/da-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-German' (28.0k links, 2.8M tokens)" href="download.php?f=Tatoeba/xml/de-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Lower Sorbian' (1 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/dsb-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Ewe' (2 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ee-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Greek' (13 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/el-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-English' (0.2M links, 4.1M tokens)" href="download.php?f=Tatoeba/xml/en-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Esperanto' (7.3k links, 3.0M tokens)" href="download.php?f=Tatoeba/xml/eo-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Spanish' (28.0k links, 2.1M tokens)" href="download.php?f=Tatoeba/xml/es-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Estonian' (49 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/et-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Basque' (49 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/eu-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Finnish' (2.4k links, 0.6M tokens)" href="download.php?f=Tatoeba/xml/fi-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Welsh' (2 links, 0.4M tokens)" href="download.php?f=Tatoeba/cy-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-cycl' (4 links, 0.4M tokens)" href="download.php?f=Tatoeba/cycl-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Danish' (0.8k links, 0.6M tokens)" href="download.php?f=Tatoeba/da-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-German' (28.0k links, 2.8M tokens)" href="download.php?f=Tatoeba/de-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Lower Sorbian' (1 links, 0.4M tokens)" href="download.php?f=Tatoeba/dsb-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Ewe' (2 links, 0.4M tokens)" href="download.php?f=Tatoeba/ee-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Greek' (13 links, 0.5M tokens)" href="download.php?f=Tatoeba/el-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-English' (0.2M links, 4.1M tokens)" href="download.php?f=Tatoeba/en-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Esperanto' (7.3k links, 3.0M tokens)" href="download.php?f=Tatoeba/eo-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Spanish' (28.0k links, 2.1M tokens)" href="download.php?f=Tatoeba/es-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Estonian' (49 links, 0.4M tokens)" href="download.php?f=Tatoeba/et-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Basque' (49 links, 0.4M tokens)" href="download.php?f=Tatoeba/eu-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Finnish' (2.4k links, 0.6M tokens)" href="download.php?f=Tatoeba/fi-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-French' (31.2k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/fr-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-French' (31.2k links, 1.7M tokens)" href="download.php?f=Tatoeba/fr-ja.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Galician' (9 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/gl-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Galician' (9 links, 0.5M tokens)" href="download.php?f=Tatoeba/gl-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Hebrew' (0.2k links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/he-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Hindi' (70 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/hi-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Hebrew' (0.2k links, 1.1M tokens)" href="download.php?f=Tatoeba/he-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Hindi' (70 links, 0.5M tokens)" href="download.php?f=Tatoeba/hi-ja.xml.gz">ces</a></td>
 <td></td>
 <th>ja</th>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Croatian' (0.2k links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/hr-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Croatian' (0.2k links, 0.5M tokens)" href="download.php?f=Tatoeba/hr-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Hungarian' (5.0k links, 0.7M tokens)" href="download.php?f=Tatoeba/xml/hu-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Armenian' (4 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/hy-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Interlingua (International Auxiliary Language Association)' (21 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ia-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Indonesian' (0.5k links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/id-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Interlingue' (2 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ie-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Ido' (22 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/io-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Icelandic' (0.3k links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/is-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Italian' (2.4k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/it-ja.xml.gz">ces</a></td>
-<th><a rel="nofollow" title="Japanese-Japanese (sample file)" href="Tatoeba/ja-ja_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Japanese-Japanese' (0.5k links, 0.9M tokens)" href="download.php?f=Tatoeba/xml/ja-ja.xml.gz">c</a>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Hungarian' (5.0k links, 0.7M tokens)" href="download.php?f=Tatoeba/hu-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Armenian' (4 links, 0.4M tokens)" href="download.php?f=Tatoeba/hy-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Interlingua (International Auxiliary Language Association)' (21 links, 0.5M tokens)" href="download.php?f=Tatoeba/ia-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Indonesian' (0.5k links, 0.5M tokens)" href="download.php?f=Tatoeba/id-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Interlingue' (2 links, 0.4M tokens)" href="download.php?f=Tatoeba/ie-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Ido' (22 links, 0.5M tokens)" href="download.php?f=Tatoeba/io-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Icelandic' (0.3k links, 0.5M tokens)" href="download.php?f=Tatoeba/is-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Italian' (2.4k links, 1.7M tokens)" href="download.php?f=Tatoeba/it-ja.xml.gz">ces</a></td>
+<th><a rel="nofollow" title="Japanese-Japanese (sample file)" href="Tatoeba/ja-ja_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Japanese-Japanese' (0.5k links, 0.9M tokens)" href="download.php?f=Tatoeba/ja-ja.xml.gz">c</a>
 </th><td><a rel="nofollow" title="Japanese-Lojban (sample file)" href="Tatoeba/ja-jbo_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Georgian (sample file)" href="Tatoeba/ja-ka_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Japanese-Central Khmer (sample file)" href="Tatoeba/ja-km_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Korean (sample file)" href="Tatoeba/ja-ko_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-ksh (sample file)" href="Tatoeba/ja-ksh_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Kurdish (sample file)" href="Tatoeba/ja-ku_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Japanese-Latin (sample file)" href="Tatoeba/ja-la_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Ladino (sample file)" href="Tatoeba/ja-lad_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Japanese-Lao (sample file)" href="Tatoeba/ja-lo_sample.html">view</a></td><th>ja</th>
 <td><a rel="nofollow" title="Japanese-Lithuanian (sample file)" href="Tatoeba/ja-lt_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Latvian (sample file)" href="Tatoeba/ja-lv_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-lzh (sample file)" href="Tatoeba/ja-lzh_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Japanese-Malayalam (sample file)" href="Tatoeba/ja-ml_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Mongolian (sample file)" href="Tatoeba/ja-mn_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Marathi (sample file)" href="Tatoeba/ja-mr_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Maltese (sample file)" href="Tatoeba/ja-mt_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-nan (sample file)" href="Tatoeba/ja-nan_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-BokmÃ¥l, Norwegian (sample file)" href="Tatoeba/ja-nb_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Low German (sample file)" href="Tatoeba/ja-nds_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Dutch (sample file)" href="Tatoeba/ja-nl_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Norse, Old (sample file)" href="Tatoeba/ja-non_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-nov (sample file)" href="Tatoeba/ja-nov_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Japanese-Occitan (post 1500) (sample file)" href="Tatoeba/ja-oc_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-orv (sample file)" href="Tatoeba/ja-orv_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Ossetian (sample file)" href="Tatoeba/ja-os_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Japanese-pes (sample file)" href="Tatoeba/ja-pes_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Polish (sample file)" href="Tatoeba/ja-pl_sample.html">view</a></td><td></td><th>ja</th>
 <td></td><td><a rel="nofollow" title="Japanese-prg (sample file)" href="Tatoeba/ja-prg_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Portuguese (sample file)" href="Tatoeba/ja-pt_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Japanese-Romanian (sample file)" href="Tatoeba/ja-ro_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Russian (sample file)" href="Tatoeba/ja-ru_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Sanskrit (sample file)" href="Tatoeba/ja-sa_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Japanese-Slovenian (sample file)" href="Tatoeba/ja-sl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Japanese-Serbian (sample file)" href="Tatoeba/ja-sr_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Swedish (sample file)" href="Tatoeba/ja-sv_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Japanese-Tajik (sample file)" href="Tatoeba/ja-tg_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Thai (sample file)" href="Tatoeba/ja-th_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Tagalog (sample file)" href="Tatoeba/ja-tl_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Klingon (sample file)" href="Tatoeba/ja-tlh_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-toki (sample file)" href="Tatoeba/ja-toki_sample.html">view</a></td><td></td><th>ja</th>
@@ -2429,24 +2429,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lojban-cmn' (0.4k links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-jbo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lojban-cmn' (0.4k links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-jbo.xml.gz">ces</a></td>
 <td></td>
 <th>jbo</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lojban-German' (0.5k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/de-jbo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lojban-German' (0.5k links, 2.5M tokens)" href="download.php?f=Tatoeba/de-jbo.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lojban-English' (7.9k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-jbo.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lojban-Esperanto' (1.1k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-jbo.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lojban-Spanish' (1.4k links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/es-jbo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lojban-English' (7.9k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-jbo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lojban-Esperanto' (1.1k links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-jbo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lojban-Spanish' (1.4k links, 1.8M tokens)" href="download.php?f=Tatoeba/es-jbo.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lojban-French' (1.0k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/fr-jbo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lojban-French' (1.0k links, 1.4M tokens)" href="download.php?f=Tatoeba/fr-jbo.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2465,8 +2465,8 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lojban-Italian' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-jbo.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lojban-Japanese' (0.8k links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ja-jbo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lojban-Italian' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/it-jbo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lojban-Japanese' (0.8k links, 0.5M tokens)" href="download.php?f=Tatoeba/ja-jbo.xml.gz">ces</a></td>
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>jbo</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>jbo</th>
@@ -2503,7 +2503,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Georgian-English' (0.4k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-ka.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Georgian-English' (0.4k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-ka.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2530,7 +2530,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Georgian-Japanese' (54 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-ka.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Georgian-Japanese' (54 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-ka.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>ka</th>
@@ -2568,14 +2568,14 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kazakh-English' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-kk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Esperanto' (48 links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-kk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kazakh-English' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-kk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kazakh-Esperanto' (48 links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-kk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kazakh-French' (10 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-kk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kazakh-French' (10 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-kk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2624,7 +2624,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Central Khmer-cmn' (6 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-km.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Central Khmer-cmn' (6 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-km.xml.gz">ces</a></td>
 <td></td>
 <th>km</th>
 <td></td>
@@ -2634,7 +2634,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Central Khmer-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-km.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Central Khmer-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-km.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2661,7 +2661,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Central Khmer-Japanese' (9 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-km.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Central Khmer-Japanese' (9 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-km.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2675,7 +2675,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Arabic' (90 links, 99.0k tokens)" href="download.php?f=Tatoeba/xml/ar-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Arabic' (90 links, 99.0k tokens)" href="download.php?f=Tatoeba/ar-ko.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2691,49 +2691,49 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-cmn' (88 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-ko.xml.gz">ces</a></td>
-<td></td>
-<th>ko</th>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-German' (0.5k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-ko.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-English' (0.9k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-ko.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Esperanto' (82 links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-ko.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Spanish' (0.4k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-ko.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Finnish' (0.2k links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/fi-ko.xml.gz">ces</a></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-French' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-ko.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-cmn' (88 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-ko.xml.gz">ces</a></td>
 <td></td>
 <th>ko</th>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Indonesian' (2 links, 27.5k tokens)" href="download.php?f=Tatoeba/xml/id-ko.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Italian' (42 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-ko.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Korean-Japanese' (0.2k links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-German' (0.5k links, 2.4M tokens)" href="download.php?f=Tatoeba/de-ko.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-English' (0.9k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Esperanto' (82 links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Spanish' (0.4k links, 1.7M tokens)" href="download.php?f=Tatoeba/es-ko.xml.gz">ces</a></td>
 <td></td>
-<th><a rel="nofollow" title="Korean-Korean (sample file)" href="Tatoeba/ko-ko_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Korean-Korean' (59 links, 18.0k tokens)" href="download.php?f=Tatoeba/xml/ko-ko.xml.gz">c</a>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Finnish' (0.2k links, 0.1M tokens)" href="download.php?f=Tatoeba/fi-ko.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-French' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-ko.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>ko</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Indonesian' (2 links, 27.5k tokens)" href="download.php?f=Tatoeba/id-ko.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Italian' (42 links, 1.3M tokens)" href="download.php?f=Tatoeba/it-ko.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Korean-Japanese' (0.2k links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-ko.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th><a rel="nofollow" title="Korean-Korean (sample file)" href="Tatoeba/ko-ko_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Korean-Korean' (59 links, 18.0k tokens)" href="download.php?f=Tatoeba/ko-ko.xml.gz">c</a>
 </th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>ko</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Korean-Mongolian (sample file)" href="Tatoeba/ko-mn_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Korean-Dutch (sample file)" href="Tatoeba/ko-nl_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Korean-Polish (sample file)" href="Tatoeba/ko-pl_sample.html">view</a></td><td></td><th>ko</th>
 <td></td><td></td><td><a rel="nofollow" title="Korean-Portuguese (sample file)" href="Tatoeba/ko-pt_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Korean-Romanian (sample file)" href="Tatoeba/ko-ro_sample.html">view</a></td><td><a rel="nofollow" title="Korean-Russian (sample file)" href="Tatoeba/ko-ru_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Korean-Klingon (sample file)" href="Tatoeba/ko-tlh_sample.html">view</a></td><td></td><td></td><th>ko</th>
@@ -2769,7 +2769,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'ksh-English' (6 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-ksh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'ksh-English' (6 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-ksh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2796,7 +2796,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'ksh-Japanese' (3 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-ksh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'ksh-Japanese' (3 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-ksh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2828,24 +2828,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kurdish-cmn' (5 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-ku.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kurdish-cmn' (5 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-ku.xml.gz">ces</a></td>
 <td></td>
 <th>ku</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kurdish-German' (4 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-ku.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kurdish-German' (4 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-ku.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kurdish-English' (43 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-ku.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kurdish-English' (43 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-ku.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kurdish-French' (22 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-ku.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kurdish-French' (22 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-ku.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2864,8 +2864,8 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kurdish-Italian' (5 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-ku.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kurdish-Japanese' (9 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-ku.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kurdish-Italian' (5 links, 1.3M tokens)" href="download.php?f=Tatoeba/it-ku.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kurdish-Japanese' (9 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-ku.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2908,7 +2908,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Cornish-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-kw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Cornish-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-kw.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -2969,24 +2969,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latin-cmn' (38 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-la.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latin-Czech' (22 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cs-la.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latin-cmn' (38 links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-la.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latin-Czech' (22 links, 0.1M tokens)" href="download.php?f=Tatoeba/cs-la.xml.gz">ces</a></td>
 <th>la</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latin-German' (1.4k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/de-la.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latin-German' (1.4k links, 2.5M tokens)" href="download.php?f=Tatoeba/de-la.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latin-English' (7.0k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-la.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latin-Esperanto' (3.0k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-la.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latin-Spanish' (2.3k links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/es-la.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latin-English' (7.0k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-la.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latin-Esperanto' (3.0k links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-la.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latin-Spanish' (2.3k links, 1.8M tokens)" href="download.php?f=Tatoeba/es-la.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latin-French' (2.0k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/fr-la.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latin-French' (2.0k links, 1.4M tokens)" href="download.php?f=Tatoeba/fr-la.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3005,8 +3005,8 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latin-Italian' (1.3k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-la.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latin-Japanese' (93 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ja-la.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latin-Italian' (1.3k links, 1.3M tokens)" href="download.php?f=Tatoeba/it-la.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latin-Japanese' (93 links, 0.5M tokens)" href="download.php?f=Tatoeba/ja-la.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3047,11 +3047,11 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ladino-German' (8 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-lad.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ladino-German' (8 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-lad.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ladino-English' (40 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-lad.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ladino-English' (40 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-lad.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3078,7 +3078,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ladino-Japanese' (1 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-lad.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ladino-Japanese' (1 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-lad.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3124,14 +3124,14 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'lld-English' (12 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-lld.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'lld-English' (12 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-lld.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'lld-Spanish' (3 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-lld.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'lld-Spanish' (3 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-lld.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'lld-French' (21 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-lld.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'lld-French' (21 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-lld.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3198,14 +3198,14 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lao-English' (18 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-lo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lao-English' (18 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-lo.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lao-French' (1 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-lo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lao-French' (1 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-lo.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3225,7 +3225,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lao-Japanese' (1 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-lo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lao-Japanese' (1 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-lo.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3399,24 +3399,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-cmn' (26 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-cmn' (26 links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-lt.xml.gz">ces</a></td>
 <td></td>
 <th>lt</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-German' (0.4k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/de-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-German' (0.4k links, 2.5M tokens)" href="download.php?f=Tatoeba/de-lt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-English' (6.3k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Esperanto' (0.1k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Spanish' (0.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-English' (6.3k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Esperanto' (0.1k links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Spanish' (0.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/es-lt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-French' (97 links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/fr-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-French' (97 links, 1.4M tokens)" href="download.php?f=Tatoeba/fr-lt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3431,12 +3431,12 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Indonesian' (1 links, 80.6k tokens)" href="download.php?f=Tatoeba/xml/id-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Indonesian' (1 links, 80.6k tokens)" href="download.php?f=Tatoeba/id-lt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Italian' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Japanese' (0.1k links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ja-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Italian' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/it-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Japanese' (0.1k links, 0.5M tokens)" href="download.php?f=Tatoeba/ja-lt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3475,24 +3475,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-cmn' (37 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-cmn' (37 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-lv.xml.gz">ces</a></td>
 <td></td>
 <th>lv</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-German' (28 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-German' (28 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-lv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-English' (1.0k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-English' (1.0k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-lv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-French' (22 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-French' (22 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-lv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3511,8 +3511,8 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Italian' (15 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Japanese' (2 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Italian' (15 links, 1.3M tokens)" href="download.php?f=Tatoeba/it-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Japanese' (2 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-lv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3552,30 +3552,30 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'lzh-cmn' (86 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-lzh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'lzh-cmn' (86 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-lzh.xml.gz">ces</a></td>
 <td></td>
 <th>lzh</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'lzh-German' (43 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-lzh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'lzh-German' (43 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-lzh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'lzh-English' (0.5k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-lzh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'lzh-English' (0.5k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-lzh.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'lzh-Spanish' (12 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-lzh.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'lzh-French' (80 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-lzh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'lzh-Spanish' (12 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-lzh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'lzh-French' (80 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-lzh.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'lzh-Hebrew' (67 links, 0.6M tokens)" href="download.php?f=Tatoeba/xml/he-lzh.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'lzh-Hebrew' (67 links, 0.6M tokens)" href="download.php?f=Tatoeba/he-lzh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th>lzh</th>
@@ -3589,7 +3589,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'lzh-Japanese' (21 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-lzh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'lzh-Japanese' (21 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-lzh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3640,7 +3640,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malagasy-English' (19 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-mg.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malagasy-English' (19 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-mg.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3719,7 +3719,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maori-English' (19 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-mi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maori-English' (19 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-mi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3799,7 +3799,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-English' (0.7k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-English' (0.7k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-ml.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3826,7 +3826,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Japanese' (2 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-ml.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Malayalam-Japanese' (2 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-ml.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3880,14 +3880,14 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Mongolian-English' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-mn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Mongolian-English' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-mn.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Mongolian-Spanish' (12 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-mn.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Mongolian-Spanish' (12 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-mn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Mongolian-French' (18 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-mn.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Mongolian-French' (18 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-mn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3907,12 +3907,12 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Mongolian-Japanese' (54 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-mn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Mongolian-Japanese' (54 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-mn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Mongolian-Korean' (19 links, 12.0k tokens)" href="download.php?f=Tatoeba/xml/ko-mn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Mongolian-Korean' (19 links, 12.0k tokens)" href="download.php?f=Tatoeba/ko-mn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3962,7 +3962,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Marathi-English' (16.9k links, 3.8M tokens)" href="download.php?f=Tatoeba/xml/en-mr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Marathi-English' (16.9k links, 3.8M tokens)" href="download.php?f=Tatoeba/en-mr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3989,7 +3989,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Marathi-Japanese' (0.2k links, 0.6M tokens)" href="download.php?f=Tatoeba/xml/ja-mr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Marathi-Japanese' (0.2k links, 0.6M tokens)" href="download.php?f=Tatoeba/ja-mr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4019,7 +4019,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Arabic' (27 links, 90.6k tokens)" href="download.php?f=Tatoeba/xml/ar-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Arabic' (27 links, 90.6k tokens)" href="download.php?f=Tatoeba/ar-mt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4041,18 +4041,18 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-German' (64 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-German' (64 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-mt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Greek' (59 links, 56.9k tokens)" href="download.php?f=Tatoeba/xml/el-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Greek' (59 links, 56.9k tokens)" href="download.php?f=Tatoeba/el-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-mt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Spanish' (72 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-mt.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Spanish' (72 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-mt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-French' (24 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-mt.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-French' (24 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-mt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4071,8 +4071,8 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Italian' (20 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Japanese' (1 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Italian' (20 links, 1.3M tokens)" href="download.php?f=Tatoeba/it-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Japanese' (1 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-mt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4119,7 +4119,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'nan-cmn' (7 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-nan.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'nan-cmn' (7 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-nan.xml.gz">ces</a></td>
 <td></td>
 <th>nan</th>
 <td></td>
@@ -4129,7 +4129,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'nan-English' (7 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-nan.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'nan-English' (7 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-nan.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4156,7 +4156,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'nan-Japanese' (3 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-nan.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'nan-Japanese' (3 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-nan.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4204,24 +4204,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-cmn' (21 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Czech' (17 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cs-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-cmn' (21 links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Czech' (17 links, 0.1M tokens)" href="download.php?f=Tatoeba/cs-nb.xml.gz">ces</a></td>
 <th>nb</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-German' (3.4k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/de-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-German' (3.4k links, 2.5M tokens)" href="download.php?f=Tatoeba/de-nb.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Greek' (4 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/el-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-English' (5.5k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Esperanto' (3.3k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Spanish' (0.6k links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/es-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Greek' (4 links, 0.1M tokens)" href="download.php?f=Tatoeba/el-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-English' (5.5k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Esperanto' (3.3k links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Spanish' (0.6k links, 1.8M tokens)" href="download.php?f=Tatoeba/es-nb.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-French' (0.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/fr-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-French' (0.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/fr-nb.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4240,8 +4240,8 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Italian' (0.8k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Japanese' (0.8k links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ja-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Italian' (0.8k links, 1.3M tokens)" href="download.php?f=Tatoeba/it-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Japanese' (0.8k links, 0.5M tokens)" href="download.php?f=Tatoeba/ja-nb.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4290,24 +4290,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Low German-cmn' (37 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-nds.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Low German-cmn' (37 links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-nds.xml.gz">ces</a></td>
 <td></td>
 <th>nds</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Low German-German' (16.3k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/de-nds.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Low German-German' (16.3k links, 2.5M tokens)" href="download.php?f=Tatoeba/de-nds.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Low German-Greek' (25 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/el-nds.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Low German-English' (4.7k links, 3.8M tokens)" href="download.php?f=Tatoeba/xml/en-nds.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Low German-Esperanto' (2.5k links, 2.7M tokens)" href="download.php?f=Tatoeba/xml/eo-nds.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Low German-Spanish' (0.6k links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/es-nds.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Low German-Greek' (25 links, 0.2M tokens)" href="download.php?f=Tatoeba/el-nds.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Low German-English' (4.7k links, 3.8M tokens)" href="download.php?f=Tatoeba/en-nds.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Low German-Esperanto' (2.5k links, 2.7M tokens)" href="download.php?f=Tatoeba/eo-nds.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Low German-Spanish' (0.6k links, 1.8M tokens)" href="download.php?f=Tatoeba/es-nds.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Low German-French' (0.5k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/fr-nds.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Low German-French' (0.5k links, 1.4M tokens)" href="download.php?f=Tatoeba/fr-nds.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4326,8 +4326,8 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Low German-Italian' (0.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/it-nds.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Low German-Japanese' (0.2k links, 0.6M tokens)" href="download.php?f=Tatoeba/xml/ja-nds.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Low German-Italian' (0.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/it-nds.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Low German-Japanese' (0.2k links, 0.6M tokens)" href="download.php?f=Tatoeba/ja-nds.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4367,80 +4367,80 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Belarusian' (0.5k links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/be-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Belarusian' (0.5k links, 0.3M tokens)" href="download.php?f=Tatoeba/be-nl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Bulgarian' (36 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/bg-nl.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Breton' (5 links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/br-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Bulgarian' (36 links, 0.4M tokens)" href="download.php?f=Tatoeba/bg-nl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Breton' (5 links, 0.3M tokens)" href="download.php?f=Tatoeba/br-nl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-cmn' (1.6k links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/cmn-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Czech' (56 links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/cs-nl.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-cmn' (1.6k links, 0.4M tokens)" href="download.php?f=Tatoeba/cmn-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Czech' (56 links, 0.3M tokens)" href="download.php?f=Tatoeba/cs-nl.xml.gz">ces</a></td>
 <th>nl</th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Danish' (1.1k links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/da-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (10.8k links, 2.7M tokens)" href="download.php?f=Tatoeba/xml/de-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Danish' (1.1k links, 0.4M tokens)" href="download.php?f=Tatoeba/da-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (10.8k links, 2.7M tokens)" href="download.php?f=Tatoeba/de-nl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Greek' (39 links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/el-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (18.0k links, 3.9M tokens)" href="download.php?f=Tatoeba/xml/en-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Esperanto' (28.8k links, 2.8M tokens)" href="download.php?f=Tatoeba/xml/eo-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (18.6k links, 2.0M tokens)" href="download.php?f=Tatoeba/xml/es-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Greek' (39 links, 0.3M tokens)" href="download.php?f=Tatoeba/el-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (18.0k links, 3.9M tokens)" href="download.php?f=Tatoeba/en-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Esperanto' (28.8k links, 2.8M tokens)" href="download.php?f=Tatoeba/eo-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (18.6k links, 2.0M tokens)" href="download.php?f=Tatoeba/es-nl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Finnish' (98 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/fi-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Finnish' (98 links, 0.4M tokens)" href="download.php?f=Tatoeba/fi-nl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (7.2k links, 1.6M tokens)" href="download.php?f=Tatoeba/xml/fr-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Western Frisian' (0.1k links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/fy-nl.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hebrew' (5.6k links, 0.9M tokens)" href="download.php?f=Tatoeba/xml/he-nl.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<th>nl</th>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hungarian' (0.2k links, 0.6M tokens)" href="download.php?f=Tatoeba/xml/hu-nl.xml.gz">ces</a></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Interlingua (International Auxiliary Language Association)' (0.5k links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ia-nl.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Ido' (30 links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/io-nl.xml.gz">ces</a></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (2.0k links, 1.5M tokens)" href="download.php?f=Tatoeba/xml/it-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Japanese' (2.6k links, 0.7M tokens)" href="download.php?f=Tatoeba/xml/ja-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (7.2k links, 1.6M tokens)" href="download.php?f=Tatoeba/fr-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Western Frisian' (0.1k links, 0.3M tokens)" href="download.php?f=Tatoeba/fy-nl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Korean' (25 links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/ko-nl.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Latin' (0.2k links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/la-nl.xml.gz">ces</a></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hebrew' (5.6k links, 0.9M tokens)" href="download.php?f=Tatoeba/he-nl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th>nl</th>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hungarian' (0.2k links, 0.6M tokens)" href="download.php?f=Tatoeba/hu-nl.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Interlingua (International Auxiliary Language Association)' (0.5k links, 0.4M tokens)" href="download.php?f=Tatoeba/ia-nl.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Ido' (30 links, 0.3M tokens)" href="download.php?f=Tatoeba/io-nl.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (2.0k links, 1.5M tokens)" href="download.php?f=Tatoeba/it-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Japanese' (2.6k links, 0.7M tokens)" href="download.php?f=Tatoeba/ja-nl.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Korean' (25 links, 0.3M tokens)" href="download.php?f=Tatoeba/ko-nl.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Latin' (0.2k links, 0.4M tokens)" href="download.php?f=Tatoeba/la-nl.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<th>nl</th>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Maltese' (5 links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/mt-nl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-BokmÃ¥l, Norwegian' (0.2k links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/nb-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Low German' (2.4k links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/nds-nl.xml.gz">ces</a></td>
-<th><a rel="nofollow" title="Dutch-Dutch (sample file)" href="Tatoeba/nl-nl_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Dutch-Dutch' (0.3k links, 0.6M tokens)" href="download.php?f=Tatoeba/xml/nl-nl.xml.gz">c</a>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Maltese' (5 links, 0.3M tokens)" href="download.php?f=Tatoeba/mt-nl.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-BokmÃ¥l, Norwegian' (0.2k links, 0.4M tokens)" href="download.php?f=Tatoeba/nb-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Low German' (2.4k links, 0.4M tokens)" href="download.php?f=Tatoeba/nds-nl.xml.gz">ces</a></td>
+<th><a rel="nofollow" title="Dutch-Dutch (sample file)" href="Tatoeba/nl-nl_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Dutch-Dutch' (0.3k links, 0.6M tokens)" href="download.php?f=Tatoeba/nl-nl.xml.gz">c</a>
 </th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Dutch-Polish (sample file)" href="Tatoeba/nl-pl_sample.html">view</a></td><td></td><th>nl</th>
 <td></td><td></td><td><a rel="nofollow" title="Dutch-Portuguese (sample file)" href="Tatoeba/nl-pt_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Dutch-Romanian (sample file)" href="Tatoeba/nl-ro_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Russian (sample file)" href="Tatoeba/nl-ru_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Dutch-swh (sample file)" href="Tatoeba/nl-swh_sample.html">view</a></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Dutch-Klingon (sample file)" href="Tatoeba/nl-tlh_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-toki (sample file)" href="Tatoeba/nl-toki_sample.html">view</a></td><td></td><th>nl</th>
 <td></td><td><a rel="nofollow" title="Dutch-Turkish (sample file)" href="Tatoeba/nl-tr_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Dutch-Ukrainian (sample file)" href="Tatoeba/nl-uk_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Dutch-Vietnamese (sample file)" href="Tatoeba/nl-vi_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Tatoeba/nl.raw.tar.gz">nl</a></th></tr>
@@ -4465,24 +4465,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Norse, Old-cmn' (2 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-non.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Norse, Old-cmn' (2 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-non.xml.gz">ces</a></td>
 <td></td>
 <th>non</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Norse, Old-German' (39 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-non.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Norse, Old-German' (39 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-non.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Norse, Old-English' (0.4k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-non.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Norse, Old-Esperanto' (36 links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-non.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Norse, Old-Spanish' (28 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-non.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Norse, Old-English' (0.4k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-non.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Norse, Old-Esperanto' (36 links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-non.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Norse, Old-Spanish' (28 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-non.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Norse, Old-French' (10 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-non.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Norse, Old-French' (10 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-non.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4502,7 +4502,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Norse, Old-Japanese' (8 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-non.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Norse, Old-Japanese' (8 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-non.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4564,7 +4564,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'nov-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-nov.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'nov-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-nov.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4591,7 +4591,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'nov-Japanese' (1 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-nov.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'nov-Japanese' (1 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-nov.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4654,7 +4654,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'npi-English' (10 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-npi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'npi-English' (10 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-npi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4735,24 +4735,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Occitan (post 1500)-cmn' (60 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-oc.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Occitan (post 1500)-cmn' (60 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-oc.xml.gz">ces</a></td>
 <td></td>
 <th>oc</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Occitan (post 1500)-German' (0.1k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-oc.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Occitan (post 1500)-German' (0.1k links, 2.4M tokens)" href="download.php?f=Tatoeba/de-oc.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Occitan (post 1500)-English' (0.8k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-oc.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Occitan (post 1500)-English' (0.8k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-oc.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Occitan (post 1500)-Spanish' (58 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-oc.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Occitan (post 1500)-Spanish' (58 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-oc.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Occitan (post 1500)-French' (0.7k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-oc.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Occitan (post 1500)-French' (0.7k links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-oc.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4772,7 +4772,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Occitan (post 1500)-Japanese' (58 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ja-oc.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Occitan (post 1500)-Japanese' (58 links, 0.5M tokens)" href="download.php?f=Tatoeba/ja-oc.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4837,14 +4837,14 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'orv-English' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-orv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'orv-Esperanto' (22 links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-orv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'orv-English' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-orv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'orv-Esperanto' (22 links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-orv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'orv-French' (31 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-orv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'orv-French' (31 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-orv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4864,7 +4864,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'orv-Japanese' (4 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-orv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'orv-Japanese' (4 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-orv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4930,14 +4930,14 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ossetian-English' (41 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-os.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ossetian-Esperanto' (43 links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-os.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ossetian-English' (41 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-os.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ossetian-Esperanto' (43 links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-os.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ossetian-French' (12 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-os.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ossetian-French' (12 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-os.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4957,7 +4957,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ossetian-Japanese' (4 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-os.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ossetian-Japanese' (4 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-os.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5031,7 +5031,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'pcd-French' (100 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-pcd.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'pcd-French' (100 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-pcd.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5109,24 +5109,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'pes-cmn' (42 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-pes.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'pes-cmn' (42 links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-pes.xml.gz">ces</a></td>
 <td></td>
 <th>pes</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'pes-German' (0.2k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/de-pes.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'pes-German' (0.2k links, 2.5M tokens)" href="download.php?f=Tatoeba/de-pes.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'pes-Greek' (6 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/el-pes.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'pes-English' (2.8k links, 3.8M tokens)" href="download.php?f=Tatoeba/xml/en-pes.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'pes-Esperanto' (9.7k links, 2.7M tokens)" href="download.php?f=Tatoeba/xml/eo-pes.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'pes-Spanish' (70 links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/es-pes.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'pes-Greek' (6 links, 0.2M tokens)" href="download.php?f=Tatoeba/el-pes.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'pes-English' (2.8k links, 3.8M tokens)" href="download.php?f=Tatoeba/en-pes.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'pes-Esperanto' (9.7k links, 2.7M tokens)" href="download.php?f=Tatoeba/eo-pes.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'pes-Spanish' (70 links, 1.8M tokens)" href="download.php?f=Tatoeba/es-pes.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'pes-French' (0.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/fr-pes.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'pes-French' (0.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/fr-pes.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5146,7 +5146,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'pes-Japanese' (0.1k links, 0.6M tokens)" href="download.php?f=Tatoeba/xml/ja-pes.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'pes-Japanese' (0.1k links, 0.6M tokens)" href="download.php?f=Tatoeba/ja-pes.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5189,70 +5189,46 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Arabic' (0.2k links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ar-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Arabic' (0.2k links, 0.5M tokens)" href="download.php?f=Tatoeba/ar-pl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Belarusian' (0.2k links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/be-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Belarusian' (0.2k links, 0.4M tokens)" href="download.php?f=Tatoeba/be-pl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Bulgarian' (63 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/bg-pl.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Bulgarian' (63 links, 0.5M tokens)" href="download.php?f=Tatoeba/bg-pl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-cmn' (0.6k links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/cmn-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Czech' (0.4k links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/cs-pl.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-cmn' (0.6k links, 0.5M tokens)" href="download.php?f=Tatoeba/cmn-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Czech' (0.4k links, 0.4M tokens)" href="download.php?f=Tatoeba/cs-pl.xml.gz">ces</a></td>
 <th>pl</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-German' (6.1k links, 2.8M tokens)" href="download.php?f=Tatoeba/xml/de-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-German' (6.1k links, 2.8M tokens)" href="download.php?f=Tatoeba/de-pl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Greek' (71 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/el-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-English' (21.6k links, 4.0M tokens)" href="download.php?f=Tatoeba/xml/en-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Esperanto' (5.7k links, 3.0M tokens)" href="download.php?f=Tatoeba/xml/eo-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Spanish' (2.9k links, 2.1M tokens)" href="download.php?f=Tatoeba/xml/es-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Greek' (71 links, 0.5M tokens)" href="download.php?f=Tatoeba/el-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-English' (21.6k links, 4.0M tokens)" href="download.php?f=Tatoeba/en-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Esperanto' (5.7k links, 3.0M tokens)" href="download.php?f=Tatoeba/eo-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Spanish' (2.9k links, 2.1M tokens)" href="download.php?f=Tatoeba/es-pl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Finnish' (0.1k links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/fi-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Finnish' (0.1k links, 0.5M tokens)" href="download.php?f=Tatoeba/fi-pl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-French' (3.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/fr-pl.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Hebrew' (12.5k links, 1.0M tokens)" href="download.php?f=Tatoeba/xml/he-pl.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<th>pl</th>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-French' (3.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/fr-pl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Indonesian' (15 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/id-pl.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Italian' (1.6k links, 1.6M tokens)" href="download.php?f=Tatoeba/xml/it-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Japanese' (22.3k links, 0.8M tokens)" href="download.php?f=Tatoeba/xml/ja-pl.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Korean' (50 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ko-pl.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Hebrew' (12.5k links, 1.0M tokens)" href="download.php?f=Tatoeba/he-pl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th>pl</th>
@@ -5261,6 +5237,17 @@
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Indonesian' (15 links, 0.4M tokens)" href="download.php?f=Tatoeba/id-pl.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Italian' (1.6k links, 1.6M tokens)" href="download.php?f=Tatoeba/it-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Japanese' (22.3k links, 0.8M tokens)" href="download.php?f=Tatoeba/ja-pl.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Korean' (50 links, 0.4M tokens)" href="download.php?f=Tatoeba/ko-pl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5268,7 +5255,20 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Dutch' (1.1k links, 0.7M tokens)" href="download.php?f=Tatoeba/xml/nl-pl.xml.gz">ces</a></td>
+<th>pl</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Dutch' (1.1k links, 0.7M tokens)" href="download.php?f=Tatoeba/nl-pl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5312,9 +5312,9 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'pms-English' (11 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-pms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'pms-English' (11 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-pms.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'pms-Spanish' (8 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-pms.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'pms-Spanish' (8 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-pms.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5546,7 +5546,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'pnb-English' (20 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-pnb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'pnb-English' (20 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-pnb.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5641,18 +5641,18 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'prg-German' (37 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-prg.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'prg-German' (37 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-prg.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'prg-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-prg.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'prg-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-prg.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'prg-Spanish' (17 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-prg.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'prg-Spanish' (17 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-prg.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'prg-French' (10 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-prg.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'prg-French' (10 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-prg.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5672,7 +5672,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'prg-Japanese' (6 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-prg.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'prg-Japanese' (6 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-prg.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5716,7 +5716,7 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Tatoeba/prg.raw.tar.gz">prg</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Tatoeba/pt.tar.gz">pt</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Afrikaans' (43 links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/af-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Afrikaans' (43 links, 1.1M tokens)" href="download.php?f=Tatoeba/af-pt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5727,7 +5727,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Bulgarian' (32 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/bg-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Bulgarian' (32 links, 1.2M tokens)" href="download.php?f=Tatoeba/bg-pt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5735,84 +5735,84 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-cmn' (0.6k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Czech' (25 links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/cs-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-cmn' (0.6k links, 1.2M tokens)" href="download.php?f=Tatoeba/cmn-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Czech' (25 links, 1.1M tokens)" href="download.php?f=Tatoeba/cs-pt.xml.gz">ces</a></td>
 <th>pt</th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Danish' (0.7k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/da-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (5.6k links, 3.5M tokens)" href="download.php?f=Tatoeba/xml/de-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Danish' (0.7k links, 1.2M tokens)" href="download.php?f=Tatoeba/da-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (5.6k links, 3.5M tokens)" href="download.php?f=Tatoeba/de-pt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Greek' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/el-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (60.7k links, 4.7M tokens)" href="download.php?f=Tatoeba/xml/en-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Esperanto' (26.3k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/eo-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (53.0k links, 2.8M tokens)" href="download.php?f=Tatoeba/xml/es-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Greek' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/el-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (60.7k links, 4.7M tokens)" href="download.php?f=Tatoeba/en-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Esperanto' (26.3k links, 3.7M tokens)" href="download.php?f=Tatoeba/eo-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (53.0k links, 2.8M tokens)" href="download.php?f=Tatoeba/es-pt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Finnish' (81 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/fi-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Finnish' (81 links, 1.2M tokens)" href="download.php?f=Tatoeba/fi-pt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (18.2k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/fr-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Western Frisian' (13 links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/fy-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (18.2k links, 2.4M tokens)" href="download.php?f=Tatoeba/fr-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Western Frisian' (13 links, 1.1M tokens)" href="download.php?f=Tatoeba/fy-pt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Gaelic' (46 links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/gd-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Galician' (0.3k links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/gl-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Gaelic' (46 links, 1.1M tokens)" href="download.php?f=Tatoeba/gd-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Galician' (0.3k links, 1.1M tokens)" href="download.php?f=Tatoeba/gl-pt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hebrew' (0.6k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/he-pt.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<th>pt</th>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Croatian' (68 links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/hr-pt.xml.gz">ces</a></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hungarian' (0.4k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/hu-pt.xml.gz">ces</a></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Interlingua (International Auxiliary Language Association)' (3.7k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/ia-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Indonesian' (36 links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/id-pt.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Icelandic' (43 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/is-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (3.3k links, 2.3M tokens)" href="download.php?f=Tatoeba/xml/it-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Japanese' (1.8k links, 1.5M tokens)" href="download.php?f=Tatoeba/xml/ja-pt.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Korean' (30 links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/ko-pt.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Latin' (3.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/la-pt.xml.gz">ces</a></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hebrew' (0.6k links, 1.7M tokens)" href="download.php?f=Tatoeba/he-pt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th>pt</th>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Croatian' (68 links, 1.1M tokens)" href="download.php?f=Tatoeba/hr-pt.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hungarian' (0.4k links, 1.4M tokens)" href="download.php?f=Tatoeba/hu-pt.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Interlingua (International Auxiliary Language Association)' (3.7k links, 1.2M tokens)" href="download.php?f=Tatoeba/ia-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Indonesian' (36 links, 1.1M tokens)" href="download.php?f=Tatoeba/id-pt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-lzh' (4 links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/lzh-pt.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Maltese' (7 links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/mt-pt.xml.gz">ces</a></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-BokmÃ¥l, Norwegian' (0.4k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/nb-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Low German' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/nds-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (2.8k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/nl-pt.xml.gz">ces</a></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Icelandic' (43 links, 1.2M tokens)" href="download.php?f=Tatoeba/is-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (3.3k links, 2.3M tokens)" href="download.php?f=Tatoeba/it-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Japanese' (1.8k links, 1.5M tokens)" href="download.php?f=Tatoeba/ja-pt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Korean' (30 links, 1.1M tokens)" href="download.php?f=Tatoeba/ko-pt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-pes' (31 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/pes-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Polish' (0.5k links, 1.5M tokens)" href="download.php?f=Tatoeba/xml/pl-pt.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Latin' (3.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/la-pt.xml.gz">ces</a></td>
+<td></td>
+<td></td>
 <td></td>
 <th>pt</th>
 <td></td>
 <td></td>
-<th><a rel="nofollow" title="Portuguese-Portuguese (sample file)" href="Tatoeba/pt-pt_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Portuguese-Portuguese' (1.0k links, 2.2M tokens)" href="download.php?f=Tatoeba/xml/pt-pt.xml.gz">c</a>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-lzh' (4 links, 1.1M tokens)" href="download.php?f=Tatoeba/lzh-pt.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Maltese' (7 links, 1.1M tokens)" href="download.php?f=Tatoeba/mt-pt.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-BokmÃ¥l, Norwegian' (0.4k links, 1.2M tokens)" href="download.php?f=Tatoeba/nb-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Low German' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/nds-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (2.8k links, 1.4M tokens)" href="download.php?f=Tatoeba/nl-pt.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-pes' (31 links, 1.2M tokens)" href="download.php?f=Tatoeba/pes-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Polish' (0.5k links, 1.5M tokens)" href="download.php?f=Tatoeba/pl-pt.xml.gz">ces</a></td>
+<td></td>
+<th>pt</th>
+<td></td>
+<td></td>
+<th><a rel="nofollow" title="Portuguese-Portuguese (sample file)" href="Tatoeba/pt-pt_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Portuguese-Portuguese' (1.0k links, 2.2M tokens)" href="download.php?f=Tatoeba/pt-pt.xml.gz">c</a>
 </th><td></td><td></td><td><a rel="nofollow" title="Portuguese-Romansh (sample file)" href="Tatoeba/pt-rm_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Portuguese-Russian (sample file)" href="Tatoeba/pt-ru_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Portuguese-Tagalog (sample file)" href="Tatoeba/pt-tl_sample.html">view</a></td><td></td><td></td><td></td><th>pt</th>
 <td></td><td><a rel="nofollow" title="Portuguese-Turkish (sample file)" href="Tatoeba/pt-tr_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Portuguese-Ukrainian (sample file)" href="Tatoeba/pt-uk_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Portuguese-Vietnamese (sample file)" href="Tatoeba/pt-vi_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Portuguese-zsm (sample file)" href="Tatoeba/pt-zsm_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=Tatoeba/pt.raw.tar.gz">pt</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Tatoeba/qu.tar.gz">qu</a></th>
@@ -5846,14 +5846,14 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Quechua-English' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-qu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Quechua-English' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-qu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Quechua-French' (3 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-qu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Quechua-French' (3 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-qu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -5948,7 +5948,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'qya-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-qya.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'qya-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-qya.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6047,42 +6047,18 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romansh-German' (13 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-rm.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romansh-German' (13 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-rm.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romansh-English' (11 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-rm.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romansh-English' (11 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-rm.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romansh-Spanish' (3 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-rm.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romansh-French' (1 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-rm.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romansh-Spanish' (3 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-rm.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<th>rm</th>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romansh-French' (1 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-rm.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6118,7 +6094,31 @@
 <th>rm</th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romansh-Portuguese' (1 links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/pt-rm.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>rm</th>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romansh-Portuguese' (1 links, 1.1M tokens)" href="download.php?f=Tatoeba/pt-rm.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th></th>
@@ -6145,49 +6145,25 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-cmn' (26 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Czech' (8 links, 79.2k tokens)" href="download.php?f=Tatoeba/xml/cs-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-cmn' (26 links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Czech' (8 links, 79.2k tokens)" href="download.php?f=Tatoeba/cs-ro.xml.gz">ces</a></td>
 <th>ro</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-German' (0.2k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-German' (0.2k links, 2.4M tokens)" href="download.php?f=Tatoeba/de-ro.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-English' (3.5k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Esperanto' (0.2k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Spanish' (0.2k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-English' (3.5k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Esperanto' (0.2k links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Spanish' (0.2k links, 1.7M tokens)" href="download.php?f=Tatoeba/es-ro.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Finnish' (4 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/fi-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Finnish' (4 links, 0.2M tokens)" href="download.php?f=Tatoeba/fi-ro.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-French' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-French' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-ro.xml.gz">ces</a></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<th>ro</th>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Italian' (0.1k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Japanese' (84 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ja-ro.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Korean' (10 links, 47.7k tokens)" href="download.php?f=Tatoeba/xml/ko-ro.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6205,10 +6181,34 @@
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Italian' (0.1k links, 1.3M tokens)" href="download.php?f=Tatoeba/it-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Japanese' (84 links, 0.5M tokens)" href="download.php?f=Tatoeba/ja-ro.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Dutch' (0.3k links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/nl-ro.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Korean' (10 links, 47.7k tokens)" href="download.php?f=Tatoeba/ko-ro.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>ro</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Dutch' (0.3k links, 0.3M tokens)" href="download.php?f=Tatoeba/nl-ro.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6234,76 +6234,76 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Arabic' (0.3k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/ar-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Arabic' (0.3k links, 1.2M tokens)" href="download.php?f=Tatoeba/ar-ru.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Belarusian' (1.8k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/be-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Belarusian' (1.8k links, 1.2M tokens)" href="download.php?f=Tatoeba/be-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Bulgarian' (0.5k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/bg-ru.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Bosnian' (29 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/bs-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Bulgarian' (0.5k links, 1.3M tokens)" href="download.php?f=Tatoeba/bg-ru.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-cmn' (3.7k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/cmn-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Czech' (0.8k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/cs-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Bosnian' (29 links, 1.2M tokens)" href="download.php?f=Tatoeba/bs-ru.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-cmn' (3.7k links, 1.3M tokens)" href="download.php?f=Tatoeba/cmn-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Czech' (0.8k links, 1.2M tokens)" href="download.php?f=Tatoeba/cs-ru.xml.gz">ces</a></td>
 <th>ru</th>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Welsh' (31 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/cy-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-cycl' (1 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/cycl-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Danish' (0.4k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/da-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (26.3k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/de-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Welsh' (31 links, 1.2M tokens)" href="download.php?f=Tatoeba/cy-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-cycl' (1 links, 1.2M tokens)" href="download.php?f=Tatoeba/cycl-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Danish' (0.4k links, 1.3M tokens)" href="download.php?f=Tatoeba/da-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (26.3k links, 3.6M tokens)" href="download.php?f=Tatoeba/de-ru.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Greek' (2.3k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/el-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (97.6k links, 4.8M tokens)" href="download.php?f=Tatoeba/xml/en-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Esperanto' (25.2k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/eo-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (15.3k links, 2.8M tokens)" href="download.php?f=Tatoeba/xml/es-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Estonian' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/et-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Basque' (10 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/eu-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Finnish' (0.7k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fi-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Greek' (2.3k links, 1.2M tokens)" href="download.php?f=Tatoeba/el-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (97.6k links, 4.8M tokens)" href="download.php?f=Tatoeba/en-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Esperanto' (25.2k links, 3.7M tokens)" href="download.php?f=Tatoeba/eo-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (15.3k links, 2.8M tokens)" href="download.php?f=Tatoeba/es-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Estonian' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/et-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Basque' (10 links, 1.2M tokens)" href="download.php?f=Tatoeba/eu-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Finnish' (0.7k links, 1.3M tokens)" href="download.php?f=Tatoeba/fi-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (37.9k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/fr-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Western Frisian' (24 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/fy-ru.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Galician' (22 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/gl-ru.xml.gz">ces</a></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Hebrew' (4.5k links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/he-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (37.9k links, 2.5M tokens)" href="download.php?f=Tatoeba/fr-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Western Frisian' (24 links, 1.2M tokens)" href="download.php?f=Tatoeba/fy-ru.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<th>ru</th>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Croatian' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/hr-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Galician' (22 links, 1.2M tokens)" href="download.php?f=Tatoeba/gl-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Hungarian' (2.0k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/hu-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Armenian' (24 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/hy-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Interlingua (International Auxiliary Language Association)' (1.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/ia-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Indonesian' (44 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/id-ru.xml.gz">ces</a></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Ido' (66 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/io-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Icelandic' (0.1k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/is-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Italian' (2.7k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/it-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Japanese' (12.0k links, 1.6M tokens)" href="download.php?f=Tatoeba/xml/ja-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Lojban' (0.7k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/jbo-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Georgian' (82 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/ka-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Kazakh' (2.0k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/kk-ru.xml.gz">ces</a></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Korean' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/ko-ru.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Latin' (0.5k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/la-ru.xml.gz">ces</a></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Hebrew' (4.5k links, 1.8M tokens)" href="download.php?f=Tatoeba/he-ru.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th>ru</th>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Lithuanian' (2.8k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/lt-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Latvian' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/lv-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-lzh' (0.6k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/lzh-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Croatian' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/hr-ru.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Hungarian' (2.0k links, 1.4M tokens)" href="download.php?f=Tatoeba/hu-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Armenian' (24 links, 1.2M tokens)" href="download.php?f=Tatoeba/hy-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Interlingua (International Auxiliary Language Association)' (1.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/ia-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Indonesian' (44 links, 1.2M tokens)" href="download.php?f=Tatoeba/id-ru.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Ido' (66 links, 1.2M tokens)" href="download.php?f=Tatoeba/io-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Icelandic' (0.1k links, 1.2M tokens)" href="download.php?f=Tatoeba/is-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Italian' (2.7k links, 2.4M tokens)" href="download.php?f=Tatoeba/it-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Japanese' (12.0k links, 1.6M tokens)" href="download.php?f=Tatoeba/ja-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Lojban' (0.7k links, 1.2M tokens)" href="download.php?f=Tatoeba/jbo-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Georgian' (82 links, 1.2M tokens)" href="download.php?f=Tatoeba/ka-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Kazakh' (2.0k links, 1.2M tokens)" href="download.php?f=Tatoeba/kk-ru.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Korean' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/ko-ru.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Latin' (0.5k links, 1.2M tokens)" href="download.php?f=Tatoeba/la-ru.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<th>ru</th>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Lithuanian' (2.8k links, 1.2M tokens)" href="download.php?f=Tatoeba/lt-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Latvian' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/lv-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-lzh' (0.6k links, 1.2M tokens)" href="download.php?f=Tatoeba/lzh-ru.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6311,28 +6311,28 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-BokmÃ¥l, Norwegian' (1.0k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/nb-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Low German' (0.4k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/nds-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Dutch' (3.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/nl-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-BokmÃ¥l, Norwegian' (1.0k links, 1.2M tokens)" href="download.php?f=Tatoeba/nb-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Low German' (0.4k links, 1.3M tokens)" href="download.php?f=Tatoeba/nds-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Dutch' (3.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/nl-ru.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Occitan (post 1500)' (34 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/oc-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-orv' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/orv-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Occitan (post 1500)' (34 links, 1.2M tokens)" href="download.php?f=Tatoeba/oc-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-orv' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/orv-ru.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Polish' (1.8k links, 1.6M tokens)" href="download.php?f=Tatoeba/xml/pl-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Polish' (1.8k links, 1.6M tokens)" href="download.php?f=Tatoeba/pl-ru.xml.gz">ces</a></td>
 <td></td>
 <th>ru</th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Portuguese' (3.1k links, 2.3M tokens)" href="download.php?f=Tatoeba/xml/pt-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Portuguese' (3.1k links, 2.3M tokens)" href="download.php?f=Tatoeba/pt-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-qya' (53 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/qya-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-qya' (53 links, 1.2M tokens)" href="download.php?f=Tatoeba/qya-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Romanian' (0.4k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/ro-ru.xml.gz">ces</a></td>
-<th><a rel="nofollow" title="Russian-Russian (sample file)" href="Tatoeba/ru-ru_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Russian-Russian' (0.9k links, 2.3M tokens)" href="download.php?f=Tatoeba/xml/ru-ru.xml.gz">c</a>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Romanian' (0.4k links, 1.2M tokens)" href="download.php?f=Tatoeba/ro-ru.xml.gz">ces</a></td>
+<th><a rel="nofollow" title="Russian-Russian (sample file)" href="Tatoeba/ru-ru_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Russian-Russian' (0.9k links, 2.3M tokens)" href="download.php?f=Tatoeba/ru-ru.xml.gz">c</a>
 </th><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Russian-Serbian (sample file)" href="Tatoeba/ru-sr_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Swedish (sample file)" href="Tatoeba/ru-sv_sample.html">view</a></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Russian-Tagalog (sample file)" href="Tatoeba/ru-tl_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Klingon (sample file)" href="Tatoeba/ru-tlh_sample.html">view</a></td><td><a rel="nofollow" title="Russian-toki (sample file)" href="Tatoeba/ru-toki_sample.html">view</a></td><td></td><th>ru</th>
 <td></td><td><a rel="nofollow" title="Russian-Turkish (sample file)" href="Tatoeba/ru-tr_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Tatar (sample file)" href="Tatoeba/ru-tt_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Uighur (sample file)" href="Tatoeba/ru-ug_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Ukrainian (sample file)" href="Tatoeba/ru-uk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Russian-Uzbek (sample file)" href="Tatoeba/ru-uz_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Vietnamese (sample file)" href="Tatoeba/ru-vi_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Russian-Kalmyk (sample file)" href="Tatoeba/ru-xal_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Russian-yue (sample file)" href="Tatoeba/ru-yue_sample.html">view</a></td><td></td><th><a rel="nofollow" href="download.php?f=Tatoeba/ru.raw.tar.gz">ru</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Tatoeba/sa.tar.gz">sa</a></th>
@@ -6393,7 +6393,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sanskrit-Japanese' (8 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-sa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sanskrit-Japanese' (8 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-sa.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6469,18 +6469,18 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sicilian-German' (4 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-scn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sicilian-German' (4 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-scn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sicilian-English' (3 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-scn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sicilian-English' (3 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-scn.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sicilian-Spanish' (4 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-scn.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sicilian-Spanish' (4 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-scn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Sicilian-French' (4 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-scn.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Sicilian-French' (4 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-scn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6581,7 +6581,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'sjn-English' (32 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-sjn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'sjn-English' (32 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-sjn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6680,24 +6680,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-cmn' (26 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Czech' (0.2k links, 52.6k tokens)" href="download.php?f=Tatoeba/xml/cs-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-cmn' (26 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Czech' (0.2k links, 52.6k tokens)" href="download.php?f=Tatoeba/cs-sl.xml.gz">ces</a></td>
 <th>sl</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-German' (86 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-German' (86 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-sl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-English' (1.4k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-English' (1.4k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-sl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Spanish' (49 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-sl.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Spanish' (49 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-sl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-French' (67 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-sl.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-French' (67 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-sl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6716,8 +6716,8 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Italian' (19 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Japanese' (60 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Italian' (19 links, 1.3M tokens)" href="download.php?f=Tatoeba/it-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Japanese' (60 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-sl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6790,7 +6790,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-cmn' (24 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-cmn' (24 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-sq.xml.gz">ces</a></td>
 <td></td>
 <th>sq</th>
 <td></td>
@@ -6800,14 +6800,14 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-English' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-English' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-sq.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-French' (4 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-French' (4 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-sq.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6826,7 +6826,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Italian' (19 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Italian' (19 links, 1.3M tokens)" href="download.php?f=Tatoeba/it-sq.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6891,7 +6891,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Belarusian' (12 links, 80.1k tokens)" href="download.php?f=Tatoeba/xml/be-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Belarusian' (12 links, 80.1k tokens)" href="download.php?f=Tatoeba/be-sr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6901,48 +6901,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-cmn' (72 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-sr.xml.gz">ces</a></td>
-<td></td>
-<th>sr</th>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-German' (0.9k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/de-sr.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-English' (0.7k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-sr.xml.gz">ces</a></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Spanish' (0.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-sr.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-French' (0.1k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-sr.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-cmn' (72 links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-sr.xml.gz">ces</a></td>
 <td></td>
 <th>sr</th>
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-German' (0.9k links, 2.5M tokens)" href="download.php?f=Tatoeba/de-sr.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-English' (0.7k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-sr.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Spanish' (0.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/es-sr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Italian' (51 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Japanese' (12 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ja-sr.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-French' (0.1k links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-sr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6961,8 +6937,8 @@
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Italian' (51 links, 1.3M tokens)" href="download.php?f=Tatoeba/it-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Japanese' (12 links, 0.5M tokens)" href="download.php?f=Tatoeba/ja-sr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -6983,7 +6959,31 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Russian' (0.7k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/ru-sr.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>sr</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Russian' (0.7k links, 1.2M tokens)" href="download.php?f=Tatoeba/ru-sr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7013,48 +7013,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-cmn' (0.4k links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-cmn' (0.4k links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-sv.xml.gz">ces</a></td>
 <td></td>
 <th>sv</th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Danish' (1.1k links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/da-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-German' (1.9k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/de-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Danish' (1.1k links, 0.2M tokens)" href="download.php?f=Tatoeba/da-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-German' (1.9k links, 2.5M tokens)" href="download.php?f=Tatoeba/de-sv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (9.8k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Esperanto' (0.9k links, 2.7M tokens)" href="download.php?f=Tatoeba/xml/eo-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Spanish' (0.4k links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/es-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (9.8k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Esperanto' (0.9k links, 2.7M tokens)" href="download.php?f=Tatoeba/eo-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Spanish' (0.4k links, 1.8M tokens)" href="download.php?f=Tatoeba/es-sv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Finnish' (5.2k links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/fi-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Finnish' (5.2k links, 0.2M tokens)" href="download.php?f=Tatoeba/fi-sv.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (0.7k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/fr-sv.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<th>sv</th>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Italian' (0.4k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/it-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Japanese' (0.1k links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ja-sv.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (0.7k links, 1.4M tokens)" href="download.php?f=Tatoeba/fr-sv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7073,8 +7049,8 @@
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-BokmÃ¥l, Norwegian' (0.2k links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/nb-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Italian' (0.4k links, 1.4M tokens)" href="download.php?f=Tatoeba/it-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Japanese' (0.1k links, 0.5M tokens)" href="download.php?f=Tatoeba/ja-sv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7095,7 +7071,31 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Russian' (0.3k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/ru-sv.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-BokmÃ¥l, Norwegian' (0.2k links, 0.2M tokens)" href="download.php?f=Tatoeba/nb-sv.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>sv</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Russian' (0.3k links, 1.3M tokens)" href="download.php?f=Tatoeba/ru-sv.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7132,42 +7132,18 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'swh-German' (38 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-swh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'swh-German' (38 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-swh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'swh-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-swh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'swh-Esperanto' (41 links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-swh.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'swh-French' (18 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-swh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'swh-English' (0.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-swh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'swh-Esperanto' (41 links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-swh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<th>swh</th>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'swh-French' (18 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-swh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7189,7 +7165,31 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'swh-Dutch' (2 links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/nl-swh.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>swh</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'swh-Dutch' (2 links, 0.3M tokens)" href="download.php?f=Tatoeba/nl-swh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7250,7 +7250,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Telugu-English' (47 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-te.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Telugu-English' (47 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-te.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7355,7 +7355,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tajik-cmn' (1 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-tg.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tajik-cmn' (1 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-tg.xml.gz">ces</a></td>
 <td></td>
 <th>tg</th>
 <td></td>
@@ -7392,7 +7392,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tajik-Japanese' (2 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-tg.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tajik-Japanese' (2 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-tg.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7477,18 +7477,18 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-German' (54 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-German' (54 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-th.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-English' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-th.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Esperanto' (47 links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-English' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Esperanto' (47 links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-th.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-French' (44 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-French' (44 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-th.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7508,7 +7508,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Thai-Japanese' (23 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-th.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Thai-Japanese' (23 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-th.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7598,44 +7598,20 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tagalog-English' (4.9k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-tl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Esperanto' (1.1k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-tl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Spanish' (0.4k links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/es-tl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tagalog-English' (4.9k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-tl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Esperanto' (1.1k links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-tl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Spanish' (0.4k links, 1.8M tokens)" href="download.php?f=Tatoeba/es-tl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tagalog-French' (0.6k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/fr-tl.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Hebrew' (8 links, 0.7M tokens)" href="download.php?f=Tatoeba/xml/he-tl.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<th>tl</th>
+<td><a rel="nofollow" title="sentence alignments for 'Tagalog-French' (0.6k links, 1.4M tokens)" href="download.php?f=Tatoeba/fr-tl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Italian' (69 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-tl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Japanese' (66 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ja-tl.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Hebrew' (8 links, 0.7M tokens)" href="download.php?f=Tatoeba/he-tl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th>tl</th>
@@ -7648,8 +7624,8 @@
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Italian' (69 links, 1.3M tokens)" href="download.php?f=Tatoeba/it-tl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Japanese' (66 links, 0.5M tokens)" href="download.php?f=Tatoeba/ja-tl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7665,12 +7641,36 @@
 <th>tl</th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Portuguese' (1.7k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/pt-tl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Russian' (15 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/ru-tl.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>tl</th>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Portuguese' (1.7k links, 1.2M tokens)" href="download.php?f=Tatoeba/pt-tl.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Russian' (15 links, 1.2M tokens)" href="download.php?f=Tatoeba/ru-tl.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7706,49 +7706,25 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Klingon-cmn' (0.4k links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-tlh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Klingon-Czech' (2 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cs-tlh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Klingon-cmn' (0.4k links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-tlh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Klingon-Czech' (2 links, 0.1M tokens)" href="download.php?f=Tatoeba/cs-tlh.xml.gz">ces</a></td>
 <th>tlh</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Klingon-German' (1.8k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/de-tlh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Klingon-German' (1.8k links, 2.5M tokens)" href="download.php?f=Tatoeba/de-tlh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Klingon-English' (6.5k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-tlh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Klingon-Esperanto' (1.3k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-tlh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Klingon-Spanish' (0.2k links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/es-tlh.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Klingon-French' (0.4k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/fr-tlh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Klingon-English' (6.5k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-tlh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Klingon-Esperanto' (1.3k links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-tlh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Klingon-Spanish' (0.2k links, 1.8M tokens)" href="download.php?f=Tatoeba/es-tlh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Klingon-French' (0.4k links, 1.4M tokens)" href="download.php?f=Tatoeba/fr-tlh.xml.gz">ces</a></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<th>tlh</th>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Klingon-Italian' (68 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-tlh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Klingon-Japanese' (0.5k links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ja-tlh.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Klingon-Korean' (2 links, 77.3k tokens)" href="download.php?f=Tatoeba/xml/ko-tlh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7766,10 +7742,34 @@
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Klingon-Italian' (68 links, 1.3M tokens)" href="download.php?f=Tatoeba/it-tlh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Klingon-Japanese' (0.5k links, 0.5M tokens)" href="download.php?f=Tatoeba/ja-tlh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Klingon-Dutch' (0.1k links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/nl-tlh.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Klingon-Korean' (2 links, 77.3k tokens)" href="download.php?f=Tatoeba/ko-tlh.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>tlh</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Klingon-Dutch' (0.1k links, 0.4M tokens)" href="download.php?f=Tatoeba/nl-tlh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7788,7 +7788,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Klingon-Russian' (0.1k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/ru-tlh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Klingon-Russian' (0.1k links, 1.2M tokens)" href="download.php?f=Tatoeba/ru-tlh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7825,48 +7825,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'toki-cmn' (8 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-toki.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'toki-cmn' (8 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-toki.xml.gz">ces</a></td>
 <td></td>
 <th>toki</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'toki-German' (0.6k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-toki.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'toki-German' (0.6k links, 2.4M tokens)" href="download.php?f=Tatoeba/de-toki.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'toki-English' (1.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-toki.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'toki-Esperanto' (0.3k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-toki.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'toki-Spanish' (0.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-toki.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'toki-French' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-toki.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'toki-English' (1.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-toki.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'toki-Esperanto' (0.3k links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-toki.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'toki-Spanish' (0.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/es-toki.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<th>toki</th>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'toki-Italian' (23 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-toki.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'toki-Japanese' (53 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ja-toki.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'toki-French' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-toki.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7885,10 +7861,10 @@
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'toki-Italian' (23 links, 1.3M tokens)" href="download.php?f=Tatoeba/it-toki.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'toki-Japanese' (53 links, 0.5M tokens)" href="download.php?f=Tatoeba/ja-toki.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'toki-Dutch' (28 links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/nl-toki.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7907,7 +7883,31 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'toki-Russian' (0.5k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/ru-toki.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'toki-Dutch' (28 links, 0.3M tokens)" href="download.php?f=Tatoeba/nl-toki.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>toki</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'toki-Russian' (0.5k links, 1.2M tokens)" href="download.php?f=Tatoeba/ru-toki.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -7951,12 +7951,12 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tok Pisin-German' (26 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-tpi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tok Pisin-German' (26 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-tpi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tok Pisin-English' (36 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-tpi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tok Pisin-Esperanto' (11 links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-tpi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tok Pisin-English' (36 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-tpi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tok Pisin-Esperanto' (11 links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-tpi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -8212,14 +8212,14 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'tpw-English' (28 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-tpw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'tpw-English' (28 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-tpw.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'tpw-Spanish' (7 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-tpw.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'tpw-Spanish' (7 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-tpw.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'tpw-French' (6 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-tpw.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'tpw-French' (6 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-tpw.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -8305,73 +8305,49 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Tatoeba/tpw.raw.tar.gz">tpw</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Tatoeba/tr.tar.gz">tr</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Afrikaans' (36 links, 1.0M tokens)" href="download.php?f=Tatoeba/xml/af-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Afrikaans' (36 links, 1.0M tokens)" href="download.php?f=Tatoeba/af-tr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Arabic' (0.4k links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/ar-tr.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Belarusian' (0.1k links, 1.0M tokens)" href="download.php?f=Tatoeba/xml/be-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Arabic' (0.4k links, 1.1M tokens)" href="download.php?f=Tatoeba/ar-tr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Breton' (94 links, 1.0M tokens)" href="download.php?f=Tatoeba/xml/br-tr.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Belarusian' (0.1k links, 1.0M tokens)" href="download.php?f=Tatoeba/be-tr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-cmn' (0.4k links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Czech' (22 links, 1.0M tokens)" href="download.php?f=Tatoeba/xml/cs-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Breton' (94 links, 1.0M tokens)" href="download.php?f=Tatoeba/br-tr.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-cmn' (0.4k links, 1.1M tokens)" href="download.php?f=Tatoeba/cmn-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Czech' (22 links, 1.0M tokens)" href="download.php?f=Tatoeba/cs-tr.xml.gz">ces</a></td>
 <th>tr</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-German' (3.6k links, 3.4M tokens)" href="download.php?f=Tatoeba/xml/de-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-German' (3.6k links, 3.4M tokens)" href="download.php?f=Tatoeba/de-tr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Greek' (0.2k links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/el-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-English' (0.2M links, 4.6M tokens)" href="download.php?f=Tatoeba/xml/en-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Esperanto' (4.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/eo-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Spanish' (17.7k links, 2.7M tokens)" href="download.php?f=Tatoeba/xml/es-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Greek' (0.2k links, 1.1M tokens)" href="download.php?f=Tatoeba/el-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-English' (0.2M links, 4.6M tokens)" href="download.php?f=Tatoeba/en-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Esperanto' (4.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/eo-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Spanish' (17.7k links, 2.7M tokens)" href="download.php?f=Tatoeba/es-tr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Finnish' (1.6k links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/fi-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Faroese' (2 links, 1.0M tokens)" href="download.php?f=Tatoeba/xml/fo-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-French' (1.9k links, 2.3M tokens)" href="download.php?f=Tatoeba/xml/fr-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Western Frisian' (25 links, 1.0M tokens)" href="download.php?f=Tatoeba/xml/fy-tr.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Hebrew' (0.9k links, 1.6M tokens)" href="download.php?f=Tatoeba/xml/he-tr.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<th>tr</th>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Finnish' (1.6k links, 1.1M tokens)" href="download.php?f=Tatoeba/fi-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Faroese' (2 links, 1.0M tokens)" href="download.php?f=Tatoeba/fo-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-French' (1.9k links, 2.3M tokens)" href="download.php?f=Tatoeba/fr-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Western Frisian' (25 links, 1.0M tokens)" href="download.php?f=Tatoeba/fy-tr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Indonesian' (26 links, 1.0M tokens)" href="download.php?f=Tatoeba/xml/id-tr.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Italian' (0.7k links, 2.2M tokens)" href="download.php?f=Tatoeba/xml/it-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Japanese' (0.5k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/ja-tr.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Korean' (0.1k links, 1.0M tokens)" href="download.php?f=Tatoeba/xml/ko-tr.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Hebrew' (0.9k links, 1.6M tokens)" href="download.php?f=Tatoeba/he-tr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th>tr</th>
@@ -8380,33 +8356,27 @@
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Indonesian' (26 links, 1.0M tokens)" href="download.php?f=Tatoeba/id-tr.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Italian' (0.7k links, 2.2M tokens)" href="download.php?f=Tatoeba/it-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Japanese' (0.5k links, 1.4M tokens)" href="download.php?f=Tatoeba/ja-tr.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Korean' (0.1k links, 1.0M tokens)" href="download.php?f=Tatoeba/ko-tr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Dutch' (1.0k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/nl-tr.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Polish' (0.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/pl-tr.xml.gz">ces</a></td>
 <td></td>
 <th>tr</th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Portuguese' (0.8k links, 2.1M tokens)" href="download.php?f=Tatoeba/xml/pt-tr.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Romanian' (0.2k links, 1.0M tokens)" href="download.php?f=Tatoeba/xml/ro-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Russian' (1.1k links, 2.2M tokens)" href="download.php?f=Tatoeba/xml/ru-tr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -8414,7 +8384,37 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-swh' (12 links, 1.0M tokens)" href="download.php?f=Tatoeba/xml/swh-tr.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Dutch' (1.0k links, 1.3M tokens)" href="download.php?f=Tatoeba/nl-tr.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Polish' (0.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/pl-tr.xml.gz">ces</a></td>
+<td></td>
+<th>tr</th>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Portuguese' (0.8k links, 2.1M tokens)" href="download.php?f=Tatoeba/pt-tr.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Romanian' (0.2k links, 1.0M tokens)" href="download.php?f=Tatoeba/ro-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Russian' (1.1k links, 2.2M tokens)" href="download.php?f=Tatoeba/ru-tr.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-swh' (12 links, 1.0M tokens)" href="download.php?f=Tatoeba/swh-tr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -8447,48 +8447,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tatar-cmn' (57 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-tt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tatar-cmn' (57 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-tt.xml.gz">ces</a></td>
 <td></td>
 <th>tt</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tatar-German' (2.4k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-tt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tatar-German' (2.4k links, 2.4M tokens)" href="download.php?f=Tatoeba/de-tt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tatar-English' (0.4k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-tt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tatar-Esperanto' (86 links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-tt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tatar-Spanish' (37 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-tt.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tatar-French' (83 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-tt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tatar-English' (0.4k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-tt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tatar-Esperanto' (86 links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-tt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tatar-Spanish' (37 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-tt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<th>tt</th>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tatar-Italian' (36 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-tt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tatar-Japanese' (67 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ja-tt.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tatar-French' (83 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-tt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -8507,8 +8483,8 @@
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tatar-Italian' (36 links, 1.3M tokens)" href="download.php?f=Tatoeba/it-tt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tatar-Japanese' (67 links, 0.5M tokens)" href="download.php?f=Tatoeba/ja-tt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -8529,7 +8505,31 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tatar-Russian' (0.8k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/ru-tt.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>tt</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tatar-Russian' (0.8k links, 1.2M tokens)" href="download.php?f=Tatoeba/ru-tt.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -8555,7 +8555,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Uighur-Arabic' (8 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/ar-ug.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Uighur-Arabic' (8 links, 0.1M tokens)" href="download.php?f=Tatoeba/ar-ug.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -8571,49 +8571,25 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Uighur-cmn' (1.9k links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-ug.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Uighur-Czech' (4 links, 80.8k tokens)" href="download.php?f=Tatoeba/xml/cs-ug.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Uighur-cmn' (1.9k links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-ug.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Uighur-Czech' (4 links, 80.8k tokens)" href="download.php?f=Tatoeba/cs-ug.xml.gz">ces</a></td>
 <th>ug</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Uighur-German' (0.2k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-ug.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Uighur-German' (0.2k links, 2.4M tokens)" href="download.php?f=Tatoeba/de-ug.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Uighur-English' (3.7k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-ug.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Uighur-English' (3.7k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-ug.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Uighur-Spanish' (37 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-ug.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Uighur-French' (0.7k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-ug.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Uighur-Spanish' (37 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-ug.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Uighur-French' (0.7k links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-ug.xml.gz">ces</a></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<th>ug</th>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Uighur-Italian' (81 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-ug.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Uighur-Japanese' (57 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ja-ug.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Uighur-Korean' (9 links, 49.2k tokens)" href="download.php?f=Tatoeba/xml/ko-ug.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -8631,6 +8607,30 @@
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Uighur-Italian' (81 links, 1.3M tokens)" href="download.php?f=Tatoeba/it-ug.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Uighur-Japanese' (57 links, 0.5M tokens)" href="download.php?f=Tatoeba/ja-ug.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Uighur-Korean' (9 links, 49.2k tokens)" href="download.php?f=Tatoeba/ko-ug.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>ug</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -8653,7 +8653,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Uighur-Russian' (0.5k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/ru-ug.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Uighur-Russian' (0.5k links, 1.2M tokens)" href="download.php?f=Tatoeba/ru-ug.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -8680,113 +8680,65 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Arabic' (56 links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/ar-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Arabic' (56 links, 0.3M tokens)" href="download.php?f=Tatoeba/ar-uk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Belarusian' (1.1k links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/be-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Belarusian' (1.1k links, 0.2M tokens)" href="download.php?f=Tatoeba/be-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Bulgarian' (75 links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/bg-uk.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Bulgarian' (75 links, 0.3M tokens)" href="download.php?f=Tatoeba/bg-uk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-cmn' (0.6k links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/cmn-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Czech' (79 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cs-uk.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-cmn' (0.6k links, 0.3M tokens)" href="download.php?f=Tatoeba/cmn-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Czech' (79 links, 0.2M tokens)" href="download.php?f=Tatoeba/cs-uk.xml.gz">ces</a></td>
 <th>uk</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-German' (1.7k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/de-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-German' (1.7k links, 2.6M tokens)" href="download.php?f=Tatoeba/de-uk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Greek' (15 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/el-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-English' (17.4k links, 3.8M tokens)" href="download.php?f=Tatoeba/xml/en-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Esperanto' (0.9k links, 2.7M tokens)" href="download.php?f=Tatoeba/xml/eo-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Spanish' (2.4k links, 1.8M tokens)" href="download.php?f=Tatoeba/xml/es-uk.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-French' (3.4k links, 1.5M tokens)" href="download.php?f=Tatoeba/xml/fr-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Western Frisian' (26 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/fy-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Greek' (15 links, 0.2M tokens)" href="download.php?f=Tatoeba/el-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-English' (17.4k links, 3.8M tokens)" href="download.php?f=Tatoeba/en-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Esperanto' (0.9k links, 2.7M tokens)" href="download.php?f=Tatoeba/eo-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Spanish' (2.4k links, 1.8M tokens)" href="download.php?f=Tatoeba/es-uk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Hebrew' (0.4k links, 0.8M tokens)" href="download.php?f=Tatoeba/xml/he-uk.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<th>uk</th>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Croatian' (0.2k links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/hr-uk.xml.gz">ces</a></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Hungarian' (94 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/hu-uk.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Indonesian' (6 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/id-uk.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Italian' (0.5k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/it-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Japanese' (0.3k links, 0.6M tokens)" href="download.php?f=Tatoeba/xml/ja-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-French' (3.4k links, 1.5M tokens)" href="download.php?f=Tatoeba/fr-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Western Frisian' (26 links, 0.2M tokens)" href="download.php?f=Tatoeba/fy-uk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Korean' (16 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/ko-uk.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Hebrew' (0.4k links, 0.8M tokens)" href="download.php?f=Tatoeba/he-uk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th>uk</th>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Croatian' (0.2k links, 0.2M tokens)" href="download.php?f=Tatoeba/hr-uk.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Hungarian' (94 links, 0.4M tokens)" href="download.php?f=Tatoeba/hu-uk.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Indonesian' (6 links, 0.2M tokens)" href="download.php?f=Tatoeba/id-uk.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Italian' (0.5k links, 1.4M tokens)" href="download.php?f=Tatoeba/it-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Japanese' (0.3k links, 0.6M tokens)" href="download.php?f=Tatoeba/ja-uk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Low German' (20 links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/nds-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Dutch' (1.3k links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/nl-uk.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-orv' (0.9k links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/orv-uk.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Polish' (1.2k links, 0.6M tokens)" href="download.php?f=Tatoeba/xml/pl-uk.xml.gz">ces</a></td>
-<td></td>
-<th>uk</th>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Portuguese' (1.4k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/pt-uk.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Russian' (6.5k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/ru-uk.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Serbian' (33 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/sr-uk.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Korean' (16 links, 0.2M tokens)" href="download.php?f=Tatoeba/ko-uk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -8796,10 +8748,58 @@
 <td></td>
 <th>uk</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Turkish' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/tr-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Tatar' (94 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/tt-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Uighur' (61 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/ug-uk.xml.gz">ces</a></td>
-<th><a rel="nofollow" title="Ukrainian-Ukrainian (sample file)" href="Tatoeba/uk-uk_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Ukrainian-Ukrainian' (0.1k links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/uk-uk.xml.gz">c</a>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Low German' (20 links, 0.3M tokens)" href="download.php?f=Tatoeba/nds-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Dutch' (1.3k links, 0.4M tokens)" href="download.php?f=Tatoeba/nl-uk.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-orv' (0.9k links, 0.2M tokens)" href="download.php?f=Tatoeba/orv-uk.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Polish' (1.2k links, 0.6M tokens)" href="download.php?f=Tatoeba/pl-uk.xml.gz">ces</a></td>
+<td></td>
+<th>uk</th>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Portuguese' (1.4k links, 1.3M tokens)" href="download.php?f=Tatoeba/pt-uk.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Russian' (6.5k links, 1.3M tokens)" href="download.php?f=Tatoeba/ru-uk.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Serbian' (33 links, 0.2M tokens)" href="download.php?f=Tatoeba/sr-uk.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>uk</th>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Turkish' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/tr-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Tatar' (94 links, 0.2M tokens)" href="download.php?f=Tatoeba/tt-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Uighur' (61 links, 0.2M tokens)" href="download.php?f=Tatoeba/ug-uk.xml.gz">ces</a></td>
+<th><a rel="nofollow" title="Ukrainian-Ukrainian (sample file)" href="Tatoeba/uk-uk_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Ukrainian-Ukrainian' (0.1k links, 0.3M tokens)" href="download.php?f=Tatoeba/uk-uk.xml.gz">c</a>
 </th><td></td><td></td><td><a rel="nofollow" title="Ukrainian-Vietnamese (sample file)" href="Tatoeba/uk-vi_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Ukrainian-yue (sample file)" href="Tatoeba/uk-yue_sample.html">view</a></td><td></td><th><a rel="nofollow" href="download.php?f=Tatoeba/uk.raw.tar.gz">uk</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Tatoeba/ur.tar.gz">ur</a></th>
 <td></td>
@@ -8832,14 +8832,14 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-English' (1.3k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-English' (1.3k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-ur.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-French' (6 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-French' (6 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-ur.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -8859,7 +8859,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Japanese' (7 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Japanese' (7 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-ur.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -8949,48 +8949,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Uzbek-cmn' (38 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-uz.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Uzbek-cmn' (38 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-uz.xml.gz">ces</a></td>
 <td></td>
 <th>uz</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Uzbek-German' (21 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-uz.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Uzbek-German' (21 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-uz.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Uzbek-English' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-uz.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Uzbek-French' (44 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-uz.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Uzbek-English' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-uz.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<th>uz</th>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Uzbek-Japanese' (4 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-uz.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Uzbek-French' (44 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-uz.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9010,7 +8986,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Uzbek-Japanese' (4 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-uz.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9031,7 +9007,31 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Uzbek-Russian' (65 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/ru-uz.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>uz</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Uzbek-Russian' (65 links, 1.2M tokens)" href="download.php?f=Tatoeba/ru-uz.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9058,7 +9058,7 @@
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th><a rel="nofollow" href="download.php?f=Tatoeba/uz.raw.tar.gz">uz</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Tatoeba/vi.tar.gz">vi</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Afrikaans' (1 links, 75.3k tokens)" href="download.php?f=Tatoeba/xml/af-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Afrikaans' (1 links, 75.3k tokens)" href="download.php?f=Tatoeba/af-vi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9067,59 +9067,35 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Belarusian' (3 links, 95.7k tokens)" href="download.php?f=Tatoeba/xml/be-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Belarusian' (3 links, 95.7k tokens)" href="download.php?f=Tatoeba/be-vi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Bengali' (1 links, 63.3k tokens)" href="download.php?f=Tatoeba/xml/bn-vi.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-cmn' (86 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/cmn-vi.xml.gz">ces</a></td>
-<td></td>
-<th>vi</th>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-German' (0.3k links, 2.5M tokens)" href="download.php?f=Tatoeba/xml/de-vi.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-English' (2.2k links, 3.7M tokens)" href="download.php?f=Tatoeba/xml/en-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Esperanto' (1.4k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Spanish' (0.3k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-vi.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Finnish' (1 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/fi-vi.xml.gz">ces</a></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-French' (1.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/xml/fr-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Western Frisian' (1 links, 62.6k tokens)" href="download.php?f=Tatoeba/xml/fy-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Bengali' (1 links, 63.3k tokens)" href="download.php?f=Tatoeba/bn-vi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-cmn' (86 links, 0.2M tokens)" href="download.php?f=Tatoeba/cmn-vi.xml.gz">ces</a></td>
 <td></td>
 <th>vi</th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Hungarian' (15 links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/hu-vi.xml.gz">ces</a></td>
 <td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Indonesian' (1 links, 80.3k tokens)" href="download.php?f=Tatoeba/xml/id-vi.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Italian' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Japanese' (0.8k links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/ja-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-German' (0.3k links, 2.5M tokens)" href="download.php?f=Tatoeba/de-vi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-English' (2.2k links, 3.7M tokens)" href="download.php?f=Tatoeba/en-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Esperanto' (1.4k links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Spanish' (0.3k links, 1.7M tokens)" href="download.php?f=Tatoeba/es-vi.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Korean' (29 links, 70.7k tokens)" href="download.php?f=Tatoeba/xml/ko-vi.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Finnish' (1 links, 0.2M tokens)" href="download.php?f=Tatoeba/fi-vi.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-French' (1.2k links, 1.4M tokens)" href="download.php?f=Tatoeba/fr-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Western Frisian' (1 links, 62.6k tokens)" href="download.php?f=Tatoeba/fy-vi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9130,44 +9106,20 @@
 <th>vi</th>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Hungarian' (15 links, 0.3M tokens)" href="download.php?f=Tatoeba/hu-vi.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Indonesian' (1 links, 80.3k tokens)" href="download.php?f=Tatoeba/id-vi.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Italian' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/it-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Japanese' (0.8k links, 0.5M tokens)" href="download.php?f=Tatoeba/ja-vi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Dutch' (33 links, 0.3M tokens)" href="download.php?f=Tatoeba/xml/nl-vi.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Polish' (16 links, 0.5M tokens)" href="download.php?f=Tatoeba/xml/pl-vi.xml.gz">ces</a></td>
-<td></td>
-<th>vi</th>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Portuguese' (11 links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/pt-vi.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Romanian' (1 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/ro-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Russian' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/ru-vi.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Slovenian' (8 links, 73.8k tokens)" href="download.php?f=Tatoeba/xml/sl-vi.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Korean' (29 links, 70.7k tokens)" href="download.php?f=Tatoeba/ko-vi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9177,13 +9129,61 @@
 <td></td>
 <th>vi</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Turkish' (28 links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/tr-vi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Tatar' (67 links, 95.9k tokens)" href="download.php?f=Tatoeba/xml/tt-vi.xml.gz">ces</a></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Ukrainian' (14 links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/uk-vi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<th><a rel="nofollow" title="Vietnamese-Vietnamese (sample file)" href="Tatoeba/vi-vi_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Vietnamese-Vietnamese' (33 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/vi-vi.xml.gz">c</a>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Dutch' (33 links, 0.3M tokens)" href="download.php?f=Tatoeba/nl-vi.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Polish' (16 links, 0.5M tokens)" href="download.php?f=Tatoeba/pl-vi.xml.gz">ces</a></td>
+<td></td>
+<th>vi</th>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Portuguese' (11 links, 1.2M tokens)" href="download.php?f=Tatoeba/pt-vi.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Romanian' (1 links, 0.1M tokens)" href="download.php?f=Tatoeba/ro-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Russian' (0.2k links, 1.2M tokens)" href="download.php?f=Tatoeba/ru-vi.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Slovenian' (8 links, 73.8k tokens)" href="download.php?f=Tatoeba/sl-vi.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>vi</th>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Turkish' (28 links, 1.1M tokens)" href="download.php?f=Tatoeba/tr-vi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Tatar' (67 links, 95.9k tokens)" href="download.php?f=Tatoeba/tt-vi.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Vietnamese-Ukrainian' (14 links, 0.2M tokens)" href="download.php?f=Tatoeba/uk-vi.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<th><a rel="nofollow" title="Vietnamese-Vietnamese (sample file)" href="Tatoeba/vi-vi_sample.html">v\</a><a rel="nofollow" title="sentence alignments for 'Vietnamese-Vietnamese' (33 links, 0.1M tokens)" href="download.php?f=Tatoeba/vi-vi.xml.gz">c</a>
 </th><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Vietnamese-zsm (sample file)" href="Tatoeba/vi-zsm_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=Tatoeba/vi.raw.tar.gz">vi</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Tatoeba/vo.tar.gz">vo</a></th>
 <td></td>
@@ -9212,18 +9212,18 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'VolapÃ¼k-German' (0.1k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-vo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'VolapÃ¼k-German' (0.1k links, 2.4M tokens)" href="download.php?f=Tatoeba/de-vo.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'VolapÃ¼k-English' (0.4k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-vo.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'VolapÃ¼k-Esperanto' (0.4k links, 2.6M tokens)" href="download.php?f=Tatoeba/xml/eo-vo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'VolapÃ¼k-English' (0.4k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-vo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'VolapÃ¼k-Esperanto' (0.4k links, 2.6M tokens)" href="download.php?f=Tatoeba/eo-vo.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'VolapÃ¼k-French' (19 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-vo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'VolapÃ¼k-French' (19 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-vo.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9243,7 +9243,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'VolapÃ¼k-Japanese' (2 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-vo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'VolapÃ¼k-Japanese' (2 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-vo.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9336,79 +9336,31 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'wuu-cmn' (3.2k links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-wuu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'wuu-Czech' (2 links, 51.7k tokens)" href="download.php?f=Tatoeba/xml/cs-wuu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'wuu-cmn' (3.2k links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-wuu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'wuu-Czech' (2 links, 51.7k tokens)" href="download.php?f=Tatoeba/cs-wuu.xml.gz">ces</a></td>
 <th>wuu</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'wuu-German' (23 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-wuu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'wuu-German' (23 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-wuu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'wuu-English' (1.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-wuu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'wuu-English' (1.1k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-wuu.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'wuu-Spanish' (0.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-wuu.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'wuu-French' (1.3k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-wuu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'wuu-Spanish' (0.1k links, 1.7M tokens)" href="download.php?f=Tatoeba/es-wuu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'wuu-Hindi' (30 links, 65.1k tokens)" href="download.php?f=Tatoeba/xml/hi-wuu.xml.gz">ces</a></td>
-<td></td>
-<th>wuu</th>
+<td><a rel="nofollow" title="sentence alignments for 'wuu-French' (1.3k links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-wuu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'wuu-Italian' (38 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-wuu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'wuu-Japanese' (13 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-wuu.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'wuu-Latin' (2 links, 81.3k tokens)" href="download.php?f=Tatoeba/xml/la-wuu.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<th>wuu</th>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'wuu-Latvian' (4 links, 18.8k tokens)" href="download.php?f=Tatoeba/xml/lv-wuu.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'wuu-Polish' (4 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/pl-wuu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'wuu-Hindi' (30 links, 65.1k tokens)" href="download.php?f=Tatoeba/hi-wuu.xml.gz">ces</a></td>
 <td></td>
 <th>wuu</th>
 <td></td>
@@ -9420,10 +9372,58 @@
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'wuu-Italian' (38 links, 1.3M tokens)" href="download.php?f=Tatoeba/it-wuu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'wuu-Japanese' (13 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-wuu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'wuu-Albanian' (3 links, 14.0k tokens)" href="download.php?f=Tatoeba/xml/sq-wuu.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'wuu-Latin' (2 links, 81.3k tokens)" href="download.php?f=Tatoeba/la-wuu.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<th>wuu</th>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'wuu-Latvian' (4 links, 18.8k tokens)" href="download.php?f=Tatoeba/lv-wuu.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'wuu-Polish' (4 links, 0.4M tokens)" href="download.php?f=Tatoeba/pl-wuu.xml.gz">ces</a></td>
+<td></td>
+<th>wuu</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'wuu-Albanian' (3 links, 14.0k tokens)" href="download.php?f=Tatoeba/sq-wuu.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9467,7 +9467,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kalmyk-cmn' (28 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-xal.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kalmyk-cmn' (28 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-xal.xml.gz">ces</a></td>
 <td></td>
 <th>xal</th>
 <td></td>
@@ -9477,34 +9477,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kalmyk-English' (0.3k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-xal.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kalmyk-English' (0.3k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-xal.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<th>xal</th>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kalmyk-Japanese' (4 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-xal.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9528,6 +9504,30 @@
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kalmyk-Japanese' (4 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-xal.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>xal</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9549,7 +9549,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Kalmyk-Russian' (0.1k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/ru-xal.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Kalmyk-Russian' (0.1k links, 1.2M tokens)" href="download.php?f=Tatoeba/ru-xal.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9609,7 +9609,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-English' (99 links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-English' (99 links, 3.6M tokens)" href="download.php?f=Tatoeba/en-xh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9732,30 +9732,30 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Yiddish-cmn' (4 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-yi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Yiddish-cmn' (4 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-yi.xml.gz">ces</a></td>
 <td></td>
 <th>yi</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Yiddish-German' (68 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-yi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Yiddish-German' (68 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-yi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Yiddish-English' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-yi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Yiddish-English' (0.2k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-yi.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Yiddish-Spanish' (11 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-yi.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Yiddish-French' (16 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-yi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Yiddish-Spanish' (11 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-yi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Yiddish-French' (16 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-yi.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Yiddish-Hebrew' (0.2k links, 0.6M tokens)" href="download.php?f=Tatoeba/xml/he-yi.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Yiddish-Hebrew' (0.2k links, 0.6M tokens)" href="download.php?f=Tatoeba/he-yi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th>yi</th>
@@ -9768,8 +9768,8 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Yiddish-Italian' (11 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/it-yi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Yiddish-Japanese' (7 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-yi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Yiddish-Italian' (11 links, 1.3M tokens)" href="download.php?f=Tatoeba/it-yi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Yiddish-Japanese' (7 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-yi.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9866,49 +9866,25 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'yue-cmn' (0.5k links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-yue.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'yue-cmn' (0.5k links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-yue.xml.gz">ces</a></td>
 <td></td>
 <th>yue</th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'yue-German' (0.1k links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-yue.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'yue-German' (0.1k links, 2.4M tokens)" href="download.php?f=Tatoeba/de-yue.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'yue-English' (2.6k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-yue.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'yue-English' (2.6k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-yue.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'yue-Spanish' (36 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-yue.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'yue-French' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-yue.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'yue-Spanish' (36 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-yue.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'yue-French' (0.2k links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-yue.xml.gz">ces</a></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<th>yue</th>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'yue-Japanese' (0.2k links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-yue.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'yue-Korean' (0.1k links, 17.4k tokens)" href="download.php?f=Tatoeba/xml/ko-yue.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9927,12 +9903,12 @@
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'yue-Japanese' (0.2k links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-yue.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'yue-Korean' (0.1k links, 17.4k tokens)" href="download.php?f=Tatoeba/ko-yue.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9948,7 +9924,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'yue-Russian' (0.1k links, 1.2M tokens)" href="download.php?f=Tatoeba/xml/ru-yue.xml.gz">ces</a></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9969,12 +9945,36 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'yue-Ukrainian' (0.2k links, 0.2M tokens)" href="download.php?f=Tatoeba/xml/uk-yue.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'yue-Russian' (0.1k links, 1.2M tokens)" href="download.php?f=Tatoeba/ru-yue.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'yue-wuu' (61 links, 19.6k tokens)" href="download.php?f=Tatoeba/xml/wuu-yue.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>yue</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'yue-Ukrainian' (0.2k links, 0.2M tokens)" href="download.php?f=Tatoeba/uk-yue.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'yue-wuu' (61 links, 19.6k tokens)" href="download.php?f=Tatoeba/wuu-yue.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9985,7 +9985,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'zsm-Arabic' (94 links, 97.5k tokens)" href="download.php?f=Tatoeba/xml/ar-zsm.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'zsm-Arabic' (94 links, 97.5k tokens)" href="download.php?f=Tatoeba/ar-zsm.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -10001,48 +10001,24 @@
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'zsm-cmn' (31 links, 0.1M tokens)" href="download.php?f=Tatoeba/xml/cmn-zsm.xml.gz">ces</a></td>
-<td></td>
-<th>zsm</th>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'zsm-German' (23 links, 2.4M tokens)" href="download.php?f=Tatoeba/xml/de-zsm.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'zsm-English' (0.6k links, 3.6M tokens)" href="download.php?f=Tatoeba/xml/en-zsm.xml.gz">ces</a></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'zsm-Spanish' (23 links, 1.7M tokens)" href="download.php?f=Tatoeba/xml/es-zsm.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'zsm-French' (51 links, 1.3M tokens)" href="download.php?f=Tatoeba/xml/fr-zsm.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'zsm-cmn' (31 links, 0.1M tokens)" href="download.php?f=Tatoeba/cmn-zsm.xml.gz">ces</a></td>
 <td></td>
 <th>zsm</th>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'zsm-Indonesian' (23 links, 26.0k tokens)" href="download.php?f=Tatoeba/xml/id-zsm.xml.gz">ces</a></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'zsm-German' (23 links, 2.4M tokens)" href="download.php?f=Tatoeba/de-zsm.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'zsm-Japanese' (74 links, 0.4M tokens)" href="download.php?f=Tatoeba/xml/ja-zsm.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'zsm-English' (0.6k links, 3.6M tokens)" href="download.php?f=Tatoeba/en-zsm.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'zsm-Spanish' (23 links, 1.7M tokens)" href="download.php?f=Tatoeba/es-zsm.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'zsm-French' (51 links, 1.3M tokens)" href="download.php?f=Tatoeba/fr-zsm.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -10057,12 +10033,12 @@
 <td></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'zsm-Indonesian' (23 links, 26.0k tokens)" href="download.php?f=Tatoeba/id-zsm.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'zsm-Japanese' (74 links, 0.4M tokens)" href="download.php?f=Tatoeba/ja-zsm.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -10078,7 +10054,7 @@
 <th>zsm</th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'zsm-Portuguese' (24 links, 1.1M tokens)" href="download.php?f=Tatoeba/xml/pt-zsm.xml.gz">ces</a></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -10102,12 +10078,36 @@
 <th>zsm</th>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'zsm-Portuguese' (24 links, 1.1M tokens)" href="download.php?f=Tatoeba/pt-zsm.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'zsm-Vietnamese' (2 links, 69.1k tokens)" href="download.php?f=Tatoeba/xml/vi-zsm.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th>zsm</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'zsm-Vietnamese' (2 links, 69.1k tokens)" href="download.php?f=Tatoeba/vi-zsm.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>

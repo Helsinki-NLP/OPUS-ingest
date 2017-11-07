@@ -29,52 +29,52 @@
 <th></th>
 <td><a rel="nofollow" title="German-English (sample file)" href="OpenOffice3/de-en_GB_sample.html">view</a></td><td><a rel="nofollow" title="German-Spanish (sample file)" href="OpenOffice3/de-es_sample.html">view</a></td><td><a rel="nofollow" title="German-French (sample file)" href="OpenOffice3/de-fr_sample.html">view</a></td><td><a rel="nofollow" title="German-Japanese (sample file)" href="OpenOffice3/de-ja_sample.html">view</a></td><td><a rel="nofollow" title="German-Russian (sample file)" href="OpenOffice3/de-ru_sample.html">view</a></td><td><a rel="nofollow" title="German-Swedish (sample file)" href="OpenOffice3/de-sv_sample.html">view</a></td><td><a rel="nofollow" title="German-Chinese (sample file)" href="OpenOffice3/de-zh_CN_sample.html">view</a></td><th>de</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenOffice3/en_GB.tar.gz">en_GB</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'English-German' (2,265 aligned documents, 78.0k links, 1.0M tokens)" href="download.php?f=OpenOffice3/xml/de-en_GB.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-German' (2,265 aligned documents, 78.0k links, 1.0M tokens)" href="download.php?f=OpenOffice3/de-en_GB.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="English-Spanish (sample file)" href="OpenOffice3/en_GB-es_sample.html">view</a></td><td><a rel="nofollow" title="English-French (sample file)" href="OpenOffice3/en_GB-fr_sample.html">view</a></td><td><a rel="nofollow" title="English-Japanese (sample file)" href="OpenOffice3/en_GB-ja_sample.html">view</a></td><td><a rel="nofollow" title="English-Russian (sample file)" href="OpenOffice3/en_GB-ru_sample.html">view</a></td><td><a rel="nofollow" title="English-Swedish (sample file)" href="OpenOffice3/en_GB-sv_sample.html">view</a></td><td><a rel="nofollow" title="English-Chinese (sample file)" href="OpenOffice3/en_GB-zh_CN_sample.html">view</a></td><th>en_GB</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenOffice3/es.tar.gz">es</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (2,265 aligned documents, 77.8k links, 1.0M tokens)" href="download.php?f=OpenOffice3/xml/de-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (2,265 aligned documents, 78.2k links, 1.1M tokens)" href="download.php?f=OpenOffice3/xml/en_GB-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (2,265 aligned documents, 77.8k links, 1.0M tokens)" href="download.php?f=OpenOffice3/de-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (2,265 aligned documents, 78.2k links, 1.1M tokens)" href="download.php?f=OpenOffice3/en_GB-es.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Spanish-French (sample file)" href="OpenOffice3/es-fr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Japanese (sample file)" href="OpenOffice3/es-ja_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Russian (sample file)" href="OpenOffice3/es-ru_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Swedish (sample file)" href="OpenOffice3/es-sv_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Chinese (sample file)" href="OpenOffice3/es-zh_CN_sample.html">view</a></td><th>es</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenOffice3/fr.tar.gz">fr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'French-German' (2,265 aligned documents, 77.7k links, 1.1M tokens)" href="download.php?f=OpenOffice3/xml/de-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English' (2,265 aligned documents, 78.2k links, 1.1M tokens)" href="download.php?f=OpenOffice3/xml/en_GB-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (2,265 aligned documents, 77.9k links, 1.1M tokens)" href="download.php?f=OpenOffice3/xml/es-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-German' (2,265 aligned documents, 77.7k links, 1.1M tokens)" href="download.php?f=OpenOffice3/de-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English' (2,265 aligned documents, 78.2k links, 1.1M tokens)" href="download.php?f=OpenOffice3/en_GB-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (2,265 aligned documents, 77.9k links, 1.1M tokens)" href="download.php?f=OpenOffice3/es-fr.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="French-Japanese (sample file)" href="OpenOffice3/fr-ja_sample.html">view</a></td><td><a rel="nofollow" title="French-Russian (sample file)" href="OpenOffice3/fr-ru_sample.html">view</a></td><td><a rel="nofollow" title="French-Swedish (sample file)" href="OpenOffice3/fr-sv_sample.html">view</a></td><td><a rel="nofollow" title="French-Chinese (sample file)" href="OpenOffice3/fr-zh_CN_sample.html">view</a></td><th>fr</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenOffice3/ja.tar.gz">ja</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-German' (2,265 aligned documents, 71.4k links, 0.7M tokens)" href="download.php?f=OpenOffice3/xml/de-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-English' (2,265 aligned documents, 71.1k links, 0.8M tokens)" href="download.php?f=OpenOffice3/xml/en_GB-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Spanish' (2,265 aligned documents, 71.0k links, 0.8M tokens)" href="download.php?f=OpenOffice3/xml/es-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-French' (2,265 aligned documents, 71.1k links, 0.8M tokens)" href="download.php?f=OpenOffice3/xml/fr-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-German' (2,265 aligned documents, 71.4k links, 0.7M tokens)" href="download.php?f=OpenOffice3/de-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-English' (2,265 aligned documents, 71.1k links, 0.8M tokens)" href="download.php?f=OpenOffice3/en_GB-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Spanish' (2,265 aligned documents, 71.0k links, 0.8M tokens)" href="download.php?f=OpenOffice3/es-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-French' (2,265 aligned documents, 71.1k links, 0.8M tokens)" href="download.php?f=OpenOffice3/fr-ja.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Japanese-Russian (sample file)" href="OpenOffice3/ja-ru_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Swedish (sample file)" href="OpenOffice3/ja-sv_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Chinese (sample file)" href="OpenOffice3/ja-zh_CN_sample.html">view</a></td><th>ja</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenOffice3/ru.tar.gz">ru</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (2,265 aligned documents, 76.7k links, 1.0M tokens)" href="download.php?f=OpenOffice3/xml/de-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (2,265 aligned documents, 76.7k links, 1.0M tokens)" href="download.php?f=OpenOffice3/xml/en_GB-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (2,265 aligned documents, 77.3k links, 1.0M tokens)" href="download.php?f=OpenOffice3/xml/es-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (2,265 aligned documents, 77.3k links, 1.0M tokens)" href="download.php?f=OpenOffice3/xml/fr-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Japanese' (2,265 aligned documents, 70.5k links, 0.7M tokens)" href="download.php?f=OpenOffice3/xml/ja-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (2,265 aligned documents, 76.7k links, 1.0M tokens)" href="download.php?f=OpenOffice3/de-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (2,265 aligned documents, 76.7k links, 1.0M tokens)" href="download.php?f=OpenOffice3/en_GB-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (2,265 aligned documents, 77.3k links, 1.0M tokens)" href="download.php?f=OpenOffice3/es-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (2,265 aligned documents, 77.3k links, 1.0M tokens)" href="download.php?f=OpenOffice3/fr-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Japanese' (2,265 aligned documents, 70.5k links, 0.7M tokens)" href="download.php?f=OpenOffice3/ja-ru.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Russian-Swedish (sample file)" href="OpenOffice3/ru-sv_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Chinese (sample file)" href="OpenOffice3/ru-zh_CN_sample.html">view</a></td><th>ru</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenOffice3/sv.tar.gz">sv</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-German' (2,265 aligned documents, 78.1k links, 1.0M tokens)" href="download.php?f=OpenOffice3/xml/de-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (2,265 aligned documents, 78.3k links, 1.0M tokens)" href="download.php?f=OpenOffice3/xml/en_GB-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Spanish' (2,265 aligned documents, 78.3k links, 1.0M tokens)" href="download.php?f=OpenOffice3/xml/es-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (2,265 aligned documents, 78.0k links, 1.0M tokens)" href="download.php?f=OpenOffice3/xml/fr-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Japanese' (2,265 aligned documents, 71.3k links, 0.7M tokens)" href="download.php?f=OpenOffice3/xml/ja-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Russian' (2,265 aligned documents, 76.7k links, 0.9M tokens)" href="download.php?f=OpenOffice3/xml/ru-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-German' (2,265 aligned documents, 78.1k links, 1.0M tokens)" href="download.php?f=OpenOffice3/de-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (2,265 aligned documents, 78.3k links, 1.0M tokens)" href="download.php?f=OpenOffice3/en_GB-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Spanish' (2,265 aligned documents, 78.3k links, 1.0M tokens)" href="download.php?f=OpenOffice3/es-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (2,265 aligned documents, 78.0k links, 1.0M tokens)" href="download.php?f=OpenOffice3/fr-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Japanese' (2,265 aligned documents, 71.3k links, 0.7M tokens)" href="download.php?f=OpenOffice3/ja-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Russian' (2,265 aligned documents, 76.7k links, 0.9M tokens)" href="download.php?f=OpenOffice3/ru-sv.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Swedish-Chinese (sample file)" href="OpenOffice3/sv-zh_CN_sample.html">view</a></td><th>sv</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenOffice3/zh_CN.tar.gz">zh_CN</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-German' (2,265 aligned documents, 70.3k links, 0.7M tokens)" href="download.php?f=OpenOffice3/xml/de-zh_CN.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (2,265 aligned documents, 70.5k links, 0.8M tokens)" href="download.php?f=OpenOffice3/xml/en_GB-zh_CN.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (2,265 aligned documents, 69.9k links, 0.8M tokens)" href="download.php?f=OpenOffice3/xml/es-zh_CN.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-French' (2,265 aligned documents, 70.1k links, 0.8M tokens)" href="download.php?f=OpenOffice3/xml/fr-zh_CN.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Japanese' (2,265 aligned documents, 69.9k links, 0.5M tokens)" href="download.php?f=OpenOffice3/xml/ja-zh_CN.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Russian' (2,265 aligned documents, 68.6k links, 0.7M tokens)" href="download.php?f=OpenOffice3/xml/ru-zh_CN.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Swedish' (2,265 aligned documents, 70.3k links, 0.7M tokens)" href="download.php?f=OpenOffice3/xml/sv-zh_CN.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-German' (2,265 aligned documents, 70.3k links, 0.7M tokens)" href="download.php?f=OpenOffice3/de-zh_CN.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (2,265 aligned documents, 70.5k links, 0.8M tokens)" href="download.php?f=OpenOffice3/en_GB-zh_CN.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (2,265 aligned documents, 69.9k links, 0.8M tokens)" href="download.php?f=OpenOffice3/es-zh_CN.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-French' (2,265 aligned documents, 70.1k links, 0.8M tokens)" href="download.php?f=OpenOffice3/fr-zh_CN.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Japanese' (2,265 aligned documents, 69.9k links, 0.5M tokens)" href="download.php?f=OpenOffice3/ja-zh_CN.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Russian' (2,265 aligned documents, 68.6k links, 0.7M tokens)" href="download.php?f=OpenOffice3/ru-zh_CN.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Swedish' (2,265 aligned documents, 70.3k links, 0.7M tokens)" href="download.php?f=OpenOffice3/sv-zh_CN.xml.gz">ces</a></td>
 <th></th>
 <th>zh_CN</th></tr>
 <tr><th></th>

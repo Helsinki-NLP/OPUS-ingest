@@ -23,7 +23,7 @@
 <th></th>
 <td><a rel="nofollow" title="English-Swedish (sample file)" href="WikiSource/en-sv_sample.html">view</a></td><th>en</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=WikiSource/sv.tar.gz">sv</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (66 aligned documents, 35.0k links, 1.8M tokens)" href="download.php?f=WikiSource/xml/en-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (66 aligned documents, 35.0k links, 1.8M tokens)" href="download.php?f=WikiSource/en-sv.xml.gz">ces</a></td>
 <th></th>
 <th>sv</th></tr>
 <tr><th></th>

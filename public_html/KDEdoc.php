@@ -50,108 +50,108 @@
 <td><a rel="nofollow" title="German-English (sample file)" href="KDEdoc/de-en_GB_sample.html">view</a></td><td><a rel="nofollow" title="German-Spanish (sample file)" href="KDEdoc/de-es_sample.html">view</a></td><td><a rel="nofollow" title="German-Estonian (sample file)" href="KDEdoc/de-et_sample.html">view</a></td><td><a rel="nofollow" title="German-French (sample file)" href="KDEdoc/de-fr_sample.html">view</a></td><td><a rel="nofollow" title="German-Hungarian (sample file)" href="KDEdoc/de-hu_sample.html">view</a></td><td><a rel="nofollow" title="German-Italian (sample file)" href="KDEdoc/de-it_sample.html">view</a></td><td><a rel="nofollow" title="German-Japanese (sample file)" href="KDEdoc/de-ja_sample.html">view</a></td><td><a rel="nofollow" title="German-Dutch (sample file)" href="KDEdoc/de-nl_sample.html">view</a></td><td><a rel="nofollow" title="German-Norwegian Nynorsk (sample file)" href="KDEdoc/de-nn_sample.html">view</a></td><td><a rel="nofollow" title="German-Portuguese (sample file)" href="KDEdoc/de-pt_sample.html">view</a></td><td><a rel="nofollow" title="German-Portuguese (sample file)" href="KDEdoc/de-pt_BR_sample.html">view</a></td><td><a rel="nofollow" title="German-Romanian (sample file)" href="KDEdoc/de-ro_sample.html">view</a></td><td><a rel="nofollow" title="German-Russian (sample file)" href="KDEdoc/de-ru_sample.html">view</a></td><td><a rel="nofollow" title="German-Slovak (sample file)" href="KDEdoc/de-sk_sample.html">view</a></td><td><a rel="nofollow" title="German-Slovenian (sample file)" href="KDEdoc/de-sl_sample.html">view</a></td><td><a rel="nofollow" title="German-Serbian (sample file)" href="KDEdoc/de-sr_sample.html">view</a></td><td><a rel="nofollow" title="German-Swedish (sample file)" href="KDEdoc/de-sv_sample.html">view</a></td><td><a rel="nofollow" title="German-Turkish (sample file)" href="KDEdoc/de-tr_sample.html">view</a></td><td><a rel="nofollow" title="German-Ukrainian (sample file)" href="KDEdoc/de-uk_sample.html">view</a></td><td><a rel="nofollow" title="German-Walloon (sample file)" href="KDEdoc/de-wa_sample.html">view</a></td><td><a rel="nofollow" title="German-Xhosa (sample file)" href="KDEdoc/de-xh_sample.html">view</a></td><td><a rel="nofollow" title="German-Chinese (sample file)" href="KDEdoc/de-zh_TW_sample.html">view</a></td><th><a rel="nofollow" href="KDEdoc/de_parse_sample.html">de</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/en_GB.tar.gz">en_GB</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-German' (132 aligned documents, 3.0k links, 79.4k tokens)" href="download.php?f=KDEdoc/xml/de-en_GB.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-German' (132 aligned documents, 3.0k links, 79.4k tokens)" href="download.php?f=KDEdoc/de-en_GB.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="English-Spanish (sample file)" href="KDEdoc/en_GB-es_sample.html">view</a></td><td><a rel="nofollow" title="English-Estonian (sample file)" href="KDEdoc/en_GB-et_sample.html">view</a></td><td><a rel="nofollow" title="English-French (sample file)" href="KDEdoc/en_GB-fr_sample.html">view</a></td><td><a rel="nofollow" title="English-Hungarian (sample file)" href="KDEdoc/en_GB-hu_sample.html">view</a></td><td><a rel="nofollow" title="English-Italian (sample file)" href="KDEdoc/en_GB-it_sample.html">view</a></td><td><a rel="nofollow" title="English-Japanese (sample file)" href="KDEdoc/en_GB-ja_sample.html">view</a></td><td><a rel="nofollow" title="English-Dutch (sample file)" href="KDEdoc/en_GB-nl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="English-Portuguese (sample file)" href="KDEdoc/en_GB-pt_sample.html">view</a></td><td></td><td><a rel="nofollow" title="English-Romanian (sample file)" href="KDEdoc/en_GB-ro_sample.html">view</a></td><td><a rel="nofollow" title="English-Russian (sample file)" href="KDEdoc/en_GB-ru_sample.html">view</a></td><td><a rel="nofollow" title="English-Slovak (sample file)" href="KDEdoc/en_GB-sk_sample.html">view</a></td><td><a rel="nofollow" title="English-Slovenian (sample file)" href="KDEdoc/en_GB-sl_sample.html">view</a></td><td><a rel="nofollow" title="English-Serbian (sample file)" href="KDEdoc/en_GB-sr_sample.html">view</a></td><td><a rel="nofollow" title="English-Swedish (sample file)" href="KDEdoc/en_GB-sv_sample.html">view</a></td><td><a rel="nofollow" title="English-Turkish (sample file)" href="KDEdoc/en_GB-tr_sample.html">view</a></td><td><a rel="nofollow" title="English-Ukrainian (sample file)" href="KDEdoc/en_GB-uk_sample.html">view</a></td><td><a rel="nofollow" title="English-Walloon (sample file)" href="KDEdoc/en_GB-wa_sample.html">view</a></td><td><a rel="nofollow" title="English-Xhosa (sample file)" href="KDEdoc/en_GB-xh_sample.html">view</a></td><td><a rel="nofollow" title="English-Chinese (sample file)" href="KDEdoc/en_GB-zh_TW_sample.html">view</a></td><th>en_GB</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/es.tar.gz">es</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (322 aligned documents, 25.5k links, 0.7M tokens)" href="download.php?f=KDEdoc/xml/de-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (132 aligned documents, 3.1k links, 87.1k tokens)" href="download.php?f=KDEdoc/xml/en_GB-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (322 aligned documents, 25.5k links, 0.7M tokens)" href="download.php?f=KDEdoc/de-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (132 aligned documents, 3.1k links, 87.1k tokens)" href="download.php?f=KDEdoc/en_GB-es.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Spanish-Estonian (sample file)" href="KDEdoc/es-et_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-French (sample file)" href="KDEdoc/es-fr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Hungarian (sample file)" href="KDEdoc/es-hu_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Italian (sample file)" href="KDEdoc/es-it_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Japanese (sample file)" href="KDEdoc/es-ja_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Dutch (sample file)" href="KDEdoc/es-nl_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Norwegian Nynorsk (sample file)" href="KDEdoc/es-nn_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Portuguese (sample file)" href="KDEdoc/es-pt_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Portuguese (sample file)" href="KDEdoc/es-pt_BR_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Romanian (sample file)" href="KDEdoc/es-ro_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Russian (sample file)" href="KDEdoc/es-ru_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Slovak (sample file)" href="KDEdoc/es-sk_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Slovenian (sample file)" href="KDEdoc/es-sl_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Serbian (sample file)" href="KDEdoc/es-sr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Swedish (sample file)" href="KDEdoc/es-sv_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Turkish (sample file)" href="KDEdoc/es-tr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Ukrainian (sample file)" href="KDEdoc/es-uk_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Walloon (sample file)" href="KDEdoc/es-wa_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Xhosa (sample file)" href="KDEdoc/es-xh_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Chinese (sample file)" href="KDEdoc/es-zh_TW_sample.html">view</a></td><th>es</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/et.tar.gz">et</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-German' (14 aligned documents, 0.3k links, 3.6k tokens)" href="download.php?f=KDEdoc/xml/de-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-English' (10 aligned documents, 47 links, 0.7k tokens)" href="download.php?f=KDEdoc/xml/en_GB-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Spanish' (14 aligned documents, 0.3k links, 4.2k tokens)" href="download.php?f=KDEdoc/xml/es-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-German' (14 aligned documents, 0.3k links, 3.6k tokens)" href="download.php?f=KDEdoc/de-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-English' (10 aligned documents, 47 links, 0.7k tokens)" href="download.php?f=KDEdoc/en_GB-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Spanish' (14 aligned documents, 0.3k links, 4.2k tokens)" href="download.php?f=KDEdoc/es-et.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Estonian-French (sample file)" href="KDEdoc/et-fr_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Hungarian (sample file)" href="KDEdoc/et-hu_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Estonian-Dutch (sample file)" href="KDEdoc/et-nl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Estonian-Portuguese (sample file)" href="KDEdoc/et-pt_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Estonian-Russian (sample file)" href="KDEdoc/et-ru_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Slovak (sample file)" href="KDEdoc/et-sk_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Slovenian (sample file)" href="KDEdoc/et-sl_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>et</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/fr.tar.gz">fr</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-German' (290 aligned documents, 23.9k links, 0.7M tokens)" href="download.php?f=KDEdoc/xml/de-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English' (126 aligned documents, 2.4k links, 68.7k tokens)" href="download.php?f=KDEdoc/xml/en_GB-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (282 aligned documents, 21.9k links, 0.6M tokens)" href="download.php?f=KDEdoc/xml/es-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Estonian' (14 aligned documents, 0.3k links, 4.6k tokens)" href="download.php?f=KDEdoc/xml/et-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-German' (290 aligned documents, 23.9k links, 0.7M tokens)" href="download.php?f=KDEdoc/de-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English' (126 aligned documents, 2.4k links, 68.7k tokens)" href="download.php?f=KDEdoc/en_GB-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (282 aligned documents, 21.9k links, 0.6M tokens)" href="download.php?f=KDEdoc/es-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Estonian' (14 aligned documents, 0.3k links, 4.6k tokens)" href="download.php?f=KDEdoc/et-fr.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="French-Hungarian (sample file)" href="KDEdoc/fr-hu_sample.html">view</a></td><td><a rel="nofollow" title="French-Italian (sample file)" href="KDEdoc/fr-it_sample.html">view</a></td><td><a rel="nofollow" title="French-Japanese (sample file)" href="KDEdoc/fr-ja_sample.html">view</a></td><td><a rel="nofollow" title="French-Dutch (sample file)" href="KDEdoc/fr-nl_sample.html">view</a></td><td><a rel="nofollow" title="French-Norwegian Nynorsk (sample file)" href="KDEdoc/fr-nn_sample.html">view</a></td><td><a rel="nofollow" title="French-Portuguese (sample file)" href="KDEdoc/fr-pt_sample.html">view</a></td><td><a rel="nofollow" title="French-Portuguese (sample file)" href="KDEdoc/fr-pt_BR_sample.html">view</a></td><td><a rel="nofollow" title="French-Romanian (sample file)" href="KDEdoc/fr-ro_sample.html">view</a></td><td><a rel="nofollow" title="French-Russian (sample file)" href="KDEdoc/fr-ru_sample.html">view</a></td><td><a rel="nofollow" title="French-Slovak (sample file)" href="KDEdoc/fr-sk_sample.html">view</a></td><td><a rel="nofollow" title="French-Slovenian (sample file)" href="KDEdoc/fr-sl_sample.html">view</a></td><td><a rel="nofollow" title="French-Serbian (sample file)" href="KDEdoc/fr-sr_sample.html">view</a></td><td><a rel="nofollow" title="French-Swedish (sample file)" href="KDEdoc/fr-sv_sample.html">view</a></td><td><a rel="nofollow" title="French-Turkish (sample file)" href="KDEdoc/fr-tr_sample.html">view</a></td><td><a rel="nofollow" title="French-Ukrainian (sample file)" href="KDEdoc/fr-uk_sample.html">view</a></td><td><a rel="nofollow" title="French-Walloon (sample file)" href="KDEdoc/fr-wa_sample.html">view</a></td><td><a rel="nofollow" title="French-Xhosa (sample file)" href="KDEdoc/fr-xh_sample.html">view</a></td><td><a rel="nofollow" title="French-Chinese (sample file)" href="KDEdoc/fr-zh_TW_sample.html">view</a></td><th>fr</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/hu.tar.gz">hu</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-German' (194 aligned documents, 15.2k links, 0.3M tokens)" href="download.php?f=KDEdoc/xml/de-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (75 aligned documents, 1.2k links, 29.8k tokens)" href="download.php?f=KDEdoc/xml/en_GB-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Spanish' (188 aligned documents, 11.9k links, 0.3M tokens)" href="download.php?f=KDEdoc/xml/es-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Estonian' (14 aligned documents, 40 links, 0.2k tokens)" href="download.php?f=KDEdoc/xml/et-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-French' (191 aligned documents, 11.5k links, 0.3M tokens)" href="download.php?f=KDEdoc/xml/fr-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-German' (194 aligned documents, 15.2k links, 0.3M tokens)" href="download.php?f=KDEdoc/de-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (75 aligned documents, 1.2k links, 29.8k tokens)" href="download.php?f=KDEdoc/en_GB-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Spanish' (188 aligned documents, 11.9k links, 0.3M tokens)" href="download.php?f=KDEdoc/es-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Estonian' (14 aligned documents, 40 links, 0.2k tokens)" href="download.php?f=KDEdoc/et-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-French' (191 aligned documents, 11.5k links, 0.3M tokens)" href="download.php?f=KDEdoc/fr-hu.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Hungarian-Italian (sample file)" href="KDEdoc/hu-it_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Japanese (sample file)" href="KDEdoc/hu-ja_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Dutch (sample file)" href="KDEdoc/hu-nl_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Norwegian Nynorsk (sample file)" href="KDEdoc/hu-nn_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Portuguese (sample file)" href="KDEdoc/hu-pt_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Portuguese (sample file)" href="KDEdoc/hu-pt_BR_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Romanian (sample file)" href="KDEdoc/hu-ro_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Russian (sample file)" href="KDEdoc/hu-ru_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Slovak (sample file)" href="KDEdoc/hu-sk_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Slovenian (sample file)" href="KDEdoc/hu-sl_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Serbian (sample file)" href="KDEdoc/hu-sr_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Swedish (sample file)" href="KDEdoc/hu-sv_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Turkish (sample file)" href="KDEdoc/hu-tr_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Ukrainian (sample file)" href="KDEdoc/hu-uk_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Walloon (sample file)" href="KDEdoc/hu-wa_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Xhosa (sample file)" href="KDEdoc/hu-xh_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Chinese (sample file)" href="KDEdoc/hu-zh_TW_sample.html">view</a></td><th>hu</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/it.tar.gz">it</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-German' (118 aligned documents, 10.1k links, 0.3M tokens)" href="download.php?f=KDEdoc/xml/de-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (43 aligned documents, 1.8k links, 46.9k tokens)" href="download.php?f=KDEdoc/xml/en_GB-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Spanish' (111 aligned documents, 8.9k links, 0.2M tokens)" href="download.php?f=KDEdoc/xml/es-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-German' (118 aligned documents, 10.1k links, 0.3M tokens)" href="download.php?f=KDEdoc/de-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (43 aligned documents, 1.8k links, 46.9k tokens)" href="download.php?f=KDEdoc/en_GB-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Spanish' (111 aligned documents, 8.9k links, 0.2M tokens)" href="download.php?f=KDEdoc/es-it.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (91 aligned documents, 8.4k links, 0.2M tokens)" href="download.php?f=KDEdoc/xml/fr-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Hungarian' (63 aligned documents, 4.7k links, 0.1M tokens)" href="download.php?f=KDEdoc/xml/hu-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (91 aligned documents, 8.4k links, 0.2M tokens)" href="download.php?f=KDEdoc/fr-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Hungarian' (63 aligned documents, 4.7k links, 0.1M tokens)" href="download.php?f=KDEdoc/hu-it.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Italian-Japanese (sample file)" href="KDEdoc/it-ja_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Dutch (sample file)" href="KDEdoc/it-nl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Italian-Portuguese (sample file)" href="KDEdoc/it-pt_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Portuguese (sample file)" href="KDEdoc/it-pt_BR_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Romanian (sample file)" href="KDEdoc/it-ro_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Russian (sample file)" href="KDEdoc/it-ru_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Slovak (sample file)" href="KDEdoc/it-sk_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Slovenian (sample file)" href="KDEdoc/it-sl_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Serbian (sample file)" href="KDEdoc/it-sr_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Swedish (sample file)" href="KDEdoc/it-sv_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Turkish (sample file)" href="KDEdoc/it-tr_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Ukrainian (sample file)" href="KDEdoc/it-uk_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Walloon (sample file)" href="KDEdoc/it-wa_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Xhosa (sample file)" href="KDEdoc/it-xh_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Chinese (sample file)" href="KDEdoc/it-zh_TW_sample.html">view</a></td><th>it</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/ja.tar.gz">ja</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-German' (10 aligned documents, 0.4k links, 12.0k tokens)" href="download.php?f=KDEdoc/xml/de-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-English' (8 aligned documents, 0.2k links, 7.4k tokens)" href="download.php?f=KDEdoc/xml/en_GB-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Spanish' (10 aligned documents, 0.4k links, 13.0k tokens)" href="download.php?f=KDEdoc/xml/es-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-German' (10 aligned documents, 0.4k links, 12.0k tokens)" href="download.php?f=KDEdoc/de-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-English' (8 aligned documents, 0.2k links, 7.4k tokens)" href="download.php?f=KDEdoc/en_GB-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Spanish' (10 aligned documents, 0.4k links, 13.0k tokens)" href="download.php?f=KDEdoc/es-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-French' (10 aligned documents, 0.3k links, 10.9k tokens)" href="download.php?f=KDEdoc/xml/fr-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Hungarian' (8 aligned documents, 0.3k links, 10.6k tokens)" href="download.php?f=KDEdoc/xml/hu-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Italian' (8 aligned documents, 0.3k links, 7.7k tokens)" href="download.php?f=KDEdoc/xml/it-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-French' (10 aligned documents, 0.3k links, 10.9k tokens)" href="download.php?f=KDEdoc/fr-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Hungarian' (8 aligned documents, 0.3k links, 10.6k tokens)" href="download.php?f=KDEdoc/hu-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Italian' (8 aligned documents, 0.3k links, 7.7k tokens)" href="download.php?f=KDEdoc/it-ja.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Japanese-Dutch (sample file)" href="KDEdoc/ja-nl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Japanese-Portuguese (sample file)" href="KDEdoc/ja-pt_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Japanese-Romanian (sample file)" href="KDEdoc/ja-ro_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Russian (sample file)" href="KDEdoc/ja-ru_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Slovak (sample file)" href="KDEdoc/ja-sk_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Slovenian (sample file)" href="KDEdoc/ja-sl_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Serbian (sample file)" href="KDEdoc/ja-sr_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Swedish (sample file)" href="KDEdoc/ja-sv_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Turkish (sample file)" href="KDEdoc/ja-tr_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Ukrainian (sample file)" href="KDEdoc/ja-uk_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Walloon (sample file)" href="KDEdoc/ja-wa_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Xhosa (sample file)" href="KDEdoc/ja-xh_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Chinese (sample file)" href="KDEdoc/ja-zh_TW_sample.html">view</a></td><th>ja</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/nl.tar.gz">nl</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (155 aligned documents, 6.8k links, 0.2M tokens)" href="download.php?f=KDEdoc/xml/de-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (109 aligned documents, 1.8k links, 48.8k tokens)" href="download.php?f=KDEdoc/xml/en_GB-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (160 aligned documents, 7.4k links, 0.2M tokens)" href="download.php?f=KDEdoc/xml/es-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Estonian' (14 aligned documents, 0.2k links, 3.8k tokens)" href="download.php?f=KDEdoc/xml/et-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (149 aligned documents, 5.5k links, 0.2M tokens)" href="download.php?f=KDEdoc/xml/fr-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hungarian' (118 aligned documents, 4.4k links, 85.6k tokens)" href="download.php?f=KDEdoc/xml/hu-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (25 aligned documents, 1.0k links, 19.9k tokens)" href="download.php?f=KDEdoc/xml/it-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Japanese' (10 aligned documents, 0.3k links, 10.3k tokens)" href="download.php?f=KDEdoc/xml/ja-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (155 aligned documents, 6.8k links, 0.2M tokens)" href="download.php?f=KDEdoc/de-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (109 aligned documents, 1.8k links, 48.8k tokens)" href="download.php?f=KDEdoc/en_GB-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (160 aligned documents, 7.4k links, 0.2M tokens)" href="download.php?f=KDEdoc/es-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Estonian' (14 aligned documents, 0.2k links, 3.8k tokens)" href="download.php?f=KDEdoc/et-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (149 aligned documents, 5.5k links, 0.2M tokens)" href="download.php?f=KDEdoc/fr-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hungarian' (118 aligned documents, 4.4k links, 85.6k tokens)" href="download.php?f=KDEdoc/hu-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (25 aligned documents, 1.0k links, 19.9k tokens)" href="download.php?f=KDEdoc/it-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Japanese' (10 aligned documents, 0.3k links, 10.3k tokens)" href="download.php?f=KDEdoc/ja-nl.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Dutch-Norwegian Nynorsk (sample file)" href="KDEdoc/nl-nn_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Portuguese (sample file)" href="KDEdoc/nl-pt_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Dutch-Romanian (sample file)" href="KDEdoc/nl-ro_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Russian (sample file)" href="KDEdoc/nl-ru_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Slovak (sample file)" href="KDEdoc/nl-sk_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Slovenian (sample file)" href="KDEdoc/nl-sl_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Serbian (sample file)" href="KDEdoc/nl-sr_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Swedish (sample file)" href="KDEdoc/nl-sv_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Turkish (sample file)" href="KDEdoc/nl-tr_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Ukrainian (sample file)" href="KDEdoc/nl-uk_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Walloon (sample file)" href="KDEdoc/nl-wa_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Xhosa (sample file)" href="KDEdoc/nl-xh_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Chinese (sample file)" href="KDEdoc/nl-zh_TW_sample.html">view</a></td><th>nl</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/nn.tar.gz">nn</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Norwegian Nynorsk-German' (2 aligned documents, 97 links, 2.4k tokens)" href="download.php?f=KDEdoc/xml/de-nn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Norwegian Nynorsk-German' (2 aligned documents, 97 links, 2.4k tokens)" href="download.php?f=KDEdoc/de-nn.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Norwegian Nynorsk-Spanish' (2 aligned documents, 0.1k links, 2.9k tokens)" href="download.php?f=KDEdoc/xml/es-nn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Norwegian Nynorsk-Spanish' (2 aligned documents, 0.1k links, 2.9k tokens)" href="download.php?f=KDEdoc/es-nn.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Norwegian Nynorsk-French' (2 aligned documents, 90 links, 2.6k tokens)" href="download.php?f=KDEdoc/xml/fr-nn.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Norwegian Nynorsk-Hungarian' (2 aligned documents, 0.1k links, 2.5k tokens)" href="download.php?f=KDEdoc/xml/hu-nn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Norwegian Nynorsk-French' (2 aligned documents, 90 links, 2.6k tokens)" href="download.php?f=KDEdoc/fr-nn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Norwegian Nynorsk-Hungarian' (2 aligned documents, 0.1k links, 2.5k tokens)" href="download.php?f=KDEdoc/hu-nn.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Norwegian Nynorsk-Dutch' (21 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/nl-nn.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Norwegian Nynorsk-Dutch' (21 links, 0.3k tokens)" href="download.php?f=KDEdoc/nl-nn.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Norwegian Nynorsk-Portuguese (sample file)" href="KDEdoc/nn-pt_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Norwegian Nynorsk-Slovak (sample file)" href="KDEdoc/nn-sk_sample.html">view</a></td><td><a rel="nofollow" title="Norwegian Nynorsk-Slovenian (sample file)" href="KDEdoc/nn-sl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Norwegian Nynorsk-Swedish (sample file)" href="KDEdoc/nn-sv_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Norwegian Nynorsk-Ukrainian (sample file)" href="KDEdoc/nn-uk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Norwegian Nynorsk-Xhosa (sample file)" href="KDEdoc/nn-xh_sample.html">view</a></td><td></td><th>nn</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/pt.tar.gz">pt</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (206 aligned documents, 14.8k links, 0.4M tokens)" href="download.php?f=KDEdoc/xml/de-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (132 aligned documents, 3.1k links, 87.8k tokens)" href="download.php?f=KDEdoc/xml/en_GB-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (208 aligned documents, 14.4k links, 0.4M tokens)" href="download.php?f=KDEdoc/xml/es-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Estonian' (14 aligned documents, 0.2k links, 4.2k tokens)" href="download.php?f=KDEdoc/xml/et-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (188 aligned documents, 10.4k links, 0.3M tokens)" href="download.php?f=KDEdoc/xml/fr-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hungarian' (127 aligned documents, 5.2k links, 0.1M tokens)" href="download.php?f=KDEdoc/xml/hu-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (59 aligned documents, 4.7k links, 0.1M tokens)" href="download.php?f=KDEdoc/xml/it-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Japanese' (10 aligned documents, 0.4k links, 12.7k tokens)" href="download.php?f=KDEdoc/xml/ja-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (150 aligned documents, 6.5k links, 0.2M tokens)" href="download.php?f=KDEdoc/xml/nl-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Norwegian Nynorsk' (21 links, 0.4k tokens)" href="download.php?f=KDEdoc/xml/nn-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (206 aligned documents, 14.8k links, 0.4M tokens)" href="download.php?f=KDEdoc/de-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (132 aligned documents, 3.1k links, 87.8k tokens)" href="download.php?f=KDEdoc/en_GB-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (208 aligned documents, 14.4k links, 0.4M tokens)" href="download.php?f=KDEdoc/es-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Estonian' (14 aligned documents, 0.2k links, 4.2k tokens)" href="download.php?f=KDEdoc/et-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (188 aligned documents, 10.4k links, 0.3M tokens)" href="download.php?f=KDEdoc/fr-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hungarian' (127 aligned documents, 5.2k links, 0.1M tokens)" href="download.php?f=KDEdoc/hu-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (59 aligned documents, 4.7k links, 0.1M tokens)" href="download.php?f=KDEdoc/it-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Japanese' (10 aligned documents, 0.4k links, 12.7k tokens)" href="download.php?f=KDEdoc/ja-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (150 aligned documents, 6.5k links, 0.2M tokens)" href="download.php?f=KDEdoc/nl-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Norwegian Nynorsk' (21 links, 0.4k tokens)" href="download.php?f=KDEdoc/nn-pt.xml.gz">ces</a></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="Portuguese-Romanian (sample file)" href="KDEdoc/pt-ro_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Russian (sample file)" href="KDEdoc/pt-ru_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Slovak (sample file)" href="KDEdoc/pt-sk_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Slovenian (sample file)" href="KDEdoc/pt-sl_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Serbian (sample file)" href="KDEdoc/pt-sr_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Swedish (sample file)" href="KDEdoc/pt-sv_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Turkish (sample file)" href="KDEdoc/pt-tr_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Ukrainian (sample file)" href="KDEdoc/pt-uk_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Walloon (sample file)" href="KDEdoc/pt-wa_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Xhosa (sample file)" href="KDEdoc/pt-xh_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Chinese (sample file)" href="KDEdoc/pt-zh_TW_sample.html">view</a></td><th><a rel="nofollow" href="KDEdoc/pt_parse_sample.html">pt</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/pt_BR.tar.gz">pt_BR</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (20 aligned documents, 0.6k links, 18.2k tokens)" href="download.php?f=KDEdoc/xml/de-pt_BR.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (20 aligned documents, 0.6k links, 18.2k tokens)" href="download.php?f=KDEdoc/de-pt_BR.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (12 aligned documents, 0.6k links, 20.2k tokens)" href="download.php?f=KDEdoc/xml/es-pt_BR.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (12 aligned documents, 0.6k links, 20.2k tokens)" href="download.php?f=KDEdoc/es-pt_BR.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (10 aligned documents, 0.4k links, 12.5k tokens)" href="download.php?f=KDEdoc/xml/fr-pt_BR.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hungarian' (11 aligned documents, 0.5k links, 13.5k tokens)" href="download.php?f=KDEdoc/xml/hu-pt_BR.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (4 aligned documents, 0.2k links, 8.1k tokens)" href="download.php?f=KDEdoc/xml/it-pt_BR.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (10 aligned documents, 0.4k links, 12.5k tokens)" href="download.php?f=KDEdoc/fr-pt_BR.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hungarian' (11 aligned documents, 0.5k links, 13.5k tokens)" href="download.php?f=KDEdoc/hu-pt_BR.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (4 aligned documents, 0.2k links, 8.1k tokens)" href="download.php?f=KDEdoc/it-pt_BR.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -160,233 +160,233 @@
 <td></td><td><a rel="nofollow" title="Portuguese-Russian (sample file)" href="KDEdoc/pt_BR-ru_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Slovak (sample file)" href="KDEdoc/pt_BR-sk_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Slovenian (sample file)" href="KDEdoc/pt_BR-sl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Portuguese-Swedish (sample file)" href="KDEdoc/pt_BR-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Portuguese-Xhosa (sample file)" href="KDEdoc/pt_BR-xh_sample.html">view</a></td><td></td><th>pt_BR</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/ro.tar.gz">ro</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-German' (6 aligned documents, 0.2k links, 5.5k tokens)" href="download.php?f=KDEdoc/xml/de-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-English' (5 aligned documents, 94 links, 2.4k tokens)" href="download.php?f=KDEdoc/xml/en_GB-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Spanish' (6 aligned documents, 0.2k links, 6.0k tokens)" href="download.php?f=KDEdoc/xml/es-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-German' (6 aligned documents, 0.2k links, 5.5k tokens)" href="download.php?f=KDEdoc/de-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-English' (5 aligned documents, 94 links, 2.4k tokens)" href="download.php?f=KDEdoc/en_GB-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Spanish' (6 aligned documents, 0.2k links, 6.0k tokens)" href="download.php?f=KDEdoc/es-ro.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-French' (6 aligned documents, 0.2k links, 4.8k tokens)" href="download.php?f=KDEdoc/xml/fr-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Hungarian' (6 aligned documents, 0.2k links, 5.1k tokens)" href="download.php?f=KDEdoc/xml/hu-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Italian' (6 aligned documents, 0.2k links, 5.8k tokens)" href="download.php?f=KDEdoc/xml/it-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Japanese' (6 aligned documents, 0.2k links, 5.1k tokens)" href="download.php?f=KDEdoc/xml/ja-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Dutch' (6 aligned documents, 0.2k links, 3.2k tokens)" href="download.php?f=KDEdoc/xml/nl-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-French' (6 aligned documents, 0.2k links, 4.8k tokens)" href="download.php?f=KDEdoc/fr-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Hungarian' (6 aligned documents, 0.2k links, 5.1k tokens)" href="download.php?f=KDEdoc/hu-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Italian' (6 aligned documents, 0.2k links, 5.8k tokens)" href="download.php?f=KDEdoc/it-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Japanese' (6 aligned documents, 0.2k links, 5.1k tokens)" href="download.php?f=KDEdoc/ja-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Dutch' (6 aligned documents, 0.2k links, 3.2k tokens)" href="download.php?f=KDEdoc/nl-ro.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Portuguese' (6 aligned documents, 0.2k links, 5.7k tokens)" href="download.php?f=KDEdoc/xml/pt-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Portuguese' (6 aligned documents, 0.2k links, 5.7k tokens)" href="download.php?f=KDEdoc/pt-ro.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td><a rel="nofollow" title="Romanian-Russian (sample file)" href="KDEdoc/ro-ru_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Slovak (sample file)" href="KDEdoc/ro-sk_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Slovenian (sample file)" href="KDEdoc/ro-sl_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Serbian (sample file)" href="KDEdoc/ro-sr_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Swedish (sample file)" href="KDEdoc/ro-sv_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Turkish (sample file)" href="KDEdoc/ro-tr_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Ukrainian (sample file)" href="KDEdoc/ro-uk_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Walloon (sample file)" href="KDEdoc/ro-wa_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Xhosa (sample file)" href="KDEdoc/ro-xh_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Chinese (sample file)" href="KDEdoc/ro-zh_TW_sample.html">view</a></td><th>ro</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/ru.tar.gz">ru</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (84 aligned documents, 4.4k links, 0.2M tokens)" href="download.php?f=KDEdoc/xml/de-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (35 aligned documents, 0.7k links, 23.7k tokens)" href="download.php?f=KDEdoc/xml/en_GB-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (93 aligned documents, 4.8k links, 0.2M tokens)" href="download.php?f=KDEdoc/xml/es-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Estonian' (9 aligned documents, 60 links, 1.3k tokens)" href="download.php?f=KDEdoc/xml/et-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (85 aligned documents, 3.3k links, 0.1M tokens)" href="download.php?f=KDEdoc/xml/fr-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Hungarian' (45 aligned documents, 1.9k links, 60.4k tokens)" href="download.php?f=KDEdoc/xml/hu-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Italian' (40 aligned documents, 2.1k links, 77.8k tokens)" href="download.php?f=KDEdoc/xml/it-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Japanese' (8 aligned documents, 0.2k links, 7.2k tokens)" href="download.php?f=KDEdoc/xml/ja-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Dutch' (37 aligned documents, 0.9k links, 24.8k tokens)" href="download.php?f=KDEdoc/xml/nl-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (84 aligned documents, 4.4k links, 0.2M tokens)" href="download.php?f=KDEdoc/de-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (35 aligned documents, 0.7k links, 23.7k tokens)" href="download.php?f=KDEdoc/en_GB-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (93 aligned documents, 4.8k links, 0.2M tokens)" href="download.php?f=KDEdoc/es-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Estonian' (9 aligned documents, 60 links, 1.3k tokens)" href="download.php?f=KDEdoc/et-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (85 aligned documents, 3.3k links, 0.1M tokens)" href="download.php?f=KDEdoc/fr-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Hungarian' (45 aligned documents, 1.9k links, 60.4k tokens)" href="download.php?f=KDEdoc/hu-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Italian' (40 aligned documents, 2.1k links, 77.8k tokens)" href="download.php?f=KDEdoc/it-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Japanese' (8 aligned documents, 0.2k links, 7.2k tokens)" href="download.php?f=KDEdoc/ja-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Dutch' (37 aligned documents, 0.9k links, 24.8k tokens)" href="download.php?f=KDEdoc/nl-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Portuguese' (50 aligned documents, 1.8k links, 64.3k tokens)" href="download.php?f=KDEdoc/xml/pt-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Portuguese' (11 aligned documents, 0.3k links, 14.8k tokens)" href="download.php?f=KDEdoc/xml/pt_BR-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Romanian' (6 aligned documents, 0.2k links, 5.5k tokens)" href="download.php?f=KDEdoc/xml/ro-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Portuguese' (50 aligned documents, 1.8k links, 64.3k tokens)" href="download.php?f=KDEdoc/pt-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Portuguese' (11 aligned documents, 0.3k links, 14.8k tokens)" href="download.php?f=KDEdoc/pt_BR-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Romanian' (6 aligned documents, 0.2k links, 5.5k tokens)" href="download.php?f=KDEdoc/ro-ru.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Russian-Slovak (sample file)" href="KDEdoc/ru-sk_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Slovenian (sample file)" href="KDEdoc/ru-sl_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Serbian (sample file)" href="KDEdoc/ru-sr_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Swedish (sample file)" href="KDEdoc/ru-sv_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Turkish (sample file)" href="KDEdoc/ru-tr_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Ukrainian (sample file)" href="KDEdoc/ru-uk_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Walloon (sample file)" href="KDEdoc/ru-wa_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Xhosa (sample file)" href="KDEdoc/ru-xh_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Chinese (sample file)" href="KDEdoc/ru-zh_TW_sample.html">view</a></td><th><a rel="nofollow" href="KDEdoc/ru_parse_sample.html">ru</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/sk.tar.gz">sk</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-German' (245 aligned documents, 18.0k links, 0.4M tokens)" href="download.php?f=KDEdoc/xml/de-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-English' (132 aligned documents, 3.1k links, 76.9k tokens)" href="download.php?f=KDEdoc/xml/en_GB-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Spanish' (287 aligned documents, 16.8k links, 0.4M tokens)" href="download.php?f=KDEdoc/xml/es-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Estonian' (14 aligned documents, 0.3k links, 3.2k tokens)" href="download.php?f=KDEdoc/xml/et-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-French' (226 aligned documents, 13.6k links, 0.4M tokens)" href="download.php?f=KDEdoc/xml/fr-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Hungarian' (170 aligned documents, 8.3k links, 0.2M tokens)" href="download.php?f=KDEdoc/xml/hu-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Italian' (84 aligned documents, 6.3k links, 0.2M tokens)" href="download.php?f=KDEdoc/xml/it-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Japanese' (10 aligned documents, 0.4k links, 11.4k tokens)" href="download.php?f=KDEdoc/xml/ja-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Dutch' (154 aligned documents, 7.4k links, 0.2M tokens)" href="download.php?f=KDEdoc/xml/nl-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Norwegian Nynorsk' (2 aligned documents, 0.1k links, 2.6k tokens)" href="download.php?f=KDEdoc/xml/nn-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Portuguese' (194 aligned documents, 14.2k links, 0.3M tokens)" href="download.php?f=KDEdoc/xml/pt-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Portuguese' (11 aligned documents, 0.4k links, 12.7k tokens)" href="download.php?f=KDEdoc/xml/pt_BR-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Romanian' (6 aligned documents, 0.2k links, 5.0k tokens)" href="download.php?f=KDEdoc/xml/ro-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Russian' (66 aligned documents, 2.9k links, 90.5k tokens)" href="download.php?f=KDEdoc/xml/ru-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-German' (245 aligned documents, 18.0k links, 0.4M tokens)" href="download.php?f=KDEdoc/de-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-English' (132 aligned documents, 3.1k links, 76.9k tokens)" href="download.php?f=KDEdoc/en_GB-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Spanish' (287 aligned documents, 16.8k links, 0.4M tokens)" href="download.php?f=KDEdoc/es-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Estonian' (14 aligned documents, 0.3k links, 3.2k tokens)" href="download.php?f=KDEdoc/et-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-French' (226 aligned documents, 13.6k links, 0.4M tokens)" href="download.php?f=KDEdoc/fr-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Hungarian' (170 aligned documents, 8.3k links, 0.2M tokens)" href="download.php?f=KDEdoc/hu-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Italian' (84 aligned documents, 6.3k links, 0.2M tokens)" href="download.php?f=KDEdoc/it-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Japanese' (10 aligned documents, 0.4k links, 11.4k tokens)" href="download.php?f=KDEdoc/ja-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Dutch' (154 aligned documents, 7.4k links, 0.2M tokens)" href="download.php?f=KDEdoc/nl-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Norwegian Nynorsk' (2 aligned documents, 0.1k links, 2.6k tokens)" href="download.php?f=KDEdoc/nn-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Portuguese' (194 aligned documents, 14.2k links, 0.3M tokens)" href="download.php?f=KDEdoc/pt-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Portuguese' (11 aligned documents, 0.4k links, 12.7k tokens)" href="download.php?f=KDEdoc/pt_BR-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Romanian' (6 aligned documents, 0.2k links, 5.0k tokens)" href="download.php?f=KDEdoc/ro-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Russian' (66 aligned documents, 2.9k links, 90.5k tokens)" href="download.php?f=KDEdoc/ru-sk.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Slovak-Slovenian (sample file)" href="KDEdoc/sk-sl_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Serbian (sample file)" href="KDEdoc/sk-sr_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Swedish (sample file)" href="KDEdoc/sk-sv_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Turkish (sample file)" href="KDEdoc/sk-tr_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Ukrainian (sample file)" href="KDEdoc/sk-uk_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Walloon (sample file)" href="KDEdoc/sk-wa_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Xhosa (sample file)" href="KDEdoc/sk-xh_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Chinese (sample file)" href="KDEdoc/sk-zh_TW_sample.html">view</a></td><th>sk</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/sl.tar.gz">sl</a></th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-German' (193 aligned documents, 14.0k links, 0.4M tokens)" href="download.php?f=KDEdoc/xml/de-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-English' (115 aligned documents, 2.2k links, 60.5k tokens)" href="download.php?f=KDEdoc/xml/en_GB-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Spanish' (196 aligned documents, 14.7k links, 0.4M tokens)" href="download.php?f=KDEdoc/xml/es-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Estonian' (14 aligned documents, 0.2k links, 3.4k tokens)" href="download.php?f=KDEdoc/xml/et-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-French' (185 aligned documents, 10.9k links, 0.3M tokens)" href="download.php?f=KDEdoc/xml/fr-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Hungarian' (124 aligned documents, 6.1k links, 0.1M tokens)" href="download.php?f=KDEdoc/xml/hu-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Italian' (44 aligned documents, 4.1k links, 0.1M tokens)" href="download.php?f=KDEdoc/xml/it-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Japanese' (9 aligned documents, 0.4k links, 10.5k tokens)" href="download.php?f=KDEdoc/xml/ja-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Dutch' (143 aligned documents, 6.4k links, 0.2M tokens)" href="download.php?f=KDEdoc/xml/nl-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Norwegian Nynorsk' (2 aligned documents, 0.1k links, 2.5k tokens)" href="download.php?f=KDEdoc/xml/nn-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Portuguese' (162 aligned documents, 9.7k links, 0.3M tokens)" href="download.php?f=KDEdoc/xml/pt-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Portuguese' (2 aligned documents, 0.2k links, 6.1k tokens)" href="download.php?f=KDEdoc/xml/pt_BR-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Romanian' (6 aligned documents, 0.2k links, 5.4k tokens)" href="download.php?f=KDEdoc/xml/ro-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Russian' (68 aligned documents, 3.4k links, 0.1M tokens)" href="download.php?f=KDEdoc/xml/ru-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Slovak' (176 aligned documents, 11.6k links, 0.3M tokens)" href="download.php?f=KDEdoc/xml/sk-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-German' (193 aligned documents, 14.0k links, 0.4M tokens)" href="download.php?f=KDEdoc/de-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-English' (115 aligned documents, 2.2k links, 60.5k tokens)" href="download.php?f=KDEdoc/en_GB-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Spanish' (196 aligned documents, 14.7k links, 0.4M tokens)" href="download.php?f=KDEdoc/es-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Estonian' (14 aligned documents, 0.2k links, 3.4k tokens)" href="download.php?f=KDEdoc/et-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-French' (185 aligned documents, 10.9k links, 0.3M tokens)" href="download.php?f=KDEdoc/fr-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Hungarian' (124 aligned documents, 6.1k links, 0.1M tokens)" href="download.php?f=KDEdoc/hu-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Italian' (44 aligned documents, 4.1k links, 0.1M tokens)" href="download.php?f=KDEdoc/it-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Japanese' (9 aligned documents, 0.4k links, 10.5k tokens)" href="download.php?f=KDEdoc/ja-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Dutch' (143 aligned documents, 6.4k links, 0.2M tokens)" href="download.php?f=KDEdoc/nl-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Norwegian Nynorsk' (2 aligned documents, 0.1k links, 2.5k tokens)" href="download.php?f=KDEdoc/nn-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Portuguese' (162 aligned documents, 9.7k links, 0.3M tokens)" href="download.php?f=KDEdoc/pt-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Portuguese' (2 aligned documents, 0.2k links, 6.1k tokens)" href="download.php?f=KDEdoc/pt_BR-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Romanian' (6 aligned documents, 0.2k links, 5.4k tokens)" href="download.php?f=KDEdoc/ro-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Russian' (68 aligned documents, 3.4k links, 0.1M tokens)" href="download.php?f=KDEdoc/ru-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Slovak' (176 aligned documents, 11.6k links, 0.3M tokens)" href="download.php?f=KDEdoc/sk-sl.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Slovenian-Serbian (sample file)" href="KDEdoc/sl-sr_sample.html">view</a></td><td><a rel="nofollow" title="Slovenian-Swedish (sample file)" href="KDEdoc/sl-sv_sample.html">view</a></td><td><a rel="nofollow" title="Slovenian-Turkish (sample file)" href="KDEdoc/sl-tr_sample.html">view</a></td><td><a rel="nofollow" title="Slovenian-Ukrainian (sample file)" href="KDEdoc/sl-uk_sample.html">view</a></td><td><a rel="nofollow" title="Slovenian-Walloon (sample file)" href="KDEdoc/sl-wa_sample.html">view</a></td><td><a rel="nofollow" title="Slovenian-Xhosa (sample file)" href="KDEdoc/sl-xh_sample.html">view</a></td><td><a rel="nofollow" title="Slovenian-Chinese (sample file)" href="KDEdoc/sl-zh_TW_sample.html">view</a></td><th><a rel="nofollow" href="KDEdoc/sl_parse_sample.html">sl</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/sr.tar.gz">sr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Danish' (2 aligned documents, 48 links, 1.1k tokens)" href="download.php?f=KDEdoc/xml/da-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-German' (2 aligned documents, 49 links, 1.1k tokens)" href="download.php?f=KDEdoc/xml/de-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-English' (2 aligned documents, 48 links, 1.1k tokens)" href="download.php?f=KDEdoc/xml/en_GB-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Spanish' (2 aligned documents, 47 links, 1.2k tokens)" href="download.php?f=KDEdoc/xml/es-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Danish' (2 aligned documents, 48 links, 1.1k tokens)" href="download.php?f=KDEdoc/da-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-German' (2 aligned documents, 49 links, 1.1k tokens)" href="download.php?f=KDEdoc/de-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-English' (2 aligned documents, 48 links, 1.1k tokens)" href="download.php?f=KDEdoc/en_GB-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Spanish' (2 aligned documents, 47 links, 1.2k tokens)" href="download.php?f=KDEdoc/es-sr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-French' (2 aligned documents, 27 links, 0.6k tokens)" href="download.php?f=KDEdoc/xml/fr-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Hungarian' (2 aligned documents, 46 links, 1.1k tokens)" href="download.php?f=KDEdoc/xml/hu-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Italian' (2 aligned documents, 48 links, 1.2k tokens)" href="download.php?f=KDEdoc/xml/it-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Japanese' (2 aligned documents, 30 links, 1.8k tokens)" href="download.php?f=KDEdoc/xml/ja-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Dutch' (2 aligned documents, 24 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/nl-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-French' (2 aligned documents, 27 links, 0.6k tokens)" href="download.php?f=KDEdoc/fr-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Hungarian' (2 aligned documents, 46 links, 1.1k tokens)" href="download.php?f=KDEdoc/hu-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Italian' (2 aligned documents, 48 links, 1.2k tokens)" href="download.php?f=KDEdoc/it-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Japanese' (2 aligned documents, 30 links, 1.8k tokens)" href="download.php?f=KDEdoc/ja-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Dutch' (2 aligned documents, 24 links, 0.3k tokens)" href="download.php?f=KDEdoc/nl-sr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Portuguese' (2 aligned documents, 47 links, 1.3k tokens)" href="download.php?f=KDEdoc/xml/pt-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Portuguese' (2 aligned documents, 47 links, 1.3k tokens)" href="download.php?f=KDEdoc/pt-sr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Romanian' (2 aligned documents, 26 links, 0.7k tokens)" href="download.php?f=KDEdoc/xml/ro-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Russian' (2 aligned documents, 32 links, 1.2k tokens)" href="download.php?f=KDEdoc/xml/ru-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Slovak' (2 aligned documents, 49 links, 0.9k tokens)" href="download.php?f=KDEdoc/xml/sk-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Slovenian' (2 aligned documents, 49 links, 1.1k tokens)" href="download.php?f=KDEdoc/xml/sl-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Romanian' (2 aligned documents, 26 links, 0.7k tokens)" href="download.php?f=KDEdoc/ro-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Russian' (2 aligned documents, 32 links, 1.2k tokens)" href="download.php?f=KDEdoc/ru-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Slovak' (2 aligned documents, 49 links, 0.9k tokens)" href="download.php?f=KDEdoc/sk-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Slovenian' (2 aligned documents, 49 links, 1.1k tokens)" href="download.php?f=KDEdoc/sl-sr.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Serbian-Swedish (sample file)" href="KDEdoc/sr-sv_sample.html">view</a></td><td><a rel="nofollow" title="Serbian-Turkish (sample file)" href="KDEdoc/sr-tr_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Serbian-Walloon (sample file)" href="KDEdoc/sr-wa_sample.html">view</a></td><td><a rel="nofollow" title="Serbian-Xhosa (sample file)" href="KDEdoc/sr-xh_sample.html">view</a></td><td><a rel="nofollow" title="Serbian-Chinese (sample file)" href="KDEdoc/sr-zh_TW_sample.html">view</a></td><th>sr</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/sv.tar.gz">sv</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Danish' (369 aligned documents, 37.1k links, 0.9M tokens)" href="download.php?f=KDEdoc/xml/da-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-German' (299 aligned documents, 35.5k links, 0.9M tokens)" href="download.php?f=KDEdoc/xml/de-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (88 aligned documents, 2.5k links, 66.7k tokens)" href="download.php?f=KDEdoc/xml/en_GB-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Spanish' (387 aligned documents, 33.7k links, 0.9M tokens)" href="download.php?f=KDEdoc/xml/es-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Danish' (369 aligned documents, 37.1k links, 0.9M tokens)" href="download.php?f=KDEdoc/da-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-German' (299 aligned documents, 35.5k links, 0.9M tokens)" href="download.php?f=KDEdoc/de-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (88 aligned documents, 2.5k links, 66.7k tokens)" href="download.php?f=KDEdoc/en_GB-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Spanish' (387 aligned documents, 33.7k links, 0.9M tokens)" href="download.php?f=KDEdoc/es-sv.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (244 aligned documents, 29.4k links, 0.8M tokens)" href="download.php?f=KDEdoc/xml/fr-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Hungarian' (161 aligned documents, 15.1k links, 0.3M tokens)" href="download.php?f=KDEdoc/xml/hu-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Italian' (124 aligned documents, 12.0k links, 0.3M tokens)" href="download.php?f=KDEdoc/xml/it-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Japanese' (10 aligned documents, 0.4k links, 12.1k tokens)" href="download.php?f=KDEdoc/xml/ja-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Dutch' (82 aligned documents, 4.8k links, 93.6k tokens)" href="download.php?f=KDEdoc/xml/nl-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Norwegian Nynorsk' (2 aligned documents, 0.1k links, 2.6k tokens)" href="download.php?f=KDEdoc/xml/nn-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Portuguese' (138 aligned documents, 14.2k links, 0.3M tokens)" href="download.php?f=KDEdoc/xml/pt-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Portuguese' (25 aligned documents, 0.7k links, 20.0k tokens)" href="download.php?f=KDEdoc/xml/pt_BR-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Romanian' (6 aligned documents, 0.2k links, 5.4k tokens)" href="download.php?f=KDEdoc/xml/ro-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Russian' (81 aligned documents, 5.0k links, 0.2M tokens)" href="download.php?f=KDEdoc/xml/ru-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Slovak' (225 aligned documents, 18.0k links, 0.4M tokens)" href="download.php?f=KDEdoc/xml/sk-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Slovenian' (123 aligned documents, 13.3k links, 0.3M tokens)" href="download.php?f=KDEdoc/xml/sl-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Serbian' (2 aligned documents, 48 links, 1.1k tokens)" href="download.php?f=KDEdoc/xml/sr-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (244 aligned documents, 29.4k links, 0.8M tokens)" href="download.php?f=KDEdoc/fr-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Hungarian' (161 aligned documents, 15.1k links, 0.3M tokens)" href="download.php?f=KDEdoc/hu-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Italian' (124 aligned documents, 12.0k links, 0.3M tokens)" href="download.php?f=KDEdoc/it-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Japanese' (10 aligned documents, 0.4k links, 12.1k tokens)" href="download.php?f=KDEdoc/ja-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Dutch' (82 aligned documents, 4.8k links, 93.6k tokens)" href="download.php?f=KDEdoc/nl-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Norwegian Nynorsk' (2 aligned documents, 0.1k links, 2.6k tokens)" href="download.php?f=KDEdoc/nn-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Portuguese' (138 aligned documents, 14.2k links, 0.3M tokens)" href="download.php?f=KDEdoc/pt-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Portuguese' (25 aligned documents, 0.7k links, 20.0k tokens)" href="download.php?f=KDEdoc/pt_BR-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Romanian' (6 aligned documents, 0.2k links, 5.4k tokens)" href="download.php?f=KDEdoc/ro-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Russian' (81 aligned documents, 5.0k links, 0.2M tokens)" href="download.php?f=KDEdoc/ru-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Slovak' (225 aligned documents, 18.0k links, 0.4M tokens)" href="download.php?f=KDEdoc/sk-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Slovenian' (123 aligned documents, 13.3k links, 0.3M tokens)" href="download.php?f=KDEdoc/sl-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Serbian' (2 aligned documents, 48 links, 1.1k tokens)" href="download.php?f=KDEdoc/sr-sv.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Swedish-Turkish (sample file)" href="KDEdoc/sv-tr_sample.html">view</a></td><td><a rel="nofollow" title="Swedish-Ukrainian (sample file)" href="KDEdoc/sv-uk_sample.html">view</a></td><td><a rel="nofollow" title="Swedish-Walloon (sample file)" href="KDEdoc/sv-wa_sample.html">view</a></td><td><a rel="nofollow" title="Swedish-Xhosa (sample file)" href="KDEdoc/sv-xh_sample.html">view</a></td><td><a rel="nofollow" title="Swedish-Chinese (sample file)" href="KDEdoc/sv-zh_TW_sample.html">view</a></td><th><a rel="nofollow" href="KDEdoc/sv_parse_sample.html">sv</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/tr.tar.gz">tr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Danish' (25 aligned documents, 0.1k links, 2.6k tokens)" href="download.php?f=KDEdoc/xml/da-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-German' (31 aligned documents, 0.1k links, 2.5k tokens)" href="download.php?f=KDEdoc/xml/de-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-English' (31 aligned documents, 0.2k links, 3.2k tokens)" href="download.php?f=KDEdoc/xml/en_GB-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Spanish' (31 aligned documents, 0.2k links, 3.3k tokens)" href="download.php?f=KDEdoc/xml/es-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Danish' (25 aligned documents, 0.1k links, 2.6k tokens)" href="download.php?f=KDEdoc/da-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-German' (31 aligned documents, 0.1k links, 2.5k tokens)" href="download.php?f=KDEdoc/de-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-English' (31 aligned documents, 0.2k links, 3.2k tokens)" href="download.php?f=KDEdoc/en_GB-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Spanish' (31 aligned documents, 0.2k links, 3.3k tokens)" href="download.php?f=KDEdoc/es-tr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-French' (31 aligned documents, 0.1k links, 2.7k tokens)" href="download.php?f=KDEdoc/xml/fr-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Hungarian' (23 aligned documents, 0.1k links, 2.3k tokens)" href="download.php?f=KDEdoc/xml/hu-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Italian' (5 aligned documents, 54 links, 0.8k tokens)" href="download.php?f=KDEdoc/xml/it-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Japanese' (3 aligned documents, 43 links, 0.9k tokens)" href="download.php?f=KDEdoc/xml/ja-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Dutch' (31 aligned documents, 0.2k links, 3.3k tokens)" href="download.php?f=KDEdoc/xml/nl-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-French' (31 aligned documents, 0.1k links, 2.7k tokens)" href="download.php?f=KDEdoc/fr-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Hungarian' (23 aligned documents, 0.1k links, 2.3k tokens)" href="download.php?f=KDEdoc/hu-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Italian' (5 aligned documents, 54 links, 0.8k tokens)" href="download.php?f=KDEdoc/it-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Japanese' (3 aligned documents, 43 links, 0.9k tokens)" href="download.php?f=KDEdoc/ja-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Dutch' (31 aligned documents, 0.2k links, 3.3k tokens)" href="download.php?f=KDEdoc/nl-tr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Portuguese' (31 aligned documents, 0.2k links, 3.4k tokens)" href="download.php?f=KDEdoc/xml/pt-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Portuguese' (31 aligned documents, 0.2k links, 3.4k tokens)" href="download.php?f=KDEdoc/pt-tr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Romanian' (2 aligned documents, 25 links, 0.2k tokens)" href="download.php?f=KDEdoc/xml/ro-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Russian' (5 aligned documents, 49 links, 0.7k tokens)" href="download.php?f=KDEdoc/xml/ru-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Slovak' (31 aligned documents, 0.2k links, 2.8k tokens)" href="download.php?f=KDEdoc/xml/sk-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Slovenian' (31 aligned documents, 0.1k links, 2.2k tokens)" href="download.php?f=KDEdoc/xml/sl-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Serbian' (19 links, 0.2k tokens)" href="download.php?f=KDEdoc/xml/sr-tr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Swedish' (25 aligned documents, 0.1k links, 2.7k tokens)" href="download.php?f=KDEdoc/xml/sv-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Romanian' (2 aligned documents, 25 links, 0.2k tokens)" href="download.php?f=KDEdoc/ro-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Russian' (5 aligned documents, 49 links, 0.7k tokens)" href="download.php?f=KDEdoc/ru-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Slovak' (31 aligned documents, 0.2k links, 2.8k tokens)" href="download.php?f=KDEdoc/sk-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Slovenian' (31 aligned documents, 0.1k links, 2.2k tokens)" href="download.php?f=KDEdoc/sl-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Serbian' (19 links, 0.2k tokens)" href="download.php?f=KDEdoc/sr-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Swedish' (25 aligned documents, 0.1k links, 2.7k tokens)" href="download.php?f=KDEdoc/sv-tr.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Turkish-Ukrainian (sample file)" href="KDEdoc/tr-uk_sample.html">view</a></td><td><a rel="nofollow" title="Turkish-Walloon (sample file)" href="KDEdoc/tr-wa_sample.html">view</a></td><td><a rel="nofollow" title="Turkish-Xhosa (sample file)" href="KDEdoc/tr-xh_sample.html">view</a></td><td><a rel="nofollow" title="Turkish-Chinese (sample file)" href="KDEdoc/tr-zh_TW_sample.html">view</a></td><th>tr</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/uk.tar.gz">uk</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Danish' (32 aligned documents, 0.2k links, 6.4k tokens)" href="download.php?f=KDEdoc/xml/da-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-German' (33 aligned documents, 0.2k links, 6.1k tokens)" href="download.php?f=KDEdoc/xml/de-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-English' (32 aligned documents, 0.2k links, 6.5k tokens)" href="download.php?f=KDEdoc/xml/en_GB-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Spanish' (33 aligned documents, 0.2k links, 7.1k tokens)" href="download.php?f=KDEdoc/xml/es-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Danish' (32 aligned documents, 0.2k links, 6.4k tokens)" href="download.php?f=KDEdoc/da-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-German' (33 aligned documents, 0.2k links, 6.1k tokens)" href="download.php?f=KDEdoc/de-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-English' (32 aligned documents, 0.2k links, 6.5k tokens)" href="download.php?f=KDEdoc/en_GB-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Spanish' (33 aligned documents, 0.2k links, 7.1k tokens)" href="download.php?f=KDEdoc/es-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-French' (33 aligned documents, 0.2k links, 5.8k tokens)" href="download.php?f=KDEdoc/xml/fr-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Hungarian' (28 aligned documents, 0.2k links, 5.4k tokens)" href="download.php?f=KDEdoc/xml/hu-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Italian' (5 aligned documents, 61 links, 1.7k tokens)" href="download.php?f=KDEdoc/xml/it-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Japanese' (3 aligned documents, 69 links, 3.6k tokens)" href="download.php?f=KDEdoc/xml/ja-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Dutch' (33 aligned documents, 0.2k links, 7.1k tokens)" href="download.php?f=KDEdoc/xml/nl-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Norwegian Nynorsk' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/nn-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Portuguese' (33 aligned documents, 0.2k links, 7.1k tokens)" href="download.php?f=KDEdoc/xml/pt-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-French' (33 aligned documents, 0.2k links, 5.8k tokens)" href="download.php?f=KDEdoc/fr-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Hungarian' (28 aligned documents, 0.2k links, 5.4k tokens)" href="download.php?f=KDEdoc/hu-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Italian' (5 aligned documents, 61 links, 1.7k tokens)" href="download.php?f=KDEdoc/it-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Japanese' (3 aligned documents, 69 links, 3.6k tokens)" href="download.php?f=KDEdoc/ja-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Dutch' (33 aligned documents, 0.2k links, 7.1k tokens)" href="download.php?f=KDEdoc/nl-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Norwegian Nynorsk' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/nn-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Portuguese' (33 aligned documents, 0.2k links, 7.1k tokens)" href="download.php?f=KDEdoc/pt-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Romanian' (18 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/ro-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Russian' (5 aligned documents, 58 links, 1.4k tokens)" href="download.php?f=KDEdoc/xml/ru-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Slovak' (33 aligned documents, 0.2k links, 6.2k tokens)" href="download.php?f=KDEdoc/xml/sk-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Slovenian' (32 aligned documents, 0.2k links, 5.0k tokens)" href="download.php?f=KDEdoc/xml/sl-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Romanian' (18 links, 0.3k tokens)" href="download.php?f=KDEdoc/ro-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Russian' (5 aligned documents, 58 links, 1.4k tokens)" href="download.php?f=KDEdoc/ru-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Slovak' (33 aligned documents, 0.2k links, 6.2k tokens)" href="download.php?f=KDEdoc/sk-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Slovenian' (32 aligned documents, 0.2k links, 5.0k tokens)" href="download.php?f=KDEdoc/sl-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Swedish' (32 aligned documents, 0.2k links, 6.5k tokens)" href="download.php?f=KDEdoc/xml/sv-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Turkish' (22 aligned documents, 63 links, 1.5k tokens)" href="download.php?f=KDEdoc/xml/tr-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Swedish' (32 aligned documents, 0.2k links, 6.5k tokens)" href="download.php?f=KDEdoc/sv-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Turkish' (22 aligned documents, 63 links, 1.5k tokens)" href="download.php?f=KDEdoc/tr-uk.xml.gz">ces</a></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="Ukrainian-Xhosa (sample file)" href="KDEdoc/uk-xh_sample.html">view</a></td><td><a rel="nofollow" title="Ukrainian-Chinese (sample file)" href="KDEdoc/uk-zh_TW_sample.html">view</a></td><th>uk</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/wa.tar.gz">wa</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Walloon-Danish' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/da-wa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Walloon-German' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/de-wa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Walloon-English' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/en_GB-wa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Walloon-Spanish' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/es-wa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Walloon-Danish' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/da-wa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Walloon-German' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/de-wa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Walloon-English' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/en_GB-wa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Walloon-Spanish' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/es-wa.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Walloon-French' (17 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/fr-wa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Walloon-Hungarian' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/hu-wa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Walloon-Italian' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/it-wa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Walloon-Japanese' (18 links, 0.4k tokens)" href="download.php?f=KDEdoc/xml/ja-wa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Walloon-Dutch' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/nl-wa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Walloon-French' (17 links, 0.3k tokens)" href="download.php?f=KDEdoc/fr-wa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Walloon-Hungarian' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/hu-wa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Walloon-Italian' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/it-wa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Walloon-Japanese' (18 links, 0.4k tokens)" href="download.php?f=KDEdoc/ja-wa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Walloon-Dutch' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/nl-wa.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Walloon-Portuguese' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/pt-wa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Walloon-Portuguese' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/pt-wa.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Walloon-Romanian' (14 links, 0.2k tokens)" href="download.php?f=KDEdoc/xml/ro-wa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Walloon-Russian' (18 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/ru-wa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Walloon-Slovak' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/sk-wa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Walloon-Slovenian' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/sl-wa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Walloon-Serbian' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/sr-wa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Walloon-Swedish' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/sv-wa.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Walloon-Turkish' (18 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/tr-wa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Walloon-Romanian' (14 links, 0.2k tokens)" href="download.php?f=KDEdoc/ro-wa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Walloon-Russian' (18 links, 0.3k tokens)" href="download.php?f=KDEdoc/ru-wa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Walloon-Slovak' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/sk-wa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Walloon-Slovenian' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/sl-wa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Walloon-Serbian' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/sr-wa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Walloon-Swedish' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/sv-wa.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Walloon-Turkish' (18 links, 0.3k tokens)" href="download.php?f=KDEdoc/tr-wa.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td><a rel="nofollow" title="Walloon-Xhosa (sample file)" href="KDEdoc/wa-xh_sample.html">view</a></td><td><a rel="nofollow" title="Walloon-Chinese (sample file)" href="KDEdoc/wa-zh_TW_sample.html">view</a></td><th>wa</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/xh.tar.gz">xh</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Danish' (46 aligned documents, 5.5k links, 0.1M tokens)" href="download.php?f=KDEdoc/xml/da-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-German' (40 aligned documents, 4.8k links, 0.1M tokens)" href="download.php?f=KDEdoc/xml/de-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-English' (23 aligned documents, 0.8k links, 18.4k tokens)" href="download.php?f=KDEdoc/xml/en_GB-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Spanish' (49 aligned documents, 4.5k links, 0.1M tokens)" href="download.php?f=KDEdoc/xml/es-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Danish' (46 aligned documents, 5.5k links, 0.1M tokens)" href="download.php?f=KDEdoc/da-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-German' (40 aligned documents, 4.8k links, 0.1M tokens)" href="download.php?f=KDEdoc/de-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-English' (23 aligned documents, 0.8k links, 18.4k tokens)" href="download.php?f=KDEdoc/en_GB-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Spanish' (49 aligned documents, 4.5k links, 0.1M tokens)" href="download.php?f=KDEdoc/es-xh.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-French' (57 aligned documents, 5.8k links, 0.1M tokens)" href="download.php?f=KDEdoc/xml/fr-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Hungarian' (20 aligned documents, 1.1k links, 26.3k tokens)" href="download.php?f=KDEdoc/xml/hu-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Italian' (32 aligned documents, 4.1k links, 98.9k tokens)" href="download.php?f=KDEdoc/xml/it-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Japanese' (9 aligned documents, 0.3k links, 7.6k tokens)" href="download.php?f=KDEdoc/xml/ja-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Dutch' (22 aligned documents, 1.0k links, 15.9k tokens)" href="download.php?f=KDEdoc/xml/nl-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Norwegian Nynorsk' (21 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/nn-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Portuguese' (31 aligned documents, 2.7k links, 68.3k tokens)" href="download.php?f=KDEdoc/xml/pt-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Portuguese' (5 aligned documents, 42 links, 0.6k tokens)" href="download.php?f=KDEdoc/xml/pt_BR-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Romanian' (6 aligned documents, 0.2k links, 4.4k tokens)" href="download.php?f=KDEdoc/xml/ro-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Russian' (41 aligned documents, 2.0k links, 53.5k tokens)" href="download.php?f=KDEdoc/xml/ru-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Slovak' (39 aligned documents, 4.1k links, 96.6k tokens)" href="download.php?f=KDEdoc/xml/sk-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Slovenian' (34 aligned documents, 3.8k links, 92.3k tokens)" href="download.php?f=KDEdoc/xml/sl-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Serbian' (2 aligned documents, 31 links, 0.6k tokens)" href="download.php?f=KDEdoc/xml/sr-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Swedish' (50 aligned documents, 5.7k links, 0.1M tokens)" href="download.php?f=KDEdoc/xml/sv-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Turkish' (5 aligned documents, 52 links, 0.7k tokens)" href="download.php?f=KDEdoc/xml/tr-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Ukrainian' (7 aligned documents, 0.1k links, 2.6k tokens)" href="download.php?f=KDEdoc/xml/uk-xh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Walloon' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/wa-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-French' (57 aligned documents, 5.8k links, 0.1M tokens)" href="download.php?f=KDEdoc/fr-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Hungarian' (20 aligned documents, 1.1k links, 26.3k tokens)" href="download.php?f=KDEdoc/hu-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Italian' (32 aligned documents, 4.1k links, 98.9k tokens)" href="download.php?f=KDEdoc/it-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Japanese' (9 aligned documents, 0.3k links, 7.6k tokens)" href="download.php?f=KDEdoc/ja-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Dutch' (22 aligned documents, 1.0k links, 15.9k tokens)" href="download.php?f=KDEdoc/nl-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Norwegian Nynorsk' (21 links, 0.3k tokens)" href="download.php?f=KDEdoc/nn-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Portuguese' (31 aligned documents, 2.7k links, 68.3k tokens)" href="download.php?f=KDEdoc/pt-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Portuguese' (5 aligned documents, 42 links, 0.6k tokens)" href="download.php?f=KDEdoc/pt_BR-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Romanian' (6 aligned documents, 0.2k links, 4.4k tokens)" href="download.php?f=KDEdoc/ro-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Russian' (41 aligned documents, 2.0k links, 53.5k tokens)" href="download.php?f=KDEdoc/ru-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Slovak' (39 aligned documents, 4.1k links, 96.6k tokens)" href="download.php?f=KDEdoc/sk-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Slovenian' (34 aligned documents, 3.8k links, 92.3k tokens)" href="download.php?f=KDEdoc/sl-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Serbian' (2 aligned documents, 31 links, 0.6k tokens)" href="download.php?f=KDEdoc/sr-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Swedish' (50 aligned documents, 5.7k links, 0.1M tokens)" href="download.php?f=KDEdoc/sv-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Turkish' (5 aligned documents, 52 links, 0.7k tokens)" href="download.php?f=KDEdoc/tr-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Ukrainian' (7 aligned documents, 0.1k links, 2.6k tokens)" href="download.php?f=KDEdoc/uk-xh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Xhosa-Walloon' (19 links, 0.3k tokens)" href="download.php?f=KDEdoc/wa-xh.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Xhosa-Chinese (sample file)" href="KDEdoc/xh-zh_TW_sample.html">view</a></td><th>xh</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=KDEdoc/zh_TW.tar.gz">zh_TW</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Danish' (6 aligned documents, 0.2k links, 3.3k tokens)" href="download.php?f=KDEdoc/xml/da-zh_TW.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-German' (6 aligned documents, 0.2k links, 3.3k tokens)" href="download.php?f=KDEdoc/xml/de-zh_TW.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (5 aligned documents, 0.1k links, 1.8k tokens)" href="download.php?f=KDEdoc/xml/en_GB-zh_TW.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (6 aligned documents, 0.2k links, 3.9k tokens)" href="download.php?f=KDEdoc/xml/es-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Danish' (6 aligned documents, 0.2k links, 3.3k tokens)" href="download.php?f=KDEdoc/da-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-German' (6 aligned documents, 0.2k links, 3.3k tokens)" href="download.php?f=KDEdoc/de-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (5 aligned documents, 0.1k links, 1.8k tokens)" href="download.php?f=KDEdoc/en_GB-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (6 aligned documents, 0.2k links, 3.9k tokens)" href="download.php?f=KDEdoc/es-zh_TW.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-French' (6 aligned documents, 0.2k links, 2.6k tokens)" href="download.php?f=KDEdoc/xml/fr-zh_TW.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Hungarian' (6 aligned documents, 0.2k links, 2.9k tokens)" href="download.php?f=KDEdoc/xml/hu-zh_TW.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Italian' (6 aligned documents, 0.2k links, 3.6k tokens)" href="download.php?f=KDEdoc/xml/it-zh_TW.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Japanese' (6 aligned documents, 0.2k links, 3.0k tokens)" href="download.php?f=KDEdoc/xml/ja-zh_TW.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Dutch' (6 aligned documents, 0.2k links, 1.1k tokens)" href="download.php?f=KDEdoc/xml/nl-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-French' (6 aligned documents, 0.2k links, 2.6k tokens)" href="download.php?f=KDEdoc/fr-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Hungarian' (6 aligned documents, 0.2k links, 2.9k tokens)" href="download.php?f=KDEdoc/hu-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Italian' (6 aligned documents, 0.2k links, 3.6k tokens)" href="download.php?f=KDEdoc/it-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Japanese' (6 aligned documents, 0.2k links, 3.0k tokens)" href="download.php?f=KDEdoc/ja-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Dutch' (6 aligned documents, 0.2k links, 1.1k tokens)" href="download.php?f=KDEdoc/nl-zh_TW.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Portuguese' (6 aligned documents, 0.2k links, 3.5k tokens)" href="download.php?f=KDEdoc/xml/pt-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Portuguese' (6 aligned documents, 0.2k links, 3.5k tokens)" href="download.php?f=KDEdoc/pt-zh_TW.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Romanian' (6 aligned documents, 0.2k links, 2.2k tokens)" href="download.php?f=KDEdoc/xml/ro-zh_TW.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Russian' (6 aligned documents, 0.2k links, 3.3k tokens)" href="download.php?f=KDEdoc/xml/ru-zh_TW.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Slovak' (6 aligned documents, 0.2k links, 2.8k tokens)" href="download.php?f=KDEdoc/xml/sk-zh_TW.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Slovenian' (6 aligned documents, 0.2k links, 3.2k tokens)" href="download.php?f=KDEdoc/xml/sl-zh_TW.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Serbian' (2 aligned documents, 30 links, 0.2k tokens)" href="download.php?f=KDEdoc/xml/sr-zh_TW.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Swedish' (6 aligned documents, 0.2k links, 3.2k tokens)" href="download.php?f=KDEdoc/xml/sv-zh_TW.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Turkish' (2 aligned documents, 36 links, 0.2k tokens)" href="download.php?f=KDEdoc/xml/tr-zh_TW.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Ukrainian' (32 links, 0.3k tokens)" href="download.php?f=KDEdoc/xml/uk-zh_TW.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Walloon' (18 links, 0.2k tokens)" href="download.php?f=KDEdoc/xml/wa-zh_TW.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Xhosa' (6 aligned documents, 0.2k links, 2.2k tokens)" href="download.php?f=KDEdoc/xml/xh-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Romanian' (6 aligned documents, 0.2k links, 2.2k tokens)" href="download.php?f=KDEdoc/ro-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Russian' (6 aligned documents, 0.2k links, 3.3k tokens)" href="download.php?f=KDEdoc/ru-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Slovak' (6 aligned documents, 0.2k links, 2.8k tokens)" href="download.php?f=KDEdoc/sk-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Slovenian' (6 aligned documents, 0.2k links, 3.2k tokens)" href="download.php?f=KDEdoc/sl-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Serbian' (2 aligned documents, 30 links, 0.2k tokens)" href="download.php?f=KDEdoc/sr-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Swedish' (6 aligned documents, 0.2k links, 3.2k tokens)" href="download.php?f=KDEdoc/sv-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Turkish' (2 aligned documents, 36 links, 0.2k tokens)" href="download.php?f=KDEdoc/tr-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Ukrainian' (32 links, 0.3k tokens)" href="download.php?f=KDEdoc/uk-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Walloon' (18 links, 0.2k tokens)" href="download.php?f=KDEdoc/wa-zh_TW.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Xhosa' (6 aligned documents, 0.2k links, 2.2k tokens)" href="download.php?f=KDEdoc/xh-zh_TW.xml.gz">ces</a></td>
 <th></th>
 <th>zh_TW</th></tr>
 <tr><th></th>

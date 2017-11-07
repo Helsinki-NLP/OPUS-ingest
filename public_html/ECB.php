@@ -40,228 +40,228 @@
 <th></th>
 <td><a rel="nofollow" title="Czech-Danish (sample file)" href="ECB/cs-da_sample.html">view</a></td><td><a rel="nofollow" title="Czech-German (sample file)" href="ECB/cs-de_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Greek (sample file)" href="ECB/cs-el_sample.html">view</a></td><td><a rel="nofollow" title="Czech-English (sample file)" href="ECB/cs-en_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Spanish (sample file)" href="ECB/cs-es_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Estonian (sample file)" href="ECB/cs-et_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Finnish (sample file)" href="ECB/cs-fi_sample.html">view</a></td><td><a rel="nofollow" title="Czech-French (sample file)" href="ECB/cs-fr_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Hungarian (sample file)" href="ECB/cs-hu_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Italian (sample file)" href="ECB/cs-it_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Lithuanian (sample file)" href="ECB/cs-lt_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Latvian (sample file)" href="ECB/cs-lv_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Maltese (sample file)" href="ECB/cs-mt_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Dutch (sample file)" href="ECB/cs-nl_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Polish (sample file)" href="ECB/cs-pl_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Portuguese (sample file)" href="ECB/cs-pt_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Slovak (sample file)" href="ECB/cs-sk_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Slovenian (sample file)" href="ECB/cs-sl_sample.html">view</a></td><th>cs</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/da.tar.gz">da</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Danish-Czech' (0.1M links, 4.7M tokens)" href="download.php?f=ECB/xml/cs-da.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Danish-Czech' (0.1M links, 4.7M tokens)" href="download.php?f=ECB/cs-da.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Danish-German (sample file)" href="ECB/da-de_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Greek (sample file)" href="ECB/da-el_sample.html">view</a></td><td><a rel="nofollow" title="Danish-English (sample file)" href="ECB/da-en_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Spanish (sample file)" href="ECB/da-es_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Estonian (sample file)" href="ECB/da-et_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Finnish (sample file)" href="ECB/da-fi_sample.html">view</a></td><td><a rel="nofollow" title="Danish-French (sample file)" href="ECB/da-fr_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Hungarian (sample file)" href="ECB/da-hu_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Italian (sample file)" href="ECB/da-it_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Lithuanian (sample file)" href="ECB/da-lt_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Latvian (sample file)" href="ECB/da-lv_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Maltese (sample file)" href="ECB/da-mt_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Dutch (sample file)" href="ECB/da-nl_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Polish (sample file)" href="ECB/da-pl_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Portuguese (sample file)" href="ECB/da-pt_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Slovak (sample file)" href="ECB/da-sk_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Slovenian (sample file)" href="ECB/da-sl_sample.html">view</a></td><th>da</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/de.tar.gz">de</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'German-Czech' (87.8k links, 4.0M tokens)" href="download.php?f=ECB/xml/cs-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Danish' (0.1M links, 5.6M tokens)" href="download.php?f=ECB/xml/da-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Czech' (87.8k links, 4.0M tokens)" href="download.php?f=ECB/cs-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Danish' (0.1M links, 5.6M tokens)" href="download.php?f=ECB/da-de.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="German-Greek (sample file)" href="ECB/de-el_sample.html">view</a></td><td><a rel="nofollow" title="German-English (sample file)" href="ECB/de-en_sample.html">view</a></td><td><a rel="nofollow" title="German-Spanish (sample file)" href="ECB/de-es_sample.html">view</a></td><td><a rel="nofollow" title="German-Estonian (sample file)" href="ECB/de-et_sample.html">view</a></td><td><a rel="nofollow" title="German-Finnish (sample file)" href="ECB/de-fi_sample.html">view</a></td><td><a rel="nofollow" title="German-French (sample file)" href="ECB/de-fr_sample.html">view</a></td><td><a rel="nofollow" title="German-Hungarian (sample file)" href="ECB/de-hu_sample.html">view</a></td><td><a rel="nofollow" title="German-Italian (sample file)" href="ECB/de-it_sample.html">view</a></td><td><a rel="nofollow" title="German-Lithuanian (sample file)" href="ECB/de-lt_sample.html">view</a></td><td><a rel="nofollow" title="German-Latvian (sample file)" href="ECB/de-lv_sample.html">view</a></td><td><a rel="nofollow" title="German-Maltese (sample file)" href="ECB/de-mt_sample.html">view</a></td><td><a rel="nofollow" title="German-Dutch (sample file)" href="ECB/de-nl_sample.html">view</a></td><td><a rel="nofollow" title="German-Polish (sample file)" href="ECB/de-pl_sample.html">view</a></td><td><a rel="nofollow" title="German-Portuguese (sample file)" href="ECB/de-pt_sample.html">view</a></td><td><a rel="nofollow" title="German-Slovak (sample file)" href="ECB/de-sk_sample.html">view</a></td><td><a rel="nofollow" title="German-Slovenian (sample file)" href="ECB/de-sl_sample.html">view</a></td><th>de</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/el.tar.gz">el</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Czech' (38.1k links, 1.6M tokens)" href="download.php?f=ECB/xml/cs-el.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Danish' (89.0k links, 4.7M tokens)" href="download.php?f=ECB/xml/da-el.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-German' (90.6k links, 4.9M tokens)" href="download.php?f=ECB/xml/de-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Czech' (38.1k links, 1.6M tokens)" href="download.php?f=ECB/cs-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Danish' (89.0k links, 4.7M tokens)" href="download.php?f=ECB/da-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-German' (90.6k links, 4.9M tokens)" href="download.php?f=ECB/de-el.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Greek-English (sample file)" href="ECB/el-en_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Spanish (sample file)" href="ECB/el-es_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Estonian (sample file)" href="ECB/el-et_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Finnish (sample file)" href="ECB/el-fi_sample.html">view</a></td><td><a rel="nofollow" title="Greek-French (sample file)" href="ECB/el-fr_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Hungarian (sample file)" href="ECB/el-hu_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Italian (sample file)" href="ECB/el-it_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Lithuanian (sample file)" href="ECB/el-lt_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Latvian (sample file)" href="ECB/el-lv_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Maltese (sample file)" href="ECB/el-mt_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Dutch (sample file)" href="ECB/el-nl_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Polish (sample file)" href="ECB/el-pl_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Portuguese (sample file)" href="ECB/el-pt_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Slovak (sample file)" href="ECB/el-sk_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Slovenian (sample file)" href="ECB/el-sl_sample.html">view</a></td><th>el</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/en.tar.gz">en</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'English-Czech' (63.7k links, 3.0M tokens)" href="download.php?f=ECB/xml/cs-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Danish' (0.1M links, 7.2M tokens)" href="download.php?f=ECB/xml/da-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-German' (0.1M links, 5.9M tokens)" href="download.php?f=ECB/xml/de-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (0.1M links, 6.0M tokens)" href="download.php?f=ECB/xml/el-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Czech' (63.7k links, 3.0M tokens)" href="download.php?f=ECB/cs-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Danish' (0.1M links, 7.2M tokens)" href="download.php?f=ECB/da-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-German' (0.1M links, 5.9M tokens)" href="download.php?f=ECB/de-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (0.1M links, 6.0M tokens)" href="download.php?f=ECB/el-en.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="English-Spanish (sample file)" href="ECB/en-es_sample.html">view</a></td><td><a rel="nofollow" title="English-Estonian (sample file)" href="ECB/en-et_sample.html">view</a></td><td><a rel="nofollow" title="English-Finnish (sample file)" href="ECB/en-fi_sample.html">view</a></td><td><a rel="nofollow" title="English-French (sample file)" href="ECB/en-fr_sample.html">view</a></td><td><a rel="nofollow" title="English-Hungarian (sample file)" href="ECB/en-hu_sample.html">view</a></td><td><a rel="nofollow" title="English-Italian (sample file)" href="ECB/en-it_sample.html">view</a></td><td><a rel="nofollow" title="English-Lithuanian (sample file)" href="ECB/en-lt_sample.html">view</a></td><td><a rel="nofollow" title="English-Latvian (sample file)" href="ECB/en-lv_sample.html">view</a></td><td><a rel="nofollow" title="English-Maltese (sample file)" href="ECB/en-mt_sample.html">view</a></td><td><a rel="nofollow" title="English-Dutch (sample file)" href="ECB/en-nl_sample.html">view</a></td><td><a rel="nofollow" title="English-Polish (sample file)" href="ECB/en-pl_sample.html">view</a></td><td><a rel="nofollow" title="English-Portuguese (sample file)" href="ECB/en-pt_sample.html">view</a></td><td><a rel="nofollow" title="English-Slovak (sample file)" href="ECB/en-sk_sample.html">view</a></td><td><a rel="nofollow" title="English-Slovenian (sample file)" href="ECB/en-sl_sample.html">view</a></td><th>en</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/es.tar.gz">es</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Czech' (78.4k links, 4.0M tokens)" href="download.php?f=ECB/xml/cs-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Danish' (0.1M links, 6.2M tokens)" href="download.php?f=ECB/xml/da-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (0.1M links, 7.3M tokens)" href="download.php?f=ECB/xml/de-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Greek' (0.1M links, 6.3M tokens)" href="download.php?f=ECB/xml/el-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (0.1M links, 6.6M tokens)" href="download.php?f=ECB/xml/en-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Czech' (78.4k links, 4.0M tokens)" href="download.php?f=ECB/cs-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Danish' (0.1M links, 6.2M tokens)" href="download.php?f=ECB/da-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (0.1M links, 7.3M tokens)" href="download.php?f=ECB/de-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Greek' (0.1M links, 6.3M tokens)" href="download.php?f=ECB/el-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (0.1M links, 6.6M tokens)" href="download.php?f=ECB/en-es.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Spanish-Estonian (sample file)" href="ECB/es-et_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Finnish (sample file)" href="ECB/es-fi_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-French (sample file)" href="ECB/es-fr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Hungarian (sample file)" href="ECB/es-hu_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Italian (sample file)" href="ECB/es-it_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Lithuanian (sample file)" href="ECB/es-lt_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Latvian (sample file)" href="ECB/es-lv_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Maltese (sample file)" href="ECB/es-mt_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Dutch (sample file)" href="ECB/es-nl_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Polish (sample file)" href="ECB/es-pl_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Portuguese (sample file)" href="ECB/es-pt_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Slovak (sample file)" href="ECB/es-sk_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Slovenian (sample file)" href="ECB/es-sl_sample.html">view</a></td><th>es</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/et.tar.gz">et</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Czech' (0.1M links, 4.4M tokens)" href="download.php?f=ECB/xml/cs-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Danish' (0.1M links, 4.6M tokens)" href="download.php?f=ECB/xml/da-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-German' (96.3k links, 4.1M tokens)" href="download.php?f=ECB/xml/de-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Greek' (65.2k links, 3.0M tokens)" href="download.php?f=ECB/xml/el-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-English' (0.1M links, 5.5M tokens)" href="download.php?f=ECB/xml/en-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Spanish' (0.1M links, 5.0M tokens)" href="download.php?f=ECB/xml/es-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Czech' (0.1M links, 4.4M tokens)" href="download.php?f=ECB/cs-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Danish' (0.1M links, 4.6M tokens)" href="download.php?f=ECB/da-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-German' (96.3k links, 4.1M tokens)" href="download.php?f=ECB/de-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Greek' (65.2k links, 3.0M tokens)" href="download.php?f=ECB/el-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-English' (0.1M links, 5.5M tokens)" href="download.php?f=ECB/en-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Spanish' (0.1M links, 5.0M tokens)" href="download.php?f=ECB/es-et.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Estonian-Finnish (sample file)" href="ECB/et-fi_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-French (sample file)" href="ECB/et-fr_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Hungarian (sample file)" href="ECB/et-hu_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Italian (sample file)" href="ECB/et-it_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Estonian-Latvian (sample file)" href="ECB/et-lv_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Maltese (sample file)" href="ECB/et-mt_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Dutch (sample file)" href="ECB/et-nl_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Polish (sample file)" href="ECB/et-pl_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Portuguese (sample file)" href="ECB/et-pt_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Slovak (sample file)" href="ECB/et-sk_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Slovenian (sample file)" href="ECB/et-sl_sample.html">view</a></td><th>et</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/fi.tar.gz">fi</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Czech' (61.4k links, 2.5M tokens)" href="download.php?f=ECB/xml/cs-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Danish' (0.1M links, 6.7M tokens)" href="download.php?f=ECB/xml/da-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-German' (74.7k links, 3.2M tokens)" href="download.php?f=ECB/xml/de-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Greek' (87.8k links, 4.4M tokens)" href="download.php?f=ECB/xml/el-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-English' (0.2M links, 7.7M tokens)" href="download.php?f=ECB/xml/en-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Spanish' (0.2M links, 8.2M tokens)" href="download.php?f=ECB/xml/es-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Estonian' (65.3k links, 2.4M tokens)" href="download.php?f=ECB/xml/et-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Czech' (61.4k links, 2.5M tokens)" href="download.php?f=ECB/cs-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Danish' (0.1M links, 6.7M tokens)" href="download.php?f=ECB/da-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-German' (74.7k links, 3.2M tokens)" href="download.php?f=ECB/de-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Greek' (87.8k links, 4.4M tokens)" href="download.php?f=ECB/el-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-English' (0.2M links, 7.7M tokens)" href="download.php?f=ECB/en-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Spanish' (0.2M links, 8.2M tokens)" href="download.php?f=ECB/es-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Estonian' (65.3k links, 2.4M tokens)" href="download.php?f=ECB/et-fi.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Finnish-French (sample file)" href="ECB/fi-fr_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Hungarian (sample file)" href="ECB/fi-hu_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Italian (sample file)" href="ECB/fi-it_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Lithuanian (sample file)" href="ECB/fi-lt_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Latvian (sample file)" href="ECB/fi-lv_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Maltese (sample file)" href="ECB/fi-mt_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Dutch (sample file)" href="ECB/fi-nl_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Polish (sample file)" href="ECB/fi-pl_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Portuguese (sample file)" href="ECB/fi-pt_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Slovak (sample file)" href="ECB/fi-sk_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Slovenian (sample file)" href="ECB/fi-sl_sample.html">view</a></td><th>fi</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/fr.tar.gz">fr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'French-Czech' (77.2k links, 3.9M tokens)" href="download.php?f=ECB/xml/cs-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Danish' (0.1M links, 7.0M tokens)" href="download.php?f=ECB/xml/da-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-German' (0.1M links, 6.0M tokens)" href="download.php?f=ECB/xml/de-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Greek' (0.1M links, 6.4M tokens)" href="download.php?f=ECB/xml/el-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English' (0.2M links, 12.2M tokens)" href="download.php?f=ECB/xml/en-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (0.2M links, 11.7M tokens)" href="download.php?f=ECB/xml/es-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Estonian' (99.0k links, 4.9M tokens)" href="download.php?f=ECB/xml/et-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Finnish' (0.1M links, 5.7M tokens)" href="download.php?f=ECB/xml/fi-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Czech' (77.2k links, 3.9M tokens)" href="download.php?f=ECB/cs-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Danish' (0.1M links, 7.0M tokens)" href="download.php?f=ECB/da-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-German' (0.1M links, 6.0M tokens)" href="download.php?f=ECB/de-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Greek' (0.1M links, 6.4M tokens)" href="download.php?f=ECB/el-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English' (0.2M links, 12.2M tokens)" href="download.php?f=ECB/en-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (0.2M links, 11.7M tokens)" href="download.php?f=ECB/es-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Estonian' (99.0k links, 4.9M tokens)" href="download.php?f=ECB/et-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Finnish' (0.1M links, 5.7M tokens)" href="download.php?f=ECB/fi-fr.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="French-Hungarian (sample file)" href="ECB/fr-hu_sample.html">view</a></td><td><a rel="nofollow" title="French-Italian (sample file)" href="ECB/fr-it_sample.html">view</a></td><td><a rel="nofollow" title="French-Lithuanian (sample file)" href="ECB/fr-lt_sample.html">view</a></td><td><a rel="nofollow" title="French-Latvian (sample file)" href="ECB/fr-lv_sample.html">view</a></td><td><a rel="nofollow" title="French-Maltese (sample file)" href="ECB/fr-mt_sample.html">view</a></td><td><a rel="nofollow" title="French-Dutch (sample file)" href="ECB/fr-nl_sample.html">view</a></td><td><a rel="nofollow" title="French-Polish (sample file)" href="ECB/fr-pl_sample.html">view</a></td><td><a rel="nofollow" title="French-Portuguese (sample file)" href="ECB/fr-pt_sample.html">view</a></td><td><a rel="nofollow" title="French-Slovak (sample file)" href="ECB/fr-sk_sample.html">view</a></td><td><a rel="nofollow" title="French-Slovenian (sample file)" href="ECB/fr-sl_sample.html">view</a></td><th>fr</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/hu.tar.gz">hu</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Czech' (73.7k links, 3.0M tokens)" href="download.php?f=ECB/xml/cs-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Danish' (80.3k links, 3.4M tokens)" href="download.php?f=ECB/xml/da-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-German' (72.9k links, 3.1M tokens)" href="download.php?f=ECB/xml/de-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Greek' (43.4k links, 1.8M tokens)" href="download.php?f=ECB/xml/el-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (72.0k links, 3.3M tokens)" href="download.php?f=ECB/xml/en-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Spanish' (59.6k links, 2.7M tokens)" href="download.php?f=ECB/xml/es-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Estonian' (80.3k links, 3.1M tokens)" href="download.php?f=ECB/xml/et-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Finnish' (68.9k links, 2.7M tokens)" href="download.php?f=ECB/xml/fi-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-French' (61.0k links, 2.9M tokens)" href="download.php?f=ECB/xml/fr-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Czech' (73.7k links, 3.0M tokens)" href="download.php?f=ECB/cs-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Danish' (80.3k links, 3.4M tokens)" href="download.php?f=ECB/da-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-German' (72.9k links, 3.1M tokens)" href="download.php?f=ECB/de-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Greek' (43.4k links, 1.8M tokens)" href="download.php?f=ECB/el-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (72.0k links, 3.3M tokens)" href="download.php?f=ECB/en-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Spanish' (59.6k links, 2.7M tokens)" href="download.php?f=ECB/es-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Estonian' (80.3k links, 3.1M tokens)" href="download.php?f=ECB/et-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Finnish' (68.9k links, 2.7M tokens)" href="download.php?f=ECB/fi-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-French' (61.0k links, 2.9M tokens)" href="download.php?f=ECB/fr-hu.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Hungarian-Italian (sample file)" href="ECB/hu-it_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Lithuanian (sample file)" href="ECB/hu-lt_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Latvian (sample file)" href="ECB/hu-lv_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Maltese (sample file)" href="ECB/hu-mt_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Dutch (sample file)" href="ECB/hu-nl_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Polish (sample file)" href="ECB/hu-pl_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Portuguese (sample file)" href="ECB/hu-pt_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Slovak (sample file)" href="ECB/hu-sk_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Slovenian (sample file)" href="ECB/hu-sl_sample.html">view</a></td><th>hu</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/it.tar.gz">it</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Czech' (88.0k links, 4.3M tokens)" href="download.php?f=ECB/xml/cs-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Danish' (0.1M links, 7.7M tokens)" href="download.php?f=ECB/xml/da-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-German' (0.1M links, 5.8M tokens)" href="download.php?f=ECB/xml/de-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Greek' (94.7k links, 5.7M tokens)" href="download.php?f=ECB/xml/el-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (0.2M links, 11.3M tokens)" href="download.php?f=ECB/xml/en-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Spanish' (0.1M links, 8.0M tokens)" href="download.php?f=ECB/xml/es-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Estonian' (100.0k links, 4.7M tokens)" href="download.php?f=ECB/xml/et-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Finnish' (0.1M links, 6.0M tokens)" href="download.php?f=ECB/xml/fi-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (0.2M links, 10.4M tokens)" href="download.php?f=ECB/xml/fr-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Hungarian' (56.6k links, 2.5M tokens)" href="download.php?f=ECB/xml/hu-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Czech' (88.0k links, 4.3M tokens)" href="download.php?f=ECB/cs-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Danish' (0.1M links, 7.7M tokens)" href="download.php?f=ECB/da-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-German' (0.1M links, 5.8M tokens)" href="download.php?f=ECB/de-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Greek' (94.7k links, 5.7M tokens)" href="download.php?f=ECB/el-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (0.2M links, 11.3M tokens)" href="download.php?f=ECB/en-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Spanish' (0.1M links, 8.0M tokens)" href="download.php?f=ECB/es-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Estonian' (100.0k links, 4.7M tokens)" href="download.php?f=ECB/et-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Finnish' (0.1M links, 6.0M tokens)" href="download.php?f=ECB/fi-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (0.2M links, 10.4M tokens)" href="download.php?f=ECB/fr-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Hungarian' (56.6k links, 2.5M tokens)" href="download.php?f=ECB/hu-it.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Italian-Lithuanian (sample file)" href="ECB/it-lt_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Latvian (sample file)" href="ECB/it-lv_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Maltese (sample file)" href="ECB/it-mt_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Dutch (sample file)" href="ECB/it-nl_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Polish (sample file)" href="ECB/it-pl_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Portuguese (sample file)" href="ECB/it-pt_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Slovak (sample file)" href="ECB/it-sk_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Slovenian (sample file)" href="ECB/it-sl_sample.html">view</a></td><th>it</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/lt.tar.gz">lt</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Czech' (76.3k links, 3.4M tokens)" href="download.php?f=ECB/xml/cs-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Danish' (75.2k links, 3.4M tokens)" href="download.php?f=ECB/xml/da-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-German' (55.4k links, 2.4M tokens)" href="download.php?f=ECB/xml/de-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Greek' (31.8k links, 1.3M tokens)" href="download.php?f=ECB/xml/el-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-English' (69.8k links, 3.3M tokens)" href="download.php?f=ECB/xml/en-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Spanish' (60.6k links, 3.1M tokens)" href="download.php?f=ECB/xml/es-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Czech' (76.3k links, 3.4M tokens)" href="download.php?f=ECB/cs-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Danish' (75.2k links, 3.4M tokens)" href="download.php?f=ECB/da-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-German' (55.4k links, 2.4M tokens)" href="download.php?f=ECB/de-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Greek' (31.8k links, 1.3M tokens)" href="download.php?f=ECB/el-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-English' (69.8k links, 3.3M tokens)" href="download.php?f=ECB/en-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Spanish' (60.6k links, 3.1M tokens)" href="download.php?f=ECB/es-lt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Finnish' (70.5k links, 2.9M tokens)" href="download.php?f=ECB/xml/fi-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-French' (62.2k links, 3.1M tokens)" href="download.php?f=ECB/xml/fr-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Hungarian' (67.2k links, 2.8M tokens)" href="download.php?f=ECB/xml/hu-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Italian' (57.3k links, 2.8M tokens)" href="download.php?f=ECB/xml/it-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Finnish' (70.5k links, 2.9M tokens)" href="download.php?f=ECB/fi-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-French' (62.2k links, 3.1M tokens)" href="download.php?f=ECB/fr-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Hungarian' (67.2k links, 2.8M tokens)" href="download.php?f=ECB/hu-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Italian' (57.3k links, 2.8M tokens)" href="download.php?f=ECB/it-lt.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Lithuanian-Latvian (sample file)" href="ECB/lt-lv_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Maltese (sample file)" href="ECB/lt-mt_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Dutch (sample file)" href="ECB/lt-nl_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Polish (sample file)" href="ECB/lt-pl_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Portuguese (sample file)" href="ECB/lt-pt_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Slovak (sample file)" href="ECB/lt-sk_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Slovenian (sample file)" href="ECB/lt-sl_sample.html">view</a></td><th>lt</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/lv.tar.gz">lv</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Czech' (56.3k links, 2.1M tokens)" href="download.php?f=ECB/xml/cs-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Danish' (72.2k links, 2.8M tokens)" href="download.php?f=ECB/xml/da-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-German' (42.2k links, 1.5M tokens)" href="download.php?f=ECB/xml/de-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Greek' (31.5k links, 1.2M tokens)" href="download.php?f=ECB/xml/el-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-English' (65.4k links, 2.7M tokens)" href="download.php?f=ECB/xml/en-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Spanish' (52.4k links, 2.3M tokens)" href="download.php?f=ECB/xml/es-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Estonian' (87.7k links, 3.1M tokens)" href="download.php?f=ECB/xml/et-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Finnish' (56.1k links, 2.0M tokens)" href="download.php?f=ECB/xml/fi-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-French' (47.6k links, 2.0M tokens)" href="download.php?f=ECB/xml/fr-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Hungarian' (89.2k links, 3.3M tokens)" href="download.php?f=ECB/xml/hu-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Italian' (62.5k links, 2.6M tokens)" href="download.php?f=ECB/xml/it-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Lithuanian' (44.5k links, 1.6M tokens)" href="download.php?f=ECB/xml/lt-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Czech' (56.3k links, 2.1M tokens)" href="download.php?f=ECB/cs-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Danish' (72.2k links, 2.8M tokens)" href="download.php?f=ECB/da-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-German' (42.2k links, 1.5M tokens)" href="download.php?f=ECB/de-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Greek' (31.5k links, 1.2M tokens)" href="download.php?f=ECB/el-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-English' (65.4k links, 2.7M tokens)" href="download.php?f=ECB/en-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Spanish' (52.4k links, 2.3M tokens)" href="download.php?f=ECB/es-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Estonian' (87.7k links, 3.1M tokens)" href="download.php?f=ECB/et-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Finnish' (56.1k links, 2.0M tokens)" href="download.php?f=ECB/fi-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-French' (47.6k links, 2.0M tokens)" href="download.php?f=ECB/fr-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Hungarian' (89.2k links, 3.3M tokens)" href="download.php?f=ECB/hu-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Italian' (62.5k links, 2.6M tokens)" href="download.php?f=ECB/it-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Lithuanian' (44.5k links, 1.6M tokens)" href="download.php?f=ECB/lt-lv.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Latvian-Maltese (sample file)" href="ECB/lv-mt_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Dutch (sample file)" href="ECB/lv-nl_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Polish (sample file)" href="ECB/lv-pl_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Portuguese (sample file)" href="ECB/lv-pt_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Slovak (sample file)" href="ECB/lv-sk_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Slovenian (sample file)" href="ECB/lv-sl_sample.html">view</a></td><th>lv</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/mt.tar.gz">mt</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Czech' (67.8k links, 3.1M tokens)" href="download.php?f=ECB/xml/cs-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Danish' (86.7k links, 4.1M tokens)" href="download.php?f=ECB/xml/da-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-German' (86.1k links, 4.1M tokens)" href="download.php?f=ECB/xml/de-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Greek' (38.8k links, 1.7M tokens)" href="download.php?f=ECB/xml/el-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-English' (0.1M links, 5.1M tokens)" href="download.php?f=ECB/xml/en-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Spanish' (97.8k links, 5.2M tokens)" href="download.php?f=ECB/xml/es-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Estonian' (99.6k links, 4.3M tokens)" href="download.php?f=ECB/xml/et-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Finnish' (0.1M links, 4.5M tokens)" href="download.php?f=ECB/xml/fi-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-French' (0.1M links, 5.5M tokens)" href="download.php?f=ECB/xml/fr-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Hungarian' (71.5k links, 3.1M tokens)" href="download.php?f=ECB/xml/hu-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Italian' (0.1M links, 5.4M tokens)" href="download.php?f=ECB/xml/it-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Lithuanian' (82.5k links, 4.0M tokens)" href="download.php?f=ECB/xml/lt-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Latvian' (38.7k links, 1.5M tokens)" href="download.php?f=ECB/xml/lv-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Czech' (67.8k links, 3.1M tokens)" href="download.php?f=ECB/cs-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Danish' (86.7k links, 4.1M tokens)" href="download.php?f=ECB/da-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-German' (86.1k links, 4.1M tokens)" href="download.php?f=ECB/de-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Greek' (38.8k links, 1.7M tokens)" href="download.php?f=ECB/el-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-English' (0.1M links, 5.1M tokens)" href="download.php?f=ECB/en-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Spanish' (97.8k links, 5.2M tokens)" href="download.php?f=ECB/es-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Estonian' (99.6k links, 4.3M tokens)" href="download.php?f=ECB/et-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Finnish' (0.1M links, 4.5M tokens)" href="download.php?f=ECB/fi-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-French' (0.1M links, 5.5M tokens)" href="download.php?f=ECB/fr-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Hungarian' (71.5k links, 3.1M tokens)" href="download.php?f=ECB/hu-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Italian' (0.1M links, 5.4M tokens)" href="download.php?f=ECB/it-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Lithuanian' (82.5k links, 4.0M tokens)" href="download.php?f=ECB/lt-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Latvian' (38.7k links, 1.5M tokens)" href="download.php?f=ECB/lv-mt.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Maltese-Dutch (sample file)" href="ECB/mt-nl_sample.html">view</a></td><td><a rel="nofollow" title="Maltese-Polish (sample file)" href="ECB/mt-pl_sample.html">view</a></td><td><a rel="nofollow" title="Maltese-Portuguese (sample file)" href="ECB/mt-pt_sample.html">view</a></td><td><a rel="nofollow" title="Maltese-Slovak (sample file)" href="ECB/mt-sk_sample.html">view</a></td><td><a rel="nofollow" title="Maltese-Slovenian (sample file)" href="ECB/mt-sl_sample.html">view</a></td><th>mt</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/nl.tar.gz">nl</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Czech' (86.4k links, 4.2M tokens)" href="download.php?f=ECB/xml/cs-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Danish' (0.1M links, 7.3M tokens)" href="download.php?f=ECB/xml/da-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (0.1M links, 6.2M tokens)" href="download.php?f=ECB/xml/de-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Greek' (75.0k links, 4.1M tokens)" href="download.php?f=ECB/xml/el-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (0.1M links, 6.9M tokens)" href="download.php?f=ECB/xml/en-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (54.4k links, 3.1M tokens)" href="download.php?f=ECB/xml/es-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Estonian' (99.8k links, 4.5M tokens)" href="download.php?f=ECB/xml/et-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Finnish' (93.4k links, 4.3M tokens)" href="download.php?f=ECB/xml/fi-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (0.1M links, 6.9M tokens)" href="download.php?f=ECB/xml/fr-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hungarian' (75.0k links, 3.4M tokens)" href="download.php?f=ECB/xml/hu-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (0.2M links, 10.1M tokens)" href="download.php?f=ECB/xml/it-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Lithuanian' (53.4k links, 2.4M tokens)" href="download.php?f=ECB/xml/lt-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Latvian' (59.6k links, 2.5M tokens)" href="download.php?f=ECB/xml/lv-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Maltese' (0.1M links, 5.1M tokens)" href="download.php?f=ECB/xml/mt-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Czech' (86.4k links, 4.2M tokens)" href="download.php?f=ECB/cs-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Danish' (0.1M links, 7.3M tokens)" href="download.php?f=ECB/da-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (0.1M links, 6.2M tokens)" href="download.php?f=ECB/de-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Greek' (75.0k links, 4.1M tokens)" href="download.php?f=ECB/el-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (0.1M links, 6.9M tokens)" href="download.php?f=ECB/en-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (54.4k links, 3.1M tokens)" href="download.php?f=ECB/es-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Estonian' (99.8k links, 4.5M tokens)" href="download.php?f=ECB/et-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Finnish' (93.4k links, 4.3M tokens)" href="download.php?f=ECB/fi-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (0.1M links, 6.9M tokens)" href="download.php?f=ECB/fr-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hungarian' (75.0k links, 3.4M tokens)" href="download.php?f=ECB/hu-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (0.2M links, 10.1M tokens)" href="download.php?f=ECB/it-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Lithuanian' (53.4k links, 2.4M tokens)" href="download.php?f=ECB/lt-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Latvian' (59.6k links, 2.5M tokens)" href="download.php?f=ECB/lv-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Maltese' (0.1M links, 5.1M tokens)" href="download.php?f=ECB/mt-nl.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Dutch-Polish (sample file)" href="ECB/nl-pl_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Portuguese (sample file)" href="ECB/nl-pt_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Slovak (sample file)" href="ECB/nl-sk_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Slovenian (sample file)" href="ECB/nl-sl_sample.html">view</a></td><th>nl</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/pl.tar.gz">pl</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Czech' (50.6k links, 2.2M tokens)" href="download.php?f=ECB/xml/cs-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Danish' (54.7k links, 2.4M tokens)" href="download.php?f=ECB/xml/da-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-German' (57.2k links, 2.7M tokens)" href="download.php?f=ECB/xml/de-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Greek' (39.7k links, 1.8M tokens)" href="download.php?f=ECB/xml/el-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-English' (73.2k links, 3.6M tokens)" href="download.php?f=ECB/xml/en-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Spanish' (64.8k links, 3.4M tokens)" href="download.php?f=ECB/xml/es-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Estonian' (53.3k links, 2.2M tokens)" href="download.php?f=ECB/xml/et-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Finnish' (41.7k links, 1.7M tokens)" href="download.php?f=ECB/xml/fi-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-French' (64.4k links, 3.4M tokens)" href="download.php?f=ECB/xml/fr-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Hungarian' (55.5k links, 2.3M tokens)" href="download.php?f=ECB/xml/hu-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Italian' (66.8k links, 3.4M tokens)" href="download.php?f=ECB/xml/it-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Lithuanian' (70.0k links, 3.3M tokens)" href="download.php?f=ECB/xml/lt-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Latvian' (40.3k links, 1.5M tokens)" href="download.php?f=ECB/xml/lv-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Maltese' (74.9k links, 3.6M tokens)" href="download.php?f=ECB/xml/mt-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Dutch' (65.3k links, 3.2M tokens)" href="download.php?f=ECB/xml/nl-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Czech' (50.6k links, 2.2M tokens)" href="download.php?f=ECB/cs-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Danish' (54.7k links, 2.4M tokens)" href="download.php?f=ECB/da-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-German' (57.2k links, 2.7M tokens)" href="download.php?f=ECB/de-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Greek' (39.7k links, 1.8M tokens)" href="download.php?f=ECB/el-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-English' (73.2k links, 3.6M tokens)" href="download.php?f=ECB/en-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Spanish' (64.8k links, 3.4M tokens)" href="download.php?f=ECB/es-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Estonian' (53.3k links, 2.2M tokens)" href="download.php?f=ECB/et-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Finnish' (41.7k links, 1.7M tokens)" href="download.php?f=ECB/fi-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-French' (64.4k links, 3.4M tokens)" href="download.php?f=ECB/fr-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Hungarian' (55.5k links, 2.3M tokens)" href="download.php?f=ECB/hu-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Italian' (66.8k links, 3.4M tokens)" href="download.php?f=ECB/it-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Lithuanian' (70.0k links, 3.3M tokens)" href="download.php?f=ECB/lt-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Latvian' (40.3k links, 1.5M tokens)" href="download.php?f=ECB/lv-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Maltese' (74.9k links, 3.6M tokens)" href="download.php?f=ECB/mt-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Dutch' (65.3k links, 3.2M tokens)" href="download.php?f=ECB/nl-pl.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Polish-Portuguese (sample file)" href="ECB/pl-pt_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Slovak (sample file)" href="ECB/pl-sk_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Slovenian (sample file)" href="ECB/pl-sl_sample.html">view</a></td><th>pl</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/pt.tar.gz">pt</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Czech' (50.6k links, 2.2M tokens)" href="download.php?f=ECB/xml/cs-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Danish' (76.7k links, 4.0M tokens)" href="download.php?f=ECB/xml/da-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (0.2M links, 11.1M tokens)" href="download.php?f=ECB/xml/de-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Greek' (98.3k links, 5.9M tokens)" href="download.php?f=ECB/xml/el-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (0.2M links, 12.0M tokens)" href="download.php?f=ECB/xml/en-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (0.2M links, 12.2M tokens)" href="download.php?f=ECB/xml/es-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Estonian' (96.9k links, 4.6M tokens)" href="download.php?f=ECB/xml/et-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Finnish' (0.1M links, 6.8M tokens)" href="download.php?f=ECB/xml/fi-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (0.2M links, 12.9M tokens)" href="download.php?f=ECB/xml/fr-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hungarian' (62.1k links, 2.8M tokens)" href="download.php?f=ECB/xml/hu-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (0.3M links, 14.5M tokens)" href="download.php?f=ECB/xml/it-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Lithuanian' (69.5k links, 3.4M tokens)" href="download.php?f=ECB/xml/lt-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Latvian' (55.8k links, 2.4M tokens)" href="download.php?f=ECB/xml/lv-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Maltese' (87.8k links, 4.5M tokens)" href="download.php?f=ECB/xml/mt-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (0.1M links, 7.8M tokens)" href="download.php?f=ECB/xml/nl-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Polish' (59.3k links, 3.1M tokens)" href="download.php?f=ECB/xml/pl-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Czech' (50.6k links, 2.2M tokens)" href="download.php?f=ECB/cs-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Danish' (76.7k links, 4.0M tokens)" href="download.php?f=ECB/da-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (0.2M links, 11.1M tokens)" href="download.php?f=ECB/de-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Greek' (98.3k links, 5.9M tokens)" href="download.php?f=ECB/el-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (0.2M links, 12.0M tokens)" href="download.php?f=ECB/en-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (0.2M links, 12.2M tokens)" href="download.php?f=ECB/es-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Estonian' (96.9k links, 4.6M tokens)" href="download.php?f=ECB/et-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Finnish' (0.1M links, 6.8M tokens)" href="download.php?f=ECB/fi-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (0.2M links, 12.9M tokens)" href="download.php?f=ECB/fr-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hungarian' (62.1k links, 2.8M tokens)" href="download.php?f=ECB/hu-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (0.3M links, 14.5M tokens)" href="download.php?f=ECB/it-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Lithuanian' (69.5k links, 3.4M tokens)" href="download.php?f=ECB/lt-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Latvian' (55.8k links, 2.4M tokens)" href="download.php?f=ECB/lv-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Maltese' (87.8k links, 4.5M tokens)" href="download.php?f=ECB/mt-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (0.1M links, 7.8M tokens)" href="download.php?f=ECB/nl-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Polish' (59.3k links, 3.1M tokens)" href="download.php?f=ECB/pl-pt.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Portuguese-Slovak (sample file)" href="ECB/pt-sk_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Slovenian (sample file)" href="ECB/pt-sl_sample.html">view</a></td><th>pt</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/sk.tar.gz">sk</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Czech' (99.9k links, 4.3M tokens)" href="download.php?f=ECB/xml/cs-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Danish' (93.1k links, 4.1M tokens)" href="download.php?f=ECB/xml/da-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-German' (0.1M links, 5.1M tokens)" href="download.php?f=ECB/xml/de-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Greek' (23.1k links, 0.9M tokens)" href="download.php?f=ECB/xml/el-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-English' (0.1M links, 6.2M tokens)" href="download.php?f=ECB/xml/en-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Spanish' (0.1M links, 5.4M tokens)" href="download.php?f=ECB/xml/es-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Estonian' (63.6k links, 2.5M tokens)" href="download.php?f=ECB/xml/et-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Finnish' (89.3k links, 3.8M tokens)" href="download.php?f=ECB/xml/fi-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-French' (0.1M links, 5.5M tokens)" href="download.php?f=ECB/xml/fr-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Hungarian' (69.3k links, 2.8M tokens)" href="download.php?f=ECB/xml/hu-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Italian' (0.1M links, 5.3M tokens)" href="download.php?f=ECB/xml/it-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Lithuanian' (61.8k links, 2.6M tokens)" href="download.php?f=ECB/xml/lt-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Latvian' (44.3k links, 1.6M tokens)" href="download.php?f=ECB/xml/lv-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Maltese' (87.0k links, 4.1M tokens)" href="download.php?f=ECB/xml/mt-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Dutch' (64.8k links, 3.0M tokens)" href="download.php?f=ECB/xml/nl-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Polish' (62.6k links, 2.8M tokens)" href="download.php?f=ECB/xml/pl-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Portuguese' (0.1M links, 5.2M tokens)" href="download.php?f=ECB/xml/pt-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Czech' (99.9k links, 4.3M tokens)" href="download.php?f=ECB/cs-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Danish' (93.1k links, 4.1M tokens)" href="download.php?f=ECB/da-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-German' (0.1M links, 5.1M tokens)" href="download.php?f=ECB/de-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Greek' (23.1k links, 0.9M tokens)" href="download.php?f=ECB/el-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-English' (0.1M links, 6.2M tokens)" href="download.php?f=ECB/en-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Spanish' (0.1M links, 5.4M tokens)" href="download.php?f=ECB/es-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Estonian' (63.6k links, 2.5M tokens)" href="download.php?f=ECB/et-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Finnish' (89.3k links, 3.8M tokens)" href="download.php?f=ECB/fi-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-French' (0.1M links, 5.5M tokens)" href="download.php?f=ECB/fr-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Hungarian' (69.3k links, 2.8M tokens)" href="download.php?f=ECB/hu-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Italian' (0.1M links, 5.3M tokens)" href="download.php?f=ECB/it-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Lithuanian' (61.8k links, 2.6M tokens)" href="download.php?f=ECB/lt-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Latvian' (44.3k links, 1.6M tokens)" href="download.php?f=ECB/lv-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Maltese' (87.0k links, 4.1M tokens)" href="download.php?f=ECB/mt-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Dutch' (64.8k links, 3.0M tokens)" href="download.php?f=ECB/nl-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Polish' (62.6k links, 2.8M tokens)" href="download.php?f=ECB/pl-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Portuguese' (0.1M links, 5.2M tokens)" href="download.php?f=ECB/pt-sk.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Slovak-Slovenian (sample file)" href="ECB/sk-sl_sample.html">view</a></td><th>sk</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=ECB/sl.tar.gz">sl</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Czech' (92.8k links, 4.0M tokens)" href="download.php?f=ECB/xml/cs-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Danish' (0.1M links, 5.1M tokens)" href="download.php?f=ECB/xml/da-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-German' (78.8k links, 3.5M tokens)" href="download.php?f=ECB/xml/de-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Greek' (29.0k links, 1.1M tokens)" href="download.php?f=ECB/xml/el-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-English' (89.6k links, 4.4M tokens)" href="download.php?f=ECB/xml/en-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Spanish' (94.0k links, 5.1M tokens)" href="download.php?f=ECB/xml/es-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Estonian' (0.1M links, 4.3M tokens)" href="download.php?f=ECB/xml/et-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Finnish' (94.6k links, 4.1M tokens)" href="download.php?f=ECB/xml/fi-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-French' (0.1M links, 5.4M tokens)" href="download.php?f=ECB/xml/fr-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Hungarian' (74.3k links, 3.2M tokens)" href="download.php?f=ECB/xml/hu-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Italian' (94.9k links, 4.8M tokens)" href="download.php?f=ECB/xml/it-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Lithuanian' (65.8k links, 2.9M tokens)" href="download.php?f=ECB/xml/lt-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Latvian' (52.9k links, 2.0M tokens)" href="download.php?f=ECB/xml/lv-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Maltese' (98.1k links, 4.6M tokens)" href="download.php?f=ECB/xml/mt-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Dutch' (0.1M links, 6.3M tokens)" href="download.php?f=ECB/xml/nl-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Polish' (56.4k links, 2.4M tokens)" href="download.php?f=ECB/xml/pl-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Portuguese' (75.5k links, 3.9M tokens)" href="download.php?f=ECB/xml/pt-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Slovak' (0.1M links, 6.2M tokens)" href="download.php?f=ECB/xml/sk-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Czech' (92.8k links, 4.0M tokens)" href="download.php?f=ECB/cs-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Danish' (0.1M links, 5.1M tokens)" href="download.php?f=ECB/da-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-German' (78.8k links, 3.5M tokens)" href="download.php?f=ECB/de-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Greek' (29.0k links, 1.1M tokens)" href="download.php?f=ECB/el-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-English' (89.6k links, 4.4M tokens)" href="download.php?f=ECB/en-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Spanish' (94.0k links, 5.1M tokens)" href="download.php?f=ECB/es-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Estonian' (0.1M links, 4.3M tokens)" href="download.php?f=ECB/et-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Finnish' (94.6k links, 4.1M tokens)" href="download.php?f=ECB/fi-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-French' (0.1M links, 5.4M tokens)" href="download.php?f=ECB/fr-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Hungarian' (74.3k links, 3.2M tokens)" href="download.php?f=ECB/hu-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Italian' (94.9k links, 4.8M tokens)" href="download.php?f=ECB/it-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Lithuanian' (65.8k links, 2.9M tokens)" href="download.php?f=ECB/lt-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Latvian' (52.9k links, 2.0M tokens)" href="download.php?f=ECB/lv-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Maltese' (98.1k links, 4.6M tokens)" href="download.php?f=ECB/mt-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Dutch' (0.1M links, 6.3M tokens)" href="download.php?f=ECB/nl-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Polish' (56.4k links, 2.4M tokens)" href="download.php?f=ECB/pl-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Portuguese' (75.5k links, 3.9M tokens)" href="download.php?f=ECB/pt-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Slovak' (0.1M links, 6.2M tokens)" href="download.php?f=ECB/sk-sl.xml.gz">ces</a></td>
 <th></th>
 <th>sl</th></tr>
 <tr><th></th>

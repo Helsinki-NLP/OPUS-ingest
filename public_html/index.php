@@ -448,7 +448,9 @@ if (Date.parse(document.lastModified) != 0)
 	-->
         <td><a href="http://essenceofescience.se/sensordata/#nivre"><img border="0" src="img/essence.png" width="120"></a><br/><br/><a href="http://www.letsmt.eu"><img border="0" src="img/letsmt.jpg" width="120"></a></td>
 
-        <td align="right"><a href="http://www2.clustrmaps.com/counter/maps.php?url=http://opus.nlpl.eu" id="clustrMapsLink" name="clustrMapsLink"><img src="http://www2.clustrmaps.com/counter/index2.php?url=http://opus.nlpl.eu" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onerror="this.onerror=null; this.src='http://clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://clustrmaps.com';" name="clustrMapsImg"></a></td>
+        <td align="right">
+          <a href="https://clustrmaps.com/site/19vsj" title="Visit tracker"><img src="//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=jb3_gRwq0W-55WUXelIQXTVQXy4zDuu5yhp8fuyAEZw" /></a>
+        </td>
 <!--
         <td align="right"><a href="http://www2.clustrmaps.com/counter/maps.php?url=http://opus.lingfil.uu.se" id="clustrMapsLink" name="clustrMapsLink"><img src="http://www2.clustrmaps.com/counter/index2.php?url=http://opus.lingfil.uu.se" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onerror="this.onerror=null; this.src='http://clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://clustrmaps.com';" name="clustrMapsImg"></a></td>
 -->

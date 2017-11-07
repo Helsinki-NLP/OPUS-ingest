@@ -20,7 +20,7 @@
 <th></th>
 <td><a rel="nofollow" title="English-Croatian (sample file)" href="TedTalks/en-hr_sample.html">view</a></td><th>en</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=TedTalks/hr.tar.gz">hr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-English' (86.3k links, 2.8M tokens)" href="download.php?f=TedTalks/xml/en-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-English' (86.3k links, 2.8M tokens)" href="download.php?f=TedTalks/en-hr.xml.gz">ces</a></td>
 <th></th>
 <th>hr</th></tr>
 <tr><th></th>
