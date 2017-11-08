@@ -20,15 +20,28 @@ cd $OPUS_TAITO
 ## only sync raw xml files to abel
 
 rsync -ahv \
+    --exclude '**/.*' \
+    --exclude '**/dic/' \
     --exclude '**/src/' \
-    --exclude '**/raw/' \
+    --exclude '**/xml/' \
+    --exclude '**/log/' \
+    --exclude '**/data/' \
+    --exclude '**/scripts/' \
     --exclude '**/parsed/' \
     --exclude '**/*align*/' \
     --exclude '**/ud/' \
     --exclude '**/cwb*/' \
-    --include '*/' \
-    --include '**/xml/*.xml.gz' \
-    --include '**/xml/**/*.xml.gz' \
+    --exclude '**/DOGC-new/' \
+    --exclude '**/Europarl3/' \
+    --exclude '**/OpenSubtitles2011/' \
+    --exclude '**/OpenSubtitles2012/' \
+    --exclude '**/OpenSubtitles2013/' \
+    --exclude '**/OpenSubtitles2015/' \
+    --exclude '**/OpenSubtitles2016/' \
+    --exclude '**/ParCor/' \
+    --include '**/' \
+    --include '**/raw/*.xml.gz' \
+    --include '**/raw/**/*.xml.gz' \
     --exclude '*' \
     corpus ${OPUS_ABEL}/
 
