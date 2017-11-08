@@ -23,7 +23,6 @@ rsync -ahv \
     --exclude '**/.*' \
     --exclude '**/dic/' \
     --exclude '**/src/' \
-    --exclude '**/xml/' \
     --exclude '**/log/' \
     --exclude '**/data/' \
     --exclude '**/scripts/' \
@@ -31,6 +30,7 @@ rsync -ahv \
     --exclude '**/*align*/' \
     --exclude '**/ud/' \
     --exclude '**/cwb*/' \
+    --exclude '**/xml/*/' \
     --exclude '**/DOGC-new/' \
     --exclude '**/Europarl3/' \
     --exclude '**/OpenSubtitles2011/' \
@@ -41,6 +41,7 @@ rsync -ahv \
     --exclude '**/ParCor/' \
     --include '**/' \
     --include '**/raw/*.xml.gz' \
+    --include '**/xml/*.xml.gz' \
     --include '**/raw/**/*.xml.gz' \
     --exclude '*' \
     corpus ${OPUS_ABEL}/

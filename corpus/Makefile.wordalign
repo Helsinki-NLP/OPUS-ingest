@@ -127,7 +127,7 @@ EXTRACT_MEM = ${shell \
 
 MAX_PHR_LENGTH = 7
 ALIGNMENT      = grow-diag-final-and
-ALIGNMENTS     = intersect grow-diag grow-diag-final
+ALIGNMENTS     = # intersect grow-diag grow-diag-final
 
 # parameters for corpus cleaning (min & max sentence lengths)
 
