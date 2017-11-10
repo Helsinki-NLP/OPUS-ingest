@@ -12,6 +12,29 @@ DATAHOME = /work/users/joerg/OPUS/corpus/${CORPUS}
 LOCALTMP = /tmp
 DICHOME = ../dic
 
+
+NOALT = af-bn af-eu af-ko af-lt af-lv af-ml af-ms af-si af-ta af-uk af-ze_en af-ze_zh bg-en bn-eo br-ca br-eo br-ml br-th br-ze_en br-ze_zh bs-hy ca-ur cs-hu da-hy en-hr en-hu en-it en-nl eo-hy eo-kk eo-ko eo-tl et-hy eu-ta eu-te eu-tl gl-ka gl-ur hi-ka hi-tl hi-ur hy-id hy-is hy-mk hy-ml hy-no hy-sk hy-sl hy-sq hy-ze_en hy-ze_zh is-kk is-ta is-tl ja-kk ka-te ka-tl ka-ur kk-lv kk-sq kk-uk kk-ze_en kk-ze_zh kk-zh_tw mk-tl ml-ta ml-te ml-ur ta-te te-ze_zh tl-uk tl-ze_en tl-ze_zh ur-ze_en ur-ze_zh
+
+realign: ${NOALT}
+
+##
+##	# mkdir -p old
+##	# for l in ${NOALT}; do \
+##	#   cp $$l.* old/; \
+##	#   rm -f $$l.*; \
+##	#   ${MAKE} SRC=`echo $$l | cut -f1 -d '-'` TRG=`echo $$l | cut -f2 -d '-'` align;\
+##	# done
+
+${NOALT}:
+	mkdir -p old
+	-cp $@.* old/
+	-rm -f $@.*
+	${MAKE} SRC=${firstword ${subst -, ,$@}} TRG=${lastword ${subst -, ,$@}} align
+
+
+	${MAKE} SRC=`echo $$l | cut -f1 -d '-'` TRG=`echo $$l | cut -f2 -d '-'` align;\
+
+
 # subalign.pl: find best candidate pair with most time overlap
 #   -t .... time overlap score threshold
 #   -a .... align score threshold
@@ -38,8 +61,11 @@ DICHOME = ../dic
 
 ## with preliminary dic from 2016 and "lagom" overlap threshold (0.75)
 
+# SENTALIGN  = ../scripts/subalign.pl -A -t 0.5 -a 0.5 -d 0.75 \
+#		-r '-b -i 5 -m 10 -d ${DICHOME}/${SRC}-${TRG}.dic' -m 10
+
 SENTALIGN  = ../scripts/subalign.pl -A -t 0.5 -a 0.5 -d 0.75 \
-		-r '-b -i 5 -m 10 -d ${DICHOME}/${SRC}-${TRG}.dic' -m 10
+		-r '-b -i 5 -m 10 -d ${DICHOME}/${SRC}-${TRG}.dic.gz' -m 10
 
 
 ##############################################################
