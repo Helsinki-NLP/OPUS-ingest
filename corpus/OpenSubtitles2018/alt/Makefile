@@ -72,7 +72,7 @@ all:
 
 ## publish data files
 publish: ${CES_INFO} ${CES_PUB}
-	opus-refresh-info ${CORPUS}
+	opusinfo-refresh ${CORPUS}
 
 .PHONY: alg_samples
 alg_samples: ${ALG_SAMPLES}

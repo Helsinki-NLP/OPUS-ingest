@@ -67,7 +67,7 @@ cwb-convert:
 # create index of UD-parsed data
 cwb-index-ud:
 	mkdir -p cwb-ud
-	-gunzip -f cwb/*.gz
+	-gunzip -f cwb-ud/*.gz
 	-cd parsed && ln -s ../xml/*.xml.gz .
 	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
 	mkdir -p $(UDCWBDATA)
@@ -88,7 +88,7 @@ cwb-index-ud:
 ## convert only for UD parsed data
 cwb-convert-ud:
 	mkdir -p cwb-ud
-	-gunzip -f cwb/*.gz
+	-gunzip -f cwb-ud/*.gz
 	-cd parsed && ln -s ../xml/*.xml.gz .
 	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
 	mkdir -p $(UDCWBDATA)
