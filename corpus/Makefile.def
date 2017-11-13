@@ -76,9 +76,9 @@ ifndef LANGUAGES
                      $(notdir $(wildcard ${CORPUSSRC}/??_??)) \
                      $(notdir $(wildcard ${CORPUSRAW}/??)) \
                      $(notdir $(wildcard ${CORPUSRAW}/???)) \
-                     $(notdir $(wildcard ${CORPUSRAW}/??_??))) \
+                     $(notdir $(wildcard ${CORPUSRAW}/??_??)) \
 		     ${patsubst %.raw.tar.gz,%,\
-			$(notdir $(wildcard ${CORPUSHTML}/*.raw.tar.gz))}
+			$(notdir $(wildcard ${CORPUSHTML}/*.raw.tar.gz))})
 endif
 
 

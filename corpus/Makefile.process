@@ -16,6 +16,7 @@ SRCDIR   = src/${LANGUAGE}
 RAWFILES = $(patsubst src/%.${TXTEXT},raw/%.${XMLEXT}, \
 		$(shell find ${SRCDIR} -name '*.${TXTEXT}'))
 
+## make the corpus (all steps)
 .PHONY: corpus
 corpus:
 	${MAKE} preprocess
@@ -24,26 +25,36 @@ corpus:
 	${MAKE} udparse
 	${MAKE} wordalign
 
+## publish the corpus (create website and download packages)
 .PHONY: publish
 publish: packages webpage cwb-index
 
+
+## prepare makefiles
 .PHONY: prepare
 prepare: xml/Makefile wordalign/Makefile
 
+## pre-process data (all languages)
 .PHONY: preprocess
 preprocess:
 	for l in ${LANGUAGES}; do \
 		${MAKE} LANGUAGE=$$l preprocess_files; \
 	done
 
+## sentence alignment (all language pairs)
 .PHONY: align sentalign
 align sentalign: xml/Makefile
 	${MAKE} -C xml all
 
+## word alignment (all language pairs)
 .PHONY: wordalign
 wordalign: wordalign/Makefile
 	${MAKE} -C wordalign all
 
+## insert word alignments into mySQL database
+.PHONY: lexicon
+lexicon: lexicon/Makefile
+	${MAKE} -C lexicon all
 
 
 
@@ -62,6 +73,16 @@ wordalign/Makefile:
 	echo "all: wordalign-all" >> $@
 	echo "include ../../Makefile.def" >> $@
 	echo "include ../../Makefile.wordalign" >> $@
+
+lexicon/Makefile:
+	mkdir -p ${dir $@}
+	echo "# -*-makefile-*-" > $@
+	echo "include ../Makefile.def" >> $@
+	echo "all: lexicon-all" >> $@
+	echo "include ../../Makefile.def" >> $@
+	echo "include ../../Makefile.lexicon" >> $@
+
+
 
 .PHONY: preprocess_files
 preprocess_files: ${RAWFILES}

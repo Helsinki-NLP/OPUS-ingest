@@ -682,7 +682,7 @@ ${CORPUSHTML}/dic/%.dic.gz: | %/model/phrase-table-filtered.gz ${CORPUSHOME}/dic
 	mkdir -p ${dir $@}
 	zcat ${firstword $|} |\
 	perl ${OPUSTOOLS}/phrase2dic.pl \
-	    -s $(word 1,$(subst -, ,$(subst ., ,$@))) \
+	    -s $(word 1,$(subst -, ,$(subst ., ,${notdir $@}))) \
 	    -t $(word 2,$(subst -, ,$(subst ., ,$@))) |\
 	gzip -c > $@
 

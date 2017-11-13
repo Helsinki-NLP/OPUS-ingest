@@ -22,10 +22,10 @@ real-clean:
 	${MAKE} clean-xml
 	${MAKE} clean-raw
 
-
 # include som standard OPUS variables/targets
 
-include ../Makefile.preprocess
+include ../Makefile.process
+# include ../Makefile.preprocess
 include ../Makefile.annotate
 include ../Makefile.udparse
 include ../Makefile.cwb

@@ -35,7 +35,7 @@ if (param('reg')){$CWBREG=param('reg');}
 if (url_param('reg')){$CWBREG=url_param('reg');}
 chdir $CWBREG;
 
-my $css="http://opus.lingfil.uu.se/index.css";
+my $css="/index.css";
 binmode (STDOUT,':encoding(utf-8)');
 
 
@@ -551,23 +551,46 @@ sub RegistryLinks{
     my $corpora=shift;
     my $url=shift;
 
-    my @rows=(&th({},['corpus','languages']));
+    my @rows=(&th({},['corpora','languages']));
     my %trans=();
+
+    ## new way: dense list of corpora
+
+    my $CorpHtml = '';
+    my $LangHtml = '';
     foreach my $c (sort keys %{$corpora}){
 	my $link=&AddUrlParam($url,'corpus',$c);
-	my $html='';
 	if ($corpus eq $c){
+	    $CorpHtml .= ' <b>['.$c.']</b> ';
 	    foreach my $l (sort keys %{$$corpora{$c}}){
 		my $link=&AddUrlParam($link,'lang',$l);
-		$html.=&a({-href=>$link},$l).' ';
+		$LangHtml.=&a({-href=>$link},$l).' ';
 		$trans{$l}{$c}=$link;
 	    }
-	    push (@rows,&td({},[$c,$html]));
 	}
 	else{
-	    push (@rows,&td({},[&a({-href=>$link},$c),'']));
+	    $CorpHtml .= ' ('.&a({-href=>$link},$c).') ';
 	}
     }
+    push (@rows,&td({},[$CorpHtml,$LangHtml]));
+
+    ## old way: one corpus per line
+    ##
+    # foreach my $c (sort keys %{$corpora}){
+    # 	my $link=&AddUrlParam($url,'corpus',$c);
+    # 	my $html='';
+    # 	if ($corpus eq $c){
+    # 	    foreach my $l (sort keys %{$$corpora{$c}}){
+    # 		my $link=&AddUrlParam($link,'lang',$l);
+    # 		$html.=&a({-href=>$link},$l).' ';
+    # 		$trans{$l}{$c}=$link;
+    # 	    }
+    # 	    push (@rows,&td({},[$c,$html]));
+    # 	}
+    # 	else{
+    # 	    push (@rows,&td({},[&a({-href=>$link},$c),'']));
+    # 	}
+    # }
     return &div({-class=>'registry'},
 		&table({-cellpadding=>"0"},caption(''),&Tr(\@rows)));
 }
