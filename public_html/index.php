@@ -126,7 +126,7 @@
           <li>EUconst search interface (currently down)</a></li>
           -->
 
-          <li><a href="lex.php">Word Alignment Database</a></li>
+          <li><a href="lex.php">Word Alignment Database</a> (<a href="lex-old.php">old DB</a>)</li>
         </ul><b>Tools &amp; Info</b>
 
         <ul>

@@ -14,13 +14,15 @@ include("count.php");
 
 <?php
 
-$DBname = 'opus';
+$DBuser = 'opus';
+$DBname = 'lexicon';
 $DBpass = 'OOO!pus';
 
-$link = mysql_connect( "localhost", $DBname, $DBpass);
+$link = mysql_connect( "localhost", $DBuser, $DBpass);
 if (! $link){
     echo "cannot connect to database!";
 }
+mysql_select_db($DBname, $link);
 mysql_set_charset('utf8', $link);
 
 
@@ -136,6 +138,7 @@ function update_feedback_counts($table,$srcID,$trgID){
     $query.=' GROUP BY correct';
     $wrong = 0;
     $correct = 0;
+    // file_put_contents('/tmp/mysql.txt', $query);
     if ($res = mysql($DBname, $query)){
 	while ($r=mysql_fetch_array($res)){
 	    if ($r['correct'] == 0){
@@ -151,6 +154,7 @@ function update_feedback_counts($table,$srcID,$trgID){
     $query.= ' WHERE srcID='.$srcID.' AND trgID='.$trgID;
 
     // echo $query;
+    // file_put_contents('/tmp/mysql.txt', $query);
     return mysql($DBname, $query);
 
 }
@@ -257,7 +261,7 @@ if (get_corpora($corpora)>1){
 <p>
 
 
-<table border="0" width="100%"><tr>
+<table border="0" width="100%" style="height:100%;width:100%;"><tr>
 
 
 <td align="left" valign="top"><div class="result">
@@ -277,7 +281,7 @@ if (isset($_REQUEST['w']) && ($_REQUEST['w'] != '')){
       $i=0;
 
       $nrtrgs = count($trgs);
-      $nrrows = ceil($nrtrgs/5);
+      $nrrows = ceil($nrtrgs/3);
       $nrcells = ceil($nrtrgs/$nrrows);
 
       foreach ($trgs as $trg){
@@ -378,7 +382,8 @@ function print_results($src,$trg,$word){
       return false;
    }
 
-   $query = "SELECT distinct SUM(freq) AS freq,src.ID AS srcID, trg.ID AS trgID, src.item AS src,trg.item AS trg, origin.corpus,ok,wrong FROM ";
+   // $query = "SELECT distinct SUM(freq) AS freq,src.ID AS srcID, trg.ID AS trgID, src.item AS src,trg.item AS trg, origin.corpus,ok,wrong FROM ";
+   $query = "SELECT distinct AVG(prob) AS prob, SUM(freq) AS freq,src.ID AS srcID, trg.ID AS trgID, src.item AS src,trg.item AS trg, origin.corpus,ok,wrong FROM ";
    $query .= "`$dic` AS align,$src AS src,$trg AS trg, origin ";
    $query .= "WHERE align.srcID = src.ID AND align.trgID = trg.ID";
    $query .= " AND origin.ID = align.originID";
@@ -390,11 +395,13 @@ function print_results($src,$trg,$word){
 
    if ($is_trg){
       $query .= ' AND trg.item = "'.$word.'"';
-      $query .= " GROUP BY src ORDER BY freq DESC";
+      // $query .= " GROUP BY src ORDER BY freq DESC";
+      $query .= " GROUP BY src ORDER BY prob DESC";
    }
    else{
       $query .= ' AND src.item = "'.$word.'"';
-      $query .= " GROUP BY trg ORDER BY freq DESC";
+      // $query .= " GROUP BY trg ORDER BY freq DESC";
+      $query .= " GROUP BY trg ORDER BY prob DESC";
    }
    if (!isset($_REQUEST['all']) || count($trgs)>1){
        $query .= " LIMIT 0,5";
@@ -403,13 +410,13 @@ function print_results($src,$trg,$word){
    if ($result = mysql($DBname, $query)){
 
        if ($is_trg){
-	   echo "<table width='100%'><tr><th></th><th>$src</th>";
+	   echo "<table width='100%'><tr><td>#</td><td>prob</td><th>$src</th>";
 	   $req = '?w='.urlencode($word);
 	   $req .= '&amp;l='.urlencode($trg);
 	   $req .= '&amp;'.$src.'=1&amp;all=1';
        }
        else{
-	   echo "<table width='100%'><tr><th></th><th>$trg</th>";
+	   echo "<table width='100%'><tr><td>#</td><td>prob</td><th>$trg</th>";
 	   $req = '?w='.urlencode($word);
 	   $req .= '&amp;l='.urlencode($src);
 	   $req .= '&amp;'.$trg.'=1&amp;all=1';
@@ -443,12 +450,16 @@ function print_results($src,$trg,$word){
 	   $href = make_corpus_request($row['corpus'],$row['src'],$row['trg'],$src,$trg);
 	   echo '<tr><td class="freq" bgcolor="#'.$color.'">';
 	   echo '<a rel="nofollow" target="kwic" href="'.$href.'">';
-	   echo $row['freq'].'</a></td>';
+	   echo $row['freq'].'</a></td><td class="freq" bgcolor="#'.$color.'">(';
+	   echo number_format($row['prob'],2);
+	   echo ')</td>';
+	   $srcword = str_replace(' ','&nbsp;',$row['src']);
+	   $trgword = str_replace(' ','&nbsp;',$row['trg']);
 	   if ($is_trg){
 	       $req = make_dic_request($row['src'],$src,$trg);
 	       echo '<td class="trg" bgcolor="#'.$color.'" >';
 //	       echo '<td class="trg" >';
-	       echo '<a rel="nofollow" href="?'.$req.'">'.$row['src'].'</a>';
+	       echo '<a rel="nofollow" href="?'.$req.'">'.$srcword.'</a>';
 	       echo '<td align="right" bgcolor="'.$color.'"><a ';
 	       echo 'rel="nofollow" title="'.$correct.'" ';
 	       echo 'href="?'.$thisreq.'&amp;t='.$src.'&amp;ok=1';
@@ -464,7 +475,7 @@ function print_results($src,$trg,$word){
 	       $req = make_dic_request($row['trg'],$trg,$src);
 //	       echo '<td class="trg">';
 	       echo '<td class="trg" bgcolor="#'.$color.'" >';
-	       echo '<a rel="nofollow" href="?'.$req.'">'.$row['trg'].'</a>';
+	       echo '<a rel="nofollow" href="?'.$req.'">'.$trgword.'</a>';
 	       echo '<td align="right" bgcolor="'.$color.'"><a ';
 	       echo 'rel="nofollow" title="'.$correct.'" ';
 	       echo 'href="?'.$thisreq.'&amp;t='.$trg.'&amp;ok=1';
