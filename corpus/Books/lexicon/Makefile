@@ -10,7 +10,7 @@ MYSQL_USER   = opus
 MYSQL_PASSWD = 
 
 
-PHRASE2DICE = ${HOME}/research/nlpl/opus-tools/scripts/alignments/opus-pt2dice
+PHRASE2DICE = opus-pt2dice
 DICETHR = 0.05
 FREQTHR = 2
 
@@ -22,10 +22,6 @@ LANGSQL = $(patsubst %.dic,%,$(LANGDIC))
 ALIGNMENT = efmaral gdfa
 DATE = $(shell stat -c %y ${CORPUSWORDALIGN} | cut -f 1 -d ' ')
 
-# STATUSID = 1
-
-## convert from 2-letters to 3-letter codes
-# ISO639 = ${OPUSTOOLS}/iso639.pl
 
 all: sql insert clean
 

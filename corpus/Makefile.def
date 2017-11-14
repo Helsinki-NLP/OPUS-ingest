@@ -98,7 +98,8 @@ OPUSTOOLS  = ${TOOLS}/opus
 OPUS-TOOLS = ${TOOLS}/public/opus-tools
 CORPUSTOOLS= ${OPUSTOOLS}/${CORPUS}
 
-ISO639     = $(TOOLS)/opus/iso639.pl
+# ISO639     = $(TOOLS)/opus/iso639.pl
+ISO639     = opus-iso639
 
 UPLUGHOME  = ${TOOLS}/public/uplug/uplug-main
 UPLUGCWB   = ${TOOLS}/public/uplug/uplug-cwb
