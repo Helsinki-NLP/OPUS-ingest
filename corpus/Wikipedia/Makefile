@@ -27,6 +27,7 @@ web-corpus: tmx moses alg_samples html
 
 # include some standard OPUS targets for processing/annotating data
 
+include ../Makefile.process
 # include ../Makefile.annotate
 include ../Makefile.tag
 include ../Makefile.cwb

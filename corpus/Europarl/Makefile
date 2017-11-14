@@ -23,6 +23,7 @@ real-clean:
 
 # include som standard OPUS variables/targets
 
+include ../Makefile.process
 # include ../Makefile.annotate
 include ../Makefile.tag
 include ../Makefile.cwb

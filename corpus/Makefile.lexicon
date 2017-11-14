@@ -31,7 +31,8 @@ ALIGNMENT = efmaral gdfa
 DATE = $(shell stat -c %y ${CORPUSWORDALIGN} | cut -f 1 -d ' ')
 
 
-lexicon-all: sql insert clean
+lexicon-all: sql insert
+	${MAKE} clean
 
 sql: general.sql ${LANGSQL}
 

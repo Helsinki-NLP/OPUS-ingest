@@ -67,6 +67,7 @@ real-clean:
 
 # include some standard OPUS targets for processing/annotating data
 
+include ../Makefile.process
 # include ../Makefile.annotate
 include ../Makefile.tag
 include ../Makefile.cwb

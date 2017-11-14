@@ -60,6 +60,7 @@ submit-convert:
 
 # include som standard OPUS variables/targets
 
+include ../Makefile.process
 include ../Makefile.annotate
 include ../Makefile.cwb
 include ../Makefile.html
