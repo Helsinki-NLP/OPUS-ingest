@@ -9,7 +9,18 @@
 <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-<div class="header"><?php include("header.php"); ?></div><h1>OpenSubtitles2013</h1><p>This is an EXTENSION of the OpenSubtitles2012 collection of translated movie subtitles from <a href="http://www.opensubtitles.org/">http://www.opensubtitles.org/</a>. It contains additional subtitle pairs not covered by the previous distribution. <br/><b>IMPORTANT:</b> If you use the OpenSubtitle corpus: <br/>Please, add a link to <b>http://www.opensubtitles.org/</b> to your website and to your reports and publications produced with the data! I promised this when I got the data from the providers of that website!</p> <p>59 languages, 1,211 bitexts<br>total number of files: 756,370<br>total number of tokens: 4.35G<br>total number of sentence fragments: 630.59M<br><p>Please <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J&ouml;rg Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)<br/>
+<div class="header"><?php include("header.php"); ?></div><h1>OpenSubtitles2013</h1>
+
+<p>This is an EXTENSION of the OpenSubtitles2012 collection of translated movie subtitles from <a href="http://www.opensubtitles.org/">http://www.opensubtitles.org/</a>. It contains additional subtitle pairs not covered by the previous distribution. 
+<br/>
+<a href="OpenSubtitles2018.php">Look at the latest package of OpenSubtitles2018!</a>
+</p>
+
+
+<p>
+<b>IMPORTANT:</b> If you use the OpenSubtitle corpus: <br/>Please, add a link to <b>http://www.opensubtitles.org/</b> to your website and to your reports and publications produced with the data! I promised this when I got the data from the providers of that website!</p>
+
+<p>59 languages, 1,211 bitexts<br>total number of files: 756,370<br>total number of tokens: 4.35G<br>total number of sentence fragments: 630.59M<br><p>Please <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J&ouml;rg Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)<br/>
 
 <h3>News</h3>
 
@@ -2283,7 +2294,10 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 <th>zh_tw</th>
 <th></th></tr>
 </table>
-</div><p><h3>Statistics and TMX/Moses Downloads</h3>Number of files, tokens, and sentences per language (including non-parallel ones if they exist)<br>Number of sentence alignment units per language pair<p>Upper-right triangle: download translation memory files (TMX)<br>Bottom-left triangle: download plain text files (MOSES/GIZA++)<br>Language ID's, first row: monolingual plain text files (tokenized)<br>Language ID's, first column: monolingual plain text files (untokenized)<div class="counts"><table><caption></caption> <tr><th>language</th> <th>files</th> <th>tokens</th> <th>sentences</th><th><a rel="nofollow" title='monolingual tokenized af plain text' href="download.php?f=OpenSubtitles2013/mono/OpenSubtitles2013.af.gz">af</a>
+</div>
+
+<!--
+<p><h3>Statistics and TMX/Moses Downloads</h3>Number of files, tokens, and sentences per language (including non-parallel ones if they exist)<br>Number of sentence alignment units per language pair<p>Upper-right triangle: download translation memory files (TMX)<br>Bottom-left triangle: download plain text files (MOSES/GIZA++)<br>Language ID's, first row: monolingual plain text files (tokenized)<br>Language ID's, first column: monolingual plain text files (untokenized)<div class="counts"><table><caption></caption> <tr><th>language</th> <th>files</th> <th>tokens</th> <th>sentences</th><th><a rel="nofollow" title='monolingual tokenized af plain text' href="download.php?f=OpenSubtitles2013/mono/OpenSubtitles2013.af.gz">af</a>
 </th><th><a rel="nofollow" title='monolingual tokenized ar plain text' href="download.php?f=OpenSubtitles2013/mono/OpenSubtitles2013.ar.gz">ar</a>
 </th><th>be</th><th><a rel="nofollow" title='monolingual tokenized bg plain text' href="download.php?f=OpenSubtitles2013/mono/OpenSubtitles2013.bg.gz">bg</a>
 </th><th><a rel="nofollow" title='monolingual tokenized bn plain text' href="download.php?f=OpenSubtitles2013/mono/OpenSubtitles2013.bn.gz">bn</a>
@@ -4797,6 +4811,9 @@ Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubti
 </td><td bgcolor="#ffd9d8"><a rel="nofollow" title='Chinese-Ukrainian (9,629 sentence pairs, 74.15k words) - Moses format' href="download.php?f=OpenSubtitles2013/uk-zh_tw.txt.zip">9.6k</a>
 </td><td></td><td bgcolor="#fffdf1"><a rel="nofollow" title='Chinese-Vietnamese (77,285 sentence pairs, 0.81M words) - Moses format' href="download.php?f=OpenSubtitles2013/vi-zh_tw.txt.zip">77.3k</a>
 </td><td></td><td bgcolor="#fffaf1"><a rel="nofollow" title='Chinese-Chinese (213,289 sentence pairs, 0.61M words) - Moses format' href="download.php?f=OpenSubtitles2013/zh_cn-zh_tw.txt.zip">0.2M</a>
-</td><td></td></tr></table></div><p>Note that TMX files only contain unique translation units and, therefore, the number of aligned units is smaller than for the distributions in Moses and XML format. Moses downloads include all non-empty alignment units including duplicates. Token counts for each language also include duplicate sentences and documents.<p><hr><div class="footer"></div>
+</td><td></td></tr></table></div><p>Note that TMX files only contain unique translation units and, therefore, the number of aligned units is smaller than for the distributions in Moses and XML format. Moses downloads include all non-empty alignment units including duplicates. Token counts for each language also include duplicate sentences and documents.<p><hr>
+-->
+
+<div class="footer"></div>
 </body>
 </html>

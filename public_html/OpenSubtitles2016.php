@@ -9,7 +9,12 @@
 <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-<div class="header"><?php include("header.php"); ?></div><h1>OpenSubtitles2016</h1><p>This is a new collection of translated movie subtitles from <a href="http://www.opensubtitles.org/">http://www.opensubtitles.org/</a>. <br/><b>IMPORTANT:</b> If you use the OpenSubtitle corpus: <br/>Please, add a link to <b>http://www.opensubtitles.org/</b> to your website and to your reports and publications produced with the data! I promised this when I got the data from the providers of that website!</p> <p> This is a cleaner version of the subtitle collection using improved conversion, sentence alignment, better language checking, more meta data, ....</p><p>
+<div class="header"><?php include("header.php"); ?></div><h1>OpenSubtitles2016</h1><p>This is a new collection of translated movie subtitles from <a href="http://www.opensubtitles.org/">http://www.opensubtitles.org/</a>. <br/>
+<a href="OpenSubtitles2018.php">Look at the latest package of OpenSubtitles2018!</a>
+</p>
+
+<p>
+<b>IMPORTANT:</b> If you use the OpenSubtitle corpus: <br/>Please, add a link to <b>http://www.opensubtitles.org/</b> to your website and to your reports and publications produced with the data! I promised this when I got the data from the providers of that website!</p> <p> This is a cleaner version of the subtitle collection using improved conversion, sentence alignment, better language checking, more meta data, ....</p><p>
 
 <b>NOTE:</b> The sentence alignment files and all TMX/Moses files have been updated on 7 January, 2016. Please, download the data files once again if you use an older version!<br/>
 <b>ANOTHER NOTE:</b> Some languages have been updated in November, 2016. Please, download the data files once again if you use an older version!</p>

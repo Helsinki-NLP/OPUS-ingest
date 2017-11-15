@@ -9,7 +9,14 @@
 <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-<div class="header"><?php include("header.php"); ?></div><h1>OpenSubtitles2012</h1><p>A collection of documents from <a href="http://www.opensubtitles.org/">http://www.opensubtitles.org/</a>.<br/><b>IMPORTANT:</b> If you use the OpenSubtitle corpus: <br/>Please, add a link to <b>http://www.opensubtitles.org/</b> to your website and to your reports and publications produced with the data! I promised this when I got the data from the providers of that website!</p> 
+<div class="header"><?php include("header.php"); ?></div><h1>OpenSubtitles2012</h1>
+
+<p>A collection of documents from <a href="http://www.opensubtitles.org/">http://www.opensubtitles.org/</a>.<br/>
+<a href="OpenSubtitles2018.php">Look at the latest package of OpenSubtitles2018!</a>
+</p>
+
+<p>
+<b>IMPORTANT:</b> If you use the OpenSubtitle corpus: <br/>Please, add a link to <b>http://www.opensubtitles.org/</b> to your website and to your reports and publications produced with the data! I promised this when I got the data from the providers of that website!</p>
 
 <p> This is a slightly cleaner and bigger version of the subtitle collection using improved sentence alignment and better language checking.<br/>
 The previous release is still available <a href="OpenSubtitles2011.php">here</a>.
@@ -2026,7 +2033,10 @@ The previous release is still available <a href="OpenSubtitles2011.php">here</a>
 <th>zh_tw</th>
 <th></th></tr>
 </table>
-</div><p><h3>Statistics and TMX/Moses Downloads</h3>Number of files, tokens, and sentences per language (including non-parallel ones if they exist)<br>Number of sentence alignment units per language pair<p>Upper-right triangle: download translation memory files (TMX)<br>Bottom-left triangle: download plain text files (MOSES/GIZA++)<br>Language ID's, first row: monolingual plain text files (tokenized)<br>Language ID's, first column: monolingual plain text files (untokenized)<div class="counts"><table><caption></caption> <tr><th>language</th> <th>files</th> <th>tokens</th> <th>sentences</th><th><a rel="nofollow" title='monolingual tokenized af plain text' href="download.php?f=OpenSubtitles2012/mono/OpenSubtitles2012.af.gz">af</a>
+</div>
+
+<!--
+<p><h3>Statistics and TMX/Moses Downloads</h3>Number of files, tokens, and sentences per language (including non-parallel ones if they exist)<br>Number of sentence alignment units per language pair<p>Upper-right triangle: download translation memory files (TMX)<br>Bottom-left triangle: download plain text files (MOSES/GIZA++)<br>Language ID's, first row: monolingual plain text files (tokenized)<br>Language ID's, first column: monolingual plain text files (untokenized)<div class="counts"><table><caption></caption> <tr><th>language</th> <th>files</th> <th>tokens</th> <th>sentences</th><th><a rel="nofollow" title='monolingual tokenized af plain text' href="download.php?f=OpenSubtitles2012/mono/OpenSubtitles2012.af.gz">af</a>
 </th><th><a rel="nofollow" title='monolingual tokenized ar plain text' href="download.php?f=OpenSubtitles2012/mono/OpenSubtitles2012.ar.gz">ar</a>
 </th><th><a rel="nofollow" title='monolingual tokenized az plain text' href="download.php?f=OpenSubtitles2012/mono/OpenSubtitles2012.az.gz">az</a>
 </th><th><a rel="nofollow" title='monolingual tokenized be plain text' href="download.php?f=OpenSubtitles2012/mono/OpenSubtitles2012.be.gz">be</a>
@@ -4288,6 +4298,10 @@ The previous release is still available <a href="OpenSubtitles2011.php">here</a>
 </td><td></td><td bgcolor="#f2ffd3"><a rel="nofollow" title='Chinese-Turkish (322,115 sentence pairs, 2.28M words) - Moses format' href="download.php?f=OpenSubtitles2012/tr-zh_tw.txt.zip">0.3M</a>
 </td><td></td><td></td><td bgcolor="#fff5ee"><a rel="nofollow" title='Chinese-Vietnamese (42,121 sentence pairs, 0.46M words) - Moses format' href="download.php?f=OpenSubtitles2012/vi-zh_tw.txt.zip">42.1k</a>
 </td><td></td><td bgcolor="#fff8f0"><a rel="nofollow" title='Chinese-Chinese (177,188 sentence pairs, 0.54M words) - Moses format' href="download.php?f=OpenSubtitles2012/zh_cn-zh_tw.txt.zip">0.2M</a>
-</td><td></td></tr></table></div><p>Note that TMX files only contain unique translation units and, therefore, the number of aligned units is smaller than for the distributions in Moses and XML format. Moses downloads include all non-empty alignment units including duplicates. Token counts for each language also include duplicate sentences and documents.<p><hr><div class="footer"></div>
+</td><td></td></tr></table></div><p>Note that TMX files only contain unique translation units and, therefore, the number of aligned units is smaller than for the distributions in Moses and XML format. Moses downloads include all non-empty alignment units including duplicates. Token counts for each language also include duplicate sentences and documents.<p><hr>
+-->
+
+
+<div class="footer"></div>
 </body>
 </html>

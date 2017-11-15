@@ -12,35 +12,37 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
-<div class="header"><?php include("header.php"); ?></div><h1>OpenSubtitles2011</h1><p>A collection of documents from <a href="http://www.opensubtitles.org/">http://www.opensubtitles.org/</a>.<br/><b>IMPORTANT:</b> If you use the OpenSubtitle corpus: <br/>Please, add a link to <b>http://www.opensubtitles.org/</b> to your website and to your reports and publications produced with the data! I promised this when I got the data from the providers of that website!</p> <p>
+<div class="header"><?php include("header.php"); ?></div><h1>OpenSubtitles2011</h1>
 
+<p>A collection of documents from <a href="http://www.opensubtitles.org/">http://www.opensubtitles.org/</a>.<br/>
+<a href="OpenSubtitles2018.php">Look at the latest package of OpenSubtitles2018!</a>
+</p>
 
-<p />54 languages, 1,025 bitexts<br />total number of files: 1,390,584<br />total number of tokens: 8.31G<br />total number of sentence fragments: 1.22G<br /><p />Please <a href="http://opus.lingfil.uu.se/RANLP_V.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J&ouml;rg Tiedemann, 2009, <a href="http://stp.lingfil.uu.se/~joerg/published/ranlp-V.pdf">News from OPUS - A Collection of Multilingual Parallel Corpora with Tools and Interfaces</a>. In N. Nicolov and K. Bontcheva and G. Angelova and R. Mitkov (eds.) Recent Advances in Natural Language Processing (vol V), pages 237-248, John Benjamins, Amsterdam/Philadelphia<br/>
+<p>
+<b>IMPORTANT:</b> If you use the OpenSubtitle corpus: <br/>Please, add a link to <b>http://www.opensubtitles.org/</b> to your website and to your reports and publications produced with the data! I promised this when I got the data from the providers of that website!</p>
 
+54 languages, 1,025 bitexts<br />total number of files: 1,390,584<br />total number of tokens: 8.31G<br />total number of sentence fragments: 1.22G<br /><p />Please <a href="http://opus.lingfil.uu.se/RANLP_V.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J&ouml;rg Tiedemann, 2009, <a href="http://stp.lingfil.uu.se/~joerg/published/ranlp-V.pdf">News from OPUS - A Collection of Multilingual Parallel Corpora with Tools and Interfaces</a>. In N. Nicolov and K. Bontcheva and G. Angelova and R. Mitkov (eds.) Recent Advances in Natural Language Processing (vol V), pages 237-248, John Benjamins, Amsterdam/Philadelphia<br/>
 
+<!--
 <h3>News</h3>
 
 <ul>
     <li><b>2013-08-22:</b> <a href="OpenSubtitles2012.php">A new version of the subtitle corpus is available</a></li>
     <li><b>2012-03-05:</b> <a href="OpenSubtitles2011/hunalign">Hunalign-based sentence alignment</a> is finished now!</li>
     <li><b>2012-02-04:</b> <a href="OpenSubtitles2011/srtalign">Synchronized time-based sentence alignment</a> is finished now! Files in Moses format (plain text) and TMX format are based on these alignemts!</li>
-<!--    <li><b>2012-02-01:</b> Untokenized monolingual files are available <a href="OpenSubtitles2011/monolingual">here</a> (look for the files *.raw.??.gz)</li> -->
+    <li><b>2012-02-01:</b> Untokenized monolingual files are available <a href="OpenSubtitles2011/monolingual">here</a> (look for the files *.raw.??.gz)</li>
 </ul>
+-->
 
 <h3>Download</h3>
 
-
-
+<!--
     Resources:
-
     <ul>
-<!--
+
 <li>Complete download (XML): <a href="download.php?f=OpenSubtitles2011/OpenSubtitles2011.tar.gz">OpenSubtitles2011.tar.gz</a> (37G)</li>
--->
-<!--
 <li><a rel="nofollow" href="http://opus.lingfil.uu.se/OpenSubtitles2011/movies.txt">A list of movie names and their corresponding IDs (= 2nd subdir)</a>
 </li>
--->
 <li><a rel="nofollow" href="http://opus.lingfil.uu.se/OpenSubtitles2011/wordalign/truecaser/">True caser models for all languages in OpenSubtitles2011</a>
 
 </li><li><a rel="nofollow" href="http://opus.lingfil.uu.se/OpenSubtitles2011/wordalign/lm/">Monolingual data for all languages in OpenSubtitles2011</a>
@@ -48,7 +50,7 @@
     <li><a rel="nofollow" href="http://opus.lingfil.uu.se/OpenSubtitles2011/overlaps">Overlaps in the corpus (Estonian only)</a>; detected by <a href="http://corporal.sourceforge.net/">CorporAl</a></li><li><a rel="nofollow" href="http://opus.lingfil.uu.se/OpenSubtitles2011/srtalign">Synchronized time-based sentence alignment</a> (<a rel="nofollow" href="http://opus.lingfil.uu.se/OpenSubtitles2011/srtalign-nosync">without synchronization</a>)</li>
    <li><a rel="nofollow" href="http://opus.lingfil.uu.se/OpenSubtitles2011/hunalign">Sentence alignment based on hunalign</a></li>
 </ul>
-
+-->
 
 
 
@@ -1988,7 +1990,10 @@
 <th>zh</th>
 <th></th></tr>
 </table>
-</div><p /><h3>Statistics and TMX/Moses Downloads</h3>Number of files, tokens, and sentences per language (including non-parallel ones if they exist)<br />Number of sentence alignment units per language pair<p />Upper-right triangle: download translation memory files (TMX)<br />Bottom-left triangle: download plain text files (MOSES/GIZA++)<div class="counts"><table><caption></caption> <tr><th>language</th> <th>files</th> <th>tokens</th> <th>sentences</th><th>ar</th><th>bg</th><th>bs</th><th>ca</th><th>cs</th><th>da</th><th>de</th><th>el</th><th>en</th><th>eo</th><th>es</th><th>et</th><th>eu</th><th>fa</th><th>fi</th><th>fr</th><th>gl</th><th>he</th><th>hr</th><th>hu</th><th>id</th><th>is</th><th>it</th><th>ja</th><th>ka</th><th>kk</th><th>ko</th><th>lb</th><th>lt</th><th>lv</th><th>mk</th><th>ms</th><th>nl</th><th>no</th><th>oc</th><th>pl</th><th>pt</th><th>pt_br</th><th>ro</th><th>ru</th><th>scc</th><th>scr</th><th>si</th><th>sk</th><th>sl</th><th>sq</th><th>sv</th><th>th</th><th>tl</th><th>tr</th><th>uk</th><th>ur</th><th>vi</th><th>zh</th></tr> <tr><th>ar</th><td>22,859</td> <td>111.3M</td> <td>17.2M</td><td></td><td></td><td bgcolor="#e3ffc7"><a rel="nofollow" title='Arabic-Bosnian (610,083 sentence pairs, 6.99M words) - TMX format' href="download.php?f=OpenSubtitles2011/ar-bs.tmx.gz">0.6M</a>
+</div><p />
+
+<!--
+<h3>Statistics and TMX/Moses Downloads</h3>Number of files, tokens, and sentences per language (including non-parallel ones if they exist)<br />Number of sentence alignment units per language pair<p />Upper-right triangle: download translation memory files (TMX)<br />Bottom-left triangle: download plain text files (MOSES/GIZA++)<div class="counts"><table><caption></caption> <tr><th>language</th> <th>files</th> <th>tokens</th> <th>sentences</th><th>ar</th><th>bg</th><th>bs</th><th>ca</th><th>cs</th><th>da</th><th>de</th><th>el</th><th>en</th><th>eo</th><th>es</th><th>et</th><th>eu</th><th>fa</th><th>fi</th><th>fr</th><th>gl</th><th>he</th><th>hr</th><th>hu</th><th>id</th><th>is</th><th>it</th><th>ja</th><th>ka</th><th>kk</th><th>ko</th><th>lb</th><th>lt</th><th>lv</th><th>mk</th><th>ms</th><th>nl</th><th>no</th><th>oc</th><th>pl</th><th>pt</th><th>pt_br</th><th>ro</th><th>ru</th><th>scc</th><th>scr</th><th>si</th><th>sk</th><th>sl</th><th>sq</th><th>sv</th><th>th</th><th>tl</th><th>tr</th><th>uk</th><th>ur</th><th>vi</th><th>zh</th></tr> <tr><th>ar</th><td>22,859</td> <td>111.3M</td> <td>17.2M</td><td></td><td></td><td bgcolor="#e3ffc7"><a rel="nofollow" title='Arabic-Bosnian (610,083 sentence pairs, 6.99M words) - TMX format' href="download.php?f=OpenSubtitles2011/ar-bs.tmx.gz">0.6M</a>
 </td><td bgcolor="#ffdcdb"><a rel="nofollow" title='Arabic-Catalan (8,895 sentence pairs, 98.33k words) - TMX format' href="download.php?f=OpenSubtitles2011/ar-ca.tmx.gz">8.9k</a>
 </td><td bgcolor="#d3ffcb"><a rel="nofollow" title='Arabic-Czech (2,746,452 sentence pairs, 31.33M words) - TMX format' href="download.php?f=OpenSubtitles2011/ar-cs.tmx.gz">2.7M</a>
 </td><td bgcolor="#dfffc6"><a rel="nofollow" title='Arabic-Danish (897,064 sentence pairs, 10.68M words) - TMX format' href="download.php?f=OpenSubtitles2011/ar-da.tmx.gz">0.9M</a>
@@ -4038,6 +4043,8 @@
 </td><td></td><td bgcolor="#ffffe4"><a rel="nofollow" title='Chinese-Turkish (290,617 sentence pairs, 1.73M words) - Moses format' href="download.php?f=OpenSubtitles2011/tr-zh.txt.zip">0.3M</a>
 </td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Chinese-Ukrainian (2,276 sentence pairs, 16.12k words) - Moses format' href="download.php?f=OpenSubtitles2011/uk-zh.txt.zip">2.3k</a>
 </td><td></td><td bgcolor="#ffe9e6"><a rel="nofollow" title='Chinese-Vietnamese (25,503 sentence pairs, 0.23M words) - Moses format' href="download.php?f=OpenSubtitles2011/vi-zh.txt.zip">25.5k</a>
-</td><td></td></tr></table></div><p />Note that TMX files only contain unique translation units and, therefore, the number of aligned units is smaller than for the distributions in Moses and XML format. Moses downloads include all non-empty alignment units including duplicates. Token counts for each language also include duplicate sentences and documents.<p /><hr /><div class="footer"></div>
+</td><td></td></tr></table></div><p />Note that TMX files only contain unique translation units and, therefore, the number of aligned units is smaller than for the distributions in Moses and XML format. Moses downloads include all non-empty alignment units including duplicates. Token counts for each language also include duplicate sentences and documents.<p />
+-->
+<hr /><div class="footer"></div>
 </body>
 </html>

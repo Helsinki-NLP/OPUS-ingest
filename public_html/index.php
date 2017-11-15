@@ -113,7 +113,9 @@
 
         <ul>
           <li><a href="bin/opuscqp.pl">OPUS multilingual search interface</a></li>
+	  <!--
           <li><a href="bin/opusudcqp.pl">OPUS UD-parsed search interface</a></li>
+	  -->
           <li><a href="cwb/Europarl7/frames-cqp.html">Europarl v7 search interface</a></li>
           <li><a href="cwb/Europarl/frames-cqp.html">Europarl v3 search interface</a></li>
           <!-- <li><a href="cwb/OpenSubtitles/frames-cqp.html">OpenSubtitles search interface</a></li> -->
@@ -132,21 +134,22 @@
         <ul>
           <li><a href="trac/wiki">OPUS Wiki</a></li>
 	  <li><a href="https://github.com/yonkornilov/opus-api">OPUS API</a> by Yonathan Koren</li>
-          <li><a href="trac/wiki/Tagging%20and%20Parsing">Tools for tagging and parsing</a></li>
-
-          <li><a href="trac/wiki/Tagging%20and%20Parsing"></a><a href="trac/wiki/Tagging%20and%20Parsing"></a><a href="trac/wiki/DownloadTools">Downloads (tools and models)</a></li>
-
-          <li><a href="trac/wiki/Tagging%20and%20Parsing"></a><a href="trac/wiki/Tagging%20and%20Parsing"></a><a href="tools.php">Other annotation and corpus tools</a></li>
-
-          <li>Experimental visualization tool<br>
-          for <a href="svg/malt2svg.php">monolingual</a> and <a href="svg/parallel.php">parallel</a> treebanks (demo)</li>
-
           <li><a href="https://bitbucket.org/tiedemann/uplug">Uplug at bitbucket</a></li>
 
+	  <!--
+	  OBSOLETE OR TOO OLD
           <li>A reliable <a href="https://bitbucket.org/tiedemann/blacklist-classifier">Language Identifier</a></li>
-
 	  <li><a href="https://github.com/AlJohri/OpenSubtitles">Scripts for OpenSubtitles2012/2013</a></li>
+          <li><a href="trac/wiki/Tagging%20and%20Parsing">Tools for tagging and parsing</a></li>
+          <li><a href="trac/wiki/Tagging%20and%20Parsing"></a><a href="trac/wiki/Tagging%20and%20Parsing"></a><a href="trac/wiki/DownloadTools">Downloads (tools and models)</a></li>
+          <li><a href="trac/wiki/Tagging%20and%20Parsing"></a><a href="trac/wiki/Tagging%20and%20Parsing"></a><a href="tools.php">Other annotation and corpus tools</a></li>
+	  -->
 
+	  <!--
+	  NEEDS MORE DEVELOPMENT
+          <li>Experimental visualization tool<br>
+          for <a href="svg/malt2svg.php">monolingual</a> and <a href="svg/parallel.php">parallel</a> treebanks (demo)</li>
+	  -->
         </ul>
 
 
