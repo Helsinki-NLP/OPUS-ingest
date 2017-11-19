@@ -22,7 +22,7 @@ A new version of the corpus is in progress! All files will gradually be replaced
 <hr>
 
 
-<p>48 languages, 760 bitexts<br>total number of files: 128,031<br>total number of tokens: 2.92G<br>total number of sentence fragments: 172.60M<br><p>Please <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J&ouml;rg Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)
+<p>48 languages, 760 bitexts<br>total number of files: 128,031<br>total number of tokens: 2.92G<br>total number of sentence fragments: 172.60M<br><p>Please <a href="http://opus.nlpl.eu/LREC2012.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J&ouml;rg Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)
 <br/>
 <br/>
 Source: <a href="http://bookshop.europa.eu">http://bookshop.europa.eu</a>. Thanks to <a href="http://www.tilde.com">Tilde</a> for collecting the data, within the EU ICT PSP project <a href="https://www.letsmt.eu/">LetsMT!</a>

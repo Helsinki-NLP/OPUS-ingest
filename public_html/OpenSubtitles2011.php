@@ -21,7 +21,7 @@
 <p>
 <b>IMPORTANT:</b> If you use the OpenSubtitle corpus: <br/>Please, add a link to <b>http://www.opensubtitles.org/</b> to your website and to your reports and publications produced with the data! I promised this when I got the data from the providers of that website!</p>
 
-54 languages, 1,025 bitexts<br />total number of files: 1,390,584<br />total number of tokens: 8.31G<br />total number of sentence fragments: 1.22G<br /><p />Please <a href="http://opus.lingfil.uu.se/RANLP_V.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J&ouml;rg Tiedemann, 2009, <a href="http://stp.lingfil.uu.se/~joerg/published/ranlp-V.pdf">News from OPUS - A Collection of Multilingual Parallel Corpora with Tools and Interfaces</a>. In N. Nicolov and K. Bontcheva and G. Angelova and R. Mitkov (eds.) Recent Advances in Natural Language Processing (vol V), pages 237-248, John Benjamins, Amsterdam/Philadelphia<br/>
+54 languages, 1,025 bitexts<br />total number of files: 1,390,584<br />total number of tokens: 8.31G<br />total number of sentence fragments: 1.22G<br /><p />Please <a href="http://opus.nlpl.eu/RANLP_V.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J&ouml;rg Tiedemann, 2009, <a href="http://stp.lingfil.uu.se/~joerg/published/ranlp-V.pdf">News from OPUS - A Collection of Multilingual Parallel Corpora with Tools and Interfaces</a>. In N. Nicolov and K. Bontcheva and G. Angelova and R. Mitkov (eds.) Recent Advances in Natural Language Processing (vol V), pages 237-248, John Benjamins, Amsterdam/Philadelphia<br/>
 
 <!--
 <h3>News</h3>
@@ -41,14 +41,14 @@
     <ul>
 
 <li>Complete download (XML): <a href="download.php?f=OpenSubtitles2011/OpenSubtitles2011.tar.gz">OpenSubtitles2011.tar.gz</a> (37G)</li>
-<li><a rel="nofollow" href="http://opus.lingfil.uu.se/OpenSubtitles2011/movies.txt">A list of movie names and their corresponding IDs (= 2nd subdir)</a>
+<li><a rel="nofollow" href="http://opus.nlpl.eu/OpenSubtitles2011/movies.txt">A list of movie names and their corresponding IDs (= 2nd subdir)</a>
 </li>
-<li><a rel="nofollow" href="http://opus.lingfil.uu.se/OpenSubtitles2011/wordalign/truecaser/">True caser models for all languages in OpenSubtitles2011</a>
+<li><a rel="nofollow" href="http://opus.nlpl.eu/OpenSubtitles2011/wordalign/truecaser/">True caser models for all languages in OpenSubtitles2011</a>
 
-</li><li><a rel="nofollow" href="http://opus.lingfil.uu.se/OpenSubtitles2011/wordalign/lm/">Monolingual data for all languages in OpenSubtitles2011</a>
+</li><li><a rel="nofollow" href="http://opus.nlpl.eu/OpenSubtitles2011/wordalign/lm/">Monolingual data for all languages in OpenSubtitles2011</a>
 </li>
-    <li><a rel="nofollow" href="http://opus.lingfil.uu.se/OpenSubtitles2011/overlaps">Overlaps in the corpus (Estonian only)</a>; detected by <a href="http://corporal.sourceforge.net/">CorporAl</a></li><li><a rel="nofollow" href="http://opus.lingfil.uu.se/OpenSubtitles2011/srtalign">Synchronized time-based sentence alignment</a> (<a rel="nofollow" href="http://opus.lingfil.uu.se/OpenSubtitles2011/srtalign-nosync">without synchronization</a>)</li>
-   <li><a rel="nofollow" href="http://opus.lingfil.uu.se/OpenSubtitles2011/hunalign">Sentence alignment based on hunalign</a></li>
+    <li><a rel="nofollow" href="http://opus.nlpl.eu/OpenSubtitles2011/overlaps">Overlaps in the corpus (Estonian only)</a>; detected by <a href="http://corporal.sourceforge.net/">CorporAl</a></li><li><a rel="nofollow" href="http://opus.lingfil.uu.se/OpenSubtitles2011/srtalign">Synchronized time-based sentence alignment</a> (<a rel="nofollow" href="http://opus.lingfil.uu.se/OpenSubtitles2011/srtalign-nosync">without synchronization</a>)</li>
+   <li><a rel="nofollow" href="http://opus.nlpl.eu/OpenSubtitles2011/hunalign">Sentence alignment based on hunalign</a></li>
 </ul>
 -->
 

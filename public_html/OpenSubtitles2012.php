@@ -22,7 +22,7 @@
 The previous release is still available <a href="OpenSubtitles2011.php">here</a>.
 </p>
 
-<p>55 languages, 1,076 bitexts<br>total number of files: 1,415,879<br>total number of tokens: 8.48G<br>total number of sentence fragments: 1.24G<br><p>Please <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J&ouml;rg Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)<br/>
+<p>55 languages, 1,076 bitexts<br>total number of files: 1,415,879<br>total number of tokens: 8.48G<br>total number of sentence fragments: 1.24G<br><p>Please <a href="http://opus.nlpl.eu/LREC2012.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J&ouml;rg Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)<br/>
 
 <h3>News</h3>
 

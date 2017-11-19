@@ -11,7 +11,7 @@
 <body>
 <div class="header"><?php include("header.php"); ?></div><h1>EUbookshop</h1>Corpus of documents from the EU bookshop<p>48 languages, 794 bitexts<br>total number of files: 135,785<br>total number of tokens: 3.60G<br>total number of sentence fragments: 173.20M<br>
 
-<p>Please <a href="http://opus.lingfil.uu.se/eubookshop-lrec2014.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> 
+<p>Please <a href="http://opus.nlpl.eu/eubookshop-lrec2014.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> 
   Raivis Skadi&ncedil;&#X0161;, Jörg Tiedemann, Roberts Rozis and Daiga Deksne (2014): <i>Billions of Parallel Words for Free</i>, 
     In Proceedings of <a href="http://lrec2014.lrec-conf.org/">LREC 2014</a>, Reykjavik, Iceland [<a href="eubookshop-lrec2014.txt">bib</a>] [<a href="eubookshop-lrec2014.pdf">pdf</a>]<br/>
 

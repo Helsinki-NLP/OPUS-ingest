@@ -21,13 +21,13 @@ if ($file = validate_filename()){
     // otherwise: download from the old OPUS server
     // TODO: change this to the new download location!
     else{
-      header("Location: http://opus.lingfil.uu.se/".$file);
+      header("Location: http://opus.nlpl.eu/".$file);
     }
 
 // not a valid filename? go back to home page
 // TODO: show some kind of error message? Error page?
 } else{
-    // header("Location: http://opus.lingfil.uu.se");
+    // header("Location: http://opus.nlpl.eu");
     header("Location: /index.php");
 }
 

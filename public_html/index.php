@@ -187,89 +187,84 @@
         <p><b>Sub-corpora (downloads &amp; infos):</b><br></p>
 
         <ul>
-          <li><a href="Books.php">Books</a> - A collection of translated literature (<a href="download.php?f=Books/Books2014-07-30.tar.gz" rel="nofollow">DOGC2014-07-17.tar.gz</a> - 236 MB)</li>
+          <li><a href="Books.php">Books</a> - A collection of translated literature (<a href="download.php?f=Books.tar.gz" rel="nofollow">Books.tar.gz</a> - 535 MB)</li>
 
           <li><a href="DGT.php">DGT</a> - A collection of EU Translation Memories provided by the JRC</li>
 
-          <li><a href="DOGC.php">DOGC</a> - Documents from the Catalan Goverment (<a href="download.php?f=DOGC/DOGC2014-07-17.tar.gz" rel="nofollow">DOGC2014-07-17.tar.gz</a> - 702 MB)</li>
+          <li><a href="DOGC.php">DOGC</a> - Documents from the Catalan Goverment (<a href="download.php?f=DOGC.tar.gz" rel="nofollow">DOGC.tar.gz</a> - 2.8 GB)</li>
 
-          <li><a href="ECB.php">ECB - European Central Bank corpus</a></li>
+          <li><a href="ECB.php">ECB - European Central Bank corpus</a> (<a href="download.php?f=ECB.tar.gz" rel="nofollow">ECB.tar.gz</a> - 3.0 GB)</li>
 
-          <li><a href="EMEA.php">EMEA - European Medicines Agency documents</a> (<a href="download.php?f=EMEA/EMEA0.3.tar.gz" rel="nofollow">EMEA0.3.tar.gz</a> - 5.0 GB)</li>
+          <li><a href="EMEA.php">EMEA - European Medicines Agency documents</a> (<a href="download.php?f=EMEA.tar.gz" rel="nofollow">EMEA.tar.gz</a> - 13.0 GB)</li>
 
-          <li><a href="EUbookshop.php">The EU bookshop corpus</a> (<a href="http://opus.lingfil.uu.se/download.php?f=EUbookshop/EUbookshop0.2.tar.gz" rel="nofollow">EUbookshop/EUbookshop0.2.tar.gz</a> - 33 GB)</li>
+          <li><a href="EUbookshop.php">The EU bookshop corpus</a> (<a href="http://opus.nlpl.eu/download.php?f=EUbookshop.tar.gz" rel="nofollow">EUbookshop.tar.gz</a> - 42 GB)</li>
 
-          <li><a href="EUconst.php">EUconst - The European constitution</a> (<a href="download.php?f=EUconst/EUconst0.1.tar.gz" rel="nofollow">EUconst0.1.tar.gz</a> - 67 MB)</li>
+          <li><a href="EUconst.php">EUconst - The European constitution</a> (<a href="download.php?f=EUconst/EUconst.tar.gz" rel="nofollow">EUconst.tar.gz</a> - 82` MB)</li>
 
-          <li><a href="Europarl.php">EUROPARL v7 - European Parliament Proceedings</a> (<a href="download.php?f=Europarl/Europarlv7.tar.gz" rel="nofollow">Europarlv7.tar.gz</a> - 8.4 GB)</li>
+          <li><a href="Europarl.php">EUROPARL v7 - European Parliament Proceedings</a> (<a href="download.php?f=Europarl.tar.gz" rel="nofollow">Europarl.tar.gz</a> - 20 GB)</li>
 
-          <li><a href="Europarl3.php">EUROPARL - European Parliament Proceedings</a> (<a href="download.php?f=Europarl3/Europarl3.tar.gz" rel="nofollow">Europarl3.tar.gz</a> - 3.6 GB)</li>
+<!--
+          <li><a href="Europarl3.php">EUROPARL - European Parliament Proceedings</a> (<a href="download.php?f=Europarl3.tar.gz" rel="nofollow">Europarl3.tar.gz</a> - 3.6 GB)</li>
+-->
+          <li><a href="GNOME.php">GNOME</a> - GNOME localization files (<a href="download.php?f=GNOME.tar.gz" rel="nofollow">GNOME.tar.gz</a> - 9 GB)</li>
 
-          <li><a href="GNOME.php">GNOME</a> - GNOME localization files (<a href="download.php?f=GNOME/GNOME2014-08-20.tar.gz" rel="nofollow">GNOME2014-08-20.tar.gz</a> - 9 GB)</li>
+          <li><a href="/GlobalVoices.php">Global Voices</a> - News stories in various languages (<a href="http://opus.nlpl.eu/download.php?f=GlobalVoices.tar.gz" rel="nofollow">GlobalVoices.tar.gz</a> - 1.2 GB)</li>
 
-          <li><a href="/GlobalVoices.php">Global Voices</a> - News stories in various languages (<a href="http://opus.lingfil.uu.se/download.php?f=GlobalVoices/GlobalVoices2015.tar.gz" rel="nofollow">GlobalVoices2015.tar.gz</a> - 1.1 GB)</li>
+          <li><a href="hrenWaC.php">The Croatian - English WaC corpus</a> (<a href="download.php?f=hrenWaC.tar.gz" rel="nofollow">hrenWaC.tar.gz</a> - 59 MB)</li>
 
-          <li><a href="hrenWaC.php">The Croatian - English WaC corpus</a> (<a href="download.php?f=hrenWaC/hrenWaC1.tar.gz" rel="nofollow">hrenWaC1.tar.gz</a> - 48 MB)</li>
+          <li><a href="http://opus.nlpl.eu/JRC-Acquis.php">JRC-Acquis- legislative EU texts</a> (<a href="download.php?f=JRC-Acquis.tar.gz" rel="nofollow">JRC-Acquis.tar.gz</a> - 11 GB)</li>
 
-          <li><a href="http://opus.lingfil.uu.se/JRC-Acquis.php">JRC-Acquis- legislative EU texts</a></li>
-          <li><a href="KDE4.php">KDE4 - KDE4 localization files (v.2)</a> (<a href="download.php?f=KDE4/KDE4.tar.gz" rel="nofollow">KDE4.tar.gz</a> - 1.4 GB)</li>
+          <li><a href="KDE4.php">KDE4 - KDE4 localization files (v.2)</a> (<a href="download.php?f=KDE4.tar.gz" rel="nofollow">KDE4.tar.gz</a> - 1.5 GB)</li>
+          <li><a href="KDEdoc.php">KDEdoc - the KDE manual corpus</a> ( <a href="download.php?f=KDEdoc.tar.gz" rel="nofollow">KDEdoc.tar.gz</a> - 45 MB)</li>
 
-          <li><a href="KDEdoc.php">KDEdoc - the KDE manual corpus</a> ( <a href="download.php?f=KDEdoc/KDEdoc.tar.gz" rel="nofollow">KDEdoc.tar.gz</a> - 35 MB)</li>
+          <li><a href="MBS.php">MBS - Belgisch Staatsblad corpus</a> (<a href="download.php?f=MBS.tar.gz" rel="nofollow">MBS.tar.gz</a> - 1.5 GB)</li>
 
-          <li><a href="MBS.php">MBS - Belgisch Staatsblad corpus</a></li>
+          <li><a href="MultiUN.php">MultiUN</a> - Translated UN documents (<a href="http://opus.nlpl.eu/download.php?f=MultiUN.tar.gz">MultiUN.tar.gz</a> - 27 GB)</li>
 
-          <li><a href="MultiUN.php">MultiUN</a> - Translated UN documents <!-- (<a href="http://opus.lingfil.uu.se/download.php?f=MultiUN/MultiUN1.tar.gz">MultiUN1.tar.gz</a> - 25 GB) --></li>
-
-          <li><a href="/News-Commentary.php">News Commentary</a> (<a href="download.php?f=News-Commentary/News-Commentary9.tar.gz" rel="nofollow">News-Commentary9.tar.gz</a> - 2.2 GB)</li>
-
-          <li><a href="/News-Commentary11.php">News Commentary</a> (<a href="http://opus.lingfil.uu.se/download.php?f=News-Commentary11/News-Commentary11.tar.gz" rel="nofollow">News-Commentary11.tar.gz</a> - 741 MB)</li>
-
-          <li><a href="OpenOffice.php">OO - the OpenOffice.org corpus</a> (<a href="download.php?f=OpenOffice/OpenOffice.tar.gz" rel="nofollow">OpenOffice.tar.gz</a> - 34 MB)</li>
-
-          <li><a href="OfisPublik.php">OfisPublik</a> - Breton - French parallel texts (<a href="http://opus.lingfil.uu.se/download.php?f=OfisPublik/OfisPublik0.1.tar.gz" rel="nofollow">OfisPublik0.1.tar.gz</a> - 19MB)</li>
-
-          <li><a href="OpenOffice3.php">OpenOffice.org 3 corpus</a></li>
-
-          <li><a href="OpenSubtitles.php">OpenSubtitles</a> - the opensubtitles.org corpus <!--
-          (<a href="download.php?f=OpenSubtitles/OpenSubtitles.tar.gz"
-          rel="nofollow">OpenSubtitles.tar.gz</a> - 1.3 GB) --></li>
-
-          <li><a href="OpenSubtitles_v2.php">OpenSubtitles2011</a> - opensubtitles.org 2011 <!-- (<a href="http://opus.lingfil.uu.se/download.php?f=OpenSubtitles2011/OpenSubtitles2011.tar.gz">OpenSubtitles2011.tar.gz</a> - 37 GB)--></li>
-
-          <li><a href="OpenSubtitles2012.php">OpenSubtitles2012</a> - opensubtitles.org 2012 <!--(<a href="http://opus.lingfil.uu.se/download.php?f=OpenSubtitles2012/OpenSubtitles2012.tar.gz">OpenSubtitles2012.tar.gz</a> - 123 GB)--></li>
-
-          <li><a href="OpenSubtitles2013.php">OpenSubtitles2013</a> - opensubtitles.org 2013 (extending OpenSubtitles2012) <!--(<a href="http://opus.lingfil.uu.se/download.php?f=OpenSubtitles2012/OpenSubtitles2012.tar.gz">OpenSubtitles2012.tar.gz</a> - 123 GB)--></li>
-          <li><a href="OpenSubtitles2016.php">OpenSubtitles2016</a> - opensubtitles.org 2016 (including all previous data files)</li>
-          <li><a href="OpenSubtitles2018.php">OpenSubtitles2018</a> - opensubtitles.org 2018 (including all previous data files)</li>
+          <li><a href="/News-Commentary11.php">News Commentary</a>, <a href="/News-Commentary.php">v9</a> (<a href="http://opus.nlpl.eu/download.php?f=News-Commentary11.tar.gz" rel="nofollow">News-Commentary11.tar.gz</a> - 897 MB)</li>
 
 
-          <li><a href="PHP.php">PHP - the PHP manual corpus</a> ( <a href="download.php?f=PHP/PHP.tar.gz" rel="nofollow">PHP.tar.gz</a> - 172 MB)</li>
+          <li><a href="OfisPublik.php">OfisPublik</a> - Breton - French parallel texts (<a href="http://opus.nlpl.eu/download.php?f=OfisPublik.tar.gz" rel="nofollow">OfisPublik.tar.gz</a> - 23MB)</li>
+
+          <li><a href="OpenOffice.php">OO - the OpenOffice.org corpus</a></li>
+          <li><a href="OpenOffice3.php">OpenOffice.org 3 corpus</a> (<a href="download.php?f=OpenOffice3.tar.gz" rel="nofollow">OpenOffice3.tar.gz</a> - 255 MB)</li>
+
+          <li><a href="OpenSubtitles.php">OpenSubtitles</a> - the opensubtitles.org corpus (<a href="download.php?f=OpenSubtitles.tar.gz" rel="nofollow">OpenSubtitles.tar.gz</a> - 1.9 GB)</li>
+          <li><a href="OpenSubtitles2011.php">OpenSubtitles2011</a>, <a href="OpenSubtitles2012.php">OpenSubtitles2012</a>, <a href="OpenSubtitles2013.php">OpenSubtitles2013</a></li>
+          <li><a href="OpenSubtitles2016.php">OpenSubtitles2016</a> - snapshot from 2016</li>
+          <li><a href="OpenSubtitles2018.php">OpenSubtitles2018</a> - new complete version</li>
+
+
+          <li><a href="PHP.php">PHP - the PHP manual corpus</a> ( <a href="download.php?f=PHP.tar.gz" rel="nofollow">PHP.tar.gz</a> - 206 MB)</li>
+
 	  <li><a href="ParCor">ParCor - A Parallel Pronoun-Coreference Corpus</a></li>
+
           <li><a href="RF.php">Regeringsf&ouml;rklaringen - a tiny example corpus</a></li>
 
-          <li><a href="SETIMES.php">SETIMES</a> - A parallel corpus of the Balkan languages ( <a href="download.php?f=SETIMES/SETIMES1.tar.gz" rel="nofollow">SETIMES1.tar.gz</a> - 2.3 GB)</li>
+          <li><a href="SETIMES.php">SETIMES</a> - A parallel corpus of the Balkan languages</li>
+          <li><a href="SETIMES2.php">SETIMES2</a> - A new version of SETIMES</li>
 
-          <li><a href="SETIMES2.php">SETIMES2</a> - A new version of SETIMES ( <a href="download.php?f=SETIMES2/SETIMES2.tar.gz" rel="nofollow">SETIMES2.tar.gz</a> - 2.9 GB)</li>
+          <li><a href="SPC.php">SPC - Stockholm Parallel Corpora</a></li>
 
-          <li><a href="SPC.php">SPC - Stockholm Parallel Corpora</a> ( <a href="download.php?f=SPC/SPCv1.tar.gz" rel="nofollow">SPCv1.tar.gz</a> - 3.5 MB)</li><!--      <li><a href="/Tatoeba.php">Tatoeba</a> - A DB of translated sentences (<a href="download.php?f=TedTalks/Tatoeba2013-01-13.tar.gz">Tatoeba2013-01-13.tar.gz</a> - 124MB MB)</li> -->
+          <li><a href="/Tatoeba.php">Tatoeba</a> - A DB of translated sentences (<a href="download.php?f=Tatoeba.tar.gz" rel="nofollow">Tatoeba.tar.gz</a> - 287MB MB)</li>
 
-          <li><a href="/Tatoeba.php">Tatoeba</a> - A DB of translated sentences (<a href="download.php?f=Tatoeba/Tatoeba2014-07-28.tar.gz" rel="nofollow">Tatoeba2014-07-28.tar.gz</a> - 262MB MB)</li>
+          <li><a href="/TedTalks.php">TedTalks hr-en</a> (<a href="download.php?f=TedTalks.tar.gz" rel="nofollow">TedTalks.tar.gz</a> - 32 MB)</li>
 
-          <li><a href="/TedTalks.php">TedTalks hr-en</a> (<a href="download.php?f=TedTalks/TedTalks0.1.tar.gz" rel="nofollow">TedTalks0.1.tar.gz</a> - 26 MB)</li>
+          <li><a href="/TED2013.php">TED Talks 2013</a> (<a href="download.php?f=TED2013.tar.gz" rel="nofollow">TED2013.tar.gz</a> - 941 MB)</li>
 
-          <li><a href="/TED2013.php">TED Talks</a> (<a href="download.php?f=TED2013/TED2013v1.tar.gz" rel="nofollow">TED2013v1.tar.gz</a> - 781 MB)</li>
+          <li><a href="Tanzil.php">Tanzil</a> - A collection of Quran translations  (<a href="download.php?f=Tanzil.tar.gz" rel="nofollow">Tanzil.tar.gz</a> - 1.3 GB)</li>
 
-          <li><a href="Tanzil.php">Tanzil</a> - A collection of Quran translations</li>
+          <li><a href="TEP.php">TEP</a> - The Tehran English-Persian subtitle corpus ( <a href="download.php?f=TEP.tar.gz" rel="nofollow">TEP.tar.gz</a> - 69 MB)</li>
 
-          <li><a href="TEP.php">TEP</a> - The Tehran English-Persian subtitle corpus ( <a href="download.php?f=TEP/TEP0.1.tar.gz" rel="nofollow">TEP0.1.tar.gz</a> - 49 MB)</li>
+          <li><a href="Ubuntu.php">Ubuntu</a> - Ubuntu localization files (<a href="download.php?f=Ubuntu.tar.gz" rel="nofollow">Ubuntu.tar.gz</a> - 1.3 GB)</li>
 
-          <li><a href="Ubuntu.php">Ubuntu</a> - Ubuntu localization files (<a href="download.php?f=Ubuntu/Ubuntu14.10.tar.gz" rel="nofollow">Ubuntu14.10.tar.gz</a> - 1.3 GB)</li>
-          <li><a href="UN.php">UN</a> - Translated UN documents (<a href="http://opus.lingfil.uu.se/download.php?f=UN/UN20090831.tar.gz" rel="nofollow">UN20090831.tar.gz</a> - 208MB)</li>
+          <li><a href="UN.php">UN</a> - Translated UN documents (<a href="http://opus.nlpl.eu/download.php?f=UN.tar.gz" rel="nofollow">UN.tar.gz</a> - 209 MB)</li>
 
-          <li><a href="WikiSource.php">WikiSource</a> (small en-sv sample only)</li>
-          <li><a href="Wikipedia.php">Wikipedia</a> - translated sentences from Wikipedia (<a href="http://opus.lingfil.uu.se/download.php?f=Wikipedia/Wikipedia1.0.tar.gz" rel="nofollow">Wikipedia1.0.tar.gz</a> - 7.8GB)</li>
+          <li><a href="Wikipedia.php">Wikipedia</a> - translated sentences from Wikipedia (<a href="http://opus.nlpl.eu/download.php?f=Wikipedia.tar.gz" rel="nofollow">Wikipedia.tar.gz</a> - 7.8GB)</li>
 
-          <li><a href="WMT-News.php">WMT News Test Sets</a> (<a href="http://opus.lingfil.uu.se/download.php?f=WMT-News/WMT-News1.tar.gz" rel="nofollow">WMT-News1.tar.gz</a> - 34MB)</li>
+          <li><a href="WikiSource.php">WikiSource</a> - (small en-sv sample only (<a href="http://opus.nlpl.eu/download.php?f=WikiSource.tar.gz" rel="nofollow">WikiSource.tar.gz</a> - 24 MB)</li>
+
+          <li><a href="WMT-News.php">WMT News Test Sets</a> (<a href="http://opus.nlpl.eu/download.php?f=WMT-News.tar.gz" rel="nofollow">WMT-News.tar.gz</a> - 34MB)</li>
 
 
         </ul><br>
@@ -375,7 +370,7 @@
 
         <td valign="top">A text book on alignment:<br>
         <br>
-        <a href="http://www.morganclaypool.com/doi/abs/10.2200/S00367ED1V01Y201106HLT014"><img border="0" src="http://stp.lingfil.uu.se/~joerg/img/bitextalign" height="200"></a></td>
+        <a href="http://www.morganclaypool.com/doi/abs/10.2200/S00367ED1V01Y201106HLT014"><img border="0" src="/img/bitextalign" height="200"></a></td>
       </tr>
     </table>
   </div><!--
@@ -455,7 +450,7 @@ if (Date.parse(document.lastModified) != 0)
           <a href="https://clustrmaps.com/site/19vsj" title="Visit tracker"><img src="//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=jb3_gRwq0W-55WUXelIQXTVQXy4zDuu5yhp8fuyAEZw" /></a>
         </td>
 <!--
-        <td align="right"><a href="http://www2.clustrmaps.com/counter/maps.php?url=http://opus.lingfil.uu.se" id="clustrMapsLink" name="clustrMapsLink"><img src="http://www2.clustrmaps.com/counter/index2.php?url=http://opus.lingfil.uu.se" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onerror="this.onerror=null; this.src='http://clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://clustrmaps.com';" name="clustrMapsImg"></a></td>
+        <td align="right"><a href="http://www2.clustrmaps.com/counter/maps.php?url=http://opus.nlpl.eu" id="clustrMapsLink" name="clustrMapsLink"><img src="http://www2.clustrmaps.com/counter/index2.php?url=http://opus.lingfil.uu.se" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onerror="this.onerror=null; this.src='http://clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://clustrmaps.com';" name="clustrMapsImg"></a></td>
 -->
       </tr>
     </table>

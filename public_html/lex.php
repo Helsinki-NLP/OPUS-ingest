@@ -68,10 +68,10 @@ foreach ($langs as $l){
 }
 if (count($trgs) == 0){
    if ($lang == 'eng'){
-     array_push($trgs,'dut');
+     array_push($trgs,'dut','ger','ell','spa','fre','ita');
    }
    else{
-     array_push($trgs,'eng');
+     array_push($trgs,'eng','ger','ell','spa','fre','ita');
    }
 }
 
@@ -225,7 +225,7 @@ elseif ($lang == 'eng'){
     echo '<input name="w" value="honey">';
 }
 else{
-    echo '<input name="w" value="h%">';
+    echo '<input name="w">';
 }
 ?>
 <input name="submit" type="submit" value="select">
