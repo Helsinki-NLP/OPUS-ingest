@@ -29,14 +29,14 @@
 <th></th>
 <td><a rel="nofollow" title="Greek-English (sample file)" href="SPC/el-en_sample.html">view</a></td><td></td><th>el</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=SPC/en.tar.gz">en</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'English-Afrikaans' (61.5k links, 0.7M tokens)" href="download.php?f=SPC/xml/af-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (8.3k links, 0.4M tokens)" href="download.php?f=SPC/xml/el-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Afrikaans' (61.5k links, 0.7M tokens)" href="download.php?f=SPC/af-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (8.3k links, 0.4M tokens)" href="download.php?f=SPC/el-en.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="English-Chinese (sample file)" href="SPC/en-zh_sample.html">view</a></td><th><a rel="nofollow" href="SPC/en_parse_sample.html">en</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=SPC/zh.tar.gz">zh</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (2.3k links, 0.1M tokens)" href="download.php?f=SPC/xml/en-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (2.3k links, 0.1M tokens)" href="download.php?f=SPC/en-zh.xml.gz">ces</a></td>
 <th></th>
 <th>zh</th></tr>
 <tr><th></th>

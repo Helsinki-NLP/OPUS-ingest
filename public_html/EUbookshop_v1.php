@@ -96,7 +96,7 @@ Complete download (XML): <a href="download.php?f=EUbookshop/EUbookshop0.1.tar.gz
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Belarusian-English (sample file)" href="EUbookshop/be-en_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>be</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Belarusian-Russian (sample file)" href="EUbookshop/be-ru_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>be</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/bg.tar.gz">bg</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Bulgarian-Arabic' (3 aligned documents, 16 links, 9.0k tokens)" href="download.php?f=EUbookshop/xml/ar-bg.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Bulgarian-Arabic' (3 aligned documents, 16 links, 9.0k tokens)" href="download.php?f=EUbookshop/ar-bg.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td><a rel="nofollow" title="Bulgarian-Bosnian (sample file)" href="EUbookshop/bg-bs_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Catalan (sample file)" href="EUbookshop/bg-ca_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Bulgarian-Czech (sample file)" href="EUbookshop/bg-cs_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Welsh (sample file)" href="EUbookshop/bg-cy_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Danish (sample file)" href="EUbookshop/bg-da_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-German (sample file)" href="EUbookshop/bg-de_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Greek (sample file)" href="EUbookshop/bg-el_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-English (sample file)" href="EUbookshop/bg-en_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Spanish (sample file)" href="EUbookshop/bg-es_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Estonian (sample file)" href="EUbookshop/bg-et_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Finnish (sample file)" href="EUbookshop/bg-fi_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-French (sample file)" href="EUbookshop/bg-fr_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Bulgarian-Irish (sample file)" href="EUbookshop/bg-ga_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Gaelic (sample file)" href="EUbookshop/bg-gd_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Croatian (sample file)" href="EUbookshop/bg-hr_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Hungarian (sample file)" href="EUbookshop/bg-hu_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Icelandic (sample file)" href="EUbookshop/bg-is_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Italian (sample file)" href="EUbookshop/bg-it_sample.html">view</a></td><td><a rel="nofollow" title="Bulgarian-Japanese (sample file)" href="EUbookshop/bg-ja_sample.html">view</a></td><th>bg</th>
@@ -104,14 +104,14 @@ Complete download (XML): <a href="download.php?f=EUbookshop/EUbookshop0.1.tar.gz
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/bs.tar.gz">bs</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Bosnian-Bulgarian' (0.4k links, 16.9k tokens)" href="download.php?f=EUbookshop/xml/bg-bs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Bosnian-Bulgarian' (0.4k links, 16.9k tokens)" href="download.php?f=EUbookshop/bg-bs.xml.gz">ces</a></td>
 <th></th>
 <td></td><td></td><td><a rel="nofollow" title="Bosnian-Czech (sample file)" href="EUbookshop/bs-cs_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Bosnian-German (sample file)" href="EUbookshop/bs-de_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Greek (sample file)" href="EUbookshop/bs-el_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-English (sample file)" href="EUbookshop/bs-en_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Spanish (sample file)" href="EUbookshop/bs-es_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Estonian (sample file)" href="EUbookshop/bs-et_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Finnish (sample file)" href="EUbookshop/bs-fi_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-French (sample file)" href="EUbookshop/bs-fr_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Bosnian-Croatian (sample file)" href="EUbookshop/bs-hr_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Hungarian (sample file)" href="EUbookshop/bs-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Bosnian-Italian (sample file)" href="EUbookshop/bs-it_sample.html">view</a></td><td></td><th>bs</th>
 <td></td><td><a rel="nofollow" title="Bosnian-Lithuanian (sample file)" href="EUbookshop/bs-lt_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Latvian (sample file)" href="EUbookshop/bs-lv_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Macedonian (sample file)" href="EUbookshop/bs-mk_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Bosnian-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/bs-nb_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Dutch (sample file)" href="EUbookshop/bs-nl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Bosnian-Polish (sample file)" href="EUbookshop/bs-pl_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Bosnian-Romanian (sample file)" href="EUbookshop/bs-ro_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Bosnian-sh (sample file)" href="EUbookshop/bs-sh_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Slovak (sample file)" href="EUbookshop/bs-sk_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Slovenian (sample file)" href="EUbookshop/bs-sl_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Albanian (sample file)" href="EUbookshop/bs-sq_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Serbian (sample file)" href="EUbookshop/bs-sr_sample.html">view</a></td><td><a rel="nofollow" title="Bosnian-Swedish (sample file)" href="EUbookshop/bs-sv_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><th>bs</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/ca.tar.gz">ca</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Catalan-Bulgarian' (19 aligned documents, 0.9k links, 51.3k tokens)" href="download.php?f=EUbookshop/xml/bg-ca.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Catalan-Bulgarian' (19 aligned documents, 0.9k links, 51.3k tokens)" href="download.php?f=EUbookshop/bg-ca.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="Catalan-Czech (sample file)" href="EUbookshop/ca-cs_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Welsh (sample file)" href="EUbookshop/ca-cy_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Danish (sample file)" href="EUbookshop/ca-da_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-German (sample file)" href="EUbookshop/ca-de_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Greek (sample file)" href="EUbookshop/ca-el_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-English (sample file)" href="EUbookshop/ca-en_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Spanish (sample file)" href="EUbookshop/ca-es_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Estonian (sample file)" href="EUbookshop/ca-et_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Finnish (sample file)" href="EUbookshop/ca-fi_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-French (sample file)" href="EUbookshop/ca-fr_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Catalan-Irish (sample file)" href="EUbookshop/ca-ga_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Gaelic (sample file)" href="EUbookshop/ca-gd_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Croatian (sample file)" href="EUbookshop/ca-hr_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Hungarian (sample file)" href="EUbookshop/ca-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Catalan-Italian (sample file)" href="EUbookshop/ca-it_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Japanese (sample file)" href="EUbookshop/ca-ja_sample.html">view</a></td><th>ca</th>
@@ -126,11 +126,11 @@ Complete download (XML): <a href="download.php?f=EUbookshop/EUbookshop0.1.tar.gz
 <td></td><td></td><td><a rel="nofollow" title="cn-Danish (sample file)" href="EUbookshop/cn-da_sample.html">view</a></td><td><a rel="nofollow" title="cn-German (sample file)" href="EUbookshop/cn-de_sample.html">view</a></td><td><a rel="nofollow" title="cn-Greek (sample file)" href="EUbookshop/cn-el_sample.html">view</a></td><td><a rel="nofollow" title="cn-English (sample file)" href="EUbookshop/cn-en_sample.html">view</a></td><td><a rel="nofollow" title="cn-Spanish (sample file)" href="EUbookshop/cn-es_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="cn-French (sample file)" href="EUbookshop/cn-fr_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="cn-Italian (sample file)" href="EUbookshop/cn-it_sample.html">view</a></td><td></td><th>cn</th>
 <td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="cn-Dutch (sample file)" href="EUbookshop/cn-nl_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="cn-Portuguese (sample file)" href="EUbookshop/cn-pt_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>cn</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/cs.tar.gz">cs</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-Arabic' (4 aligned documents, 0.1k links, 27.5k tokens)" href="download.php?f=EUbookshop/xml/ar-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-Arabic' (4 aligned documents, 0.1k links, 27.5k tokens)" href="download.php?f=EUbookshop/ar-cs.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-Bulgarian' (703 aligned documents, 0.2M links, 10.5M tokens)" href="download.php?f=EUbookshop/xml/bg-cs.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-Bosnian' (0.4k links, 64.8k tokens)" href="download.php?f=EUbookshop/xml/bs-cs.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Czech-Catalan' (20 aligned documents, 1.7k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/ca-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-Bulgarian' (703 aligned documents, 0.2M links, 10.5M tokens)" href="download.php?f=EUbookshop/bg-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-Bosnian' (0.4k links, 64.8k tokens)" href="download.php?f=EUbookshop/bs-cs.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Czech-Catalan' (20 aligned documents, 1.7k links, 0.1M tokens)" href="download.php?f=EUbookshop/ca-cs.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td><a rel="nofollow" title="Czech-Welsh (sample file)" href="EUbookshop/cs-cy_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Danish (sample file)" href="EUbookshop/cs-da_sample.html">view</a></td><td><a rel="nofollow" title="Czech-German (sample file)" href="EUbookshop/cs-de_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Greek (sample file)" href="EUbookshop/cs-el_sample.html">view</a></td><td><a rel="nofollow" title="Czech-English (sample file)" href="EUbookshop/cs-en_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Spanish (sample file)" href="EUbookshop/cs-es_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Estonian (sample file)" href="EUbookshop/cs-et_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Finnish (sample file)" href="EUbookshop/cs-fi_sample.html">view</a></td><td><a rel="nofollow" title="Czech-French (sample file)" href="EUbookshop/cs-fr_sample.html">view</a></td><td><a rel="nofollow" title="Czech-French (sample file)" href="EUbookshop/cs-fr_BE_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Irish (sample file)" href="EUbookshop/cs-ga_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Gaelic (sample file)" href="EUbookshop/cs-gd_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Croatian (sample file)" href="EUbookshop/cs-hr_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Hungarian (sample file)" href="EUbookshop/cs-hu_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Icelandic (sample file)" href="EUbookshop/cs-is_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Italian (sample file)" href="EUbookshop/cs-it_sample.html">view</a></td><td><a rel="nofollow" title="Czech-Japanese (sample file)" href="EUbookshop/cs-ja_sample.html">view</a></td><th>cs</th>
@@ -138,135 +138,135 @@ Complete download (XML): <a href="download.php?f=EUbookshop/EUbookshop0.1.tar.gz
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/cy.tar.gz">cy</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Welsh-Bulgarian' (12.2k tokens)" href="download.php?f=EUbookshop/xml/bg-cy.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Welsh-Bulgarian' (12.2k tokens)" href="download.php?f=EUbookshop/bg-cy.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Welsh-Catalan' (12.2k tokens)" href="download.php?f=EUbookshop/xml/ca-cy.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Welsh-Catalan' (12.2k tokens)" href="download.php?f=EUbookshop/ca-cy.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Welsh-Czech' (0.6k links, 21.4k tokens)" href="download.php?f=EUbookshop/xml/cs-cy.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Welsh-Czech' (0.6k links, 21.4k tokens)" href="download.php?f=EUbookshop/cs-cy.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Welsh-Danish (sample file)" href="EUbookshop/cy-da_sample.html">view</a></td><td><a rel="nofollow" title="Welsh-German (sample file)" href="EUbookshop/cy-de_sample.html">view</a></td><td><a rel="nofollow" title="Welsh-Greek (sample file)" href="EUbookshop/cy-el_sample.html">view</a></td><td><a rel="nofollow" title="Welsh-English (sample file)" href="EUbookshop/cy-en_sample.html">view</a></td><td><a rel="nofollow" title="Welsh-Spanish (sample file)" href="EUbookshop/cy-es_sample.html">view</a></td><td><a rel="nofollow" title="Welsh-Estonian (sample file)" href="EUbookshop/cy-et_sample.html">view</a></td><td><a rel="nofollow" title="Welsh-Finnish (sample file)" href="EUbookshop/cy-fi_sample.html">view</a></td><td><a rel="nofollow" title="Welsh-French (sample file)" href="EUbookshop/cy-fr_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Welsh-Irish (sample file)" href="EUbookshop/cy-ga_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Welsh-Croatian (sample file)" href="EUbookshop/cy-hr_sample.html">view</a></td><td><a rel="nofollow" title="Welsh-Hungarian (sample file)" href="EUbookshop/cy-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Welsh-Italian (sample file)" href="EUbookshop/cy-it_sample.html">view</a></td><td></td><th>cy</th>
 <td></td><td><a rel="nofollow" title="Welsh-Lithuanian (sample file)" href="EUbookshop/cy-lt_sample.html">view</a></td><td><a rel="nofollow" title="Welsh-Latvian (sample file)" href="EUbookshop/cy-lv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Welsh-Dutch (sample file)" href="EUbookshop/cy-nl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Welsh-Polish (sample file)" href="EUbookshop/cy-pl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Welsh-Portuguese (sample file)" href="EUbookshop/cy-pt_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Welsh-Slovak (sample file)" href="EUbookshop/cy-sk_sample.html">view</a></td><td><a rel="nofollow" title="Welsh-Slovenian (sample file)" href="EUbookshop/cy-sl_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Welsh-Swedish (sample file)" href="EUbookshop/cy-sv_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Welsh-Ukrainian (sample file)" href="EUbookshop/cy-uk_sample.html">view</a></td><td></td><th>cy</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/da.tar.gz">da</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Danish-Arabic' (8 aligned documents, 0.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/ar-da.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Danish-Arabic' (8 aligned documents, 0.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/ar-da.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Danish-Bulgarian' (694 aligned documents, 0.2M links, 10.0M tokens)" href="download.php?f=EUbookshop/xml/bg-da.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Danish-Bulgarian' (694 aligned documents, 0.2M links, 10.0M tokens)" href="download.php?f=EUbookshop/bg-da.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Danish-Catalan' (28 aligned documents, 2.5k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/ca-da.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Danish-cn' (18.7k tokens)" href="download.php?f=EUbookshop/xml/cn-da.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Danish-Czech' (1,107 aligned documents, 0.4M links, 29.1M tokens)" href="download.php?f=EUbookshop/xml/cs-da.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Danish-Welsh' (0.4k links, 21.5k tokens)" href="download.php?f=EUbookshop/xml/cy-da.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Danish-Catalan' (28 aligned documents, 2.5k links, 0.2M tokens)" href="download.php?f=EUbookshop/ca-da.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Danish-cn' (18.7k tokens)" href="download.php?f=EUbookshop/cn-da.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Danish-Czech' (1,107 aligned documents, 0.4M links, 29.1M tokens)" href="download.php?f=EUbookshop/cs-da.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Danish-Welsh' (0.4k links, 21.5k tokens)" href="download.php?f=EUbookshop/cy-da.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Danish-German (sample file)" href="EUbookshop/da-de_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Greek (sample file)" href="EUbookshop/da-el_sample.html">view</a></td><td><a rel="nofollow" title="Danish-English (sample file)" href="EUbookshop/da-en_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Spanish (sample file)" href="EUbookshop/da-es_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Estonian (sample file)" href="EUbookshop/da-et_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Finnish (sample file)" href="EUbookshop/da-fi_sample.html">view</a></td><td><a rel="nofollow" title="Danish-French (sample file)" href="EUbookshop/da-fr_sample.html">view</a></td><td><a rel="nofollow" title="Danish-French (sample file)" href="EUbookshop/da-fr_BE_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Irish (sample file)" href="EUbookshop/da-ga_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Gaelic (sample file)" href="EUbookshop/da-gd_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Croatian (sample file)" href="EUbookshop/da-hr_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Hungarian (sample file)" href="EUbookshop/da-hu_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Icelandic (sample file)" href="EUbookshop/da-is_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Italian (sample file)" href="EUbookshop/da-it_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Japanese (sample file)" href="EUbookshop/da-ja_sample.html">view</a></td><th>da</th>
 <td><a rel="nofollow" title="Danish-Luxembourgish (sample file)" href="EUbookshop/da-lb_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Lithuanian (sample file)" href="EUbookshop/da-lt_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Latvian (sample file)" href="EUbookshop/da-lv_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Macedonian (sample file)" href="EUbookshop/da-mk_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Maltese (sample file)" href="EUbookshop/da-mt_sample.html">view</a></td><td><a rel="nofollow" title="Danish-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/da-nb_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Dutch (sample file)" href="EUbookshop/da-nl_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Dutch (sample file)" href="EUbookshop/da-nl_BE_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Polish (sample file)" href="EUbookshop/da-pl_sample.html">view</a></td><td><a rel="nofollow" title="Danish-po (sample file)" href="EUbookshop/da-po_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Portuguese (sample file)" href="EUbookshop/da-pt_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Romanian (sample file)" href="EUbookshop/da-ro_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Russian (sample file)" href="EUbookshop/da-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Danish-Slovak (sample file)" href="EUbookshop/da-sk_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Slovenian (sample file)" href="EUbookshop/da-sl_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Albanian (sample file)" href="EUbookshop/da-sq_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Serbian (sample file)" href="EUbookshop/da-sr_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Swedish (sample file)" href="EUbookshop/da-sv_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Swahili (sample file)" href="EUbookshop/da-sw_sample.html">view</a></td><td><a rel="nofollow" title="Danish-tc (sample file)" href="EUbookshop/da-tc_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Danish-Ukrainian (sample file)" href="EUbookshop/da-uk_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Chinese (sample file)" href="EUbookshop/da-zh_sample.html">view</a></td><th>da</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/de.tar.gz">de</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'German-Arabic' (10 aligned documents, 0.2k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/ar-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Arabic' (10 aligned documents, 0.2k links, 0.1M tokens)" href="download.php?f=EUbookshop/ar-de.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Bulgarian' (725 aligned documents, 0.2M links, 10.4M tokens)" href="download.php?f=EUbookshop/xml/bg-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Bosnian' (0.4k links, 68.3k tokens)" href="download.php?f=EUbookshop/xml/bs-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Catalan' (30 aligned documents, 2.6k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/ca-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-cn' (20.6k tokens)" href="download.php?f=EUbookshop/xml/cn-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Czech' (1,153 aligned documents, 0.5M links, 31.1M tokens)" href="download.php?f=EUbookshop/xml/cs-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Welsh' (0.6k links, 22.2k tokens)" href="download.php?f=EUbookshop/xml/cy-de.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'German-Danish' (6,880 aligned documents, 5.2M links, 405.4M tokens)" href="download.php?f=EUbookshop/xml/da-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Bulgarian' (725 aligned documents, 0.2M links, 10.4M tokens)" href="download.php?f=EUbookshop/bg-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Bosnian' (0.4k links, 68.3k tokens)" href="download.php?f=EUbookshop/bs-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Catalan' (30 aligned documents, 2.6k links, 0.2M tokens)" href="download.php?f=EUbookshop/ca-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-cn' (20.6k tokens)" href="download.php?f=EUbookshop/cn-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Czech' (1,153 aligned documents, 0.5M links, 31.1M tokens)" href="download.php?f=EUbookshop/cs-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Welsh' (0.6k links, 22.2k tokens)" href="download.php?f=EUbookshop/cy-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Danish' (6,880 aligned documents, 5.2M links, 405.4M tokens)" href="download.php?f=EUbookshop/da-de.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="German-Greek (sample file)" href="EUbookshop/de-el_sample.html">view</a></td><td><a rel="nofollow" title="German-English (sample file)" href="EUbookshop/de-en_sample.html">view</a></td><td><a rel="nofollow" title="German-Spanish (sample file)" href="EUbookshop/de-es_sample.html">view</a></td><td><a rel="nofollow" title="German-Estonian (sample file)" href="EUbookshop/de-et_sample.html">view</a></td><td><a rel="nofollow" title="German-Finnish (sample file)" href="EUbookshop/de-fi_sample.html">view</a></td><td><a rel="nofollow" title="German-French (sample file)" href="EUbookshop/de-fr_sample.html">view</a></td><td><a rel="nofollow" title="German-French (sample file)" href="EUbookshop/de-fr_BE_sample.html">view</a></td><td><a rel="nofollow" title="German-Irish (sample file)" href="EUbookshop/de-ga_sample.html">view</a></td><td><a rel="nofollow" title="German-Gaelic (sample file)" href="EUbookshop/de-gd_sample.html">view</a></td><td><a rel="nofollow" title="German-Croatian (sample file)" href="EUbookshop/de-hr_sample.html">view</a></td><td><a rel="nofollow" title="German-Hungarian (sample file)" href="EUbookshop/de-hu_sample.html">view</a></td><td><a rel="nofollow" title="German-Icelandic (sample file)" href="EUbookshop/de-is_sample.html">view</a></td><td><a rel="nofollow" title="German-Italian (sample file)" href="EUbookshop/de-it_sample.html">view</a></td><td><a rel="nofollow" title="German-Japanese (sample file)" href="EUbookshop/de-ja_sample.html">view</a></td><th>de</th>
 <td><a rel="nofollow" title="German-Luxembourgish (sample file)" href="EUbookshop/de-lb_sample.html">view</a></td><td><a rel="nofollow" title="German-Lithuanian (sample file)" href="EUbookshop/de-lt_sample.html">view</a></td><td><a rel="nofollow" title="German-Latvian (sample file)" href="EUbookshop/de-lv_sample.html">view</a></td><td><a rel="nofollow" title="German-Macedonian (sample file)" href="EUbookshop/de-mk_sample.html">view</a></td><td><a rel="nofollow" title="German-Maltese (sample file)" href="EUbookshop/de-mt_sample.html">view</a></td><td><a rel="nofollow" title="German-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/de-nb_sample.html">view</a></td><td><a rel="nofollow" title="German-Dutch (sample file)" href="EUbookshop/de-nl_sample.html">view</a></td><td><a rel="nofollow" title="German-Dutch (sample file)" href="EUbookshop/de-nl_BE_sample.html">view</a></td><td><a rel="nofollow" title="German-Polish (sample file)" href="EUbookshop/de-pl_sample.html">view</a></td><td><a rel="nofollow" title="German-po (sample file)" href="EUbookshop/de-po_sample.html">view</a></td><td><a rel="nofollow" title="German-Portuguese (sample file)" href="EUbookshop/de-pt_sample.html">view</a></td><td><a rel="nofollow" title="German-Romanian (sample file)" href="EUbookshop/de-ro_sample.html">view</a></td><td><a rel="nofollow" title="German-Russian (sample file)" href="EUbookshop/de-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="German-Slovak (sample file)" href="EUbookshop/de-sk_sample.html">view</a></td><td><a rel="nofollow" title="German-Slovenian (sample file)" href="EUbookshop/de-sl_sample.html">view</a></td><td><a rel="nofollow" title="German-Albanian (sample file)" href="EUbookshop/de-sq_sample.html">view</a></td><td><a rel="nofollow" title="German-Serbian (sample file)" href="EUbookshop/de-sr_sample.html">view</a></td><td><a rel="nofollow" title="German-Swedish (sample file)" href="EUbookshop/de-sv_sample.html">view</a></td><td><a rel="nofollow" title="German-Swahili (sample file)" href="EUbookshop/de-sw_sample.html">view</a></td><td><a rel="nofollow" title="German-tc (sample file)" href="EUbookshop/de-tc_sample.html">view</a></td><td></td><td><a rel="nofollow" title="German-Ukrainian (sample file)" href="EUbookshop/de-uk_sample.html">view</a></td><td><a rel="nofollow" title="German-Chinese (sample file)" href="EUbookshop/de-zh_sample.html">view</a></td><th>de</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/el.tar.gz">el</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Arabic' (5 aligned documents, 0.1k links, 14.8k tokens)" href="download.php?f=EUbookshop/xml/ar-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Arabic' (5 aligned documents, 0.1k links, 14.8k tokens)" href="download.php?f=EUbookshop/ar-el.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Bulgarian' (692 aligned documents, 0.2M links, 13.1M tokens)" href="download.php?f=EUbookshop/xml/bg-el.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Bosnian' (0.4k links, 77.5k tokens)" href="download.php?f=EUbookshop/xml/bs-el.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Catalan' (30 aligned documents, 2.7k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/ca-el.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-cn' (22.3k tokens)" href="download.php?f=EUbookshop/xml/cn-el.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Czech' (1,118 aligned documents, 0.4M links, 33.7M tokens)" href="download.php?f=EUbookshop/xml/cs-el.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Welsh' (2 aligned documents, 0.5k links, 38.4k tokens)" href="download.php?f=EUbookshop/xml/cy-el.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Danish' (6,116 aligned documents, 3.8M links, 365.8M tokens)" href="download.php?f=EUbookshop/xml/da-el.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-German' (6,284 aligned documents, 4.4M links, 375.7M tokens)" href="download.php?f=EUbookshop/xml/de-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Bulgarian' (692 aligned documents, 0.2M links, 13.1M tokens)" href="download.php?f=EUbookshop/bg-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Bosnian' (0.4k links, 77.5k tokens)" href="download.php?f=EUbookshop/bs-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Catalan' (30 aligned documents, 2.7k links, 0.2M tokens)" href="download.php?f=EUbookshop/ca-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-cn' (22.3k tokens)" href="download.php?f=EUbookshop/cn-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Czech' (1,118 aligned documents, 0.4M links, 33.7M tokens)" href="download.php?f=EUbookshop/cs-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Welsh' (2 aligned documents, 0.5k links, 38.4k tokens)" href="download.php?f=EUbookshop/cy-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Danish' (6,116 aligned documents, 3.8M links, 365.8M tokens)" href="download.php?f=EUbookshop/da-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-German' (6,284 aligned documents, 4.4M links, 375.7M tokens)" href="download.php?f=EUbookshop/de-el.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Greek-English (sample file)" href="EUbookshop/el-en_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Spanish (sample file)" href="EUbookshop/el-es_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Estonian (sample file)" href="EUbookshop/el-et_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Finnish (sample file)" href="EUbookshop/el-fi_sample.html">view</a></td><td><a rel="nofollow" title="Greek-French (sample file)" href="EUbookshop/el-fr_sample.html">view</a></td><td><a rel="nofollow" title="Greek-French (sample file)" href="EUbookshop/el-fr_BE_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Irish (sample file)" href="EUbookshop/el-ga_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Gaelic (sample file)" href="EUbookshop/el-gd_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Croatian (sample file)" href="EUbookshop/el-hr_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Hungarian (sample file)" href="EUbookshop/el-hu_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Icelandic (sample file)" href="EUbookshop/el-is_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Italian (sample file)" href="EUbookshop/el-it_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Japanese (sample file)" href="EUbookshop/el-ja_sample.html">view</a></td><th>el</th>
 <td><a rel="nofollow" title="Greek-Luxembourgish (sample file)" href="EUbookshop/el-lb_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Lithuanian (sample file)" href="EUbookshop/el-lt_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Latvian (sample file)" href="EUbookshop/el-lv_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Macedonian (sample file)" href="EUbookshop/el-mk_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Maltese (sample file)" href="EUbookshop/el-mt_sample.html">view</a></td><td><a rel="nofollow" title="Greek-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/el-nb_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Dutch (sample file)" href="EUbookshop/el-nl_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Dutch (sample file)" href="EUbookshop/el-nl_BE_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Polish (sample file)" href="EUbookshop/el-pl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Greek-Portuguese (sample file)" href="EUbookshop/el-pt_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Romanian (sample file)" href="EUbookshop/el-ro_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Russian (sample file)" href="EUbookshop/el-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Greek-Slovak (sample file)" href="EUbookshop/el-sk_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Slovenian (sample file)" href="EUbookshop/el-sl_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Albanian (sample file)" href="EUbookshop/el-sq_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Serbian (sample file)" href="EUbookshop/el-sr_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Swedish (sample file)" href="EUbookshop/el-sv_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Swahili (sample file)" href="EUbookshop/el-sw_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Greek-Ukrainian (sample file)" href="EUbookshop/el-uk_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Chinese (sample file)" href="EUbookshop/el-zh_sample.html">view</a></td><th>el</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/en.tar.gz">en</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (30 aligned documents, 1.7k links, 0.4M tokens)" href="download.php?f=EUbookshop/xml/ar-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Belarusian' (6 links, 0.3k tokens)" href="download.php?f=EUbookshop/xml/be-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Bulgarian' (740 aligned documents, 0.2M links, 13.0M tokens)" href="download.php?f=EUbookshop/xml/bg-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Bosnian' (4 aligned documents, 0.6k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/bs-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Catalan' (35 aligned documents, 4.3k links, 0.3M tokens)" href="download.php?f=EUbookshop/xml/ca-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-cn' (23.7k tokens)" href="download.php?f=EUbookshop/xml/cn-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Czech' (1,182 aligned documents, 0.5M links, 35.2M tokens)" href="download.php?f=EUbookshop/xml/cs-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Welsh' (11 aligned documents, 3.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/cy-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Danish' (7,006 aligned documents, 5.2M links, 438.1M tokens)" href="download.php?f=EUbookshop/xml/da-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-German' (15,373 aligned documents, 10.2M links, 731.4M tokens)" href="download.php?f=EUbookshop/xml/de-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (6,421 aligned documents, 4.3M links, 406.5M tokens)" href="download.php?f=EUbookshop/xml/el-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (30 aligned documents, 1.7k links, 0.4M tokens)" href="download.php?f=EUbookshop/ar-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Belarusian' (6 links, 0.3k tokens)" href="download.php?f=EUbookshop/be-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Bulgarian' (740 aligned documents, 0.2M links, 13.0M tokens)" href="download.php?f=EUbookshop/bg-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Bosnian' (4 aligned documents, 0.6k links, 0.1M tokens)" href="download.php?f=EUbookshop/bs-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Catalan' (35 aligned documents, 4.3k links, 0.3M tokens)" href="download.php?f=EUbookshop/ca-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-cn' (23.7k tokens)" href="download.php?f=EUbookshop/cn-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Czech' (1,182 aligned documents, 0.5M links, 35.2M tokens)" href="download.php?f=EUbookshop/cs-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Welsh' (11 aligned documents, 3.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/cy-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Danish' (7,006 aligned documents, 5.2M links, 438.1M tokens)" href="download.php?f=EUbookshop/da-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-German' (15,373 aligned documents, 10.2M links, 731.4M tokens)" href="download.php?f=EUbookshop/de-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (6,421 aligned documents, 4.3M links, 406.5M tokens)" href="download.php?f=EUbookshop/el-en.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="English-Spanish (sample file)" href="EUbookshop/en-es_sample.html">view</a></td><td><a rel="nofollow" title="English-Estonian (sample file)" href="EUbookshop/en-et_sample.html">view</a></td><td><a rel="nofollow" title="English-Finnish (sample file)" href="EUbookshop/en-fi_sample.html">view</a></td><td><a rel="nofollow" title="English-French (sample file)" href="EUbookshop/en-fr_sample.html">view</a></td><td><a rel="nofollow" title="English-French (sample file)" href="EUbookshop/en-fr_BE_sample.html">view</a></td><td><a rel="nofollow" title="English-Irish (sample file)" href="EUbookshop/en-ga_sample.html">view</a></td><td><a rel="nofollow" title="English-Gaelic (sample file)" href="EUbookshop/en-gd_sample.html">view</a></td><td><a rel="nofollow" title="English-Croatian (sample file)" href="EUbookshop/en-hr_sample.html">view</a></td><td><a rel="nofollow" title="English-Hungarian (sample file)" href="EUbookshop/en-hu_sample.html">view</a></td><td><a rel="nofollow" title="English-Icelandic (sample file)" href="EUbookshop/en-is_sample.html">view</a></td><td><a rel="nofollow" title="English-Italian (sample file)" href="EUbookshop/en-it_sample.html">view</a></td><td><a rel="nofollow" title="English-Japanese (sample file)" href="EUbookshop/en-ja_sample.html">view</a></td><th>en</th>
 <td><a rel="nofollow" title="English-Luxembourgish (sample file)" href="EUbookshop/en-lb_sample.html">view</a></td><td><a rel="nofollow" title="English-Lithuanian (sample file)" href="EUbookshop/en-lt_sample.html">view</a></td><td><a rel="nofollow" title="English-Latvian (sample file)" href="EUbookshop/en-lv_sample.html">view</a></td><td><a rel="nofollow" title="English-Macedonian (sample file)" href="EUbookshop/en-mk_sample.html">view</a></td><td><a rel="nofollow" title="English-Maltese (sample file)" href="EUbookshop/en-mt_sample.html">view</a></td><td><a rel="nofollow" title="English-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/en-nb_sample.html">view</a></td><td><a rel="nofollow" title="English-Dutch (sample file)" href="EUbookshop/en-nl_sample.html">view</a></td><td><a rel="nofollow" title="English-Dutch (sample file)" href="EUbookshop/en-nl_BE_sample.html">view</a></td><td><a rel="nofollow" title="English-Polish (sample file)" href="EUbookshop/en-pl_sample.html">view</a></td><td><a rel="nofollow" title="English-po (sample file)" href="EUbookshop/en-po_sample.html">view</a></td><td><a rel="nofollow" title="English-Portuguese (sample file)" href="EUbookshop/en-pt_sample.html">view</a></td><td><a rel="nofollow" title="English-Romanian (sample file)" href="EUbookshop/en-ro_sample.html">view</a></td><td><a rel="nofollow" title="English-Russian (sample file)" href="EUbookshop/en-ru_sample.html">view</a></td><td><a rel="nofollow" title="English-sh (sample file)" href="EUbookshop/en-sh_sample.html">view</a></td><td><a rel="nofollow" title="English-Slovak (sample file)" href="EUbookshop/en-sk_sample.html">view</a></td><td><a rel="nofollow" title="English-Slovenian (sample file)" href="EUbookshop/en-sl_sample.html">view</a></td><td><a rel="nofollow" title="English-Albanian (sample file)" href="EUbookshop/en-sq_sample.html">view</a></td><td><a rel="nofollow" title="English-Serbian (sample file)" href="EUbookshop/en-sr_sample.html">view</a></td><td><a rel="nofollow" title="English-Swedish (sample file)" href="EUbookshop/en-sv_sample.html">view</a></td><td><a rel="nofollow" title="English-Swahili (sample file)" href="EUbookshop/en-sw_sample.html">view</a></td><td><a rel="nofollow" title="English-tc (sample file)" href="EUbookshop/en-tc_sample.html">view</a></td><td></td><td><a rel="nofollow" title="English-Ukrainian (sample file)" href="EUbookshop/en-uk_sample.html">view</a></td><td><a rel="nofollow" title="English-Chinese (sample file)" href="EUbookshop/en-zh_sample.html">view</a></td><th>en</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/es.tar.gz">es</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Arabic' (7 aligned documents, 0.2k links, 49.7k tokens)" href="download.php?f=EUbookshop/xml/ar-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Arabic' (7 aligned documents, 0.2k links, 49.7k tokens)" href="download.php?f=EUbookshop/ar-es.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Bulgarian' (714 aligned documents, 0.2M links, 12.1M tokens)" href="download.php?f=EUbookshop/xml/bg-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Bosnian' (0.4k links, 79.1k tokens)" href="download.php?f=EUbookshop/xml/bs-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Catalan' (34 aligned documents, 3.5k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/ca-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-cn' (21.1k tokens)" href="download.php?f=EUbookshop/xml/cn-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Czech' (1,152 aligned documents, 0.4M links, 33.6M tokens)" href="download.php?f=EUbookshop/xml/cs-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Welsh' (0.5k links, 21.8k tokens)" href="download.php?f=EUbookshop/xml/cy-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Danish' (6,064 aligned documents, 4.0M links, 346.0M tokens)" href="download.php?f=EUbookshop/xml/da-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (7,345 aligned documents, 5.2M links, 403.0M tokens)" href="download.php?f=EUbookshop/xml/de-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Greek' (6,018 aligned documents, 4.0M links, 372.5M tokens)" href="download.php?f=EUbookshop/xml/el-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (7,637 aligned documents, 5.5M links, 438.6M tokens)" href="download.php?f=EUbookshop/xml/en-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Bulgarian' (714 aligned documents, 0.2M links, 12.1M tokens)" href="download.php?f=EUbookshop/bg-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Bosnian' (0.4k links, 79.1k tokens)" href="download.php?f=EUbookshop/bs-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Catalan' (34 aligned documents, 3.5k links, 0.2M tokens)" href="download.php?f=EUbookshop/ca-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-cn' (21.1k tokens)" href="download.php?f=EUbookshop/cn-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Czech' (1,152 aligned documents, 0.4M links, 33.6M tokens)" href="download.php?f=EUbookshop/cs-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Welsh' (0.5k links, 21.8k tokens)" href="download.php?f=EUbookshop/cy-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Danish' (6,064 aligned documents, 4.0M links, 346.0M tokens)" href="download.php?f=EUbookshop/da-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (7,345 aligned documents, 5.2M links, 403.0M tokens)" href="download.php?f=EUbookshop/de-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Greek' (6,018 aligned documents, 4.0M links, 372.5M tokens)" href="download.php?f=EUbookshop/el-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (7,637 aligned documents, 5.5M links, 438.6M tokens)" href="download.php?f=EUbookshop/en-es.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Spanish-Estonian (sample file)" href="EUbookshop/es-et_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Finnish (sample file)" href="EUbookshop/es-fi_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-French (sample file)" href="EUbookshop/es-fr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-French (sample file)" href="EUbookshop/es-fr_BE_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Irish (sample file)" href="EUbookshop/es-ga_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Gaelic (sample file)" href="EUbookshop/es-gd_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Croatian (sample file)" href="EUbookshop/es-hr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Hungarian (sample file)" href="EUbookshop/es-hu_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Icelandic (sample file)" href="EUbookshop/es-is_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Italian (sample file)" href="EUbookshop/es-it_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Japanese (sample file)" href="EUbookshop/es-ja_sample.html">view</a></td><th>es</th>
 <td><a rel="nofollow" title="Spanish-Luxembourgish (sample file)" href="EUbookshop/es-lb_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Lithuanian (sample file)" href="EUbookshop/es-lt_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Latvian (sample file)" href="EUbookshop/es-lv_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Macedonian (sample file)" href="EUbookshop/es-mk_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Maltese (sample file)" href="EUbookshop/es-mt_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/es-nb_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Dutch (sample file)" href="EUbookshop/es-nl_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Dutch (sample file)" href="EUbookshop/es-nl_BE_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Polish (sample file)" href="EUbookshop/es-pl_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-po (sample file)" href="EUbookshop/es-po_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Portuguese (sample file)" href="EUbookshop/es-pt_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Romanian (sample file)" href="EUbookshop/es-ro_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Russian (sample file)" href="EUbookshop/es-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Spanish-Slovak (sample file)" href="EUbookshop/es-sk_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Slovenian (sample file)" href="EUbookshop/es-sl_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Albanian (sample file)" href="EUbookshop/es-sq_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Serbian (sample file)" href="EUbookshop/es-sr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Swedish (sample file)" href="EUbookshop/es-sv_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Swahili (sample file)" href="EUbookshop/es-sw_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-tc (sample file)" href="EUbookshop/es-tc_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Spanish-Ukrainian (sample file)" href="EUbookshop/es-uk_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Chinese (sample file)" href="EUbookshop/es-zh_sample.html">view</a></td><th>es</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/et.tar.gz">et</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Arabic' (4 aligned documents, 0.1k links, 9.0k tokens)" href="download.php?f=EUbookshop/xml/ar-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Arabic' (4 aligned documents, 0.1k links, 9.0k tokens)" href="download.php?f=EUbookshop/ar-et.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Bulgarian' (696 aligned documents, 0.2M links, 0 tokens)" href="download.php?f=EUbookshop/xml/bg-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Bosnian' (0.4k links, 16.9k tokens)" href="download.php?f=EUbookshop/xml/bs-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Catalan' (20 aligned documents, 1.8k links, 59.1k tokens)" href="download.php?f=EUbookshop/xml/ca-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Bulgarian' (696 aligned documents, 0.2M links, 0 tokens)" href="download.php?f=EUbookshop/bg-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Bosnian' (0.4k links, 16.9k tokens)" href="download.php?f=EUbookshop/bs-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Catalan' (20 aligned documents, 1.8k links, 59.1k tokens)" href="download.php?f=EUbookshop/ca-et.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Czech' (1,123 aligned documents, 0.4M links, 14.6M tokens)" href="download.php?f=EUbookshop/xml/cs-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Welsh' (0.5k links, 12.2k tokens)" href="download.php?f=EUbookshop/xml/cy-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Danish' (1,096 aligned documents, 0.4M links, 13.9M tokens)" href="download.php?f=EUbookshop/xml/da-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-German' (1,113 aligned documents, 0.4M links, 14.5M tokens)" href="download.php?f=EUbookshop/xml/de-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Greek' (1,093 aligned documents, 0.4M links, 18.0M tokens)" href="download.php?f=EUbookshop/xml/el-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-English' (1,140 aligned documents, 0.5M links, 17.8M tokens)" href="download.php?f=EUbookshop/xml/en-et.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Estonian-Spanish' (1,115 aligned documents, 0.4M links, 16.8M tokens)" href="download.php?f=EUbookshop/xml/es-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Czech' (1,123 aligned documents, 0.4M links, 14.6M tokens)" href="download.php?f=EUbookshop/cs-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Welsh' (0.5k links, 12.2k tokens)" href="download.php?f=EUbookshop/cy-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Danish' (1,096 aligned documents, 0.4M links, 13.9M tokens)" href="download.php?f=EUbookshop/da-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-German' (1,113 aligned documents, 0.4M links, 14.5M tokens)" href="download.php?f=EUbookshop/de-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Greek' (1,093 aligned documents, 0.4M links, 18.0M tokens)" href="download.php?f=EUbookshop/el-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-English' (1,140 aligned documents, 0.5M links, 17.8M tokens)" href="download.php?f=EUbookshop/en-et.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Estonian-Spanish' (1,115 aligned documents, 0.4M links, 16.8M tokens)" href="download.php?f=EUbookshop/es-et.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Estonian-Finnish (sample file)" href="EUbookshop/et-fi_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-French (sample file)" href="EUbookshop/et-fr_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Estonian-Irish (sample file)" href="EUbookshop/et-ga_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Gaelic (sample file)" href="EUbookshop/et-gd_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Croatian (sample file)" href="EUbookshop/et-hr_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Hungarian (sample file)" href="EUbookshop/et-hu_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Icelandic (sample file)" href="EUbookshop/et-is_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Italian (sample file)" href="EUbookshop/et-it_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Japanese (sample file)" href="EUbookshop/et-ja_sample.html">view</a></td><th>et</th>
 <td></td><td><a rel="nofollow" title="Estonian-Lithuanian (sample file)" href="EUbookshop/et-lt_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Latvian (sample file)" href="EUbookshop/et-lv_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Macedonian (sample file)" href="EUbookshop/et-mk_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Maltese (sample file)" href="EUbookshop/et-mt_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/et-nb_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Dutch (sample file)" href="EUbookshop/et-nl_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Dutch (sample file)" href="EUbookshop/et-nl_BE_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Polish (sample file)" href="EUbookshop/et-pl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Estonian-Portuguese (sample file)" href="EUbookshop/et-pt_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Romanian (sample file)" href="EUbookshop/et-ro_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Russian (sample file)" href="EUbookshop/et-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Estonian-Slovak (sample file)" href="EUbookshop/et-sk_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Slovenian (sample file)" href="EUbookshop/et-sl_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Albanian (sample file)" href="EUbookshop/et-sq_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Serbian (sample file)" href="EUbookshop/et-sr_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Swedish (sample file)" href="EUbookshop/et-sv_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Swahili (sample file)" href="EUbookshop/et-sw_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Estonian-Ukrainian (sample file)" href="EUbookshop/et-uk_sample.html">view</a></td><td><a rel="nofollow" title="Estonian-Chinese (sample file)" href="EUbookshop/et-zh_sample.html">view</a></td><th>et</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/fi.tar.gz">fi</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Arabic' (5 aligned documents, 0.1k links, 25.6k tokens)" href="download.php?f=EUbookshop/xml/ar-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Arabic' (5 aligned documents, 0.1k links, 25.6k tokens)" href="download.php?f=EUbookshop/ar-fi.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Bulgarian' (688 aligned documents, 0.2M links, 8.7M tokens)" href="download.php?f=EUbookshop/xml/bg-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Bosnian' (0.4k links, 56.9k tokens)" href="download.php?f=EUbookshop/xml/bs-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Catalan' (27 aligned documents, 2.8k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/ca-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Bulgarian' (688 aligned documents, 0.2M links, 8.7M tokens)" href="download.php?f=EUbookshop/bg-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Bosnian' (0.4k links, 56.9k tokens)" href="download.php?f=EUbookshop/bs-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Catalan' (27 aligned documents, 2.8k links, 0.2M tokens)" href="download.php?f=EUbookshop/ca-fi.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Czech' (1,108 aligned documents, 0.4M links, 26.2M tokens)" href="download.php?f=EUbookshop/xml/cs-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Welsh' (0.6k links, 19.9k tokens)" href="download.php?f=EUbookshop/xml/cy-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Danish' (3,924 aligned documents, 1.9M links, 130.1M tokens)" href="download.php?f=EUbookshop/xml/da-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-German' (3,972 aligned documents, 2.0M links, 132.2M tokens)" href="download.php?f=EUbookshop/xml/de-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Greek' (3,858 aligned documents, 1.8M links, 143.8M tokens)" href="download.php?f=EUbookshop/xml/el-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-English' (4,026 aligned documents, 2.2M links, 148.6M tokens)" href="download.php?f=EUbookshop/xml/en-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Spanish' (3,969 aligned documents, 1.9M links, 142.5M tokens)" href="download.php?f=EUbookshop/xml/es-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Estonian' (1,103 aligned documents, 0.4M links, 11.7M tokens)" href="download.php?f=EUbookshop/xml/et-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Czech' (1,108 aligned documents, 0.4M links, 26.2M tokens)" href="download.php?f=EUbookshop/cs-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Welsh' (0.6k links, 19.9k tokens)" href="download.php?f=EUbookshop/cy-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Danish' (3,924 aligned documents, 1.9M links, 130.1M tokens)" href="download.php?f=EUbookshop/da-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-German' (3,972 aligned documents, 2.0M links, 132.2M tokens)" href="download.php?f=EUbookshop/de-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Greek' (3,858 aligned documents, 1.8M links, 143.8M tokens)" href="download.php?f=EUbookshop/el-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-English' (4,026 aligned documents, 2.2M links, 148.6M tokens)" href="download.php?f=EUbookshop/en-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Spanish' (3,969 aligned documents, 1.9M links, 142.5M tokens)" href="download.php?f=EUbookshop/es-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Estonian' (1,103 aligned documents, 0.4M links, 11.7M tokens)" href="download.php?f=EUbookshop/et-fi.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Finnish-French (sample file)" href="EUbookshop/fi-fr_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-French (sample file)" href="EUbookshop/fi-fr_BE_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Irish (sample file)" href="EUbookshop/fi-ga_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Gaelic (sample file)" href="EUbookshop/fi-gd_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Croatian (sample file)" href="EUbookshop/fi-hr_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Hungarian (sample file)" href="EUbookshop/fi-hu_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Icelandic (sample file)" href="EUbookshop/fi-is_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Italian (sample file)" href="EUbookshop/fi-it_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Japanese (sample file)" href="EUbookshop/fi-ja_sample.html">view</a></td><th>fi</th>
 <td><a rel="nofollow" title="Finnish-Luxembourgish (sample file)" href="EUbookshop/fi-lb_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Lithuanian (sample file)" href="EUbookshop/fi-lt_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Latvian (sample file)" href="EUbookshop/fi-lv_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Macedonian (sample file)" href="EUbookshop/fi-mk_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Maltese (sample file)" href="EUbookshop/fi-mt_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/fi-nb_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Dutch (sample file)" href="EUbookshop/fi-nl_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Dutch (sample file)" href="EUbookshop/fi-nl_BE_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Polish (sample file)" href="EUbookshop/fi-pl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Finnish-Portuguese (sample file)" href="EUbookshop/fi-pt_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Romanian (sample file)" href="EUbookshop/fi-ro_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Russian (sample file)" href="EUbookshop/fi-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Finnish-Slovak (sample file)" href="EUbookshop/fi-sk_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Slovenian (sample file)" href="EUbookshop/fi-sl_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Albanian (sample file)" href="EUbookshop/fi-sq_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Serbian (sample file)" href="EUbookshop/fi-sr_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Swedish (sample file)" href="EUbookshop/fi-sv_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Swahili (sample file)" href="EUbookshop/fi-sw_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Finnish-Ukrainian (sample file)" href="EUbookshop/fi-uk_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Chinese (sample file)" href="EUbookshop/fi-zh_sample.html">view</a></td><th>fi</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/fr.tar.gz">fr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'French-Arabic' (29 aligned documents, 1.3k links, 59.9k tokens)" href="download.php?f=EUbookshop/xml/ar-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Arabic' (29 aligned documents, 1.3k links, 59.9k tokens)" href="download.php?f=EUbookshop/ar-fr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Bulgarian' (720 aligned documents, 0.2M links, 0 tokens)" href="download.php?f=EUbookshop/xml/bg-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Bosnian' (0.4k links, 16.9k tokens)" href="download.php?f=EUbookshop/xml/bs-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Catalan' (32 aligned documents, 3.6k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/ca-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-cn' (0 tokens)" href="download.php?f=EUbookshop/xml/cn-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Czech' (1,144 aligned documents, 0.4M links, 14.4M tokens)" href="download.php?f=EUbookshop/xml/cs-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Welsh' (0.6k links, 12.2k tokens)" href="download.php?f=EUbookshop/xml/cy-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Danish' (6,801 aligned documents, 4.7M links, 181.0M tokens)" href="download.php?f=EUbookshop/xml/da-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-German' (14,980 aligned documents, 9.5M links, 314.2M tokens)" href="download.php?f=EUbookshop/xml/de-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Greek' (6,302 aligned documents, 4.3M links, 202.0M tokens)" href="download.php?f=EUbookshop/xml/el-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English' (16,947 aligned documents, 11.6M links, 415.1M tokens)" href="download.php?f=EUbookshop/xml/en-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (7,514 aligned documents, 5.3M links, 212.2M tokens)" href="download.php?f=EUbookshop/xml/es-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Estonian' (1,104 aligned documents, 0.4M links, 0 tokens)" href="download.php?f=EUbookshop/xml/et-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Finnish' (3,982 aligned documents, 2.0M links, 59.9M tokens)" href="download.php?f=EUbookshop/xml/fi-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Bulgarian' (720 aligned documents, 0.2M links, 0 tokens)" href="download.php?f=EUbookshop/bg-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Bosnian' (0.4k links, 16.9k tokens)" href="download.php?f=EUbookshop/bs-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Catalan' (32 aligned documents, 3.6k links, 0.1M tokens)" href="download.php?f=EUbookshop/ca-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-cn' (0 tokens)" href="download.php?f=EUbookshop/cn-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Czech' (1,144 aligned documents, 0.4M links, 14.4M tokens)" href="download.php?f=EUbookshop/cs-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Welsh' (0.6k links, 12.2k tokens)" href="download.php?f=EUbookshop/cy-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Danish' (6,801 aligned documents, 4.7M links, 181.0M tokens)" href="download.php?f=EUbookshop/da-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-German' (14,980 aligned documents, 9.5M links, 314.2M tokens)" href="download.php?f=EUbookshop/de-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Greek' (6,302 aligned documents, 4.3M links, 202.0M tokens)" href="download.php?f=EUbookshop/el-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English' (16,947 aligned documents, 11.6M links, 415.1M tokens)" href="download.php?f=EUbookshop/en-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (7,514 aligned documents, 5.3M links, 212.2M tokens)" href="download.php?f=EUbookshop/es-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Estonian' (1,104 aligned documents, 0.4M links, 0 tokens)" href="download.php?f=EUbookshop/et-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Finnish' (3,982 aligned documents, 2.0M links, 59.9M tokens)" href="download.php?f=EUbookshop/fi-fr.xml.gz">ces</a></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="French-Irish (sample file)" href="EUbookshop/fr-ga_sample.html">view</a></td><td><a rel="nofollow" title="French-Gaelic (sample file)" href="EUbookshop/fr-gd_sample.html">view</a></td><td><a rel="nofollow" title="French-Croatian (sample file)" href="EUbookshop/fr-hr_sample.html">view</a></td><td><a rel="nofollow" title="French-Hungarian (sample file)" href="EUbookshop/fr-hu_sample.html">view</a></td><td><a rel="nofollow" title="French-Icelandic (sample file)" href="EUbookshop/fr-is_sample.html">view</a></td><td><a rel="nofollow" title="French-Italian (sample file)" href="EUbookshop/fr-it_sample.html">view</a></td><td><a rel="nofollow" title="French-Japanese (sample file)" href="EUbookshop/fr-ja_sample.html">view</a></td><th>fr</th>
 <td><a rel="nofollow" title="French-Luxembourgish (sample file)" href="EUbookshop/fr-lb_sample.html">view</a></td><td><a rel="nofollow" title="French-Lithuanian (sample file)" href="EUbookshop/fr-lt_sample.html">view</a></td><td><a rel="nofollow" title="French-Latvian (sample file)" href="EUbookshop/fr-lv_sample.html">view</a></td><td><a rel="nofollow" title="French-Macedonian (sample file)" href="EUbookshop/fr-mk_sample.html">view</a></td><td><a rel="nofollow" title="French-Maltese (sample file)" href="EUbookshop/fr-mt_sample.html">view</a></td><td><a rel="nofollow" title="French-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/fr-nb_sample.html">view</a></td><td><a rel="nofollow" title="French-Dutch (sample file)" href="EUbookshop/fr-nl_sample.html">view</a></td><td><a rel="nofollow" title="French-Dutch (sample file)" href="EUbookshop/fr-nl_BE_sample.html">view</a></td><td><a rel="nofollow" title="French-Polish (sample file)" href="EUbookshop/fr-pl_sample.html">view</a></td><td><a rel="nofollow" title="French-po (sample file)" href="EUbookshop/fr-po_sample.html">view</a></td><td><a rel="nofollow" title="French-Portuguese (sample file)" href="EUbookshop/fr-pt_sample.html">view</a></td><td><a rel="nofollow" title="French-Romanian (sample file)" href="EUbookshop/fr-ro_sample.html">view</a></td><td><a rel="nofollow" title="French-Russian (sample file)" href="EUbookshop/fr-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="French-Slovak (sample file)" href="EUbookshop/fr-sk_sample.html">view</a></td><td><a rel="nofollow" title="French-Slovenian (sample file)" href="EUbookshop/fr-sl_sample.html">view</a></td><td><a rel="nofollow" title="French-Albanian (sample file)" href="EUbookshop/fr-sq_sample.html">view</a></td><td><a rel="nofollow" title="French-Serbian (sample file)" href="EUbookshop/fr-sr_sample.html">view</a></td><td><a rel="nofollow" title="French-Swedish (sample file)" href="EUbookshop/fr-sv_sample.html">view</a></td><td><a rel="nofollow" title="French-Swahili (sample file)" href="EUbookshop/fr-sw_sample.html">view</a></td><td><a rel="nofollow" title="French-tc (sample file)" href="EUbookshop/fr-tc_sample.html">view</a></td><td></td><td><a rel="nofollow" title="French-Ukrainian (sample file)" href="EUbookshop/fr-uk_sample.html">view</a></td><td><a rel="nofollow" title="French-Chinese (sample file)" href="EUbookshop/fr-zh_sample.html">view</a></td><th>fr</th></tr>
@@ -277,184 +277,184 @@ Complete download (XML): <a href="download.php?f=EUbookshop/EUbookshop0.1.tar.gz
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Czech' (67 links, 1.8k tokens)" href="download.php?f=EUbookshop/xml/cs-fr_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Czech' (67 links, 1.8k tokens)" href="download.php?f=EUbookshop/cs-fr_BE.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Danish' (2 aligned documents, 71 links, 1.8k tokens)" href="download.php?f=EUbookshop/xml/da-fr_BE.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-German' (2 aligned documents, 95 links, 2.2k tokens)" href="download.php?f=EUbookshop/xml/de-fr_BE.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Greek' (2 aligned documents, 0.1k links, 2.7k tokens)" href="download.php?f=EUbookshop/xml/el-fr_BE.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English' (2 aligned documents, 91 links, 2.8k tokens)" href="download.php?f=EUbookshop/xml/en-fr_BE.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (2 aligned documents, 96 links, 2.5k tokens)" href="download.php?f=EUbookshop/xml/es-fr_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Danish' (2 aligned documents, 71 links, 1.8k tokens)" href="download.php?f=EUbookshop/da-fr_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-German' (2 aligned documents, 95 links, 2.2k tokens)" href="download.php?f=EUbookshop/de-fr_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Greek' (2 aligned documents, 0.1k links, 2.7k tokens)" href="download.php?f=EUbookshop/el-fr_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English' (2 aligned documents, 91 links, 2.8k tokens)" href="download.php?f=EUbookshop/en-fr_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (2 aligned documents, 96 links, 2.5k tokens)" href="download.php?f=EUbookshop/es-fr_BE.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Finnish' (2 aligned documents, 84 links, 1.7k tokens)" href="download.php?f=EUbookshop/xml/fi-fr_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Finnish' (2 aligned documents, 84 links, 1.7k tokens)" href="download.php?f=EUbookshop/fi-fr_BE.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td><a rel="nofollow" title="French-Irish (sample file)" href="EUbookshop/fr_BE-ga_sample.html">view</a></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="French-Italian (sample file)" href="EUbookshop/fr_BE-it_sample.html">view</a></td><td></td><th>fr_BE</th>
 <td><a rel="nofollow" title="French-Luxembourgish (sample file)" href="EUbookshop/fr_BE-lb_sample.html">view</a></td><td><a rel="nofollow" title="French-Lithuanian (sample file)" href="EUbookshop/fr_BE-lt_sample.html">view</a></td><td><a rel="nofollow" title="French-Latvian (sample file)" href="EUbookshop/fr_BE-lv_sample.html">view</a></td><td></td><td><a rel="nofollow" title="French-Maltese (sample file)" href="EUbookshop/fr_BE-mt_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="French-Dutch (sample file)" href="EUbookshop/fr_BE-nl_BE_sample.html">view</a></td><td><a rel="nofollow" title="French-Polish (sample file)" href="EUbookshop/fr_BE-pl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="French-Portuguese (sample file)" href="EUbookshop/fr_BE-pt_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="French-Slovak (sample file)" href="EUbookshop/fr_BE-sk_sample.html">view</a></td><td><a rel="nofollow" title="French-Slovenian (sample file)" href="EUbookshop/fr_BE-sl_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="French-Swedish (sample file)" href="EUbookshop/fr_BE-sv_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><th>fr_BE</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/ga.tar.gz">ga</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Irish-Arabic' (16 links, 1.5k tokens)" href="download.php?f=EUbookshop/xml/ar-ga.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Irish-Arabic' (16 links, 1.5k tokens)" href="download.php?f=EUbookshop/ar-ga.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Irish-Bulgarian' (189 aligned documents, 61.2k links, 2.0M tokens)" href="download.php?f=EUbookshop/xml/bg-ga.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Irish-Bulgarian' (189 aligned documents, 61.2k links, 2.0M tokens)" href="download.php?f=EUbookshop/bg-ga.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Irish-Catalan' (15 aligned documents, 0.1k links, 10.1k tokens)" href="download.php?f=EUbookshop/xml/ca-ga.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Irish-Catalan' (15 aligned documents, 0.1k links, 10.1k tokens)" href="download.php?f=EUbookshop/ca-ga.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Irish-Czech' (195 aligned documents, 85.2k links, 4.0M tokens)" href="download.php?f=EUbookshop/xml/cs-ga.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Irish-Welsh' (0.4k links, 20.7k tokens)" href="download.php?f=EUbookshop/xml/cy-ga.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Irish-Danish' (226 aligned documents, 0.1M links, 6.9M tokens)" href="download.php?f=EUbookshop/xml/da-ga.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Irish-German' (230 aligned documents, 0.1M links, 7.7M tokens)" href="download.php?f=EUbookshop/xml/de-ga.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Irish-Greek' (224 aligned documents, 0.1M links, 8.4M tokens)" href="download.php?f=EUbookshop/xml/el-ga.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Irish-English' (244 aligned documents, 0.2M links, 8.6M tokens)" href="download.php?f=EUbookshop/xml/en-ga.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Irish-Spanish' (222 aligned documents, 0.1M links, 6.7M tokens)" href="download.php?f=EUbookshop/xml/es-ga.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Irish-Estonian' (191 aligned documents, 72.0k links, 2.3M tokens)" href="download.php?f=EUbookshop/xml/et-ga.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Irish-Finnish' (208 aligned documents, 93.0k links, 4.7M tokens)" href="download.php?f=EUbookshop/xml/fi-ga.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Irish-French' (226 aligned documents, 0.1M links, 4.2M tokens)" href="download.php?f=EUbookshop/xml/fr-ga.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Irish-French' (2 aligned documents, 2 links, 7 tokens)" href="download.php?f=EUbookshop/xml/fr_BE-ga.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Irish-Czech' (195 aligned documents, 85.2k links, 4.0M tokens)" href="download.php?f=EUbookshop/cs-ga.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Irish-Welsh' (0.4k links, 20.7k tokens)" href="download.php?f=EUbookshop/cy-ga.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Irish-Danish' (226 aligned documents, 0.1M links, 6.9M tokens)" href="download.php?f=EUbookshop/da-ga.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Irish-German' (230 aligned documents, 0.1M links, 7.7M tokens)" href="download.php?f=EUbookshop/de-ga.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Irish-Greek' (224 aligned documents, 0.1M links, 8.4M tokens)" href="download.php?f=EUbookshop/el-ga.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Irish-English' (244 aligned documents, 0.2M links, 8.6M tokens)" href="download.php?f=EUbookshop/en-ga.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Irish-Spanish' (222 aligned documents, 0.1M links, 6.7M tokens)" href="download.php?f=EUbookshop/es-ga.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Irish-Estonian' (191 aligned documents, 72.0k links, 2.3M tokens)" href="download.php?f=EUbookshop/et-ga.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Irish-Finnish' (208 aligned documents, 93.0k links, 4.7M tokens)" href="download.php?f=EUbookshop/fi-ga.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Irish-French' (226 aligned documents, 0.1M links, 4.2M tokens)" href="download.php?f=EUbookshop/fr-ga.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Irish-French' (2 aligned documents, 2 links, 7 tokens)" href="download.php?f=EUbookshop/fr_BE-ga.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Irish-Gaelic (sample file)" href="EUbookshop/ga-gd_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Croatian (sample file)" href="EUbookshop/ga-hr_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Hungarian (sample file)" href="EUbookshop/ga-hu_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Icelandic (sample file)" href="EUbookshop/ga-is_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Italian (sample file)" href="EUbookshop/ga-it_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Japanese (sample file)" href="EUbookshop/ga-ja_sample.html">view</a></td><th>ga</th>
 <td><a rel="nofollow" title="Irish-Luxembourgish (sample file)" href="EUbookshop/ga-lb_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Lithuanian (sample file)" href="EUbookshop/ga-lt_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Latvian (sample file)" href="EUbookshop/ga-lv_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Macedonian (sample file)" href="EUbookshop/ga-mk_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Maltese (sample file)" href="EUbookshop/ga-mt_sample.html">view</a></td><td><a rel="nofollow" title="Irish-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/ga-nb_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Dutch (sample file)" href="EUbookshop/ga-nl_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Dutch (sample file)" href="EUbookshop/ga-nl_BE_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Polish (sample file)" href="EUbookshop/ga-pl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Irish-Portuguese (sample file)" href="EUbookshop/ga-pt_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Romanian (sample file)" href="EUbookshop/ga-ro_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Russian (sample file)" href="EUbookshop/ga-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Irish-Slovak (sample file)" href="EUbookshop/ga-sk_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Slovenian (sample file)" href="EUbookshop/ga-sl_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Albanian (sample file)" href="EUbookshop/ga-sq_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Serbian (sample file)" href="EUbookshop/ga-sr_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Swedish (sample file)" href="EUbookshop/ga-sv_sample.html">view</a></td><td><a rel="nofollow" title="Irish-Swahili (sample file)" href="EUbookshop/ga-sw_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Irish-Chinese (sample file)" href="EUbookshop/ga-zh_sample.html">view</a></td><th>ga</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/gd.tar.gz">gd</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Bulgarian' (49 links, 2.2k tokens)" href="download.php?f=EUbookshop/xml/bg-gd.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Bulgarian' (49 links, 2.2k tokens)" href="download.php?f=EUbookshop/bg-gd.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Catalan' (63 links, 3.7k tokens)" href="download.php?f=EUbookshop/xml/ca-gd.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Catalan' (63 links, 3.7k tokens)" href="download.php?f=EUbookshop/ca-gd.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Czech' (25 links, 3.1k tokens)" href="download.php?f=EUbookshop/xml/cs-gd.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Czech' (25 links, 3.1k tokens)" href="download.php?f=EUbookshop/cs-gd.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Danish' (26 links, 3.5k tokens)" href="download.php?f=EUbookshop/xml/da-gd.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Gaelic-German' (73 links, 3.4k tokens)" href="download.php?f=EUbookshop/xml/de-gd.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Greek' (38 links, 3.6k tokens)" href="download.php?f=EUbookshop/xml/el-gd.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Gaelic-English' (0.1k links, 3.6k tokens)" href="download.php?f=EUbookshop/xml/en-gd.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Spanish' (53 links, 3.4k tokens)" href="download.php?f=EUbookshop/xml/es-gd.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Estonian' (27 links, 2.2k tokens)" href="download.php?f=EUbookshop/xml/et-gd.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Finnish' (36 links, 3.2k tokens)" href="download.php?f=EUbookshop/xml/fi-gd.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Gaelic-French' (88 links, 2.2k tokens)" href="download.php?f=EUbookshop/xml/fr-gd.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Danish' (26 links, 3.5k tokens)" href="download.php?f=EUbookshop/da-gd.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Gaelic-German' (73 links, 3.4k tokens)" href="download.php?f=EUbookshop/de-gd.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Greek' (38 links, 3.6k tokens)" href="download.php?f=EUbookshop/el-gd.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Gaelic-English' (0.1k links, 3.6k tokens)" href="download.php?f=EUbookshop/en-gd.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Spanish' (53 links, 3.4k tokens)" href="download.php?f=EUbookshop/es-gd.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Estonian' (27 links, 2.2k tokens)" href="download.php?f=EUbookshop/et-gd.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Finnish' (36 links, 3.2k tokens)" href="download.php?f=EUbookshop/fi-gd.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Gaelic-French' (88 links, 2.2k tokens)" href="download.php?f=EUbookshop/fr-gd.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Irish' (72 links, 3.7k tokens)" href="download.php?f=EUbookshop/xml/ga-gd.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Gaelic-Irish' (72 links, 3.7k tokens)" href="download.php?f=EUbookshop/ga-gd.xml.gz">ces</a></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="Gaelic-Hungarian (sample file)" href="EUbookshop/gd-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Gaelic-Italian (sample file)" href="EUbookshop/gd-it_sample.html">view</a></td><td></td><th>gd</th>
 <td></td><td><a rel="nofollow" title="Gaelic-Lithuanian (sample file)" href="EUbookshop/gd-lt_sample.html">view</a></td><td><a rel="nofollow" title="Gaelic-Latvian (sample file)" href="EUbookshop/gd-lv_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Gaelic-Maltese (sample file)" href="EUbookshop/gd-mt_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Gaelic-Dutch (sample file)" href="EUbookshop/gd-nl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Gaelic-Polish (sample file)" href="EUbookshop/gd-pl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Gaelic-Portuguese (sample file)" href="EUbookshop/gd-pt_sample.html">view</a></td><td><a rel="nofollow" title="Gaelic-Romanian (sample file)" href="EUbookshop/gd-ro_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Gaelic-Slovak (sample file)" href="EUbookshop/gd-sk_sample.html">view</a></td><td><a rel="nofollow" title="Gaelic-Slovenian (sample file)" href="EUbookshop/gd-sl_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Gaelic-Swedish (sample file)" href="EUbookshop/gd-sv_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><th>gd</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/hr.tar.gz">hr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Arabic' (0.7k tokens)" href="download.php?f=EUbookshop/xml/ar-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Arabic' (0.7k tokens)" href="download.php?f=EUbookshop/ar-hr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Bulgarian' (17 aligned documents, 3.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/bg-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Bosnian' (4 aligned documents, 0.7k links, 82.6k tokens)" href="download.php?f=EUbookshop/xml/bs-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Catalan' (2 aligned documents, 0.6k links, 48.3k tokens)" href="download.php?f=EUbookshop/xml/ca-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Bulgarian' (17 aligned documents, 3.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/bg-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Bosnian' (4 aligned documents, 0.7k links, 82.6k tokens)" href="download.php?f=EUbookshop/bs-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Catalan' (2 aligned documents, 0.6k links, 48.3k tokens)" href="download.php?f=EUbookshop/ca-hr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Czech' (18 aligned documents, 4.3k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/cs-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Welsh' (0.5k links, 20.9k tokens)" href="download.php?f=EUbookshop/xml/cy-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Danish' (18 aligned documents, 2.9k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/da-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-German' (17 aligned documents, 3.6k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/de-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Greek' (19 aligned documents, 4.0k links, 0.3M tokens)" href="download.php?f=EUbookshop/xml/el-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-English' (23 aligned documents, 6.4k links, 0.4M tokens)" href="download.php?f=EUbookshop/xml/en-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Spanish' (20 aligned documents, 5.5k links, 0.4M tokens)" href="download.php?f=EUbookshop/xml/es-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Estonian' (18 aligned documents, 4.2k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/et-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Finnish' (19 aligned documents, 5.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/fi-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-French' (20 aligned documents, 5.6k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/fr-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Czech' (18 aligned documents, 4.3k links, 0.2M tokens)" href="download.php?f=EUbookshop/cs-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Welsh' (0.5k links, 20.9k tokens)" href="download.php?f=EUbookshop/cy-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Danish' (18 aligned documents, 2.9k links, 0.2M tokens)" href="download.php?f=EUbookshop/da-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-German' (17 aligned documents, 3.6k links, 0.2M tokens)" href="download.php?f=EUbookshop/de-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Greek' (19 aligned documents, 4.0k links, 0.3M tokens)" href="download.php?f=EUbookshop/el-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-English' (23 aligned documents, 6.4k links, 0.4M tokens)" href="download.php?f=EUbookshop/en-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Spanish' (20 aligned documents, 5.5k links, 0.4M tokens)" href="download.php?f=EUbookshop/es-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Estonian' (18 aligned documents, 4.2k links, 0.1M tokens)" href="download.php?f=EUbookshop/et-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Finnish' (19 aligned documents, 5.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/fi-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-French' (20 aligned documents, 5.6k links, 0.2M tokens)" href="download.php?f=EUbookshop/fr-hr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-Irish' (7 aligned documents, 0.7k links, 47.5k tokens)" href="download.php?f=EUbookshop/xml/ga-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-Irish' (7 aligned documents, 0.7k links, 47.5k tokens)" href="download.php?f=EUbookshop/ga-hr.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td><a rel="nofollow" title="Croatian-Hungarian (sample file)" href="EUbookshop/hr-hu_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Croatian-Italian (sample file)" href="EUbookshop/hr-it_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Japanese (sample file)" href="EUbookshop/hr-ja_sample.html">view</a></td><th>hr</th>
 <td></td><td><a rel="nofollow" title="Croatian-Lithuanian (sample file)" href="EUbookshop/hr-lt_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Latvian (sample file)" href="EUbookshop/hr-lv_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Macedonian (sample file)" href="EUbookshop/hr-mk_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Maltese (sample file)" href="EUbookshop/hr-mt_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/hr-nb_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Dutch (sample file)" href="EUbookshop/hr-nl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Croatian-Polish (sample file)" href="EUbookshop/hr-pl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Croatian-Portuguese (sample file)" href="EUbookshop/hr-pt_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Romanian (sample file)" href="EUbookshop/hr-ro_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Russian (sample file)" href="EUbookshop/hr-ru_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-sh (sample file)" href="EUbookshop/hr-sh_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Slovak (sample file)" href="EUbookshop/hr-sk_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Slovenian (sample file)" href="EUbookshop/hr-sl_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Albanian (sample file)" href="EUbookshop/hr-sq_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Serbian (sample file)" href="EUbookshop/hr-sr_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Swedish (sample file)" href="EUbookshop/hr-sv_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Swahili (sample file)" href="EUbookshop/hr-sw_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Croatian-Ukrainian (sample file)" href="EUbookshop/hr-uk_sample.html">view</a></td><td><a rel="nofollow" title="Croatian-Chinese (sample file)" href="EUbookshop/hr-zh_sample.html">view</a></td><th>hr</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/hu.tar.gz">hu</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Arabic' (4 aligned documents, 0.1k links, 26.7k tokens)" href="download.php?f=EUbookshop/xml/ar-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Arabic' (4 aligned documents, 0.1k links, 26.7k tokens)" href="download.php?f=EUbookshop/ar-hu.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Bulgarian' (690 aligned documents, 0.2M links, 9.4M tokens)" href="download.php?f=EUbookshop/xml/bg-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Bosnian' (34 links, 5.0k tokens)" href="download.php?f=EUbookshop/xml/bs-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Catalan' (19 aligned documents, 1.2k links, 84.9k tokens)" href="download.php?f=EUbookshop/xml/ca-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Bulgarian' (690 aligned documents, 0.2M links, 9.4M tokens)" href="download.php?f=EUbookshop/bg-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Bosnian' (34 links, 5.0k tokens)" href="download.php?f=EUbookshop/bs-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Catalan' (19 aligned documents, 1.2k links, 84.9k tokens)" href="download.php?f=EUbookshop/ca-hu.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Czech' (1,121 aligned documents, 0.4M links, 28.5M tokens)" href="download.php?f=EUbookshop/xml/cs-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Welsh' (0.6k links, 21.1k tokens)" href="download.php?f=EUbookshop/xml/cy-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Danish' (1,099 aligned documents, 0.4M links, 27.5M tokens)" href="download.php?f=EUbookshop/xml/da-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-German' (1,120 aligned documents, 0.4M links, 28.6M tokens)" href="download.php?f=EUbookshop/xml/de-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Greek' (1,098 aligned documents, 0.4M links, 32.1M tokens)" href="download.php?f=EUbookshop/xml/el-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (1,148 aligned documents, 0.5M links, 31.9M tokens)" href="download.php?f=EUbookshop/xml/en-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Spanish' (1,123 aligned documents, 0.4M links, 30.5M tokens)" href="download.php?f=EUbookshop/xml/es-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Estonian' (1,112 aligned documents, 0.4M links, 13.9M tokens)" href="download.php?f=EUbookshop/xml/et-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Finnish' (1,098 aligned documents, 0.4M links, 24.6M tokens)" href="download.php?f=EUbookshop/xml/fi-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-French' (1,114 aligned documents, 0.4M links, 12.8M tokens)" href="download.php?f=EUbookshop/xml/fr-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Czech' (1,121 aligned documents, 0.4M links, 28.5M tokens)" href="download.php?f=EUbookshop/cs-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Welsh' (0.6k links, 21.1k tokens)" href="download.php?f=EUbookshop/cy-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Danish' (1,099 aligned documents, 0.4M links, 27.5M tokens)" href="download.php?f=EUbookshop/da-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-German' (1,120 aligned documents, 0.4M links, 28.6M tokens)" href="download.php?f=EUbookshop/de-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Greek' (1,098 aligned documents, 0.4M links, 32.1M tokens)" href="download.php?f=EUbookshop/el-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (1,148 aligned documents, 0.5M links, 31.9M tokens)" href="download.php?f=EUbookshop/en-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Spanish' (1,123 aligned documents, 0.4M links, 30.5M tokens)" href="download.php?f=EUbookshop/es-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Estonian' (1,112 aligned documents, 0.4M links, 13.9M tokens)" href="download.php?f=EUbookshop/et-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Finnish' (1,098 aligned documents, 0.4M links, 24.6M tokens)" href="download.php?f=EUbookshop/fi-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-French' (1,114 aligned documents, 0.4M links, 12.8M tokens)" href="download.php?f=EUbookshop/fr-hu.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Irish' (194 aligned documents, 87.1k links, 4.0M tokens)" href="download.php?f=EUbookshop/xml/ga-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Gaelic' (29 links, 3.0k tokens)" href="download.php?f=EUbookshop/xml/gd-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Croatian' (17 aligned documents, 1.8k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/hr-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Irish' (194 aligned documents, 87.1k links, 4.0M tokens)" href="download.php?f=EUbookshop/ga-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Gaelic' (29 links, 3.0k tokens)" href="download.php?f=EUbookshop/gd-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Croatian' (17 aligned documents, 1.8k links, 0.1M tokens)" href="download.php?f=EUbookshop/hr-hu.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Hungarian-Icelandic (sample file)" href="EUbookshop/hu-is_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Italian (sample file)" href="EUbookshop/hu-it_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Japanese (sample file)" href="EUbookshop/hu-ja_sample.html">view</a></td><th>hu</th>
 <td></td><td><a rel="nofollow" title="Hungarian-Lithuanian (sample file)" href="EUbookshop/hu-lt_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Latvian (sample file)" href="EUbookshop/hu-lv_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Macedonian (sample file)" href="EUbookshop/hu-mk_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Maltese (sample file)" href="EUbookshop/hu-mt_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/hu-nb_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Dutch (sample file)" href="EUbookshop/hu-nl_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Dutch (sample file)" href="EUbookshop/hu-nl_BE_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Polish (sample file)" href="EUbookshop/hu-pl_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-po (sample file)" href="EUbookshop/hu-po_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Portuguese (sample file)" href="EUbookshop/hu-pt_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Romanian (sample file)" href="EUbookshop/hu-ro_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Russian (sample file)" href="EUbookshop/hu-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Hungarian-Slovak (sample file)" href="EUbookshop/hu-sk_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Slovenian (sample file)" href="EUbookshop/hu-sl_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Albanian (sample file)" href="EUbookshop/hu-sq_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Serbian (sample file)" href="EUbookshop/hu-sr_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Swedish (sample file)" href="EUbookshop/hu-sv_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Swahili (sample file)" href="EUbookshop/hu-sw_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-tc (sample file)" href="EUbookshop/hu-tc_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Hungarian-Ukrainian (sample file)" href="EUbookshop/hu-uk_sample.html">view</a></td><td><a rel="nofollow" title="Hungarian-Chinese (sample file)" href="EUbookshop/hu-zh_sample.html">view</a></td><th>hu</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/is.tar.gz">is</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Bulgarian' (35 aligned documents, 6.5k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/bg-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Bulgarian' (35 aligned documents, 6.5k links, 0.2M tokens)" href="download.php?f=EUbookshop/bg-is.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Czech' (38 aligned documents, 8.6k links, 0.4M tokens)" href="download.php?f=EUbookshop/xml/cs-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Czech' (38 aligned documents, 8.6k links, 0.4M tokens)" href="download.php?f=EUbookshop/cs-is.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Danish' (48 aligned documents, 10.1k links, 0.5M tokens)" href="download.php?f=EUbookshop/xml/da-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-German' (48 aligned documents, 10.5k links, 0.5M tokens)" href="download.php?f=EUbookshop/xml/de-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Greek' (46 aligned documents, 9.6k links, 0.6M tokens)" href="download.php?f=EUbookshop/xml/el-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-English' (47 aligned documents, 11.3k links, 0.6M tokens)" href="download.php?f=EUbookshop/xml/en-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Spanish' (48 aligned documents, 9.6k links, 0.6M tokens)" href="download.php?f=EUbookshop/xml/es-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Estonian' (36 aligned documents, 8.7k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/et-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Finnish' (48 aligned documents, 12.1k links, 0.5M tokens)" href="download.php?f=EUbookshop/xml/fi-is.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-French' (48 aligned documents, 10.5k links, 0.3M tokens)" href="download.php?f=EUbookshop/xml/fr-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Danish' (48 aligned documents, 10.1k links, 0.5M tokens)" href="download.php?f=EUbookshop/da-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-German' (48 aligned documents, 10.5k links, 0.5M tokens)" href="download.php?f=EUbookshop/de-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Greek' (46 aligned documents, 9.6k links, 0.6M tokens)" href="download.php?f=EUbookshop/el-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-English' (47 aligned documents, 11.3k links, 0.6M tokens)" href="download.php?f=EUbookshop/en-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Spanish' (48 aligned documents, 9.6k links, 0.6M tokens)" href="download.php?f=EUbookshop/es-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Estonian' (36 aligned documents, 8.7k links, 0.2M tokens)" href="download.php?f=EUbookshop/et-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Finnish' (48 aligned documents, 12.1k links, 0.5M tokens)" href="download.php?f=EUbookshop/fi-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-French' (48 aligned documents, 10.5k links, 0.3M tokens)" href="download.php?f=EUbookshop/fr-is.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Irish' (15 aligned documents, 6.0k links, 0.3M tokens)" href="download.php?f=EUbookshop/xml/ga-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Irish' (15 aligned documents, 6.0k links, 0.3M tokens)" href="download.php?f=EUbookshop/ga-is.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Hungarian' (37 aligned documents, 8.1k links, 0.4M tokens)" href="download.php?f=EUbookshop/xml/hu-is.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Icelandic-Hungarian' (37 aligned documents, 8.1k links, 0.4M tokens)" href="download.php?f=EUbookshop/hu-is.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Icelandic-Italian (sample file)" href="EUbookshop/is-it_sample.html">view</a></td><td></td><th>is</th>
 <td></td><td><a rel="nofollow" title="Icelandic-Lithuanian (sample file)" href="EUbookshop/is-lt_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Latvian (sample file)" href="EUbookshop/is-lv_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Macedonian (sample file)" href="EUbookshop/is-mk_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Maltese (sample file)" href="EUbookshop/is-mt_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/is-nb_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Dutch (sample file)" href="EUbookshop/is-nl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Icelandic-Polish (sample file)" href="EUbookshop/is-pl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Icelandic-Portuguese (sample file)" href="EUbookshop/is-pt_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Romanian (sample file)" href="EUbookshop/is-ro_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Russian (sample file)" href="EUbookshop/is-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Icelandic-Slovak (sample file)" href="EUbookshop/is-sk_sample.html">view</a></td><td><a rel="nofollow" title="Icelandic-Slovenian (sample file)" href="EUbookshop/is-sl_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Icelandic-Swedish (sample file)" href="EUbookshop/is-sv_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><th>is</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/it.tar.gz">it</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Arabic' (9 aligned documents, 0.2k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/ar-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Arabic' (9 aligned documents, 0.2k links, 0.1M tokens)" href="download.php?f=EUbookshop/ar-it.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Bulgarian' (716 aligned documents, 0.2M links, 11.8M tokens)" href="download.php?f=EUbookshop/xml/bg-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Bosnian' (29 links, 5.3k tokens)" href="download.php?f=EUbookshop/xml/bs-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Catalan' (31 aligned documents, 3.5k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/ca-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-cn' (21.3k tokens)" href="download.php?f=EUbookshop/xml/cn-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Czech' (1,145 aligned documents, 0.5M links, 33.6M tokens)" href="download.php?f=EUbookshop/xml/cs-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Welsh' (0.5k links, 22.6k tokens)" href="download.php?f=EUbookshop/xml/cy-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Danish' (6,881 aligned documents, 5.1M links, 424.1M tokens)" href="download.php?f=EUbookshop/xml/da-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-German' (8,737 aligned documents, 6.5M links, 492.5M tokens)" href="download.php?f=EUbookshop/xml/de-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Greek' (6,274 aligned documents, 4.4M links, 394.6M tokens)" href="download.php?f=EUbookshop/xml/el-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (9,028 aligned documents, 7.1M links, 537.0M tokens)" href="download.php?f=EUbookshop/xml/en-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Spanish' (7,059 aligned documents, 5.0M links, 406.7M tokens)" href="download.php?f=EUbookshop/xml/es-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Estonian' (1,111 aligned documents, 0.4M links, 16.4M tokens)" href="download.php?f=EUbookshop/xml/et-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Finnish' (3,974 aligned documents, 2.0M links, 144.6M tokens)" href="download.php?f=EUbookshop/xml/fi-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (8,736 aligned documents, 6.3M links, 240.3M tokens)" href="download.php?f=EUbookshop/xml/fr-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (2 aligned documents, 0.1k links, 2.7k tokens)" href="download.php?f=EUbookshop/xml/fr_BE-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Irish' (227 aligned documents, 0.1M links, 7.9M tokens)" href="download.php?f=EUbookshop/xml/ga-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Gaelic' (55 links, 3.4k tokens)" href="download.php?f=EUbookshop/xml/gd-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Croatian' (19 aligned documents, 3.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/hr-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Hungarian' (1,122 aligned documents, 0.4M links, 30.4M tokens)" href="download.php?f=EUbookshop/xml/hu-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Icelandic' (48 aligned documents, 10.2k links, 0.6M tokens)" href="download.php?f=EUbookshop/xml/is-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Bulgarian' (716 aligned documents, 0.2M links, 11.8M tokens)" href="download.php?f=EUbookshop/bg-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Bosnian' (29 links, 5.3k tokens)" href="download.php?f=EUbookshop/bs-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Catalan' (31 aligned documents, 3.5k links, 0.2M tokens)" href="download.php?f=EUbookshop/ca-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-cn' (21.3k tokens)" href="download.php?f=EUbookshop/cn-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Czech' (1,145 aligned documents, 0.5M links, 33.6M tokens)" href="download.php?f=EUbookshop/cs-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Welsh' (0.5k links, 22.6k tokens)" href="download.php?f=EUbookshop/cy-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Danish' (6,881 aligned documents, 5.1M links, 424.1M tokens)" href="download.php?f=EUbookshop/da-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-German' (8,737 aligned documents, 6.5M links, 492.5M tokens)" href="download.php?f=EUbookshop/de-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Greek' (6,274 aligned documents, 4.4M links, 394.6M tokens)" href="download.php?f=EUbookshop/el-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (9,028 aligned documents, 7.1M links, 537.0M tokens)" href="download.php?f=EUbookshop/en-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Spanish' (7,059 aligned documents, 5.0M links, 406.7M tokens)" href="download.php?f=EUbookshop/es-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Estonian' (1,111 aligned documents, 0.4M links, 16.4M tokens)" href="download.php?f=EUbookshop/et-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Finnish' (3,974 aligned documents, 2.0M links, 144.6M tokens)" href="download.php?f=EUbookshop/fi-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (8,736 aligned documents, 6.3M links, 240.3M tokens)" href="download.php?f=EUbookshop/fr-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (2 aligned documents, 0.1k links, 2.7k tokens)" href="download.php?f=EUbookshop/fr_BE-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Irish' (227 aligned documents, 0.1M links, 7.9M tokens)" href="download.php?f=EUbookshop/ga-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Gaelic' (55 links, 3.4k tokens)" href="download.php?f=EUbookshop/gd-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Croatian' (19 aligned documents, 3.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/hr-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Hungarian' (1,122 aligned documents, 0.4M links, 30.4M tokens)" href="download.php?f=EUbookshop/hu-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Icelandic' (48 aligned documents, 10.2k links, 0.6M tokens)" href="download.php?f=EUbookshop/is-it.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Italian-Japanese (sample file)" href="EUbookshop/it-ja_sample.html">view</a></td><th>it</th>
 <td><a rel="nofollow" title="Italian-Luxembourgish (sample file)" href="EUbookshop/it-lb_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Lithuanian (sample file)" href="EUbookshop/it-lt_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Latvian (sample file)" href="EUbookshop/it-lv_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Macedonian (sample file)" href="EUbookshop/it-mk_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Maltese (sample file)" href="EUbookshop/it-mt_sample.html">view</a></td><td><a rel="nofollow" title="Italian-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/it-nb_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Dutch (sample file)" href="EUbookshop/it-nl_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Dutch (sample file)" href="EUbookshop/it-nl_BE_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Polish (sample file)" href="EUbookshop/it-pl_sample.html">view</a></td><td><a rel="nofollow" title="Italian-po (sample file)" href="EUbookshop/it-po_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Portuguese (sample file)" href="EUbookshop/it-pt_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Romanian (sample file)" href="EUbookshop/it-ro_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Russian (sample file)" href="EUbookshop/it-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Italian-Slovak (sample file)" href="EUbookshop/it-sk_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Slovenian (sample file)" href="EUbookshop/it-sl_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Albanian (sample file)" href="EUbookshop/it-sq_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Serbian (sample file)" href="EUbookshop/it-sr_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Swedish (sample file)" href="EUbookshop/it-sv_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Swahili (sample file)" href="EUbookshop/it-sw_sample.html">view</a></td><td><a rel="nofollow" title="Italian-tc (sample file)" href="EUbookshop/it-tc_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Italian-Ukrainian (sample file)" href="EUbookshop/it-uk_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Chinese (sample file)" href="EUbookshop/it-zh_sample.html">view</a></td><th>it</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/ja.tar.gz">ja</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Arabic' (2.5k tokens)" href="download.php?f=EUbookshop/xml/ar-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Arabic' (2.5k tokens)" href="download.php?f=EUbookshop/ar-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Bulgarian' (2 aligned documents, 0 tokens)" href="download.php?f=EUbookshop/xml/bg-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Bulgarian' (2 aligned documents, 0 tokens)" href="download.php?f=EUbookshop/bg-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Catalan' (22.9k tokens)" href="download.php?f=EUbookshop/xml/ca-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Catalan' (22.9k tokens)" href="download.php?f=EUbookshop/ca-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Czech' (3 aligned documents, 78 links, 26.0k tokens)" href="download.php?f=EUbookshop/xml/cs-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Czech' (3 aligned documents, 78 links, 26.0k tokens)" href="download.php?f=EUbookshop/cs-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Danish' (3 aligned documents, 98 links, 25.3k tokens)" href="download.php?f=EUbookshop/xml/da-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-German' (2 aligned documents, 0.1k links, 9.5k tokens)" href="download.php?f=EUbookshop/xml/de-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Greek' (3 aligned documents, 2 links, 26.8k tokens)" href="download.php?f=EUbookshop/xml/el-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-English' (4 aligned documents, 0.1k links, 38.8k tokens)" href="download.php?f=EUbookshop/xml/en-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Spanish' (3 aligned documents, 94 links, 31.1k tokens)" href="download.php?f=EUbookshop/xml/es-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Estonian' (3 aligned documents, 88 links, 2.5k tokens)" href="download.php?f=EUbookshop/xml/et-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Finnish' (3 aligned documents, 98 links, 21.7k tokens)" href="download.php?f=EUbookshop/xml/fi-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-French' (3 aligned documents, 0.1k links, 2.5k tokens)" href="download.php?f=EUbookshop/xml/fr-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Danish' (3 aligned documents, 98 links, 25.3k tokens)" href="download.php?f=EUbookshop/da-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-German' (2 aligned documents, 0.1k links, 9.5k tokens)" href="download.php?f=EUbookshop/de-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Greek' (3 aligned documents, 2 links, 26.8k tokens)" href="download.php?f=EUbookshop/el-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-English' (4 aligned documents, 0.1k links, 38.8k tokens)" href="download.php?f=EUbookshop/en-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Spanish' (3 aligned documents, 94 links, 31.1k tokens)" href="download.php?f=EUbookshop/es-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Estonian' (3 aligned documents, 88 links, 2.5k tokens)" href="download.php?f=EUbookshop/et-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Finnish' (3 aligned documents, 98 links, 21.7k tokens)" href="download.php?f=EUbookshop/fi-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-French' (3 aligned documents, 0.1k links, 2.5k tokens)" href="download.php?f=EUbookshop/fr-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Irish' (0.1k tokens)" href="download.php?f=EUbookshop/xml/ga-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Irish' (0.1k tokens)" href="download.php?f=EUbookshop/ga-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Croatian' (16.6k tokens)" href="download.php?f=EUbookshop/xml/hr-ja.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Hungarian' (2 aligned documents, 93 links, 9.1k tokens)" href="download.php?f=EUbookshop/xml/hu-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Croatian' (16.6k tokens)" href="download.php?f=EUbookshop/hr-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Hungarian' (2 aligned documents, 93 links, 9.1k tokens)" href="download.php?f=EUbookshop/hu-ja.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Japanese-Italian' (3 aligned documents, 0.1k links, 29.3k tokens)" href="download.php?f=EUbookshop/xml/it-ja.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Japanese-Italian' (3 aligned documents, 0.1k links, 29.3k tokens)" href="download.php?f=EUbookshop/it-ja.xml.gz">ces</a></td>
 <th></th>
 <th>ja</th>
 <td></td><td><a rel="nofollow" title="Japanese-Lithuanian (sample file)" href="EUbookshop/ja-lt_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Latvian (sample file)" href="EUbookshop/ja-lv_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Japanese-Maltese (sample file)" href="EUbookshop/ja-mt_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/ja-nb_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Dutch (sample file)" href="EUbookshop/ja-nl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Japanese-Polish (sample file)" href="EUbookshop/ja-pl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Japanese-Portuguese (sample file)" href="EUbookshop/ja-pt_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Romanian (sample file)" href="EUbookshop/ja-ro_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Russian (sample file)" href="EUbookshop/ja-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Japanese-Slovak (sample file)" href="EUbookshop/ja-sk_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Slovenian (sample file)" href="EUbookshop/ja-sl_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Albanian (sample file)" href="EUbookshop/ja-sq_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Serbian (sample file)" href="EUbookshop/ja-sr_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Swedish (sample file)" href="EUbookshop/ja-sv_sample.html">view</a></td><td><a rel="nofollow" title="Japanese-Swahili (sample file)" href="EUbookshop/ja-sw_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Japanese-Chinese (sample file)" href="EUbookshop/ja-zh_sample.html">view</a></td><th>ja</th></tr>
@@ -518,212 +518,212 @@ Complete download (XML): <a href="download.php?f=EUbookshop/EUbookshop0.1.tar.gz
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-Danish' (3 aligned documents, 19.3k tokens)" href="download.php?f=EUbookshop/xml/da-lb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-German' (4 aligned documents, 21.0k tokens)" href="download.php?f=EUbookshop/xml/de-lb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-Greek' (3 aligned documents, 23.3k tokens)" href="download.php?f=EUbookshop/xml/el-lb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-English' (4 aligned documents, 24.7k tokens)" href="download.php?f=EUbookshop/xml/en-lb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-Spanish' (3 aligned documents, 22.9k tokens)" href="download.php?f=EUbookshop/xml/es-lb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-Danish' (3 aligned documents, 19.3k tokens)" href="download.php?f=EUbookshop/da-lb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-German' (4 aligned documents, 21.0k tokens)" href="download.php?f=EUbookshop/de-lb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-Greek' (3 aligned documents, 23.3k tokens)" href="download.php?f=EUbookshop/el-lb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-English' (4 aligned documents, 24.7k tokens)" href="download.php?f=EUbookshop/en-lb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-Spanish' (3 aligned documents, 22.9k tokens)" href="download.php?f=EUbookshop/es-lb.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-Finnish' (2 aligned documents, 0.6k tokens)" href="download.php?f=EUbookshop/xml/fi-lb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-French' (3 aligned documents, 0 tokens)" href="download.php?f=EUbookshop/xml/fr-lb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-French' (0 tokens)" href="download.php?f=EUbookshop/xml/fr_BE-lb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-Irish' (7 tokens)" href="download.php?f=EUbookshop/xml/ga-lb.xml.gz">ces</a></td>
-<td></td>
-<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-Finnish' (2 aligned documents, 0.6k tokens)" href="download.php?f=EUbookshop/fi-lb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-French' (3 aligned documents, 0 tokens)" href="download.php?f=EUbookshop/fr-lb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-French' (0 tokens)" href="download.php?f=EUbookshop/fr_BE-lb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-Irish' (7 tokens)" href="download.php?f=EUbookshop/ga-lb.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-Italian' (3 aligned documents, 25.0k tokens)" href="download.php?f=EUbookshop/xml/it-lb.xml.gz">ces</a></td>
+<td></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'Luxembourgish-Italian' (3 aligned documents, 25.0k tokens)" href="download.php?f=EUbookshop/it-lb.xml.gz">ces</a></td>
 <td></td>
 <th>lb</th>
 <th></th>
 <td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Luxembourgish-Dutch (sample file)" href="EUbookshop/lb-nl_sample.html">view</a></td><td><a rel="nofollow" title="Luxembourgish-Dutch (sample file)" href="EUbookshop/lb-nl_BE_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Luxembourgish-Portuguese (sample file)" href="EUbookshop/lb-pt_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="Luxembourgish-Swedish (sample file)" href="EUbookshop/lb-sv_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><th>lb</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/lt.tar.gz">lt</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Arabic' (4 aligned documents, 0.1k links, 27.0k tokens)" href="download.php?f=EUbookshop/xml/ar-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Arabic' (4 aligned documents, 0.1k links, 27.0k tokens)" href="download.php?f=EUbookshop/ar-lt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Bulgarian' (695 aligned documents, 0.2M links, 9.9M tokens)" href="download.php?f=EUbookshop/xml/bg-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Bosnian' (0.4k links, 63.9k tokens)" href="download.php?f=EUbookshop/xml/bs-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Catalan' (21 aligned documents, 1.9k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/ca-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Bulgarian' (695 aligned documents, 0.2M links, 9.9M tokens)" href="download.php?f=EUbookshop/bg-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Bosnian' (0.4k links, 63.9k tokens)" href="download.php?f=EUbookshop/bs-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Catalan' (21 aligned documents, 1.9k links, 0.1M tokens)" href="download.php?f=EUbookshop/ca-lt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Czech' (1,123 aligned documents, 0.5M links, 28.9M tokens)" href="download.php?f=EUbookshop/xml/cs-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Welsh' (0.6k links, 20.6k tokens)" href="download.php?f=EUbookshop/xml/cy-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Danish' (1,097 aligned documents, 0.4M links, 27.8M tokens)" href="download.php?f=EUbookshop/xml/da-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-German' (1,116 aligned documents, 0.4M links, 28.2M tokens)" href="download.php?f=EUbookshop/xml/de-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Greek' (1,090 aligned documents, 0.4M links, 31.2M tokens)" href="download.php?f=EUbookshop/xml/el-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-English' (1,138 aligned documents, 0.5M links, 32.4M tokens)" href="download.php?f=EUbookshop/xml/en-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Spanish' (1,115 aligned documents, 0.4M links, 31.3M tokens)" href="download.php?f=EUbookshop/xml/es-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Estonian' (1,124 aligned documents, 0.5M links, 14.0M tokens)" href="download.php?f=EUbookshop/xml/et-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Finnish' (1,106 aligned documents, 0.5M links, 25.0M tokens)" href="download.php?f=EUbookshop/xml/fi-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-French' (1,101 aligned documents, 0.4M links, 12.5M tokens)" href="download.php?f=EUbookshop/xml/fr-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-French' (11 tokens)" href="download.php?f=EUbookshop/xml/fr_BE-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Irish' (194 aligned documents, 85.2k links, 3.8M tokens)" href="download.php?f=EUbookshop/xml/ga-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Gaelic' (31 links, 3.1k tokens)" href="download.php?f=EUbookshop/xml/gd-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Croatian' (18 aligned documents, 4.2k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/hr-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Hungarian' (1,109 aligned documents, 0.4M links, 27.4M tokens)" href="download.php?f=EUbookshop/xml/hu-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Icelandic' (36 aligned documents, 7.4k links, 0.4M tokens)" href="download.php?f=EUbookshop/xml/is-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Italian' (1,113 aligned documents, 0.4M links, 30.4M tokens)" href="download.php?f=EUbookshop/xml/it-lt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Japanese' (3 aligned documents, 87 links, 26.5k tokens)" href="download.php?f=EUbookshop/xml/ja-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Czech' (1,123 aligned documents, 0.5M links, 28.9M tokens)" href="download.php?f=EUbookshop/cs-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Welsh' (0.6k links, 20.6k tokens)" href="download.php?f=EUbookshop/cy-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Danish' (1,097 aligned documents, 0.4M links, 27.8M tokens)" href="download.php?f=EUbookshop/da-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-German' (1,116 aligned documents, 0.4M links, 28.2M tokens)" href="download.php?f=EUbookshop/de-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Greek' (1,090 aligned documents, 0.4M links, 31.2M tokens)" href="download.php?f=EUbookshop/el-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-English' (1,138 aligned documents, 0.5M links, 32.4M tokens)" href="download.php?f=EUbookshop/en-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Spanish' (1,115 aligned documents, 0.4M links, 31.3M tokens)" href="download.php?f=EUbookshop/es-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Estonian' (1,124 aligned documents, 0.5M links, 14.0M tokens)" href="download.php?f=EUbookshop/et-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Finnish' (1,106 aligned documents, 0.5M links, 25.0M tokens)" href="download.php?f=EUbookshop/fi-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-French' (1,101 aligned documents, 0.4M links, 12.5M tokens)" href="download.php?f=EUbookshop/fr-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-French' (11 tokens)" href="download.php?f=EUbookshop/fr_BE-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Irish' (194 aligned documents, 85.2k links, 3.8M tokens)" href="download.php?f=EUbookshop/ga-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Gaelic' (31 links, 3.1k tokens)" href="download.php?f=EUbookshop/gd-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Croatian' (18 aligned documents, 4.2k links, 0.2M tokens)" href="download.php?f=EUbookshop/hr-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Hungarian' (1,109 aligned documents, 0.4M links, 27.4M tokens)" href="download.php?f=EUbookshop/hu-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Icelandic' (36 aligned documents, 7.4k links, 0.4M tokens)" href="download.php?f=EUbookshop/is-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Italian' (1,113 aligned documents, 0.4M links, 30.4M tokens)" href="download.php?f=EUbookshop/it-lt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Lithuanian-Japanese' (3 aligned documents, 87 links, 26.5k tokens)" href="download.php?f=EUbookshop/ja-lt.xml.gz">ces</a></td>
 <th>lt</th>
 <td></td>
 <th></th>
 <td><a rel="nofollow" title="Lithuanian-Latvian (sample file)" href="EUbookshop/lt-lv_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Macedonian (sample file)" href="EUbookshop/lt-mk_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Maltese (sample file)" href="EUbookshop/lt-mt_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/lt-nb_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Dutch (sample file)" href="EUbookshop/lt-nl_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Dutch (sample file)" href="EUbookshop/lt-nl_BE_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Polish (sample file)" href="EUbookshop/lt-pl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Lithuanian-Portuguese (sample file)" href="EUbookshop/lt-pt_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Romanian (sample file)" href="EUbookshop/lt-ro_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Russian (sample file)" href="EUbookshop/lt-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Lithuanian-Slovak (sample file)" href="EUbookshop/lt-sk_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Slovenian (sample file)" href="EUbookshop/lt-sl_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Albanian (sample file)" href="EUbookshop/lt-sq_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Serbian (sample file)" href="EUbookshop/lt-sr_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Swedish (sample file)" href="EUbookshop/lt-sv_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Swahili (sample file)" href="EUbookshop/lt-sw_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Lithuanian-Turkish (sample file)" href="EUbookshop/lt-tr_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Ukrainian (sample file)" href="EUbookshop/lt-uk_sample.html">view</a></td><td><a rel="nofollow" title="Lithuanian-Chinese (sample file)" href="EUbookshop/lt-zh_sample.html">view</a></td><th>lt</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/lv.tar.gz">lv</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Arabic' (4 aligned documents, 0.1k links, 28.8k tokens)" href="download.php?f=EUbookshop/xml/ar-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Arabic' (4 aligned documents, 0.1k links, 28.8k tokens)" href="download.php?f=EUbookshop/ar-lv.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Bulgarian' (692 aligned documents, 0.2M links, 10.1M tokens)" href="download.php?f=EUbookshop/xml/bg-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Bosnian' (0.4k links, 60.5k tokens)" href="download.php?f=EUbookshop/xml/bs-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Catalan' (20 aligned documents, 1.8k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/ca-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Bulgarian' (692 aligned documents, 0.2M links, 10.1M tokens)" href="download.php?f=EUbookshop/bg-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Bosnian' (0.4k links, 60.5k tokens)" href="download.php?f=EUbookshop/bs-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Catalan' (20 aligned documents, 1.8k links, 0.1M tokens)" href="download.php?f=EUbookshop/ca-lv.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Czech' (1,129 aligned documents, 0.4M links, 29.1M tokens)" href="download.php?f=EUbookshop/xml/cs-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Welsh' (0.5k links, 20.9k tokens)" href="download.php?f=EUbookshop/xml/cy-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Danish' (1,101 aligned documents, 0.4M links, 27.7M tokens)" href="download.php?f=EUbookshop/xml/da-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-German' (1,122 aligned documents, 0.4M links, 28.5M tokens)" href="download.php?f=EUbookshop/xml/de-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Greek' (1,091 aligned documents, 0.4M links, 31.1M tokens)" href="download.php?f=EUbookshop/xml/el-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-English' (1,153 aligned documents, 0.5M links, 33.0M tokens)" href="download.php?f=EUbookshop/xml/en-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Spanish' (1,121 aligned documents, 0.4M links, 31.4M tokens)" href="download.php?f=EUbookshop/xml/es-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Estonian' (1,127 aligned documents, 0.5M links, 14.0M tokens)" href="download.php?f=EUbookshop/xml/et-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Finnish' (1,108 aligned documents, 0.4M links, 25.3M tokens)" href="download.php?f=EUbookshop/xml/fi-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-French' (1,113 aligned documents, 0.4M links, 13.1M tokens)" href="download.php?f=EUbookshop/xml/fr-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-French' (21 tokens)" href="download.php?f=EUbookshop/xml/fr_BE-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Irish' (194 aligned documents, 79.1k links, 3.9M tokens)" href="download.php?f=EUbookshop/xml/ga-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Gaelic' (26 links, 3.0k tokens)" href="download.php?f=EUbookshop/xml/gd-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Croatian' (18 aligned documents, 4.2k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/hr-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Hungarian' (1,113 aligned documents, 0.4M links, 27.2M tokens)" href="download.php?f=EUbookshop/xml/hu-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Icelandic' (37 aligned documents, 7.8k links, 0.4M tokens)" href="download.php?f=EUbookshop/xml/is-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Italian' (1,122 aligned documents, 0.4M links, 30.9M tokens)" href="download.php?f=EUbookshop/xml/it-lv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Japanese' (3 aligned documents, 82 links, 27.9k tokens)" href="download.php?f=EUbookshop/xml/ja-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Czech' (1,129 aligned documents, 0.4M links, 29.1M tokens)" href="download.php?f=EUbookshop/cs-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Welsh' (0.5k links, 20.9k tokens)" href="download.php?f=EUbookshop/cy-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Danish' (1,101 aligned documents, 0.4M links, 27.7M tokens)" href="download.php?f=EUbookshop/da-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-German' (1,122 aligned documents, 0.4M links, 28.5M tokens)" href="download.php?f=EUbookshop/de-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Greek' (1,091 aligned documents, 0.4M links, 31.1M tokens)" href="download.php?f=EUbookshop/el-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-English' (1,153 aligned documents, 0.5M links, 33.0M tokens)" href="download.php?f=EUbookshop/en-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Spanish' (1,121 aligned documents, 0.4M links, 31.4M tokens)" href="download.php?f=EUbookshop/es-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Estonian' (1,127 aligned documents, 0.5M links, 14.0M tokens)" href="download.php?f=EUbookshop/et-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Finnish' (1,108 aligned documents, 0.4M links, 25.3M tokens)" href="download.php?f=EUbookshop/fi-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-French' (1,113 aligned documents, 0.4M links, 13.1M tokens)" href="download.php?f=EUbookshop/fr-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-French' (21 tokens)" href="download.php?f=EUbookshop/fr_BE-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Irish' (194 aligned documents, 79.1k links, 3.9M tokens)" href="download.php?f=EUbookshop/ga-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Gaelic' (26 links, 3.0k tokens)" href="download.php?f=EUbookshop/gd-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Croatian' (18 aligned documents, 4.2k links, 0.2M tokens)" href="download.php?f=EUbookshop/hr-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Hungarian' (1,113 aligned documents, 0.4M links, 27.2M tokens)" href="download.php?f=EUbookshop/hu-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Icelandic' (37 aligned documents, 7.8k links, 0.4M tokens)" href="download.php?f=EUbookshop/is-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Italian' (1,122 aligned documents, 0.4M links, 30.9M tokens)" href="download.php?f=EUbookshop/it-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Japanese' (3 aligned documents, 82 links, 27.9k tokens)" href="download.php?f=EUbookshop/ja-lv.xml.gz">ces</a></td>
 <th>lv</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Latvian-Lithuanian' (1,127 aligned documents, 0.5M links, 28.2M tokens)" href="download.php?f=EUbookshop/xml/lt-lv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Latvian-Lithuanian' (1,127 aligned documents, 0.5M links, 28.2M tokens)" href="download.php?f=EUbookshop/lt-lv.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Latvian-Macedonian (sample file)" href="EUbookshop/lv-mk_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Maltese (sample file)" href="EUbookshop/lv-mt_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/lv-nb_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Dutch (sample file)" href="EUbookshop/lv-nl_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Dutch (sample file)" href="EUbookshop/lv-nl_BE_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Polish (sample file)" href="EUbookshop/lv-pl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Latvian-Portuguese (sample file)" href="EUbookshop/lv-pt_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Romanian (sample file)" href="EUbookshop/lv-ro_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Russian (sample file)" href="EUbookshop/lv-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Latvian-Slovak (sample file)" href="EUbookshop/lv-sk_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Slovenian (sample file)" href="EUbookshop/lv-sl_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Albanian (sample file)" href="EUbookshop/lv-sq_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Serbian (sample file)" href="EUbookshop/lv-sr_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Swedish (sample file)" href="EUbookshop/lv-sv_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Swahili (sample file)" href="EUbookshop/lv-sw_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Latvian-Ukrainian (sample file)" href="EUbookshop/lv-uk_sample.html">view</a></td><td><a rel="nofollow" title="Latvian-Chinese (sample file)" href="EUbookshop/lv-zh_sample.html">view</a></td><th>lv</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/mk.tar.gz">mk</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Bulgarian' (11 aligned documents, 2.9k links, 92.6k tokens)" href="download.php?f=EUbookshop/xml/bg-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Bosnian' (3 aligned documents, 0.4k links, 81.8k tokens)" href="download.php?f=EUbookshop/xml/bs-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Bulgarian' (11 aligned documents, 2.9k links, 92.6k tokens)" href="download.php?f=EUbookshop/bg-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Bosnian' (3 aligned documents, 0.4k links, 81.8k tokens)" href="download.php?f=EUbookshop/bs-mk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Czech' (11 aligned documents, 3.2k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/cs-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Czech' (11 aligned documents, 3.2k links, 0.2M tokens)" href="download.php?f=EUbookshop/cs-mk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Danish' (10 aligned documents, 1.1k links, 74.3k tokens)" href="download.php?f=EUbookshop/xml/da-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-German' (11 aligned documents, 3.4k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/de-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Greek' (11 aligned documents, 3.4k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/el-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-English' (13 aligned documents, 2.8k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/en-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Spanish' (11 aligned documents, 3.0k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/es-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Estonian' (11 aligned documents, 3.0k links, 92.6k tokens)" href="download.php?f=EUbookshop/xml/et-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Finnish' (11 aligned documents, 3.2k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/fi-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-French' (11 aligned documents, 3.4k links, 92.6k tokens)" href="download.php?f=EUbookshop/xml/fr-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Danish' (10 aligned documents, 1.1k links, 74.3k tokens)" href="download.php?f=EUbookshop/da-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-German' (11 aligned documents, 3.4k links, 0.2M tokens)" href="download.php?f=EUbookshop/de-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Greek' (11 aligned documents, 3.4k links, 0.2M tokens)" href="download.php?f=EUbookshop/el-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-English' (13 aligned documents, 2.8k links, 0.2M tokens)" href="download.php?f=EUbookshop/en-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Spanish' (11 aligned documents, 3.0k links, 0.2M tokens)" href="download.php?f=EUbookshop/es-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Estonian' (11 aligned documents, 3.0k links, 92.6k tokens)" href="download.php?f=EUbookshop/et-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Finnish' (11 aligned documents, 3.2k links, 0.2M tokens)" href="download.php?f=EUbookshop/fi-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-French' (11 aligned documents, 3.4k links, 92.6k tokens)" href="download.php?f=EUbookshop/fr-mk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Irish' (7 aligned documents, 0.6k links, 48.3k tokens)" href="download.php?f=EUbookshop/xml/ga-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Irish' (7 aligned documents, 0.6k links, 48.3k tokens)" href="download.php?f=EUbookshop/ga-mk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Croatian' (12 aligned documents, 2.9k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/hr-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Hungarian' (11 aligned documents, 1.4k links, 80.7k tokens)" href="download.php?f=EUbookshop/xml/hu-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Icelandic' (94 links, 3.9k tokens)" href="download.php?f=EUbookshop/xml/is-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Italian' (11 aligned documents, 1.3k links, 87.6k tokens)" href="download.php?f=EUbookshop/xml/it-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Croatian' (12 aligned documents, 2.9k links, 0.2M tokens)" href="download.php?f=EUbookshop/hr-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Hungarian' (11 aligned documents, 1.4k links, 80.7k tokens)" href="download.php?f=EUbookshop/hu-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Icelandic' (94 links, 3.9k tokens)" href="download.php?f=EUbookshop/is-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Italian' (11 aligned documents, 1.3k links, 87.6k tokens)" href="download.php?f=EUbookshop/it-mk.xml.gz">ces</a></td>
 <td></td>
 <th>mk</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Lithuanian' (11 aligned documents, 3.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/lt-mk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Latvian' (11 aligned documents, 2.9k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/lv-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Lithuanian' (11 aligned documents, 3.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/lt-mk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Macedonian-Latvian' (11 aligned documents, 2.9k links, 0.2M tokens)" href="download.php?f=EUbookshop/lv-mk.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Macedonian-Maltese (sample file)" href="EUbookshop/mk-mt_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/mk-nb_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Dutch (sample file)" href="EUbookshop/mk-nl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Macedonian-Polish (sample file)" href="EUbookshop/mk-pl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Macedonian-Portuguese (sample file)" href="EUbookshop/mk-pt_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Romanian (sample file)" href="EUbookshop/mk-ro_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Russian (sample file)" href="EUbookshop/mk-ru_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-sh (sample file)" href="EUbookshop/mk-sh_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Slovak (sample file)" href="EUbookshop/mk-sk_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Slovenian (sample file)" href="EUbookshop/mk-sl_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Albanian (sample file)" href="EUbookshop/mk-sq_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Serbian (sample file)" href="EUbookshop/mk-sr_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Swedish (sample file)" href="EUbookshop/mk-sv_sample.html">view</a></td><td><a rel="nofollow" title="Macedonian-Swahili (sample file)" href="EUbookshop/mk-sw_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Macedonian-Chinese (sample file)" href="EUbookshop/mk-zh_sample.html">view</a></td><th>mk</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/mt.tar.gz">mt</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Arabic' (4 aligned documents, 0.2k links, 28.7k tokens)" href="download.php?f=EUbookshop/xml/ar-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Arabic' (4 aligned documents, 0.2k links, 28.7k tokens)" href="download.php?f=EUbookshop/ar-mt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Bulgarian' (581 aligned documents, 0.2M links, 7.6M tokens)" href="download.php?f=EUbookshop/xml/bg-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Bulgarian' (581 aligned documents, 0.2M links, 7.6M tokens)" href="download.php?f=EUbookshop/bg-mt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Catalan' (15 aligned documents, 1.4k links, 88.6k tokens)" href="download.php?f=EUbookshop/xml/ca-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Catalan' (15 aligned documents, 1.4k links, 88.6k tokens)" href="download.php?f=EUbookshop/ca-mt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Czech' (888 aligned documents, 0.3M links, 19.9M tokens)" href="download.php?f=EUbookshop/xml/cs-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Czech' (888 aligned documents, 0.3M links, 19.9M tokens)" href="download.php?f=EUbookshop/cs-mt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Danish' (881 aligned documents, 0.3M links, 19.4M tokens)" href="download.php?f=EUbookshop/xml/da-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-German' (876 aligned documents, 0.3M links, 20.2M tokens)" href="download.php?f=EUbookshop/xml/de-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Greek' (865 aligned documents, 0.3M links, 23.8M tokens)" href="download.php?f=EUbookshop/xml/el-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-English' (893 aligned documents, 0.3M links, 21.9M tokens)" href="download.php?f=EUbookshop/xml/en-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Spanish' (877 aligned documents, 0.3M links, 21.1M tokens)" href="download.php?f=EUbookshop/xml/es-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Estonian' (889 aligned documents, 0.3M links, 10.4M tokens)" href="download.php?f=EUbookshop/xml/et-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Finnish' (877 aligned documents, 0.3M links, 18.4M tokens)" href="download.php?f=EUbookshop/xml/fi-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-French' (877 aligned documents, 0.3M links, 10.3M tokens)" href="download.php?f=EUbookshop/xml/fr-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-French' (12 tokens)" href="download.php?f=EUbookshop/xml/fr_BE-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Irish' (189 aligned documents, 85.3k links, 4.0M tokens)" href="download.php?f=EUbookshop/xml/ga-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Gaelic' (63 links, 3.4k tokens)" href="download.php?f=EUbookshop/xml/gd-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Croatian' (14 aligned documents, 1.8k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/hr-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Hungarian' (885 aligned documents, 0.3M links, 19.6M tokens)" href="download.php?f=EUbookshop/xml/hu-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Icelandic' (28 aligned documents, 6.9k links, 0.3M tokens)" href="download.php?f=EUbookshop/xml/is-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Italian' (877 aligned documents, 0.3M links, 21.0M tokens)" href="download.php?f=EUbookshop/xml/it-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Japanese' (2 aligned documents, 18.8k tokens)" href="download.php?f=EUbookshop/xml/ja-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Danish' (881 aligned documents, 0.3M links, 19.4M tokens)" href="download.php?f=EUbookshop/da-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-German' (876 aligned documents, 0.3M links, 20.2M tokens)" href="download.php?f=EUbookshop/de-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Greek' (865 aligned documents, 0.3M links, 23.8M tokens)" href="download.php?f=EUbookshop/el-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-English' (893 aligned documents, 0.3M links, 21.9M tokens)" href="download.php?f=EUbookshop/en-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Spanish' (877 aligned documents, 0.3M links, 21.1M tokens)" href="download.php?f=EUbookshop/es-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Estonian' (889 aligned documents, 0.3M links, 10.4M tokens)" href="download.php?f=EUbookshop/et-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Finnish' (877 aligned documents, 0.3M links, 18.4M tokens)" href="download.php?f=EUbookshop/fi-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-French' (877 aligned documents, 0.3M links, 10.3M tokens)" href="download.php?f=EUbookshop/fr-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-French' (12 tokens)" href="download.php?f=EUbookshop/fr_BE-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Irish' (189 aligned documents, 85.3k links, 4.0M tokens)" href="download.php?f=EUbookshop/ga-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Gaelic' (63 links, 3.4k tokens)" href="download.php?f=EUbookshop/gd-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Croatian' (14 aligned documents, 1.8k links, 0.1M tokens)" href="download.php?f=EUbookshop/hr-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Hungarian' (885 aligned documents, 0.3M links, 19.6M tokens)" href="download.php?f=EUbookshop/hu-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Icelandic' (28 aligned documents, 6.9k links, 0.3M tokens)" href="download.php?f=EUbookshop/is-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Italian' (877 aligned documents, 0.3M links, 21.0M tokens)" href="download.php?f=EUbookshop/it-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Japanese' (2 aligned documents, 18.8k tokens)" href="download.php?f=EUbookshop/ja-mt.xml.gz">ces</a></td>
 <th>mt</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Lithuanian' (883 aligned documents, 0.3M links, 19.4M tokens)" href="download.php?f=EUbookshop/xml/lt-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Latvian' (891 aligned documents, 0.3M links, 19.7M tokens)" href="download.php?f=EUbookshop/xml/lv-mt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Maltese-Macedonian' (10 aligned documents, 1.0k links, 71.0k tokens)" href="download.php?f=EUbookshop/xml/mk-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Lithuanian' (883 aligned documents, 0.3M links, 19.4M tokens)" href="download.php?f=EUbookshop/lt-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Latvian' (891 aligned documents, 0.3M links, 19.7M tokens)" href="download.php?f=EUbookshop/lv-mt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Maltese-Macedonian' (10 aligned documents, 1.0k links, 71.0k tokens)" href="download.php?f=EUbookshop/mk-mt.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Maltese-BokmÃ¥l, Norwegian (sample file)" href="EUbookshop/mt-nb_sample.html">view</a></td><td><a rel="nofollow" title="Maltese-Dutch (sample file)" href="EUbookshop/mt-nl_sample.html">view</a></td><td><a rel="nofollow" title="Maltese-Dutch (sample file)" href="EUbookshop/mt-nl_BE_sample.html">view</a></td><td><a rel="nofollow" title="Maltese-Polish (sample file)" href="EUbookshop/mt-pl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Maltese-Portuguese (sample file)" href="EUbookshop/mt-pt_sample.html">view</a></td><td><a rel="nofollow" title="Maltese-Romanian (sample file)" href="EUbookshop/mt-ro_sample.html">view</a></td><td><a rel="nofollow" title="Maltese-Russian (sample file)" href="EUbookshop/mt-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Maltese-Slovak (sample file)" href="EUbookshop/mt-sk_sample.html">view</a></td><td><a rel="nofollow" title="Maltese-Slovenian (sample file)" href="EUbookshop/mt-sl_sample.html">view</a></td><td><a rel="nofollow" title="Maltese-Albanian (sample file)" href="EUbookshop/mt-sq_sample.html">view</a></td><td><a rel="nofollow" title="Maltese-Serbian (sample file)" href="EUbookshop/mt-sr_sample.html">view</a></td><td><a rel="nofollow" title="Maltese-Swedish (sample file)" href="EUbookshop/mt-sv_sample.html">view</a></td><td><a rel="nofollow" title="Maltese-Swahili (sample file)" href="EUbookshop/mt-sw_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Maltese-Ukrainian (sample file)" href="EUbookshop/mt-uk_sample.html">view</a></td><td><a rel="nofollow" title="Maltese-Chinese (sample file)" href="EUbookshop/mt-zh_sample.html">view</a></td><th>mt</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/nb.tar.gz">nb</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Bulgarian' (53 aligned documents, 15.6k links, 0.6M tokens)" href="download.php?f=EUbookshop/xml/bg-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Bosnian' (0.3k links, 61.0k tokens)" href="download.php?f=EUbookshop/xml/bs-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Catalan' (20 tokens)" href="download.php?f=EUbookshop/xml/ca-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Bulgarian' (53 aligned documents, 15.6k links, 0.6M tokens)" href="download.php?f=EUbookshop/bg-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Bosnian' (0.3k links, 61.0k tokens)" href="download.php?f=EUbookshop/bs-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Catalan' (20 tokens)" href="download.php?f=EUbookshop/ca-nb.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Czech' (59 aligned documents, 21.3k links, 1.3M tokens)" href="download.php?f=EUbookshop/xml/cs-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Czech' (59 aligned documents, 21.3k links, 1.3M tokens)" href="download.php?f=EUbookshop/cs-nb.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Danish' (91 aligned documents, 25.7k links, 1.8M tokens)" href="download.php?f=EUbookshop/xml/da-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-German' (94 aligned documents, 28.2k links, 2.0M tokens)" href="download.php?f=EUbookshop/xml/de-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Greek' (88 aligned documents, 21.6k links, 2.1M tokens)" href="download.php?f=EUbookshop/xml/el-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-English' (93 aligned documents, 30.1k links, 2.1M tokens)" href="download.php?f=EUbookshop/xml/en-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Spanish' (93 aligned documents, 26.6k links, 2.1M tokens)" href="download.php?f=EUbookshop/xml/es-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Estonian' (58 aligned documents, 21.4k links, 0.6M tokens)" href="download.php?f=EUbookshop/xml/et-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Finnish' (94 aligned documents, 30.0k links, 1.8M tokens)" href="download.php?f=EUbookshop/xml/fi-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-French' (93 aligned documents, 28.0k links, 0.9M tokens)" href="download.php?f=EUbookshop/xml/fr-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Danish' (91 aligned documents, 25.7k links, 1.8M tokens)" href="download.php?f=EUbookshop/da-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-German' (94 aligned documents, 28.2k links, 2.0M tokens)" href="download.php?f=EUbookshop/de-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Greek' (88 aligned documents, 21.6k links, 2.1M tokens)" href="download.php?f=EUbookshop/el-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-English' (93 aligned documents, 30.1k links, 2.1M tokens)" href="download.php?f=EUbookshop/en-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Spanish' (93 aligned documents, 26.6k links, 2.1M tokens)" href="download.php?f=EUbookshop/es-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Estonian' (58 aligned documents, 21.4k links, 0.6M tokens)" href="download.php?f=EUbookshop/et-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Finnish' (94 aligned documents, 30.0k links, 1.8M tokens)" href="download.php?f=EUbookshop/fi-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-French' (93 aligned documents, 28.0k links, 0.9M tokens)" href="download.php?f=EUbookshop/fr-nb.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Irish' (21 aligned documents, 5.7k links, 0.3M tokens)" href="download.php?f=EUbookshop/xml/ga-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Irish' (21 aligned documents, 5.7k links, 0.3M tokens)" href="download.php?f=EUbookshop/ga-nb.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Croatian' (4 aligned documents, 1.3k links, 88.9k tokens)" href="download.php?f=EUbookshop/xml/hr-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Hungarian' (57 aligned documents, 19.0k links, 1.2M tokens)" href="download.php?f=EUbookshop/xml/hu-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Icelandic' (45 aligned documents, 10.2k links, 0.5M tokens)" href="download.php?f=EUbookshop/xml/is-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Italian' (92 aligned documents, 26.4k links, 2.0M tokens)" href="download.php?f=EUbookshop/xml/it-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Japanese' (55 tokens)" href="download.php?f=EUbookshop/xml/ja-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Croatian' (4 aligned documents, 1.3k links, 88.9k tokens)" href="download.php?f=EUbookshop/hr-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Hungarian' (57 aligned documents, 19.0k links, 1.2M tokens)" href="download.php?f=EUbookshop/hu-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Icelandic' (45 aligned documents, 10.2k links, 0.5M tokens)" href="download.php?f=EUbookshop/is-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Italian' (92 aligned documents, 26.4k links, 2.0M tokens)" href="download.php?f=EUbookshop/it-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Japanese' (55 tokens)" href="download.php?f=EUbookshop/ja-nb.xml.gz">ces</a></td>
 <th>nb</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Lithuanian' (57 aligned documents, 20.4k links, 1.2M tokens)" href="download.php?f=EUbookshop/xml/lt-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Latvian' (58 aligned documents, 20.8k links, 1.3M tokens)" href="download.php?f=EUbookshop/xml/lv-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Macedonian' (3 aligned documents, 1.4k links, 98.4k tokens)" href="download.php?f=EUbookshop/xml/mk-nb.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Maltese' (40 aligned documents, 7.2k links, 0.4M tokens)" href="download.php?f=EUbookshop/xml/mt-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Lithuanian' (57 aligned documents, 20.4k links, 1.2M tokens)" href="download.php?f=EUbookshop/lt-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Latvian' (58 aligned documents, 20.8k links, 1.3M tokens)" href="download.php?f=EUbookshop/lv-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Macedonian' (3 aligned documents, 1.4k links, 98.4k tokens)" href="download.php?f=EUbookshop/mk-nb.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'BokmÃ¥l, Norwegian-Maltese' (40 aligned documents, 7.2k links, 0.4M tokens)" href="download.php?f=EUbookshop/mt-nb.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Dutch (sample file)" href="EUbookshop/nb-nl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Polish (sample file)" href="EUbookshop/nb-pl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Portuguese (sample file)" href="EUbookshop/nb-pt_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Romanian (sample file)" href="EUbookshop/nb-ro_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Russian (sample file)" href="EUbookshop/nb-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Slovak (sample file)" href="EUbookshop/nb-sk_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Slovenian (sample file)" href="EUbookshop/nb-sl_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Albanian (sample file)" href="EUbookshop/nb-sq_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Serbian (sample file)" href="EUbookshop/nb-sr_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Swedish (sample file)" href="EUbookshop/nb-sv_sample.html">view</a></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Swahili (sample file)" href="EUbookshop/nb-sw_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="BokmÃ¥l, Norwegian-Chinese (sample file)" href="EUbookshop/nb-zh_sample.html">view</a></td><th>nb</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/nl.tar.gz">nl</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Arabic' (8 aligned documents, 0.1k links, 9.0k tokens)" href="download.php?f=EUbookshop/xml/ar-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Arabic' (8 aligned documents, 0.1k links, 9.0k tokens)" href="download.php?f=EUbookshop/ar-nl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Bulgarian' (697 aligned documents, 0.2M links, 0 tokens)" href="download.php?f=EUbookshop/xml/bg-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Bosnian' (0.4k links, 16.9k tokens)" href="download.php?f=EUbookshop/xml/bs-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Catalan' (32 aligned documents, 3.5k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/ca-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-cn' (0 tokens)" href="download.php?f=EUbookshop/xml/cn-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Czech' (1,109 aligned documents, 0.4M links, 14.8M tokens)" href="download.php?f=EUbookshop/xml/cs-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Welsh' (0.5k links, 12.2k tokens)" href="download.php?f=EUbookshop/xml/cy-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Danish' (6,858 aligned documents, 5.3M links, 198.2M tokens)" href="download.php?f=EUbookshop/xml/da-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (7,430 aligned documents, 6.2M links, 215.5M tokens)" href="download.php?f=EUbookshop/xml/de-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Greek' (6,169 aligned documents, 4.4M links, 202.7M tokens)" href="download.php?f=EUbookshop/xml/el-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (7,610 aligned documents, 6.4M links, 249.2M tokens)" href="download.php?f=EUbookshop/xml/en-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (6,224 aligned documents, 4.6M links, 188.1M tokens)" href="download.php?f=EUbookshop/xml/es-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Estonian' (1,098 aligned documents, 0.4M links, 0 tokens)" href="download.php?f=EUbookshop/xml/et-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Finnish' (3,954 aligned documents, 2.1M links, 61.0M tokens)" href="download.php?f=EUbookshop/xml/fi-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (7,379 aligned documents, 5.7M links, 0 tokens)" href="download.php?f=EUbookshop/xml/fr-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Bulgarian' (697 aligned documents, 0.2M links, 0 tokens)" href="download.php?f=EUbookshop/bg-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Bosnian' (0.4k links, 16.9k tokens)" href="download.php?f=EUbookshop/bs-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Catalan' (32 aligned documents, 3.5k links, 0.1M tokens)" href="download.php?f=EUbookshop/ca-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-cn' (0 tokens)" href="download.php?f=EUbookshop/cn-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Czech' (1,109 aligned documents, 0.4M links, 14.8M tokens)" href="download.php?f=EUbookshop/cs-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Welsh' (0.5k links, 12.2k tokens)" href="download.php?f=EUbookshop/cy-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Danish' (6,858 aligned documents, 5.3M links, 198.2M tokens)" href="download.php?f=EUbookshop/da-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (7,430 aligned documents, 6.2M links, 215.5M tokens)" href="download.php?f=EUbookshop/de-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Greek' (6,169 aligned documents, 4.4M links, 202.7M tokens)" href="download.php?f=EUbookshop/el-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (7,610 aligned documents, 6.4M links, 249.2M tokens)" href="download.php?f=EUbookshop/en-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (6,224 aligned documents, 4.6M links, 188.1M tokens)" href="download.php?f=EUbookshop/es-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Estonian' (1,098 aligned documents, 0.4M links, 0 tokens)" href="download.php?f=EUbookshop/et-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Finnish' (3,954 aligned documents, 2.1M links, 61.0M tokens)" href="download.php?f=EUbookshop/fi-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (7,379 aligned documents, 5.7M links, 0 tokens)" href="download.php?f=EUbookshop/fr-nl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Irish' (226 aligned documents, 0.1M links, 4.2M tokens)" href="download.php?f=EUbookshop/xml/ga-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Gaelic' (41 links, 2.2k tokens)" href="download.php?f=EUbookshop/xml/gd-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Croatian' (19 aligned documents, 4.8k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/hr-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hungarian' (1,103 aligned documents, 0.4M links, 14.0M tokens)" href="download.php?f=EUbookshop/xml/hu-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Icelandic' (47 aligned documents, 10.6k links, 0.3M tokens)" href="download.php?f=EUbookshop/xml/is-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (7,389 aligned documents, 6.1M links, 233.4M tokens)" href="download.php?f=EUbookshop/xml/it-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Japanese' (3 aligned documents, 95 links, 2.5k tokens)" href="download.php?f=EUbookshop/xml/ja-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Irish' (226 aligned documents, 0.1M links, 4.2M tokens)" href="download.php?f=EUbookshop/ga-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Gaelic' (41 links, 2.2k tokens)" href="download.php?f=EUbookshop/gd-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Croatian' (19 aligned documents, 4.8k links, 0.1M tokens)" href="download.php?f=EUbookshop/hr-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hungarian' (1,103 aligned documents, 0.4M links, 14.0M tokens)" href="download.php?f=EUbookshop/hu-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Icelandic' (47 aligned documents, 10.6k links, 0.3M tokens)" href="download.php?f=EUbookshop/is-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (7,389 aligned documents, 6.1M links, 233.4M tokens)" href="download.php?f=EUbookshop/it-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Japanese' (3 aligned documents, 95 links, 2.5k tokens)" href="download.php?f=EUbookshop/ja-nl.xml.gz">ces</a></td>
 <th>nl</th>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Luxembourgish' (3 aligned documents, 0 tokens)" href="download.php?f=EUbookshop/xml/lb-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Lithuanian' (1,097 aligned documents, 0.4M links, 14.0M tokens)" href="download.php?f=EUbookshop/xml/lt-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Latvian' (1,105 aligned documents, 0.4M links, 14.0M tokens)" href="download.php?f=EUbookshop/xml/lv-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Macedonian' (11 aligned documents, 3.3k links, 92.6k tokens)" href="download.php?f=EUbookshop/xml/mk-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Maltese' (873 aligned documents, 0.3M links, 10.2M tokens)" href="download.php?f=EUbookshop/xml/mt-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-BokmÃ¥l, Norwegian' (91 aligned documents, 28.2k links, 0.9M tokens)" href="download.php?f=EUbookshop/xml/nb-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Luxembourgish' (3 aligned documents, 0 tokens)" href="download.php?f=EUbookshop/lb-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Lithuanian' (1,097 aligned documents, 0.4M links, 14.0M tokens)" href="download.php?f=EUbookshop/lt-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Latvian' (1,105 aligned documents, 0.4M links, 14.0M tokens)" href="download.php?f=EUbookshop/lv-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Macedonian' (11 aligned documents, 3.3k links, 92.6k tokens)" href="download.php?f=EUbookshop/mk-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Maltese' (873 aligned documents, 0.3M links, 10.2M tokens)" href="download.php?f=EUbookshop/mt-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-BokmÃ¥l, Norwegian' (91 aligned documents, 28.2k links, 0.9M tokens)" href="download.php?f=EUbookshop/nb-nl.xml.gz">ces</a></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="Dutch-Polish (sample file)" href="EUbookshop/nl-pl_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-po (sample file)" href="EUbookshop/nl-po_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Portuguese (sample file)" href="EUbookshop/nl-pt_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Romanian (sample file)" href="EUbookshop/nl-ro_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Russian (sample file)" href="EUbookshop/nl-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Dutch-Slovak (sample file)" href="EUbookshop/nl-sk_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Slovenian (sample file)" href="EUbookshop/nl-sl_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Albanian (sample file)" href="EUbookshop/nl-sq_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Serbian (sample file)" href="EUbookshop/nl-sr_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Swedish (sample file)" href="EUbookshop/nl-sv_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Swahili (sample file)" href="EUbookshop/nl-sw_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-tc (sample file)" href="EUbookshop/nl-tc_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Dutch-Ukrainian (sample file)" href="EUbookshop/nl-uk_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Chinese (sample file)" href="EUbookshop/nl-zh_sample.html">view</a></td><th>nl</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/nl_BE.tar.gz">nl_BE</a></th>
@@ -733,68 +733,68 @@ Complete download (XML): <a href="download.php?f=EUbookshop/EUbookshop0.1.tar.gz
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Czech' (2 aligned documents, 0.2k links, 5.1k tokens)" href="download.php?f=EUbookshop/xml/cs-nl_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Czech' (2 aligned documents, 0.2k links, 5.1k tokens)" href="download.php?f=EUbookshop/cs-nl_BE.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Danish' (5 aligned documents, 0.7k links, 18.4k tokens)" href="download.php?f=EUbookshop/xml/da-nl_BE.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (5 aligned documents, 0.9k links, 18.8k tokens)" href="download.php?f=EUbookshop/xml/de-nl_BE.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Greek' (5 aligned documents, 0.8k links, 23.6k tokens)" href="download.php?f=EUbookshop/xml/el-nl_BE.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (5 aligned documents, 0.8k links, 20.5k tokens)" href="download.php?f=EUbookshop/xml/en-nl_BE.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (5 aligned documents, 0.7k links, 17.4k tokens)" href="download.php?f=EUbookshop/xml/es-nl_BE.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Estonian' (0.1k links, 0 tokens)" href="download.php?f=EUbookshop/xml/et-nl_BE.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Finnish' (5 aligned documents, 0.8k links, 14.7k tokens)" href="download.php?f=EUbookshop/xml/fi-nl_BE.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (3 aligned documents, 0.7k links, 0 tokens)" href="download.php?f=EUbookshop/xml/fr-nl_BE.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (2 aligned documents, 94 links, 0 tokens)" href="download.php?f=EUbookshop/xml/fr_BE-nl_BE.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Irish' (2 aligned documents, 1 links, 7 tokens)" href="download.php?f=EUbookshop/xml/ga-nl_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Danish' (5 aligned documents, 0.7k links, 18.4k tokens)" href="download.php?f=EUbookshop/da-nl_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (5 aligned documents, 0.9k links, 18.8k tokens)" href="download.php?f=EUbookshop/de-nl_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Greek' (5 aligned documents, 0.8k links, 23.6k tokens)" href="download.php?f=EUbookshop/el-nl_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (5 aligned documents, 0.8k links, 20.5k tokens)" href="download.php?f=EUbookshop/en-nl_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (5 aligned documents, 0.7k links, 17.4k tokens)" href="download.php?f=EUbookshop/es-nl_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Estonian' (0.1k links, 0 tokens)" href="download.php?f=EUbookshop/et-nl_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Finnish' (5 aligned documents, 0.8k links, 14.7k tokens)" href="download.php?f=EUbookshop/fi-nl_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (3 aligned documents, 0.7k links, 0 tokens)" href="download.php?f=EUbookshop/fr-nl_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (2 aligned documents, 94 links, 0 tokens)" href="download.php?f=EUbookshop/fr_BE-nl_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Irish' (2 aligned documents, 1 links, 7 tokens)" href="download.php?f=EUbookshop/ga-nl_BE.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hungarian' (0.1k links, 3.3k tokens)" href="download.php?f=EUbookshop/xml/hu-nl_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Hungarian' (0.1k links, 3.3k tokens)" href="download.php?f=EUbookshop/hu-nl_BE.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (5 aligned documents, 0.8k links, 21.1k tokens)" href="download.php?f=EUbookshop/xml/it-nl_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (5 aligned documents, 0.8k links, 21.1k tokens)" href="download.php?f=EUbookshop/it-nl_BE.xml.gz">ces</a></td>
 <td></td>
 <th>nl_BE</th>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Luxembourgish' (0 tokens)" href="download.php?f=EUbookshop/xml/lb-nl_BE.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Lithuanian' (2 aligned documents, 0.1k links, 3.4k tokens)" href="download.php?f=EUbookshop/xml/lt-nl_BE.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Latvian' (2 aligned documents, 0.1k links, 3.3k tokens)" href="download.php?f=EUbookshop/xml/lv-nl_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Luxembourgish' (0 tokens)" href="download.php?f=EUbookshop/lb-nl_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Lithuanian' (2 aligned documents, 0.1k links, 3.4k tokens)" href="download.php?f=EUbookshop/lt-nl_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Latvian' (2 aligned documents, 0.1k links, 3.3k tokens)" href="download.php?f=EUbookshop/lv-nl_BE.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Maltese' (2 aligned documents, 0.1k links, 3.7k tokens)" href="download.php?f=EUbookshop/xml/mt-nl_BE.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Maltese' (2 aligned documents, 0.1k links, 3.7k tokens)" href="download.php?f=EUbookshop/mt-nl_BE.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th></th>
 <td><a rel="nofollow" title="Dutch-Polish (sample file)" href="EUbookshop/nl_BE-pl_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Dutch-Portuguese (sample file)" href="EUbookshop/nl_BE-pt_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Dutch-Slovak (sample file)" href="EUbookshop/nl_BE-sk_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Slovenian (sample file)" href="EUbookshop/nl_BE-sl_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Dutch-Swedish (sample file)" href="EUbookshop/nl_BE-sv_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><th>nl_BE</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/pl.tar.gz">pl</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Arabic' (5 aligned documents, 0.1k links, 34.0k tokens)" href="download.php?f=EUbookshop/xml/ar-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Arabic' (5 aligned documents, 0.1k links, 34.0k tokens)" href="download.php?f=EUbookshop/ar-pl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Bulgarian' (708 aligned documents, 0.2M links, 10.9M tokens)" href="download.php?f=EUbookshop/xml/bg-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Bosnian' (0.4k links, 66.7k tokens)" href="download.php?f=EUbookshop/xml/bs-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Catalan' (22 aligned documents, 1.8k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/ca-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Bulgarian' (708 aligned documents, 0.2M links, 10.9M tokens)" href="download.php?f=EUbookshop/bg-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Bosnian' (0.4k links, 66.7k tokens)" href="download.php?f=EUbookshop/bs-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Catalan' (22 aligned documents, 1.8k links, 0.1M tokens)" href="download.php?f=EUbookshop/ca-pl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Czech' (1,151 aligned documents, 0.5M links, 31.1M tokens)" href="download.php?f=EUbookshop/xml/cs-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Welsh' (0.5k links, 21.2k tokens)" href="download.php?f=EUbookshop/xml/cy-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Danish' (1,110 aligned documents, 0.4M links, 28.9M tokens)" href="download.php?f=EUbookshop/xml/da-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-German' (1,358 aligned documents, 0.5M links, 36.0M tokens)" href="download.php?f=EUbookshop/xml/de-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Greek' (1,149 aligned documents, 0.4M links, 34.2M tokens)" href="download.php?f=EUbookshop/xml/el-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-English' (1,387 aligned documents, 0.6M links, 40.9M tokens)" href="download.php?f=EUbookshop/xml/en-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Spanish' (1,356 aligned documents, 0.5M links, 39.5M tokens)" href="download.php?f=EUbookshop/xml/es-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Estonian' (1,125 aligned documents, 0.5M links, 15.0M tokens)" href="download.php?f=EUbookshop/xml/et-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Finnish' (1,110 aligned documents, 0.4M links, 25.9M tokens)" href="download.php?f=EUbookshop/xml/fi-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-French' (1,345 aligned documents, 0.5M links, 16.8M tokens)" href="download.php?f=EUbookshop/xml/fr-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-French' (55 links, 1.8k tokens)" href="download.php?f=EUbookshop/xml/fr_BE-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Irish' (196 aligned documents, 84.8k links, 3.9M tokens)" href="download.php?f=EUbookshop/xml/ga-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Gaelic' (3.1k tokens)" href="download.php?f=EUbookshop/xml/gd-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Croatian' (17 aligned documents, 4.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/hr-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Hungarian' (1,125 aligned documents, 0.5M links, 28.6M tokens)" href="download.php?f=EUbookshop/xml/hu-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Icelandic' (38 aligned documents, 8.0k links, 0.4M tokens)" href="download.php?f=EUbookshop/xml/is-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Italian' (1,346 aligned documents, 0.6M links, 38.9M tokens)" href="download.php?f=EUbookshop/xml/it-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Japanese' (3 aligned documents, 89 links, 28.7k tokens)" href="download.php?f=EUbookshop/xml/ja-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Czech' (1,151 aligned documents, 0.5M links, 31.1M tokens)" href="download.php?f=EUbookshop/cs-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Welsh' (0.5k links, 21.2k tokens)" href="download.php?f=EUbookshop/cy-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Danish' (1,110 aligned documents, 0.4M links, 28.9M tokens)" href="download.php?f=EUbookshop/da-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-German' (1,358 aligned documents, 0.5M links, 36.0M tokens)" href="download.php?f=EUbookshop/de-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Greek' (1,149 aligned documents, 0.4M links, 34.2M tokens)" href="download.php?f=EUbookshop/el-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-English' (1,387 aligned documents, 0.6M links, 40.9M tokens)" href="download.php?f=EUbookshop/en-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Spanish' (1,356 aligned documents, 0.5M links, 39.5M tokens)" href="download.php?f=EUbookshop/es-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Estonian' (1,125 aligned documents, 0.5M links, 15.0M tokens)" href="download.php?f=EUbookshop/et-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Finnish' (1,110 aligned documents, 0.4M links, 25.9M tokens)" href="download.php?f=EUbookshop/fi-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-French' (1,345 aligned documents, 0.5M links, 16.8M tokens)" href="download.php?f=EUbookshop/fr-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-French' (55 links, 1.8k tokens)" href="download.php?f=EUbookshop/fr_BE-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Irish' (196 aligned documents, 84.8k links, 3.9M tokens)" href="download.php?f=EUbookshop/ga-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Gaelic' (3.1k tokens)" href="download.php?f=EUbookshop/gd-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Croatian' (17 aligned documents, 4.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/hr-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Hungarian' (1,125 aligned documents, 0.5M links, 28.6M tokens)" href="download.php?f=EUbookshop/hu-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Icelandic' (38 aligned documents, 8.0k links, 0.4M tokens)" href="download.php?f=EUbookshop/is-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Italian' (1,346 aligned documents, 0.6M links, 38.9M tokens)" href="download.php?f=EUbookshop/it-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Japanese' (3 aligned documents, 89 links, 28.7k tokens)" href="download.php?f=EUbookshop/ja-pl.xml.gz">ces</a></td>
 <th>pl</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Lithuanian' (1,121 aligned documents, 0.5M links, 29.1M tokens)" href="download.php?f=EUbookshop/xml/lt-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Latvian' (1,130 aligned documents, 0.5M links, 29.4M tokens)" href="download.php?f=EUbookshop/xml/lv-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Macedonian' (10 aligned documents, 3.2k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/mk-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Maltese' (882 aligned documents, 0.3M links, 20.0M tokens)" href="download.php?f=EUbookshop/xml/mt-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-BokmÃ¥l, Norwegian' (59 aligned documents, 20.9k links, 1.3M tokens)" href="download.php?f=EUbookshop/xml/nb-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Dutch' (1,146 aligned documents, 0.5M links, 15.3M tokens)" href="download.php?f=EUbookshop/xml/nl-pl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Polish-Dutch' (2 aligned documents, 0.2k links, 5.3k tokens)" href="download.php?f=EUbookshop/xml/nl_BE-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Lithuanian' (1,121 aligned documents, 0.5M links, 29.1M tokens)" href="download.php?f=EUbookshop/lt-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Latvian' (1,130 aligned documents, 0.5M links, 29.4M tokens)" href="download.php?f=EUbookshop/lv-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Macedonian' (10 aligned documents, 3.2k links, 0.2M tokens)" href="download.php?f=EUbookshop/mk-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Maltese' (882 aligned documents, 0.3M links, 20.0M tokens)" href="download.php?f=EUbookshop/mt-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-BokmÃ¥l, Norwegian' (59 aligned documents, 20.9k links, 1.3M tokens)" href="download.php?f=EUbookshop/nb-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Dutch' (1,146 aligned documents, 0.5M links, 15.3M tokens)" href="download.php?f=EUbookshop/nl-pl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Polish-Dutch' (2 aligned documents, 0.2k links, 5.3k tokens)" href="download.php?f=EUbookshop/nl_BE-pl.xml.gz">ces</a></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="Polish-Portuguese (sample file)" href="EUbookshop/pl-pt_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Romanian (sample file)" href="EUbookshop/pl-ro_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Russian (sample file)" href="EUbookshop/pl-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Polish-Slovak (sample file)" href="EUbookshop/pl-sk_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Slovenian (sample file)" href="EUbookshop/pl-sl_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Albanian (sample file)" href="EUbookshop/pl-sq_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Serbian (sample file)" href="EUbookshop/pl-sr_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Swedish (sample file)" href="EUbookshop/pl-sv_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Swahili (sample file)" href="EUbookshop/pl-sw_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Polish-Ukrainian (sample file)" href="EUbookshop/pl-uk_sample.html">view</a></td><td><a rel="nofollow" title="Polish-Chinese (sample file)" href="EUbookshop/pl-zh_sample.html">view</a></td><th>pl</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/po.tar.gz">po</a></th>
@@ -806,21 +806,21 @@ Complete download (XML): <a href="download.php?f=EUbookshop/EUbookshop0.1.tar.gz
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'po-Danish' (18.8k tokens)" href="download.php?f=EUbookshop/xml/da-po.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'po-German' (16.0k tokens)" href="download.php?f=EUbookshop/xml/de-po.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'po-Danish' (18.8k tokens)" href="download.php?f=EUbookshop/da-po.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'po-German' (16.0k tokens)" href="download.php?f=EUbookshop/de-po.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'po-English' (2.8k tokens)" href="download.php?f=EUbookshop/xml/en-po.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'po-Spanish' (21.9k tokens)" href="download.php?f=EUbookshop/xml/es-po.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'po-French' (0 tokens)" href="download.php?f=EUbookshop/xml/fr-po.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'po-English' (2.8k tokens)" href="download.php?f=EUbookshop/en-po.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'po-Spanish' (21.9k tokens)" href="download.php?f=EUbookshop/es-po.xml.gz">ces</a></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'po-French' (0 tokens)" href="download.php?f=EUbookshop/fr-po.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'po-Hungarian' (17.9k tokens)" href="download.php?f=EUbookshop/xml/hu-po.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'po-Italian' (20.3k tokens)" href="download.php?f=EUbookshop/xml/it-po.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'po-Hungarian' (17.9k tokens)" href="download.php?f=EUbookshop/hu-po.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'po-Italian' (20.3k tokens)" href="download.php?f=EUbookshop/it-po.xml.gz">ces</a></td>
 <td></td>
 <th>po</th>
 <td></td>
@@ -829,133 +829,133 @@ Complete download (XML): <a href="download.php?f=EUbookshop/EUbookshop0.1.tar.gz
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'po-Dutch' (0 tokens)" href="download.php?f=EUbookshop/xml/nl-po.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'po-Dutch' (0 tokens)" href="download.php?f=EUbookshop/nl-po.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <th></th>
 <td><a rel="nofollow" title="po-Portuguese (sample file)" href="EUbookshop/po-pt_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a rel="nofollow" title="po-tc (sample file)" href="EUbookshop/po-tc_sample.html">view</a></td><td></td><td></td><td></td><th>po</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/pt.tar.gz">pt</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Arabic' (5 aligned documents, 0.1k links, 33.9k tokens)" href="download.php?f=EUbookshop/xml/ar-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Arabic' (5 aligned documents, 0.1k links, 33.9k tokens)" href="download.php?f=EUbookshop/ar-pt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Bulgarian' (696 aligned documents, 0.2M links, 11.7M tokens)" href="download.php?f=EUbookshop/xml/bg-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Bulgarian' (696 aligned documents, 0.2M links, 11.7M tokens)" href="download.php?f=EUbookshop/bg-pt.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Catalan' (31 aligned documents, 3.2k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/ca-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-cn' (20.0k tokens)" href="download.php?f=EUbookshop/xml/cn-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Czech' (1,124 aligned documents, 0.4M links, 31.8M tokens)" href="download.php?f=EUbookshop/xml/cs-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Welsh' (0.5k links, 22.4k tokens)" href="download.php?f=EUbookshop/xml/cy-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Danish' (5,945 aligned documents, 3.8M links, 321.3M tokens)" href="download.php?f=EUbookshop/xml/da-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (6,143 aligned documents, 4.1M links, 331.7M tokens)" href="download.php?f=EUbookshop/xml/de-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Greek' (5,851 aligned documents, 3.7M links, 349.3M tokens)" href="download.php?f=EUbookshop/xml/el-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (6,318 aligned documents, 4.4M links, 360.6M tokens)" href="download.php?f=EUbookshop/xml/en-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (6,201 aligned documents, 4.1M links, 350.3M tokens)" href="download.php?f=EUbookshop/xml/es-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Estonian' (1,103 aligned documents, 0.4M links, 16.4M tokens)" href="download.php?f=EUbookshop/xml/et-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Finnish' (3,946 aligned documents, 1.9M links, 141.1M tokens)" href="download.php?f=EUbookshop/xml/fi-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (6,240 aligned documents, 4.2M links, 176.0M tokens)" href="download.php?f=EUbookshop/xml/fr-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (2 aligned documents, 99 links, 2.5k tokens)" href="download.php?f=EUbookshop/xml/fr_BE-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Irish' (223 aligned documents, 0.1M links, 6.9M tokens)" href="download.php?f=EUbookshop/xml/ga-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Gaelic' (52 links, 3.0k tokens)" href="download.php?f=EUbookshop/xml/gd-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Croatian' (18 aligned documents, 2.9k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/hr-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hungarian' (1,109 aligned documents, 0.4M links, 29.8M tokens)" href="download.php?f=EUbookshop/xml/hu-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Icelandic' (48 aligned documents, 10.2k links, 0.6M tokens)" href="download.php?f=EUbookshop/xml/is-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (6,082 aligned documents, 4.2M links, 346.4M tokens)" href="download.php?f=EUbookshop/xml/it-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Japanese' (3 aligned documents, 0.1k links, 30.3k tokens)" href="download.php?f=EUbookshop/xml/ja-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Catalan' (31 aligned documents, 3.2k links, 0.2M tokens)" href="download.php?f=EUbookshop/ca-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-cn' (20.0k tokens)" href="download.php?f=EUbookshop/cn-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Czech' (1,124 aligned documents, 0.4M links, 31.8M tokens)" href="download.php?f=EUbookshop/cs-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Welsh' (0.5k links, 22.4k tokens)" href="download.php?f=EUbookshop/cy-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Danish' (5,945 aligned documents, 3.8M links, 321.3M tokens)" href="download.php?f=EUbookshop/da-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (6,143 aligned documents, 4.1M links, 331.7M tokens)" href="download.php?f=EUbookshop/de-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Greek' (5,851 aligned documents, 3.7M links, 349.3M tokens)" href="download.php?f=EUbookshop/el-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (6,318 aligned documents, 4.4M links, 360.6M tokens)" href="download.php?f=EUbookshop/en-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (6,201 aligned documents, 4.1M links, 350.3M tokens)" href="download.php?f=EUbookshop/es-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Estonian' (1,103 aligned documents, 0.4M links, 16.4M tokens)" href="download.php?f=EUbookshop/et-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Finnish' (3,946 aligned documents, 1.9M links, 141.1M tokens)" href="download.php?f=EUbookshop/fi-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (6,240 aligned documents, 4.2M links, 176.0M tokens)" href="download.php?f=EUbookshop/fr-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (2 aligned documents, 99 links, 2.5k tokens)" href="download.php?f=EUbookshop/fr_BE-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Irish' (223 aligned documents, 0.1M links, 6.9M tokens)" href="download.php?f=EUbookshop/ga-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Gaelic' (52 links, 3.0k tokens)" href="download.php?f=EUbookshop/gd-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Croatian' (18 aligned documents, 2.9k links, 0.2M tokens)" href="download.php?f=EUbookshop/hr-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Hungarian' (1,109 aligned documents, 0.4M links, 29.8M tokens)" href="download.php?f=EUbookshop/hu-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Icelandic' (48 aligned documents, 10.2k links, 0.6M tokens)" href="download.php?f=EUbookshop/is-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (6,082 aligned documents, 4.2M links, 346.4M tokens)" href="download.php?f=EUbookshop/it-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Japanese' (3 aligned documents, 0.1k links, 30.3k tokens)" href="download.php?f=EUbookshop/ja-pt.xml.gz">ces</a></td>
 <th>pt</th>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Luxembourgish' (3 aligned documents, 21.8k tokens)" href="download.php?f=EUbookshop/xml/lb-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Lithuanian' (1,102 aligned documents, 0.4M links, 30.4M tokens)" href="download.php?f=EUbookshop/xml/lt-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Latvian' (1,104 aligned documents, 0.4M links, 30.1M tokens)" href="download.php?f=EUbookshop/xml/lv-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Macedonian' (10 aligned documents, 1.2k links, 82.2k tokens)" href="download.php?f=EUbookshop/xml/mk-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Maltese' (874 aligned documents, 0.3M links, 20.9M tokens)" href="download.php?f=EUbookshop/xml/mt-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-BokmÃ¥l, Norwegian' (91 aligned documents, 26.1k links, 2.0M tokens)" href="download.php?f=EUbookshop/xml/nb-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (6,001 aligned documents, 4.1M links, 172.7M tokens)" href="download.php?f=EUbookshop/xml/nl-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (5 aligned documents, 0.8k links, 21.4k tokens)" href="download.php?f=EUbookshop/xml/nl_BE-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Polish' (1,143 aligned documents, 0.4M links, 32.6M tokens)" href="download.php?f=EUbookshop/xml/pl-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-po' (3 tokens)" href="download.php?f=EUbookshop/xml/po-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Luxembourgish' (3 aligned documents, 21.8k tokens)" href="download.php?f=EUbookshop/lb-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Lithuanian' (1,102 aligned documents, 0.4M links, 30.4M tokens)" href="download.php?f=EUbookshop/lt-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Latvian' (1,104 aligned documents, 0.4M links, 30.1M tokens)" href="download.php?f=EUbookshop/lv-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Macedonian' (10 aligned documents, 1.2k links, 82.2k tokens)" href="download.php?f=EUbookshop/mk-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Maltese' (874 aligned documents, 0.3M links, 20.9M tokens)" href="download.php?f=EUbookshop/mt-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-BokmÃ¥l, Norwegian' (91 aligned documents, 26.1k links, 2.0M tokens)" href="download.php?f=EUbookshop/nb-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (6,001 aligned documents, 4.1M links, 172.7M tokens)" href="download.php?f=EUbookshop/nl-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (5 aligned documents, 0.8k links, 21.4k tokens)" href="download.php?f=EUbookshop/nl_BE-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Polish' (1,143 aligned documents, 0.4M links, 32.6M tokens)" href="download.php?f=EUbookshop/pl-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-po' (3 tokens)" href="download.php?f=EUbookshop/po-pt.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Portuguese-Romanian (sample file)" href="EUbookshop/pt-ro_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Russian (sample file)" href="EUbookshop/pt-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Portuguese-Slovak (sample file)" href="EUbookshop/pt-sk_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Slovenian (sample file)" href="EUbookshop/pt-sl_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Albanian (sample file)" href="EUbookshop/pt-sq_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Serbian (sample file)" href="EUbookshop/pt-sr_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Swedish (sample file)" href="EUbookshop/pt-sv_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Swahili (sample file)" href="EUbookshop/pt-sw_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-tc (sample file)" href="EUbookshop/pt-tc_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Portuguese-Ukrainian (sample file)" href="EUbookshop/pt-uk_sample.html">view</a></td><td><a rel="nofollow" title="Portuguese-Chinese (sample file)" href="EUbookshop/pt-zh_sample.html">view</a></td><th>pt</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/ro.tar.gz">ro</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Arabic' (3 aligned documents, 0.1k links, 21.9k tokens)" href="download.php?f=EUbookshop/xml/ar-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Arabic' (3 aligned documents, 0.1k links, 21.9k tokens)" href="download.php?f=EUbookshop/ar-ro.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Bulgarian' (703 aligned documents, 0.2M links, 11.9M tokens)" href="download.php?f=EUbookshop/xml/bg-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Bosnian' (0.4k links, 72.2k tokens)" href="download.php?f=EUbookshop/xml/bs-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Catalan' (13 aligned documents, 0.8k links, 49.5k tokens)" href="download.php?f=EUbookshop/xml/ca-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Bulgarian' (703 aligned documents, 0.2M links, 11.9M tokens)" href="download.php?f=EUbookshop/bg-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Bosnian' (0.4k links, 72.2k tokens)" href="download.php?f=EUbookshop/bs-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Catalan' (13 aligned documents, 0.8k links, 49.5k tokens)" href="download.php?f=EUbookshop/ca-ro.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Czech' (710 aligned documents, 0.3M links, 24.0M tokens)" href="download.php?f=EUbookshop/xml/cs-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Czech' (710 aligned documents, 0.3M links, 24.0M tokens)" href="download.php?f=EUbookshop/cs-ro.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Danish' (687 aligned documents, 0.3M links, 23.0M tokens)" href="download.php?f=EUbookshop/xml/da-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-German' (709 aligned documents, 0.3M links, 23.1M tokens)" href="download.php?f=EUbookshop/xml/de-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Greek' (686 aligned documents, 0.3M links, 25.3M tokens)" href="download.php?f=EUbookshop/xml/el-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-English' (736 aligned documents, 0.4M links, 27.5M tokens)" href="download.php?f=EUbookshop/xml/en-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Spanish' (716 aligned documents, 0.3M links, 26.4M tokens)" href="download.php?f=EUbookshop/xml/es-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Estonian' (695 aligned documents, 0.3M links, 12.5M tokens)" href="download.php?f=EUbookshop/xml/et-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Finnish' (681 aligned documents, 0.3M links, 20.4M tokens)" href="download.php?f=EUbookshop/xml/fi-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-French' (705 aligned documents, 0.3M links, 10.9M tokens)" href="download.php?f=EUbookshop/xml/fr-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Danish' (687 aligned documents, 0.3M links, 23.0M tokens)" href="download.php?f=EUbookshop/da-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-German' (709 aligned documents, 0.3M links, 23.1M tokens)" href="download.php?f=EUbookshop/de-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Greek' (686 aligned documents, 0.3M links, 25.3M tokens)" href="download.php?f=EUbookshop/el-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-English' (736 aligned documents, 0.4M links, 27.5M tokens)" href="download.php?f=EUbookshop/en-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Spanish' (716 aligned documents, 0.3M links, 26.4M tokens)" href="download.php?f=EUbookshop/es-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Estonian' (695 aligned documents, 0.3M links, 12.5M tokens)" href="download.php?f=EUbookshop/et-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Finnish' (681 aligned documents, 0.3M links, 20.4M tokens)" href="download.php?f=EUbookshop/fi-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-French' (705 aligned documents, 0.3M links, 10.9M tokens)" href="download.php?f=EUbookshop/fr-ro.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Irish' (188 aligned documents, 72.7k links, 3.9M tokens)" href="download.php?f=EUbookshop/xml/ga-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Gaelic' (51 links, 3.4k tokens)" href="download.php?f=EUbookshop/xml/gd-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Croatian' (16 aligned documents, 3.7k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/hr-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Hungarian' (692 aligned documents, 0.3M links, 21.7M tokens)" href="download.php?f=EUbookshop/xml/hu-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Icelandic' (36 aligned documents, 7.5k links, 0.4M tokens)" href="download.php?f=EUbookshop/xml/is-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Italian' (712 aligned documents, 0.3M links, 25.5M tokens)" href="download.php?f=EUbookshop/xml/it-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Japanese' (2 aligned documents, 19.9k tokens)" href="download.php?f=EUbookshop/xml/ja-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Irish' (188 aligned documents, 72.7k links, 3.9M tokens)" href="download.php?f=EUbookshop/ga-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Gaelic' (51 links, 3.4k tokens)" href="download.php?f=EUbookshop/gd-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Croatian' (16 aligned documents, 3.7k links, 0.2M tokens)" href="download.php?f=EUbookshop/hr-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Hungarian' (692 aligned documents, 0.3M links, 21.7M tokens)" href="download.php?f=EUbookshop/hu-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Icelandic' (36 aligned documents, 7.5k links, 0.4M tokens)" href="download.php?f=EUbookshop/is-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Italian' (712 aligned documents, 0.3M links, 25.5M tokens)" href="download.php?f=EUbookshop/it-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Japanese' (2 aligned documents, 19.9k tokens)" href="download.php?f=EUbookshop/ja-ro.xml.gz">ces</a></td>
 <th>ro</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Lithuanian' (694 aligned documents, 0.3M links, 23.3M tokens)" href="download.php?f=EUbookshop/xml/lt-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Latvian' (695 aligned documents, 0.3M links, 23.2M tokens)" href="download.php?f=EUbookshop/xml/lv-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Macedonian' (11 aligned documents, 3.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/mk-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Maltese' (583 aligned documents, 0.2M links, 15.4M tokens)" href="download.php?f=EUbookshop/xml/mt-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-BokmÃ¥l, Norwegian' (53 aligned documents, 19.1k links, 1.3M tokens)" href="download.php?f=EUbookshop/xml/nb-ro.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Dutch' (687 aligned documents, 0.3M links, 12.5M tokens)" href="download.php?f=EUbookshop/xml/nl-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Lithuanian' (694 aligned documents, 0.3M links, 23.3M tokens)" href="download.php?f=EUbookshop/lt-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Latvian' (695 aligned documents, 0.3M links, 23.2M tokens)" href="download.php?f=EUbookshop/lv-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Macedonian' (11 aligned documents, 3.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/mk-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Maltese' (583 aligned documents, 0.2M links, 15.4M tokens)" href="download.php?f=EUbookshop/mt-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-BokmÃ¥l, Norwegian' (53 aligned documents, 19.1k links, 1.3M tokens)" href="download.php?f=EUbookshop/nb-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Dutch' (687 aligned documents, 0.3M links, 12.5M tokens)" href="download.php?f=EUbookshop/nl-ro.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Polish' (716 aligned documents, 0.4M links, 25.0M tokens)" href="download.php?f=EUbookshop/xml/pl-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Polish' (716 aligned documents, 0.4M links, 25.0M tokens)" href="download.php?f=EUbookshop/pl-ro.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Romanian-Portuguese' (696 aligned documents, 0.3M links, 25.3M tokens)" href="download.php?f=EUbookshop/xml/pt-ro.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Romanian-Portuguese' (696 aligned documents, 0.3M links, 25.3M tokens)" href="download.php?f=EUbookshop/pt-ro.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Romanian-Russian (sample file)" href="EUbookshop/ro-ru_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Romanian-Slovak (sample file)" href="EUbookshop/ro-sk_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Slovenian (sample file)" href="EUbookshop/ro-sl_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Albanian (sample file)" href="EUbookshop/ro-sq_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Serbian (sample file)" href="EUbookshop/ro-sr_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Swedish (sample file)" href="EUbookshop/ro-sv_sample.html">view</a></td><td><a rel="nofollow" title="Romanian-Swahili (sample file)" href="EUbookshop/ro-sw_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Romanian-Chinese (sample file)" href="EUbookshop/ro-zh_sample.html">view</a></td><th>ro</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/ru.tar.gz">ru</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Arabic' (13 aligned documents, 1.0k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/ar-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Belarusian' (0.2k tokens)" href="download.php?f=EUbookshop/xml/be-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Bulgarian' (18 aligned documents, 1.0k links, 56.8k tokens)" href="download.php?f=EUbookshop/xml/bg-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Arabic' (13 aligned documents, 1.0k links, 0.2M tokens)" href="download.php?f=EUbookshop/ar-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Belarusian' (0.2k tokens)" href="download.php?f=EUbookshop/be-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Bulgarian' (18 aligned documents, 1.0k links, 56.8k tokens)" href="download.php?f=EUbookshop/bg-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Catalan' (5.5k tokens)" href="download.php?f=EUbookshop/xml/ca-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Catalan' (5.5k tokens)" href="download.php?f=EUbookshop/ca-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Czech' (26 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/cs-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Czech' (26 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/cs-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Danish' (32 aligned documents, 5.5k links, 0.3M tokens)" href="download.php?f=EUbookshop/xml/da-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (44 aligned documents, 9.6k links, 0.5M tokens)" href="download.php?f=EUbookshop/xml/de-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Greek' (33 aligned documents, 7.8k links, 0.3M tokens)" href="download.php?f=EUbookshop/xml/el-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (109 aligned documents, 52.0k links, 2.8M tokens)" href="download.php?f=EUbookshop/xml/en-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (44 aligned documents, 8.9k links, 0.5M tokens)" href="download.php?f=EUbookshop/xml/es-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Estonian' (26 aligned documents, 2.0k links, 78.9k tokens)" href="download.php?f=EUbookshop/xml/et-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Finnish' (34 aligned documents, 6.7k links, 0.3M tokens)" href="download.php?f=EUbookshop/xml/fi-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (63 aligned documents, 16.8k links, 0.4M tokens)" href="download.php?f=EUbookshop/xml/fr-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Danish' (32 aligned documents, 5.5k links, 0.3M tokens)" href="download.php?f=EUbookshop/da-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-German' (44 aligned documents, 9.6k links, 0.5M tokens)" href="download.php?f=EUbookshop/de-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Greek' (33 aligned documents, 7.8k links, 0.3M tokens)" href="download.php?f=EUbookshop/el-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-English' (109 aligned documents, 52.0k links, 2.8M tokens)" href="download.php?f=EUbookshop/en-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Spanish' (44 aligned documents, 8.9k links, 0.5M tokens)" href="download.php?f=EUbookshop/es-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Estonian' (26 aligned documents, 2.0k links, 78.9k tokens)" href="download.php?f=EUbookshop/et-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Finnish' (34 aligned documents, 6.7k links, 0.3M tokens)" href="download.php?f=EUbookshop/fi-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-French' (63 aligned documents, 16.8k links, 0.4M tokens)" href="download.php?f=EUbookshop/fr-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Irish' (4 aligned documents, 0.2k links, 11.4k tokens)" href="download.php?f=EUbookshop/xml/ga-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Irish' (4 aligned documents, 0.2k links, 11.4k tokens)" href="download.php?f=EUbookshop/ga-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Croatian' (5 aligned documents, 1.0k links, 64.5k tokens)" href="download.php?f=EUbookshop/xml/hr-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Hungarian' (26 aligned documents, 2.3k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/hu-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Icelandic' (3 aligned documents, 0.5k links, 30.1k tokens)" href="download.php?f=EUbookshop/xml/is-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Italian' (37 aligned documents, 7.0k links, 0.4M tokens)" href="download.php?f=EUbookshop/xml/it-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Japanese' (2 aligned documents, 97 links, 8.8k tokens)" href="download.php?f=EUbookshop/xml/ja-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Croatian' (5 aligned documents, 1.0k links, 64.5k tokens)" href="download.php?f=EUbookshop/hr-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Hungarian' (26 aligned documents, 2.3k links, 0.1M tokens)" href="download.php?f=EUbookshop/hu-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Icelandic' (3 aligned documents, 0.5k links, 30.1k tokens)" href="download.php?f=EUbookshop/is-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Italian' (37 aligned documents, 7.0k links, 0.4M tokens)" href="download.php?f=EUbookshop/it-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Japanese' (2 aligned documents, 97 links, 8.8k tokens)" href="download.php?f=EUbookshop/ja-ru.xml.gz">ces</a></td>
 <th>ru</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Lithuanian' (25 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/lt-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Latvian' (26 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/lv-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Macedonian' (2 aligned documents, 12 links, 0.4k tokens)" href="download.php?f=EUbookshop/xml/mk-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Maltese' (19 aligned documents, 1.3k links, 96.9k tokens)" href="download.php?f=EUbookshop/xml/mt-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-BokmÃ¥l, Norwegian' (7 aligned documents, 0.5k links, 30.8k tokens)" href="download.php?f=EUbookshop/xml/nb-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Dutch' (35 aligned documents, 6.8k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/nl-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Lithuanian' (25 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/lt-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Latvian' (26 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/lv-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Macedonian' (2 aligned documents, 12 links, 0.4k tokens)" href="download.php?f=EUbookshop/mk-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Maltese' (19 aligned documents, 1.3k links, 96.9k tokens)" href="download.php?f=EUbookshop/mt-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-BokmÃ¥l, Norwegian' (7 aligned documents, 0.5k links, 30.8k tokens)" href="download.php?f=EUbookshop/nb-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Dutch' (35 aligned documents, 6.8k links, 0.2M tokens)" href="download.php?f=EUbookshop/nl-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Polish' (28 aligned documents, 2.9k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/pl-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Polish' (28 aligned documents, 2.9k links, 0.2M tokens)" href="download.php?f=EUbookshop/pl-ru.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Portuguese' (39 aligned documents, 6.9k links, 0.4M tokens)" href="download.php?f=EUbookshop/xml/pt-ru.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Russian-Romanian' (18 aligned documents, 1.4k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/ro-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Portuguese' (39 aligned documents, 6.9k links, 0.4M tokens)" href="download.php?f=EUbookshop/pt-ru.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Russian-Romanian' (18 aligned documents, 1.4k links, 0.1M tokens)" href="download.php?f=EUbookshop/ro-ru.xml.gz">ces</a></td>
 <th></th>
 <td></td><td><a rel="nofollow" title="Russian-Slovak (sample file)" href="EUbookshop/ru-sk_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Slovenian (sample file)" href="EUbookshop/ru-sl_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Albanian (sample file)" href="EUbookshop/ru-sq_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Serbian (sample file)" href="EUbookshop/ru-sr_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Swedish (sample file)" href="EUbookshop/ru-sv_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Swahili (sample file)" href="EUbookshop/ru-sw_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Russian-Ukrainian (sample file)" href="EUbookshop/ru-uk_sample.html">view</a></td><td><a rel="nofollow" title="Russian-Chinese (sample file)" href="EUbookshop/ru-zh_sample.html">view</a></td><th>ru</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/sh.tar.gz">sh</a></th>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'sh-Bosnian' (2 aligned documents, 0.3k links, 20.3k tokens)" href="download.php?f=EUbookshop/xml/bs-sh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'sh-Bosnian' (2 aligned documents, 0.3k links, 20.3k tokens)" href="download.php?f=EUbookshop/bs-sh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -963,7 +963,7 @@ Complete download (XML): <a href="download.php?f=EUbookshop/EUbookshop0.1.tar.gz
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'sh-English' (0.6k links, 24.2k tokens)" href="download.php?f=EUbookshop/xml/en-sh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'sh-English' (0.6k links, 24.2k tokens)" href="download.php?f=EUbookshop/en-sh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -971,7 +971,7 @@ Complete download (XML): <a href="download.php?f=EUbookshop/EUbookshop0.1.tar.gz
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'sh-Croatian' (0.5k links, 20.4k tokens)" href="download.php?f=EUbookshop/xml/hr-sh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'sh-Croatian' (0.5k links, 20.4k tokens)" href="download.php?f=EUbookshop/hr-sh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -980,7 +980,7 @@ Complete download (XML): <a href="download.php?f=EUbookshop/EUbookshop0.1.tar.gz
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'sh-Macedonian' (11.3k tokens)" href="download.php?f=EUbookshop/xml/mk-sh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'sh-Macedonian' (11.3k tokens)" href="download.php?f=EUbookshop/mk-sh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -993,270 +993,270 @@ Complete download (XML): <a href="download.php?f=EUbookshop/EUbookshop0.1.tar.gz
 <th></th>
 <td></td><td></td><td><a rel="nofollow" title="sh-Albanian (sample file)" href="EUbookshop/sh-sq_sample.html">view</a></td><td><a rel="nofollow" title="sh-Serbian (sample file)" href="EUbookshop/sh-sr_sample.html">view</a></td><td></td><td></td><td></td><td></td><td></td><td></td><th>sh</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/sk.tar.gz">sk</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Arabic' (4 aligned documents, 0.1k links, 27.9k tokens)" href="download.php?f=EUbookshop/xml/ar-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Arabic' (4 aligned documents, 0.1k links, 27.9k tokens)" href="download.php?f=EUbookshop/ar-sk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Bulgarian' (695 aligned documents, 0.2M links, 10.3M tokens)" href="download.php?f=EUbookshop/xml/bg-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Bosnian' (0.4k links, 62.0k tokens)" href="download.php?f=EUbookshop/xml/bs-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Catalan' (21 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/ca-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Bulgarian' (695 aligned documents, 0.2M links, 10.3M tokens)" href="download.php?f=EUbookshop/bg-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Bosnian' (0.4k links, 62.0k tokens)" href="download.php?f=EUbookshop/bs-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Catalan' (21 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/ca-sk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Czech' (1,140 aligned documents, 0.5M links, 30.5M tokens)" href="download.php?f=EUbookshop/xml/cs-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Welsh' (0.5k links, 21.3k tokens)" href="download.php?f=EUbookshop/xml/cy-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Danish' (1,099 aligned documents, 0.4M links, 28.4M tokens)" href="download.php?f=EUbookshop/xml/da-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-German' (1,122 aligned documents, 0.4M links, 29.4M tokens)" href="download.php?f=EUbookshop/xml/de-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Greek' (1,094 aligned documents, 0.4M links, 32.0M tokens)" href="download.php?f=EUbookshop/xml/el-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-English' (1,154 aligned documents, 0.5M links, 34.3M tokens)" href="download.php?f=EUbookshop/xml/en-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Spanish' (1,128 aligned documents, 0.4M links, 32.7M tokens)" href="download.php?f=EUbookshop/xml/es-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Estonian' (1,116 aligned documents, 0.4M links, 14.6M tokens)" href="download.php?f=EUbookshop/xml/et-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Finnish' (1,102 aligned documents, 0.4M links, 25.6M tokens)" href="download.php?f=EUbookshop/xml/fi-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-French' (1,119 aligned documents, 0.4M links, 13.6M tokens)" href="download.php?f=EUbookshop/xml/fr-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-French' (58 links, 1.9k tokens)" href="download.php?f=EUbookshop/xml/fr_BE-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Irish' (194 aligned documents, 76.2k links, 4.0M tokens)" href="download.php?f=EUbookshop/xml/ga-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Gaelic' (91 links, 3.4k tokens)" href="download.php?f=EUbookshop/xml/gd-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Croatian' (18 aligned documents, 4.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/hr-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Hungarian' (1,116 aligned documents, 0.4M links, 28.0M tokens)" href="download.php?f=EUbookshop/xml/hu-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Icelandic' (38 aligned documents, 8.5k links, 0.4M tokens)" href="download.php?f=EUbookshop/xml/is-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Italian' (1,127 aligned documents, 0.4M links, 32.0M tokens)" href="download.php?f=EUbookshop/xml/it-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Japanese' (3 aligned documents, 93 links, 26.4k tokens)" href="download.php?f=EUbookshop/xml/ja-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Czech' (1,140 aligned documents, 0.5M links, 30.5M tokens)" href="download.php?f=EUbookshop/cs-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Welsh' (0.5k links, 21.3k tokens)" href="download.php?f=EUbookshop/cy-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Danish' (1,099 aligned documents, 0.4M links, 28.4M tokens)" href="download.php?f=EUbookshop/da-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-German' (1,122 aligned documents, 0.4M links, 29.4M tokens)" href="download.php?f=EUbookshop/de-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Greek' (1,094 aligned documents, 0.4M links, 32.0M tokens)" href="download.php?f=EUbookshop/el-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-English' (1,154 aligned documents, 0.5M links, 34.3M tokens)" href="download.php?f=EUbookshop/en-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Spanish' (1,128 aligned documents, 0.4M links, 32.7M tokens)" href="download.php?f=EUbookshop/es-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Estonian' (1,116 aligned documents, 0.4M links, 14.6M tokens)" href="download.php?f=EUbookshop/et-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Finnish' (1,102 aligned documents, 0.4M links, 25.6M tokens)" href="download.php?f=EUbookshop/fi-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-French' (1,119 aligned documents, 0.4M links, 13.6M tokens)" href="download.php?f=EUbookshop/fr-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-French' (58 links, 1.9k tokens)" href="download.php?f=EUbookshop/fr_BE-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Irish' (194 aligned documents, 76.2k links, 4.0M tokens)" href="download.php?f=EUbookshop/ga-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Gaelic' (91 links, 3.4k tokens)" href="download.php?f=EUbookshop/gd-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Croatian' (18 aligned documents, 4.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/hr-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Hungarian' (1,116 aligned documents, 0.4M links, 28.0M tokens)" href="download.php?f=EUbookshop/hu-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Icelandic' (38 aligned documents, 8.5k links, 0.4M tokens)" href="download.php?f=EUbookshop/is-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Italian' (1,127 aligned documents, 0.4M links, 32.0M tokens)" href="download.php?f=EUbookshop/it-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Japanese' (3 aligned documents, 93 links, 26.4k tokens)" href="download.php?f=EUbookshop/ja-sk.xml.gz">ces</a></td>
 <th>sk</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Lithuanian' (1,117 aligned documents, 0.5M links, 29.1M tokens)" href="download.php?f=EUbookshop/xml/lt-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Latvian' (1,123 aligned documents, 0.5M links, 29.0M tokens)" href="download.php?f=EUbookshop/xml/lv-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Macedonian' (11 aligned documents, 3.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/mk-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Maltese' (886 aligned documents, 0.3M links, 19.7M tokens)" href="download.php?f=EUbookshop/xml/mt-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-BokmÃ¥l, Norwegian' (59 aligned documents, 21.5k links, 1.3M tokens)" href="download.php?f=EUbookshop/xml/nb-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Dutch' (1,102 aligned documents, 0.4M links, 14.7M tokens)" href="download.php?f=EUbookshop/xml/nl-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Dutch' (2 aligned documents, 0.2k links, 5.3k tokens)" href="download.php?f=EUbookshop/xml/nl_BE-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Polish' (1,130 aligned documents, 0.5M links, 30.4M tokens)" href="download.php?f=EUbookshop/xml/pl-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Lithuanian' (1,117 aligned documents, 0.5M links, 29.1M tokens)" href="download.php?f=EUbookshop/lt-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Latvian' (1,123 aligned documents, 0.5M links, 29.0M tokens)" href="download.php?f=EUbookshop/lv-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Macedonian' (11 aligned documents, 3.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/mk-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Maltese' (886 aligned documents, 0.3M links, 19.7M tokens)" href="download.php?f=EUbookshop/mt-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-BokmÃ¥l, Norwegian' (59 aligned documents, 21.5k links, 1.3M tokens)" href="download.php?f=EUbookshop/nb-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Dutch' (1,102 aligned documents, 0.4M links, 14.7M tokens)" href="download.php?f=EUbookshop/nl-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Dutch' (2 aligned documents, 0.2k links, 5.3k tokens)" href="download.php?f=EUbookshop/nl_BE-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Polish' (1,130 aligned documents, 0.5M links, 30.4M tokens)" href="download.php?f=EUbookshop/pl-sk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Portuguese' (1,111 aligned documents, 0.4M links, 31.5M tokens)" href="download.php?f=EUbookshop/xml/pt-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Romanian' (703 aligned documents, 0.3M links, 23.8M tokens)" href="download.php?f=EUbookshop/xml/ro-sk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovak-Russian' (25 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/ru-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Portuguese' (1,111 aligned documents, 0.4M links, 31.5M tokens)" href="download.php?f=EUbookshop/pt-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Romanian' (703 aligned documents, 0.3M links, 23.8M tokens)" href="download.php?f=EUbookshop/ro-sk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovak-Russian' (25 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/ru-sk.xml.gz">ces</a></td>
 <td></td>
 <th></th>
 <td><a rel="nofollow" title="Slovak-Slovenian (sample file)" href="EUbookshop/sk-sl_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Albanian (sample file)" href="EUbookshop/sk-sq_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Serbian (sample file)" href="EUbookshop/sk-sr_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Swedish (sample file)" href="EUbookshop/sk-sv_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Swahili (sample file)" href="EUbookshop/sk-sw_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Slovak-Ukrainian (sample file)" href="EUbookshop/sk-uk_sample.html">view</a></td><td><a rel="nofollow" title="Slovak-Chinese (sample file)" href="EUbookshop/sk-zh_sample.html">view</a></td><th>sk</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/sl.tar.gz">sl</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Arabic' (5 aligned documents, 0.2k links, 34.8k tokens)" href="download.php?f=EUbookshop/xml/ar-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Arabic' (5 aligned documents, 0.2k links, 34.8k tokens)" href="download.php?f=EUbookshop/ar-sl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Bulgarian' (687 aligned documents, 0.2M links, 9.4M tokens)" href="download.php?f=EUbookshop/xml/bg-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Bosnian' (2 aligned documents, 0.4k links, 69.8k tokens)" href="download.php?f=EUbookshop/xml/bs-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Catalan' (21 aligned documents, 1.8k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/ca-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Bulgarian' (687 aligned documents, 0.2M links, 9.4M tokens)" href="download.php?f=EUbookshop/bg-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Bosnian' (2 aligned documents, 0.4k links, 69.8k tokens)" href="download.php?f=EUbookshop/bs-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Catalan' (21 aligned documents, 1.8k links, 0.1M tokens)" href="download.php?f=EUbookshop/ca-sl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Czech' (1,111 aligned documents, 0.4M links, 27.9M tokens)" href="download.php?f=EUbookshop/xml/cs-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Welsh' (0.5k links, 21.5k tokens)" href="download.php?f=EUbookshop/xml/cy-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Danish' (1,088 aligned documents, 0.4M links, 26.9M tokens)" href="download.php?f=EUbookshop/xml/da-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-German' (1,108 aligned documents, 0.4M links, 27.3M tokens)" href="download.php?f=EUbookshop/xml/de-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Greek' (1,079 aligned documents, 0.3M links, 29.8M tokens)" href="download.php?f=EUbookshop/xml/el-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-English' (1,141 aligned documents, 0.4M links, 31.2M tokens)" href="download.php?f=EUbookshop/xml/en-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Spanish' (1,105 aligned documents, 0.4M links, 29.5M tokens)" href="download.php?f=EUbookshop/xml/es-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Estonian' (1,103 aligned documents, 0.4M links, 13.4M tokens)" href="download.php?f=EUbookshop/xml/et-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Finnish' (1,092 aligned documents, 0.4M links, 24.0M tokens)" href="download.php?f=EUbookshop/xml/fi-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-French' (1,107 aligned documents, 0.4M links, 12.5M tokens)" href="download.php?f=EUbookshop/xml/fr-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-French' (63 links, 1.3k tokens)" href="download.php?f=EUbookshop/xml/fr_BE-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Irish' (195 aligned documents, 84.6k links, 4.0M tokens)" href="download.php?f=EUbookshop/xml/ga-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Gaelic' (3.0k tokens)" href="download.php?f=EUbookshop/xml/gd-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Croatian' (19 aligned documents, 4.3k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/hr-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Hungarian' (1,098 aligned documents, 0.4M links, 26.0M tokens)" href="download.php?f=EUbookshop/xml/hu-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Icelandic' (38 aligned documents, 8.3k links, 0.4M tokens)" href="download.php?f=EUbookshop/xml/is-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Italian' (1,105 aligned documents, 0.4M links, 29.5M tokens)" href="download.php?f=EUbookshop/xml/it-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Japanese' (3 aligned documents, 79 links, 25.9k tokens)" href="download.php?f=EUbookshop/xml/ja-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Czech' (1,111 aligned documents, 0.4M links, 27.9M tokens)" href="download.php?f=EUbookshop/cs-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Welsh' (0.5k links, 21.5k tokens)" href="download.php?f=EUbookshop/cy-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Danish' (1,088 aligned documents, 0.4M links, 26.9M tokens)" href="download.php?f=EUbookshop/da-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-German' (1,108 aligned documents, 0.4M links, 27.3M tokens)" href="download.php?f=EUbookshop/de-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Greek' (1,079 aligned documents, 0.3M links, 29.8M tokens)" href="download.php?f=EUbookshop/el-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-English' (1,141 aligned documents, 0.4M links, 31.2M tokens)" href="download.php?f=EUbookshop/en-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Spanish' (1,105 aligned documents, 0.4M links, 29.5M tokens)" href="download.php?f=EUbookshop/es-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Estonian' (1,103 aligned documents, 0.4M links, 13.4M tokens)" href="download.php?f=EUbookshop/et-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Finnish' (1,092 aligned documents, 0.4M links, 24.0M tokens)" href="download.php?f=EUbookshop/fi-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-French' (1,107 aligned documents, 0.4M links, 12.5M tokens)" href="download.php?f=EUbookshop/fr-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-French' (63 links, 1.3k tokens)" href="download.php?f=EUbookshop/fr_BE-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Irish' (195 aligned documents, 84.6k links, 4.0M tokens)" href="download.php?f=EUbookshop/ga-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Gaelic' (3.0k tokens)" href="download.php?f=EUbookshop/gd-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Croatian' (19 aligned documents, 4.3k links, 0.2M tokens)" href="download.php?f=EUbookshop/hr-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Hungarian' (1,098 aligned documents, 0.4M links, 26.0M tokens)" href="download.php?f=EUbookshop/hu-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Icelandic' (38 aligned documents, 8.3k links, 0.4M tokens)" href="download.php?f=EUbookshop/is-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Italian' (1,105 aligned documents, 0.4M links, 29.5M tokens)" href="download.php?f=EUbookshop/it-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Japanese' (3 aligned documents, 79 links, 25.9k tokens)" href="download.php?f=EUbookshop/ja-sl.xml.gz">ces</a></td>
 <th>sl</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Lithuanian' (1,100 aligned documents, 0.4M links, 26.7M tokens)" href="download.php?f=EUbookshop/xml/lt-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Latvian' (1,111 aligned documents, 0.4M links, 26.9M tokens)" href="download.php?f=EUbookshop/xml/lv-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Macedonian' (12 aligned documents, 3.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/mk-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Maltese' (883 aligned documents, 0.3M links, 19.5M tokens)" href="download.php?f=EUbookshop/xml/mt-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-BokmÃ¥l, Norwegian' (59 aligned documents, 21.6k links, 1.3M tokens)" href="download.php?f=EUbookshop/xml/nb-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Dutch' (1,091 aligned documents, 0.4M links, 13.5M tokens)" href="download.php?f=EUbookshop/xml/nl-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Dutch' (2 aligned documents, 0.2k links, 4.6k tokens)" href="download.php?f=EUbookshop/xml/nl_BE-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Polish' (1,113 aligned documents, 0.4M links, 28.1M tokens)" href="download.php?f=EUbookshop/xml/pl-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Lithuanian' (1,100 aligned documents, 0.4M links, 26.7M tokens)" href="download.php?f=EUbookshop/lt-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Latvian' (1,111 aligned documents, 0.4M links, 26.9M tokens)" href="download.php?f=EUbookshop/lv-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Macedonian' (12 aligned documents, 3.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/mk-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Maltese' (883 aligned documents, 0.3M links, 19.5M tokens)" href="download.php?f=EUbookshop/mt-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-BokmÃ¥l, Norwegian' (59 aligned documents, 21.6k links, 1.3M tokens)" href="download.php?f=EUbookshop/nb-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Dutch' (1,091 aligned documents, 0.4M links, 13.5M tokens)" href="download.php?f=EUbookshop/nl-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Dutch' (2 aligned documents, 0.2k links, 4.6k tokens)" href="download.php?f=EUbookshop/nl_BE-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Polish' (1,113 aligned documents, 0.4M links, 28.1M tokens)" href="download.php?f=EUbookshop/pl-sl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Portuguese' (1,093 aligned documents, 0.4M links, 29.1M tokens)" href="download.php?f=EUbookshop/xml/pt-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Romanian' (693 aligned documents, 0.3M links, 22.1M tokens)" href="download.php?f=EUbookshop/xml/ro-sl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Russian' (26 aligned documents, 1.8k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/ru-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Portuguese' (1,093 aligned documents, 0.4M links, 29.1M tokens)" href="download.php?f=EUbookshop/pt-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Romanian' (693 aligned documents, 0.3M links, 22.1M tokens)" href="download.php?f=EUbookshop/ro-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Russian' (26 aligned documents, 1.8k links, 0.1M tokens)" href="download.php?f=EUbookshop/ru-sl.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Slovak' (1,107 aligned documents, 0.4M links, 27.4M tokens)" href="download.php?f=EUbookshop/xml/sk-sl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Slovenian-Slovak' (1,107 aligned documents, 0.4M links, 27.4M tokens)" href="download.php?f=EUbookshop/sk-sl.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Slovenian-Albanian (sample file)" href="EUbookshop/sl-sq_sample.html">view</a></td><td><a rel="nofollow" title="Slovenian-Serbian (sample file)" href="EUbookshop/sl-sr_sample.html">view</a></td><td><a rel="nofollow" title="Slovenian-Swedish (sample file)" href="EUbookshop/sl-sv_sample.html">view</a></td><td><a rel="nofollow" title="Slovenian-Swahili (sample file)" href="EUbookshop/sl-sw_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Slovenian-Ukrainian (sample file)" href="EUbookshop/sl-uk_sample.html">view</a></td><td><a rel="nofollow" title="Slovenian-Chinese (sample file)" href="EUbookshop/sl-zh_sample.html">view</a></td><th>sl</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/sq.tar.gz">sq</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Bulgarian' (4 aligned documents, 1.8k links, 57.7k tokens)" href="download.php?f=EUbookshop/xml/bg-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Bosnian' (5 aligned documents, 0.7k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/bs-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Bulgarian' (4 aligned documents, 1.8k links, 57.7k tokens)" href="download.php?f=EUbookshop/bg-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Bosnian' (5 aligned documents, 0.7k links, 0.1M tokens)" href="download.php?f=EUbookshop/bs-sq.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Czech' (4 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/cs-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Czech' (4 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/cs-sq.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Danish' (3 aligned documents, 17 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/da-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-German' (4 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/de-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Greek' (4 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/el-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-English' (8 aligned documents, 2.4k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/en-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Spanish' (4 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/es-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Estonian' (4 aligned documents, 2.2k links, 57.7k tokens)" href="download.php?f=EUbookshop/xml/et-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Finnish' (4 aligned documents, 2.3k links, 98.0k tokens)" href="download.php?f=EUbookshop/xml/fi-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-French' (4 aligned documents, 2.0k links, 57.7k tokens)" href="download.php?f=EUbookshop/xml/fr-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Danish' (3 aligned documents, 17 links, 0.5k tokens)" href="download.php?f=EUbookshop/da-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-German' (4 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/de-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Greek' (4 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/el-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-English' (8 aligned documents, 2.4k links, 0.2M tokens)" href="download.php?f=EUbookshop/en-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Spanish' (4 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/es-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Estonian' (4 aligned documents, 2.2k links, 57.7k tokens)" href="download.php?f=EUbookshop/et-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Finnish' (4 aligned documents, 2.3k links, 98.0k tokens)" href="download.php?f=EUbookshop/fi-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-French' (4 aligned documents, 2.0k links, 57.7k tokens)" href="download.php?f=EUbookshop/fr-sq.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Irish' (4 links, 0.2k tokens)" href="download.php?f=EUbookshop/xml/ga-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Irish' (4 links, 0.2k tokens)" href="download.php?f=EUbookshop/ga-sq.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Croatian' (6 aligned documents, 2.5k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/hr-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Hungarian' (4 aligned documents, 0.1k links, 7.5k tokens)" href="download.php?f=EUbookshop/xml/hu-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Croatian' (6 aligned documents, 2.5k links, 0.1M tokens)" href="download.php?f=EUbookshop/hr-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Hungarian' (4 aligned documents, 0.1k links, 7.5k tokens)" href="download.php?f=EUbookshop/hu-sq.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Italian' (4 aligned documents, 0.1k links, 7.8k tokens)" href="download.php?f=EUbookshop/xml/it-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Japanese' (88 tokens)" href="download.php?f=EUbookshop/xml/ja-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Italian' (4 aligned documents, 0.1k links, 7.8k tokens)" href="download.php?f=EUbookshop/it-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Japanese' (88 tokens)" href="download.php?f=EUbookshop/ja-sq.xml.gz">ces</a></td>
 <th>sq</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Lithuanian' (4 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/lt-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Latvian' (4 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/lv-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Macedonian' (5 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/mk-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Maltese' (3 aligned documents, 22 links, 0.6k tokens)" href="download.php?f=EUbookshop/xml/mt-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-BokmÃ¥l, Norwegian' (4 aligned documents, 1.5k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/nb-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Dutch' (4 aligned documents, 2.2k links, 57.7k tokens)" href="download.php?f=EUbookshop/xml/nl-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Lithuanian' (4 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/lt-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Latvian' (4 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/lv-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Macedonian' (5 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/mk-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Maltese' (3 aligned documents, 22 links, 0.6k tokens)" href="download.php?f=EUbookshop/mt-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-BokmÃ¥l, Norwegian' (4 aligned documents, 1.5k links, 0.1M tokens)" href="download.php?f=EUbookshop/nb-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Dutch' (4 aligned documents, 2.2k links, 57.7k tokens)" href="download.php?f=EUbookshop/nl-sq.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Polish' (4 aligned documents, 2.2k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/pl-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Polish' (4 aligned documents, 2.2k links, 0.1M tokens)" href="download.php?f=EUbookshop/pl-sq.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Portuguese' (3 aligned documents, 19 links, 0.6k tokens)" href="download.php?f=EUbookshop/xml/pt-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Romanian' (4 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/ro-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Russian' (3 aligned documents, 12 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/ru-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-sh' (2 aligned documents, 0.7k links, 31.0k tokens)" href="download.php?f=EUbookshop/xml/sh-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Slovak' (4 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/sk-sq.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Albanian-Slovenian' (5 aligned documents, 2.2k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/sl-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Portuguese' (3 aligned documents, 19 links, 0.6k tokens)" href="download.php?f=EUbookshop/pt-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Romanian' (4 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/ro-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Russian' (3 aligned documents, 12 links, 0.5k tokens)" href="download.php?f=EUbookshop/ru-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-sh' (2 aligned documents, 0.7k links, 31.0k tokens)" href="download.php?f=EUbookshop/sh-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Slovak' (4 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/sk-sq.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Albanian-Slovenian' (5 aligned documents, 2.2k links, 0.1M tokens)" href="download.php?f=EUbookshop/sl-sq.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Albanian-Serbian (sample file)" href="EUbookshop/sq-sr_sample.html">view</a></td><td><a rel="nofollow" title="Albanian-Swedish (sample file)" href="EUbookshop/sq-sv_sample.html">view</a></td><td><a rel="nofollow" title="Albanian-Swahili (sample file)" href="EUbookshop/sq-sw_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Albanian-Chinese (sample file)" href="EUbookshop/sq-zh_sample.html">view</a></td><th>sq</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/sr.tar.gz">sr</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Bulgarian' (4 aligned documents, 1.8k links, 48.2k tokens)" href="download.php?f=EUbookshop/xml/bg-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Bosnian' (4 aligned documents, 0.6k links, 84.1k tokens)" href="download.php?f=EUbookshop/xml/bs-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Bulgarian' (4 aligned documents, 1.8k links, 48.2k tokens)" href="download.php?f=EUbookshop/bg-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Bosnian' (4 aligned documents, 0.6k links, 84.1k tokens)" href="download.php?f=EUbookshop/bs-sr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Czech' (4 aligned documents, 1.9k links, 96.4k tokens)" href="download.php?f=EUbookshop/xml/cs-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Czech' (4 aligned documents, 1.9k links, 96.4k tokens)" href="download.php?f=EUbookshop/cs-sr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Danish' (3 aligned documents, 5 links, 0.4k tokens)" href="download.php?f=EUbookshop/xml/da-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-German' (4 aligned documents, 1.7k links, 99.9k tokens)" href="download.php?f=EUbookshop/xml/de-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Greek' (4 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/el-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-English' (6 aligned documents, 1.7k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/en-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Spanish' (4 aligned documents, 1.8k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/es-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Estonian' (4 aligned documents, 1.8k links, 48.2k tokens)" href="download.php?f=EUbookshop/xml/et-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Finnish' (4 aligned documents, 2.0k links, 88.6k tokens)" href="download.php?f=EUbookshop/xml/fi-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-French' (4 aligned documents, 1.8k links, 48.2k tokens)" href="download.php?f=EUbookshop/xml/fr-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Danish' (3 aligned documents, 5 links, 0.4k tokens)" href="download.php?f=EUbookshop/da-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-German' (4 aligned documents, 1.7k links, 99.9k tokens)" href="download.php?f=EUbookshop/de-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Greek' (4 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/el-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-English' (6 aligned documents, 1.7k links, 0.1M tokens)" href="download.php?f=EUbookshop/en-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Spanish' (4 aligned documents, 1.8k links, 0.1M tokens)" href="download.php?f=EUbookshop/es-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Estonian' (4 aligned documents, 1.8k links, 48.2k tokens)" href="download.php?f=EUbookshop/et-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Finnish' (4 aligned documents, 2.0k links, 88.6k tokens)" href="download.php?f=EUbookshop/fi-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-French' (4 aligned documents, 1.8k links, 48.2k tokens)" href="download.php?f=EUbookshop/fr-sr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Irish' (0.1k tokens)" href="download.php?f=EUbookshop/xml/ga-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Irish' (0.1k tokens)" href="download.php?f=EUbookshop/ga-sr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Croatian' (5 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/hr-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Hungarian' (4 aligned documents, 81 links, 5.9k tokens)" href="download.php?f=EUbookshop/xml/hu-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Croatian' (5 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/hr-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Hungarian' (4 aligned documents, 81 links, 5.9k tokens)" href="download.php?f=EUbookshop/hu-sr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Italian' (4 aligned documents, 56 links, 6.3k tokens)" href="download.php?f=EUbookshop/xml/it-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Japanese' (14 tokens)" href="download.php?f=EUbookshop/xml/ja-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Italian' (4 aligned documents, 56 links, 6.3k tokens)" href="download.php?f=EUbookshop/it-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Japanese' (14 tokens)" href="download.php?f=EUbookshop/ja-sr.xml.gz">ces</a></td>
 <th>sr</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Lithuanian' (4 aligned documents, 1.8k links, 95.6k tokens)" href="download.php?f=EUbookshop/xml/lt-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Latvian' (4 aligned documents, 1.5k links, 92.2k tokens)" href="download.php?f=EUbookshop/xml/lv-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Macedonian' (5 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/mk-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Maltese' (3 aligned documents, 9 links, 0.4k tokens)" href="download.php?f=EUbookshop/xml/mt-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-BokmÃ¥l, Norwegian' (4 aligned documents, 1.4k links, 92.6k tokens)" href="download.php?f=EUbookshop/xml/nb-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Dutch' (4 aligned documents, 1.9k links, 48.2k tokens)" href="download.php?f=EUbookshop/xml/nl-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Lithuanian' (4 aligned documents, 1.8k links, 95.6k tokens)" href="download.php?f=EUbookshop/lt-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Latvian' (4 aligned documents, 1.5k links, 92.2k tokens)" href="download.php?f=EUbookshop/lv-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Macedonian' (5 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/mk-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Maltese' (3 aligned documents, 9 links, 0.4k tokens)" href="download.php?f=EUbookshop/mt-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-BokmÃ¥l, Norwegian' (4 aligned documents, 1.4k links, 92.6k tokens)" href="download.php?f=EUbookshop/nb-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Dutch' (4 aligned documents, 1.9k links, 48.2k tokens)" href="download.php?f=EUbookshop/nl-sr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Polish' (4 aligned documents, 2.0k links, 98.3k tokens)" href="download.php?f=EUbookshop/xml/pl-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Polish' (4 aligned documents, 2.0k links, 98.3k tokens)" href="download.php?f=EUbookshop/pl-sr.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Portuguese' (3 aligned documents, 8 links, 0.4k tokens)" href="download.php?f=EUbookshop/xml/pt-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Romanian' (4 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/ro-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Russian' (3 aligned documents, 9 links, 0.4k tokens)" href="download.php?f=EUbookshop/xml/ru-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-sh' (2 aligned documents, 0.3k links, 20.7k tokens)" href="download.php?f=EUbookshop/xml/sh-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Slovak' (4 aligned documents, 1.8k links, 93.6k tokens)" href="download.php?f=EUbookshop/xml/sk-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Slovenian' (5 aligned documents, 1.9k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/sl-sr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Serbian-Albanian' (7 aligned documents, 2.3k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/sq-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Portuguese' (3 aligned documents, 8 links, 0.4k tokens)" href="download.php?f=EUbookshop/pt-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Romanian' (4 aligned documents, 2.0k links, 0.1M tokens)" href="download.php?f=EUbookshop/ro-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Russian' (3 aligned documents, 9 links, 0.4k tokens)" href="download.php?f=EUbookshop/ru-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-sh' (2 aligned documents, 0.3k links, 20.7k tokens)" href="download.php?f=EUbookshop/sh-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Slovak' (4 aligned documents, 1.8k links, 93.6k tokens)" href="download.php?f=EUbookshop/sk-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Slovenian' (5 aligned documents, 1.9k links, 0.1M tokens)" href="download.php?f=EUbookshop/sl-sr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Serbian-Albanian' (7 aligned documents, 2.3k links, 0.1M tokens)" href="download.php?f=EUbookshop/sq-sr.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Serbian-Swedish (sample file)" href="EUbookshop/sr-sv_sample.html">view</a></td><td><a rel="nofollow" title="Serbian-Swahili (sample file)" href="EUbookshop/sr-sw_sample.html">view</a></td><td></td><td></td><td></td><td><a rel="nofollow" title="Serbian-Chinese (sample file)" href="EUbookshop/sr-zh_sample.html">view</a></td><th>sr</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/sv.tar.gz">sv</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Arabic' (5 aligned documents, 0.1k links, 28.6k tokens)" href="download.php?f=EUbookshop/xml/ar-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Arabic' (5 aligned documents, 0.1k links, 28.6k tokens)" href="download.php?f=EUbookshop/ar-sv.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Bulgarian' (689 aligned documents, 0.2M links, 10.0M tokens)" href="download.php?f=EUbookshop/xml/bg-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Bosnian' (0.4k links, 63.9k tokens)" href="download.php?f=EUbookshop/xml/bs-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Catalan' (27 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/ca-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Bulgarian' (689 aligned documents, 0.2M links, 10.0M tokens)" href="download.php?f=EUbookshop/bg-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Bosnian' (0.4k links, 63.9k tokens)" href="download.php?f=EUbookshop/bs-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Catalan' (27 aligned documents, 2.1k links, 0.1M tokens)" href="download.php?f=EUbookshop/ca-sv.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Czech' (1,106 aligned documents, 0.4M links, 28.4M tokens)" href="download.php?f=EUbookshop/xml/cs-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Welsh' (0.5k links, 21.2k tokens)" href="download.php?f=EUbookshop/xml/cy-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Danish' (3,896 aligned documents, 1.9M links, 139.0M tokens)" href="download.php?f=EUbookshop/xml/da-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-German' (3,955 aligned documents, 1.9M links, 140.6M tokens)" href="download.php?f=EUbookshop/xml/de-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Greek' (3,831 aligned documents, 1.6M links, 152.3M tokens)" href="download.php?f=EUbookshop/xml/el-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (4,006 aligned documents, 2.0M links, 156.2M tokens)" href="download.php?f=EUbookshop/xml/en-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Spanish' (3,941 aligned documents, 1.8M links, 151.6M tokens)" href="download.php?f=EUbookshop/xml/es-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Estonian' (1,095 aligned documents, 0.4M links, 13.6M tokens)" href="download.php?f=EUbookshop/xml/et-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Finnish' (3,925 aligned documents, 2.0M links, 127.6M tokens)" href="download.php?f=EUbookshop/xml/fi-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (3,970 aligned documents, 1.9M links, 68.7M tokens)" href="download.php?f=EUbookshop/xml/fr-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (2 aligned documents, 89 links, 2.3k tokens)" href="download.php?f=EUbookshop/xml/fr_BE-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Irish' (207 aligned documents, 95.7k links, 5.2M tokens)" href="download.php?f=EUbookshop/xml/ga-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Gaelic' (36 links, 3.4k tokens)" href="download.php?f=EUbookshop/xml/gd-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Croatian' (18 aligned documents, 4.2k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/hr-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Hungarian' (1,094 aligned documents, 0.4M links, 26.4M tokens)" href="download.php?f=EUbookshop/xml/hu-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Icelandic' (48 aligned documents, 11.3k links, 0.5M tokens)" href="download.php?f=EUbookshop/xml/is-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Italian' (3,956 aligned documents, 1.9M links, 153.4M tokens)" href="download.php?f=EUbookshop/xml/it-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Japanese' (2 aligned documents, 79 links, 8.2k tokens)" href="download.php?f=EUbookshop/xml/ja-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Czech' (1,106 aligned documents, 0.4M links, 28.4M tokens)" href="download.php?f=EUbookshop/cs-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Welsh' (0.5k links, 21.2k tokens)" href="download.php?f=EUbookshop/cy-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Danish' (3,896 aligned documents, 1.9M links, 139.0M tokens)" href="download.php?f=EUbookshop/da-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-German' (3,955 aligned documents, 1.9M links, 140.6M tokens)" href="download.php?f=EUbookshop/de-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Greek' (3,831 aligned documents, 1.6M links, 152.3M tokens)" href="download.php?f=EUbookshop/el-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (4,006 aligned documents, 2.0M links, 156.2M tokens)" href="download.php?f=EUbookshop/en-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Spanish' (3,941 aligned documents, 1.8M links, 151.6M tokens)" href="download.php?f=EUbookshop/es-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Estonian' (1,095 aligned documents, 0.4M links, 13.6M tokens)" href="download.php?f=EUbookshop/et-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Finnish' (3,925 aligned documents, 2.0M links, 127.6M tokens)" href="download.php?f=EUbookshop/fi-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (3,970 aligned documents, 1.9M links, 68.7M tokens)" href="download.php?f=EUbookshop/fr-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (2 aligned documents, 89 links, 2.3k tokens)" href="download.php?f=EUbookshop/fr_BE-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Irish' (207 aligned documents, 95.7k links, 5.2M tokens)" href="download.php?f=EUbookshop/ga-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Gaelic' (36 links, 3.4k tokens)" href="download.php?f=EUbookshop/gd-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Croatian' (18 aligned documents, 4.2k links, 0.2M tokens)" href="download.php?f=EUbookshop/hr-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Hungarian' (1,094 aligned documents, 0.4M links, 26.4M tokens)" href="download.php?f=EUbookshop/hu-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Icelandic' (48 aligned documents, 11.3k links, 0.5M tokens)" href="download.php?f=EUbookshop/is-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Italian' (3,956 aligned documents, 1.9M links, 153.4M tokens)" href="download.php?f=EUbookshop/it-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Japanese' (2 aligned documents, 79 links, 8.2k tokens)" href="download.php?f=EUbookshop/ja-sv.xml.gz">ces</a></td>
 <th>sv</th>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Luxembourgish' (2 aligned documents, 0.6k tokens)" href="download.php?f=EUbookshop/xml/lb-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Lithuanian' (1,092 aligned documents, 0.4M links, 27.3M tokens)" href="download.php?f=EUbookshop/xml/lt-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Latvian' (1,099 aligned documents, 0.4M links, 27.2M tokens)" href="download.php?f=EUbookshop/xml/lv-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Macedonian' (11 aligned documents, 3.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/xml/mk-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Maltese' (877 aligned documents, 0.3M links, 19.3M tokens)" href="download.php?f=EUbookshop/xml/mt-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-BokmÃ¥l, Norwegian' (94 aligned documents, 29.4k links, 1.9M tokens)" href="download.php?f=EUbookshop/xml/nb-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Dutch' (3,934 aligned documents, 2.0M links, 69.1M tokens)" href="download.php?f=EUbookshop/xml/nl-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Dutch' (5 aligned documents, 0.7k links, 18.1k tokens)" href="download.php?f=EUbookshop/xml/nl_BE-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Polish' (1,119 aligned documents, 0.4M links, 28.8M tokens)" href="download.php?f=EUbookshop/xml/pl-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Luxembourgish' (2 aligned documents, 0.6k tokens)" href="download.php?f=EUbookshop/lb-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Lithuanian' (1,092 aligned documents, 0.4M links, 27.3M tokens)" href="download.php?f=EUbookshop/lt-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Latvian' (1,099 aligned documents, 0.4M links, 27.2M tokens)" href="download.php?f=EUbookshop/lv-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Macedonian' (11 aligned documents, 3.1k links, 0.2M tokens)" href="download.php?f=EUbookshop/mk-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Maltese' (877 aligned documents, 0.3M links, 19.3M tokens)" href="download.php?f=EUbookshop/mt-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-BokmÃ¥l, Norwegian' (94 aligned documents, 29.4k links, 1.9M tokens)" href="download.php?f=EUbookshop/nb-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Dutch' (3,934 aligned documents, 2.0M links, 69.1M tokens)" href="download.php?f=EUbookshop/nl-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Dutch' (5 aligned documents, 0.7k links, 18.1k tokens)" href="download.php?f=EUbookshop/nl_BE-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Polish' (1,119 aligned documents, 0.4M links, 28.8M tokens)" href="download.php?f=EUbookshop/pl-sv.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Portuguese' (3,923 aligned documents, 1.9M links, 152.4M tokens)" href="download.php?f=EUbookshop/xml/pt-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Romanian' (688 aligned documents, 0.3M links, 22.6M tokens)" href="download.php?f=EUbookshop/xml/ro-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Russian' (35 aligned documents, 6.3k links, 0.3M tokens)" href="download.php?f=EUbookshop/xml/ru-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Portuguese' (3,923 aligned documents, 1.9M links, 152.4M tokens)" href="download.php?f=EUbookshop/pt-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Romanian' (688 aligned documents, 0.3M links, 22.6M tokens)" href="download.php?f=EUbookshop/ro-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Russian' (35 aligned documents, 6.3k links, 0.3M tokens)" href="download.php?f=EUbookshop/ru-sv.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Slovak' (1,101 aligned documents, 0.4M links, 28.2M tokens)" href="download.php?f=EUbookshop/xml/sk-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Slovenian' (1,089 aligned documents, 0.4M links, 26.1M tokens)" href="download.php?f=EUbookshop/xml/sl-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Albanian' (4 aligned documents, 2.2k links, 0.1M tokens)" href="download.php?f=EUbookshop/xml/sq-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Serbian' (4 aligned documents, 1.8k links, 95.5k tokens)" href="download.php?f=EUbookshop/xml/sr-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Slovak' (1,101 aligned documents, 0.4M links, 28.2M tokens)" href="download.php?f=EUbookshop/sk-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Slovenian' (1,089 aligned documents, 0.4M links, 26.1M tokens)" href="download.php?f=EUbookshop/sl-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Albanian' (4 aligned documents, 2.2k links, 0.1M tokens)" href="download.php?f=EUbookshop/sq-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Serbian' (4 aligned documents, 1.8k links, 95.5k tokens)" href="download.php?f=EUbookshop/sr-sv.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Swedish-Swahili (sample file)" href="EUbookshop/sv-sw_sample.html">view</a></td><td></td><td></td><td><a rel="nofollow" title="Swedish-Ukrainian (sample file)" href="EUbookshop/sv-uk_sample.html">view</a></td><td><a rel="nofollow" title="Swedish-Chinese (sample file)" href="EUbookshop/sv-zh_sample.html">view</a></td><th>sv</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/sw.tar.gz">sw</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Bulgarian' (3 aligned documents, 8 links, 0.3k tokens)" href="download.php?f=EUbookshop/xml/bg-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Bulgarian' (3 aligned documents, 8 links, 0.3k tokens)" href="download.php?f=EUbookshop/bg-sw.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Czech' (3 aligned documents, 24 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/cs-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Czech' (3 aligned documents, 24 links, 0.5k tokens)" href="download.php?f=EUbookshop/cs-sw.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Danish' (3 aligned documents, 19 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/da-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-German' (3 aligned documents, 20 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/de-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Greek' (3 aligned documents, 12 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/el-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-English' (3 aligned documents, 27 links, 0.6k tokens)" href="download.php?f=EUbookshop/xml/en-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Spanish' (3 aligned documents, 18 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/es-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Estonian' (3 aligned documents, 16 links, 0.3k tokens)" href="download.php?f=EUbookshop/xml/et-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Finnish' (3 aligned documents, 27 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/fi-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-French' (3 aligned documents, 25 links, 0.3k tokens)" href="download.php?f=EUbookshop/xml/fr-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Danish' (3 aligned documents, 19 links, 0.5k tokens)" href="download.php?f=EUbookshop/da-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-German' (3 aligned documents, 20 links, 0.5k tokens)" href="download.php?f=EUbookshop/de-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Greek' (3 aligned documents, 12 links, 0.5k tokens)" href="download.php?f=EUbookshop/el-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-English' (3 aligned documents, 27 links, 0.6k tokens)" href="download.php?f=EUbookshop/en-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Spanish' (3 aligned documents, 18 links, 0.5k tokens)" href="download.php?f=EUbookshop/es-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Estonian' (3 aligned documents, 16 links, 0.3k tokens)" href="download.php?f=EUbookshop/et-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Finnish' (3 aligned documents, 27 links, 0.5k tokens)" href="download.php?f=EUbookshop/fi-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-French' (3 aligned documents, 25 links, 0.3k tokens)" href="download.php?f=EUbookshop/fr-sw.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Irish' (4 links, 0.2k tokens)" href="download.php?f=EUbookshop/xml/ga-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Irish' (4 links, 0.2k tokens)" href="download.php?f=EUbookshop/ga-sw.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Croatian' (2 aligned documents, 7 links, 0.3k tokens)" href="download.php?f=EUbookshop/xml/hr-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Hungarian' (3 aligned documents, 23 links, 0.6k tokens)" href="download.php?f=EUbookshop/xml/hu-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Croatian' (2 aligned documents, 7 links, 0.3k tokens)" href="download.php?f=EUbookshop/hr-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Hungarian' (3 aligned documents, 23 links, 0.6k tokens)" href="download.php?f=EUbookshop/hu-sw.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Italian' (3 aligned documents, 23 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/it-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Japanese' (96 tokens)" href="download.php?f=EUbookshop/xml/ja-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Italian' (3 aligned documents, 23 links, 0.5k tokens)" href="download.php?f=EUbookshop/it-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Japanese' (96 tokens)" href="download.php?f=EUbookshop/ja-sw.xml.gz">ces</a></td>
 <th>sw</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Lithuanian' (3 aligned documents, 25 links, 0.6k tokens)" href="download.php?f=EUbookshop/xml/lt-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Latvian' (3 aligned documents, 23 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/lv-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Macedonian' (2 aligned documents, 8 links, 0.3k tokens)" href="download.php?f=EUbookshop/xml/mk-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Maltese' (3 aligned documents, 18 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/mt-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-BokmÃ¥l, Norwegian' (3 aligned documents, 16 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/nb-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Dutch' (3 aligned documents, 24 links, 0.3k tokens)" href="download.php?f=EUbookshop/xml/nl-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Lithuanian' (3 aligned documents, 25 links, 0.6k tokens)" href="download.php?f=EUbookshop/lt-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Latvian' (3 aligned documents, 23 links, 0.5k tokens)" href="download.php?f=EUbookshop/lv-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Macedonian' (2 aligned documents, 8 links, 0.3k tokens)" href="download.php?f=EUbookshop/mk-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Maltese' (3 aligned documents, 18 links, 0.5k tokens)" href="download.php?f=EUbookshop/mt-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-BokmÃ¥l, Norwegian' (3 aligned documents, 16 links, 0.5k tokens)" href="download.php?f=EUbookshop/nb-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Dutch' (3 aligned documents, 24 links, 0.3k tokens)" href="download.php?f=EUbookshop/nl-sw.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Polish' (3 aligned documents, 19 links, 0.6k tokens)" href="download.php?f=EUbookshop/xml/pl-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Polish' (3 aligned documents, 19 links, 0.6k tokens)" href="download.php?f=EUbookshop/pl-sw.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Portuguese' (3 aligned documents, 20 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/pt-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Romanian' (3 aligned documents, 20 links, 0.6k tokens)" href="download.php?f=EUbookshop/xml/ro-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Russian' (3 aligned documents, 12 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/ru-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Portuguese' (3 aligned documents, 20 links, 0.5k tokens)" href="download.php?f=EUbookshop/pt-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Romanian' (3 aligned documents, 20 links, 0.6k tokens)" href="download.php?f=EUbookshop/ro-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Russian' (3 aligned documents, 12 links, 0.5k tokens)" href="download.php?f=EUbookshop/ru-sw.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Slovak' (3 aligned documents, 20 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/sk-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Slovenian' (3 aligned documents, 22 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/sl-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Albanian' (3 aligned documents, 20 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/sq-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Serbian' (3 aligned documents, 9 links, 0.4k tokens)" href="download.php?f=EUbookshop/xml/sr-sw.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swahili-Swedish' (3 aligned documents, 24 links, 0.5k tokens)" href="download.php?f=EUbookshop/xml/sv-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Slovak' (3 aligned documents, 20 links, 0.5k tokens)" href="download.php?f=EUbookshop/sk-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Slovenian' (3 aligned documents, 22 links, 0.5k tokens)" href="download.php?f=EUbookshop/sl-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Albanian' (3 aligned documents, 20 links, 0.5k tokens)" href="download.php?f=EUbookshop/sq-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Serbian' (3 aligned documents, 9 links, 0.4k tokens)" href="download.php?f=EUbookshop/sr-sw.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swahili-Swedish' (3 aligned documents, 24 links, 0.5k tokens)" href="download.php?f=EUbookshop/sv-sw.xml.gz">ces</a></td>
 <th></th>
 <td></td><td></td><td></td><td><a rel="nofollow" title="Swahili-Chinese (sample file)" href="EUbookshop/sw-zh_sample.html">view</a></td><th>sw</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/tc.tar.gz">tc</a></th>
@@ -1268,21 +1268,21 @@ Complete download (XML): <a href="download.php?f=EUbookshop/EUbookshop0.1.tar.gz
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'tc-Danish' (0.6k links, 37.1k tokens)" href="download.php?f=EUbookshop/xml/da-tc.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'tc-German' (0.5k links, 34.3k tokens)" href="download.php?f=EUbookshop/xml/de-tc.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'tc-Danish' (0.6k links, 37.1k tokens)" href="download.php?f=EUbookshop/da-tc.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'tc-German' (0.5k links, 34.3k tokens)" href="download.php?f=EUbookshop/de-tc.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'tc-English' (0.1k links, 21.1k tokens)" href="download.php?f=EUbookshop/xml/en-tc.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'tc-Spanish' (0.6k links, 40.2k tokens)" href="download.php?f=EUbookshop/xml/es-tc.xml.gz">ces</a></td>
-<td></td>
-<td></td>
-<td><a rel="nofollow" title="sentence alignments for 'tc-French' (0.5k links, 18.3k tokens)" href="download.php?f=EUbookshop/xml/fr-tc.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'tc-English' (0.1k links, 21.1k tokens)" href="download.php?f=EUbookshop/en-tc.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'tc-Spanish' (0.6k links, 40.2k tokens)" href="download.php?f=EUbookshop/es-tc.xml.gz">ces</a></td>
 <td></td>
 <td></td>
+<td><a rel="nofollow" title="sentence alignments for 'tc-French' (0.5k links, 18.3k tokens)" href="download.php?f=EUbookshop/fr-tc.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'tc-Hungarian' (0.6k links, 36.3k tokens)" href="download.php?f=EUbookshop/xml/hu-tc.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'tc-Italian' (0.6k links, 38.7k tokens)" href="download.php?f=EUbookshop/xml/it-tc.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'tc-Hungarian' (0.6k links, 36.3k tokens)" href="download.php?f=EUbookshop/hu-tc.xml.gz">ces</a></td>
+<td></td>
+<td><a rel="nofollow" title="sentence alignments for 'tc-Italian' (0.6k links, 38.7k tokens)" href="download.php?f=EUbookshop/it-tc.xml.gz">ces</a></td>
 <td></td>
 <th>tc</th>
 <td></td>
@@ -1291,11 +1291,11 @@ Complete download (XML): <a href="download.php?f=EUbookshop/EUbookshop0.1.tar.gz
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'tc-Dutch' (0.5k links, 18.3k tokens)" href="download.php?f=EUbookshop/xml/nl-tc.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'tc-Dutch' (0.5k links, 18.3k tokens)" href="download.php?f=EUbookshop/nl-tc.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'tc-po' (18.3k tokens)" href="download.php?f=EUbookshop/xml/po-tc.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'tc-Portuguese' (18.3k tokens)" href="download.php?f=EUbookshop/xml/pt-tc.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'tc-po' (18.3k tokens)" href="download.php?f=EUbookshop/po-tc.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'tc-Portuguese' (18.3k tokens)" href="download.php?f=EUbookshop/pt-tc.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1334,7 +1334,7 @@ Complete download (XML): <a href="download.php?f=EUbookshop/EUbookshop0.1.tar.gz
 <td></td>
 <th>tr</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Turkish-Lithuanian' (51 aligned documents, 18.7k links, 0.5M tokens)" href="download.php?f=EUbookshop/xml/lt-tr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Turkish-Lithuanian' (51 aligned documents, 18.7k links, 0.5M tokens)" href="download.php?f=EUbookshop/lt-tr.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1359,99 +1359,99 @@ Complete download (XML): <a href="download.php?f=EUbookshop/EUbookshop0.1.tar.gz
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/uk.tar.gz">uk</a></th>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Bulgarian' (8.0k tokens)" href="download.php?f=EUbookshop/xml/bg-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Bulgarian' (8.0k tokens)" href="download.php?f=EUbookshop/bg-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Catalan' (3 aligned documents, 19.7k tokens)" href="download.php?f=EUbookshop/xml/ca-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Catalan' (3 aligned documents, 19.7k tokens)" href="download.php?f=EUbookshop/ca-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Czech' (4 aligned documents, 1.5k links, 70.1k tokens)" href="download.php?f=EUbookshop/xml/cs-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Welsh' (0.3k links, 20.2k tokens)" href="download.php?f=EUbookshop/xml/cy-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Danish' (4 aligned documents, 1.3k links, 70.4k tokens)" href="download.php?f=EUbookshop/xml/da-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-German' (5 aligned documents, 1.6k links, 75.4k tokens)" href="download.php?f=EUbookshop/xml/de-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Greek' (4 aligned documents, 0.8k links, 64.3k tokens)" href="download.php?f=EUbookshop/xml/el-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-English' (6 aligned documents, 1.7k links, 92.6k tokens)" href="download.php?f=EUbookshop/xml/en-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Spanish' (4 aligned documents, 1.4k links, 76.1k tokens)" href="download.php?f=EUbookshop/xml/es-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Estonian' (4 aligned documents, 1.5k links, 33.8k tokens)" href="download.php?f=EUbookshop/xml/et-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Finnish' (4 aligned documents, 1.5k links, 64.9k tokens)" href="download.php?f=EUbookshop/xml/fi-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-French' (5 aligned documents, 1.5k links, 35.3k tokens)" href="download.php?f=EUbookshop/xml/fr-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Czech' (4 aligned documents, 1.5k links, 70.1k tokens)" href="download.php?f=EUbookshop/cs-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Welsh' (0.3k links, 20.2k tokens)" href="download.php?f=EUbookshop/cy-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Danish' (4 aligned documents, 1.3k links, 70.4k tokens)" href="download.php?f=EUbookshop/da-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-German' (5 aligned documents, 1.6k links, 75.4k tokens)" href="download.php?f=EUbookshop/de-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Greek' (4 aligned documents, 0.8k links, 64.3k tokens)" href="download.php?f=EUbookshop/el-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-English' (6 aligned documents, 1.7k links, 92.6k tokens)" href="download.php?f=EUbookshop/en-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Spanish' (4 aligned documents, 1.4k links, 76.1k tokens)" href="download.php?f=EUbookshop/es-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Estonian' (4 aligned documents, 1.5k links, 33.8k tokens)" href="download.php?f=EUbookshop/et-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Finnish' (4 aligned documents, 1.5k links, 64.9k tokens)" href="download.php?f=EUbookshop/fi-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-French' (5 aligned documents, 1.5k links, 35.3k tokens)" href="download.php?f=EUbookshop/fr-uk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Croatian' (0.3k links, 16.7k tokens)" href="download.php?f=EUbookshop/xml/hr-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Hungarian' (4 aligned documents, 1.5k links, 70.9k tokens)" href="download.php?f=EUbookshop/xml/hu-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Croatian' (0.3k links, 16.7k tokens)" href="download.php?f=EUbookshop/hr-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Hungarian' (4 aligned documents, 1.5k links, 70.9k tokens)" href="download.php?f=EUbookshop/hu-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Italian' (4 aligned documents, 1.5k links, 76.7k tokens)" href="download.php?f=EUbookshop/xml/it-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Italian' (4 aligned documents, 1.5k links, 76.7k tokens)" href="download.php?f=EUbookshop/it-uk.xml.gz">ces</a></td>
 <td></td>
 <th>uk</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Lithuanian' (4 aligned documents, 1.4k links, 68.9k tokens)" href="download.php?f=EUbookshop/xml/lt-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Latvian' (4 aligned documents, 1.5k links, 68.8k tokens)" href="download.php?f=EUbookshop/xml/lv-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Lithuanian' (4 aligned documents, 1.4k links, 68.9k tokens)" href="download.php?f=EUbookshop/lt-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Latvian' (4 aligned documents, 1.5k links, 68.8k tokens)" href="download.php?f=EUbookshop/lv-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Maltese' (0.7k links, 30.5k tokens)" href="download.php?f=EUbookshop/xml/mt-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Maltese' (0.7k links, 30.5k tokens)" href="download.php?f=EUbookshop/mt-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Dutch' (4 aligned documents, 1.5k links, 33.8k tokens)" href="download.php?f=EUbookshop/xml/nl-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Dutch' (4 aligned documents, 1.5k links, 33.8k tokens)" href="download.php?f=EUbookshop/nl-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Polish' (4 aligned documents, 1.5k links, 71.2k tokens)" href="download.php?f=EUbookshop/xml/pl-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Polish' (4 aligned documents, 1.5k links, 71.2k tokens)" href="download.php?f=EUbookshop/pl-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Portuguese' (4 aligned documents, 1.5k links, 77.3k tokens)" href="download.php?f=EUbookshop/xml/pt-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Portuguese' (4 aligned documents, 1.5k links, 77.3k tokens)" href="download.php?f=EUbookshop/pt-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Russian' (2 aligned documents, 0.3k links, 13.8k tokens)" href="download.php?f=EUbookshop/xml/ru-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Russian' (2 aligned documents, 0.3k links, 13.8k tokens)" href="download.php?f=EUbookshop/ru-uk.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Slovak' (4 aligned documents, 1.4k links, 70.3k tokens)" href="download.php?f=EUbookshop/xml/sk-uk.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Slovenian' (4 aligned documents, 1.3k links, 70.0k tokens)" href="download.php?f=EUbookshop/xml/sl-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Slovak' (4 aligned documents, 1.4k links, 70.3k tokens)" href="download.php?f=EUbookshop/sk-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Slovenian' (4 aligned documents, 1.3k links, 70.0k tokens)" href="download.php?f=EUbookshop/sl-uk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Swedish' (4 aligned documents, 1.4k links, 69.6k tokens)" href="download.php?f=EUbookshop/xml/sv-uk.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Ukrainian-Swedish' (4 aligned documents, 1.4k links, 69.6k tokens)" href="download.php?f=EUbookshop/sv-uk.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
 <th></th>
 <td></td><th>uk</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=EUbookshop/zh.tar.gz">zh</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Arabic' (3 aligned documents, 0.6k tokens)" href="download.php?f=EUbookshop/xml/ar-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Arabic' (3 aligned documents, 0.6k tokens)" href="download.php?f=EUbookshop/ar-zh.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Bulgarian' (4 aligned documents, 0 tokens)" href="download.php?f=EUbookshop/xml/bg-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Bulgarian' (4 aligned documents, 0 tokens)" href="download.php?f=EUbookshop/bg-zh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Czech' (5 aligned documents, 21.3k tokens)" href="download.php?f=EUbookshop/xml/cs-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Czech' (5 aligned documents, 21.3k tokens)" href="download.php?f=EUbookshop/cs-zh.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Danish' (5 aligned documents, 8.4k tokens)" href="download.php?f=EUbookshop/xml/da-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-German' (11 aligned documents, 83.7k tokens)" href="download.php?f=EUbookshop/xml/de-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Greek' (5 aligned documents, 18.4k tokens)" href="download.php?f=EUbookshop/xml/el-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (18 aligned documents, 0.1M tokens)" href="download.php?f=EUbookshop/xml/en-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (9 aligned documents, 39.9k tokens)" href="download.php?f=EUbookshop/xml/es-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Estonian' (5 aligned documents, 0 tokens)" href="download.php?f=EUbookshop/xml/et-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Finnish' (5 aligned documents, 6.6k tokens)" href="download.php?f=EUbookshop/xml/fi-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-French' (15 aligned documents, 0 tokens)" href="download.php?f=EUbookshop/xml/fr-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Danish' (5 aligned documents, 8.4k tokens)" href="download.php?f=EUbookshop/da-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-German' (11 aligned documents, 83.7k tokens)" href="download.php?f=EUbookshop/de-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Greek' (5 aligned documents, 18.4k tokens)" href="download.php?f=EUbookshop/el-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-English' (18 aligned documents, 0.1M tokens)" href="download.php?f=EUbookshop/en-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Spanish' (9 aligned documents, 39.9k tokens)" href="download.php?f=EUbookshop/es-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Estonian' (5 aligned documents, 0 tokens)" href="download.php?f=EUbookshop/et-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Finnish' (5 aligned documents, 6.6k tokens)" href="download.php?f=EUbookshop/fi-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-French' (15 aligned documents, 0 tokens)" href="download.php?f=EUbookshop/fr-zh.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Irish' (2 aligned documents, 1.1k tokens)" href="download.php?f=EUbookshop/xml/ga-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Irish' (2 aligned documents, 1.1k tokens)" href="download.php?f=EUbookshop/ga-zh.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Croatian' (73 tokens)" href="download.php?f=EUbookshop/xml/hr-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Hungarian' (5 aligned documents, 20.8k tokens)" href="download.php?f=EUbookshop/xml/hu-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Croatian' (73 tokens)" href="download.php?f=EUbookshop/hr-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Hungarian' (5 aligned documents, 20.8k tokens)" href="download.php?f=EUbookshop/hu-zh.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Italian' (6 aligned documents, 31.2k tokens)" href="download.php?f=EUbookshop/xml/it-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Japanese' (2 aligned documents, 2.5k tokens)" href="download.php?f=EUbookshop/xml/ja-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Italian' (6 aligned documents, 31.2k tokens)" href="download.php?f=EUbookshop/it-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Japanese' (2 aligned documents, 2.5k tokens)" href="download.php?f=EUbookshop/ja-zh.xml.gz">ces</a></td>
 <th>zh</th>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Lithuanian' (5 aligned documents, 8.4k tokens)" href="download.php?f=EUbookshop/xml/lt-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Latvian' (5 aligned documents, 33.0k tokens)" href="download.php?f=EUbookshop/xml/lv-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Macedonian' (82 tokens)" href="download.php?f=EUbookshop/xml/mk-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Maltese' (4 aligned documents, 2.6k tokens)" href="download.php?f=EUbookshop/xml/mt-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-BokmÃ¥l, Norwegian' (2 aligned documents, 0.1k tokens)" href="download.php?f=EUbookshop/xml/nb-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Dutch' (5 aligned documents, 0 tokens)" href="download.php?f=EUbookshop/xml/nl-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Lithuanian' (5 aligned documents, 8.4k tokens)" href="download.php?f=EUbookshop/lt-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Latvian' (5 aligned documents, 33.0k tokens)" href="download.php?f=EUbookshop/lv-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Macedonian' (82 tokens)" href="download.php?f=EUbookshop/mk-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Maltese' (4 aligned documents, 2.6k tokens)" href="download.php?f=EUbookshop/mt-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-BokmÃ¥l, Norwegian' (2 aligned documents, 0.1k tokens)" href="download.php?f=EUbookshop/nb-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Dutch' (5 aligned documents, 0 tokens)" href="download.php?f=EUbookshop/nl-zh.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Polish' (6 aligned documents, 14.9k tokens)" href="download.php?f=EUbookshop/xml/pl-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Polish' (6 aligned documents, 14.9k tokens)" href="download.php?f=EUbookshop/pl-zh.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Portuguese' (7 aligned documents, 25.2k tokens)" href="download.php?f=EUbookshop/xml/pt-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Romanian' (4 aligned documents, 29.8k tokens)" href="download.php?f=EUbookshop/xml/ro-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Russian' (8 aligned documents, 14.1k tokens)" href="download.php?f=EUbookshop/xml/ru-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Portuguese' (7 aligned documents, 25.2k tokens)" href="download.php?f=EUbookshop/pt-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Romanian' (4 aligned documents, 29.8k tokens)" href="download.php?f=EUbookshop/ro-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Russian' (8 aligned documents, 14.1k tokens)" href="download.php?f=EUbookshop/ru-zh.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Slovak' (5 aligned documents, 22.9k tokens)" href="download.php?f=EUbookshop/xml/sk-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Slovenian' (5 aligned documents, 21.0k tokens)" href="download.php?f=EUbookshop/xml/sl-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Albanian' (2 aligned documents, 0.2k tokens)" href="download.php?f=EUbookshop/xml/sq-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Serbian' (2 aligned documents, 43 tokens)" href="download.php?f=EUbookshop/xml/sr-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Swedish' (5 aligned documents, 19.3k tokens)" href="download.php?f=EUbookshop/xml/sv-zh.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Chinese-Swahili' (2 aligned documents, 0.2k tokens)" href="download.php?f=EUbookshop/xml/sw-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Slovak' (5 aligned documents, 22.9k tokens)" href="download.php?f=EUbookshop/sk-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Slovenian' (5 aligned documents, 21.0k tokens)" href="download.php?f=EUbookshop/sl-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Albanian' (2 aligned documents, 0.2k tokens)" href="download.php?f=EUbookshop/sq-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Serbian' (2 aligned documents, 43 tokens)" href="download.php?f=EUbookshop/sr-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Swedish' (5 aligned documents, 19.3k tokens)" href="download.php?f=EUbookshop/sv-zh.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Chinese-Swahili' (2 aligned documents, 0.2k tokens)" href="download.php?f=EUbookshop/sw-zh.xml.gz">ces</a></td>
 <td></td>
 <td></td>
 <td></td>

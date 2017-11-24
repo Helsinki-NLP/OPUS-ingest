@@ -23,7 +23,7 @@
 <th></th>
 <td><a rel="nofollow" title="English-Croatian (sample file)" href="hrenWaC/en-hr_sample.html">view</a></td><th>en</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=hrenWaC/hr.tar.gz">hr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-English' (99.0k links, 5.0M tokens)" href="download.php?f=hrenWaC/xml/en-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-English' (99.0k links, 5.0M tokens)" href="download.php?f=hrenWaC/en-hr.xml.gz">ces</a></td>
 <th></th>
 <th>hr</th></tr>
 <tr><th></th>

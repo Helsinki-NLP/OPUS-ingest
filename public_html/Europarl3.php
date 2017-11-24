@@ -40,88 +40,88 @@ NEW: <a href="http://urd.let.rug.nl/~vannoord/trees/Treebank/Machine/europarl3/C
 <th></th>
 <td><a rel="nofollow" title="Danish-German (sample file)" href="Europarl3/da-de_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Greek (sample file)" href="Europarl3/da-el_sample.html">view</a></td><td><a rel="nofollow" title="Danish-English (sample file)" href="Europarl3/da-en_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Spanish (sample file)" href="Europarl3/da-es_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Finnish (sample file)" href="Europarl3/da-fi_sample.html">view</a></td><td><a rel="nofollow" title="Danish-French (sample file)" href="Europarl3/da-fr_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Italian (sample file)" href="Europarl3/da-it_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Dutch (sample file)" href="Europarl3/da-nl_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Portuguese (sample file)" href="Europarl3/da-pt_sample.html">view</a></td><td><a rel="nofollow" title="Danish-Swedish (sample file)" href="Europarl3/da-sv_sample.html">view</a></td><th>da</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Europarl3/de.tar.gz">de</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'German-Danish' (656 aligned documents, 1.3M links, 74.6M tokens)" href="download.php?f=Europarl3/xml/da-de.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'German-Danish' (656 aligned documents, 1.3M links, 74.6M tokens)" href="download.php?f=Europarl3/da-de.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="German-Greek (sample file)" href="Europarl3/de-el_sample.html">view</a></td><td><a rel="nofollow" title="German-English (sample file)" href="Europarl3/de-en_sample.html">view</a></td><td><a rel="nofollow" title="German-Spanish (sample file)" href="Europarl3/de-es_sample.html">view</a></td><td><a rel="nofollow" title="German-Finnish (sample file)" href="Europarl3/de-fi_sample.html">view</a></td><td><a rel="nofollow" title="German-French (sample file)" href="Europarl3/de-fr_sample.html">view</a></td><td><a rel="nofollow" title="German-Italian (sample file)" href="Europarl3/de-it_sample.html">view</a></td><td><a rel="nofollow" title="German-Dutch (sample file)" href="Europarl3/de-nl_sample.html">view</a></td><td><a rel="nofollow" title="German-Portuguese (sample file)" href="Europarl3/de-pt_sample.html">view</a></td><td><a rel="nofollow" title="German-Swedish (sample file)" href="Europarl3/de-sv_sample.html">view</a></td><th>de</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Europarl3/el.tar.gz">el</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-Danish' (534 aligned documents, 0.7M links, 56.0M tokens)" href="download.php?f=Europarl3/xml/da-el.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Greek-German' (535 aligned documents, 0.7M links, 56.0M tokens)" href="download.php?f=Europarl3/xml/de-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-Danish' (534 aligned documents, 0.7M links, 56.0M tokens)" href="download.php?f=Europarl3/da-el.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Greek-German' (535 aligned documents, 0.7M links, 56.0M tokens)" href="download.php?f=Europarl3/de-el.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Greek-English (sample file)" href="Europarl3/el-en_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Spanish (sample file)" href="Europarl3/el-es_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Finnish (sample file)" href="Europarl3/el-fi_sample.html">view</a></td><td><a rel="nofollow" title="Greek-French (sample file)" href="Europarl3/el-fr_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Italian (sample file)" href="Europarl3/el-it_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Dutch (sample file)" href="Europarl3/el-nl_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Portuguese (sample file)" href="Europarl3/el-pt_sample.html">view</a></td><td><a rel="nofollow" title="Greek-Swedish (sample file)" href="Europarl3/el-sv_sample.html">view</a></td><th>el</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Europarl3/en.tar.gz">en</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'English-Danish' (655 aligned documents, 1.3M links, 76.5M tokens)" href="download.php?f=Europarl3/xml/da-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-German' (656 aligned documents, 1.3M links, 76.6M tokens)" href="download.php?f=Europarl3/xml/de-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (534 aligned documents, 0.7M links, 57.4M tokens)" href="download.php?f=Europarl3/xml/el-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Danish' (655 aligned documents, 1.3M links, 76.5M tokens)" href="download.php?f=Europarl3/da-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-German' (656 aligned documents, 1.3M links, 76.6M tokens)" href="download.php?f=Europarl3/de-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Greek' (534 aligned documents, 0.7M links, 57.4M tokens)" href="download.php?f=Europarl3/el-en.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="English-Spanish (sample file)" href="Europarl3/en-es_sample.html">view</a></td><td><a rel="nofollow" title="English-Finnish (sample file)" href="Europarl3/en-fi_sample.html">view</a></td><td><a rel="nofollow" title="English-French (sample file)" href="Europarl3/en-fr_sample.html">view</a></td><td><a rel="nofollow" title="English-Italian (sample file)" href="Europarl3/en-it_sample.html">view</a></td><td><a rel="nofollow" title="English-Dutch (sample file)" href="Europarl3/en-nl_sample.html">view</a></td><td><a rel="nofollow" title="English-Portuguese (sample file)" href="Europarl3/en-pt_sample.html">view</a></td><td><a rel="nofollow" title="English-Swedish (sample file)" href="Europarl3/en-sv_sample.html">view</a></td><th><a rel="nofollow" href="Europarl3/en_parse_sample.html">en</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Europarl3/es.tar.gz">es</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Danish' (657 aligned documents, 1.3M links, 77.7M tokens)" href="download.php?f=Europarl3/xml/da-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (657 aligned documents, 1.3M links, 77.6M tokens)" href="download.php?f=Europarl3/xml/de-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-Greek' (536 aligned documents, 0.7M links, 58.6M tokens)" href="download.php?f=Europarl3/xml/el-es.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (656 aligned documents, 1.3M links, 79.5M tokens)" href="download.php?f=Europarl3/xml/en-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Danish' (657 aligned documents, 1.3M links, 77.7M tokens)" href="download.php?f=Europarl3/da-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-German' (657 aligned documents, 1.3M links, 77.6M tokens)" href="download.php?f=Europarl3/de-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-Greek' (536 aligned documents, 0.7M links, 58.6M tokens)" href="download.php?f=Europarl3/el-es.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Spanish-English' (656 aligned documents, 1.3M links, 79.5M tokens)" href="download.php?f=Europarl3/en-es.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Spanish-Finnish (sample file)" href="Europarl3/es-fi_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-French (sample file)" href="Europarl3/es-fr_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Italian (sample file)" href="Europarl3/es-it_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Dutch (sample file)" href="Europarl3/es-nl_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Portuguese (sample file)" href="Europarl3/es-pt_sample.html">view</a></td><td><a rel="nofollow" title="Spanish-Swedish (sample file)" href="Europarl3/es-sv_sample.html">view</a></td><th>es</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Europarl3/fi.tar.gz">fi</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Danish' (608 aligned documents, 1.2M links, 60.9M tokens)" href="download.php?f=Europarl3/xml/da-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-German' (608 aligned documents, 1.2M links, 60.8M tokens)" href="download.php?f=Europarl3/xml/de-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Greek' (491 aligned documents, 0.6M links, 44.6M tokens)" href="download.php?f=Europarl3/xml/el-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-English' (607 aligned documents, 1.3M links, 62.6M tokens)" href="download.php?f=Europarl3/xml/en-fi.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Finnish-Spanish' (609 aligned documents, 1.2M links, 63.7M tokens)" href="download.php?f=Europarl3/xml/es-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Danish' (608 aligned documents, 1.2M links, 60.9M tokens)" href="download.php?f=Europarl3/da-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-German' (608 aligned documents, 1.2M links, 60.8M tokens)" href="download.php?f=Europarl3/de-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Greek' (491 aligned documents, 0.6M links, 44.6M tokens)" href="download.php?f=Europarl3/el-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-English' (607 aligned documents, 1.3M links, 62.6M tokens)" href="download.php?f=Europarl3/en-fi.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Finnish-Spanish' (609 aligned documents, 1.2M links, 63.7M tokens)" href="download.php?f=Europarl3/es-fi.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Finnish-French (sample file)" href="Europarl3/fi-fr_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Italian (sample file)" href="Europarl3/fi-it_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Dutch (sample file)" href="Europarl3/fi-nl_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Portuguese (sample file)" href="Europarl3/fi-pt_sample.html">view</a></td><td><a rel="nofollow" title="Finnish-Swedish (sample file)" href="Europarl3/fi-sv_sample.html">view</a></td><th>fi</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Europarl3/fr.tar.gz">fr</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'French-Danish' (659 aligned documents, 1.3M links, 81.0M tokens)" href="download.php?f=Europarl3/xml/da-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-German' (659 aligned documents, 1.3M links, 80.9M tokens)" href="download.php?f=Europarl3/xml/de-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Greek' (537 aligned documents, 0.7M links, 61.1M tokens)" href="download.php?f=Europarl3/xml/el-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-English' (658 aligned documents, 1.3M links, 82.9M tokens)" href="download.php?f=Europarl3/xml/en-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (660 aligned documents, 1.3M links, 84.0M tokens)" href="download.php?f=Europarl3/xml/es-fr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'French-Finnish' (611 aligned documents, 1.3M links, 66.8M tokens)" href="download.php?f=Europarl3/xml/fi-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Danish' (659 aligned documents, 1.3M links, 81.0M tokens)" href="download.php?f=Europarl3/da-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-German' (659 aligned documents, 1.3M links, 80.9M tokens)" href="download.php?f=Europarl3/de-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Greek' (537 aligned documents, 0.7M links, 61.1M tokens)" href="download.php?f=Europarl3/el-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-English' (658 aligned documents, 1.3M links, 82.9M tokens)" href="download.php?f=Europarl3/en-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Spanish' (660 aligned documents, 1.3M links, 84.0M tokens)" href="download.php?f=Europarl3/es-fr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'French-Finnish' (611 aligned documents, 1.3M links, 66.8M tokens)" href="download.php?f=Europarl3/fi-fr.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="French-Italian (sample file)" href="Europarl3/fr-it_sample.html">view</a></td><td><a rel="nofollow" title="French-Dutch (sample file)" href="Europarl3/fr-nl_sample.html">view</a></td><td><a rel="nofollow" title="French-Portuguese (sample file)" href="Europarl3/fr-pt_sample.html">view</a></td><td><a rel="nofollow" title="French-Swedish (sample file)" href="Europarl3/fr-sv_sample.html">view</a></td><th>fr</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Europarl3/it.tar.gz">it</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Danish' (655 aligned documents, 1.2M links, 76.1M tokens)" href="download.php?f=Europarl3/xml/da-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-German' (655 aligned documents, 1.2M links, 75.9M tokens)" href="download.php?f=Europarl3/xml/de-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Greek' (533 aligned documents, 0.6M links, 57.1M tokens)" href="download.php?f=Europarl3/xml/el-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (654 aligned documents, 1.3M links, 77.9M tokens)" href="download.php?f=Europarl3/xml/en-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Spanish' (656 aligned documents, 1.2M links, 79.0M tokens)" href="download.php?f=Europarl3/xml/es-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-Finnish' (607 aligned documents, 1.2M links, 62.2M tokens)" href="download.php?f=Europarl3/xml/fi-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (658 aligned documents, 1.3M links, 82.4M tokens)" href="download.php?f=Europarl3/xml/fr-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Danish' (655 aligned documents, 1.2M links, 76.1M tokens)" href="download.php?f=Europarl3/da-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-German' (655 aligned documents, 1.2M links, 75.9M tokens)" href="download.php?f=Europarl3/de-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Greek' (533 aligned documents, 0.6M links, 57.1M tokens)" href="download.php?f=Europarl3/el-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (654 aligned documents, 1.3M links, 77.9M tokens)" href="download.php?f=Europarl3/en-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Spanish' (656 aligned documents, 1.2M links, 79.0M tokens)" href="download.php?f=Europarl3/es-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-Finnish' (607 aligned documents, 1.2M links, 62.2M tokens)" href="download.php?f=Europarl3/fi-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-French' (658 aligned documents, 1.3M links, 82.4M tokens)" href="download.php?f=Europarl3/fr-it.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Italian-Dutch (sample file)" href="Europarl3/it-nl_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Portuguese (sample file)" href="Europarl3/it-pt_sample.html">view</a></td><td><a rel="nofollow" title="Italian-Swedish (sample file)" href="Europarl3/it-sv_sample.html">view</a></td><th>it</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Europarl3/nl.tar.gz">nl</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Danish' (656 aligned documents, 1.3M links, 76.7M tokens)" href="download.php?f=Europarl3/xml/da-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (656 aligned documents, 1.3M links, 76.6M tokens)" href="download.php?f=Europarl3/xml/de-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Greek' (534 aligned documents, 0.7M links, 57.6M tokens)" href="download.php?f=Europarl3/xml/el-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (655 aligned documents, 1.3M links, 78.5M tokens)" href="download.php?f=Europarl3/xml/en-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (657 aligned documents, 1.3M links, 79.6M tokens)" href="download.php?f=Europarl3/xml/es-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Finnish' (608 aligned documents, 1.3M links, 62.7M tokens)" href="download.php?f=Europarl3/xml/fi-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (659 aligned documents, 1.3M links, 83.0M tokens)" href="download.php?f=Europarl3/xml/fr-nl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (655 aligned documents, 1.3M links, 78.0M tokens)" href="download.php?f=Europarl3/xml/it-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Danish' (656 aligned documents, 1.3M links, 76.7M tokens)" href="download.php?f=Europarl3/da-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-German' (656 aligned documents, 1.3M links, 76.6M tokens)" href="download.php?f=Europarl3/de-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Greek' (534 aligned documents, 0.7M links, 57.6M tokens)" href="download.php?f=Europarl3/el-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-English' (655 aligned documents, 1.3M links, 78.5M tokens)" href="download.php?f=Europarl3/en-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Spanish' (657 aligned documents, 1.3M links, 79.6M tokens)" href="download.php?f=Europarl3/es-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Finnish' (608 aligned documents, 1.3M links, 62.7M tokens)" href="download.php?f=Europarl3/fi-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-French' (659 aligned documents, 1.3M links, 83.0M tokens)" href="download.php?f=Europarl3/fr-nl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Dutch-Italian' (655 aligned documents, 1.3M links, 78.0M tokens)" href="download.php?f=Europarl3/it-nl.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Dutch-Portuguese (sample file)" href="Europarl3/nl-pt_sample.html">view</a></td><td><a rel="nofollow" title="Dutch-Swedish (sample file)" href="Europarl3/nl-sv_sample.html">view</a></td><th>nl</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Europarl3/pt.tar.gz">pt</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Danish' (657 aligned documents, 1.3M links, 78.0M tokens)" href="download.php?f=Europarl3/xml/da-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (657 aligned documents, 1.3M links, 77.9M tokens)" href="download.php?f=Europarl3/xml/de-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Greek' (535 aligned documents, 0.7M links, 58.7M tokens)" href="download.php?f=Europarl3/xml/el-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (656 aligned documents, 1.3M links, 79.9M tokens)" href="download.php?f=Europarl3/xml/en-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (658 aligned documents, 1.3M links, 81.0M tokens)" href="download.php?f=Europarl3/xml/es-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Finnish' (609 aligned documents, 1.2M links, 64.0M tokens)" href="download.php?f=Europarl3/xml/fi-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (660 aligned documents, 1.3M links, 84.4M tokens)" href="download.php?f=Europarl3/xml/fr-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (656 aligned documents, 1.2M links, 79.4M tokens)" href="download.php?f=Europarl3/xml/it-pt.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (659 aligned documents, 1.3M links, 80.3M tokens)" href="download.php?f=Europarl3/xml/nl-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Danish' (657 aligned documents, 1.3M links, 78.0M tokens)" href="download.php?f=Europarl3/da-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-German' (657 aligned documents, 1.3M links, 77.9M tokens)" href="download.php?f=Europarl3/de-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Greek' (535 aligned documents, 0.7M links, 58.7M tokens)" href="download.php?f=Europarl3/el-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-English' (656 aligned documents, 1.3M links, 79.9M tokens)" href="download.php?f=Europarl3/en-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Spanish' (658 aligned documents, 1.3M links, 81.0M tokens)" href="download.php?f=Europarl3/es-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Finnish' (609 aligned documents, 1.2M links, 64.0M tokens)" href="download.php?f=Europarl3/fi-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-French' (660 aligned documents, 1.3M links, 84.4M tokens)" href="download.php?f=Europarl3/fr-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Italian' (656 aligned documents, 1.2M links, 79.4M tokens)" href="download.php?f=Europarl3/it-pt.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Portuguese-Dutch' (659 aligned documents, 1.3M links, 80.3M tokens)" href="download.php?f=Europarl3/nl-pt.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Portuguese-Swedish (sample file)" href="Europarl3/pt-sv_sample.html">view</a></td><th>pt</th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=Europarl3/sv.tar.gz">sv</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Danish' (608 aligned documents, 1.2M links, 68.1M tokens)" href="download.php?f=Europarl3/xml/da-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-German' (608 aligned documents, 1.2M links, 67.9M tokens)" href="download.php?f=Europarl3/xml/de-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Greek' (489 aligned documents, 0.7M links, 49.8M tokens)" href="download.php?f=Europarl3/xml/el-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (608 aligned documents, 1.2M links, 69.8M tokens)" href="download.php?f=Europarl3/xml/en-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Spanish' (610 aligned documents, 1.1M links, 70.9M tokens)" href="download.php?f=Europarl3/xml/es-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Finnish' (606 aligned documents, 1.2M links, 59.2M tokens)" href="download.php?f=Europarl3/xml/fi-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (611 aligned documents, 1.2M links, 74.0M tokens)" href="download.php?f=Europarl3/xml/fr-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Italian' (607 aligned documents, 1.1M links, 69.3M tokens)" href="download.php?f=Europarl3/xml/it-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Dutch' (609 aligned documents, 1.2M links, 70.0M tokens)" href="download.php?f=Europarl3/xml/nl-sv.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Swedish-Portuguese' (610 aligned documents, 1.1M links, 71.3M tokens)" href="download.php?f=Europarl3/xml/pt-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Danish' (608 aligned documents, 1.2M links, 68.1M tokens)" href="download.php?f=Europarl3/da-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-German' (608 aligned documents, 1.2M links, 67.9M tokens)" href="download.php?f=Europarl3/de-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Greek' (489 aligned documents, 0.7M links, 49.8M tokens)" href="download.php?f=Europarl3/el-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-English' (608 aligned documents, 1.2M links, 69.8M tokens)" href="download.php?f=Europarl3/en-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Spanish' (610 aligned documents, 1.1M links, 70.9M tokens)" href="download.php?f=Europarl3/es-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Finnish' (606 aligned documents, 1.2M links, 59.2M tokens)" href="download.php?f=Europarl3/fi-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-French' (611 aligned documents, 1.2M links, 74.0M tokens)" href="download.php?f=Europarl3/fr-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Italian' (607 aligned documents, 1.1M links, 69.3M tokens)" href="download.php?f=Europarl3/it-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Dutch' (609 aligned documents, 1.2M links, 70.0M tokens)" href="download.php?f=Europarl3/nl-sv.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Swedish-Portuguese' (610 aligned documents, 1.1M links, 71.3M tokens)" href="download.php?f=Europarl3/pt-sv.xml.gz">ces</a></td>
 <th></th>
 <th><a rel="nofollow" href="Europarl3/sv_parse_sample.html">sv</a></th></tr>
 <tr><th></th>
