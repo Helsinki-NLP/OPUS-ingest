@@ -131,10 +131,21 @@ ${SRC}-${TRG}.xml.gz: ${ALGFILES}
 
 # individual sentence alignment files (for each document pair)
 
+## define variables for command line options
+## to make it a bit more flexible to use other tools
+
+ALGSIDOPT=-s
+ALGTIDOPT=-t
+ALGSRCOPT=-src
+ALGTRGOPT=-trg
+ALGOUTOPT=-out
+
 ${ALGFILES}: ${SRC}-${TRG}/%: ${SRC}/% ${TRG}/%
 	mkdir -p $(shell dirname $@)
-	${SENTALIGN} -s ${SRC} -t ${TRG} \
-		-src $< -trg $(patsubst ${SRC}/%,${TRG}/%,$<) -out $@
+	${SENTALIGN} ${ALGSIDOPT} ${SRC} ${ALGTIDOPT} ${TRG} \
+		${ALGSRCOPT} $< \
+		${ALGTRGOPT} $(patsubst ${SRC}/%,${TRG}/%,$<) \
+		${ALGOUTOPT} $@
 
 
 
