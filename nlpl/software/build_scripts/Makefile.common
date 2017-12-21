@@ -5,6 +5,10 @@
 # Joerg Tiedemann <jorg.tiedemann@helsinki.fi>
 # created: Tue Jun 27, 2017
 #
+# HISTORY / CHANGES
+#
+#  21/12/2017 - make nlpl-common the homedir for common lib's and binaries
+
 
 INSTALL = install -c
 INSTALL_BIN = ${INSTALL} -m 755
@@ -29,14 +33,15 @@ NLPL_SOFTWARE = ${NLPL_HOME}/software
 NLPL_MODULES  = ${NLPL_SOFTWARE}/modulefiles
 NLPL_SOURCES  = ${NLPL_SOFTWARE}/sources
 NLPL_BUILD    = ${NLPL_SOFTWARE}/build_scripts
-NLPL_BIN      = ${NLPL_SOFTWARE}/bin
-NLPL_LIB      = ${NLPL_SOFTWARE}/lib
-NLPL_LIB64    = ${NLPL_SOFTWARE}/lib64
-NLPL_INC      = ${NLPL_SOFTWARE}/include
-NLPL_ETC      = ${NLPL_SOFTWARE}/etc
-NLPL_SHARE    = ${NLPL_SOFTWARE}/share
+NLPL_COMMON   = ${NLPL_SOFTWARE}/nlpl-common
+NLPL_BIN      = ${NLPL_COMMON}/bin
+NLPL_LIB      = ${NLPL_COMMON}/lib
+NLPL_LIB64    = ${NLPL_COMMON}/lib64
+NLPL_INC      = ${NLPL_COMMON}/include
+NLPL_ETC      = ${NLPL_COMMON}/etc
+NLPL_SHARE    = ${NLPL_COMMON}/share
 
-OPUS_HOME     = ${NLPL_HOME}/corpora/OPUS
+OPUS_HOME     = ${NLPL_HOME}/data/OPUS
 OPUS_CORPORA  = ${OPUS_HOME}/corpus
 OPUS_TOOLS    = ${OPUS_HOME}/tools
 
@@ -47,19 +52,19 @@ ME = $(shell whoami)
 
 ifeq (${shell hostname --domain},csc.fi)
   export PATH=$(shell echo $${PATH} | sed "s/:[^:]*${ME}[^:]*//g")
-  export PERL5LIB=${NLPL_SOFTWARE}/share/perl5:${NLPL_SOFTWARE}/lib64/perl5:${NLPL_SOFTWARE}/lib/perl5
+  export PERL5LIB=${NLPL_SHARE}/perl5:${NLPL_LIB64}/perl5:${NLPL_LIB}/perl5
   CPAN=cpan
 else
   export PATH=${shell 	module load perlmodules;\
-			eval $$(perl -Mlocal::lib=${NLPL_HOME}/software);\
+			eval $$(perl -Mlocal::lib=${NLPL_HOME}/software/nlpl-common);\
 			echo $${PATH} | sed "s/:[^:]*${ME}[^:]*//g"}
   export PERL5LIB=${NLPL_SOFTWARE}/share/perl5:${NLPL_SOFTWARE}/lib64/perl5:${NLPL_SOFTWARE}/lib/perl5:${shell \
 			module load perlmodules;\
-			eval $$(perl -Mlocal::lib=${NLPL_HOME}/software);\
+			eval $$(perl -Mlocal::lib=${NLPL_HOME}/software/nlpl-common);\
 			echo $${PERL5LIB} | sed "s/:[^:]*${ME}[^:]*//g"}
   export PERL_CPANM_HOME=/tmp/cpanm_$USER
-  export PERL_MB_OPT=--prefix ${NLPL_HOME}/software
-  export PERL_MM_OPT=PREFIX=${NLPL_HOME}/software
+  export PERL_MB_OPT=--prefix ${NLPL_HOME}/software/nlpl-common
+  export PERL_MM_OPT=PREFIX=${NLPL_HOME}/software/nlpl-common
   CPAN=cpanm -n
 endif
 
@@ -78,8 +83,5 @@ endif
 
 # make software home the home directory
 # for module installation via cpan or pip
-export HOME=${NLPL_HOME}/software
+export HOME=${NLPL_HOME}/software/nlpl-common
 
-ttt:
-	echo ${PERL_MB_OPT}
-	echo ${PERL_MM_OPT}

@@ -127,7 +127,7 @@
 <td><a rel="nofollow" title="sentence alignments for 'Catalan-Arabic' (581 aligned documents, 0.4M links, 5.5M tokens)" href="download.php?f=OpenSubtitles2018/ar-ca.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Catalan-Bulgarian' (595 aligned documents, 0.4M links, 6.0M tokens)" href="download.php?f=OpenSubtitles2018/bg-ca.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Catalan-Bengali' (14 aligned documents, 17.3k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2018/bn-ca.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Catalan-Breton' (9 aligned documents, 6.4k links, 92.9k tokens)" href="download.php?f=OpenSubtitles2018/br-ca.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Catalan-Breton' (9 aligned documents, 6.5k links, 92.9k tokens)" href="download.php?f=OpenSubtitles2018/br-ca.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Catalan-Bosnian' (254 aligned documents, 0.2M links, 2.7M tokens)" href="download.php?f=OpenSubtitles2018/bs-ca.xml.gz">ces</a></td>
 <th></th>
 <td><a rel="nofollow" title="Catalan-Czech (sample file)" href="OpenSubtitles2018/ca-cs_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Danish (sample file)" href="OpenSubtitles2018/ca-da_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-German (sample file)" href="OpenSubtitles2018/ca-de_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Greek (sample file)" href="OpenSubtitles2018/ca-el_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-English (sample file)" href="OpenSubtitles2018/ca-en_sample.html">view</a></td><td></td><td><a rel="nofollow" title="Catalan-Spanish (sample file)" href="OpenSubtitles2018/ca-es_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Estonian (sample file)" href="OpenSubtitles2018/ca-et_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Basque (sample file)" href="OpenSubtitles2018/ca-eu_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Persian (sample file)" href="OpenSubtitles2018/ca-fa_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Finnish (sample file)" href="OpenSubtitles2018/ca-fi_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-French (sample file)" href="OpenSubtitles2018/ca-fr_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Galician (sample file)" href="OpenSubtitles2018/ca-gl_sample.html">view</a></td><td><a rel="nofollow" title="Catalan-Hebrew (sample file)" href="OpenSubtitles2018/ca-he_sample.html">view</a></td><th>ca</th>
@@ -190,7 +190,7 @@
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2018/en.tar.gz">en</a></th>
 <td><a rel="nofollow" title="sentence alignments for 'English-Afrikaans' (46 aligned documents, 48.5k links, 0.7M tokens)" href="download.php?f=OpenSubtitles2018/af-en.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'English-Arabic' (40,979 aligned documents, 31.9M links, 454.5M tokens)" href="download.php?f=OpenSubtitles2018/ar-en.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'English-Bulgarian' (52,143 aligned documents, 42.9M links, 639.0M tokens)" href="download.php?f=OpenSubtitles2018/bg-en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'English-Bulgarian' (52,151 aligned documents, 42.9M links, 639.0M tokens)" href="download.php?f=OpenSubtitles2018/bg-en.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'English-Bengali' (317 aligned documents, 0.4M links, 5.7M tokens)" href="download.php?f=OpenSubtitles2018/bn-en.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'English-Breton' (28 aligned documents, 20.9k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2018/br-en.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'English-Bosnian' (17,874 aligned documents, 15.2M links, 219.4M tokens)" href="download.php?f=OpenSubtitles2018/bs-en.xml.gz">ces</a></td>
@@ -208,7 +208,7 @@
 <td><a rel="nofollow" title="sentence alignments for 'Esperanto-Arabic' (31 aligned documents, 30.4k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2018/ar-eo.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Esperanto-Bulgarian' (34 aligned documents, 34.2k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2018/bg-eo.xml.gz">ces</a></td>
 <td></td>
-<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Breton' (1.3k links, 16.8k tokens)" href="download.php?f=OpenSubtitles2018/br-eo.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Esperanto-Breton' (1.2k links, 16.8k tokens)" href="download.php?f=OpenSubtitles2018/br-eo.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Esperanto-Bosnian' (18 aligned documents, 13.6k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2018/bs-eo.xml.gz">ces</a></td>
 <td></td>
 <td><a rel="nofollow" title="sentence alignments for 'Esperanto-Czech' (45 aligned documents, 45.5k links, 0.6M tokens)" href="download.php?f=OpenSubtitles2018/cs-eo.xml.gz">ces</a></td>
@@ -496,7 +496,7 @@
 <td><a rel="nofollow" title="sentence alignments for 'Croatian-Danish' (14,877 aligned documents, 12.4M links, 173.7M tokens)" href="download.php?f=OpenSubtitles2018/da-hr.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Croatian-German' (18,619 aligned documents, 15.2M links, 213.5M tokens)" href="download.php?f=OpenSubtitles2018/de-hr.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Croatian-Greek' (33,172 aligned documents, 26.5M links, 366.6M tokens)" href="download.php?f=OpenSubtitles2018/el-hr.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Croatian-English' (46,233 aligned documents, 37.5M links, 549.0M tokens)" href="download.php?f=OpenSubtitles2018/en-hr.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Croatian-English' (46,239 aligned documents, 37.5M links, 549.1M tokens)" href="download.php?f=OpenSubtitles2018/en-hr.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Croatian-Esperanto' (31 aligned documents, 30.8k links, 0.4M tokens)" href="download.php?f=OpenSubtitles2018/eo-hr.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Croatian-Spanish' (41,565 aligned documents, 32.7M links, 470.9M tokens)" href="download.php?f=OpenSubtitles2018/es-hr.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Croatian-Estonian' (12,631 aligned documents, 10.8M links, 140.4M tokens)" href="download.php?f=OpenSubtitles2018/et-hr.xml.gz">ces</a></td>
@@ -519,11 +519,11 @@
 <td><a rel="nofollow" title="sentence alignments for 'Hungarian-Breton' (26 aligned documents, 19.4k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2018/br-hu.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Hungarian-Bosnian' (13,848 aligned documents, 11.2M links, 146.8M tokens)" href="download.php?f=OpenSubtitles2018/bs-hu.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Hungarian-Catalan' (660 aligned documents, 0.4M links, 6.3M tokens)" href="download.php?f=OpenSubtitles2018/ca-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Czech' (45,784 aligned documents, 34.3M links, 456.0M tokens)" href="download.php?f=OpenSubtitles2018/cs-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-Czech' (45,800 aligned documents, 34.3M links, 456.1M tokens)" href="download.php?f=OpenSubtitles2018/cs-hu.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Hungarian-Danish' (15,748 aligned documents, 12.9M links, 176.6M tokens)" href="download.php?f=OpenSubtitles2018/da-hu.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Hungarian-German' (21,352 aligned documents, 17.2M links, 236.6M tokens)" href="download.php?f=OpenSubtitles2018/de-hu.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Hungarian-Greek' (38,950 aligned documents, 30.3M links, 410.0M tokens)" href="download.php?f=OpenSubtitles2018/el-hu.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (57,685 aligned documents, 45.2M links, 644.5M tokens)" href="download.php?f=OpenSubtitles2018/en-hu.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Hungarian-English' (57,690 aligned documents, 45.2M links, 644.5M tokens)" href="download.php?f=OpenSubtitles2018/en-hu.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Hungarian-Esperanto' (42 aligned documents, 40.1k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2018/eo-hu.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Hungarian-Spanish' (51,622 aligned documents, 39.3M links, 552.6M tokens)" href="download.php?f=OpenSubtitles2018/es-hu.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Hungarian-Estonian' (13,437 aligned documents, 11.3M links, 143.5M tokens)" href="download.php?f=OpenSubtitles2018/et-hu.xml.gz">ces</a></td>
@@ -641,7 +641,7 @@
 <td><a rel="nofollow" title="sentence alignments for 'Italian-Danish' (13,364 aligned documents, 10.7M links, 160.9M tokens)" href="download.php?f=OpenSubtitles2018/da-it.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Italian-German' (18,456 aligned documents, 14.7M links, 220.9M tokens)" href="download.php?f=OpenSubtitles2018/de-it.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Italian-Greek' (32,209 aligned documents, 24.9M links, 369.4M tokens)" href="download.php?f=OpenSubtitles2018/el-it.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (48,746 aligned documents, 37.8M links, 589.4M tokens)" href="download.php?f=OpenSubtitles2018/en-it.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Italian-English' (48,744 aligned documents, 37.8M links, 589.3M tokens)" href="download.php?f=OpenSubtitles2018/en-it.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Italian-Esperanto' (39 aligned documents, 36.7k links, 0.5M tokens)" href="download.php?f=OpenSubtitles2018/eo-it.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Italian-Spanish' (42,720 aligned documents, 32.5M links, 501.6M tokens)" href="download.php?f=OpenSubtitles2018/es-it.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Italian-Estonian' (10,688 aligned documents, 8.9M links, 123.9M tokens)" href="download.php?f=OpenSubtitles2018/et-it.xml.gz">ces</a></td>
@@ -1868,7 +1868,7 @@
 <td><a rel="nofollow" title="sentence alignments for 'Tagalog-Esperanto' (2.5k links, 33.0k tokens)" href="download.php?f=OpenSubtitles2018/eo-tl.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Tagalog-Spanish' (54 aligned documents, 14.7k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2018/es-tl.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Tagalog-Estonian' (3 aligned documents, 3.7k links, 43.0k tokens)" href="download.php?f=OpenSubtitles2018/et-tl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Basque' (3 aligned documents, 3.1k links, 34.9k tokens)" href="download.php?f=OpenSubtitles2018/eu-tl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Basque' (3 aligned documents, 3.2k links, 34.9k tokens)" href="download.php?f=OpenSubtitles2018/eu-tl.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Tagalog-Persian' (6 aligned documents, 8.1k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2018/fa-tl.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Tagalog-Finnish' (6 aligned documents, 7.5k links, 92.2k tokens)" href="download.php?f=OpenSubtitles2018/fi-tl.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Tagalog-French' (55 aligned documents, 14.4k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2018/fr-tl.xml.gz">ces</a></td>
@@ -1880,7 +1880,7 @@
 <td><a rel="nofollow" title="sentence alignments for 'Tagalog-Hungarian' (30 aligned documents, 12.2k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2018/hu-tl.xml.gz">ces</a></td>
 <td></td>
 <td><a rel="nofollow" title="sentence alignments for 'Tagalog-Indonesian' (9 aligned documents, 8.8k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2018/id-tl.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Icelandic' (1.5k links, 18.2k tokens)" href="download.php?f=OpenSubtitles2018/is-tl.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Tagalog-Icelandic' (1.4k links, 18.2k tokens)" href="download.php?f=OpenSubtitles2018/is-tl.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Tagalog-Italian' (55 aligned documents, 14.7k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2018/it-tl.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Tagalog-Japanese' (52 aligned documents, 11.5k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2018/ja-tl.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Tagalog-Georgian' (1.4k links, 17.3k tokens)" href="download.php?f=OpenSubtitles2018/ka-tl.xml.gz">ces</a></td>
@@ -2060,7 +2060,7 @@
 <td><a rel="nofollow" title="sentence alignments for 'Urdu-Icelandic' (1.2k links, 18.4k tokens)" href="download.php?f=OpenSubtitles2018/is-ur.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Urdu-Italian' (17 aligned documents, 23.3k links, 0.3M tokens)" href="download.php?f=OpenSubtitles2018/it-ur.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Urdu-Japanese' (9 aligned documents, 13.1k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2018/ja-ur.xml.gz">ces</a></td>
-<td><a rel="nofollow" title="sentence alignments for 'Urdu-Georgian' (2 aligned documents, 2.4k links, 39.1k tokens)" href="download.php?f=OpenSubtitles2018/ka-ur.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'Urdu-Georgian' (2 aligned documents, 2.3k links, 39.1k tokens)" href="download.php?f=OpenSubtitles2018/ka-ur.xml.gz">ces</a></td>
 <td></td>
 <td><a rel="nofollow" title="sentence alignments for 'Urdu-Korean' (6 aligned documents, 8.6k links, 0.1M tokens)" href="download.php?f=OpenSubtitles2018/ko-ur.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'Urdu-Lithuanian' (4 aligned documents, 5.1k links, 75.3k tokens)" href="download.php?f=OpenSubtitles2018/lt-ur.xml.gz">ces</a></td>
@@ -2153,7 +2153,7 @@
 <th></th>
 <td><a rel="nofollow" title="Vietnamese-ze (sample file)" href="OpenSubtitles2018/vi-ze_en_sample.html">view</a></td><td><a rel="nofollow" title="Vietnamese-ze (sample file)" href="OpenSubtitles2018/vi-ze_zh_sample.html">view</a></td><td><a rel="nofollow" title="Vietnamese-Chinese (sample file)" href="OpenSubtitles2018/vi-zh_cn_sample.html">view</a></td><td><a rel="nofollow" title="Vietnamese-Chinese (sample file)" href="OpenSubtitles2018/vi-zh_tw_sample.html">view</a></td><th><a rel="nofollow" href="download.php?f=OpenSubtitles2018/vi.raw.tar.gz">vi</a></th></tr>
 <tr><th><a rel="nofollow" href="download.php?f=OpenSubtitles2018/ze_en.tar.gz">ze_en</a></th>
-<td><a rel="nofollow" title="sentence alignments for 'ze-Afrikaans' (1.3k links, 17.0k tokens)" href="download.php?f=OpenSubtitles2018/af-ze_en.xml.gz">ces</a></td>
+<td><a rel="nofollow" title="sentence alignments for 'ze-Afrikaans' (1.4k links, 17.0k tokens)" href="download.php?f=OpenSubtitles2018/af-ze_en.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'ze-Arabic' (891 aligned documents, 0.8M links, 10.4M tokens)" href="download.php?f=OpenSubtitles2018/ar-ze_en.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'ze-Bulgarian' (721 aligned documents, 0.7M links, 9.1M tokens)" href="download.php?f=OpenSubtitles2018/bg-ze_en.xml.gz">ces</a></td>
 <td><a rel="nofollow" title="sentence alignments for 'ze-Bengali' (14 aligned documents, 19.7k links, 0.2M tokens)" href="download.php?f=OpenSubtitles2018/bn-ze_en.xml.gz">ces</a></td>
@@ -2542,7 +2542,7 @@
 </th></tr> <tr><th><a rel="nofollow" title='monolingual untokenized af plain text' href="download.php?f=OpenSubtitles2018/mono/OpenSubtitles2018.raw.af.gz">af</a>
 </th><td>63</td> <td>0.4M</td> <td>61.3k</td><td></td><td bgcolor="#ffe1df"><a rel="nofollow" title='Afrikaans-Arabic (12,046 sentence pairs, 0.15M words) - TMX format' href="download.php?f=OpenSubtitles2018/af-ar.tmx.gz">12.0k</a>
 </td><td bgcolor="#ffeae7"><a rel="nofollow" title='Afrikaans-Bulgarian (17,959 sentence pairs, 0.24M words) - TMX format' href="download.php?f=OpenSubtitles2018/af-bg.tmx.gz">18.0k</a>
-</td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Afrikaans-Bengali (1,170 sentence pairs, 15.10k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-bn.tmx.gz">1.2k</a>
+</td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Afrikaans-Bengali (1,169 sentence pairs, 15.14k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-bn.tmx.gz">1.2k</a>
 </td><td></td><td bgcolor="#ffd7d7"><a rel="nofollow" title='Afrikaans-Bosnian (4,264 sentence pairs, 59.73k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-bs.tmx.gz">4.3k</a>
 </td><td></td><td bgcolor="#ffe7e4"><a rel="nofollow" title='Afrikaans-Czech (17,521 sentence pairs, 0.22M words) - TMX format' href="download.php?f=OpenSubtitles2018/af-cs.tmx.gz">17.5k</a>
 </td><td bgcolor="#ffe3e1"><a rel="nofollow" title='Afrikaans-Danish (12,337 sentence pairs, 0.17M words) - TMX format' href="download.php?f=OpenSubtitles2018/af-da.tmx.gz">12.3k</a>
@@ -2562,10 +2562,10 @@
 </td><td></td><td bgcolor="#ffd6d6"><a rel="nofollow" title='Afrikaans-Indonesian (4,427 sentence pairs, 50.19k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-id.tmx.gz">4.4k</a>
 </td><td></td><td bgcolor="#ffe6e3"><a rel="nofollow" title='Afrikaans-Italian (14,719 sentence pairs, 0.20M words) - TMX format' href="download.php?f=OpenSubtitles2018/af-it.tmx.gz">14.7k</a>
 </td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Afrikaans-Japanese (1,966 sentence pairs, 16.32k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-ja.tmx.gz">2.0k</a>
-</td><td></td><td></td><td></td><td bgcolor="#ffd0d0"><a rel="nofollow" title='Afrikaans-Lithuanian (630 sentence pairs, 6.96k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-lt.tmx.gz">0.6k</a>
-</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Afrikaans-Latvian (1,070 sentence pairs, 11.17k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-lv.tmx.gz">1.1k</a>
+</td><td></td><td></td><td></td><td bgcolor="#ffd0d0"><a rel="nofollow" title='Afrikaans-Lithuanian (628 sentence pairs, 6.97k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-lt.tmx.gz">0.6k</a>
+</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Afrikaans-Latvian (1,065 sentence pairs, 11.17k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-lv.tmx.gz">1.1k</a>
 </td><td bgcolor="#ffd6d6"><a rel="nofollow" title='Afrikaans-Macedonian (3,761 sentence pairs, 48.02k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-mk.tmx.gz">3.8k</a>
-</td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Afrikaans-Malayalam (2,161 sentence pairs, 22.38k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-ml.tmx.gz">2.2k</a>
+</td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Afrikaans-Malayalam (2,165 sentence pairs, 22.43k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-ml.tmx.gz">2.2k</a>
 </td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Afrikaans-Malay (1,207 sentence pairs, 11.34k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-ms.tmx.gz">1.2k</a>
 </td><td bgcolor="#ffede9"><a rel="nofollow" title='Afrikaans-Dutch (21,848 sentence pairs, 0.29M words) - TMX format' href="download.php?f=OpenSubtitles2018/af-nl.tmx.gz">21.8k</a>
 </td><td bgcolor="#ffd7d7"><a rel="nofollow" title='Afrikaans-Norwegian (4,915 sentence pairs, 58.52k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-no.tmx.gz">4.9k</a>
@@ -2574,18 +2574,18 @@
 </td><td bgcolor="#fff3ed"><a rel="nofollow" title='Afrikaans-Portuguese (30,381 sentence pairs, 0.41M words) - TMX format' href="download.php?f=OpenSubtitles2018/af-pt_br.tmx.gz">30.4k</a>
 </td><td bgcolor="#fff4ee"><a rel="nofollow" title='Afrikaans-Romanian (31,254 sentence pairs, 0.41M words) - TMX format' href="download.php?f=OpenSubtitles2018/af-ro.tmx.gz">31.3k</a>
 </td><td bgcolor="#ffe5e2"><a rel="nofollow" title='Afrikaans-Russian (15,136 sentence pairs, 0.19M words) - TMX format' href="download.php?f=OpenSubtitles2018/af-ru.tmx.gz">15.1k</a>
-</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Afrikaans-Sinhala (974 sentence pairs, 11.85k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-si.tmx.gz">1.0k</a>
+</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Afrikaans-Sinhala (968 sentence pairs, 11.88k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-si.tmx.gz">1.0k</a>
 </td><td bgcolor="#ffd8d7"><a rel="nofollow" title='Afrikaans-Slovak (4,652 sentence pairs, 65.29k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-sk.tmx.gz">4.7k</a>
 </td><td bgcolor="#ffe0de"><a rel="nofollow" title='Afrikaans-Slovenian (10,811 sentence pairs, 0.13M words) - TMX format' href="download.php?f=OpenSubtitles2018/af-sl.tmx.gz">10.8k</a>
 </td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Afrikaans-Albanian (1,060 sentence pairs, 12.70k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-sq.tmx.gz">1.1k</a>
 </td><td bgcolor="#ffe6e3"><a rel="nofollow" title='Afrikaans-Serbian (16,881 sentence pairs, 0.21M words) - TMX format' href="download.php?f=OpenSubtitles2018/af-sr.tmx.gz">16.9k</a>
 </td><td bgcolor="#ffdbda"><a rel="nofollow" title='Afrikaans-Swedish (7,507 sentence pairs, 91.84k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-sv.tmx.gz">7.5k</a>
-</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Afrikaans-Tamil (1,101 sentence pairs, 13.04k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-ta.tmx.gz">1.1k</a>
+</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Afrikaans-Tamil (1,102 sentence pairs, 13.04k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-ta.tmx.gz">1.1k</a>
 </td><td></td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Afrikaans-Thai (2,001 sentence pairs, 15.37k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-th.tmx.gz">2.0k</a>
 </td><td></td><td bgcolor="#ffece8"><a rel="nofollow" title='Afrikaans-Turkish (23,660 sentence pairs, 0.28M words) - TMX format' href="download.php?f=OpenSubtitles2018/af-tr.tmx.gz">23.7k</a>
 </td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Afrikaans-Ukrainian (2,445 sentence pairs, 26.88k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-uk.tmx.gz">2.4k</a>
 </td><td></td><td bgcolor="#ffd6d6"><a rel="nofollow" title='Afrikaans-Vietnamese (3,229 sentence pairs, 45.60k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-vi.tmx.gz">3.2k</a>
-</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Afrikaans-ze (800 sentence pairs, 11.53k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-ze_en.tmx.gz">0.8k</a>
+</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Afrikaans-ze (775 sentence pairs, 11.32k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-ze_en.tmx.gz">0.8k</a>
 </td><td></td><td bgcolor="#ffd7d7"><a rel="nofollow" title='Afrikaans-Chinese (6,956 sentence pairs, 56.02k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-zh_cn.tmx.gz">7.0k</a>
 </td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Afrikaans-Chinese (3,320 sentence pairs, 23.98k words) - TMX format' href="download.php?f=OpenSubtitles2018/af-zh_tw.tmx.gz">3.3k</a>
 </td></tr> <tr><th><a rel="nofollow" title='monolingual untokenized ar plain text' href="download.php?f=OpenSubtitles2018/mono/OpenSubtitles2018.raw.ar.gz">ar</a>
@@ -2661,7 +2661,7 @@
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Bulgarian-Danish (10,519,187 sentence pairs, 136.90M words) - TMX format' href="download.php?f=OpenSubtitles2018/bg-da.tmx.gz">10.5M</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Bulgarian-German (13,257,165 sentence pairs, 174.10M words) - TMX format' href="download.php?f=OpenSubtitles2018/bg-de.tmx.gz">13.3M</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Bulgarian-Greek (23,981,801 sentence pairs, 307.86M words) - TMX format' href="download.php?f=OpenSubtitles2018/bg-el.tmx.gz">24.0M</a>
-</td><td bgcolor="#bfffbf"><a rel="nofollow" title='Bulgarian-English (32,718,884 sentence pairs, 449.58M words) - TMX format' href="download.php?f=OpenSubtitles2018/bg-en.tmx.gz">32.7M</a>
+</td><td bgcolor="#bfffbf"><a rel="nofollow" title='Bulgarian-English (32,722,914 sentence pairs, 449.63M words) - TMX format' href="download.php?f=OpenSubtitles2018/bg-en.tmx.gz">32.7M</a>
 </td><td bgcolor="#ffefea"><a rel="nofollow" title='Bulgarian-Esperanto (29,038 sentence pairs, 0.32M words) - TMX format' href="download.php?f=OpenSubtitles2018/bg-eo.tmx.gz">29.0k</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Bulgarian-Spanish (29,475,972 sentence pairs, 393.61M words) - TMX format' href="download.php?f=OpenSubtitles2018/bg-es.tmx.gz">29.5M</a>
 </td><td bgcolor="#c2ffc2"><a rel="nofollow" title='Bulgarian-Estonian (9,305,218 sentence pairs, 110.93M words) - TMX format' href="download.php?f=OpenSubtitles2018/bg-et.tmx.gz">9.3M</a>
@@ -2713,7 +2713,7 @@
 </td><td bgcolor="#cbffcb"><a rel="nofollow" title='Bulgarian-Chinese (7,340,415 sentence pairs, 58.77M words) - TMX format' href="download.php?f=OpenSubtitles2018/bg-zh_cn.tmx.gz">7.3M</a>
 </td><td bgcolor="#d5ffc9"><a rel="nofollow" title='Bulgarian-Chinese (3,470,088 sentence pairs, 26.53M words) - TMX format' href="download.php?f=OpenSubtitles2018/bg-zh_tw.tmx.gz">3.5M</a>
 </td></tr> <tr><th><a rel="nofollow" title='monolingual untokenized bn plain text' href="download.php?f=OpenSubtitles2018/mono/OpenSubtitles2018.raw.bn.gz">bn</a>
-</th><td>542</td> <td>3.7M</td> <td>0.7M</td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Bengali-Afrikaans (1,186 sentence pairs, 15.16k words) - Moses format' href="download.php?f=OpenSubtitles2018/af-bn.txt.zip">1.2k</a>
+</th><td>542</td> <td>3.7M</td> <td>0.7M</td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Bengali-Afrikaans (1,185 sentence pairs, 15.21k words) - Moses format' href="download.php?f=OpenSubtitles2018/af-bn.txt.zip">1.2k</a>
 </td><td bgcolor="#ebffcd"><a rel="nofollow" title='Bengali-Arabic (331,701 sentence pairs, 3.41M words) - Moses format' href="download.php?f=OpenSubtitles2018/ar-bn.txt.zip">0.3M</a>
 </td><td bgcolor="#ebffcc"><a rel="nofollow" title='Bengali-Bulgarian (295,869 sentence pairs, 3.21M words) - Moses format' href="download.php?f=OpenSubtitles2018/bg-bn.txt.zip">0.3M</a>
 </td><td></td><td></td><td bgcolor="#ffffe4"><a rel="nofollow" title='Bengali-Bosnian (152,698 sentence pairs, 1.70M words) - TMX format' href="download.php?f=OpenSubtitles2018/bn-bs.tmx.gz">0.2M</a>
@@ -2773,13 +2773,13 @@
 </th><td>32</td> <td>0.2M</td> <td>23.1k</td><td></td><td bgcolor="#ffe2e0"><a rel="nofollow" title='Breton-Arabic (14,021 sentence pairs, 0.16M words) - Moses format' href="download.php?f=OpenSubtitles2018/ar-br.txt.zip">14.0k</a>
 </td><td bgcolor="#ffe3e1"><a rel="nofollow" title='Breton-Bulgarian (14,199 sentence pairs, 0.16M words) - Moses format' href="download.php?f=OpenSubtitles2018/bg-br.txt.zip">14.2k</a>
 </td><td></td><td></td><td bgcolor="#ffd5d5"><a rel="nofollow" title='Breton-Bosnian (3,489 sentence pairs, 40.02k words) - TMX format' href="download.php?f=OpenSubtitles2018/br-bs.tmx.gz">3.5k</a>
-</td><td bgcolor="#ffd8d7"><a rel="nofollow" title='Breton-Catalan (5,326 sentence pairs, 64.86k words) - TMX format' href="download.php?f=OpenSubtitles2018/br-ca.tmx.gz">5.3k</a>
+</td><td bgcolor="#ffd8d7"><a rel="nofollow" title='Breton-Catalan (5,340 sentence pairs, 64.75k words) - TMX format' href="download.php?f=OpenSubtitles2018/br-ca.tmx.gz">5.3k</a>
 </td><td bgcolor="#ffe4e2"><a rel="nofollow" title='Breton-Czech (16,581 sentence pairs, 0.18M words) - TMX format' href="download.php?f=OpenSubtitles2018/br-cs.tmx.gz">16.6k</a>
 </td><td bgcolor="#ffdfde"><a rel="nofollow" title='Breton-Danish (10,132 sentence pairs, 0.12M words) - TMX format' href="download.php?f=OpenSubtitles2018/br-da.tmx.gz">10.1k</a>
 </td><td bgcolor="#ffe3e1"><a rel="nofollow" title='Breton-German (14,161 sentence pairs, 0.16M words) - TMX format' href="download.php?f=OpenSubtitles2018/br-de.tmx.gz">14.2k</a>
 </td><td bgcolor="#ffe4e2"><a rel="nofollow" title='Breton-Greek (14,470 sentence pairs, 0.17M words) - TMX format' href="download.php?f=OpenSubtitles2018/br-el.tmx.gz">14.5k</a>
 </td><td bgcolor="#ffe7e4"><a rel="nofollow" title='Breton-English (17,792 sentence pairs, 0.21M words) - TMX format' href="download.php?f=OpenSubtitles2018/br-en.tmx.gz">17.8k</a>
-</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Breton-Esperanto (1,052 sentence pairs, 12.11k words) - TMX format' href="download.php?f=OpenSubtitles2018/br-eo.tmx.gz">1.1k</a>
+</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Breton-Esperanto (1,195 sentence pairs, 12.68k words) - TMX format' href="download.php?f=OpenSubtitles2018/br-eo.tmx.gz">1.2k</a>
 </td><td bgcolor="#ffe5e3"><a rel="nofollow" title='Breton-Spanish (16,435 sentence pairs, 0.19M words) - TMX format' href="download.php?f=OpenSubtitles2018/br-es.tmx.gz">16.4k</a>
 </td><td bgcolor="#ffe3e1"><a rel="nofollow" title='Breton-Estonian (15,452 sentence pairs, 0.17M words) - TMX format' href="download.php?f=OpenSubtitles2018/br-et.tmx.gz">15.5k</a>
 </td><td bgcolor="#ffd0d0"><a rel="nofollow" title='Breton-Basque (428 sentence pairs, 6.40k words) - TMX format' href="download.php?f=OpenSubtitles2018/br-eu.tmx.gz">0.4k</a>
@@ -2876,7 +2876,7 @@
 </th><td>832</td> <td>4.6M</td> <td>0.6M</td><td></td><td bgcolor="#e8ffca"><a rel="nofollow" title='Catalan-Arabic (349,709 sentence pairs, 4.21M words) - Moses format' href="download.php?f=OpenSubtitles2018/ar-ca.txt.zip">0.3M</a>
 </td><td bgcolor="#e7ffca"><a rel="nofollow" title='Catalan-Bulgarian (367,893 sentence pairs, 4.50M words) - Moses format' href="download.php?f=OpenSubtitles2018/bg-ca.txt.zip">0.4M</a>
 </td><td bgcolor="#ffe3e1"><a rel="nofollow" title='Catalan-Bengali (13,220 sentence pairs, 0.17M words) - Moses format' href="download.php?f=OpenSubtitles2018/bn-ca.txt.zip">13.2k</a>
-</td><td bgcolor="#ffd8d7"><a rel="nofollow" title='Catalan-Breton (5,451 sentence pairs, 65.34k words) - Moses format' href="download.php?f=OpenSubtitles2018/br-ca.txt.zip">5.5k</a>
+</td><td bgcolor="#ffd8d7"><a rel="nofollow" title='Catalan-Breton (5,464 sentence pairs, 65.23k words) - Moses format' href="download.php?f=OpenSubtitles2018/br-ca.txt.zip">5.5k</a>
 </td><td bgcolor="#ffffe0"><a rel="nofollow" title='Catalan-Bosnian (162,614 sentence pairs, 2.00M words) - Moses format' href="download.php?f=OpenSubtitles2018/bs-ca.txt.zip">0.2M</a>
 </td><td></td><td bgcolor="#e7ffca"><a rel="nofollow" title='Catalan-Czech (390,262 sentence pairs, 4.86M words) - TMX format' href="download.php?f=OpenSubtitles2018/ca-cs.tmx.gz">0.4M</a>
 </td><td bgcolor="#ebffcd"><a rel="nofollow" title='Catalan-Danish (248,514 sentence pairs, 3.36M words) - TMX format' href="download.php?f=OpenSubtitles2018/ca-da.tmx.gz">0.2M</a>
@@ -2949,7 +2949,7 @@
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Czech-Hebrew (20,639,664 sentence pairs, 250.89M words) - TMX format' href="download.php?f=OpenSubtitles2018/cs-he.tmx.gz">20.6M</a>
 </td><td bgcolor="#fffcf1"><a rel="nofollow" title='Czech-Hindi (58,412 sentence pairs, 0.70M words) - TMX format' href="download.php?f=OpenSubtitles2018/cs-hi.tmx.gz">58.4k</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Czech-Croatian (22,145,987 sentence pairs, 268.69M words) - TMX format' href="download.php?f=OpenSubtitles2018/cs-hr.tmx.gz">22.1M</a>
-</td><td bgcolor="#bfffbf"><a rel="nofollow" title='Czech-Hungarian (27,425,667 sentence pairs, 320.16M words) - TMX format' href="download.php?f=OpenSubtitles2018/cs-hu.tmx.gz">27.4M</a>
+</td><td bgcolor="#bfffbf"><a rel="nofollow" title='Czech-Hungarian (27,440,771 sentence pairs, 320.25M words) - TMX format' href="download.php?f=OpenSubtitles2018/cs-hu.tmx.gz">27.4M</a>
 </td><td bgcolor="#ffd5d5"><a rel="nofollow" title='Czech-Armenian (3,210 sentence pairs, 42.79k words) - TMX format' href="download.php?f=OpenSubtitles2018/cs-hy.tmx.gz">3.2k</a>
 </td><td bgcolor="#c8ffc8"><a rel="nofollow" title='Czech-Indonesian (6,306,078 sentence pairs, 73.41M words) - TMX format' href="download.php?f=OpenSubtitles2018/cs-id.tmx.gz">6.3M</a>
 </td><td bgcolor="#dcffc6"><a rel="nofollow" title='Czech-Icelandic (1,293,224 sentence pairs, 14.45M words) - TMX format' href="download.php?f=OpenSubtitles2018/cs-is.tmx.gz">1.3M</a>
@@ -3176,7 +3176,7 @@
 </td></tr> <tr><th><a rel="nofollow" title='monolingual untokenized en plain text' href="download.php?f=OpenSubtitles2018/mono/OpenSubtitles2018.raw.en.gz">en</a>
 </th><td>446,612</td> <td>3.2G</td> <td>441.5M</td><td bgcolor="#fff9f0"><a rel="nofollow" title='English-Afrikaans (44,703 sentence pairs, 0.57M words) - Moses format' href="download.php?f=OpenSubtitles2018/af-en.txt.zip">44.7k</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='English-Arabic (29,823,188 sentence pairs, 356.14M words) - Moses format' href="download.php?f=OpenSubtitles2018/ar-en.txt.zip">29.8M</a>
-</td><td bgcolor="#bfffbf"><a rel="nofollow" title='English-Bulgarian (40,204,362 sentence pairs, 485.22M words) - Moses format' href="download.php?f=OpenSubtitles2018/bg-en.txt.zip">40.2M</a>
+</td><td bgcolor="#bfffbf"><a rel="nofollow" title='English-Bulgarian (40,204,338 sentence pairs, 485.26M words) - Moses format' href="download.php?f=OpenSubtitles2018/bg-en.txt.zip">40.2M</a>
 </td><td bgcolor="#e8ffca"><a rel="nofollow" title='English-Bengali (413,602 sentence pairs, 4.41M words) - Moses format' href="download.php?f=OpenSubtitles2018/bn-en.txt.zip">0.4M</a>
 </td><td bgcolor="#ffe7e4"><a rel="nofollow" title='English-Breton (18,596 sentence pairs, 0.21M words) - Moses format' href="download.php?f=OpenSubtitles2018/br-en.txt.zip">18.6k</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='English-Bosnian (14,041,160 sentence pairs, 165.40M words) - Moses format' href="download.php?f=OpenSubtitles2018/bs-en.txt.zip">14.0M</a>
@@ -3195,12 +3195,12 @@
 </td><td bgcolor="#efffd0"><a rel="nofollow" title='English-Galician (190,690 sentence pairs, 2.62M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-gl.tmx.gz">0.2M</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='English-Hebrew (23,677,250 sentence pairs, 321.10M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-he.tmx.gz">23.7M</a>
 </td><td bgcolor="#ffffef"><a rel="nofollow" title='English-Hindi (81,266 sentence pairs, 1.04M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-hi.tmx.gz">81.3k</a>
-</td><td bgcolor="#bfffbf"><a rel="nofollow" title='English-Croatian (28,780,646 sentence pairs, 386.48M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-hr.tmx.gz">28.8M</a>
-</td><td bgcolor="#bfffbf"><a rel="nofollow" title='English-Hungarian (34,579,946 sentence pairs, 445.92M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-hu.tmx.gz">34.6M</a>
+</td><td bgcolor="#bfffbf"><a rel="nofollow" title='English-Croatian (28,787,869 sentence pairs, 386.56M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-hr.tmx.gz">28.8M</a>
+</td><td bgcolor="#bfffbf"><a rel="nofollow" title='English-Hungarian (34,588,290 sentence pairs, 445.99M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-hu.tmx.gz">34.6M</a>
 </td><td bgcolor="#ffd6d6"><a rel="nofollow" title='English-Armenian (3,287 sentence pairs, 46.83k words) - TMX format' href="download.php?f=OpenSubtitles2018/en-hy.tmx.gz">3.3k</a>
 </td><td bgcolor="#c4ffc4"><a rel="nofollow" title='English-Indonesian (7,386,481 sentence pairs, 93.97M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-id.tmx.gz">7.4M</a>
 </td><td bgcolor="#daffc7"><a rel="nofollow" title='English-Icelandic (1,368,170 sentence pairs, 17.10M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-is.tmx.gz">1.4M</a>
-</td><td bgcolor="#bfffbf"><a rel="nofollow" title='English-Italian (28,812,448 sentence pairs, 413.48M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-it.tmx.gz">28.8M</a>
+</td><td bgcolor="#bfffbf"><a rel="nofollow" title='English-Italian (28,813,583 sentence pairs, 413.47M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-it.tmx.gz">28.8M</a>
 </td><td bgcolor="#daffc6"><a rel="nofollow" title='English-Japanese (1,872,100 sentence pairs, 16.38M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-ja.tmx.gz">1.9M</a>
 </td><td bgcolor="#f2ffd3"><a rel="nofollow" title='English-Georgian (187,411 sentence pairs, 2.23M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-ka.tmx.gz">0.2M</a>
 </td><td bgcolor="#ffd4d4"><a rel="nofollow" title='English-Kazakh (3,529 sentence pairs, 34.58k words) - TMX format' href="download.php?f=OpenSubtitles2018/en-kk.tmx.gz">3.5k</a>
@@ -3210,7 +3210,7 @@
 </td><td bgcolor="#d1ffce"><a rel="nofollow" title='English-Macedonian (2,912,235 sentence pairs, 37.32M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-mk.tmx.gz">2.9M</a>
 </td><td bgcolor="#eaffcc"><a rel="nofollow" title='English-Malayalam (357,274 sentence pairs, 3.73M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-ml.tmx.gz">0.4M</a>
 </td><td bgcolor="#d8ffc7"><a rel="nofollow" title='English-Malay (1,631,386 sentence pairs, 19.65M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-ms.tmx.gz">1.6M</a>
-</td><td bgcolor="#bfffbf"><a rel="nofollow" title='English-Dutch (30,951,089 sentence pairs, 452.71M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-nl.tmx.gz">31.0M</a>
+</td><td bgcolor="#bfffbf"><a rel="nofollow" title='English-Dutch (30,952,384 sentence pairs, 452.71M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-nl.tmx.gz">31.0M</a>
 </td><td bgcolor="#c3ffc3"><a rel="nofollow" title='English-Norwegian (7,405,349 sentence pairs, 101.16M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-no.tmx.gz">7.4M</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='English-Polish (34,638,819 sentence pairs, 458.26M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-pl.tmx.gz">34.6M</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='English-Portuguese (26,805,614 sentence pairs, 378.03M words) - TMX format' href="download.php?f=OpenSubtitles2018/en-pt.tmx.gz">26.8M</a>
@@ -3239,7 +3239,7 @@
 </th><td>103</td> <td>0.6M</td> <td>93.2k</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Esperanto-Afrikaans (1,265 sentence pairs, 11.94k words) - Moses format' href="download.php?f=OpenSubtitles2018/af-eo.txt.zip">1.3k</a>
 </td><td bgcolor="#ffece8"><a rel="nofollow" title='Esperanto-Arabic (26,017 sentence pairs, 0.28M words) - Moses format' href="download.php?f=OpenSubtitles2018/ar-eo.txt.zip">26.0k</a>
 </td><td bgcolor="#ffefea"><a rel="nofollow" title='Esperanto-Bulgarian (30,205 sentence pairs, 0.32M words) - Moses format' href="download.php?f=OpenSubtitles2018/bg-eo.txt.zip">30.2k</a>
-</td><td></td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Esperanto-Breton (1,053 sentence pairs, 12.11k words) - Moses format' href="download.php?f=OpenSubtitles2018/br-eo.txt.zip">1.1k</a>
+</td><td></td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Esperanto-Breton (1,202 sentence pairs, 12.70k words) - Moses format' href="download.php?f=OpenSubtitles2018/br-eo.txt.zip">1.2k</a>
 </td><td bgcolor="#ffdedd"><a rel="nofollow" title='Esperanto-Bosnian (10,989 sentence pairs, 0.12M words) - Moses format' href="download.php?f=OpenSubtitles2018/bs-eo.txt.zip">11.0k</a>
 </td><td></td><td bgcolor="#fff4ee"><a rel="nofollow" title='Esperanto-Czech (39,604 sentence pairs, 0.42M words) - Moses format' href="download.php?f=OpenSubtitles2018/cs-eo.txt.zip">39.6k</a>
 </td><td bgcolor="#ffe2e0"><a rel="nofollow" title='Esperanto-Danish (14,491 sentence pairs, 0.16M words) - Moses format' href="download.php?f=OpenSubtitles2018/da-eo.txt.zip">14.5k</a>
@@ -3257,7 +3257,7 @@
 </td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Esperanto-Hindi (1,180 sentence pairs, 12.92k words) - TMX format' href="download.php?f=OpenSubtitles2018/eo-hi.tmx.gz">1.2k</a>
 </td><td bgcolor="#ffece8"><a rel="nofollow" title='Esperanto-Croatian (25,102 sentence pairs, 0.27M words) - TMX format' href="download.php?f=OpenSubtitles2018/eo-hr.tmx.gz">25.1k</a>
 </td><td bgcolor="#fff1ec"><a rel="nofollow" title='Esperanto-Hungarian (33,762 sentence pairs, 0.36M words) - TMX format' href="download.php?f=OpenSubtitles2018/eo-hu.tmx.gz">33.8k</a>
-</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Esperanto-Armenian (1,013 sentence pairs, 12.33k words) - TMX format' href="download.php?f=OpenSubtitles2018/eo-hy.tmx.gz">1.0k</a>
+</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Esperanto-Armenian (1,025 sentence pairs, 12.34k words) - TMX format' href="download.php?f=OpenSubtitles2018/eo-hy.tmx.gz">1.0k</a>
 </td><td bgcolor="#ffe3e1"><a rel="nofollow" title='Esperanto-Indonesian (15,155 sentence pairs, 0.16M words) - TMX format' href="download.php?f=OpenSubtitles2018/eo-id.tmx.gz">15.2k</a>
 </td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Esperanto-Icelandic (766 sentence pairs, 9.89k words) - TMX format' href="download.php?f=OpenSubtitles2018/eo-is.tmx.gz">0.8k</a>
 </td><td bgcolor="#fff0eb"><a rel="nofollow" title='Esperanto-Italian (29,313 sentence pairs, 0.35M words) - TMX format' href="download.php?f=OpenSubtitles2018/eo-it.tmx.gz">29.3k</a>
@@ -3283,7 +3283,7 @@
 </td><td bgcolor="#fff3ed"><a rel="nofollow" title='Esperanto-Serbian (34,283 sentence pairs, 0.39M words) - TMX format' href="download.php?f=OpenSubtitles2018/eo-sr.tmx.gz">34.3k</a>
 </td><td bgcolor="#ffe9e6"><a rel="nofollow" title='Esperanto-Swedish (20,484 sentence pairs, 0.23M words) - TMX format' href="download.php?f=OpenSubtitles2018/eo-sv.tmx.gz">20.5k</a>
 </td><td></td><td></td><td bgcolor="#ffd7d7"><a rel="nofollow" title='Esperanto-Thai (7,318 sentence pairs, 54.64k words) - TMX format' href="download.php?f=OpenSubtitles2018/eo-th.tmx.gz">7.3k</a>
-</td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Esperanto-Tagalog (2,119 sentence pairs, 25.04k words) - TMX format' href="download.php?f=OpenSubtitles2018/eo-tl.tmx.gz">2.1k</a>
+</td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Esperanto-Tagalog (2,125 sentence pairs, 25.11k words) - TMX format' href="download.php?f=OpenSubtitles2018/eo-tl.tmx.gz">2.1k</a>
 </td><td bgcolor="#fff4ee"><a rel="nofollow" title='Esperanto-Turkish (41,404 sentence pairs, 0.43M words) - TMX format' href="download.php?f=OpenSubtitles2018/eo-tr.tmx.gz">41.4k</a>
 </td><td bgcolor="#ffd5d5"><a rel="nofollow" title='Esperanto-Ukrainian (3,863 sentence pairs, 38.44k words) - TMX format' href="download.php?f=OpenSubtitles2018/eo-uk.tmx.gz">3.9k</a>
 </td><td></td><td bgcolor="#ffd5d5"><a rel="nofollow" title='Esperanto-Vietnamese (3,618 sentence pairs, 43.42k words) - TMX format' href="download.php?f=OpenSubtitles2018/eo-vi.tmx.gz">3.6k</a>
@@ -3462,10 +3462,10 @@
 </td><td bgcolor="#fffaf1"><a rel="nofollow" title='Basque-Albanian (55,626 sentence pairs, 0.62M words) - TMX format' href="download.php?f=OpenSubtitles2018/eu-sq.tmx.gz">55.6k</a>
 </td><td bgcolor="#e4ffc8"><a rel="nofollow" title='Basque-Serbian (578,629 sentence pairs, 6.17M words) - TMX format' href="download.php?f=OpenSubtitles2018/eu-sr.tmx.gz">0.6M</a>
 </td><td bgcolor="#e5ffc8"><a rel="nofollow" title='Basque-Swedish (491,166 sentence pairs, 5.49M words) - TMX format' href="download.php?f=OpenSubtitles2018/eu-sv.tmx.gz">0.5M</a>
-</td><td bgcolor="#ffd4d4"><a rel="nofollow" title='Basque-Tamil (3,278 sentence pairs, 28.90k words) - TMX format' href="download.php?f=OpenSubtitles2018/eu-ta.tmx.gz">3.3k</a>
+</td><td bgcolor="#ffd4d4"><a rel="nofollow" title='Basque-Tamil (3,262 sentence pairs, 28.93k words) - TMX format' href="download.php?f=OpenSubtitles2018/eu-ta.tmx.gz">3.3k</a>
 </td><td bgcolor="#ffd0d0"><a rel="nofollow" title='Basque-Telugu (728 sentence pairs, 6.06k words) - TMX format' href="download.php?f=OpenSubtitles2018/eu-te.tmx.gz">0.7k</a>
 </td><td bgcolor="#fff9f1"><a rel="nofollow" title='Basque-Thai (78,128 sentence pairs, 0.55M words) - TMX format' href="download.php?f=OpenSubtitles2018/eu-th.tmx.gz">78.1k</a>
-</td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Basque-Tagalog (2,517 sentence pairs, 24.62k words) - TMX format' href="download.php?f=OpenSubtitles2018/eu-tl.tmx.gz">2.5k</a>
+</td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Basque-Tagalog (2,535 sentence pairs, 24.62k words) - TMX format' href="download.php?f=OpenSubtitles2018/eu-tl.tmx.gz">2.5k</a>
 </td><td bgcolor="#e4ffc8"><a rel="nofollow" title='Basque-Turkish (666,366 sentence pairs, 6.56M words) - TMX format' href="download.php?f=OpenSubtitles2018/eu-tr.tmx.gz">0.7M</a>
 </td><td bgcolor="#fff3ed"><a rel="nofollow" title='Basque-Ukrainian (36,648 sentence pairs, 0.41M words) - TMX format' href="download.php?f=OpenSubtitles2018/eu-uk.tmx.gz">36.6k</a>
 </td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Basque-Urdu (1,955 sentence pairs, 18.66k words) - TMX format' href="download.php?f=OpenSubtitles2018/eu-ur.tmx.gz">2.0k</a>
@@ -3686,7 +3686,7 @@
 </td><td bgcolor="#ffd6d6"><a rel="nofollow" title='Galician-Icelandic (3,955 sentence pairs, 46.05k words) - TMX format' href="download.php?f=OpenSubtitles2018/gl-is.tmx.gz">4.0k</a>
 </td><td bgcolor="#ffffe9"><a rel="nofollow" title='Galician-Italian (108,925 sentence pairs, 1.43M words) - TMX format' href="download.php?f=OpenSubtitles2018/gl-it.tmx.gz">0.1M</a>
 </td><td bgcolor="#ffe3e1"><a rel="nofollow" title='Galician-Japanese (20,895 sentence pairs, 0.17M words) - TMX format' href="download.php?f=OpenSubtitles2018/gl-ja.tmx.gz">20.9k</a>
-</td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Galician-Georgian (1,753 sentence pairs, 21.64k words) - TMX format' href="download.php?f=OpenSubtitles2018/gl-ka.tmx.gz">1.8k</a>
+</td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Galician-Georgian (1,795 sentence pairs, 21.84k words) - TMX format' href="download.php?f=OpenSubtitles2018/gl-ka.tmx.gz">1.8k</a>
 </td><td></td><td bgcolor="#ffdcdb"><a rel="nofollow" title='Galician-Korean (8,859 sentence pairs, 0.10M words) - TMX format' href="download.php?f=OpenSubtitles2018/gl-ko.tmx.gz">8.9k</a>
 </td><td bgcolor="#ffe1df"><a rel="nofollow" title='Galician-Lithuanian (13,711 sentence pairs, 0.15M words) - TMX format' href="download.php?f=OpenSubtitles2018/gl-lt.tmx.gz">13.7k</a>
 </td><td bgcolor="#ffd6d6"><a rel="nofollow" title='Galician-Latvian (5,021 sentence pairs, 50.03k words) - TMX format' href="download.php?f=OpenSubtitles2018/gl-lv.tmx.gz">5.0k</a>
@@ -3709,7 +3709,7 @@
 </td><td></td><td></td><td bgcolor="#ffe4e2"><a rel="nofollow" title='Galician-Thai (20,673 sentence pairs, 0.18M words) - TMX format' href="download.php?f=OpenSubtitles2018/gl-th.tmx.gz">20.7k</a>
 </td><td></td><td bgcolor="#ffffe9"><a rel="nofollow" title='Galician-Turkish (120,398 sentence pairs, 1.40M words) - TMX format' href="download.php?f=OpenSubtitles2018/gl-tr.tmx.gz">0.1M</a>
 </td><td bgcolor="#ffdbda"><a rel="nofollow" title='Galician-Ukrainian (7,410 sentence pairs, 86.33k words) - TMX format' href="download.php?f=OpenSubtitles2018/gl-uk.tmx.gz">7.4k</a>
-</td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Galician-Urdu (1,212 sentence pairs, 15.95k words) - TMX format' href="download.php?f=OpenSubtitles2018/gl-ur.tmx.gz">1.2k</a>
+</td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Galician-Urdu (1,235 sentence pairs, 15.95k words) - TMX format' href="download.php?f=OpenSubtitles2018/gl-ur.tmx.gz">1.2k</a>
 </td><td bgcolor="#fff2ec"><a rel="nofollow" title='Galician-Vietnamese (25,622 sentence pairs, 0.38M words) - TMX format' href="download.php?f=OpenSubtitles2018/gl-vi.tmx.gz">25.6k</a>
 </td><td bgcolor="#ffd5d5"><a rel="nofollow" title='Galician-ze (2,515 sentence pairs, 37.65k words) - TMX format' href="download.php?f=OpenSubtitles2018/gl-ze_en.tmx.gz">2.5k</a>
 </td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Galician-ze (2,346 sentence pairs, 19.88k words) - TMX format' href="download.php?f=OpenSubtitles2018/gl-ze_zh.tmx.gz">2.3k</a>
@@ -3827,10 +3827,10 @@
 </td><td bgcolor="#ffebe7"><a rel="nofollow" title='Hindi-Tamil (24,985 sentence pairs, 0.26M words) - TMX format' href="download.php?f=OpenSubtitles2018/hi-ta.tmx.gz">25.0k</a>
 </td><td bgcolor="#ffe6e3"><a rel="nofollow" title='Hindi-Telugu (19,468 sentence pairs, 0.20M words) - TMX format' href="download.php?f=OpenSubtitles2018/hi-te.tmx.gz">19.5k</a>
 </td><td bgcolor="#ffe8e5"><a rel="nofollow" title='Hindi-Thai (24,353 sentence pairs, 0.22M words) - TMX format' href="download.php?f=OpenSubtitles2018/hi-th.tmx.gz">24.4k</a>
-</td><td bgcolor="#ffd0d0"><a rel="nofollow" title='Hindi-Tagalog (485 sentence pairs, 6.08k words) - TMX format' href="download.php?f=OpenSubtitles2018/hi-tl.tmx.gz">0.5k</a>
+</td><td bgcolor="#ffd0d0"><a rel="nofollow" title='Hindi-Tagalog (492 sentence pairs, 6.09k words) - TMX format' href="download.php?f=OpenSubtitles2018/hi-tl.tmx.gz">0.5k</a>
 </td><td bgcolor="#fffcf1"><a rel="nofollow" title='Hindi-Turkish (61,031 sentence pairs, 0.71M words) - TMX format' href="download.php?f=OpenSubtitles2018/hi-tr.tmx.gz">61.0k</a>
 </td><td bgcolor="#ffd8d8"><a rel="nofollow" title='Hindi-Ukrainian (5,565 sentence pairs, 60.59k words) - TMX format' href="download.php?f=OpenSubtitles2018/hi-uk.tmx.gz">5.6k</a>
-</td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Hindi-Urdu (1,037 sentence pairs, 16.18k words) - TMX format' href="download.php?f=OpenSubtitles2018/hi-ur.tmx.gz">1.0k</a>
+</td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Hindi-Urdu (1,221 sentence pairs, 17.18k words) - TMX format' href="download.php?f=OpenSubtitles2018/hi-ur.tmx.gz">1.2k</a>
 </td><td bgcolor="#fff5ee"><a rel="nofollow" title='Hindi-Vietnamese (31,883 sentence pairs, 0.45M words) - TMX format' href="download.php?f=OpenSubtitles2018/hi-vi.tmx.gz">31.9k</a>
 </td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Hindi-ze (1,391 sentence pairs, 16.15k words) - TMX format' href="download.php?f=OpenSubtitles2018/hi-ze_en.tmx.gz">1.4k</a>
 </td><td bgcolor="#ffd0d0"><a rel="nofollow" title='Hindi-ze (570 sentence pairs, 3.60k words) - TMX format' href="download.php?f=OpenSubtitles2018/hi-ze_zh.tmx.gz">0.6k</a>
@@ -3848,7 +3848,7 @@
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Croatian-Danish (11,400,846 sentence pairs, 133.82M words) - Moses format' href="download.php?f=OpenSubtitles2018/da-hr.txt.zip">11.4M</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Croatian-German (13,798,486 sentence pairs, 162.88M words) - Moses format' href="download.php?f=OpenSubtitles2018/de-hr.txt.zip">13.8M</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Croatian-Greek (24,498,188 sentence pairs, 281.01M words) - Moses format' href="download.php?f=OpenSubtitles2018/el-hr.txt.zip">24.5M</a>
-</td><td bgcolor="#bfffbf"><a rel="nofollow" title='Croatian-English (35,125,257 sentence pairs, 415.94M words) - Moses format' href="download.php?f=OpenSubtitles2018/en-hr.txt.zip">35.1M</a>
+</td><td bgcolor="#bfffbf"><a rel="nofollow" title='Croatian-English (35,131,729 sentence pairs, 416.02M words) - Moses format' href="download.php?f=OpenSubtitles2018/en-hr.txt.zip">35.1M</a>
 </td><td bgcolor="#ffece8"><a rel="nofollow" title='Croatian-Esperanto (25,857 sentence pairs, 0.28M words) - Moses format' href="download.php?f=OpenSubtitles2018/eo-hr.txt.zip">25.9k</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Croatian-Spanish (30,622,533 sentence pairs, 359.66M words) - Moses format' href="download.php?f=OpenSubtitles2018/es-hr.txt.zip">30.6M</a>
 </td><td bgcolor="#c3ffc3"><a rel="nofollow" title='Croatian-Estonian (9,977,630 sentence pairs, 106.09M words) - Moses format' href="download.php?f=OpenSubtitles2018/et-hr.txt.zip">10.0M</a>
@@ -3906,11 +3906,11 @@
 </td><td bgcolor="#ffe4e2"><a rel="nofollow" title='Hungarian-Breton (16,968 sentence pairs, 0.17M words) - Moses format' href="download.php?f=OpenSubtitles2018/br-hu.txt.zip">17.0k</a>
 </td><td bgcolor="#c2ffc2"><a rel="nofollow" title='Hungarian-Bosnian (10,315,616 sentence pairs, 109.52M words) - Moses format' href="download.php?f=OpenSubtitles2018/bs-hu.txt.zip">10.3M</a>
 </td><td bgcolor="#e7ffca"><a rel="nofollow" title='Hungarian-Catalan (416,729 sentence pairs, 4.69M words) - Moses format' href="download.php?f=OpenSubtitles2018/ca-hu.txt.zip">0.4M</a>
-</td><td bgcolor="#bfffbf"><a rel="nofollow" title='Hungarian-Czech (32,534,838 sentence pairs, 341.89M words) - Moses format' href="download.php?f=OpenSubtitles2018/cs-hu.txt.zip">32.5M</a>
+</td><td bgcolor="#bfffbf"><a rel="nofollow" title='Hungarian-Czech (32,559,149 sentence pairs, 342.01M words) - Moses format' href="download.php?f=OpenSubtitles2018/cs-hu.txt.zip">32.6M</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Hungarian-Danish (11,972,539 sentence pairs, 134.47M words) - Moses format' href="download.php?f=OpenSubtitles2018/da-hu.txt.zip">12.0M</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Hungarian-German (15,764,968 sentence pairs, 178.35M words) - Moses format' href="download.php?f=OpenSubtitles2018/de-hu.txt.zip">15.8M</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Hungarian-Greek (28,253,647 sentence pairs, 310.09M words) - Moses format' href="download.php?f=OpenSubtitles2018/el-hu.txt.zip">28.3M</a>
-</td><td bgcolor="#bfffbf"><a rel="nofollow" title='Hungarian-English (42,639,946 sentence pairs, 481.94M words) - Moses format' href="download.php?f=OpenSubtitles2018/en-hu.txt.zip">42.6M</a>
+</td><td bgcolor="#bfffbf"><a rel="nofollow" title='Hungarian-English (42,655,519 sentence pairs, 482.04M words) - Moses format' href="download.php?f=OpenSubtitles2018/en-hu.txt.zip">42.7M</a>
 </td><td bgcolor="#fff1ec"><a rel="nofollow" title='Hungarian-Esperanto (34,895 sentence pairs, 0.36M words) - Moses format' href="download.php?f=OpenSubtitles2018/eo-hu.txt.zip">34.9k</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Hungarian-Spanish (37,100,976 sentence pairs, 416.11M words) - Moses format' href="download.php?f=OpenSubtitles2018/es-hu.txt.zip">37.1M</a>
 </td><td bgcolor="#c2ffc2"><a rel="nofollow" title='Hungarian-Estonian (10,559,714 sentence pairs, 106.89M words) - Moses format' href="download.php?f=OpenSubtitles2018/et-hu.txt.zip">10.6M</a>
@@ -3968,7 +3968,7 @@
 </td><td></td><td bgcolor="#ffd4d4"><a rel="nofollow" title='Armenian-German (2,057 sentence pairs, 32.73k words) - Moses format' href="download.php?f=OpenSubtitles2018/de-hy.txt.zip">2.1k</a>
 </td><td bgcolor="#ffd6d6"><a rel="nofollow" title='Armenian-Greek (3,235 sentence pairs, 46.90k words) - Moses format' href="download.php?f=OpenSubtitles2018/el-hy.txt.zip">3.2k</a>
 </td><td bgcolor="#ffd6d6"><a rel="nofollow" title='Armenian-English (3,390 sentence pairs, 47.26k words) - Moses format' href="download.php?f=OpenSubtitles2018/en-hy.txt.zip">3.4k</a>
-</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Armenian-Esperanto (1,037 sentence pairs, 12.44k words) - Moses format' href="download.php?f=OpenSubtitles2018/eo-hy.txt.zip">1.0k</a>
+</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Armenian-Esperanto (1,050 sentence pairs, 12.45k words) - Moses format' href="download.php?f=OpenSubtitles2018/eo-hy.txt.zip">1.1k</a>
 </td><td bgcolor="#ffd6d6"><a rel="nofollow" title='Armenian-Spanish (3,304 sentence pairs, 47.87k words) - Moses format' href="download.php?f=OpenSubtitles2018/es-hy.txt.zip">3.3k</a>
 </td><td bgcolor="#ffd0d0"><a rel="nofollow" title='Armenian-Estonian (149 sentence pairs, 1.59k words) - Moses format' href="download.php?f=OpenSubtitles2018/et-hy.txt.zip">0.1k</a>
 </td><td></td><td></td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Armenian-Finnish (869 sentence pairs, 13.05k words) - Moses format' href="download.php?f=OpenSubtitles2018/fi-hy.txt.zip">0.9k</a>
@@ -4083,7 +4083,7 @@
 </td><td></td><td bgcolor="#deffc6"><a rel="nofollow" title='Icelandic-Italian (972,375 sentence pairs, 11.50M words) - TMX format' href="download.php?f=OpenSubtitles2018/is-it.tmx.gz">1.0M</a>
 </td><td bgcolor="#fffdf0"><a rel="nofollow" title='Icelandic-Japanese (102,213 sentence pairs, 0.81M words) - TMX format' href="download.php?f=OpenSubtitles2018/is-ja.tmx.gz">0.1M</a>
 </td><td bgcolor="#ffe4e2"><a rel="nofollow" title='Icelandic-Georgian (15,224 sentence pairs, 0.18M words) - TMX format' href="download.php?f=OpenSubtitles2018/is-ka.tmx.gz">15.2k</a>
-</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Icelandic-Kazakh (1,177 sentence pairs, 11.91k words) - TMX format' href="download.php?f=OpenSubtitles2018/is-kk.tmx.gz">1.2k</a>
+</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Icelandic-Kazakh (1,175 sentence pairs, 11.80k words) - TMX format' href="download.php?f=OpenSubtitles2018/is-kk.tmx.gz">1.2k</a>
 </td><td bgcolor="#fff5ee"><a rel="nofollow" title='Icelandic-Korean (44,198 sentence pairs, 0.46M words) - TMX format' href="download.php?f=OpenSubtitles2018/is-ko.tmx.gz">44.2k</a>
 </td><td bgcolor="#ecffcd"><a rel="nofollow" title='Icelandic-Lithuanian (288,718 sentence pairs, 3.02M words) - TMX format' href="download.php?f=OpenSubtitles2018/is-lt.tmx.gz">0.3M</a>
 </td><td bgcolor="#ffffec"><a rel="nofollow" title='Icelandic-Latvian (117,509 sentence pairs, 1.20M words) - TMX format' href="download.php?f=OpenSubtitles2018/is-lv.tmx.gz">0.1M</a>
@@ -4105,7 +4105,7 @@
 </td><td bgcolor="#dcffc6"><a rel="nofollow" title='Icelandic-Swedish (1,097,530 sentence pairs, 13.32M words) - TMX format' href="download.php?f=OpenSubtitles2018/is-sv.tmx.gz">1.1M</a>
 </td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Icelandic-Tamil (1,932 sentence pairs, 20.09k words) - TMX format' href="download.php?f=OpenSubtitles2018/is-ta.tmx.gz">1.9k</a>
 </td><td></td><td bgcolor="#ffffec"><a rel="nofollow" title='Icelandic-Thai (140,244 sentence pairs, 1.19M words) - TMX format' href="download.php?f=OpenSubtitles2018/is-th.tmx.gz">0.1M</a>
-</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Icelandic-Tagalog (1,004 sentence pairs, 12.90k words) - TMX format' href="download.php?f=OpenSubtitles2018/is-tl.tmx.gz">1.0k</a>
+</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Icelandic-Tagalog (1,230 sentence pairs, 14.06k words) - TMX format' href="download.php?f=OpenSubtitles2018/is-tl.tmx.gz">1.2k</a>
 </td><td bgcolor="#dcffc6"><a rel="nofollow" title='Icelandic-Turkish (1,336,102 sentence pairs, 14.01M words) - TMX format' href="download.php?f=OpenSubtitles2018/is-tr.tmx.gz">1.3M</a>
 </td><td bgcolor="#fff3ed"><a rel="nofollow" title='Icelandic-Ukrainian (35,077 sentence pairs, 0.39M words) - TMX format' href="download.php?f=OpenSubtitles2018/is-uk.tmx.gz">35.1k</a>
 </td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Icelandic-Urdu (1,131 sentence pairs, 15.00k words) - TMX format' href="download.php?f=OpenSubtitles2018/is-ur.tmx.gz">1.1k</a>
@@ -4126,7 +4126,7 @@
 </td><td bgcolor="#c0ffc0"><a rel="nofollow" title='Italian-Danish (9,834,003 sentence pairs, 122.84M words) - Moses format' href="download.php?f=OpenSubtitles2018/da-it.txt.zip">9.8M</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Italian-German (13,566,188 sentence pairs, 168.12M words) - Moses format' href="download.php?f=OpenSubtitles2018/de-it.txt.zip">13.6M</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Italian-Greek (23,064,600 sentence pairs, 280.98M words) - Moses format' href="download.php?f=OpenSubtitles2018/el-it.txt.zip">23.1M</a>
-</td><td bgcolor="#bfffbf"><a rel="nofollow" title='Italian-English (35,216,872 sentence pairs, 443.71M words) - Moses format' href="download.php?f=OpenSubtitles2018/en-it.txt.zip">35.2M</a>
+</td><td bgcolor="#bfffbf"><a rel="nofollow" title='Italian-English (35,216,229 sentence pairs, 443.69M words) - Moses format' href="download.php?f=OpenSubtitles2018/en-it.txt.zip">35.2M</a>
 </td><td bgcolor="#fff1ec"><a rel="nofollow" title='Italian-Esperanto (30,238 sentence pairs, 0.35M words) - Moses format' href="download.php?f=OpenSubtitles2018/eo-it.txt.zip">30.2k</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Italian-Spanish (30,595,034 sentence pairs, 380.58M words) - Moses format' href="download.php?f=OpenSubtitles2018/es-it.txt.zip">30.6M</a>
 </td><td bgcolor="#c5ffc5"><a rel="nofollow" title='Italian-Estonian (8,146,755 sentence pairs, 92.79M words) - Moses format' href="download.php?f=OpenSubtitles2018/et-it.txt.zip">8.1M</a>
@@ -4253,7 +4253,7 @@
 </td><td bgcolor="#ffffee"><a rel="nofollow" title='Georgian-Persian (96,319 sentence pairs, 1.11M words) - Moses format' href="download.php?f=OpenSubtitles2018/fa-ka.txt.zip">96.3k</a>
 </td><td bgcolor="#ffffe8"><a rel="nofollow" title='Georgian-Finnish (148,416 sentence pairs, 1.49M words) - Moses format' href="download.php?f=OpenSubtitles2018/fi-ka.txt.zip">0.1M</a>
 </td><td bgcolor="#ffffe5"><a rel="nofollow" title='Georgian-French (139,626 sentence pairs, 1.66M words) - Moses format' href="download.php?f=OpenSubtitles2018/fr-ka.txt.zip">0.1M</a>
-</td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Georgian-Galician (1,766 sentence pairs, 21.72k words) - Moses format' href="download.php?f=OpenSubtitles2018/gl-ka.txt.zip">1.8k</a>
+</td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Georgian-Galician (1,814 sentence pairs, 21.94k words) - Moses format' href="download.php?f=OpenSubtitles2018/gl-ka.txt.zip">1.8k</a>
 </td><td bgcolor="#ffffe6"><a rel="nofollow" title='Georgian-Hebrew (149,062 sentence pairs, 1.59M words) - Moses format' href="download.php?f=OpenSubtitles2018/he-ka.txt.zip">0.1M</a>
 </td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Georgian-Hindi (796 sentence pairs, 12.37k words) - Moses format' href="download.php?f=OpenSubtitles2018/hi-ka.txt.zip">0.8k</a>
 </td><td bgcolor="#ffffe4"><a rel="nofollow" title='Georgian-Croatian (158,093 sentence pairs, 1.70M words) - Moses format' href="download.php?f=OpenSubtitles2018/hr-ka.txt.zip">0.2M</a>
@@ -4285,7 +4285,7 @@
 </td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Georgian-Tagalog (1,254 sentence pairs, 13.17k words) - TMX format' href="download.php?f=OpenSubtitles2018/ka-tl.tmx.gz">1.3k</a>
 </td><td bgcolor="#ffffe4"><a rel="nofollow" title='Georgian-Turkish (169,855 sentence pairs, 1.75M words) - TMX format' href="download.php?f=OpenSubtitles2018/ka-tr.tmx.gz">0.2M</a>
 </td><td bgcolor="#ffdddc"><a rel="nofollow" title='Georgian-Ukrainian (10,195 sentence pairs, 0.11M words) - TMX format' href="download.php?f=OpenSubtitles2018/ka-uk.tmx.gz">10.2k</a>
-</td><td bgcolor="#ffd4d4"><a rel="nofollow" title='Georgian-Urdu (1,777 sentence pairs, 29.27k words) - TMX format' href="download.php?f=OpenSubtitles2018/ka-ur.tmx.gz">1.8k</a>
+</td><td bgcolor="#ffd4d4"><a rel="nofollow" title='Georgian-Urdu (1,967 sentence pairs, 30.87k words) - TMX format' href="download.php?f=OpenSubtitles2018/ka-ur.tmx.gz">2.0k</a>
 </td><td bgcolor="#fffcf1"><a rel="nofollow" title='Georgian-Vietnamese (52,396 sentence pairs, 0.71M words) - TMX format' href="download.php?f=OpenSubtitles2018/ka-vi.tmx.gz">52.4k</a>
 </td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Georgian-ze (1,297 sentence pairs, 17.56k words) - TMX format' href="download.php?f=OpenSubtitles2018/ka-ze_en.tmx.gz">1.3k</a>
 </td><td bgcolor="#ffd7d7"><a rel="nofollow" title='Georgian-ze (6,488 sentence pairs, 52.85k words) - TMX format' href="download.php?f=OpenSubtitles2018/ka-ze_zh.tmx.gz">6.5k</a>
@@ -4310,7 +4310,7 @@
 </td><td></td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Kazakh-Croatian (2,154 sentence pairs, 18.39k words) - Moses format' href="download.php?f=OpenSubtitles2018/hr-kk.txt.zip">2.2k</a>
 </td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Kazakh-Hungarian (2,577 sentence pairs, 20.97k words) - Moses format' href="download.php?f=OpenSubtitles2018/hu-kk.txt.zip">2.6k</a>
 </td><td></td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Kazakh-Indonesian (1,034 sentence pairs, 9.39k words) - Moses format' href="download.php?f=OpenSubtitles2018/id-kk.txt.zip">1.0k</a>
-</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Kazakh-Icelandic (1,255 sentence pairs, 12.20k words) - Moses format' href="download.php?f=OpenSubtitles2018/is-kk.txt.zip">1.3k</a>
+</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Kazakh-Icelandic (1,283 sentence pairs, 12.20k words) - Moses format' href="download.php?f=OpenSubtitles2018/is-kk.txt.zip">1.3k</a>
 </td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Kazakh-Italian (2,539 sentence pairs, 22.58k words) - Moses format' href="download.php?f=OpenSubtitles2018/it-kk.txt.zip">2.5k</a>
 </td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Kazakh-Japanese (1,205 sentence pairs, 12.12k words) - Moses format' href="download.php?f=OpenSubtitles2018/ja-kk.txt.zip">1.2k</a>
 </td><td></td><td></td><td></td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Kazakh-Lithuanian (829 sentence pairs, 7.37k words) - TMX format' href="download.php?f=OpenSubtitles2018/kk-lt.tmx.gz">0.8k</a>
@@ -4391,7 +4391,7 @@
 </td><td bgcolor="#edffce"><a rel="nofollow" title='Korean-Chinese (465,923 sentence pairs, 2.95M words) - TMX format' href="download.php?f=OpenSubtitles2018/ko-zh_cn.tmx.gz">0.5M</a>
 </td><td bgcolor="#ffffe2"><a rel="nofollow" title='Korean-Chinese (339,258 sentence pairs, 1.87M words) - TMX format' href="download.php?f=OpenSubtitles2018/ko-zh_tw.tmx.gz">0.3M</a>
 </td></tr> <tr><th><a rel="nofollow" title='monolingual untokenized lt plain text' href="download.php?f=OpenSubtitles2018/mono/OpenSubtitles2018.raw.lt.gz">lt</a>
-</th><td>1,976</td> <td>11.6M</td> <td>2.1M</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Lithuanian-Afrikaans (653 sentence pairs, 7.03k words) - Moses format' href="download.php?f=OpenSubtitles2018/af-lt.txt.zip">0.7k</a>
+</th><td>1,976</td> <td>11.6M</td> <td>2.1M</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Lithuanian-Afrikaans (651 sentence pairs, 7.04k words) - Moses format' href="download.php?f=OpenSubtitles2018/af-lt.txt.zip">0.7k</a>
 </td><td bgcolor="#deffc6"><a rel="nofollow" title='Lithuanian-Arabic (1,177,564 sentence pairs, 11.84M words) - Moses format' href="download.php?f=OpenSubtitles2018/ar-lt.txt.zip">1.2M</a>
 </td><td bgcolor="#ddffc6"><a rel="nofollow" title='Lithuanian-Bulgarian (1,247,963 sentence pairs, 12.43M words) - Moses format' href="download.php?f=OpenSubtitles2018/bg-lt.txt.zip">1.2M</a>
 </td><td bgcolor="#fffff0"><a rel="nofollow" title='Lithuanian-Bengali (96,242 sentence pairs, 0.96M words) - Moses format' href="download.php?f=OpenSubtitles2018/bn-lt.txt.zip">96.2k</a>
@@ -4451,7 +4451,7 @@
 </td><td bgcolor="#e6ffc9"><a rel="nofollow" title='Lithuanian-Chinese (759,666 sentence pairs, 5.13M words) - TMX format' href="download.php?f=OpenSubtitles2018/lt-zh_cn.tmx.gz">0.8M</a>
 </td><td bgcolor="#ebffcd"><a rel="nofollow" title='Lithuanian-Chinese (507,991 sentence pairs, 3.29M words) - TMX format' href="download.php?f=OpenSubtitles2018/lt-zh_tw.tmx.gz">0.5M</a>
 </td></tr> <tr><th><a rel="nofollow" title='monolingual untokenized lv plain text' href="download.php?f=OpenSubtitles2018/mono/OpenSubtitles2018.raw.lv.gz">lv</a>
-</th><td>493</td> <td>3.5M</td> <td>0.6M</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Latvian-Afrikaans (1,089 sentence pairs, 11.24k words) - Moses format' href="download.php?f=OpenSubtitles2018/af-lv.txt.zip">1.1k</a>
+</th><td>493</td> <td>3.5M</td> <td>0.6M</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Latvian-Afrikaans (1,084 sentence pairs, 11.24k words) - Moses format' href="download.php?f=OpenSubtitles2018/af-lv.txt.zip">1.1k</a>
 </td><td bgcolor="#e7ffca"><a rel="nofollow" title='Latvian-Arabic (433,544 sentence pairs, 4.56M words) - Moses format' href="download.php?f=OpenSubtitles2018/ar-lv.txt.zip">0.4M</a>
 </td><td bgcolor="#e7ffca"><a rel="nofollow" title='Latvian-Bulgarian (454,286 sentence pairs, 4.60M words) - Moses format' href="download.php?f=OpenSubtitles2018/bg-lv.txt.zip">0.5M</a>
 </td><td bgcolor="#fff3ed"><a rel="nofollow" title='Latvian-Bengali (41,206 sentence pairs, 0.40M words) - Moses format' href="download.php?f=OpenSubtitles2018/bn-lv.txt.zip">41.2k</a>
@@ -4561,7 +4561,7 @@
 </td><td bgcolor="#ffd7d7"><a rel="nofollow" title='Macedonian-Tamil (5,081 sentence pairs, 53.05k words) - TMX format' href="download.php?f=OpenSubtitles2018/mk-ta.tmx.gz">5.1k</a>
 </td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Macedonian-Telugu (2,314 sentence pairs, 22.62k words) - TMX format' href="download.php?f=OpenSubtitles2018/mk-te.tmx.gz">2.3k</a>
 </td><td bgcolor="#e6ffc9"><a rel="nofollow" title='Macedonian-Thai (640,800 sentence pairs, 5.28M words) - TMX format' href="download.php?f=OpenSubtitles2018/mk-th.tmx.gz">0.6M</a>
-</td><td bgcolor="#ffd6d6"><a rel="nofollow" title='Macedonian-Tagalog (3,540 sentence pairs, 46.46k words) - TMX format' href="download.php?f=OpenSubtitles2018/mk-tl.tmx.gz">3.5k</a>
+</td><td bgcolor="#ffd6d6"><a rel="nofollow" title='Macedonian-Tagalog (3,580 sentence pairs, 46.47k words) - TMX format' href="download.php?f=OpenSubtitles2018/mk-tl.tmx.gz">3.6k</a>
 </td><td bgcolor="#d4ffcb"><a rel="nofollow" title='Macedonian-Turkish (2,751,919 sentence pairs, 30.08M words) - TMX format' href="download.php?f=OpenSubtitles2018/mk-tr.tmx.gz">2.8M</a>
 </td><td bgcolor="#ffffe4"><a rel="nofollow" title='Macedonian-Ukrainian (153,283 sentence pairs, 1.71M words) - TMX format' href="download.php?f=OpenSubtitles2018/mk-uk.tmx.gz">0.2M</a>
 </td><td bgcolor="#ffe1df"><a rel="nofollow" title='Macedonian-Urdu (10,575 sentence pairs, 0.15M words) - TMX format' href="download.php?f=OpenSubtitles2018/mk-ur.tmx.gz">10.6k</a>
@@ -4571,7 +4571,7 @@
 </td><td bgcolor="#dfffc6"><a rel="nofollow" title='Macedonian-Chinese (1,346,857 sentence pairs, 10.74M words) - TMX format' href="download.php?f=OpenSubtitles2018/mk-zh_cn.tmx.gz">1.3M</a>
 </td><td bgcolor="#e5ffc9"><a rel="nofollow" title='Macedonian-Chinese (777,995 sentence pairs, 5.93M words) - TMX format' href="download.php?f=OpenSubtitles2018/mk-zh_tw.tmx.gz">0.8M</a>
 </td></tr> <tr><th><a rel="nofollow" title='monolingual untokenized ml plain text' href="download.php?f=OpenSubtitles2018/mono/OpenSubtitles2018.raw.ml.gz">ml</a>
-</th><td>421</td> <td>2.8M</td> <td>0.5M</td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Malayalam-Afrikaans (2,181 sentence pairs, 22.46k words) - Moses format' href="download.php?f=OpenSubtitles2018/af-ml.txt.zip">2.2k</a>
+</th><td>421</td> <td>2.8M</td> <td>0.5M</td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Malayalam-Afrikaans (2,184 sentence pairs, 22.51k words) - Moses format' href="download.php?f=OpenSubtitles2018/af-ml.txt.zip">2.2k</a>
 </td><td bgcolor="#edffce"><a rel="nofollow" title='Malayalam-Arabic (323,386 sentence pairs, 2.96M words) - Moses format' href="download.php?f=OpenSubtitles2018/ar-ml.txt.zip">0.3M</a>
 </td><td bgcolor="#eeffcf"><a rel="nofollow" title='Malayalam-Bulgarian (271,301 sentence pairs, 2.69M words) - Moses format' href="download.php?f=OpenSubtitles2018/bg-ml.txt.zip">0.3M</a>
 </td><td bgcolor="#fffaf1"><a rel="nofollow" title='Malayalam-Bengali (68,197 sentence pairs, 0.62M words) - Moses format' href="download.php?f=OpenSubtitles2018/bn-ml.txt.zip">68.2k</a>
@@ -4702,7 +4702,7 @@
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Dutch-Danish (12,208,535 sentence pairs, 154.30M words) - Moses format' href="download.php?f=OpenSubtitles2018/da-nl.txt.zip">12.2M</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Dutch-German (15,665,535 sentence pairs, 199.92M words) - Moses format' href="download.php?f=OpenSubtitles2018/de-nl.txt.zip">15.7M</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Dutch-Greek (26,138,141 sentence pairs, 328.97M words) - Moses format' href="download.php?f=OpenSubtitles2018/el-nl.txt.zip">26.1M</a>
-</td><td bgcolor="#bfffbf"><a rel="nofollow" title='Dutch-English (37,200,029 sentence pairs, 486.28M words) - Moses format' href="download.php?f=OpenSubtitles2018/en-nl.txt.zip">37.2M</a>
+</td><td bgcolor="#bfffbf"><a rel="nofollow" title='Dutch-English (37,200,621 sentence pairs, 486.29M words) - Moses format' href="download.php?f=OpenSubtitles2018/en-nl.txt.zip">37.2M</a>
 </td><td bgcolor="#ffede9"><a rel="nofollow" title='Dutch-Esperanto (25,283 sentence pairs, 0.30M words) - Moses format' href="download.php?f=OpenSubtitles2018/eo-nl.txt.zip">25.3k</a>
 </td><td bgcolor="#bfffbf"><a rel="nofollow" title='Dutch-Spanish (32,561,921 sentence pairs, 419.29M words) - Moses format' href="download.php?f=OpenSubtitles2018/es-nl.txt.zip">32.6M</a>
 </td><td bgcolor="#c0ffc0"><a rel="nofollow" title='Dutch-Estonian (10,251,088 sentence pairs, 120.78M words) - Moses format' href="download.php?f=OpenSubtitles2018/et-nl.txt.zip">10.3M</a>
@@ -5123,7 +5123,7 @@
 </td><td bgcolor="#d2ffcc"><a rel="nofollow" title='Russian-Chinese (4,366,614 sentence pairs, 34.49M words) - TMX format' href="download.php?f=OpenSubtitles2018/ru-zh_cn.tmx.gz">4.4M</a>
 </td><td bgcolor="#daffc6"><a rel="nofollow" title='Russian-Chinese (2,255,530 sentence pairs, 16.73M words) - TMX format' href="download.php?f=OpenSubtitles2018/ru-zh_tw.tmx.gz">2.3M</a>
 </td></tr> <tr><th><a rel="nofollow" title='monolingual untokenized si plain text' href="download.php?f=OpenSubtitles2018/mono/OpenSubtitles2018.raw.si.gz">si</a>
-</th><td>855</td> <td>5.7M</td> <td>1.0M</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Sinhala-Afrikaans (984 sentence pairs, 11.89k words) - Moses format' href="download.php?f=OpenSubtitles2018/af-si.txt.zip">1.0k</a>
+</th><td>855</td> <td>5.7M</td> <td>1.0M</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Sinhala-Afrikaans (977 sentence pairs, 11.91k words) - Moses format' href="download.php?f=OpenSubtitles2018/af-si.txt.zip">1.0k</a>
 </td><td bgcolor="#e6ffc9"><a rel="nofollow" title='Sinhala-Arabic (483,959 sentence pairs, 5.03M words) - Moses format' href="download.php?f=OpenSubtitles2018/ar-si.txt.zip">0.5M</a>
 </td><td bgcolor="#e6ffc9"><a rel="nofollow" title='Sinhala-Bulgarian (460,504 sentence pairs, 5.10M words) - Moses format' href="download.php?f=OpenSubtitles2018/bg-si.txt.zip">0.5M</a>
 </td><td bgcolor="#fff6ef"><a rel="nofollow" title='Sinhala-Bengali (47,488 sentence pairs, 0.49M words) - Moses format' href="download.php?f=OpenSubtitles2018/bn-si.txt.zip">47.5k</a>
@@ -5491,7 +5491,7 @@
 </td><td bgcolor="#d0ffce"><a rel="nofollow" title='Swedish-Chinese (4,707,957 sentence pairs, 39.10M words) - TMX format' href="download.php?f=OpenSubtitles2018/sv-zh_cn.tmx.gz">4.7M</a>
 </td><td bgcolor="#d8ffc7"><a rel="nofollow" title='Swedish-Chinese (2,560,995 sentence pairs, 20.31M words) - TMX format' href="download.php?f=OpenSubtitles2018/sv-zh_tw.tmx.gz">2.6M</a>
 </td></tr> <tr><th><a rel="nofollow" title='monolingual untokenized ta plain text' href="download.php?f=OpenSubtitles2018/mono/OpenSubtitles2018.raw.ta.gz">ta</a>
-</th><td>32</td> <td>0.2M</td> <td>40.2k</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Tamil-Afrikaans (1,124 sentence pairs, 13.14k words) - Moses format' href="download.php?f=OpenSubtitles2018/af-ta.txt.zip">1.1k</a>
+</th><td>32</td> <td>0.2M</td> <td>40.2k</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Tamil-Afrikaans (1,125 sentence pairs, 13.15k words) - Moses format' href="download.php?f=OpenSubtitles2018/af-ta.txt.zip">1.1k</a>
 </td><td bgcolor="#ffe9e6"><a rel="nofollow" title='Tamil-Arabic (24,676 sentence pairs, 0.23M words) - Moses format' href="download.php?f=OpenSubtitles2018/ar-ta.txt.zip">24.7k</a>
 </td><td bgcolor="#ffe7e4"><a rel="nofollow" title='Tamil-Bulgarian (20,905 sentence pairs, 0.22M words) - Moses format' href="download.php?f=OpenSubtitles2018/bg-ta.txt.zip">20.9k</a>
 </td><td bgcolor="#ffd4d4"><a rel="nofollow" title='Tamil-Bengali (3,195 sentence pairs, 28.93k words) - Moses format' href="download.php?f=OpenSubtitles2018/bn-ta.txt.zip">3.2k</a>
@@ -5503,7 +5503,7 @@
 </td><td bgcolor="#ffeee9"><a rel="nofollow" title='Tamil-English (32,417 sentence pairs, 0.32M words) - Moses format' href="download.php?f=OpenSubtitles2018/en-ta.txt.zip">32.4k</a>
 </td><td></td><td bgcolor="#ffeae7"><a rel="nofollow" title='Tamil-Spanish (24,956 sentence pairs, 0.25M words) - Moses format' href="download.php?f=OpenSubtitles2018/es-ta.txt.zip">25.0k</a>
 </td><td bgcolor="#ffdfdd"><a rel="nofollow" title='Tamil-Estonian (14,339 sentence pairs, 0.13M words) - Moses format' href="download.php?f=OpenSubtitles2018/et-ta.txt.zip">14.3k</a>
-</td><td bgcolor="#ffd4d4"><a rel="nofollow" title='Tamil-Basque (3,376 sentence pairs, 29.19k words) - Moses format' href="download.php?f=OpenSubtitles2018/eu-ta.txt.zip">3.4k</a>
+</td><td bgcolor="#ffd4d4"><a rel="nofollow" title='Tamil-Basque (3,353 sentence pairs, 29.20k words) - Moses format' href="download.php?f=OpenSubtitles2018/eu-ta.txt.zip">3.4k</a>
 </td><td bgcolor="#ffe1df"><a rel="nofollow" title='Tamil-Persian (14,703 sentence pairs, 0.15M words) - Moses format' href="download.php?f=OpenSubtitles2018/fa-ta.txt.zip">14.7k</a>
 </td><td bgcolor="#ffe5e2"><a rel="nofollow" title='Tamil-Finnish (20,077 sentence pairs, 0.19M words) - Moses format' href="download.php?f=OpenSubtitles2018/fi-ta.txt.zip">20.1k</a>
 </td><td bgcolor="#ffe6e3"><a rel="nofollow" title='Tamil-French (17,791 sentence pairs, 0.20M words) - Moses format' href="download.php?f=OpenSubtitles2018/fr-ta.txt.zip">17.8k</a>
@@ -5519,7 +5519,7 @@
 </td><td bgcolor="#ffdedd"><a rel="nofollow" title='Tamil-Lithuanian (13,042 sentence pairs, 0.12M words) - Moses format' href="download.php?f=OpenSubtitles2018/lt-ta.txt.zip">13.0k</a>
 </td><td bgcolor="#ffd4d4"><a rel="nofollow" title='Tamil-Latvian (4,102 sentence pairs, 33.84k words) - Moses format' href="download.php?f=OpenSubtitles2018/lv-ta.txt.zip">4.1k</a>
 </td><td bgcolor="#ffd7d7"><a rel="nofollow" title='Tamil-Macedonian (5,185 sentence pairs, 53.45k words) - Moses format' href="download.php?f=OpenSubtitles2018/mk-ta.txt.zip">5.2k</a>
-</td><td bgcolor="#ffd4d4"><a rel="nofollow" title='Tamil-Malayalam (3,430 sentence pairs, 30.32k words) - Moses format' href="download.php?f=OpenSubtitles2018/ml-ta.txt.zip">3.4k</a>
+</td><td bgcolor="#ffd4d4"><a rel="nofollow" title='Tamil-Malayalam (3,431 sentence pairs, 30.32k words) - Moses format' href="download.php?f=OpenSubtitles2018/ml-ta.txt.zip">3.4k</a>
 </td><td bgcolor="#ffdad9"><a rel="nofollow" title='Tamil-Malay (9,008 sentence pairs, 83.41k words) - Moses format' href="download.php?f=OpenSubtitles2018/ms-ta.txt.zip">9.0k</a>
 </td><td bgcolor="#ffe8e5"><a rel="nofollow" title='Tamil-Dutch (20,504 sentence pairs, 0.23M words) - Moses format' href="download.php?f=OpenSubtitles2018/nl-ta.txt.zip">20.5k</a>
 </td><td bgcolor="#ffdfdd"><a rel="nofollow" title='Tamil-Norwegian (12,325 sentence pairs, 0.13M words) - Moses format' href="download.php?f=OpenSubtitles2018/no-ta.txt.zip">12.3k</a>
@@ -5534,7 +5534,7 @@
 </td><td bgcolor="#ffdfde"><a rel="nofollow" title='Tamil-Albanian (12,068 sentence pairs, 0.12M words) - Moses format' href="download.php?f=OpenSubtitles2018/sq-ta.txt.zip">12.1k</a>
 </td><td bgcolor="#ffe7e4"><a rel="nofollow" title='Tamil-Serbian (21,250 sentence pairs, 0.21M words) - Moses format' href="download.php?f=OpenSubtitles2018/sr-ta.txt.zip">21.2k</a>
 </td><td bgcolor="#ffe3e1"><a rel="nofollow" title='Tamil-Swedish (15,799 sentence pairs, 0.16M words) - Moses format' href="download.php?f=OpenSubtitles2018/sv-ta.txt.zip">15.8k</a>
-</td><td></td><td bgcolor="#ffe2e0"><a rel="nofollow" title='Tamil-Telugu (17,901 sentence pairs, 0.15M words) - TMX format' href="download.php?f=OpenSubtitles2018/ta-te.tmx.gz">17.9k</a>
+</td><td></td><td bgcolor="#ffe2e0"><a rel="nofollow" title='Tamil-Telugu (17,900 sentence pairs, 0.15M words) - TMX format' href="download.php?f=OpenSubtitles2018/ta-te.tmx.gz">17.9k</a>
 </td><td bgcolor="#ffd7d7"><a rel="nofollow" title='Tamil-Thai (7,849 sentence pairs, 56.12k words) - TMX format' href="download.php?f=OpenSubtitles2018/ta-th.tmx.gz">7.8k</a>
 </td><td></td><td bgcolor="#ffe5e2"><a rel="nofollow" title='Tamil-Turkish (20,692 sentence pairs, 0.19M words) - TMX format' href="download.php?f=OpenSubtitles2018/ta-tr.tmx.gz">20.7k</a>
 </td><td></td><td></td><td bgcolor="#ffe1df"><a rel="nofollow" title='Tamil-Vietnamese (12,273 sentence pairs, 0.15M words) - TMX format' href="download.php?f=OpenSubtitles2018/ta-vi.tmx.gz">12.3k</a>
@@ -5582,7 +5582,7 @@
 </td><td bgcolor="#ffdcdb"><a rel="nofollow" title='Telugu-Albanian (9,924 sentence pairs, 0.10M words) - Moses format' href="download.php?f=OpenSubtitles2018/sq-te.txt.zip">9.9k</a>
 </td><td bgcolor="#ffe5e3"><a rel="nofollow" title='Telugu-Serbian (18,434 sentence pairs, 0.18M words) - Moses format' href="download.php?f=OpenSubtitles2018/sr-te.txt.zip">18.4k</a>
 </td><td bgcolor="#ffe2e0"><a rel="nofollow" title='Telugu-Swedish (14,531 sentence pairs, 0.15M words) - Moses format' href="download.php?f=OpenSubtitles2018/sv-te.txt.zip">14.5k</a>
-</td><td bgcolor="#ffe2e0"><a rel="nofollow" title='Telugu-Tamil (21,135 sentence pairs, 0.16M words) - Moses format' href="download.php?f=OpenSubtitles2018/ta-te.txt.zip">21.1k</a>
+</td><td bgcolor="#ffe2e0"><a rel="nofollow" title='Telugu-Tamil (21,155 sentence pairs, 0.16M words) - Moses format' href="download.php?f=OpenSubtitles2018/ta-te.txt.zip">21.2k</a>
 </td><td></td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Telugu-Thai (955 sentence pairs, 7.30k words) - TMX format' href="download.php?f=OpenSubtitles2018/te-th.tmx.gz">1.0k</a>
 </td><td></td><td bgcolor="#ffe3e1"><a rel="nofollow" title='Telugu-Turkish (17,983 sentence pairs, 0.17M words) - TMX format' href="download.php?f=OpenSubtitles2018/te-tr.tmx.gz">18.0k</a>
 </td><td></td><td></td><td bgcolor="#ffdddc"><a rel="nofollow" title='Telugu-Vietnamese (9,025 sentence pairs, 0.11M words) - TMX format' href="download.php?f=OpenSubtitles2018/te-vi.tmx.gz">9.0k</a>
@@ -5659,25 +5659,25 @@
 </td><td bgcolor="#ffe2e0"><a rel="nofollow" title='Tagalog-German (12,913 sentence pairs, 0.16M words) - Moses format' href="download.php?f=OpenSubtitles2018/de-tl.txt.zip">12.9k</a>
 </td><td bgcolor="#ffdedd"><a rel="nofollow" title='Tagalog-Greek (10,131 sentence pairs, 0.12M words) - Moses format' href="download.php?f=OpenSubtitles2018/el-tl.txt.zip">10.1k</a>
 </td><td bgcolor="#ffe4e2"><a rel="nofollow" title='Tagalog-English (16,032 sentence pairs, 0.18M words) - Moses format' href="download.php?f=OpenSubtitles2018/en-tl.txt.zip">16.0k</a>
-</td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Tagalog-Esperanto (2,189 sentence pairs, 25.66k words) - Moses format' href="download.php?f=OpenSubtitles2018/eo-tl.txt.zip">2.2k</a>
+</td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Tagalog-Esperanto (2,192 sentence pairs, 25.71k words) - Moses format' href="download.php?f=OpenSubtitles2018/eo-tl.txt.zip">2.2k</a>
 </td><td bgcolor="#ffe3e1"><a rel="nofollow" title='Tagalog-Spanish (13,547 sentence pairs, 0.16M words) - Moses format' href="download.php?f=OpenSubtitles2018/es-tl.txt.zip">13.5k</a>
 </td><td bgcolor="#ffd4d4"><a rel="nofollow" title='Tagalog-Estonian (3,089 sentence pairs, 31.10k words) - Moses format' href="download.php?f=OpenSubtitles2018/et-tl.txt.zip">3.1k</a>
-</td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Tagalog-Basque (2,573 sentence pairs, 24.78k words) - Moses format' href="download.php?f=OpenSubtitles2018/eu-tl.txt.zip">2.6k</a>
+</td><td bgcolor="#ffd3d3"><a rel="nofollow" title='Tagalog-Basque (2,597 sentence pairs, 24.80k words) - Moses format' href="download.php?f=OpenSubtitles2018/eu-tl.txt.zip">2.6k</a>
 </td><td bgcolor="#ffdbda"><a rel="nofollow" title='Tagalog-Persian (7,018 sentence pairs, 86.81k words) - Moses format' href="download.php?f=OpenSubtitles2018/fa-tl.txt.zip">7.0k</a>
 </td><td bgcolor="#ffd8d7"><a rel="nofollow" title='Tagalog-Finnish (5,912 sentence pairs, 67.06k words) - Moses format' href="download.php?f=OpenSubtitles2018/fi-tl.txt.zip">5.9k</a>
 </td><td bgcolor="#ffe3e1"><a rel="nofollow" title='Tagalog-French (13,176 sentence pairs, 0.17M words) - Moses format' href="download.php?f=OpenSubtitles2018/fr-tl.txt.zip">13.2k</a>
 </td><td></td><td bgcolor="#ffdad9"><a rel="nofollow" title='Tagalog-Hebrew (6,583 sentence pairs, 84.06k words) - Moses format' href="download.php?f=OpenSubtitles2018/he-tl.txt.zip">6.6k</a>
-</td><td bgcolor="#ffd0d0"><a rel="nofollow" title='Tagalog-Hindi (498 sentence pairs, 6.14k words) - Moses format' href="download.php?f=OpenSubtitles2018/hi-tl.txt.zip">0.5k</a>
+</td><td bgcolor="#ffd0d0"><a rel="nofollow" title='Tagalog-Hindi (506 sentence pairs, 6.16k words) - Moses format' href="download.php?f=OpenSubtitles2018/hi-tl.txt.zip">0.5k</a>
 </td><td bgcolor="#ffdbda"><a rel="nofollow" title='Tagalog-Croatian (7,386 sentence pairs, 86.31k words) - Moses format' href="download.php?f=OpenSubtitles2018/hr-tl.txt.zip">7.4k</a>
 </td><td bgcolor="#ffdedd"><a rel="nofollow" title='Tagalog-Hungarian (10,790 sentence pairs, 0.12M words) - Moses format' href="download.php?f=OpenSubtitles2018/hu-tl.txt.zip">10.8k</a>
 </td><td></td><td bgcolor="#ffdad9"><a rel="nofollow" title='Tagalog-Indonesian (7,800 sentence pairs, 79.37k words) - Moses format' href="download.php?f=OpenSubtitles2018/id-tl.txt.zip">7.8k</a>
-</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Tagalog-Icelandic (1,004 sentence pairs, 12.90k words) - Moses format' href="download.php?f=OpenSubtitles2018/is-tl.txt.zip">1.0k</a>
+</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Tagalog-Icelandic (1,244 sentence pairs, 14.10k words) - Moses format' href="download.php?f=OpenSubtitles2018/is-tl.txt.zip">1.2k</a>
 </td><td bgcolor="#ffe2e0"><a rel="nofollow" title='Tagalog-Italian (13,299 sentence pairs, 0.16M words) - Moses format' href="download.php?f=OpenSubtitles2018/it-tl.txt.zip">13.3k</a>
 </td><td bgcolor="#ffdad9"><a rel="nofollow" title='Tagalog-Japanese (10,064 sentence pairs, 83.40k words) - Moses format' href="download.php?f=OpenSubtitles2018/ja-tl.txt.zip">10.1k</a>
 </td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Tagalog-Georgian (1,273 sentence pairs, 13.23k words) - Moses format' href="download.php?f=OpenSubtitles2018/ka-tl.txt.zip">1.3k</a>
 </td><td></td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Tagalog-Korean (1,213 sentence pairs, 11.77k words) - Moses format' href="download.php?f=OpenSubtitles2018/ko-tl.txt.zip">1.2k</a>
 </td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Tagalog-Lithuanian (1,359 sentence pairs, 12.61k words) - Moses format' href="download.php?f=OpenSubtitles2018/lt-tl.txt.zip">1.4k</a>
-</td><td></td><td bgcolor="#ffd6d6"><a rel="nofollow" title='Tagalog-Macedonian (3,599 sentence pairs, 46.66k words) - Moses format' href="download.php?f=OpenSubtitles2018/mk-tl.txt.zip">3.6k</a>
+</td><td></td><td bgcolor="#ffd6d6"><a rel="nofollow" title='Tagalog-Macedonian (3,644 sentence pairs, 46.70k words) - Moses format' href="download.php?f=OpenSubtitles2018/mk-tl.txt.zip">3.6k</a>
 </td><td bgcolor="#ffd4d4"><a rel="nofollow" title='Tagalog-Malayalam (3,295 sentence pairs, 34.75k words) - Moses format' href="download.php?f=OpenSubtitles2018/ml-tl.txt.zip">3.3k</a>
 </td><td bgcolor="#ffd9d8"><a rel="nofollow" title='Tagalog-Malay (7,258 sentence pairs, 74.28k words) - Moses format' href="download.php?f=OpenSubtitles2018/ms-tl.txt.zip">7.3k</a>
 </td><td bgcolor="#ffdcdb"><a rel="nofollow" title='Tagalog-Dutch (8,182 sentence pairs, 98.22k words) - Moses format' href="download.php?f=OpenSubtitles2018/nl-tl.txt.zip">8.2k</a>
@@ -5695,7 +5695,7 @@
 </td><td bgcolor="#ffdad9"><a rel="nofollow" title='Tagalog-Swedish (6,232 sentence pairs, 77.38k words) - Moses format' href="download.php?f=OpenSubtitles2018/sv-tl.txt.zip">6.2k</a>
 </td><td></td><td></td><td bgcolor="#ffd8d8"><a rel="nofollow" title='Tagalog-Thai (7,278 sentence pairs, 60.23k words) - Moses format' href="download.php?f=OpenSubtitles2018/th-tl.txt.zip">7.3k</a>
 </td><td></td><td bgcolor="#ffe2e0"><a rel="nofollow" title='Tagalog-Turkish (13,743 sentence pairs, 0.15M words) - TMX format' href="download.php?f=OpenSubtitles2018/tl-tr.tmx.gz">13.7k</a>
-</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Tagalog-Ukrainian (1,288 sentence pairs, 13.39k words) - TMX format' href="download.php?f=OpenSubtitles2018/tl-uk.tmx.gz">1.3k</a>
+</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Tagalog-Ukrainian (1,303 sentence pairs, 13.42k words) - TMX format' href="download.php?f=OpenSubtitles2018/tl-uk.tmx.gz">1.3k</a>
 </td><td></td><td bgcolor="#ffdbda"><a rel="nofollow" title='Tagalog-Vietnamese (5,680 sentence pairs, 85.94k words) - TMX format' href="download.php?f=OpenSubtitles2018/tl-vi.tmx.gz">5.7k</a>
 </td><td></td><td></td><td bgcolor="#ffd9d8"><a rel="nofollow" title='Tagalog-Chinese (8,533 sentence pairs, 72.34k words) - TMX format' href="download.php?f=OpenSubtitles2018/tl-zh_cn.tmx.gz">8.5k</a>
 </td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Tagalog-Chinese (1,806 sentence pairs, 12.54k words) - TMX format' href="download.php?f=OpenSubtitles2018/tl-zh_tw.tmx.gz">1.8k</a>
@@ -5812,7 +5812,7 @@
 </td><td bgcolor="#e3ffc7"><a rel="nofollow" title='Ukrainian-Serbian (620,082 sentence pairs, 6.80M words) - Moses format' href="download.php?f=OpenSubtitles2018/sr-uk.txt.zip">0.6M</a>
 </td><td bgcolor="#e7ffca"><a rel="nofollow" title='Ukrainian-Swedish (399,792 sentence pairs, 4.62M words) - Moses format' href="download.php?f=OpenSubtitles2018/sv-uk.txt.zip">0.4M</a>
 </td><td></td><td></td><td bgcolor="#fffff0"><a rel="nofollow" title='Ukrainian-Thai (125,887 sentence pairs, 0.98M words) - Moses format' href="download.php?f=OpenSubtitles2018/th-uk.txt.zip">0.1M</a>
-</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Ukrainian-Tagalog (1,324 sentence pairs, 13.49k words) - Moses format' href="download.php?f=OpenSubtitles2018/tl-uk.txt.zip">1.3k</a>
+</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Ukrainian-Tagalog (1,341 sentence pairs, 13.53k words) - Moses format' href="download.php?f=OpenSubtitles2018/tl-uk.txt.zip">1.3k</a>
 </td><td bgcolor="#e3ffc8"><a rel="nofollow" title='Ukrainian-Turkish (718,219 sentence pairs, 7.14M words) - Moses format' href="download.php?f=OpenSubtitles2018/tr-uk.txt.zip">0.7M</a>
 </td><td></td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Ukrainian-Urdu (1,631 sentence pairs, 17.82k words) - TMX format' href="download.php?f=OpenSubtitles2018/uk-ur.tmx.gz">1.6k</a>
 </td><td bgcolor="#f4ffd5"><a rel="nofollow" title='Ukrainian-Vietnamese (156,802 sentence pairs, 2.13M words) - TMX format' href="download.php?f=OpenSubtitles2018/uk-vi.tmx.gz">0.2M</a>
@@ -5836,16 +5836,16 @@
 </td><td bgcolor="#ffeae6"><a rel="nofollow" title='Urdu-Persian (19,034 sentence pairs, 0.26M words) - Moses format' href="download.php?f=OpenSubtitles2018/fa-ur.txt.zip">19.0k</a>
 </td><td bgcolor="#ffeae7"><a rel="nofollow" title='Urdu-Finnish (19,434 sentence pairs, 0.25M words) - Moses format' href="download.php?f=OpenSubtitles2018/fi-ur.txt.zip">19.4k</a>
 </td><td bgcolor="#ffede9"><a rel="nofollow" title='Urdu-French (21,346 sentence pairs, 0.29M words) - Moses format' href="download.php?f=OpenSubtitles2018/fr-ur.txt.zip">21.3k</a>
-</td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Urdu-Galician (1,255 sentence pairs, 16.17k words) - Moses format' href="download.php?f=OpenSubtitles2018/gl-ur.txt.zip">1.3k</a>
+</td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Urdu-Galician (1,291 sentence pairs, 16.22k words) - Moses format' href="download.php?f=OpenSubtitles2018/gl-ur.txt.zip">1.3k</a>
 </td><td bgcolor="#ffebe7"><a rel="nofollow" title='Urdu-Hebrew (20,559 sentence pairs, 0.27M words) - Moses format' href="download.php?f=OpenSubtitles2018/he-ur.txt.zip">20.6k</a>
-</td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Urdu-Hindi (1,039 sentence pairs, 16.20k words) - Moses format' href="download.php?f=OpenSubtitles2018/hi-ur.txt.zip">1.0k</a>
+</td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Urdu-Hindi (1,259 sentence pairs, 17.43k words) - Moses format' href="download.php?f=OpenSubtitles2018/hi-ur.txt.zip">1.3k</a>
 </td><td bgcolor="#ffece8"><a rel="nofollow" title='Urdu-Croatian (21,869 sentence pairs, 0.29M words) - Moses format' href="download.php?f=OpenSubtitles2018/hr-ur.txt.zip">21.9k</a>
 </td><td bgcolor="#ffece8"><a rel="nofollow" title='Urdu-Hungarian (23,064 sentence pairs, 0.28M words) - Moses format' href="download.php?f=OpenSubtitles2018/hu-ur.txt.zip">23.1k</a>
 </td><td></td><td bgcolor="#ffece8"><a rel="nofollow" title='Urdu-Indonesian (22,830 sentence pairs, 0.28M words) - Moses format' href="download.php?f=OpenSubtitles2018/id-ur.txt.zip">22.8k</a>
 </td><td bgcolor="#ffd2d2"><a rel="nofollow" title='Urdu-Icelandic (1,161 sentence pairs, 15.16k words) - Moses format' href="download.php?f=OpenSubtitles2018/is-ur.txt.zip">1.2k</a>
 </td><td bgcolor="#ffeae6"><a rel="nofollow" title='Urdu-Italian (18,354 sentence pairs, 0.25M words) - Moses format' href="download.php?f=OpenSubtitles2018/it-ur.txt.zip">18.4k</a>
 </td><td bgcolor="#ffdcdb"><a rel="nofollow" title='Urdu-Japanese (11,517 sentence pairs, 99.40k words) - Moses format' href="download.php?f=OpenSubtitles2018/ja-ur.txt.zip">11.5k</a>
-</td><td bgcolor="#ffd4d4"><a rel="nofollow" title='Urdu-Georgian (1,784 sentence pairs, 29.34k words) - Moses format' href="download.php?f=OpenSubtitles2018/ka-ur.txt.zip">1.8k</a>
+</td><td bgcolor="#ffd4d4"><a rel="nofollow" title='Urdu-Georgian (1,983 sentence pairs, 30.95k words) - Moses format' href="download.php?f=OpenSubtitles2018/ka-ur.txt.zip">2.0k</a>
 </td><td></td><td bgcolor="#ffdad9"><a rel="nofollow" title='Urdu-Korean (7,094 sentence pairs, 81.92k words) - Moses format' href="download.php?f=OpenSubtitles2018/ko-ur.txt.zip">7.1k</a>
 </td><td bgcolor="#ffd7d7"><a rel="nofollow" title='Urdu-Lithuanian (4,473 sentence pairs, 52.59k words) - Moses format' href="download.php?f=OpenSubtitles2018/lt-ur.txt.zip">4.5k</a>
 </td><td bgcolor="#ffd1d1"><a rel="nofollow" title='Urdu-Latvian (1,080 sentence pairs, 10.80k words) - Moses format' href="download.php?f=OpenSubtitles2018/lv-ur.txt.zip">1.1k</a>
@@ -5932,7 +5932,7 @@
 </td><td bgcolor="#daffc7"><a rel="nofollow" title='Vietnamese-Chinese (1,691,472 sentence pairs, 17.20M words) - TMX format' href="download.php?f=OpenSubtitles2018/vi-zh_cn.tmx.gz">1.7M</a>
 </td><td bgcolor="#dfffc6"><a rel="nofollow" title='Vietnamese-Chinese (1,029,592 sentence pairs, 10.09M words) - TMX format' href="download.php?f=OpenSubtitles2018/vi-zh_tw.tmx.gz">1.0M</a>
 </td></tr> <tr><th><a rel="nofollow" title='monolingual untokenized ze_en plain text' href="download.php?f=OpenSubtitles2018/mono/OpenSubtitles2018.raw.ze_en.gz">ze_en</a>
-</th><td>8,645</td> <td>73.9M</td> <td>8.3M</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='ze-Afrikaans (809 sentence pairs, 11.58k words) - Moses format' href="download.php?f=OpenSubtitles2018/af-ze_en.txt.zip">0.8k</a>
+</th><td>8,645</td> <td>73.9M</td> <td>8.3M</td><td bgcolor="#ffd1d1"><a rel="nofollow" title='ze-Afrikaans (780 sentence pairs, 11.34k words) - Moses format' href="download.php?f=OpenSubtitles2018/af-ze_en.txt.zip">0.8k</a>
 </td><td bgcolor="#e4ffc8"><a rel="nofollow" title='ze-Arabic (495,734 sentence pairs, 6.62M words) - Moses format' href="download.php?f=OpenSubtitles2018/ar-ze_en.txt.zip">0.5M</a>
 </td><td bgcolor="#e5ffc9"><a rel="nofollow" title='ze-Bulgarian (405,257 sentence pairs, 5.78M words) - Moses format' href="download.php?f=OpenSubtitles2018/bg-ze_en.txt.zip">0.4M</a>
 </td><td bgcolor="#ffe1df"><a rel="nofollow" title='ze-Bengali (12,394 sentence pairs, 0.14M words) - Moses format' href="download.php?f=OpenSubtitles2018/bn-ze_en.txt.zip">12.4k</a>

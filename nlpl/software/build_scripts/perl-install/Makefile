@@ -76,7 +76,7 @@ install-from-source:
 	@for m in ${CPANMODULES}; do \
 	  wget ${CPANURL}/$$m.tar.gz; \
 	  tar -xzf `basename $$m | tr "\n" '.'`tar.gz; \
-	  cd `basename $$m` && perl Makefile.PL PREFIX=${NLPL_SOFTWARE};cd ..; \
+	  cd `basename $$m` && perl Makefile.PL PREFIX=${NLPL_COMMON};cd ..; \
 	  cd `basename $$m` && ${MAKE} all install;cd ..; \
 	  rm -fr `basename $$m`; \
 	  rm -f `basename $$m | tr "\n" '.'`tar.gz; \
