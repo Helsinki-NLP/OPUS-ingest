@@ -444,12 +444,15 @@ function print_resource($corpus,$src,$trg,$resource){
         $alttmx   = $corpus.'/'.$src.'-'.$trg.'.'.$e.'.tmx.gz';
         $altmoses = $corpus.'/'.$src.'-'.$trg.'.'.$e.'.txt.zip';
    	if (file_exists($opusdownloads.$altlinks)){
-      	   echo "[<a rel='nofollow' href='$altlinks'>$e</a>";
+	   $link = 'download.php?f='.urlencode($altlinks);
+      	   echo "[<a rel='nofollow' href='$link'>$e</a>";
    	   if (file_exists($opusdownloads.$alttmx)){
-      	      echo " <a rel='nofollow' href='$alttmx'>tmx</a>";
+	      $link = 'download.php?f='.urlencode($alttmx);
+      	      echo " <a rel='nofollow' href='$link'>tmx</a>";
 	   }
    	   if (file_exists($opusdownloads.$altmoses)){
-      	      echo " <a rel='nofollow' href='$altmoses'>txt</a>";
+	      $link = 'download.php?f='.urlencode($altmoses);
+      	      echo " <a rel='nofollow' href='$link'>txt</a>";
 	   }
 	   echo "]";
     	}
