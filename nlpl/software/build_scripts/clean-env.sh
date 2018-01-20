@@ -5,6 +5,10 @@
 #
 # created: Wed Jun 28, 2017
 # jorg.tiedemann@helsinki.fi
+#
+# HISTORY / CHANGES
+#
+#  21/12/2017 - make nlpl-common the homedir for common lib's and binaries
 
 
 # remove all preloaded modules
@@ -19,17 +23,21 @@ ME=$(whoami)
 
 if [ `hostname --domain` == "csc.fi" ]; then
     export NLPL_HOME=/proj/nlpl
-    export PERL5LIB=$NLPL_HOME/software/share/perl5:$NLPL_HOME/software/lib64/perl5:$NLPL_HOME/software/lib/perl5
+    export NLPL_COMMON=$NLPL_HOME/software/nlpl-common
+    export PERL5LIB=$NLPL_COMMON/share/perl5:$NLPL_COMMON/lib64/perl5:$NLPL_COMMON/lib/perl5
     module load StdEnv
+    mkdir -p $NLPL_COMMON
 else
     export NLPL_HOME=$NLPL_ABEL
-    export PERL5LIB=$NLPL_HOME/software/share/perl5:$NLPL_HOME/software/lib64/perl5:$NLPL_HOME/software/lib/perl5
+    export NLPL_COMMON=$NLPL_HOME/software/nlpl-common
+    export PERL5LIB=$NLPL_COMMON/share/perl5:$NLPL_COMMON/lib64/perl5:$NLPL_COMMON/lib/perl5
     module load gcc/4.9.1
     module load perlmodules
-    eval $(perl -Mlocal::lib=$NLPL_HOME/software)
+    mkdir -p $NLPL_COMMON
+    eval $(perl -Mlocal::lib=$NLPL_COMMON)
     export PERL_CPANM_HOME=/tmp/cpanm_$USER
-    export PERL_MB_OPT="--prefix $NLPL_HOME/software"
-    export PERL_MM_OPT="PREFIX=$NLPL_HOME/software"
+    export PERL_MB_OPT="--prefix $NLPL_COMMON"
+    export PERL_MM_OPT="PREFIX=$NLPL_COMMON"
 fi
 
 # basic environment paths
@@ -44,7 +52,7 @@ export BOOST_ROOT=
 
 # make software home the home directory
 # for module installation via cpan or pip
-export HOME=$NLPL_HOME/software
+export HOME=$NLPL_COMMON
 
 
 # TODO: anything else that needs to be done?

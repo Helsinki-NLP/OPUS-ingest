@@ -115,6 +115,8 @@ SCRIPTS_ROOTDIR = ${MOSESSCRIPTS}
 
 # Word alignment tools (TODO: adjust to NLPL!)
 
+# EFLOMAL         = eflomal
+EFLOMAL         = ${USERAPPL}/tools/eflomal/align.py
 EFMARAL         = ${USERAPPL}/tools/efmaral/efmaral.py
 ATOOLS          = ${USERAPPL}/tools/fast_align/atools
 

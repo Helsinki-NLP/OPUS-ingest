@@ -17,9 +17,36 @@ OPUS_ABEL=joerg@abel.uio.no:/projects/nlpl/data/OPUS
 
 cd $OPUS_TAITO
 
+
+## include sent-align files from download
+## NEW 2017-12-09: include also raw-xml-file downloads
+
+rsync -ahv --delete \
+    --exclude '**/.*' \
+    --exclude '**/DOGC-new/' \
+    --exclude '**/Europarl3/' \
+    --exclude '**/OpenSubtitles2011/' \
+    --exclude '**/OpenSubtitles2012/' \
+    --exclude '**/OpenSubtitles2013/' \
+    --exclude '**/OpenSubtitles2015/' \
+    --exclude '**/OpenSubtitles2016/' \
+    --include '**/' \
+    --include '**/*.xml.gz' \
+    --include '**/*.raw.tar.gz' \
+    --exclude '*' \
+    download ${OPUS_ABEL}/
+
+
+## NEW 2017-12-09: don't sync raw/xml dir's
+##                 (too many files)
+
+exit
+
+
+
 ## only sync raw xml files to abel
 
-rsync -ahv \
+rsync -ahv --delete \
     --exclude '**/.*' \
     --exclude '**/dic/' \
     --exclude '**/src/' \

@@ -83,7 +83,9 @@ TRGCORPUS  = ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
 # (based on size on source language tokens)
 
 CORPUS_SIZE = ${shell sed -n '2p' ${CORPUSHOME}/xml/${LANGPAIR}.txt.info}
-ALIGN_MEM = ${shell \
+
+## for efmaral: we need a lot of memory!
+EFMARAL_ALIGN_MEM = ${shell \
 	if [ ${CORPUS_SIZE} -gt 100000000 ]; then \
 	  echo "250g"; \
 	elif [ ${CORPUS_SIZE} -gt 10000000 ]; then \
@@ -94,6 +96,16 @@ ALIGN_MEM = ${shell \
 	  echo "32g"; \
 	else \
 	  echo "16g"; \
+	fi }
+
+## for elomal: much less!
+ALIGN_MEM = ${shell \
+	if [ ${CORPUS_SIZE} -gt 5000000 ]; then \
+	  echo "16g"; \
+	elif [ ${CORPUS_SIZE} -gt 1000000 ]; then \
+	  echo "8g"; \
+	else \
+	  echo "4g"; \
 	fi }
 ALIGN_TIME = ${shell \
 	if [ ${CORPUS_SIZE} -gt 100000000 ]; then \
@@ -109,6 +121,8 @@ ALIGN_TIME = ${shell \
 	fi }
 EXTRACT_MEM = ${shell \
 	if [ ${CORPUS_SIZE} -gt 100000000 ]; then \
+	  echo "120g"; \
+	elif [ ${CORPUS_SIZE} -gt 50000000 ]; then \
 	  echo "64g"; \
 	elif [ ${CORPUS_SIZE} -gt 10000000 ]; then \
 	  echo "32g"; \
@@ -120,6 +134,11 @@ EXTRACT_MEM = ${shell \
 	  echo "4g"; \
 	fi }
 
+
+## convert phrase tables to dictionaries with Dice scores
+PHRASE2DICE = opus-pt2dice
+DICETHR     = 0.05
+FREQTHR     = 2
 
 # max_phr_length ... for phrase tabel extraction
 # alignment ........ default alignment symmetrization heuristics
@@ -227,8 +246,7 @@ submit-wordalign-align:
 	  rm -f ${LANGPAIR}.submit; \
 	  ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
 		  HPC_MEM=${ALIGN_MEM} \
-		  HPC_CORES=4 \
-		  HPC_MODULES=python-env/3.4.1 \
+		  HPC_CORES=2 \
 		  EMAIL= \
 		  NEXTJOB=${NEXTJOB} \
 		  MAKEARGS="ACTION=wordalign-align NEXTJOB=${NEXTJOB}" \
@@ -517,11 +535,23 @@ ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz: \
 # don't delete those intermediate files
 .SECONDARY: ${SRC}-${TRG}/model/aligned.srctotgt.gz ${SRC}-${TRG}/model/aligned.tgttosrc.gz
 
-%.srctotgt.gz: %.${SRCEXT}-${TRGEXT}
-	${EFMARAL} -i $< | gzip -c > $@
+## OLD: use efmaral
+##
+# %.srctotgt.gz: %.${SRCEXT}-${TRGEXT}
+# 	${EFMARAL} -i $< | gzip -c > $@
 
-%.tgttosrc.gz: %.${SRCEXT}-${TRGEXT}
-	${EFMARAL} -i $< -r | gzip -c > $@
+# %.tgttosrc.gz: %.${SRCEXT}-${TRGEXT}
+# 	${EFMARAL} -i $< -r | gzip -c > $@
+
+
+## NEW: use eflomal (less memory usage)
+
+%/model/aligned.srctotgt.gz: %/model/aligned.${SRCEXT} %/model/aligned.${TRGEXT}
+	${EFLOMAL} -v -s $< -t ${word 2,$^} -f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3
+	gzip -f ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
+
+%/model/aligned.tgttosrc.gz: %/model/aligned.srctotgt.gz
+	@echo "done!"
 
 
 # grep phrase pairs with only alphabetic characters and freq>1 for both
@@ -677,14 +707,26 @@ filter-phrase-table: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 # 	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
 
 
+## OLD VERSION OF DIC's
+##
+# ${CORPUSHTML}/dic/%.dic.gz: | %/model/phrase-table-filtered.gz ${CORPUSHOME}/dic
+# 	mkdir -p ${dir $@}
+# 	zcat ${firstword $|} |\
+# 	perl ${OPUSTOOLS}/phrase2dic.pl \
+# 	    -s $(word 1,$(subst -, ,$(subst ., ,${notdir $@}))) \
+# 	    -t $(word 2,$(subst -, ,$(subst ., ,$@))) |\
+# 	gzip -c > $@
+
 
 ${CORPUSHTML}/dic/%.dic.gz: | %/model/phrase-table-filtered.gz ${CORPUSHOME}/dic
 	mkdir -p ${dir $@}
 	zcat ${firstword $|} |\
-	perl ${OPUSTOOLS}/phrase2dic.pl \
-	    -s $(word 1,$(subst -, ,$(subst ., ,${notdir $@}))) \
-	    -t $(word 2,$(subst -, ,$(subst ., ,$@))) |\
+	${PHRASE2DICE} -d ${DICETHR} -f ${FREQTHR} -m |\
 	gzip -c > $@
+
+
+
+
 
 ${CORPUSHOME}/dic: ${CORPUSHTML}/dic
 	if [ -d $@ ]; then mv -f $@ $@.old; fi

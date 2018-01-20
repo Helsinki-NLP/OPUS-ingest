@@ -123,7 +123,6 @@ ${PACKAGES}:	${ALG} \
 		${LANG_TAR} ${LANG_RAW} ${LANG_UD} \
 		${MONO_TOK} ${MONO_RAW} \
 		$(TMX) $(MOSES) ${FREQ_COUNTS}
-	${MAKE} pack
 	mkdir -p ${dir $@}
 	echo "$^" | tr ' ' "\n" | sed "s#${OPUSHTML}/##" >> $@
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq

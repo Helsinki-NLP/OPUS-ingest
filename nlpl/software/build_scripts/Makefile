@@ -9,7 +9,7 @@
 include Makefile.common
 
 # config file for cpan
-CPANCONFIG = ${NLPL_SOFTWARE}/.cpan/CPAN/MyConfig.pm
+CPANCONFIG = ${NLPL_COMMON}/.cpan/CPAN/MyConfig.pm
 
 # nlpl modules
 MODULEDIR = ../modulefiles
@@ -55,7 +55,7 @@ list:
 	@echo "---------- BUILD SCRIPTS -------"
 	@echo ${BUILDSCRIPTS}
 
-${CPANCONFIG}: ${NLPL_SOFTWARE}/%: ../%
+${CPANCONFIG}: ${NLPL_COMMON}/%: ../%
 	${MKDIR} ${dir $@}
 	if [ -e $@ ]; then mv $@ $@.`date +%F`; fi
 	${INSTALL_DATA} $< $@
