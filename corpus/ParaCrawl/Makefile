@@ -14,8 +14,11 @@ include ../Makefile.def
 
 all:
 	${MAKE} fetch
-	${MAKE} corpus
+	${MAKE} preprocess
+	${MAKE} annotate
+	${MAKE} wordalign
 	${MAKE} publish
+
 
 ## standard procedures are specified in the following makefiles
 ##
@@ -34,12 +37,14 @@ include ../Makefile.udparse
 
 ## select one of the following to set the annotation level in xml/
 ##
-##   Makefile.tokenize ..... tokenization only
-##   Makefile.tag .......... tokenization and PoS tagging (if available)
-##   Makefile.annotate ..... all annotation in Uplug
+##   Makefile.tokenize-simple . simple regex tokenizer
+##   Makefile.tokenize ........ tokenization only
+##   Makefile.tag ............. tokenization and PoS tagging (if available)
+##   Makefile.annotate ........ all annotation in Uplug
 
-
-include ../Makefile.tokenize
+# include ../Makefile.tokenize-simple
+include ../Makefile.tokenize-moses
+# include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate
 

@@ -1,0 +1,46 @@
+# -*-makefile-*-
+#
+# Makefile targets for tokenization ...
+#
+#
+
+ifndef LANGUAGE
+  LANGUAGE=$(firstword ${LANGUAGES})
+endif
+
+RAWDIR   = raw/${LANGUAGE}
+XMLFILES = $(patsubst raw/%,xml/%,$(shell find ${RAWDIR} -name '*.${XMLEXT}'))
+
+## OLD: for-loop (cannot be parallelized)
+##
+# tokenize annotate:
+# 	for l in ${LANGUAGES}; do \
+# 		${MAKE} LANGUAGE=$$l tokenize_files; \
+# 	done
+
+
+
+## NEW: use flags to indicate finished processes
+## --> allow parallelization
+
+TOKENIZE_DONE = ${patsubst %,log/.%.tokenize.done,${LANGUAGES}}
+tokenize annotate: ${TOKENIZE_DONE}
+
+${TOKENIZE_DONE}:
+	${MAKE} LANGUAGE=${patsubst log/.%.tokenize.done,%,$@} tokenize_files
+	mkdir -p ${dir $@}
+	touch $@
+
+
+tokenize_files annotate_files: ${XMLFILES}
+
+xml/${LANGUAGE}/%: raw/${LANGUAGE}/%
+	mkdir -p $(shell dirname $@)
+	${TOKMOSES} -in $< -out $@
+
+clean-xml:
+	for l in ${LANGUAGES}; do \
+	    if [ -d "xml/$$l" ]; then \
+		rm -fr xml/$$l; \
+	    fi \
+	done

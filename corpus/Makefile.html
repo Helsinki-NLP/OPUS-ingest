@@ -256,6 +256,12 @@ mono_raw: ${MONO_RAW}
 
 CORPUS_EXT = xml
 
+
+## NEW: zip files in the actual corpus directory
+## ---> this will eventually replace the download dir
+
+${CORPUSXML}/%.zip: ${CORPUSXML}/%
+
 # monolingual data for language modeling
 # (NEW: only real files, no symlinks!)
 
