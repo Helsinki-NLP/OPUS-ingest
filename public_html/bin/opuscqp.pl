@@ -16,6 +16,12 @@ use HTML::Entities;
 use CGI qw/:standard escapeHTML escape -utf8/;
 use Encode;
 
+use CWB::CL;
+
+my %Attributes = ();				# cache requested attribute handles
+my $CorpusHandle = undef;
+
+
 BEGIN { 
 #    use CGI::Carp qw(carpout);
 #    open(LOG, ">>/tmp/opustest2.log") or die ("could not open log\n");
@@ -58,8 +64,9 @@ my $CQPtext=
     &a({-href=>$CQPEXAMPLES},'Example queries');
 my $PATTRtext=
     'positional annotation';
-my $SATTRtext=
-    'structural annotation';
+#my $SATTRtext=
+#    'structural annotation';
+my $SATTRtext='';
 
 
 
@@ -221,15 +228,15 @@ sub CorpusQueryForm{
     # checkboxes for structural attributes
 
     my $sattr=undef;
-    if (ref($corpora{$corpus}{$lang}{struc}) eq 'HASH'){
-	my @struc=sort keys %{$corpora{$corpus}{$lang}{struc}};
-	foreach (sort @struc){
-	    $sattr.=&checkbox_group(-name=>'attr',-values=>($_));
-	    my @strucattr=sort @{$corpora{$corpus}{$lang}{struc}{$_}};
-	    $sattr.=&checkbox_group(-name=>'attr',-values=>\@strucattr);
-	    $sattr.=&br();
-	}
-    }
+    # if (ref($corpora{$corpus}{$lang}{struc}) eq 'HASH'){
+    # 	my @struc=sort keys %{$corpora{$corpus}{$lang}{struc}};
+    # 	foreach (sort @struc){
+    # 	    $sattr.=&checkbox_group(-name=>'attr',-values=>($_));
+    # 	    my @strucattr=sort @{$corpora{$corpus}{$lang}{struc}{$_}};
+    # 	    $sattr.=&checkbox_group(-name=>'attr',-values=>\@strucattr);
+    # 	    $sattr.=&br();
+    # 	}
+    # }
 
     #---------------------------------------------------
     # context window
@@ -432,6 +439,13 @@ sub CorpusQuery{
 	$query->attributes(@attr);
     }
 
+    ##-------------------------------------------
+    if ($corpus=~/europarl/i){
+	$query->structures('SPEAKER_LANGUAGE','SPEAKER_NAME');
+	# $query->structures('SPEAKER_LANGUAGE','SPEAKER_NAME','file_name');
+    }
+    ##-------------------------------------------
+
     #---------------------------------------------------------
     # run the query
     $query->reduce($SHOWMAX);
@@ -464,6 +478,21 @@ sub CorpusQuery{
 	$ord=~s/\s/\&nbsp;/g;
 	my $res_r = &FixString($lang,$m->{'kwic'}->{'right'});
 	my $res_l = &FixString($lang,$m->{'kwic'}->{'left'});
+
+	##-------------------------------------------
+	## special for europarl: show speaker info
+	if ($corpus=~/europarl/i){
+	    if ($m->{'data'}->{'SPEAKER_NAME'}){
+		my $name = &FixString($lang,$m->{'data'}->{'SPEAKER_NAME'});
+		$name=~s/\s/&nbsp;/g;
+		$pos = $name;
+	    }
+	    if ($m->{'data'}->{'SPEAKER_LANGUAGE'}){
+		$pos .= '&nbsp;('.$m->{'data'}->{'SPEAKER_LANGUAGE'}.')';
+	    }
+	}
+	##-------------------------------------------
+
 	my $noalign=0;
 	my @newrows=();
 	if ($style eq 'KWIC'){                       # KWIC style
