@@ -28,11 +28,25 @@ XMLFILES = $(subst :,\:,$(patsubst ${CORPUSRAW}/%,${CORPUSXML}/%,$(shell find ${
 
 TAG = uplug -f opus/annotate opus/${LANGUAGE}/annotate
 
+## OLD: for-loop (cannot be parallelized)
+##
+# annotate:
+#	for l in ${LANGUAGES}; do \
+#		${MAKE} LANGUAGE=$$l annotate_files; \
+#	done
 
-annotate:
-	for l in ${LANGUAGES}; do \
-		${MAKE} LANGUAGE=$$l annotate_files; \
-	done
+
+## NEW: use flags to indicate finished processes
+## --> allow parallelization
+
+ANNOTATE_DONE = ${patsubst %,log/.%.annotate.done,${LANGUAGES}}
+annotate: ${ANNOTATE_DONE}
+
+${ANNOTATE_DONE}:
+	${MAKE} LANGUAGE=${patsubst log/.%.annotate.done,%,$@} annotate_files
+	mkdir -p ${dir $@}
+	touch $@
+
 
 annotate_files: ${XMLFILES}
 

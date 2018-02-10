@@ -101,11 +101,11 @@ CORPUSTOOLS= ${OPUSTOOLS}/${CORPUS}
 # ISO639     = $(TOOLS)/opus/iso639.pl
 ISO639     = opus-iso639
 
+
 UPLUGHOME  = ${TOOLS}/public/uplug/uplug-main
 UPLUGCWB   = ${TOOLS}/public/uplug/uplug-cwb
 UPLUGTOOLS = ${UPLUGHOME}/tools
 UPLUG      = $(shell which uplug)
-
 
 # SMT tools via Moses (TODO: adjust to NLPL!)
 
@@ -131,36 +131,37 @@ ATOOLS          = ${USERAPPL}/tools/fast_align/atools
 #--------------------------------------------------------------------
 
 PAR        = ${UPLUG} pre/markup
-SENT       = ${UPLUG} pre/sent
-TOK        = ${UPLUG} pre/tok
+SENT       = ${UPLUG} pre/sent -l ${LANGUAGE}
+TOKSIMPLE  = ${UPLUG} pre/tok-simple
+TOKMOSES   = ${UPLUG} pre/tok -l ${LANGUAGE}
+TOK        = ${UPLUG} pre/tok -l ${LANGUAGE}
 PRE_ALL    = ${UPLUG} pre/basic
 PRE        = ${UPLUG} pre/par-sent
 
-# language specific tools
+# language specific tools if they exist
 
 # 1) all pre-processing steps
 
-ifneq ($(strip $(wildcard ${UPLUGHOME}/systems/pre/${LANGUAGE}-all)),)
+ifneq (,$(wildcard ${shell uplug -e pre/${LANGUAGE}-all 2>/dev/null}))
   PRE_ALL=${UPLUG} pre/${LANGUAGE}-all
 endif
 
-# 2) a language-specific tokenizer
+# # 2) a language-specific tokenizer
 
-ifneq ($(strip $(wildcard ${UPLUGHOME}/systems/pre/${LANGUAGE}/tok)),)
-  TOK=${UPLUG} pre/${LANGUAGE}/tok
+ifneq (,$(wildcard ${shell uplug -e pre/${LANGUAGE}/tok 2>/dev/null}))
+   TOK=${UPLUG} pre/${LANGUAGE}/tok
 endif
-
 
 # 3) a tokenizer + tagger tool
 
-ifneq ($(strip $(wildcard ${UPLUGHOME}/systems/pre/${LANGUAGE}/toktag)),)
+ifneq (,$(wildcard ${shell uplug -e pre/${LANGUAGE}/toktag 2>/dev/null}))
   TOK=${UPLUG} pre/${LANGUAGE}/toktag
 endif
 
 # 4) a language-specific sentence boundary detection tool
 
-ifneq ($(strip $(wildcard ${UPLUGHOME}/systems/pre/${LANGUAGE}-sent)),)
-  SENT=${UPLUG} pre/${LANGUAGE}-sent
+ifneq (,$(wildcard ${shell uplug -e pre/${LANGUAGE}/sent 2>/dev/null}))
+  SENT=${UPLUG} pre/${LANGUAGE}/sent
 endif
 
 

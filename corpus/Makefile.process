@@ -36,10 +36,20 @@ prepare: xml/Makefile wordalign/Makefile
 
 ## pre-process data (all languages)
 .PHONY: preprocess
-preprocess:
-	for l in ${LANGUAGES}; do \
-		${MAKE} LANGUAGE=$$l preprocess_files; \
-	done
+PREPROCESS_DONE = ${patsubst %,log/.%.preprocess.done,${LANGUAGES}}
+preprocess: ${PREPROCESS_DONE}
+
+${PREPROCESS_DONE}:
+	${MAKE} LANGUAGE=${patsubst log/.%.preprocess.done,%,$@} preprocess_files
+	mkdir -p ${dir $@}
+	touch $@
+
+## OLD: for loop cannot be parallelized
+# preprocess:
+#	for l in ${LANGUAGES}; do \
+#		${MAKE} LANGUAGE=$$l preprocess_files; \
+#	done
+
 
 ## sentence alignment (all language pairs)
 .PHONY: align sentalign

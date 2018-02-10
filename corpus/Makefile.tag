@@ -21,11 +21,20 @@ XMLFILES = $(subst :,\:,$(patsubst raw/%,xml/%,$(shell find ${RAWDIR}/ -name '*.
 
 TAG = uplug -f opus/annotate opus/${LANGUAGE}/tag
 
+## OLD: for-loop (cannot be parallelized)
+##
+# annotate:
+# 	for l in ${LANGUAGES}; do \
+# 		${MAKE} LANGUAGE=$$l annotate_files; \
+# 	done
 
-annotate:
-	for l in ${LANGUAGES}; do \
-		${MAKE} LANGUAGE=$$l annotate_files; \
-	done
+ANNOTATE_DONE = ${patsubst %,log/.%.annotate.done,${LANGUAGES}}
+annotate: ${ANNOTATE_DONE}
+
+${ANNOTATE_DONE}:
+	${MAKE} LANGUAGE=${patsubst log/.%.annotate.done,%,$@} annotate_files
+	mkdir -p ${dir $@}
+	touch $@
 
 annotate_files: ${XMLFILES}
 
