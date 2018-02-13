@@ -26,9 +26,34 @@ ifndef UD_CWB_DISALLOW_POSATTR
 endif
 
 
-cwb-index:
+CWB_LANGFILES   = $(patsubst %,cwb/%.gz,${LANGUAGES})
+CWBUD_LANGFILES = $(patsubst %,cwb-ud/%.gz,${LANGUAGES})
+
+## convert each language individually
+## --> make it possible to run in parallel!
+
+${CWB_LANGFILES}:
+	mkdir -p ${dir $@}
+	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
+	mkdir -p $(CWBDATA)
+	mkdir -p $(CWBREG)
+	$(INDEXER) -C -v -c ${CORPUS} \
+	           -d $(CWBDATA) \
+		   -m cwb \
+	           -r $(CWBREG) \
+		   -P $(CWB_DISALLOW_POSATTR) \
+	           -t $(ALGEXT) \
+		   ${CWB_EXTRA_ARGS} \
+	           $(patsubst cwb/%.gz,%,$@)
+	chmod -R o+rX $(CWBDATA)/${CORPUS}
+	chmod o+rX $(CWBREG)/${CORPUS}
+	-gzip -f $(@:.gz=)
+	-gzip -f $(@:.gz=.pos)
+
+
+cwb-index: ${CWB_LANGFILES}
 	mkdir -p cwb
-	-gunzip -f cwb/*.gz
+	-gunzip -k -f cwb/*.gz
 	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
 	mkdir -p $(CWBDATA)
 	mkdir -p $(CWBREG)
@@ -46,7 +71,7 @@ cwb-index:
 
 cwb-convert:
 	mkdir -p cwb
-	-gunzip -f cwb/*.gz
+	-gunzip -k -f cwb/*.gz
 	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
 	mkdir -p $(CWBDATA)
 	mkdir -p $(CWBREG)
@@ -65,7 +90,28 @@ cwb-convert:
 
 
 # create index of UD-parsed data
-cwb-index-ud:
+
+${CWBUD_LANGFILES}:
+	mkdir -p ${dir $@}
+	-cd parsed && ln -s ../xml/*.xml.gz .
+	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
+	mkdir -p $(UDCWBDATA)
+	mkdir -p $(UDCWBREG)
+	$(INDEXER) -C -v -c ${CORPUS} \
+	           -d $(UDCWBDATA) \
+		   -m cwb-ud \
+	           -r $(UDCWBREG) \
+		   -x parsed \
+		   -P $(UD_CWB_DISALLOW_POSATTR) \
+	           -t $(ALGEXT) \
+		   ${CWB_EXTRA_ARGS} \
+	           $(patsubst cwb-ud/%.gz,%,$@)
+	chmod -R o+rX $(UDCWBDATA)/${CORPUS}
+	chmod o+rX $(UDCWBREG)/${CORPUS}
+	-gzip -f $(@:.gz=)
+	-gzip -f $(@:.gz=.pos)
+
+cwb-index-ud: ${CWBUD_LANGFILES}
 	mkdir -p cwb-ud
 	-gunzip -f cwb-ud/*.gz
 	-cd parsed && ln -s ../xml/*.xml.gz .

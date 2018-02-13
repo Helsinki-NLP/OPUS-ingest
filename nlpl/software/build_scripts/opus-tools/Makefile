@@ -38,9 +38,16 @@ ${PACKAGE_SOURCE}:
 	${MKDIR} ${NLPL_SOURCES}/${PACKAGE}
 	git clone ${GITURL} $@
 
+## TODO: should we add UDPipe dependency?
+##	@perl -e 'Ufal::UDPipe;' || ${CPAN} Ufal::UDPipe
+
 ${PACKAGE_HOME}/bin/opus-read: ${PACKAGE_SOURCE}
 	@perl -e 'use inc::Module::Install;' || ${MAKE} -C ../perl-install all
 	@perl -e 'use XML::Parser;' || ${CPAN} XML::Parser
+	@perl -e 'use XML::Writer;' || ${CPAN} XML::Writer
+	@perl -e 'use Archive::Zip;' || ${CPAN} Archive::Zip
+	@perl -e 'use HTML::Entities;' || ${CPAN} HTML::Entities
+	@perl -e 'use Lingua::Sentence;' || ${CPAN} Lingua::Sentence
 	${MKDIR} ${PACKAGE_HOME}
 	cd $< && perl Makefile.PL PREFIX=${PACKAGE_HOME}
 	make -C $< install clean

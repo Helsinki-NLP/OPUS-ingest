@@ -202,26 +202,33 @@ ACTION = wordalign
 
 .PHONY: submit-all-prepare 
 submit-all-prepare:
-	${MAKE} ACTION=wordalign-prepare submit-all
+	${MAKE} ACTION=wordalign-prepare submit-all-languages
 
 .PHONY: submit-all-align
 submit-all-align:
-	${MAKE} ACTION=wordalign-align submit-all
+	${MAKE} ACTION=wordalign-align submit-all-languages
 
 .PHONY: submit-all-pt
 submit-all-pt:
-	${MAKE} ACTION=wordalign-pt submit-all
+	${MAKE} ACTION=wordalign-pt submit-all-languages
 
 .PHONY: submit-all-filter
 submit-all-filter:
-	${MAKE} ACTION=wordalign-filter submit-all
+	${MAKE} ACTION=wordalign-filter submit-all-languages
 
+
+.PHONY: submit-all-languages
+submit-all-languages:
+	for l in ${LANGPAIRS}; do \
+	  ${MAKE} LANGPAIR=$$l submit-${ACTION}; \
+	done
 
 .PHONY: submit-all
 submit-all:
 	for l in ${LANGPAIRS}; do \
-	  ${MAKE} LANGPAIR=$$l submit-${ACTION}; \
+	  ${MAKE} LANGPAIR=$$l $$l/.wordalign-done; \
 	done
+
 
 # batch job for preparing the corpus data
 # --> single core, little memory
@@ -236,10 +243,12 @@ submit-wordalign-prepare:
 		  NEXTJOB=${NEXTJOB} \
 		  MAKEARGS="ACTION=wordalign-prepare NEXTJOB=${NEXTJOB}" \
 	  ${LANGPAIR}.submit;\
+	else \
+	  ${MAKE} submit-wordalign-align;\
 	fi
 
 # batch job for word alignment
-# --> high memory consumption!
+# --> high memory consumption for efmaral! (but OK with eflomal)
 .PHONY: submit-wordalign-align
 submit-wordalign-align:
 	if [ ! -e ${LANGPAIR}/.wordalign-align ]; then \
@@ -251,6 +260,8 @@ submit-wordalign-align:
 		  NEXTJOB=${NEXTJOB} \
 		  MAKEARGS="ACTION=wordalign-align NEXTJOB=${NEXTJOB}" \
 	  ${LANGPAIR}.submit;\
+	else \
+	  ${MAKE} submit-wordalign-pt;\
 	fi
 
 # batch job for creating phrase-tables
@@ -270,7 +281,10 @@ submit-wordalign-pt:
 		    MAKEARGS="ACTION=wordalign-pt NEXTJOB=${NEXTJOB}" \
 	    ${LANGPAIR}.submit;\
 	  fi; \
+	else \
+	  ${MAKE} submit-wordalign-filter;\
 	fi
+
 
 # batch job for filtering phrase-tables
 # (assume that phrase extraction is done already!)
@@ -303,6 +317,34 @@ submit-wordalign:
 	  ${LANGPAIR}.submit;\
 	fi
 
+
+## check what we have to do
+%/.wordalign-done:
+	if [ -e ${dir $@}/.wordalign-prepare ]; then \
+	  if [ -e ${dir $@}/.wordalign-align ]; then \
+	    if [ -e ${dir $@}/.wordalign-pt ]; then \
+	      if [ -e ${dir $@}/.wordalign-filter ]; then \
+		touch $@; \
+	      else \
+		${MAKE} SRC=$(firstword $(subst -, ,${dir $@})) \
+			TRG=$(lastword $(subst -, ,${dir $@})) \
+		submit-wordalign-filter; \
+	      fi \
+	    else \
+	      ${MAKE} SRC=$(firstword $(subst -, ,${dir $@})) \
+		      TRG=$(lastword $(subst -, ,${dir $@})) \
+	      submit-wordalign-pt; \
+	    fi \
+	  else \
+	    ${MAKE} SRC=$(firstword $(subst -, ,${dir $@})) \
+		    TRG=$(lastword $(subst -, ,${dir $@})) \
+	    submit-wordalign-align; \
+	  fi \
+	else \
+	  ${MAKE} SRC=$(firstword $(subst -, ,${dir $@})) \
+		  TRG=$(lastword $(subst -, ,${dir $@})) \
+	  submit-wordalign-prepare; \
+	fi
 
 
 

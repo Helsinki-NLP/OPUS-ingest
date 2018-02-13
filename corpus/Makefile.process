@@ -57,9 +57,13 @@ align sentalign: xml/Makefile
 	${MAKE} -C xml all
 
 ## word alignment (all language pairs)
-.PHONY: wordalign
+.PHONY: wordalign wordalign-submit
 wordalign: wordalign/Makefile
 	${MAKE} -C wordalign all
+
+wordalign-submit: wordalign/Makefile
+	${MAKE} -C wordalign submit-all
+
 
 ## insert word alignments into mySQL database
 .PHONY: lexicon

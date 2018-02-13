@@ -6,6 +6,9 @@
 include Makefile.def
 include ../Makefile.def
 
+DOWNLOADURL = https://s3.amazonaws.com/web-language-models/paracrawl
+TRGLANGS = ${sort de fr es it pt nl pl cs ro fi lv}
+
 ## make all:
 ##
 ## - fetch sources (src/Makefile)  <--- put your own procedures in here!!!
@@ -14,11 +17,36 @@ include ../Makefile.def
 
 all:
 	${MAKE} fetch
-	${MAKE} preprocess
 	${MAKE} annotate
-	${MAKE} wordalign
 	${MAKE} publish
+	${MAKE} wordalign
 
+
+## submit a job for fetching and processing all data
+all-job:
+	${MAKE} HPC_CORES=1 HPC_MEM=4g HPC_TIME=48:00 fetch-job.submit
+
+## a job for fetching and converting all files
+## that will submit tokenization jobs when ready
+fetch-job:
+	${MAKE} fetch
+	for l in en ${TRGLANGS}; do \
+	  ${MAKE} MAKEARGS="LANGUAGE=$$l" LANGUAGE=$$l \
+		HPC_CORES=8 HPC_MEM=4g HPC_TIME=48:00 \
+	  tokenize-job.submit; \
+	  rm -f tokenize-job.submit;\
+	done
+
+## tokenize and submit wordalign jobs when all languages are done
+tokenize-job:
+	${MAKE} annotate_files
+	if [ `ls log/.*tokenize.done | wc -l` == 9 ]; then \
+	  ${MAKE} HPC_CORES=8 HPC_MEM=4g HPC_TIME=72:00 publish-job.submit; \
+	fi
+
+publish-job:
+	${MAKE} publish
+	${MAKE} wordalign-submit
 
 ## standard procedures are specified in the following makefiles
 ##
@@ -43,15 +71,11 @@ include ../Makefile.udparse
 ##   Makefile.annotate ........ all annotation in Uplug
 
 # include ../Makefile.tokenize-simple
-include ../Makefile.tokenize-moses
-# include ../Makefile.tokenize
+# include ../Makefile.tokenize-moses
+include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate
 
-
-DOWNLOADURL = https://s3.amazonaws.com/web-language-models/paracrawl
-TRGLANGS = ${sort de fr es it pt nl pl cs ro fi lv}
-RELEASE = release${VERSION}
 
 ## temporary test with my local opus-tools
 MOSES2OPUS = ${HOME}/research/nlpl/opus-tools/scripts/moses2opus
@@ -64,18 +88,19 @@ fetch:
 	  t=`echo "en $$l" | tr " " "\n" | sort | tail -1`;\
 	  echo "xml/$$s-$$t.xml.gz"; \
 	  if [ ! -e "xml/$$s-$$t.xml.gz" ]; then \
-	    wget ${DOWNLOADURL}/${RELEASE}/paracrawl-${RELEASE}.en-$$l.zipporah0-dedup-clean.tgz; \
-	    tar -xzf paracrawl-${RELEASE}.en-$$l.zipporah0-dedup-clean.tgz;\
+	    wget ${DOWNLOADURL}/${VERSION}/paracrawl-${VERSION}.en-$$l.zipporah0-dedup-clean.tgz; \
+	    tar -xzf paracrawl-${VERSION}.en-$$l.zipporah0-dedup-clean.tgz;\
 	    echo $$s;\
 	    echo $$t;\
 	    cd raw; \
 	    ${MOSES2OPUS} -s $$s -t $$t  \
-		-x -b paracrawl-zipporah0-dedup-clean.$$s-$$t \
+		-z -b paracrawl-zipporah0-dedup-clean.$$s-$$t \
+		-p 100000 \
 		../*-clean.$$s ../*-clean.$$t |\
 	    gzip -c > ../xml/$$s-$$t.xml.gz; \
 	    cd ..; \
 	  fi; \
-	  rm -f paracrawl-${RELEASE}.en-$$l.zipporah0-dedup-clean.*; \
+	  rm -f paracrawl-${VERSION}.en-$$l.zipporah0-dedup-clean.*; \
 	done
 
 
