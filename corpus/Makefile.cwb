@@ -50,10 +50,12 @@ ${CWB_LANGFILES}:
 	-gzip -f $(@:.gz=)
 	-gzip -f $(@:.gz=.pos)
 
+cwb-index-onejob:
+	${MAKE} CWB_LANGFILES= cwb-index
 
 cwb-index: ${CWB_LANGFILES}
 	mkdir -p cwb
-	-gunzip -k -f cwb/*.gz
+	-gunzip -f cwb/*.gz
 	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
 	mkdir -p $(CWBDATA)
 	mkdir -p $(CWBREG)
@@ -71,7 +73,7 @@ cwb-index: ${CWB_LANGFILES}
 
 cwb-convert:
 	mkdir -p cwb
-	-gunzip -k -f cwb/*.gz
+	-gunzip -f cwb/*.gz
 	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
 	mkdir -p $(CWBDATA)
 	mkdir -p $(CWBREG)

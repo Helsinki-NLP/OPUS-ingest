@@ -100,7 +100,13 @@ EFMARAL_ALIGN_MEM = ${shell \
 
 ## for elomal: much less!
 ALIGN_MEM = ${shell \
-	if [ ${CORPUS_SIZE} -gt 5000000 ]; then \
+	if [ ${CORPUS_SIZE} -gt 100000000 ]; then \
+	  echo "64g"; \
+	elif [ ${CORPUS_SIZE} -gt 50000000 ]; then \
+	  echo "32g"; \
+	elif [ ${CORPUS_SIZE} -gt 10000000 ]; then \
+	  echo "24g"; \
+	elif [ ${CORPUS_SIZE} -gt 5000000 ]; then \
 	  echo "16g"; \
 	elif [ ${CORPUS_SIZE} -gt 1000000 ]; then \
 	  echo "8g"; \
@@ -120,7 +126,11 @@ ALIGN_TIME = ${shell \
 	  echo "4"; \
 	fi }
 EXTRACT_MEM = ${shell \
-	if [ ${CORPUS_SIZE} -gt 100000000 ]; then \
+	if [ ${CORPUS_SIZE} -gt 500000000 ]; then \
+	  echo "250g"; \
+	elif [ ${CORPUS_SIZE} -gt 250000000 ]; then \
+	  echo "196g"; \
+	elif [ ${CORPUS_SIZE} -gt 100000000 ]; then \
 	  echo "120g"; \
 	elif [ ${CORPUS_SIZE} -gt 50000000 ]; then \
 	  echo "64g"; \
@@ -226,7 +236,7 @@ submit-all-languages:
 .PHONY: submit-all
 submit-all:
 	for l in ${LANGPAIRS}; do \
-	  ${MAKE} LANGPAIR=$$l $$l/.wordalign-done; \
+	  ${MAKE} NEXTJOB=1 LANGPAIR=$$l $$l/.wordalign-done; \
 	done
 
 
