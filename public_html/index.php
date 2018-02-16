@@ -30,6 +30,7 @@
     <h3>Latest News</h3>
 
     <ul>
+    <li>2018-02-15: New corpora: <a href="ParaCrawl.php">ParaCrawl</a>, <a href="XhosaNavy.php">XhosaNavy</a></li>
     <li>2017-11-06: New version: <a href="OpenSubtitles2018.php">OpenSubtitles2018</a></li>
     <li>2017-11-01: New server location: <a href="http://opus.nlpl.eu">http://opus.nlpl.eu</a></li>
     <li>2016-01-08: New version: <a href="OpenSubtitles2016.php">OpenSubtitles2016</a></li>
@@ -235,9 +236,9 @@
           <li><a href="OpenSubtitles2018.php">OpenSubtitles2018</a> - new complete version</li>
 
 
-          <li><a href="PHP.php">PHP - the PHP manual corpus</a> ( <a href="download.php?f=PHP.tar.gz" rel="nofollow">PHP.tar.gz</a> - 206 MB)</li>
-
+          <li><a href="ParaCrawl.php">ParaCrawl corpus</a></li>
 	  <li><a href="ParCor">ParCor - A Parallel Pronoun-Coreference Corpus</a></li>
+          <li><a href="PHP.php">PHP - the PHP manual corpus</a> ( <a href="download.php?f=PHP.tar.gz" rel="nofollow">PHP.tar.gz</a> - 206 MB)</li>
 
           <li><a href="RF.php">Regeringsf&ouml;rklaringen - a tiny example corpus</a></li>
 
@@ -265,6 +266,8 @@
           <li><a href="WikiSource.php">WikiSource</a> - (small en-sv sample only (<a href="http://opus.nlpl.eu/download.php?f=WikiSource.tar.gz" rel="nofollow">WikiSource.tar.gz</a> - 24 MB)</li>
 
           <li><a href="WMT-News.php">WMT News Test Sets</a> (<a href="http://opus.nlpl.eu/download.php?f=WMT-News.tar.gz" rel="nofollow">WMT-News.tar.gz</a> - 34MB)</li>
+
+          <li><a href="XhosaNavy.php">The Xhosa - English Navy corpus</li>
 
 
         </ul><br>
