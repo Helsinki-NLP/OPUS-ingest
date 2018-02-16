@@ -8,7 +8,7 @@
 # - assumes that opus-tools are installed (moses2opus in PATH)
 #
 # BEFORE RUNNING:
-# - set corpus-specific data in Makefile.def
+# - set corpus-specific info in Makefile.def
 # - change the include of preprocessing Makefiles if necessary
 #   (Makefile.tag for PoS tagging or Makefile.annotate)
 #
