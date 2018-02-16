@@ -104,9 +104,13 @@ $(ALLTRG): %.trg: %
 #	 	$(shell ls ${SRC} ${TRG} | grep '\.${XMLEXT}$$' |\
 #			sort | uniq -c | grep '^ *2 *' | sed 's/^ *2 *//'))
 
-ALGFILES = $(addprefix $(SRC)-$(TRG)/,\
+ifneq (${SRC},)
+ifneq (${TRG},)
+  ALGFILES = $(addprefix $(SRC)-$(TRG)/,\
 	   $(shell find ${SRC}/ ${TRG}/ -name '*.${XMLEXT}' -printf "%P\n" |\
 		   sort | uniq -c | grep '^ *2 *' | sed 's/^ *2 *//'))
+endif
+endif
 
 
 ## this is the final target (all sentence alignments in one file)
