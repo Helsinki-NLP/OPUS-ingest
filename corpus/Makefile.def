@@ -12,6 +12,11 @@ ifndef OPUSHOME
   OPUSHOME=$(shell pwd | sed 's|OPUS/.*|OPUS|')
 endif
 
+# set version to latest if necessary
+ifndef VERSION
+  VERSION=latest
+endif
+
 
 #
 # OPUSCORPORA ..... home directory of all corpora in OPUS
@@ -31,14 +36,17 @@ OPUSDATA      = ${OPUSHOME}/data
 ifeq ("${shell hostname -d}","novalocal")
   OPUSPUB       = ${OPUSHOME}/public_html
   OPUSHTML      = /media/download
+  OPUSRELEASE   = /media/releases
   OPUSWORDALIGN = /media/download
 else ifeq ("${shell hostname -d}","lingfil.uu.se")
   OPUSPUB       = ${OPUSHOME}/../public_html
   OPUSHTML      = ${OPUSHOME}/html
+  OPUSRELEASE   = ${OPUSHOME}/releases
   OPUSWORDALIGN = ${OPUSHOME}/wordalign
 else
   OPUSPUB       = ${OPUSHOME}/public_html
   OPUSHTML      = ${OPUSHOME}/download
+  OPUSRELEASE   = ${OPUSHOME}/releases
   OPUSWORDALIGN = ${OPUSHOME}/download
 endif
 
@@ -62,6 +70,7 @@ CORPUSRAW        = ${CORPUSHOME}/raw
 CORPUSPARSED     = ${CORPUSHOME}/parsed
 CORPUSPUB        = ${OPUSPUB}/${CORPUS}
 CORPUSHTML       = ${OPUSHTML}/${CORPUS}
+CORPUSRELEASE    = ${OPUSRELEASE}/${CORPUS}/${VERSION}
 CORPUSWORDALIGN  = ${OPUSWORDALIGN}/${CORPUS}
 
 

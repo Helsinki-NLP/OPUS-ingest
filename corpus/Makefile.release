@@ -1,0 +1,509 @@
+# -*-makefile-*-
+#
+#
+#----------------------------------------------
+#
+#  make website ........ make website
+#  make html ........... make website and counts
+#  make refresh-html ... remove old html and make new
+#  make packages ....... make download packages
+#
+#----------------------------------------------
+
+
+PARSED_LANGUAGES = $(sort $(notdir $(wildcard ${CORPUSPARSED}/??)) \
+                          $(notdir $(wildcard ${CORPUSPARSED}/???)) \
+                          $(notdir $(wildcard ${CORPUSPARSED}/??_??)))
+
+CES      = $(wildcard ${CORPUSXML}/*.xml.gz)
+ALG      = $(patsubst ${CORPUSXML}/%,${CORPUSRELEASE}/xml/%,$(CES))
+TMX      = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/tmx/%.tmx.gz,$(CES))
+MOSES    = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/moses/%.txt.zip,$(CES))
+
+LANG_XML = $(patsubst %,${CORPUSRELEASE}/xml/%.zip,${LANGUAGES})
+LANG_RAW = $(patsubst %,${CORPUSRELEASE}/raw/%.zip,${LANGUAGES})
+LANG_UD  = $(patsubst %,${CORPUSRELEASE}/parsed/%.zip,${PARSED_LANGUAGES})
+
+
+## strict = bitexts with "high-quality" alignments only
+## (1:1, hunalign link score > 1)
+TMX_STRICT    = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/tmx/%.strict.tmx.gz,$(CES))
+MOSES_STRICT  = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/moses/%.strict.txt.zip,$(CES))
+
+# monolingual data
+MONO_TOK = $(patsubst %,${CORPUSRELEASE}/mono/${CORPUS}.%.gz, ${LANGUAGES})
+MONO_RAW = $(patsubst %,${CORPUSRELEASE}/mono/${CORPUS}.raw.%.gz, ${LANGUAGES})
+
+# frequency counts
+FREQ_COUNTS    = $(patsubst %,${CORPUSRELEASE}/freq/${CORPUS}.%.gz, ${LANGUAGES})
+
+# sample files in HTML
+ALG_SAMPLES    = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSPUB}/%_sample.html, ${CES})
+CORPUS_SAMPLES = $(patsubst %,${CORPUSPUB}/%_sample.html, ${LANGUAGES})
+
+# info files with statistics
+CES_INFO  = $(patsubst %.xml.gz,%.info,${CES})
+TXT_INFO  = $(patsubst ${CORPUSRELEASE}/%.txt.zip,${CORPUSXML}/%.txt.info,${MOSES})
+TMX_INFO  = $(patsubst ${CORPUSRELEASE}/%.tmx.gz,${CORPUSXML}/%.tmx.info,${TMX})
+LANG_INFO = $(patsubst %,${CORPUSXML}/%.info,${LANGUAGES})
+
+## some scripts for conversion
+## TODO: check if we have more updated versions
+# MAKEHTML   = ${TOOLS}/opus/make-download-page.pl
+# MAKEHTML   = ${HOME}/research/nlpl/opus-tools/scripts/admin/generate-website.pl
+# MAKEHTML   = ${TOOLS}/public/opus-tools/scripts/admin/generate-website.pl
+MAKEHTML   = opus-make-website
+
+TAB2TMX    = ${UPLUGHOME}/tools/tab2tmx
+OPUS2MOSES = $(UPLUGHOME)/tools/xces2moses
+
+# file with all packages that can be distributed
+# PACKDIRS = subdir's that will be included in tar-ball
+PACKAGES   = ${CORPUSPUB}/.packages
+PACKDIRS   = xml raw
+# PACKDIRS   = xml raw parsed
+
+
+.PHONY: html packages release refresh-html download-dirs webpage
+html: 	${OPUSPUB}/${CORPUS}.php ${FREQ_COUNTS}
+	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
+	mv -f ${PACKAGES}.uniq ${PACKAGES}
+
+release packages: ${PACKAGES} ${CORPUSRELEASE}/README
+	echo "-----------------------------" >> ${CORPUSRELEASE}/README
+	echo "Files in this release"         >> ${CORPUSRELEASE}/README
+	echo "-----------------------------" >> ${CORPUSRELEASE}/README
+	cat ${PACKAGES}                      >> ${CORPUSRELEASE}/README
+
+refresh-html:
+	rm -f ${OPUSPUB}/${CORPUS}.php
+	rm -f ${CORPUSPUB}/*sample.html
+	touch $(CES)
+	make html
+
+download-dirs: ${CORPUS} ${CORPUSRELEASE} # ${CORPUSRELEASE}/xml
+
+webpage: ${OPUSPUB}/${CORPUS}.php
+
+
+
+## TODO: do we still need the following targets
+
+${CORPUS}:
+	ln -s xml $@
+
+${CORPUSRELEASE}:
+	mkdir -p $@
+
+
+
+## citation note to be added to website
+
+#  CITENOTE=Please <a href="http://opus.lingfil.uu.se/RANLP_V.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J\&ouml;rg Tiedemann, 2009, <a href="http://stp.lingfil.uu.se/~joerg/published/ranlp-V.pdf">News from OPUS - A Collection of Multilingual Parallel Corpora with Tools and Interfaces</a>. In N. Nicolov and K. Bontcheva and G. Angelova and R. Mitkov (eds.) Recent Advances in Natural Language Processing (vol V), pages 237-248, John Benjamins, Amsterdam/Philadelphia<br/>
+
+ifndef CITENOTE
+  CITENOTE=Please <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J. Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)<br/>
+endif
+
+## additional information about the downloads
+
+ifndef DOWNLOADINFO
+  DOWNLOADINFO=<p>Below you can download data files for all language pairs in different formats and with different kind of annotation (if available). You can click on the various links as explained below. In addition to the files shown on this webpage, OPUS also provides pre-compiled word alignments and phrase tables, bilingual dictionaries, frequency counts, and these files can be found through the <a href="/index.php">resources search form on the top-level website of OPUS</a>. 
+endif
+
+
+${OPUSPUB}/${CORPUS}.php: ${PACKAGES} \
+			${CORPUS_SAMPLES} ${ALG_SAMPLES} \
+			${LANG_INFO} ${CES_INFO} ${TXT_INFO} ${TMX_INFO}
+	mkdir -p $(shell dirname $@)
+	${MAKEHTML} -e $(ALGEXT:.gz=) -o ${OPUSHOME} ${CORPUS} |\
+	sed -e 's#<h3>Download</h3>#<h3>Download</h3>${DOWNLOADINFO}${EXTRAHTML}#' \
+	    -e 's#<h3>Download</h3>#${CITENOTE}<h3>Download</h3>#' \
+	    -e 's#<h1>${CORPUS}${VERSION}</h1>#<h1>${CORPUS}</h1>#' \
+	    -e 's#<h1>${CORPUS}</h1>#<h1>${CORPUS}</h1>${SRCHTML}#' > $@
+
+${PACKAGES}:	${ALG} \
+		${LANG_XML} ${LANG_RAW} ${LANG_UD} \
+		${MONO_TOK} ${MONO_RAW} \
+		$(TMX) $(MOSES) ${FREQ_COUNTS}
+	mkdir -p ${dir $@}
+	echo "$^" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
+	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
+	mv -f ${PACKAGES}.uniq ${PACKAGES}
+
+
+
+## generic target to create a README file
+
+%/README:
+	echo " Corpus Name: ${CORPUS}" >$@
+ifneq (${PACKAGE},)
+	echo "     Package: ${PACKAGE}" >>$@
+endif
+	echo "     Website: http://opus.nlpl.eu/${CORPUS}.php" >> $@
+	echo "     Release: ${VERSION}" >>$@
+	echo "Release date: ${shell date}" >> $@
+ifneq (${LICENSE},)
+	echo "     License: ${LICENSE}" >>$@
+endif
+ifneq (${COPYRIGHT},)
+	echo "   Copyright: ${LICENSE}" >>$@
+endif
+	echo "" >>$@
+	echo "This corpus is part of OPUS - the open collection of parallel corpora" >> $@
+	echo "OPUS Website: http://opus.nlpl.eu" >> $@
+	echo "" >>$@
+	echo "${CITENOTE}" | sed 's/<[^>]*>//g' >> $@
+	echo "" >>$@
+	echo "${SRCHTML}" | sed 's/<[^>]*>//g' >> $@
+	echo "${EXTRAHTML}" | sed 's/<[^>]*>//g' >> $@
+
+
+
+## make an archive with all xml-files!
+
+.PHONY: pack
+pack: ${OPUSRELEASE}/${CORPUS}.tar.gz
+
+### just pack everything in xml and raw!
+
+${OPUSRELEASE}/${CORPUS}.tar.gz: $(CES)
+	mkdir -p $(shell dirname $@)
+	-tar 	--ignore-failed-read  \
+		--exclude='*Makefile*' \
+		--exclude='*~' \
+		--exclude='*.info' \
+		--exclude-vcs \
+		--transform 's#^#${CORPUS}/#' \
+		-chzf $(notdir $@) ${PACKDIRS}
+	mv -f $(notdir $@) $@
+	mkdir -p ${dir ${PACKAGES}}
+	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+
+
+## copy sentence alignment files
+
+.PHONY: alg_files
+alg_files: ${ALG}
+
+${ALG}: ${CORPUSRELEASE}/%: ${CORPUSHOME}/%
+	@mkdir -p ${dir $@}
+	cp $< $@
+
+
+#----------------------------------------------------------------------------
+# pack all language files in tar-archives
+#----------------------------------------------------------------------------
+
+
+.PHONY: lang_xml lang_tar lang_tok_tar
+lang_xml lang_tar lang_tok_tar: ${LANG_XML}
+
+${LANG_XML}: ${CORPUSRELEASE}/xml/%.zip: ${CORPUSXML}/%
+	@mkdir -p ${dir $@}
+	mkdir -p ${TMPDIR}/$</${CORPUS}/xml
+	rsync -av $< ${TMPDIR}/$</${CORPUS}/xml/
+	find ${TMPDIR}/$</${CORPUS}/xml -name '*.xml.gz' |\
+	xargs -P 8 gunzip -f
+	${MAKE} PACKAGE=${patsubst ${OPUSCORPORA}/%,%,$<} ${TMPDIR}/$</README
+	echo "${patsubst ${OPUSCORPORA}/%,%,$<}" > ${TMPDIR}/$</INFO
+	echo "${CORPUS}" >> ${TMPDIR}/$</INFO
+	echo "${VERSION}" >> ${TMPDIR}/$</INFO
+	( cd ${TMPDIR}/$<; zip -r $@ INFO README ${CORPUS}; cd ${PWD} )
+	( cd ${TMPDIR}/$<; zip -r $@ README ${CORPUS}; cd ${PWD} )
+	rm -fr ${TMPDIR}/$<
+	mkdir -p ${dir ${PACKAGES}}
+	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+
+# raw corpus files
+
+.PHONY: lang_raw lang_raw_tar
+lang_raw lang_raw_tar: ${LANG_RAW}
+
+${LANG_RAW}: ${CORPUSRELEASE}/raw/%.zip: ${CORPUSRAW}/%
+	@mkdir -p ${dir $@}
+	mkdir -p ${TMPDIR}/$</${CORPUS}/raw
+	rsync -av $< ${TMPDIR}/$</${CORPUS}/raw/
+	find ${TMPDIR}/$</${CORPUS}/raw -name '*.xml.gz' |\
+	xargs -P 8 gunzip -f
+	${MAKE} PACKAGE=${patsubst ${OPUSCORPORA}/%,%,$<} ${TMPDIR}/$</README
+	echo "${patsubst ${OPUSCORPORA}/%,%,$<}" > ${TMPDIR}/$</INFO
+	echo "${CORPUS}" >> ${TMPDIR}/$</INFO
+	echo "${VERSION}" >> ${TMPDIR}/$</INFO
+	( cd ${TMPDIR}/$<; zip -r $@ INFO README ${CORPUS}; cd ${PWD} )
+	rm -fr ${TMPDIR}/$<
+	mkdir -p ${dir ${PACKAGES}}
+	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+
+
+# parsed corpus files (not all languages need to be parsed)
+
+.PHONY: lang_parsed lang_parsed_tar
+lang_parsed lang_parsed_tar:
+	for l in ${LANGUAGES}; do \
+	  if [ -d ${CORPUSPARSED}/$$l ]; then \
+	    ${MAKE} ${CORPUSRELEASE}/$$l.parsed.zip; \
+	  fi; \
+	done
+
+${LANG_UD}: ${CORPUSRELEASE}/parsed/%.zip: ${CORPUSPARSED}/%
+	@mkdir -p ${dir $@}
+	mkdir -p ${TMPDIR}/$</${CORPUS}/parsed
+	rsync -av $< ${TMPDIR}/$</${CORPUS}/parsed/
+	find ${TMPDIR}/$</${CORPUS}/parsed -name '*.xml.gz' |\
+	xargs -P 8 gunzip -f
+	${MAKE} PACKAGE=${patsubst ${OPUSCORPORA}/%,%,$<} ${TMPDIR}/$</README
+	echo "${patsubst ${OPUSCORPORA}/%,%,$<}" > ${TMPDIR}/$</INFO
+	echo "${CORPUS}" >> ${TMPDIR}/$</INFO
+	echo "${VERSION}" >> ${TMPDIR}/$</INFO
+	( cd ${TMPDIR}/$<; zip -r $@ INFO README ${CORPUS}; cd ${PWD} )
+	rm -fr ${TMPDIR}/$<
+	mkdir -p ${dir ${PACKAGES}}
+	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+
+
+
+#----------------------------------------------------------------------------
+# make monolingual plain text files
+#----------------------------------------------------------------------------
+
+.PHONY: mono_tok mono_raw
+mono_tok: ${MONO_TOK}
+mono_raw: ${MONO_RAW}
+
+CORPUS_EXT = xml
+
+
+## NEW: zip files in the actual corpus directory
+## ---> this will eventually replace the download dir
+
+${CORPUSXML}/%.zip: ${CORPUSXML}/%
+
+# monolingual data for language modeling
+# (NEW: only real files, no symlinks!)
+
+${CORPUSRELEASE}/mono/${CORPUS}.%.gz: ${CORPUSXML}/%
+	@mkdir -p ${dir $@}
+	find $</ -name '*.${CORPUS_EXT}.gz' -type f | \
+	xargs zcat | \
+	perl ${TOOLS}/opus/xml2text.pl | \
+	sed 's/  */ /g;s/^ *//;s/ *$$//' |\
+	gzip -c > $@
+	mkdir -p ${dir ${PACKAGES}}
+	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+
+
+${CORPUSRELEASE}/mono/${CORPUS}.raw.%.gz: ${CORPUSRAW}/%
+	@mkdir -p ${dir $@}
+	find $</ -name '*.${CORPUS_EXT}.gz' -type f | \
+	xargs zcat | \
+	perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g' |\
+	perl ${TOOLS}/opus/rawxml2text.pl | \
+	sed 's/  */ /g;s/^ *//;s/ *$$//' |\
+	gzip -c > $@
+	mkdir -p ${dir ${PACKAGES}}
+	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+
+
+#----------------------------------------------------------------------------
+# frequency counts for lowercased tokens
+#----------------------------------------------------------------------------
+
+.PHONY: freq_counts
+freq_counts: ${FREQ_COUNTS}
+
+${CORPUSRELEASE}/freq/${CORPUS}.%.gz: ${CORPUSRELEASE}/mono/${CORPUS}.%.gz
+	@mkdir -p ${dir $@}
+	zcat $< | \
+	perl -e 'binmode(STDIN,":utf8");binmode(STDOUT,":utf8");while(<>){$$_=lc($$_);print;}' |\
+	tr ' ' "\n" | \
+	sort | uniq -c | sort -nr | \
+	gzip -c > $@
+	mkdir -p ${dir ${PACKAGES}}
+	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+
+
+## not good enough for unicode:
+##	tr '[:upper:]' '[:lower:]'
+
+#----------------------------------------------------------------------------
+# alignment sample files
+#----------------------------------------------------------------------------
+
+.PHONY: alg_samples
+alg_samples: ${ALG_SAMPLES}
+
+# -N '\/0\/' is used to filter out some strange files in OpenSubtitles2012
+# which would be used for many sample files (year = 0)
+# (they look messy and should actually be removed from the corpus)
+
+${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%.xml.gz
+	@mkdir -p ${dir $@}
+	$(UPLUGTOOLS)/uplug-readalign \
+		-h -m 100 \
+		-N '\/0\/' \
+	$< > $@
+
+
+.PHONY: corpus_samples
+corpus_samples: ${CORPUS_SAMPLES}
+
+${CORPUS_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%
+	@mkdir -p ${dir $@}
+	echo '<html><head></head><body><pre>' >$@
+	find $</ -name '*.xml.gz' | \
+	xargs zcat | head -100 | recode utf8..utf16 | recode utf16..html >> $@
+	echo '</pre></body></html>' >> $@
+
+#----------------------------------------------------------------------------
+# convert all bitexts to TMX
+#----------------------------------------------------------------------------
+
+# create TMX files from plain text files (Moses format)
+# TMX files contain only unique translation units!
+# --> use sort/uniq
+# --> number alignments first to keep textual order!
+
+tmx: ${CORPUSRELEASE} $(TMX)
+
+tmx-strict: ${CORPUSRELEASE} $(TMX_STRICT)
+
+$(TMX) $(TMX_STRICT): ${CORPUSRELEASE}/tmx/%.tmx.gz: ${CORPUSRELEASE}/moses/%.txt.zip
+	@mkdir -p ${dir $@}
+	unzip $< -x README
+	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	  BASE=${CORPUS}.$(patsubst %.txt.zip,%,$(notdir $<));\
+	  SEXT=$$S; TEXT=$$T; \
+	  if [ "$$SEXT" == "$$TEXT" ]; then SEXT=$${SEXT}1;TEXT=$${TEXT}2; fi; \
+	  paste $$BASE.$$SEXT $$BASE.$$TEXT |\
+	  sed = - | sed 'N;s/\n/\t/' | sort -k 2 | uniq -f 1 | sort -n |\
+	  cut -f2,3 |\
+	  $(TAB2TMX) -s $$S -t $$T |\
+	  gzip -c > $@; \
+	  rm -f $$BASE.$$SEXT $$BASE.$$TEXT $$BASE.ids; )
+	mkdir -p ${dir ${PACKAGES}}
+	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+
+
+#----------------------------------------------------------------------------
+# convert all bitexts to Moses format
+#----------------------------------------------------------------------------
+
+
+.PHONY: moses
+moses: ${CORPUSRELEASE} $(MOSES)
+
+$(MOSES): ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSXML}/%.xml.gz
+	@mkdir -p ${dir $@}
+	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	  BASE=${CORPUS}.$(patsubst %.xml.gz,%,$(notdir $<));\
+	  if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
+	  $(OPUS2MOSES) -d ${CORPUSRAW} -s $$S -t $$T \
+		-P $$BASE.ids \
+		$< $$BASE; \
+	  rm -f $@; \
+	  sed 's/  */ /g' < $$BASE.$$S > $$BASE.$$S.tmp; \
+	  sed 's/  */ /g' < $$BASE.$$T > $$BASE.$$T.tmp; \
+	  mv $$BASE.$$S.tmp $$BASE.$$S; \
+	  mv $$BASE.$$T.tmp $$BASE.$$T; \
+	  mkdir -p ${TMPDIR}/$$BASE; \
+	  ${MAKE} PACKAGE="${CORPUS}.$$S-$$T in Moses format" ${TMPDIR}/$$BASE/README; \
+	  zip -j $@ ${TMPDIR}/$$BASE/README $$BASE.$$S $$BASE.$$T $$BASE.ids; \
+	  rm -f $$BASE.$$S $$BASE.$$T $$BASE.ids ${TMPDIR}/$$BASE/README;\
+	  rmdir ${TMPDIR}/$$BASE; )
+	mkdir -p ${dir ${PACKAGES}}
+	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+
+
+## plain text bitexts with 1:1 sentence alignments
+.PHONY: moses-strict
+moses-strict: ${CORPUSRELEASE} $(MOSES_STRICT)
+
+$(MOSES_STRICT): ${CORPUSRELEASE}/moses/%.strict.txt.zip: ${CORPUSXML}/%.xml.gz
+	@mkdir -p ${dir $@}
+	uplug-readalign -c 1 -S 1 -T 1 -l $< > $(<:gz=11)
+	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	  BASE=${CORPUS}.$(patsubst %.xml.gz,%,$(notdir $<));\
+	  if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
+	  $(OPUS2MOSES) -d ${CORPUSRAW} -s $$S -t $$T \
+		-P $$BASE.ids \
+		$(<:gz=11) $$BASE; \
+	  rm -f $@; \
+	  mkdir -p ${TMPDIR}/$$BASE; \
+	  ${MAKE} PACKAGE="${CORPUS}.$$S-$$T in Moses format" ${TMPDIR}/$$BASE/README; \
+	  zip -j $@ ${TMPDIR}/$$BASE/README $$BASE.$$S $$BASE.$$T $$BASE.ids; \
+	  rm -f $$BASE.$$S $$BASE.$$T $$BASE.ids ${TMPDIR}/$$BASE/README;\
+	  rmdir ${TMPDIR}/$$BASE; )
+	rm -f $(<:gz=11)
+	mkdir -p ${dir ${PACKAGES}}
+	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+
+
+
+# create bitext info files (some basic statistics)
+
+.PHONY: info lang_info ces_info txt_info tmx_info
+info: lang_info ces_info txt_info tmx_info
+
+lang_info: ${LANG_INFO}
+
+${LANG_INFO}: ${CORPUSXML}/%.info: ${CORPUSXML}/%
+	find $</ -name '*.xml.gz' -type f | wc -l > $@
+	find $</ -name '*.xml.gz' -type f | \
+	xargs zcat | grep '</s>' | wc -l >> $@
+	find $</ -name '*.xml.gz' -type f | \
+	xargs zcat | grep '</w>' | wc -l >> $@
+
+
+ces_info: ${CES_INFO}
+
+${CES_INFO}: %.info: %.xml.gz
+	zgrep 'fromDoc' $< | wc -l > $@
+	zgrep 'xtargets' $< | wc -l >> $@
+	( cd ${CORPUSXML}; \
+	  zgrep 'fromDoc' $< | \
+	  tr ' ' "\n" | grep 'fromDoc' | cut -f2 -d '"' |\
+	  xargs zcat | \
+	  grep '</w>' | wc -l >> $@ )
+	( cd ${CORPUSXML}; \
+	  zgrep 'toDoc' $< | \
+	  tr ' ' "\n" | grep 'toDoc' | cut -f2 -d '"' |\
+	  xargs zcat | \
+	  grep '</w>' | wc -l >> $@ )
+
+
+txt_info: ${TXT_INFO}
+
+${TXT_INFO}: ${CORPUSXML}/%.txt.info: ${CORPUSRELEASE}/%.txt.zip
+	-unzip -d . $<
+	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	  P=$$S-$$T; \
+	  if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
+	  if [ ! -e ${CORPUS}.$$P.$$S ]; then \
+		find home -name "*$$P.$$S" -exec mv {} ${CORPUS}.$$P.$$S \; ; \
+		find home -name "*$$P.$$T" -exec mv {} ${CORPUS}.$$P.$$T \; ; \
+		rm -f $< ;\
+		zip $< ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T; \
+	  fi; \
+	  wc -l < ${CORPUS}.$$P.$$S > $(CORPUSXML)/$$P.txt.info; \
+	  wc -w < ${CORPUS}.$$P.$$S >> $(CORPUSXML)/$$P.txt.info; \
+	  wc -w < ${CORPUS}.$$P.$$T >> $(CORPUSXML)/$$P.txt.info; \
+	  rm -f *$$P.$$S *$$P.$$T *$$P.ids; )
+
+
+tmx_info: ${TMX_INFO}
+
+${TMX_INFO}: ${CORPUSXML}/%.tmx.info: ${CORPUSRELEASE}/%.tmx.gz
+	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	 zgrep '</tu>' $< | wc -l > $@; \
+	 zgrep "xml:lang=\"$$S\"" $< | \
+	  	sed 's|^.*<seg>||;s|</seg>.*$$||;' | \
+	  	wc -w >> $@; \
+	 zgrep "xml:lang=\"$$T\"" $< | \
+	  	sed 's|^.*<seg>||;s|</seg>.*$$||;' | \
+	  	wc -w >> $@; )
