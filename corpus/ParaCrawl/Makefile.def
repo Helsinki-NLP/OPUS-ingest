@@ -12,3 +12,4 @@ VERSION = release1
 
 SRCHTML=Parallel corpora from Web Crawls collected in the <a href="http://paracrawl.eu/download.html">ParaCrawl project</a>
 EXTRAHTML=The data is released under the <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">Creative Commons CC0 license</a> ("no rights reserved"), see <a href="http://paracrawl.eu/download.html">http://paracrawl.eu/download.html</a> for more details
+CITENOTE=

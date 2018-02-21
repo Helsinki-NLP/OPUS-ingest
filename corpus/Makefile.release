@@ -69,11 +69,11 @@ html: 	${OPUSPUB}/${CORPUS}.php ${FREQ_COUNTS}
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
 	mv -f ${PACKAGES}.uniq ${PACKAGES}
 
-release packages: ${PACKAGES} ${CORPUSRELEASE}/README
-	echo "-----------------------------" >> ${CORPUSRELEASE}/README
-	echo "Files in this release"         >> ${CORPUSRELEASE}/README
-	echo "-----------------------------" >> ${CORPUSRELEASE}/README
-	cat ${PACKAGES}                      >> ${CORPUSRELEASE}/README
+release packages: ${PACKAGES}
+	if [ -l ${OPUSRELEASE}/${CORPUS}/latest ]; then \
+	  rm -f ${OPUSRELEASE}/${CORPUS}/latest; \
+	fi
+	-(cd ${OPUSRELEASE}/${CORPUS} && ln -s ${VERSION} latest)
 
 refresh-html:
 	rm -f ${OPUSPUB}/${CORPUS}.php
@@ -81,19 +81,41 @@ refresh-html:
 	touch $(CES)
 	make html
 
-download-dirs: ${CORPUS} ${CORPUSRELEASE} # ${CORPUSRELEASE}/xml
+download-dirs: ${CORPUSRELEASE}
 
 webpage: ${OPUSPUB}/${CORPUS}.php
 
+
+## move from old download dir into new release dir
+## create some symbolic links to be compatible
+
+${CORPUSRELEASE}:
+	mkdir -p $@
+	mkdir -p $@/wordalign
+	find ${CORPUSHTML} -mindepth 1 -maxdepth 1 -type d -name '*-*' -exec mv {} $@/wordalign \;
+	find $@/wordalign -mindepth 1 -maxdepth 1 -type d -exec ln -s {} ${CORPUSHTML}/ \;
+	find ${CORPUSHTML} -mindepth 1 -maxdepth 1 -type d -exec mv {} $@/ \;
+	find $@ -mindepth 1 -maxdepth 1 -type d -exec ln -s {} ${CORPUSHTML}/ \;
+	mkdir -p $@/tmx
+	mkdir -p $@/moses
+	${MAKE} PACKAGE="${CORPUS} in Moses format" $@/moses/README
+	${MAKE} PACKAGE="${CORPUS} in TMX format" $@/tmx/README
+	for f in ${wildcard ${CORPUSHTML}/*.txt.zip}; do \
+	  if [ -f "$$f" ]; then \
+	    zip -u -j $$f $@/moses/README; \
+	  fi \
+	done
+	find ${CORPUSHTML} -type f -name '*.tmx.gz' -exec mv {} $@/tmx/ \;
+	find ${CORPUSHTML} -type f -name '*.txt.zip' -exec mv {} $@/moses/ \;
+	-ln -s $@/tmx/*.tmx.gz ${CORPUSHTML}/
+	-ln -s $@/moses/*.txt.zip ${CORPUSHTML}/
+	cp -n ${CORPUSHTML}/README* $@/
 
 
 ## TODO: do we still need the following targets
 
 ${CORPUS}:
 	ln -s xml $@
-
-${CORPUSRELEASE}:
-	mkdir -p $@
 
 
 
@@ -122,14 +144,26 @@ ${OPUSPUB}/${CORPUS}.php: ${PACKAGES} \
 	    -e 's#<h1>${CORPUS}${VERSION}</h1>#<h1>${CORPUS}</h1>#' \
 	    -e 's#<h1>${CORPUS}</h1>#<h1>${CORPUS}</h1>${SRCHTML}#' > $@
 
-${PACKAGES}:	${ALG} \
+${PACKAGES}:	${CORPUSRELEASE} ${ALG} \
 		${LANG_XML} ${LANG_RAW} ${LANG_UD} \
 		${MONO_TOK} ${MONO_RAW} \
-		$(TMX) $(MOSES) ${FREQ_COUNTS}
+		$(TMX) $(MOSES) ${FREQ_COUNTS} ${CORPUSRELEASE}/README
 	mkdir -p ${dir $@}
 	echo "$^" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
 	mv -f ${PACKAGES}.uniq ${PACKAGES}
+	echo "-----------------------------"      >> ${CORPUSRELEASE}/README
+	echo "xml ....... tokenized corpus and sentence alignments" >> ${CORPUSRELEASE}/README
+	echo "raw ....... untokenized corpus in XML" >> ${CORPUSRELEASE}/README
+	echo "parsed .... parsed corpus in XML"   >> ${CORPUSRELEASE}/README
+	echo "mono ...... monolingual text files" >> ${CORPUSRELEASE}/README
+	echo "freq ...... token frequencies"      >> ${CORPUSRELEASE}/README
+	echo "wordalign . word alignments"        >> ${CORPUSRELEASE}/README
+	echo "dic ....... bilingual dictionaries extracted from word alignments" >> ${CORPUSRELEASE}/README
+	echo "-----------------------------" >> ${CORPUSRELEASE}/README
+	echo "Files in this release"         >> ${CORPUSRELEASE}/README
+	echo "-----------------------------" >> ${CORPUSRELEASE}/README
+	cat ${PACKAGES}                      >> ${CORPUSRELEASE}/README
 
 
 
@@ -196,6 +230,7 @@ ${ALG}: ${CORPUSRELEASE}/%: ${CORPUSHOME}/%
 #----------------------------------------------------------------------------
 
 
+# for historical reasons: leave tar targets
 .PHONY: lang_xml lang_tar lang_tok_tar
 lang_xml lang_tar lang_tok_tar: ${LANG_XML}
 
@@ -260,7 +295,6 @@ ${LANG_UD}: ${CORPUSRELEASE}/parsed/%.zip: ${CORPUSPARSED}/%
 	rm -fr ${TMPDIR}/$<
 	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
-
 
 
 #----------------------------------------------------------------------------
@@ -365,6 +399,7 @@ ${CORPUS_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%
 # --> number alignments first to keep textual order!
 
 tmx: ${CORPUSRELEASE} $(TMX)
+	${MAKE} PACKAGE="${CORPUS} in TMX format" ${CORPUSRELEASE}/tmx/README
 
 tmx-strict: ${CORPUSRELEASE} $(TMX_STRICT)
 

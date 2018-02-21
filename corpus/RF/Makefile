@@ -29,7 +29,8 @@ include ../Makefile.process
 include ../Makefile.annotate
 include ../Makefile.udparse
 include ../Makefile.cwb
-include ../Makefile.html
+# include ../Makefile.html
+include ../Makefile.release
 
 # convert all files for all languages (subdirectories in src/)
 

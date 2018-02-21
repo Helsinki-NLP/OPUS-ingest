@@ -7,7 +7,7 @@ include Makefile.def
 include ../Makefile.def
 
 DOWNLOADURL = https://s3.amazonaws.com/web-language-models/paracrawl
-TRGLANGS = ${sort de fr es it pt nl pl cs ro fi lv}
+TRGLANGS = ${sort de fr es it pt nl pl cs ro fi lv et ru}
 
 ## make all:
 ##
@@ -40,7 +40,7 @@ fetch-job:
 ## tokenize and submit wordalign jobs when all languages are done
 tokenize-job:
 	${MAKE} annotate_files
-	if [ `ls log/.*tokenize.done | wc -l` == 9 ]; then \
+	if [ `ls log/.*tokenize.done | wc -l` == 14 ]; then \
 	  ${MAKE} HPC_CORES=8 HPC_MEM=4g HPC_TIME=72:00 publish-job.submit; \
 	fi
 

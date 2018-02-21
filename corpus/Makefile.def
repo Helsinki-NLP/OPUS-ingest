@@ -37,7 +37,8 @@ ifeq ("${shell hostname -d}","novalocal")
   OPUSPUB       = ${OPUSHOME}/public_html
   OPUSHTML      = /media/download
   OPUSRELEASE   = /media/releases
-  OPUSWORDALIGN = /media/download
+  # OPUSWORDALIGN = /media/download
+  OPUSWORDALIGN = /media/releases
 else ifeq ("${shell hostname -d}","lingfil.uu.se")
   OPUSPUB       = ${OPUSHOME}/../public_html
   OPUSHTML      = ${OPUSHOME}/html
@@ -47,7 +48,8 @@ else
   OPUSPUB       = ${OPUSHOME}/public_html
   OPUSHTML      = ${OPUSHOME}/download
   OPUSRELEASE   = ${OPUSHOME}/releases
-  OPUSWORDALIGN = ${OPUSHOME}/download
+  # OPUSWORDALIGN = ${OPUSHOME}/download
+  OPUSWORDALIGN = ${OPUSHOME}/releases
 endif
 
 
@@ -71,7 +73,8 @@ CORPUSPARSED     = ${CORPUSHOME}/parsed
 CORPUSPUB        = ${OPUSPUB}/${CORPUS}
 CORPUSHTML       = ${OPUSHTML}/${CORPUS}
 CORPUSRELEASE    = ${OPUSRELEASE}/${CORPUS}/${VERSION}
-CORPUSWORDALIGN  = ${OPUSWORDALIGN}/${CORPUS}
+CORPUSWORDALIGN  = ${CORPUSRELEASE}/wordalign
+# CORPUSWORDALIGN  = ${OPUSWORDALIGN}/${CORPUS}
 
 
 # LANGUAGES ....... sorted list of languages (2/3-letter codes possibly
