@@ -12,13 +12,6 @@ RAWDIR   = raw/${LANGUAGE}
 XMLFILES = $(subst :,\:,$(patsubst raw/%,xml/%,$(shell find ${RAWDIR}/ -name '*.${XMLEXT}')))
 
 
-
-# TAG = ${UPLUG} pre/tok
-
-# ifneq ($(strip $(wildcard ${UPLUGHOME}/systems/pre/${LANGUAGE}-tag)),)
-#   TAG=${UPLUG} pre/${LANGUAGE}-tag
-# endif
-
 TAG = uplug -f opus/annotate opus/${LANGUAGE}/tag
 
 ## OLD: for-loop (cannot be parallelized)

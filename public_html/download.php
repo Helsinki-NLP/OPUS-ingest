@@ -1,5 +1,8 @@
 <?php
 
+$downloaddir = '/media/download';
+$releasesdir = '/media/releases';
+
 // file extensions that we allow to download
 $extension = array('.gz','.tar','.ces','.xml','.txt','.srt3','.zip','.model','.mco','.dic');
 
@@ -15,13 +18,14 @@ if ($file = validate_filename()){
     fclose($fh);
 
     // check if the file exists on the local server
-    if (file_exists($file)){
-      header("Location: ".$file);
+    if (file_exists($releasesdir.'/'.$file)){
+      header("Location: /releases/".$file);
     }
-    // otherwise: download from the old OPUS server
-    // TODO: change this to the new download location!
-    else{
+    elseif (file_exists($downloaddir.'/'.$file)){
       header("Location: /download/".$file);
+    }
+    else{
+      header("Location: /index.php");
     }
 
 // not a valid filename? go back to home page
@@ -35,7 +39,6 @@ if ($file = validate_filename()){
 // validate filenames
 
 function validate_filename(){
-    global $downdir;
     if (isset($_REQUEST["f"])){
         $file = $_REQUEST["f"];
         $dirname = dirname($file);

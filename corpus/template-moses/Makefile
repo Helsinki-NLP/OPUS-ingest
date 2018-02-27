@@ -17,7 +17,6 @@
 #   (converts for every language pair!)
 
 
-
 include Makefile.def
 include ../Makefile.def
 
@@ -25,8 +24,8 @@ include ../Makefile.def
 ## LANGUAGES = unique file extensions of files in src (.gz will be removed)
 ## FILES = file basenames
 
-LANGUAGES = $(sort $(subst .,,$(suffix $(subst .gz,,${wildcard src/*}))))
-FILES     = $(sort $(subst .,,$(basename $(subst .gz,,${wildcard src/*}))))
+LANGUAGES = $(sort $(subst .,,$(suffix $(subst .gz,,${wildcard src/*.??}))))
+FILES     = $(sort $(subst .,,$(basename $(subst .gz,,${wildcard src/*.??}))))
 CONVERTED = ${patsubst %,%_done,${FILES}}
 
 ## make all:

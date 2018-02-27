@@ -19,13 +19,6 @@ RAWDIR   = ${CORPUSRAW}/${LANGUAGE}
 XMLFILES = $(subst :,\:,$(patsubst ${CORPUSRAW}/%,${CORPUSXML}/%,$(shell find ${RAWDIR}/ -name '*.${XMLEXT}')))
 
 
-
-# TAG = ${UPLUG} pre/tok
-
-# ifneq ($(strip $(wildcard ${UPLUGHOME}/systems/pre/${LANGUAGE}-tag)),)
-#   TAG=${UPLUG} pre/${LANGUAGE}-tag
-# endif
-
 TAG = uplug -f opus/annotate opus/${LANGUAGE}/annotate
 
 ## OLD: for-loop (cannot be parallelized)

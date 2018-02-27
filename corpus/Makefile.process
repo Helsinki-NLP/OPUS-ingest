@@ -12,9 +12,11 @@ ifndef LANGUAGE
 	LANGUAGE=$(firstword ${LANGUAGES})
 endif
 
-SRCDIR   = src/${LANGUAGE}
-RAWFILES = $(patsubst src/%.${TXTEXT},raw/%.${XMLEXT}, \
+SRCDIR = src/${LANGUAGE}
+ifneq ("$(wildcard $(SRCDIR))","")
+  RAWFILES = $(patsubst src/%.${TXTEXT},raw/%.${XMLEXT}, \
 		$(shell find ${SRCDIR} -name '*.${TXTEXT}'))
+endif
 
 ## make the corpus (all steps)
 .PHONY: corpus

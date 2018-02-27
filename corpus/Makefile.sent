@@ -11,9 +11,11 @@ ifndef LANGUAGE
 	LANGUAGE=$(firstword ${LANGUAGES})
 endif
 
-SRCDIR   = src/${LANGUAGE}
-RAWFILES = $(patsubst src/%.${XMLEXT},raw/%.${XMLEXT}, \
+SRCDIR = src/${LANGUAGE}
+ifneq ("$(wildcard $(SRCDIR))","")
+  RAWFILES = $(patsubst src/%.${XMLEXT},raw/%.${XMLEXT}, \
 		$(shell find ${SRCDIR} -name '*.${XMLEXT}'))
+endif
 
 
 preprocess:

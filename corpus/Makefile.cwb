@@ -9,12 +9,6 @@
 
 INDEXER = opus-index -k -s -e utf8
 
-## various other places where we had the indexer script before
-##
-# INDEXER = $(UPLUGCWB)/scripts/opus-indexer.pl -s
-# INDEXER = ${OPUSTOOLS}/public/opus-tools/scripts/opus-index -s -e utf8
-# INDEXER = ${HOME}/research/nlpl/opus-tools/scripts/opus-index -s -e utf8
-
 
 XMLDIR = ${CORPUSXML}
 
@@ -50,10 +44,13 @@ ${CWB_LANGFILES}:
 	-gzip -f $(@:.gz=)
 	-gzip -f $(@:.gz=.pos)
 
+.PHONY: cwb-index-onejob
 cwb-index-onejob:
 	${MAKE} CWB_LANGFILES= cwb-index
 
-cwb-index: ${CWB_LANGFILES}
+.PHONY: cwb-index
+cwb-index: cwb/.done
+cwb/.done: ${CWB_LANGFILES}
 	mkdir -p cwb
 	-gunzip -f cwb/*.gz
 	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
@@ -70,7 +67,9 @@ cwb-index: ${CWB_LANGFILES}
 	chmod -R o+rX $(CWBDATA)/${CORPUS}
 	chmod o+rX $(CWBREG)/${CORPUS}
 	-gzip -f cwb/*
+	touch $@
 
+.PHONY: cwb-convert
 cwb-convert:
 	mkdir -p cwb
 	-gunzip -f cwb/*.gz
@@ -113,7 +112,9 @@ ${CWBUD_LANGFILES}:
 	-gzip -f $(@:.gz=)
 	-gzip -f $(@:.gz=.pos)
 
-cwb-index-ud: ${CWBUD_LANGFILES}
+.PHONY: cwb-index-ud
+cwb-index-ud: cwb-ud/.done
+cwb-ud/.done: ${CWBUD_LANGFILES}
 	mkdir -p cwb-ud
 	-gunzip -f cwb-ud/*.gz
 	-cd parsed && ln -s ../xml/*.xml.gz .
@@ -134,6 +135,7 @@ cwb-index-ud: ${CWBUD_LANGFILES}
 	-gzip -f cwb-ud/*
 
 ## convert only for UD parsed data
+.PHONY: cwb-convert-ud
 cwb-convert-ud:
 	mkdir -p cwb-ud
 	-gunzip -f cwb-ud/*.gz

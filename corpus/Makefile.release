@@ -43,8 +43,8 @@ CORPUS_SAMPLES = $(patsubst %,${CORPUSPUB}/%_sample.html, ${LANGUAGES})
 
 # info files with statistics
 CES_INFO  = $(patsubst %.xml.gz,%.info,${CES})
-TXT_INFO  = $(patsubst ${CORPUSRELEASE}/%.txt.zip,${CORPUSXML}/%.txt.info,${MOSES})
-TMX_INFO  = $(patsubst ${CORPUSRELEASE}/%.tmx.gz,${CORPUSXML}/%.tmx.info,${TMX})
+TXT_INFO  = $(patsubst ${CORPUSRELEASE}/moses/%.txt.zip,${CORPUSXML}/%.txt.info,${MOSES})
+TMX_INFO  = $(patsubst ${CORPUSRELEASE}/tmx/%.tmx.gz,${CORPUSXML}/%.tmx.info,${TMX})
 LANG_INFO = $(patsubst %,${CORPUSXML}/%.info,${LANGUAGES})
 
 ## some scripts for conversion
@@ -52,10 +52,10 @@ LANG_INFO = $(patsubst %,${CORPUSXML}/%.info,${LANGUAGES})
 # MAKEHTML   = ${TOOLS}/opus/make-download-page.pl
 # MAKEHTML   = ${HOME}/research/nlpl/opus-tools/scripts/admin/generate-website.pl
 # MAKEHTML   = ${TOOLS}/public/opus-tools/scripts/admin/generate-website.pl
-MAKEHTML   = opus-make-website
+MAKEHTML   = opus-website
 
-TAB2TMX    = ${UPLUGHOME}/tools/tab2tmx
-OPUS2MOSES = $(UPLUGHOME)/tools/xces2moses
+TAB2TMX    = ${OPUSTOOLS}/tab2tmx
+OPUS2MOSES = $(OPUSTOOLS)/xces2moses
 
 # file with all packages that can be distributed
 # PACKDIRS = subdir's that will be included in tar-ball
@@ -70,10 +70,6 @@ html: 	${OPUSPUB}/${CORPUS}.php ${FREQ_COUNTS}
 	mv -f ${PACKAGES}.uniq ${PACKAGES}
 
 release packages: ${PACKAGES}
-	if [ -l ${OPUSRELEASE}/${CORPUS}/latest ]; then \
-	  rm -f ${OPUSRELEASE}/${CORPUS}/latest; \
-	fi
-	-(cd ${OPUSRELEASE}/${CORPUS} && ln -s ${VERSION} latest)
 
 refresh-html:
 	rm -f ${OPUSPUB}/${CORPUS}.php
@@ -92,30 +88,37 @@ webpage: ${OPUSPUB}/${CORPUS}.php
 ${CORPUSRELEASE}:
 	mkdir -p $@
 	mkdir -p $@/wordalign
-	find ${CORPUSHTML} -mindepth 1 -maxdepth 1 -type d -name '*-*' -exec mv {} $@/wordalign \;
-	find $@/wordalign -mindepth 1 -maxdepth 1 -type d -exec ln -s {} ${CORPUSHTML}/ \;
-	find ${CORPUSHTML} -mindepth 1 -maxdepth 1 -type d -exec mv {} $@/ \;
-	find $@ -mindepth 1 -maxdepth 1 -type d -exec ln -s {} ${CORPUSHTML}/ \;
+	if [ -d ${CORPUSHTML} ]; then \
+	  find ${CORPUSHTML} -mindepth 1 -maxdepth 1 -type d -name '*-*' \
+		-exec mv {} $@/wordalign \; ;\
+	  find $@/wordalign -mindepth 1 -maxdepth 1 -type d \
+		-exec ln -s {} ${CORPUSHTML}/ \; ;\
+	  find ${CORPUSHTML} -mindepth 1 -maxdepth 1 -type d \
+		-exec mv {} $@/ \; ;\
+	  find $@ -mindepth 1 -maxdepth 1 -type d \
+		-exec ln -s {} ${CORPUSHTML}/ \; \
+	fi
 	mkdir -p $@/tmx
 	mkdir -p $@/moses
 	${MAKE} PACKAGE="${CORPUS} in Moses format" $@/moses/README
 	${MAKE} PACKAGE="${CORPUS} in TMX format" $@/tmx/README
-	for f in ${wildcard ${CORPUSHTML}/*.txt.zip}; do \
-	  if [ -f "$$f" ]; then \
-	    zip -u -j $$f $@/moses/README; \
-	  fi \
-	done
-	find ${CORPUSHTML} -type f -name '*.tmx.gz' -exec mv {} $@/tmx/ \;
-	find ${CORPUSHTML} -type f -name '*.txt.zip' -exec mv {} $@/moses/ \;
-	-ln -s $@/tmx/*.tmx.gz ${CORPUSHTML}/
-	-ln -s $@/moses/*.txt.zip ${CORPUSHTML}/
-	cp -n ${CORPUSHTML}/README* $@/
+	if [ -d ${CORPUSHTML} ]; then \
+	  for f in ${wildcard ${CORPUSHTML}/*.txt.zip}; do \
+	    if [ -f "$$f" ]; then \
+	      zip -u -j $$f $@/moses/README; \
+	    fi \
+	  done; \
+	  find ${CORPUSHTML} -type f -name '*.tmx.gz' -exec mv {} $@/tmx/ \; ;\
+	  find ${CORPUSHTML} -type f -name '*.txt.zip' -exec mv {} $@/moses/ \; ;\
+	  ln -s $@/tmx/*.tmx.gz ${CORPUSHTML}/ ;\
+	  ln -s $@/moses/*.txt.zip ${CORPUSHTML}/ ;\
+	  cp -n ${CORPUSHTML}/README* $@/; \
+	fi
+	if [ -L ${OPUSRELEASE}/${CORPUS}/latest ]; then \
+	  rm -f ${OPUSRELEASE}/${CORPUS}/latest; \
+	fi
+	-(cd ${OPUSRELEASE}/${CORPUS} && ln -s ${VERSION} latest)
 
-
-## TODO: do we still need the following targets
-
-${CORPUS}:
-	ln -s xml $@
 
 
 
@@ -138,7 +141,7 @@ ${OPUSPUB}/${CORPUS}.php: ${PACKAGES} \
 			${CORPUS_SAMPLES} ${ALG_SAMPLES} \
 			${LANG_INFO} ${CES_INFO} ${TXT_INFO} ${TMX_INFO}
 	mkdir -p $(shell dirname $@)
-	${MAKEHTML} -e $(ALGEXT:.gz=) -o ${OPUSHOME} ${CORPUS} |\
+	${MAKEHTML} -o ${OPUSHOME} ${CORPUS} ${VERSION} |\
 	sed -e 's#<h3>Download</h3>#<h3>Download</h3>${DOWNLOADINFO}${EXTRAHTML}#' \
 	    -e 's#<h3>Download</h3>#${CITENOTE}<h3>Download</h3>#' \
 	    -e 's#<h1>${CORPUS}${VERSION}</h1>#<h1>${CORPUS}</h1>#' \
@@ -373,7 +376,7 @@ alg_samples: ${ALG_SAMPLES}
 
 ${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%.xml.gz
 	@mkdir -p ${dir $@}
-	$(UPLUGTOOLS)/uplug-readalign \
+	opus-read \
 		-h -m 100 \
 		-N '\/0\/' \
 	$< > $@
@@ -412,7 +415,7 @@ $(TMX) $(TMX_STRICT): ${CORPUSRELEASE}/tmx/%.tmx.gz: ${CORPUSRELEASE}/moses/%.tx
 	  SEXT=$$S; TEXT=$$T; \
 	  if [ "$$SEXT" == "$$TEXT" ]; then SEXT=$${SEXT}1;TEXT=$${TEXT}2; fi; \
 	  paste $$BASE.$$SEXT $$BASE.$$TEXT |\
-	  sed = - | sed 'N;s/\n/\t/' | sort -k 2 | uniq -f 1 | sort -n |\
+	  nl | sort -k 2 | uniq -f 1 | sort -n |\
 	  cut -f2,3 |\
 	  $(TAB2TMX) -s $$S -t $$T |\
 	  gzip -c > $@; \
@@ -420,6 +423,8 @@ $(TMX) $(TMX_STRICT): ${CORPUSRELEASE}/tmx/%.tmx.gz: ${CORPUSRELEASE}/moses/%.tx
 	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 
+## old:
+#	  sed = - | sed 'N;s/\n/\t/' | sort -k 2 | uniq -f 1 | sort -n |\
 
 #----------------------------------------------------------------------------
 # convert all bitexts to Moses format
@@ -458,7 +463,7 @@ moses-strict: ${CORPUSRELEASE} $(MOSES_STRICT)
 
 $(MOSES_STRICT): ${CORPUSRELEASE}/moses/%.strict.txt.zip: ${CORPUSXML}/%.xml.gz
 	@mkdir -p ${dir $@}
-	uplug-readalign -c 1 -S 1 -T 1 -l $< > $(<:gz=11)
+	opus-read -c 1 -S 1 -T 1 -l $< > $(<:gz=11)
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  BASE=${CORPUS}.$(patsubst %.xml.gz,%,$(notdir $<));\
@@ -512,8 +517,8 @@ ${CES_INFO}: %.info: %.xml.gz
 
 txt_info: ${TXT_INFO}
 
-${TXT_INFO}: ${CORPUSXML}/%.txt.info: ${CORPUSRELEASE}/%.txt.zip
-	-unzip -d . $<
+${TXT_INFO}: ${CORPUSXML}/%.txt.info: ${CORPUSRELEASE}/moses/%.txt.zip
+	-unzip -d . $< -x README
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  P=$$S-$$T; \
@@ -532,7 +537,7 @@ ${TXT_INFO}: ${CORPUSXML}/%.txt.info: ${CORPUSRELEASE}/%.txt.zip
 
 tmx_info: ${TMX_INFO}
 
-${TMX_INFO}: ${CORPUSXML}/%.tmx.info: ${CORPUSRELEASE}/%.tmx.gz
+${TMX_INFO}: ${CORPUSXML}/%.tmx.info: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	 zgrep '</tu>' $< | wc -l > $@; \

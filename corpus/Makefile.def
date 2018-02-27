@@ -32,14 +32,15 @@ OPUSDATA      = ${OPUSHOME}/data
 
 ## old OPUS server: public_html is next to OPUS
 ## new OPUS: public_html is within OPUS and html,wordalign is in download
+## (hostname -d does not seem to work on Mac OS)
 
-ifeq ("${shell hostname -d}","novalocal")
+ifeq ("${shell hostname | cut -f2- -d.}","novalocal")
   OPUSPUB       = ${OPUSHOME}/public_html
   OPUSHTML      = /media/download
   OPUSRELEASE   = /media/releases
   # OPUSWORDALIGN = /media/download
   OPUSWORDALIGN = /media/releases
-else ifeq ("${shell hostname -d}","lingfil.uu.se")
+else ifeq ("${shell hostname | cut -f2- -d.}","lingfil.uu.se")
   OPUSPUB       = ${OPUSHOME}/../public_html
   OPUSHTML      = ${OPUSHOME}/html
   OPUSRELEASE   = ${OPUSHOME}/releases
@@ -105,15 +106,13 @@ ALGEXT = xml.gz
 # general tools that we will use for pre-processing & alignment
 #
 
-TOOLS      = ${OPUSHOME}/tools
-OPUSTOOLS  = ${TOOLS}/opus
-OPUS-TOOLS = ${TOOLS}/public/opus-tools
-CORPUSTOOLS= ${OPUSTOOLS}/${CORPUS}
+TOOLS       = ${OPUSHOME}/tools
+OPUSTOOLS   = ${TOOLS}
+CORPUSTOOLS = ${OPUSTOOLS}/${CORPUS}
 
-# ISO639     = $(TOOLS)/opus/iso639.pl
-ISO639     = opus-iso639
+ISO639      = opus-iso639
 
-
+## TODO: get rid of local UPLUG
 UPLUGHOME  = ${TOOLS}/public/uplug/uplug-main
 UPLUGCWB   = ${TOOLS}/public/uplug/uplug-cwb
 UPLUGTOOLS = ${UPLUGHOME}/tools

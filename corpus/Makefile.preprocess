@@ -9,10 +9,11 @@ ifndef LANGUAGE
 	LANGUAGE=$(firstword ${LANGUAGES})
 endif
 
-SRCDIR   = src/${LANGUAGE}
-RAWFILES = $(patsubst src/%.${TXTEXT},raw/%.${XMLEXT}, \
+SRCDIR = src/${LANGUAGE}
+ifneq ("$(wildcard $(SRCDIR))","")
+  RAWFILES = $(patsubst src/%.${TXTEXT},raw/%.${XMLEXT}, \
 		$(shell find ${SRCDIR} -name '*.${TXTEXT}'))
-
+endif
 
 preprocess:
 	for l in ${LANGUAGES}; do \

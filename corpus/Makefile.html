@@ -46,14 +46,9 @@ TMX_INFO  = $(patsubst ${CORPUSHTML}/%.tmx.gz,${CORPUSXML}/%.tmx.info,${TMX})
 LANG_INFO = $(patsubst %,${CORPUSXML}/%.info,${LANGUAGES})
 
 ## some scripts for conversion
-## TODO: check if we have more updated versions
-# MAKEHTML   = ${TOOLS}/opus/make-download-page.pl
-# MAKEHTML   = ${HOME}/research/nlpl/opus-tools/scripts/admin/generate-website.pl
-# MAKEHTML   = ${TOOLS}/public/opus-tools/scripts/admin/generate-website.pl
 MAKEHTML   = opus-make-website
-
-TAB2TMX    = ${UPLUGHOME}/tools/tab2tmx
-OPUS2MOSES = $(UPLUGHOME)/tools/xces2moses
+TAB2TMX    = ${OPUSTOOLS}/tab2tmx
+OPUS2MOSES = $(OPUSTOOLS)/xces2moses
 
 # file with all packages that can be distributed
 # PACKDIRS = subdir's that will be included in tar-ball
@@ -322,7 +317,7 @@ alg_samples: ${ALG_SAMPLES}
 
 ${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%.xml.gz
 	@mkdir -p ${dir $@}
-	$(UPLUGTOOLS)/uplug-readalign \
+	opus-read \
 		-h -m 100 \
 		-N '\/0\/' \
 	$< > $@
@@ -365,7 +360,7 @@ tmx-strict: ${CORPUSHTML} $(TMX_STRICT)
 	  SEXT=$$S; TEXT=$$T; \
 	  if [ "$$SEXT" == "$$TEXT" ]; then SEXT=$${SEXT}1;TEXT=$${TEXT}2; fi; \
 	  paste $$BASE.$$SEXT $$BASE.$$TEXT |\
-	  sed = - | sed 'N;s/\n/\t/' | sort -k 2 | uniq -f 1 | sort -n |\
+	  nl | sort -k 2 | uniq -f 1 | sort -n |\
 	  cut -f2,3 |\
 	  $(TAB2TMX) -s $$S -t $$T |\
 	  gzip -c > $@; \
@@ -373,6 +368,8 @@ tmx-strict: ${CORPUSHTML} $(TMX_STRICT)
 	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSHTML}/##" >> ${PACKAGES}
 
+## old:
+#	  sed = - | sed 'N;s/\n/\t/' | sort -k 2 | uniq -f 1 | sort -n |\
 
 #----------------------------------------------------------------------------
 # convert all bitexts to Moses format
@@ -408,7 +405,7 @@ moses-strict: ${CORPUSHTML} $(MOSES_STRICT)
 
 $(MOSES_STRICT): ${CORPUSHTML}/%.strict.txt.zip: ${CORPUSXML}/%.xml.gz
 	@mkdir -p ${dir $@}
-	uplug-readalign -c 1 -S 1 -T 1 -l $< > $(<:gz=11)
+	opus-read -c 1 -S 1 -T 1 -l $< > $(<:gz=11)
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  BASE=${CORPUS}.$(patsubst %.xml.gz,%,$(notdir $<));\
