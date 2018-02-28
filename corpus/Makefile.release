@@ -96,7 +96,7 @@ ${CORPUSRELEASE}:
 	  find ${CORPUSHTML} -mindepth 1 -maxdepth 1 -type d \
 		-exec mv {} $@/ \; ;\
 	  find $@ -mindepth 1 -maxdepth 1 -type d \
-		-exec ln -s {} ${CORPUSHTML}/ \; \
+		-exec ln -s {} ${CORPUSHTML}/ \; ;\
 	fi
 	mkdir -p $@/tmx
 	mkdir -p $@/moses
@@ -408,7 +408,7 @@ tmx-strict: ${CORPUSRELEASE} $(TMX_STRICT)
 
 $(TMX) $(TMX_STRICT): ${CORPUSRELEASE}/tmx/%.tmx.gz: ${CORPUSRELEASE}/moses/%.txt.zip
 	@mkdir -p ${dir $@}
-	unzip $< -x README
+	unzip $< -x README -x INFO
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  BASE=${CORPUS}.$(patsubst %.txt.zip,%,$(notdir $<));\
@@ -518,7 +518,7 @@ ${CES_INFO}: %.info: %.xml.gz
 txt_info: ${TXT_INFO}
 
 ${TXT_INFO}: ${CORPUSXML}/%.txt.info: ${CORPUSRELEASE}/moses/%.txt.zip
-	-unzip -d . $< -x README
+	-unzip -d . $< -x README -x INFO
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  P=$$S-$$T; \
