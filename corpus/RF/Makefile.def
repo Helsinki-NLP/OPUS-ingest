@@ -4,7 +4,7 @@
 
 CORPUS  = RF
 VERSION = v1
-
+LICENSE = CC-BY-SA
 
 # with SRCHTML you can define some extra HTML code that will be placed just
 # after the name of the sub-corpus

@@ -64,7 +64,7 @@ PACKDIRS   = xml raw
 # PACKDIRS   = xml raw parsed
 
 
-.PHONY: html packages release refresh-html download-dirs webpage
+.PHONY: html packages release refresh-html download-dirs webpage website
 html: 	${OPUSPUB}/${CORPUS}.php ${FREQ_COUNTS}
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
 	mv -f ${PACKAGES}.uniq ${PACKAGES}
@@ -79,7 +79,7 @@ refresh-html:
 
 download-dirs: ${CORPUSRELEASE}
 
-webpage: ${OPUSPUB}/${CORPUS}.php
+webpage website: ${OPUSPUB}/${CORPUS}.php
 
 
 ## move from old download dir into new release dir
@@ -102,10 +102,10 @@ ${CORPUSRELEASE}:
 	mkdir -p $@/moses
 	${MAKE} PACKAGE="${CORPUS} in Moses format" $@/moses/README
 	${MAKE} PACKAGE="${CORPUS} in TMX format" $@/tmx/README
-	if [ -d ${CORPUSHTML} ]; then \
+	-if [ -d ${CORPUSHTML} ]; then \
 	  for f in ${wildcard ${CORPUSHTML}/*.txt.zip}; do \
 	    if [ -f "$$f" ]; then \
-	      zip -u -j $$f $@/moses/README; \
+	      zip -u -j $$f $@/moses/README ${CORPUSHOME}/LICENSE; \
 	    fi \
 	  done; \
 	  find ${CORPUSHTML} -type f -name '*.tmx.gz' -exec mv {} $@/tmx/ \; ;\
@@ -137,20 +137,28 @@ ifndef DOWNLOADINFO
 endif
 
 
-${OPUSPUB}/${CORPUS}.php: ${PACKAGES} \
+${OPUSPUB}/${CORPUS}-${VERSION}.php: ${PACKAGES} \
 			${CORPUS_SAMPLES} ${ALG_SAMPLES} \
 			${LANG_INFO} ${CES_INFO} ${TXT_INFO} ${TMX_INFO}
 	mkdir -p $(shell dirname $@)
-	${MAKEHTML} -o ${OPUSHOME} ${CORPUS} ${VERSION} |\
+	${MAKEHTML} -h ${OPUSPUB} -o ${OPUSHOME} -d ${OPUSRELEASE} \
+		${CORPUS} ${VERSION} |\
 	sed -e 's#<h3>Download</h3>#<h3>Download</h3>${DOWNLOADINFO}${EXTRAHTML}#' \
 	    -e 's#<h3>Download</h3>#${CITENOTE}<h3>Download</h3>#' \
 	    -e 's#<h1>${CORPUS}${VERSION}</h1>#<h1>${CORPUS}</h1>#' \
 	    -e 's#<h1>${CORPUS}</h1>#<h1>${CORPUS}</h1>${SRCHTML}#' > $@
 
+
+${OPUSPUB}/${CORPUS}.php: ${OPUSPUB}/${CORPUS}-${VERSION}.php
+	rm -f $@
+	( cd ${OPUSPUB}; ln -s $(notdir $<) $(notdir $@) )
+
 ${PACKAGES}:	${CORPUSRELEASE} ${ALG} \
+		${CORPUSRELEASE}/LICENSE \
 		${LANG_XML} ${LANG_RAW} ${LANG_UD} \
 		${MONO_TOK} ${MONO_RAW} \
-		$(TMX) $(MOSES) ${FREQ_COUNTS} ${CORPUSRELEASE}/README
+		$(TMX) $(MOSES) ${FREQ_COUNTS} \
+		${CORPUSRELEASE}/README
 	mkdir -p ${dir $@}
 	echo "$^" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
@@ -163,10 +171,10 @@ ${PACKAGES}:	${CORPUSRELEASE} ${ALG} \
 	echo "freq ...... token frequencies"      >> ${CORPUSRELEASE}/README
 	echo "wordalign . word alignments"        >> ${CORPUSRELEASE}/README
 	echo "dic ....... bilingual dictionaries extracted from word alignments" >> ${CORPUSRELEASE}/README
-	echo "-----------------------------" >> ${CORPUSRELEASE}/README
-	echo "Files in this release"         >> ${CORPUSRELEASE}/README
-	echo "-----------------------------" >> ${CORPUSRELEASE}/README
-	cat ${PACKAGES}                      >> ${CORPUSRELEASE}/README
+	echo "-----------------------------"  >> ${CORPUSRELEASE}/README
+	echo "Files in this release"          >> ${CORPUSRELEASE}/README
+	echo "-----------------------------"  >> ${CORPUSRELEASE}/README
+	cat ${PACKAGES} | grep '/${VERSION}/' >> ${CORPUSRELEASE}/README
 
 
 
@@ -177,7 +185,7 @@ ${PACKAGES}:	${CORPUSRELEASE} ${ALG} \
 ifneq (${PACKAGE},)
 	echo "     Package: ${PACKAGE}" >>$@
 endif
-	echo "     Website: http://opus.nlpl.eu/${CORPUS}.php" >> $@
+	echo "     Website: http://opus.nlpl.eu/${CORPUS}-${VERSION}.php" >> $@
 	echo "     Release: ${VERSION}" >>$@
 	echo "Release date: ${shell date}" >> $@
 ifneq (${LICENSE},)
@@ -195,6 +203,16 @@ endif
 	echo "${SRCHTML}" | sed 's/<[^>]*>//g' >> $@
 	echo "${EXTRAHTML}" | sed 's/<[^>]*>//g' >> $@
 
+%/LICENSE:
+	if [ -e ${CORPUSHOME}/LICENSE ]; then \
+	  cp ${CORPUSHOME}/LICENSE $@; \
+	else \
+	  echo "The data set comes with the same license" > $@; \
+	  echo "as the original sources." >> $@; \
+	  echo "Please, check the information about the source" >> $@; \
+	  echo "that is given on" >> $@; \
+	  echo "http://opus.nlpl.eu/${CORPUS}-${VERSION}.php" >> $@; \
+	fi
 
 
 ## make an archive with all xml-files!
@@ -244,11 +262,11 @@ ${LANG_XML}: ${CORPUSRELEASE}/xml/%.zip: ${CORPUSXML}/%
 	find ${TMPDIR}/$</${CORPUS}/xml -name '*.xml.gz' |\
 	xargs -P 8 gunzip -f
 	${MAKE} PACKAGE=${patsubst ${OPUSCORPORA}/%,%,$<} ${TMPDIR}/$</README
+	${MAKE} ${TMPDIR}/$</LICENSE
 	echo "${patsubst ${OPUSCORPORA}/%,%,$<}" > ${TMPDIR}/$</INFO
 	echo "${CORPUS}" >> ${TMPDIR}/$</INFO
 	echo "${VERSION}" >> ${TMPDIR}/$</INFO
-	( cd ${TMPDIR}/$<; zip -r $@ INFO README ${CORPUS}; cd ${PWD} )
-	( cd ${TMPDIR}/$<; zip -r $@ README ${CORPUS}; cd ${PWD} )
+	( cd ${TMPDIR}/$<; zip -r $@ INFO README LICENSE ${CORPUS}; cd ${PWD} )
 	rm -fr ${TMPDIR}/$<
 	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
@@ -265,10 +283,11 @@ ${LANG_RAW}: ${CORPUSRELEASE}/raw/%.zip: ${CORPUSRAW}/%
 	find ${TMPDIR}/$</${CORPUS}/raw -name '*.xml.gz' |\
 	xargs -P 8 gunzip -f
 	${MAKE} PACKAGE=${patsubst ${OPUSCORPORA}/%,%,$<} ${TMPDIR}/$</README
+	${MAKE} ${TMPDIR}/$</LICENSE
 	echo "${patsubst ${OPUSCORPORA}/%,%,$<}" > ${TMPDIR}/$</INFO
 	echo "${CORPUS}" >> ${TMPDIR}/$</INFO
 	echo "${VERSION}" >> ${TMPDIR}/$</INFO
-	( cd ${TMPDIR}/$<; zip -r $@ INFO README ${CORPUS}; cd ${PWD} )
+	( cd ${TMPDIR}/$<; zip -r $@ INFO README LICENSE ${CORPUS}; cd ${PWD} )
 	rm -fr ${TMPDIR}/$<
 	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
@@ -291,10 +310,11 @@ ${LANG_UD}: ${CORPUSRELEASE}/parsed/%.zip: ${CORPUSPARSED}/%
 	find ${TMPDIR}/$</${CORPUS}/parsed -name '*.xml.gz' |\
 	xargs -P 8 gunzip -f
 	${MAKE} PACKAGE=${patsubst ${OPUSCORPORA}/%,%,$<} ${TMPDIR}/$</README
+	${MAKE} ${TMPDIR}/$</LICENSE
 	echo "${patsubst ${OPUSCORPORA}/%,%,$<}" > ${TMPDIR}/$</INFO
 	echo "${CORPUS}" >> ${TMPDIR}/$</INFO
 	echo "${VERSION}" >> ${TMPDIR}/$</INFO
-	( cd ${TMPDIR}/$<; zip -r $@ INFO README ${CORPUS}; cd ${PWD} )
+	( cd ${TMPDIR}/$<; zip -r $@ INFO README LICENSE ${CORPUS}; cd ${PWD} )
 	rm -fr ${TMPDIR}/$<
 	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
@@ -377,6 +397,7 @@ alg_samples: ${ALG_SAMPLES}
 ${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%.xml.gz
 	@mkdir -p ${dir $@}
 	opus-read \
+		-d ${CORPUSXML} \
 		-h -m 100 \
 		-N '\/0\/' \
 	$< > $@
@@ -408,7 +429,7 @@ tmx-strict: ${CORPUSRELEASE} $(TMX_STRICT)
 
 $(TMX) $(TMX_STRICT): ${CORPUSRELEASE}/tmx/%.tmx.gz: ${CORPUSRELEASE}/moses/%.txt.zip
 	@mkdir -p ${dir $@}
-	unzip $< -x README -x INFO
+	unzip $< -x README INFO LICENSE
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  BASE=${CORPUS}.$(patsubst %.txt.zip,%,$(notdir $<));\
@@ -450,7 +471,9 @@ $(MOSES): ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSXML}/%.xml.gz
 	  mv $$BASE.$$T.tmp $$BASE.$$T; \
 	  mkdir -p ${TMPDIR}/$$BASE; \
 	  ${MAKE} PACKAGE="${CORPUS}.$$S-$$T in Moses format" ${TMPDIR}/$$BASE/README; \
-	  zip -j $@ ${TMPDIR}/$$BASE/README $$BASE.$$S $$BASE.$$T $$BASE.ids; \
+	  ${MAKE} ${TMPDIR}/$$BASE/LICENSE; \
+	  zip -j $@ ${TMPDIR}/$$BASE/README ${TMPDIR}/$$BASE/LICENSE \
+			$$BASE.$$S $$BASE.$$T $$BASE.ids; \
 	  rm -f $$BASE.$$S $$BASE.$$T $$BASE.ids ${TMPDIR}/$$BASE/README;\
 	  rmdir ${TMPDIR}/$$BASE; )
 	mkdir -p ${dir ${PACKAGES}}
@@ -474,7 +497,9 @@ $(MOSES_STRICT): ${CORPUSRELEASE}/moses/%.strict.txt.zip: ${CORPUSXML}/%.xml.gz
 	  rm -f $@; \
 	  mkdir -p ${TMPDIR}/$$BASE; \
 	  ${MAKE} PACKAGE="${CORPUS}.$$S-$$T in Moses format" ${TMPDIR}/$$BASE/README; \
-	  zip -j $@ ${TMPDIR}/$$BASE/README $$BASE.$$S $$BASE.$$T $$BASE.ids; \
+	  ${MAKE} ${TMPDIR}/$$BASE/LICENSE; \
+	  zip -j $@ ${TMPDIR}/$$BASE/README ${TMPDIR}/$$BASE/LICENSE \
+			$$BASE.$$S $$BASE.$$T $$BASE.ids; \
 	  rm -f $$BASE.$$S $$BASE.$$T $$BASE.ids ${TMPDIR}/$$BASE/README;\
 	  rmdir ${TMPDIR}/$$BASE; )
 	rm -f $(<:gz=11)
@@ -518,7 +543,7 @@ ${CES_INFO}: %.info: %.xml.gz
 txt_info: ${TXT_INFO}
 
 ${TXT_INFO}: ${CORPUSXML}/%.txt.info: ${CORPUSRELEASE}/moses/%.txt.zip
-	-unzip -d . $< -x README -x INFO
+	-unzip -d . $< -x README INFO LICENSE
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  P=$$S-$$T; \
