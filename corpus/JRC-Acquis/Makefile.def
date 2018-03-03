@@ -3,7 +3,7 @@
 # name & version of the corpus
 
 CORPUS  = JRC-Acquis
-VERSION = 3.0
+VERSION = v3.0
 
 # with SRCHTML you can define some extra HTML code that will be placed just
 # after the name of the sub-corpus

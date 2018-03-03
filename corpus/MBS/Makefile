@@ -141,7 +141,8 @@ moses2xml: ${ALGFILES}
 
 include ../Makefile.annotate
 include ../Makefile.cwb
-include ../Makefile.html
-
+# include ../Makefile.html
+include ../Makefile.release
+include ../Makefile.submit
 
 

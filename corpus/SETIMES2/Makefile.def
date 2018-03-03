@@ -2,8 +2,8 @@
 #
 # name & version of the corpus
 
-CORPUS  = SETIMES2
-VERSION = 
+CORPUS  = SETIMES
+VERSION = v2
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just

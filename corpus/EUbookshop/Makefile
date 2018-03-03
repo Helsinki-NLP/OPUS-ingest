@@ -93,7 +93,9 @@ ${FILTEREDXML}: filtered/%: converted/%
 include ../Makefile.tag
 # include ../Makefile.annotate
 include ../Makefile.cwb
-include ../Makefile.html
+# include ../Makefile.html
+include ../Makefile.release
+include ../Makefile.submit
 
 
 ifndef SRC_DIR

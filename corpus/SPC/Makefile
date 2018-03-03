@@ -31,7 +31,9 @@ include ../Makefile.preprocess
 include ../Makefile.annotate
 include ../Makefile.parse
 include ../Makefile.cwb
-include ../Makefile.html
+# include ../Makefile.html
+include ../Makefile.release
+include ../Makefile.submit
 
 convert_afen: raw/af/20.xml.gz raw/en/20.xml.gz
 

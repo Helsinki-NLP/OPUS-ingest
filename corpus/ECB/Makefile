@@ -67,7 +67,10 @@ ${XMLFILES}: xml/%: raw/%
 # include some standard OPUS targets for processing/annotating data
 
 include ../Makefile.cwb
-include ../Makefile.html
+# include ../Makefile.html
+include ../Makefile.release
+include ../Makefile.submit
+
 
 
 

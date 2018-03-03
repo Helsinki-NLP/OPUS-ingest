@@ -3,7 +3,7 @@
 # name & version of the corpus
 
 CORPUS  = DGT
-VERSION = 4
+VERSION = v4
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just

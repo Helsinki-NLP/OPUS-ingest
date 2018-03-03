@@ -2,8 +2,8 @@
 #
 # name & version of the corpus
 
-CORPUS  = OpenOffice3
-VERSION = 
+CORPUS  = OpenOffice
+VERSION = v3
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just

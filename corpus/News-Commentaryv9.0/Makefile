@@ -2,6 +2,13 @@
 include ../Makefile.def
 include Makefile.def
 
+CORPUSHOME       = ${OPUSCORPORA}/${CORPUS}v9.0
+CORPUSSRC        = ${CORPUSHOME}/src
+CORPUSXML        = ${CORPUSHOME}/xml
+CORPUSRAW        = ${CORPUSHOME}/raw
+CORPUSPARSED     = ${CORPUSHOME}/parsed
+CORPUSHTML       = ${OPUSHTML}/${CORPUS}v9.0
+
 .PHONY: corpus
 corpus:
 	${MAKE} -C raw all
@@ -26,4 +33,6 @@ web-corpus: tmx moses alg_samples html
 # include ../Makefile.annotate
 include ../Makefile.tag
 include ../Makefile.cwb
-include ../Makefile.html
+# include ../Makefile.html
+include ../Makefile.release
+include ../Makefile.submit

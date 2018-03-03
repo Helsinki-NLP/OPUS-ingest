@@ -4,6 +4,13 @@ include Makefile.def
 include ../Makefile.def
 
 
+CORPUSHOME       = ${OPUSCORPORA}/${CORPUS}3
+CORPUSSRC        = ${CORPUSHOME}/src
+CORPUSXML        = ${CORPUSHOME}/xml
+CORPUSRAW        = ${CORPUSHOME}/raw
+CORPUSPARSED     = ${CORPUSHOME}/parsed
+CORPUSHTML       = ${OPUSHTML}/${CORPUS}3
+
 # make all:
 #
 # - fetch html sources (in src/Makefile)
@@ -31,7 +38,9 @@ real-clean:
 include ../Makefile.annotate
 include ../Makefile.parse
 include ../Makefile.cwb
-include ../Makefile.html
+# include ../Makefile.html
+include ../Makefile.release
+include ../Makefile.submit
 
 # convert all files for all languages (subdirectories in src/)
 

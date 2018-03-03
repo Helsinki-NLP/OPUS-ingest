@@ -39,7 +39,9 @@ real-clean:
 include ../Makefile.preprocess
 include ../Makefile.annotate
 include ../Makefile.cwb
-include ../Makefile.html
+# include ../Makefile.html
+include ../Makefile.release
+include ../Makefile.submit
 include ../Makefile.udparse
 
 # convert all files for all languages (subdirectories in src/)

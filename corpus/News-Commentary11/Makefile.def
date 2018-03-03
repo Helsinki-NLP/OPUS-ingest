@@ -3,8 +3,8 @@
 # name & version of the corpus
 
 
-CORPUS  = News-Commentary11
-VERSION =
+CORPUS  = News-Commentary
+VERSION = v11
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just

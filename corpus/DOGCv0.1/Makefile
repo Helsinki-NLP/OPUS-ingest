@@ -5,7 +5,15 @@
 include Makefile.def
 include ../Makefile.def
 
-VERSION = $(shell date +%F)
+# VERSION = $(shell date +%F)
+
+CORPUSHOME       = ${OPUSCORPORA}/${CORPUS}v0.1
+CORPUSSRC        = ${CORPUSHOME}/src
+CORPUSXML        = ${CORPUSHOME}/xml
+CORPUSRAW        = ${CORPUSHOME}/raw
+CORPUSPARSED     = ${CORPUSHOME}/parsed
+CORPUSHTML       = ${OPUSHTML}/${CORPUS}v0.1
+
 
 corpus:
 	${MAKE} -C src all
@@ -42,6 +50,6 @@ real-clean:
 # include ../Makefile.annotate
 include ../Makefile.tag
 include ../Makefile.cwb
-include ../Makefile.html
-
-
+# include ../Makefile.html
+include ../Makefile.release
+include ../Makefile.submit

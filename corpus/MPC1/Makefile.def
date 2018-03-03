@@ -3,7 +3,7 @@
 # name & version of the corpus
 
 CORPUS  = MPC1
-VERSION = 1
+VERSION = v1
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just

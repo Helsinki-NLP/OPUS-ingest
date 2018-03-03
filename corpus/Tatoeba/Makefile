@@ -9,7 +9,7 @@ LANGUAGES   = $(sort $(notdir $(wildcard ${CORPUSRAW}/??)) \
 		     $(notdir $(wildcard ${CORPUSRAW}/???)) \
 		     $(notdir $(wildcard ${CORPUSRAW}/????)))
 
-VERSION = $(shell date +%F)
+# VERSION = $(shell date +%F)
 
 corpus:
 	${MAKE} -C src all
@@ -83,7 +83,9 @@ real-clean:
 # include ../Makefile.annotate
 include ../Makefile.tag
 include ../Makefile.cwb
-include ../Makefile.html
+# include ../Makefile.html
+include ../Makefile.release
+include ../Makefile.submit
 include ../Makefile.udparse
 
 # convert all files for all languages (subdirectories in src/)

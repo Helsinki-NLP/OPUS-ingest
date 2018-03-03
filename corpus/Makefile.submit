@@ -19,8 +19,8 @@ endif
 # job-specific settings (overwrite if necessary)
 # HPC_EXTRA: additional SBATCH commands
 
-HPC_MEM     = 8g
-HPC_TIME    = 12:00
+HPC_MEM     = 4g
+HPC_TIME    = 48:00
 HPC_NODES   = 1
 HPC_CORES   = 1
 HPC_QUEUE   = serial

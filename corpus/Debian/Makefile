@@ -94,4 +94,6 @@ ${ALGFILES}: xml/$(SRC)-$(TRG)/%.xml.gz: $(SRCDIR)/%.$(SRC).po.gz $(SRCDIR)/%.$(
 # include ../Makefile.annotate
 include ../Makefile.tag
 include ../Makefile.cwb
-include ../Makefile.html
+# include ../Makefile.html
+include ../Makefile.release
+include ../Makefile.submit

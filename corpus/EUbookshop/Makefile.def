@@ -3,7 +3,7 @@
 # name & version of the corpus
 
 CORPUS  = EUbookshop
-VERSION = 0.2
+VERSION = v2
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just

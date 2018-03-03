@@ -5,6 +5,12 @@
 include Makefile.def
 include ../Makefile.def
 
+CORPUSHOME       = ${OPUSCORPORA}/${CORPUS}2
+CORPUSSRC        = ${CORPUSHOME}/src
+CORPUSXML        = ${CORPUSHOME}/xml
+CORPUSRAW        = ${CORPUSHOME}/raw
+CORPUSPARSED     = ${CORPUSHOME}/parsed
+CORPUSHTML       = ${OPUSHTML}/${CORPUS}2
 
 corpus:
 	${MAKE} -C src all

@@ -3,7 +3,7 @@
 # name & version of the corpus
 
 CORPUS  = PHP
-VERSION = 
+VERSION = v1
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just

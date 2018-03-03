@@ -3,7 +3,7 @@
 # name & version of the corpus
 
 CORPUS  = Wikipedia
-VERSION = 1.0
+VERSION = v1.0
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just

@@ -251,6 +251,13 @@ ${ALG}: ${CORPUSRELEASE}/%: ${CORPUSHOME}/%
 # pack all language files in tar-archives
 #----------------------------------------------------------------------------
 
+$(patsubst %,${CORPUSXML}/%,${LANGUAGES}):
+	@echo "XML files do not exist. Try to unpack from tar-ball"
+
+$(patsubst %,${CORPUSRAW}/%,${LANGUAGES}):
+	@echo "XML files do not exist. Try to unpack from tar-ball"
+
+
 
 # for historical reasons: leave tar targets
 .PHONY: lang_xml lang_tar lang_tok_tar
@@ -259,7 +266,12 @@ lang_xml lang_tar lang_tok_tar: ${LANG_XML}
 ${LANG_XML}: ${CORPUSRELEASE}/xml/%.zip: ${CORPUSXML}/%
 	@mkdir -p ${dir $@}
 	mkdir -p ${TMPDIR}/$</${CORPUS}/xml
-	rsync -av $< ${TMPDIR}/$</${CORPUS}/xml/
+	if [ -d $< ]; then \
+	  rsync -av $< ${TMPDIR}/$</${CORPUS}/xml/; \
+	else \
+	  tar -C ${TMPDIR}/$</${CORPUS} --strip-components=1 \
+		-xzf $(patsubst ${CORPUSXML}/%,${CORPUSHTML}/%.tar.gz,$<); \
+	fi
 	find ${TMPDIR}/$</${CORPUS}/xml -name '*.xml.gz' |\
 	xargs -P 8 gunzip -f
 	${MAKE} PACKAGE=${patsubst ${OPUSCORPORA}/%,%,$<} ${TMPDIR}/$</README
@@ -280,7 +292,12 @@ lang_raw lang_raw_tar: ${LANG_RAW}
 ${LANG_RAW}: ${CORPUSRELEASE}/raw/%.zip: ${CORPUSRAW}/%
 	@mkdir -p ${dir $@}
 	mkdir -p ${TMPDIR}/$</${CORPUS}/raw
-	rsync -av $< ${TMPDIR}/$</${CORPUS}/raw/
+	if [ -d $< ]; then \
+	  rsync -av $< ${TMPDIR}/$</${CORPUS}/raw/; \
+	else \
+	  tar -C ${TMPDIR}/$</${CORPUS} --strip-components=1 \
+		-xzf $(patsubst ${CORPUSRAW}/%,${CORPUSHTML}/%.raw.tar.gz,$<); \
+	fi
 	find ${TMPDIR}/$</${CORPUS}/raw -name '*.xml.gz' |\
 	xargs -P 8 gunzip -f
 	${MAKE} PACKAGE=${patsubst ${OPUSCORPORA}/%,%,$<} ${TMPDIR}/$</README

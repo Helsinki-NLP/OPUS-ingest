@@ -27,7 +27,9 @@ all:
 
 
 include ../Makefile.process
-include ../Makefile.html
+# include ../Makefile.html
+include ../Makefile.release
+include ../Makefile.submit
 include ../Makefile.cwb
 include ../Makefile.udparse
 

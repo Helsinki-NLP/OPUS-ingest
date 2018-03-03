@@ -5,7 +5,7 @@
 include Makefile.def
 include ../Makefile.def
 
-VERSION = $(shell date +%F)
+# VERSION = $(shell date +%F)
 
 corpus:
 	${MAKE} -C src all
@@ -71,7 +71,9 @@ include ../Makefile.process
 # include ../Makefile.annotate
 include ../Makefile.tag
 include ../Makefile.cwb
-include ../Makefile.html
+# include ../Makefile.html
+include ../Makefile.release
+include ../Makefile.submit
 
 # convert all files for all languages (subdirectories in src/)
 

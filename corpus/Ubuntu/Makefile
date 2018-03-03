@@ -86,4 +86,6 @@ ${ALGFILES}: xml/$(SRC)-$(TRG)/%.xml.gz: $(SRCDIR)/$(SRC)/LC_MESSAGES/%.po $(SRC
 # include ../Makefile.annotate
 include ../Makefile.tag
 include ../Makefile.cwb
-include ../Makefile.html
+# include ../Makefile.html
+include ../Makefile.release
+include ../Makefile.submit

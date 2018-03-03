@@ -3,7 +3,7 @@
 # name & version of the corpus
 
 CORPUS  = UN
-VERSION = 20090831
+VERSION = v20090831
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just
