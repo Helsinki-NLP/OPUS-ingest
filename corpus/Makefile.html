@@ -318,6 +318,7 @@ alg_samples: ${ALG_SAMPLES}
 ${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%.xml.gz
 	@mkdir -p ${dir $@}
 	opus-read \
+		-d ${CORPUSXML} \
 		-h -m 100 \
 		-N '\/0\/' \
 	$< > $@
