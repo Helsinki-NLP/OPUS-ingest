@@ -41,6 +41,12 @@ ifeq ("${shell hostname | cut -f2- -d.}","novalocal")
   OPUSRELEASE   = /media/releases
   # OPUSWORDALIGN = /media/download
   OPUSWORDALIGN = /media/releases
+else ifeq ("${shell hostname | cut -f2- -d.}","csc.fi")
+  OPUSNLPL      = /proj/nlpl/data/OPUS
+  OPUSPUB       = ${OPUSNLPL}/web
+  OPUSHTML      = ${OPUSNLPL}/download
+  OPUSRELEASE   = ${OPUSNLPL}/releases
+  OPUSWORDALIGN = ${OPUSNLPL}/releases
 else ifeq ("${shell hostname | cut -f2- -d.}","lingfil.uu.se")
   OPUSPUB       = ${OPUSHOME}/../public_html
   OPUSHTML      = ${OPUSHOME}/html

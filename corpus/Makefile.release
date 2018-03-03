@@ -98,8 +98,7 @@ ${CORPUSRELEASE}:
 	  find $@ -mindepth 1 -maxdepth 1 -type d \
 		-exec ln -s {} ${CORPUSHTML}/ \; ;\
 	fi
-	mkdir -p $@/tmx
-	mkdir -p $@/moses
+	mkdir -p $@/xml $@/tmx $@/moses
 	${MAKE} PACKAGE="${CORPUS} in Moses format" $@/moses/README
 	${MAKE} PACKAGE="${CORPUS} in TMX format" $@/tmx/README
 	-if [ -d ${CORPUSHTML} ]; then \
@@ -108,8 +107,10 @@ ${CORPUSRELEASE}:
 	      zip -u -j $$f $@/moses/README ${CORPUSHOME}/LICENSE; \
 	    fi \
 	  done; \
+	  find ${CORPUSHTML} -type f -name '*.xml.gz' -exec mv {} $@/xml/ \; ;\
 	  find ${CORPUSHTML} -type f -name '*.tmx.gz' -exec mv {} $@/tmx/ \; ;\
 	  find ${CORPUSHTML} -type f -name '*.txt.zip' -exec mv {} $@/moses/ \; ;\
+	  ln -s $@/xml/*.xml.gz ${CORPUSHTML}/ ;\
 	  ln -s $@/tmx/*.tmx.gz ${CORPUSHTML}/ ;\
 	  ln -s $@/moses/*.txt.zip ${CORPUSHTML}/ ;\
 	  cp -n ${CORPUSHTML}/README* $@/; \
