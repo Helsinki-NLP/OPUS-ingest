@@ -3,8 +3,9 @@
 # name & version of the corpus
 
 CORPUS  = Debian
-# VERSION = 0.1
-VERSION = $(shell date +%F)
+VERSION = v1
+# VERSION = $(shell date +%F)
+
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just

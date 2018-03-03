@@ -5,7 +5,6 @@
 include Makefile.def
 include ../Makefile.def
 
-VERSION = $(shell date +%F)
 BOOKS = $(wildcard src/books/*.html)
 
 corpus:
