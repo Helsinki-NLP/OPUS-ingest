@@ -1,0 +1,15 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = giga-fren
+VERSION = v2
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=Giga-word corpus for French-English from  <a href="http://www.statmt.org/wmt10/translation-task.html">WMT2010</a> collected by <a href="http://www.cis.upenn.edu/~ccb/">Chris Callison-Burch</a>
+EXTRAHTML=
+CITENOTE=
