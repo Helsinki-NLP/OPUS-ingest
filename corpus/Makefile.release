@@ -47,18 +47,17 @@ TXT_INFO  = $(patsubst ${CORPUSRELEASE}/moses/%.txt.zip,${CORPUSXML}/%.txt.info,
 TMX_INFO  = $(patsubst ${CORPUSRELEASE}/tmx/%.tmx.gz,${CORPUSXML}/%.tmx.info,${TMX})
 LANG_INFO = $(patsubst %,${CORPUSXML}/%.info,${LANGUAGES})
 
-## some scripts for conversion
-## TODO: check if we have more updated versions
-# MAKEHTML   = ${TOOLS}/opus/make-download-page.pl
-# MAKEHTML   = ${HOME}/research/nlpl/opus-tools/scripts/admin/generate-website.pl
-# MAKEHTML   = ${TOOLS}/public/opus-tools/scripts/admin/generate-website.pl
+# script for creating websites
 MAKEHTML   = opus-website
 
+## some scripts for conversion
+## TODO: should update to some better implementation
 TAB2TMX    = ${OPUSTOOLS}/tab2tmx
 OPUS2MOSES = $(OPUSTOOLS)/xces2moses
 
 # file with all packages that can be distributed
 # PACKDIRS = subdir's that will be included in tar-ball
+# NOTE: we don't create those packages anymore (too big in many cases)
 PACKAGES   = ${CORPUSPUB}/.packages
 PACKDIRS   = xml raw
 # PACKDIRS   = xml raw parsed
@@ -82,11 +81,13 @@ download-dirs: ${CORPUSRELEASE}
 webpage website: ${OPUSPUB}/${CORPUS}.php
 
 
+## create the release dir and
 ## move from old download dir into new release dir
-## create some symbolic links to be compatible
-
+## (create some symbolic links to be compatible)
+## TODO: for how long do we have to keep all this?
 ${CORPUSRELEASE}:
 	mkdir -p $@
+	${MAKE} ${CORPUSPUB} ${CORPUSRELEASE}/mono ${CORPUSRELEASE}/freq
 	mkdir -p $@/wordalign
 	if [ -d ${CORPUSHTML} ]; then \
 	  find ${CORPUSHTML} -mindepth 1 -maxdepth 1 -type d -name '*-*' \
@@ -119,6 +120,60 @@ ${CORPUSRELEASE}:
 	  rm -f ${OPUSRELEASE}/${CORPUS}/latest; \
 	fi
 	-(cd ${OPUSRELEASE}/${CORPUS} && ln -s ${VERSION} latest)
+
+
+## OLDCORPUS might be slightly different from CORPUS
+## in some old sub-corpora where we didn't use proper release numbers
+OLDCORPUS = $(notdir $(CORPUSHOME))
+
+## create corpus-specific web space and sync sample files if they exist
+${CORPUSPUB}:
+	mkdir -p $@
+	if [ -d ${OPUSHOME}/public_html/${OLDCORPUS} ]; then \
+	  rsync -zav ${OPUSHOME}/public_html/${OLDCORPUS}/*.html $@/; \
+	  find $@ -type f | xargs touch; \
+	fi
+
+
+## create subdir for monolingual files
+## and copy existing files from the old download dir
+## NOTE: make sure that old names are changed
+${CORPUSRELEASE}/mono:
+	mkdir -p $@
+	-if [ -d ${CORPUSHTML}/mono ]; then \
+	  for l in ${LANGUAGES}; do \
+	    if [ -e ${CORPUSHTML}/mono/${OLDCORPUS}.$$l.gz ]; then \
+	      echo "${CORPUSHTML}/mono/${OLDCORPUS}.$$l.gz $@/${CORPUS}.$$l.gz"; \
+	      mv ${CORPUSHTML}/mono/${OLDCORPUS}.$$l.gz $@/${CORPUS}.$$l.gz; \
+	    fi; \
+	    if [ -e ${CORPUSHTML}/mono/${OLDCORPUS}.raw.$$l.gz ]; then \
+	      echo "${CORPUSHTML}/mono/${OLDCORPUS}.raw.$$l.gz $@/${CORPUS}.raw.$$l.gz"; \
+	      mv ${CORPUSHTML}/mono/${OLDCORPUS}.raw.$$l.gz $@/${CORPUS}.raw.$$l.gz; \
+	    fi; \
+	  done; \
+	  mv ${CORPUSHTML}/mono/* $@/; \
+	  rm -f ${CORPUSHTML}/mono/.*; \
+	  rmdir ${CORPUSHTML}/mono; \
+	fi
+
+
+## create subdir for frequency counts
+## and copy existing files from the old download dir
+## NOTE: make sure that old names are changed
+${CORPUSRELEASE}/freq:
+	mkdir -p $@
+	-if [ -d ${CORPUSHTML}/freq ]; then \
+	  for l in ${LANGUAGES}; do \
+	    if [ -e ${CORPUSHTML}/freq/${OLDCORPUS}.$$l.gz ]; then \
+	      mv ${CORPUSHTML}/freq/${OLDCORPUS}.$$l.gz $@/${CORPUS}.$$l.gz; \
+	    fi; \
+	  done; \
+	  mv ${CORPUSHTML}/freq/* $@/; \
+	  rm -f ${CORPUSHTML}/freq/.*; \
+	  rmdir ${CORPUSHTML}/freq; \
+	fi
+
+
 
 
 
@@ -154,14 +209,19 @@ ${OPUSPUB}/${CORPUS}.php: ${OPUSPUB}/${CORPUS}-${VERSION}.php
 	rm -f $@
 	( cd ${OPUSPUB}; ln -s $(notdir $<) $(notdir $@) )
 
+
 ${PACKAGES}:	${CORPUSRELEASE} ${ALG} \
 		${CORPUSRELEASE}/LICENSE \
 		${LANG_XML} ${LANG_RAW} ${LANG_UD} \
 		${MONO_TOK} ${MONO_RAW} \
-		$(TMX) $(MOSES) ${FREQ_COUNTS} \
+		$(MOSES) $(TMX) ${FREQ_COUNTS} \
 		${CORPUSRELEASE}/README
 	mkdir -p ${dir $@}
-	echo "$^" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
+	echo "${ALG}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
+	echo "${LANG_XML} ${LANG_RAW} ${LANG_UD}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
+	echo "${MONO_TOK} ${MONO_RAW} ${FREQ_COUNTS}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
+	echo "${TMX}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
+	echo "${MOSES}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
 	mv -f ${PACKAGES}.uniq ${PACKAGES}
 	echo "-----------------------------"      >> ${CORPUSRELEASE}/README
@@ -244,7 +304,7 @@ alg_files: ${ALG}
 
 ${ALG}: ${CORPUSRELEASE}/%: ${CORPUSHOME}/%
 	@mkdir -p ${dir $@}
-	cp $< $@
+	rsync $< $@
 
 
 #----------------------------------------------------------------------------
@@ -263,24 +323,25 @@ $(patsubst %,${CORPUSRAW}/%,${LANGUAGES}):
 .PHONY: lang_xml lang_tar lang_tok_tar
 lang_xml lang_tar lang_tok_tar: ${LANG_XML}
 
-${LANG_XML}: ${CORPUSRELEASE}/xml/%.zip: ${CORPUSXML}/%
+${LANG_XML}: ${CORPUSRELEASE}/xml/%.zip: # ${CORPUSXML}/%
 	@mkdir -p ${dir $@}
-	mkdir -p ${TMPDIR}/$</${CORPUS}/xml
-	if [ -d $< ]; then \
-	  rsync -av $< ${TMPDIR}/$</${CORPUS}/xml/; \
+	mkdir -p ${TMPDIR}/$@/${CORPUS}/xml
+	if [ -d ${patsubst ${CORPUSRELEASE}/xml/%.zip,${CORPUSXML}/%,$@} ]; then \
+	  rsync -av ${patsubst ${CORPUSRELEASE}/xml/%.zip,${CORPUSXML}/%,$@} \
+			${TMPDIR}/$@/${CORPUS}/xml/; \
 	else \
-	  tar -C ${TMPDIR}/$</${CORPUS} --strip-components=1 \
-		-xzf $(patsubst ${CORPUSXML}/%,${CORPUSHTML}/%.tar.gz,$<); \
+	  tar -C ${TMPDIR}/$@/${CORPUS} --strip-components=1 \
+		-xzf $(patsubst ${CORPUSRELEASE}/xml/%.zip,${CORPUSHTML}/%.tar.gz,$@); \
 	fi
-	find ${TMPDIR}/$</${CORPUS}/xml -name '*.xml.gz' |\
+	find ${TMPDIR}/$@/${CORPUS}/xml -name '*.xml.gz' |\
 	xargs -P 8 gunzip -f
-	${MAKE} PACKAGE=${patsubst ${OPUSCORPORA}/%,%,$<} ${TMPDIR}/$</README
-	${MAKE} ${TMPDIR}/$</LICENSE
-	echo "${patsubst ${OPUSCORPORA}/%,%,$<}" > ${TMPDIR}/$</INFO
-	echo "${CORPUS}" >> ${TMPDIR}/$</INFO
-	echo "${VERSION}" >> ${TMPDIR}/$</INFO
-	( cd ${TMPDIR}/$<; zip -r $@ INFO README LICENSE ${CORPUS}; cd ${PWD} )
-	rm -fr ${TMPDIR}/$<
+	${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README
+	${MAKE} ${TMPDIR}/$@/LICENSE
+	echo "${CORPUS}/xml/${patsubst %.zip,%,${notdir $@}}" > ${TMPDIR}/$@/INFO
+	echo "${CORPUS}" >> ${TMPDIR}/$@/INFO
+	echo "${VERSION}" >> ${TMPDIR}/$@/INFO
+	( cd ${TMPDIR}/$@; zip -r $@ INFO README LICENSE ${CORPUS}; cd ${PWD} )
+	rm -fr ${TMPDIR}/$@
 	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 
@@ -289,26 +350,47 @@ ${LANG_XML}: ${CORPUSRELEASE}/xml/%.zip: ${CORPUSXML}/%
 .PHONY: lang_raw lang_raw_tar
 lang_raw lang_raw_tar: ${LANG_RAW}
 
-${LANG_RAW}: ${CORPUSRELEASE}/raw/%.zip: ${CORPUSRAW}/%
+${LANG_RAW}: ${CORPUSRELEASE}/raw/%.zip: # ${CORPUSRAW}/%
 	@mkdir -p ${dir $@}
-	mkdir -p ${TMPDIR}/$</${CORPUS}/raw
-	if [ -d $< ]; then \
-	  rsync -av $< ${TMPDIR}/$</${CORPUS}/raw/; \
+	mkdir -p ${TMPDIR}/$@/${CORPUS}/raw
+	if [ -d ${patsubst ${CORPUSRELEASE}/raw/%.zip,${CORPUSRAW}/%,$@} ]; then \
+	  rsync -av ${patsubst ${CORPUSRELEASE}/raw/%.zip,${CORPUSRAW}/%,$@} ${TMPDIR}/$@/${CORPUS}/raw/; \
 	else \
-	  tar -C ${TMPDIR}/$</${CORPUS} --strip-components=1 \
-		-xzf $(patsubst ${CORPUSRAW}/%,${CORPUSHTML}/%.raw.tar.gz,$<); \
+	  tar -C ${TMPDIR}/$@/${CORPUS} --strip-components=1 \
+		-xzf $(patsubst ${CORPUSRELEASE}/raw/%.zip,${CORPUSHTML}/%.raw.tar.gz,$@); \
 	fi
-	find ${TMPDIR}/$</${CORPUS}/raw -name '*.xml.gz' |\
+	find ${TMPDIR}/$@/${CORPUS}/raw -name '*.xml.gz' |\
 	xargs -P 8 gunzip -f
-	${MAKE} PACKAGE=${patsubst ${OPUSCORPORA}/%,%,$<} ${TMPDIR}/$</README
-	${MAKE} ${TMPDIR}/$</LICENSE
-	echo "${patsubst ${OPUSCORPORA}/%,%,$<}" > ${TMPDIR}/$</INFO
-	echo "${CORPUS}" >> ${TMPDIR}/$</INFO
-	echo "${VERSION}" >> ${TMPDIR}/$</INFO
-	( cd ${TMPDIR}/$<; zip -r $@ INFO README LICENSE ${CORPUS}; cd ${PWD} )
-	rm -fr ${TMPDIR}/$<
+	${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README
+	${MAKE} ${TMPDIR}/$@/LICENSE
+	echo "${CORPUS}/raw/${patsubst %.zip,%,${notdir $@}}" > ${TMPDIR}/$@/INFO
+	echo "${CORPUS}" >> ${TMPDIR}/$@/INFO
+	echo "${VERSION}" >> ${TMPDIR}/$@/INFO
+	( cd ${TMPDIR}/$@; zip -r $@ INFO README LICENSE ${CORPUS}; cd ${PWD} )
+	rm -fr ${TMPDIR}/$@
 	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+
+# ${LANG_RAW}: ${CORPUSRELEASE}/raw/%.zip: ${CORPUSRAW}/%
+# 	@mkdir -p ${dir $@}
+# 	mkdir -p ${TMPDIR}/$</${CORPUS}/raw
+# 	if [ -d $< ]; then \
+# 	  rsync -av $< ${TMPDIR}/$</${CORPUS}/raw/; \
+# 	else \
+# 	  tar -C ${TMPDIR}/$</${CORPUS} --strip-components=1 \
+# 		-xzf $(patsubst ${CORPUSRAW}/%,${CORPUSHTML}/%.raw.tar.gz,$<); \
+# 	fi
+# 	find ${TMPDIR}/$</${CORPUS}/raw -name '*.xml.gz' |\
+# 	xargs -P 8 gunzip -f
+# 	${MAKE} PACKAGE=${patsubst ${OPUSCORPORA}/%,%,$<} ${TMPDIR}/$</README
+# 	${MAKE} ${TMPDIR}/$</LICENSE
+# 	echo "${patsubst ${OPUSCORPORA}/%,%,$<}" > ${TMPDIR}/$</INFO
+# 	echo "${CORPUS}" >> ${TMPDIR}/$</INFO
+# 	echo "${VERSION}" >> ${TMPDIR}/$</INFO
+# 	( cd ${TMPDIR}/$<; zip -r $@ INFO README LICENSE ${CORPUS}; cd ${PWD} )
+# 	rm -fr ${TMPDIR}/$<
+# 	mkdir -p ${dir ${PACKAGES}}
+# 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 
 
 # parsed corpus files (not all languages need to be parsed)
@@ -348,34 +430,32 @@ mono_raw: ${MONO_RAW}
 
 CORPUS_EXT = xml
 
-
-## NEW: zip files in the actual corpus directory
-## ---> this will eventually replace the download dir
-
-${CORPUSXML}/%.zip: ${CORPUSXML}/%
-
 # monolingual data for language modeling
 # (NEW: only real files, no symlinks!)
 
 ${CORPUSRELEASE}/mono/${CORPUS}.%.gz: ${CORPUSXML}/%
 	@mkdir -p ${dir $@}
-	find $</ -name '*.${CORPUS_EXT}.gz' -type f | \
-	xargs zcat | \
-	perl ${TOOLS}/opus/xml2text.pl | \
-	sed 's/  */ /g;s/^ *//;s/ *$$//' |\
-	gzip -c > $@
+	if [ -d $< ]; then \
+	  find $</ -name '*.${CORPUS_EXT}.gz' -type f | \
+	  xargs zcat | \
+	  perl ${TOOLS}/opus/xml2text.pl | \
+	  sed 's/  */ /g;s/^ *//;s/ *$$//' |\
+	  gzip -c > $@; \
+	fi
 	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 
 
 ${CORPUSRELEASE}/mono/${CORPUS}.raw.%.gz: ${CORPUSRAW}/%
 	@mkdir -p ${dir $@}
-	find $</ -name '*.${CORPUS_EXT}.gz' -type f | \
-	xargs zcat | \
-	perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g' |\
-	perl ${TOOLS}/opus/rawxml2text.pl | \
-	sed 's/  */ /g;s/^ *//;s/ *$$//' |\
-	gzip -c > $@
+	if [ -d $< ]; then \
+	  find $</ -name '*.${CORPUS_EXT}.gz' -type f | \
+	  xargs zcat | \
+	  perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g' |\
+	  perl ${TOOLS}/opus/rawxml2text.pl | \
+	  sed 's/  */ /g;s/^ *//;s/ *$$//' |\
+	  gzip -c > $@; \
+	fi
 	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 
@@ -420,16 +500,35 @@ ${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%.xml.gz
 		-N '\/0\/' \
 	$< > $@
 
+## NEW: could use zip archives
+## disadvantage: it is slow!
+#		-d ${CORPUS} \
+#		-r ${VERSION} \
+
+## OLD: (this does not work if the XML-files are deleted)
+## --> use the released zip file
+#		-d ${CORPUSXML} \
+
 
 .PHONY: corpus_samples
 corpus_samples: ${CORPUS_SAMPLES}
 
-${CORPUS_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%
+${CORPUS_SAMPLES}:
 	@mkdir -p ${dir $@}
 	echo '<html><head></head><body><pre>' >$@
-	find $</ -name '*.xml.gz' | \
+	find ${patsubst ${CORPUSPUB}/%_sample.html,${CORPUSXML}/%,$@}/ -name '*.xml.gz' | \
 	xargs zcat | head -100 | recode utf8..utf16 | recode utf16..html >> $@
 	echo '</pre></body></html>' >> $@
+
+# ${CORPUS_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%
+# 	@mkdir -p ${dir $@}
+# 	echo '<html><head></head><body><pre>' >$@
+# 	find $</ -name '*.xml.gz' | \
+# 	xargs zcat | head -100 | recode utf8..utf16 | recode utf16..html >> $@
+# 	echo '</pre></body></html>' >> $@
+
+
+
 
 #----------------------------------------------------------------------------
 # convert all bitexts to TMX
@@ -492,7 +591,8 @@ $(MOSES): ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSXML}/%.xml.gz
 	  ${MAKE} ${TMPDIR}/$$BASE/LICENSE; \
 	  zip -j $@ ${TMPDIR}/$$BASE/README ${TMPDIR}/$$BASE/LICENSE \
 			$$BASE.$$S $$BASE.$$T $$BASE.ids; \
-	  rm -f $$BASE.$$S $$BASE.$$T $$BASE.ids ${TMPDIR}/$$BASE/README;\
+	  rm -f $$BASE.$$S $$BASE.$$T $$BASE.ids;\
+	  rm -f ${TMPDIR}/$$BASE/README ${TMPDIR}/$$BASE/LICENSE;\
 	  rmdir ${TMPDIR}/$$BASE; )
 	mkdir -p ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
@@ -533,12 +633,19 @@ info: lang_info ces_info txt_info tmx_info
 
 lang_info: ${LANG_INFO}
 
-${LANG_INFO}: ${CORPUSXML}/%.info: ${CORPUSXML}/%
-	find $</ -name '*.xml.gz' -type f | wc -l > $@
-	find $</ -name '*.xml.gz' -type f | \
+${LANG_INFO}:
+	find ${patsubst ${CORPUSXML}/%.info,${CORPUSXML}/%,$@}/ -name '*.xml.gz' -type f | wc -l > $@
+	find ${patsubst ${CORPUSXML}/%.info,${CORPUSXML}/%,$@}/ -name '*.xml.gz' -type f | \
 	xargs zcat | grep '</s>' | wc -l >> $@
-	find $</ -name '*.xml.gz' -type f | \
+	find ${patsubst ${CORPUSXML}/%.info,${CORPUSXML}/%,$@}/ -name '*.xml.gz' -type f | \
 	xargs zcat | grep '</w>' | wc -l >> $@
+
+# ${LANG_INFO}: ${CORPUSXML}/%.info: ${CORPUSXML}/%
+# 	find $</ -name '*.xml.gz' -type f | wc -l > $@
+# 	find $</ -name '*.xml.gz' -type f | \
+# 	xargs zcat | grep '</s>' | wc -l >> $@
+# 	find $</ -name '*.xml.gz' -type f | \
+# 	xargs zcat | grep '</w>' | wc -l >> $@
 
 
 ces_info: ${CES_INFO}

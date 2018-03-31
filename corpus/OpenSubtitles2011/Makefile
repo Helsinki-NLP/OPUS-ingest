@@ -27,6 +27,10 @@ all:
 	${MAKE} cwb-index
 	rm -fr data
 
+## skip MOSES and TMX files
+web:
+	${MAKE} MOSES= TMX= MONO_TOK= MONO_RAW= FREQ_COUNTS= website
+
 
 
 refresh_html:

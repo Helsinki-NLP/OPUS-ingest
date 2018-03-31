@@ -3,6 +3,15 @@
 include Makefile.def
 include ../Makefile.def
 
+
+CORPUSHOME       = ${OPUSCORPORA}/${CORPUS}2016
+CORPUSSRC        = ${CORPUSHOME}/src
+CORPUSXML        = ${CORPUSHOME}/xml
+CORPUSRAW        = ${CORPUSHOME}/raw
+CORPUSPARSED     = ${CORPUSHOME}/parsed
+CORPUSHTML       = ${OPUSHTML}/${CORPUS}2016
+
+
 UNRELIABLE = $(patsubst %,unreliable/xml/%,${LANGUAGES})
 
 CWB_EXTRA_ARGS = -U time
@@ -47,7 +56,8 @@ submit-convert:
 
 include ../Makefile.annotate
 include ../Makefile.cwb
-include ../Makefile.html
+# include ../Makefile.html
+include ../Makefile.release
 # include ../Makefile.parse
 include ../Makefile.udparse
 

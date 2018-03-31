@@ -2,9 +2,8 @@
 #
 # name & version of the corpus
 
-CORPUS  = OpenSubtitles2016
-VERSION = 
-
+CORPUS  = OpenSubtitles
+VERSION = v2016
 
 # with SRCHTML you can define some extra HTML code that will be placed just
 # after the name of the sub-corpus

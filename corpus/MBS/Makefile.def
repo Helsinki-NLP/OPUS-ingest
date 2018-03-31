@@ -10,6 +10,6 @@ VERSION = v1
 # after the name of the sub-corpus
 # EXTRAHTML is code which will be put just after the 'Download' header
 
-SRCHTML=Corpus "Moniteur belge/Belgisch Staatsblad" provided by Tom Vanallemeersch. See Vanallemeersch (2010) <a href="http://www.ccl.kuleuven.be/~tallem/Paper_Belgisch_Staatsblad_Corpus.pdf">'Belgisch Staatsblad Corpus: Retrieving French-Dutch Sentences from Official Documents'</a>, Proceedings of LREC 7, Malta (please cite). The corpus is available for research purposes. Original Source: <a href="http://www.ccl.kuleuven.be/~tallem/">http://www.ccl.kuleuven.be/~tallem/</a>
+SRCHTML=Corpus "Moniteur belge/Belgisch Staatsblad" provided by Tom Vanallemeersch. See Vanallemeersch (2010) <a href="http://www.ccl.kuleuven.be/~tallem/Paper_Belgisch_Staatsblad_Corpus.pdf">Belgisch Staatsblad Corpus: Retrieving French-Dutch Sentences from Official Documents</a>, Proceedings of LREC 7, Malta (please cite). The corpus is available for research purposes. Original Source: <a href="http://www.ccl.kuleuven.be/~tallem/">http://www.ccl.kuleuven.be/~tallem/</a>
 
 EXTRAHTML=

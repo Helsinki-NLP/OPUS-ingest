@@ -71,8 +71,8 @@ publish-job:
 
 include ../Makefile.submit
 include ../Makefile.process
-# include ../Makefile.release
-include ../Makefile.html
+include ../Makefile.release
+# include ../Makefile.html
 include ../Makefile.cwb
 include ../Makefile.udparse
 
