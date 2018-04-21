@@ -4,6 +4,15 @@ include Makefile.def
 include ../Makefile.def
 
 
+CORPUSHOME       = ${OPUSCORPORA}/${CORPUS}2018
+CORPUSSRC        = ${CORPUSHOME}/src
+CORPUSXML        = ${CORPUSHOME}/xml
+CORPUSRAW        = ${CORPUSHOME}/raw
+CORPUSPARSED     = ${CORPUSHOME}/parsed
+CORPUSHTML       = ${OPUSHTML}/${CORPUS}2018
+
+
+
 SRC = xx
 TRG = xx
 
@@ -63,7 +72,8 @@ submit-convert:
 include ../Makefile.process
 include ../Makefile.annotate
 include ../Makefile.cwb
-include ../Makefile.html
+# include ../Makefile.html
+include ../Makefile.release
 include ../Makefile.submit
 include ../Makefile.udparse
 # include ../Makefile.parse

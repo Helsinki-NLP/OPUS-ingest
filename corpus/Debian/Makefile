@@ -3,6 +3,9 @@ include ../Makefile.def
 include Makefile.def
 
 
+tttt:
+	echo ${LANGUAGES}
+
 SRCDIR = src/i18n.debian.org/material/po
 
 SCRIPTS = ${OPUSTOOLS}/KDE4

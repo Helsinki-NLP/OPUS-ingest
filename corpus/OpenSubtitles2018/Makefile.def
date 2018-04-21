@@ -2,8 +2,8 @@
 #
 # name & version of the corpus
 
-CORPUS  = OpenSubtitles2018
-VERSION = 
+CORPUS  = OpenSubtitles
+VERSION = v2018
 
 
 # CITENOTE sets the text to be used for citing the corpus
