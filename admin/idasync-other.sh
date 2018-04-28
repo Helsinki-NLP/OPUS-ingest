@@ -24,11 +24,11 @@ echo "Starting at `date`"
 ## - various tools
 ## - trac snapshots (wiki page)
 
-SRCDIR=/proj/nlpl/corpora/OPUS
+SRCDIR=/proj/nlpl/data/OPUS
 TRGDIR=/ida/sa/clarin/corpora/OPUS
 
 
-iput_wrapper -c -l $SRCDIR/data  -r $TRGDIR/OPUS-data
+iput_wrapper -c -l $SRCDIR/data  -r $TRGDIR/data
 
 OTHER="img incoming public_html tools trac"
 

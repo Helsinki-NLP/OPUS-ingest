@@ -17,16 +17,13 @@ cd ${SLURM_SUBMIT_DIR:-.}
 pwd
 echo "Starting at `date`"
 
-## uncomment if you want to sync the whole download dir (this takes forever!)
-# iput_wrapper -c -l /proj/nlpl/corpora/OPUS/download  -r /ida/sa/clarin/corpora/OPUS
 
-
-SRCDIR=/proj/nlpl/corpora/OPUS/download
-TRGDIR=/ida/sa/clarin/corpora/OPUS
+SRCDIR=/proj/nlpl/data/OPUS/releases
+TRGDIR=/ida/sa/clarin/corpora/OPUS/releases
 
 ## all sub-corpora (that don't have to be packaged)
 
-CORPORA="OpenSubtitles2016 OpenSubtitles2018"
+CORPORA="OpenSubtitles"
 
 for c in ${CORPORA}; do
     if [ -f "$SRCDIR/$c.tar.gz" ]; then

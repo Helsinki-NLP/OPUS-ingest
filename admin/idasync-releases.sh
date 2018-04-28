@@ -1,7 +1,7 @@
 #!/bin/bash -l
-#SBATCH -J "idasync"
-#SBATCH -o idasync.out.%j
-#SBATCH -e idasync.err.%j
+#SBATCH -J "idasync-releases"
+#SBATCH -o idasync-releases.out.%j
+#SBATCH -e idasync-releases.err.%j
 #SBATCH --mem=4g
 #SBATCH --mail-type=END
 #SBATCH --mail-user=jorg.tiedemann@helsinki.fi
@@ -18,25 +18,32 @@ pwd
 echo "Starting at `date`"
 
 
-SRCDIR=/proj/nlpl/data/OPUS/download
-TRGDIR=/ida/sa/clarin/corpora/OPUS
+SRCDIR=/proj/nlpl/data/OPUS/releases
+TRGDIR=/ida/sa/clarin/corpora/OPUS/releases
 
 ## all sub-corpora (that don't have to be packaged)
 
-CORPORA="Books DGT DOGC EMEA EUbookshop \
-    Europarl2 Europarl3-clean Europarl \
-    hrenWaC JRC-Acquis \
-    MBS MultiUN News-Commentary11 OfisPublik OpenOffice3 \
-    OpenSubtitles OpenSubtitles2016 OpenSubtitles2018 \
-    RF Tanzil TED2013 TedTalks TEP \
-    UN Wikipedia WikiSource WMT-News"
+CORPORA="Books DGT DOGC \
+         EMEA EUbookshop Europarl \
+         giga-fren hrenWaC JRC-Acquis \
+         MBS MontenegrinSubs MPC1 MultiUN \
+         News-Commentary \
+         OfisPublik OpenOffice \
+         RF SETIMES SPC Tanzil TED2013 TedTalks TEP \
+         UN Wikipedia WikiSource WMT-News XhosaNavy"
+
+
+## leave "OpenSubtitles" as a separate job
+## because it is so big (idasync-opensubs.sh)
+
+
 
 ## sub-corpora with many files that need to be packaged
+## (because they have too many files)
 
-TARCORPORA="ECB EUconst GlobalVoices GNOME KDE4 KDEdoc \
-            OpenSubtitles2011 OpenSubtitles2012 OpenSubtitles2013 OpenSubtitles2015 \
+TARCORPORA="ECB EUconst GlobalVoices GNOME \
+            KDE4 KDEdoc \
             Tatoeba PHP Ubuntu"
-
 
 for c in ${TARCORPORA}; do
     if [ -f "$SRCDIR/$c.tar.gz" ]; then

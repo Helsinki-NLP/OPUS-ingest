@@ -1,7 +1,7 @@
 #!/bin/bash -l
-#SBATCH -J "idasync"
-#SBATCH -o idasync.out.%j
-#SBATCH -e idasync.err.%j
+#SBATCH -J "idasync-subs"
+#SBATCH -o idasync-subs-v2011.out.%j
+#SBATCH -e idasync-subs-v2011.err.%j
 #SBATCH --mem=4g
 #SBATCH --mail-type=END
 #SBATCH --mail-user=jorg.tiedemann@helsinki.fi
@@ -17,9 +17,10 @@ cd ${SLURM_SUBMIT_DIR:-.}
 pwd
 echo "Starting at `date`"
 
-./idasync-releases.sh
-./idasync-opensubs.sh
-./idasync-other-download.sh
-./idasync-other.sh
+
+SRCDIR=/proj/nlpl/data/OPUS/releases
+TRGDIR=/ida/sa/clarin/corpora/OPUS/releases
+
+iput_wrapper -c -l $SRCDIR/OpenSubtitles/v2011  -r $TRGDIR/OpenSubtitles/v2011
 
 echo "Finishing at `date`"
