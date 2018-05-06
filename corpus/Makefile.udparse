@@ -74,7 +74,9 @@ link-sentalign-files-to-parsed:
 	for l in ${LANGPAIRS}; do \
 	  if [ -d ${CORPUSPARSED}/`echo -n "$$l" | sed 's/^.*-//'` ]; then \
 	    if [ -d ${CORPUSPARSED}/`echo -n "$$l" | sed 's/-.*$$//'` ]; then \
+	      if [ ! -e "${CORPUSPARSED}/$$l.xml.gz" ]; then \
 		ln -s ../xml/$$l.xml.gz ${CORPUSPARSED}/; \
+	      fi \
 	    fi \
 	  fi \
 	done

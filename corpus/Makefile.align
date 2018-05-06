@@ -188,4 +188,6 @@ create-align-file:
 	fi; \
 	rm -f ${SRC}-${TRG}.links; \
 	  fi; \
+	  rm -fr ${SRC}-${TRG}; \
 	fi
+

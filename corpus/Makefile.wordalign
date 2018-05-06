@@ -184,7 +184,7 @@ TRUECASER    = $(patsubst %,${CORPUSWORDALIGN}/truecaser/%, ${LANGUAGES})
 LMTEXT = $(patsubst %,${CORPUSWORDALIGN}/lm/${CORPUS}.%.gz, ${LANGUAGES})
 LMRAWTEXT = $(patsubst %,${CORPUSWORDALIGN}/lm/${CORPUS}.raw.%.gz, ${LANGUAGES})
 
-DICFILES = $(patsubst %/model/phrase-table-filtered.gz,${CORPUSHTML}/dic/%.dic.gz,\
+DICFILES = $(patsubst %/model/phrase-table-filtered.gz,${CORPUSHOME}/dic/%.dic.gz,\
 		$(wildcard */model/phrase-table-filtered.gz))
 
 
@@ -770,19 +770,9 @@ filter-phrase-table: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 # 	gzip -c > $@
 
 
-${CORPUSHTML}/dic/%.dic.gz: | %/model/phrase-table-filtered.gz ${CORPUSHOME}/dic
+${CORPUSHOME}/dic/%.dic.gz: | %/model/phrase-table-filtered.gz
 	mkdir -p ${dir $@}
 	zcat ${firstword $|} |\
 	${PHRASE2DICE} -d ${DICETHR} -f ${FREQTHR} -m |\
 	gzip -c > $@
 
-
-
-
-
-${CORPUSHOME}/dic: ${CORPUSHTML}/dic
-	if [ -d $@ ]; then mv -f $@ $@.old; fi
-	ln -s $< $@
-
-${CORPUSHTML}/dic:
-	mkdir -p $@

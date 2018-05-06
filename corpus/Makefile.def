@@ -35,30 +35,22 @@ OPUSDATA      = ${OPUSHOME}/data
 ## (hostname -d does not seem to work on Mac OS)
 
 ifeq ("${shell hostname | cut -f2- -d.}","novalocal")
-  # OPUSPUB       = ${OPUSHOME}/public_html
   OPUSPUB       = ${OPUSHOME}/web
   OPUSHTML      = /media/download
   OPUSRELEASE   = /media/releases
-  # OPUSWORDALIGN = /media/download
   OPUSWORDALIGN = /media/releases
-else ifeq ("${shell hostname | cut -f2- -d.}","csc.fi")
-  OPUSNLPL      = /proj/nlpl/data/OPUS
-  OPUSPUB       = ${OPUSNLPL}/web
-  OPUSHTML      = ${OPUSNLPL}/download
-  OPUSRELEASE   = ${OPUSNLPL}/releases
-  OPUSWORDALIGN = ${OPUSNLPL}/releases
 else ifeq ("${shell hostname | cut -f2- -d.}","lingfil.uu.se")
   OPUSPUB       = ${OPUSHOME}/../public_html
   OPUSHTML      = ${OPUSHOME}/html
   OPUSRELEASE   = ${OPUSHOME}/releases
   OPUSWORDALIGN = ${OPUSHOME}/wordalign
+# else ifeq ("${shell hostname | cut -f2- -d.}","csc.fi")
 else
-  # OPUSPUB       = ${OPUSHOME}/public_html
+  OPUSNLPL      = /proj/nlpl/data/OPUS
   OPUSPUB       = ${OPUSHOME}/web
   OPUSHTML      = ${OPUSHOME}/download
-  OPUSRELEASE   = ${OPUSHOME}/releases
-  # OPUSWORDALIGN = ${OPUSHOME}/download
-  OPUSWORDALIGN = ${OPUSHOME}/releases
+  OPUSWORDALIGN = ${OPUSHOME}/wordalign
+  OPUSRELEASE   = ${OPUSNLPL}
 endif
 
 
@@ -82,8 +74,9 @@ CORPUSPARSED     = ${CORPUSHOME}/parsed
 CORPUSPUB        = ${OPUSPUB}/${CORPUS}/${VERSION}
 CORPUSHTML       = ${OPUSHTML}/${CORPUS}
 CORPUSRELEASE    = ${OPUSRELEASE}/${CORPUS}/${VERSION}
-CORPUSWORDALIGN  = ${CORPUSRELEASE}/wordalign
+# CORPUSWORDALIGN  = ${CORPUSRELEASE}/wordalign
 # CORPUSWORDALIGN  = ${OPUSWORDALIGN}/${CORPUS}
+CORPUSWORDALIGN  = ${CORPUSHOME}/wordalign
 
 
 # LANGUAGES ....... sorted list of languages (2/3-letter codes possibly

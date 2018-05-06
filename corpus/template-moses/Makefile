@@ -40,8 +40,8 @@ all:
 	${MAKE} convert
 	${MAKE} annotate
 	${MAKE} udparse
-	${MAKE} publish
 	${MAKE} wordalign
+	${MAKE} publish
 
 ## standard procedures are specified in the following makefiles
 ##
