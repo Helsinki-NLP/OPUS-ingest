@@ -404,9 +404,15 @@ wordalign-pt: ${SRC}-${TRG}/model/phrase-table.gz
 .PHONY: wordalign-filter
 wordalign-filter: ${SRC}-${TRG}/model/phrase-table-filtered.gz ${CORPUSHOME}/dic ${CORPUSHTML}/dic/${SRC}-${TRG}.dic.gz
 	rm -f ${SRC}-${TRG}/model/phrase-table.gz
+	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
+	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
 
 .PHONY: wordalign
 wordalign: ${SRC}-${TRG}/model/phrase-table-filtered.gz ${CORPUSHOME}/dic ${CORPUSHTML}/dic/${SRC}-${TRG}.dic.gz
+	rm -f ${SRC}-${TRG}/model/phrase-table.gz
+	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
+	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
+
 
 .PHONY: dictionaries
 dictionaries: $(DICFILES)
@@ -471,7 +477,8 @@ ${SRC}-${TRG}/c.true.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	${OPUSTOOLS}/wordalign/retained-sentences.pl \
 		${SRC}-${TRG}/ids.txt \
 		${SRC}-${TRG}/line_numbers.txt |\
-		gzip -c > ${SRC}-${TRG}/ids.gz
+	${OPUSTOOLS}/wordalign/ids2links.pl |\
+		gzip -c > ${SRC}-${TRG}/bitext.xml.gz
 	rm -f ${SRC}-${TRG}/ids.txt ${SRC}-${TRG}/line_numbers.txt
 	${MAKE} ${CORPUSWORDALIGN}/truecaser/${SRC}
 	${TOOLS}/public/preprocess/recaser/mytruecase.perl \
@@ -497,7 +504,8 @@ ${SRC}-${TRG}/c.clean.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	${OPUSTOOLS}/wordalign/retained-sentences.pl \
 		${SRC}-${TRG}/ids.txt \
 		${SRC}-${TRG}/line_numbers.txt |\
-		gzip -c > ${SRC}-${TRG}/ids.gz
+	${OPUSTOOLS}/wordalign/ids2links.pl |\
+		gzip -c > ${SRC}-${TRG}/bitext.xml.gz
 	rm -f ${SRC}-${TRG}/ids.txt ${SRC}-${TRG}/line_numbers.txt
 	rm -f ${SRC}-${TRG}/c.${SRCEXT} ${SRC}-${TRG}/c.${TRGEXT}
 	gzip -f ${SRC}-${TRG}/c.clean.${SRCEXT} ${SRC}-${TRG}/c.clean.${TRGEXT}
@@ -509,9 +517,12 @@ ${SRC}-${TRG}/c.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	$(OPUS2MOSES) -d ${CORPUSXML} -s ${SRCEXT} -t ${TRGEXT} \
 		-P ${SRC}-${TRG}/ids \
 		$< ${SRC}-${TRG}/c
+	${OPUSTOOLS}/wordalign/ids2links.pl \
+		< ${SRC}-${TRG}/ids \
+		> ${SRC}-${TRG}/bitext.xml
 	gzip -f ${SRC}-${TRG}/c.${SRCEXT}
 	gzip -f ${SRC}-${TRG}/c.${TRGEXT}
-	gzip -f ${SRC}-${TRG}/ids
+	gzip -f ${SRC}-${TRG}/bitext.xml
 
 ${TRGCORPUS}: ${SRCCORPUS}
 

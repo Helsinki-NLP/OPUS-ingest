@@ -20,8 +20,8 @@ ALG      = $(patsubst ${CORPUSXML}/%,${CORPUSRELEASE}/xml/%,$(CES))
 TMX      = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/tmx/%.tmx.gz,$(CES))
 MOSES    = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/moses/%.txt.zip,$(CES))
 SMT      = $(patsubst %,${CORPUSRELEASE}/smt/%.zip,\
-		$(notdir $(sort $(shell find ${CORPUSWORDALIGN} -type d -name '*-*') \
-				$(shell find ${CORPUSRELEASE}/wordalign -type d -name '*-*'))))
+		$(notdir $(sort $(shell find ${CORPUSWORDALIGN} -maxdepth 1 -mindepth 1 -type d -name '*-*') \
+				$(shell find ${CORPUSRELEASE}/wordalign -maxdepth 1 -mindepth 1 -type d -name '*-*'))))
 WORDALG  = $(patsubst %.zip,%.alg.zip,${SMT})
 
 
@@ -564,17 +564,19 @@ smt: ${WORDALG} ${SMT}
 wordalg: ${WORDALG}
 
 ## a zip file of word alignments (including corpus files)
-${WORDALG}: ${CORPUSRELEASE}/smt/%.alg.zip: ${CORPUSWORDALIGN}/%
+${WORDALG}: ${CORPUSRELEASE}/smt/%.alg.zip: ${CORPUSWORDALIGN}/% ${CORPUSWORDALIGN}/%/bitext.xml.gz
 	@${MKDIR} ${dir $@}
 	${MKDIR} ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}
 	rsync -av \
 		--exclude '*\.wordalign*' \
 		--exclude '*/lex.*' \
 		--exclude '*/phrase*' \
+		--exclude '*\c.*' \
 		$</ ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}
 	find ${TMPDIR}/$@/${CORPUS}/smt -type f -name '*.gz' |\
 	xargs -P 8 gunzip -f
 	${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README
+	-rm -f $@
 	( cd ${TMPDIR}/$@; zip -r $@ README ${CORPUS}; cd ${PWD} )
 	rm -fr ${TMPDIR}/$@
 	${MKDIR} ${dir ${PACKAGES}}
@@ -586,22 +588,40 @@ pt: ${SMT}
 
 ## a zip file of SMT phrase translation tables
 ${SMT}: ${CORPUSRELEASE}/smt/%.zip: ${CORPUSWORDALIGN}/%
-	@${MKDIR} ${dir $@}
-	${MKDIR} ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}
-	rsync -av \
+	if [ -e $</model/phrase-table-filtered.gz ]; then \
+	  @${MKDIR} ${dir $@}; \
+	  ${MKDIR} ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}; \
+	  rsync -av \
 		--include '*/lex.*' \
 		--include '*/phrase*' \
 		--include="*/" \
 		--exclude="*" \
-		$</ ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}
-	find ${TMPDIR}/$@/${CORPUS}/smt -type f -name '*.gz' |\
-	xargs -P 8 gunzip -f
-	${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README
-	( cd ${TMPDIR}/$@; zip -r $@ README ${CORPUS}; cd ${PWD} )
-	rm -fr ${TMPDIR}/$@
-	${MKDIR} ${dir ${PACKAGES}}
-	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
-	chmod 644 $@
+		$</ ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}; \
+	  find ${TMPDIR}/$@/${CORPUS}/smt -type f -name '*.gz' |\
+	  xargs -P 8 gunzip -f; \
+	  ${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README; \
+	  -rm -f $@; \
+	  ( cd ${TMPDIR}/$@; zip -r $@ README ${CORPUS}; cd ${PWD} ); \
+	  rm -fr ${TMPDIR}/$@; \
+	  ${MKDIR} ${dir ${PACKAGES}}; \
+	  echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}; \
+	  chmod 644 $@; \
+	else \
+	  rm -f $@; \
+	fi
+
+
+## delete some packages that have no phrase table
+SMTFIX = ${patsubst %.zip,%.fix,${SMT}}
+smtfix: ${SMTFIX}
+
+${SMTFIX}: ${CORPUSRELEASE}/smt/%.fix: ${CORPUSWORDALIGN}/%
+	@if [ ! -e $</model/phrase-table-filtered.gz ]; then \
+	  if [ -e ${patsubst %.fix,%.zip,$@} ]; then \
+	    rm -f ${patsubst %.fix,%.zip,$@}; \
+	  fi \
+	fi
+
 
 
 ## fix broken links
