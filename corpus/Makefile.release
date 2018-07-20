@@ -624,14 +624,14 @@ ${SMTFIX}: ${CORPUSRELEASE}/smt/%.fix: ${CORPUSWORDALIGN}/%
 
 
 
-## fix broken links
-${CORPUSWORDALIGN}/%:
-	if [ -L $@ ] && [ ! -e $@ ]; then \
-	  if [ -d ${CORPUSRELEASE}/wordalign/${notdir $@} ]; then \
-	    rm -f $@; \
-	    mv ${CORPUSRELEASE}/wordalign/${notdir $@} $@; \
-	  fi \
-	fi
+# ## fix broken links
+# ${CORPUSWORDALIGN}/%:
+# 	if [ -L $@ ] && [ ! -e $@ ]; then \
+# 	  if [ -d ${CORPUSRELEASE}/wordalign/${notdir $@} ]; then \
+# 	    rm -f $@; \
+# 	    mv ${CORPUSRELEASE}/wordalign/${notdir $@} $@; \
+# 	  fi \
+# 	fi
 
 
 # create bitext info files (some basic statistics)

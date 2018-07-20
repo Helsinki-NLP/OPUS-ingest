@@ -1,0 +1,15 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = OpenSubtitles
+VERSION = v1
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=<p>A collection of documents from <a href="http://www.opensubtitles.org/">http://www.opensubtitles.org/</a>.<br/><b>IMPORTANT:</b> If you use the OpenSubtitle corpus, please, add a link to http://www.opensubtitles.org/ to your website and to your reports and publications produced with the data! I got the data under this condition!</p>
+# SRCHTML=<p>A collection of documents from <a href="http://www.opensubtitles.org/">http://www.opensubtitles.org/</a>.</p>
+EXTRAHTML=

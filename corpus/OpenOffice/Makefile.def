@@ -3,12 +3,12 @@
 # name & version of the corpus
 
 CORPUS  = OpenOffice
-VERSION = v2
+VERSION = v3
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just
 # after the name of the sub-corpus
 # EXTRAHTML is code which will be put just after the 'Download' header
 
-SRCHTML=<p>A collection of documents from <a href="http://www.openoffice.org/">http://www.openoffice.org/</a>. The original documentation of the office package Openoffice.org contains 2014 English documents which have been partly translated into 5 languages: French, Spanish, Swedish, German, and Japanese. The original documentation in English comprises about 500,000 words and translations contain between 400,000 and 500,000 words per language. All documents have been tokenized and, except for the Spanish part, tagged with parts of speech. The English part of the corpus has been marked with syntactic chunks as well.</p>
+SRCHTML=<p>A collection of documents from <a href="http://www.openoffice.org/">http://www.openoffice.org/</a>.</p>
 EXTRAHTML=

@@ -3,14 +3,6 @@
 include Makefile.def
 include ../Makefile.def
 
-
-CORPUSHOME       = ${OPUSCORPORA}/${CORPUS}3
-CORPUSSRC        = ${CORPUSHOME}/src
-CORPUSXML        = ${CORPUSHOME}/xml
-CORPUSRAW        = ${CORPUSHOME}/raw
-CORPUSPARSED     = ${CORPUSHOME}/parsed
-CORPUSHTML       = ${OPUSHTML}/${CORPUS}3
-
 # make all:
 #
 # - fetch html sources (in src/Makefile)
@@ -25,6 +17,13 @@ all:
 	${MAKE} html
 	${MAKE} cwb-index
 	rm -fr data
+
+
+# tidy up xml files (ATTENTION: requires tidy and overwrites old files!!!)
+
+tidy:
+	find xml -name '*.xml.gz' -exec ./tidy_up.sh {} \;
+	find xml -name '*.xml.gz' -exec mv {}.tidy.gz {} \;
 
 
 real-clean:
@@ -67,8 +66,8 @@ clean-raw:
 # RAWFILES = XML targets with minimal markup (sentence boundaries)
 
 SRCDIR   = src/${LANGUAGE}
-RAWFILES = $(patsubst src/%.xhp,raw/%.${XMLEXT}, \
-		$(shell find ${SRCDIR}/ -name '*.xhp'))
+RAWFILES = $(patsubst src/%.html,raw/%.${XMLEXT}, \
+		$(shell find ${SRCDIR} -name '*.html'))
 
 
 # convert all files from source format to "raw-xml"
@@ -81,7 +80,7 @@ preprocess_files: ${RAWFILES}
 
 XMLFIX=perl -e 'while (<>){s/(\/\S+\>)([^\<]+)(<)/$$1<p>$$2<\/p>$$3/gs;print;}'
 
-raw/${LANGUAGE}/%.${XMLEXT}: src/${LANGUAGE}/%.xhp
+raw/${LANGUAGE}/%.${XMLEXT}: src/${LANGUAGE}/%.html
 	mkdir -p $(shell dirname $@)
 	${XMLFIX} $< |\
 	${SENT} -out $@

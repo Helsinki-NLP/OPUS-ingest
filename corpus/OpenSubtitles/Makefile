@@ -3,78 +3,126 @@
 include Makefile.def
 include ../Makefile.def
 
-# make all:
-#
-# - fetch html sources (in src/Makefile)
-# - tokenise and sentence splitting
-# - sentence alignment (in xml/Makefile)
 
-CWB_EXTRA_ARGS = -U time
+CORPUSHOME       = ${OPUSCORPORA}/${CORPUS}2018
+CORPUSSRC        = ${CORPUSHOME}/src
+CORPUSXML        = ${CORPUSHOME}/xml
+CORPUSRAW        = ${CORPUSHOME}/raw
+CORPUSPARSED     = ${CORPUSHOME}/parsed
+CORPUSHTML       = ${OPUSHTML}/${CORPUS}2018
 
-all:
-	${MAKE} -C src all
-	${MAKE} convert
+
+
+SRC = xx
+TRG = xx
+
+HPC_PROJECT = nn9447k
+
+UNRELIABLE = $(patsubst %,unreliable/xml/%,${LANGUAGES})
+
+all: ${UNRELIABLE}
 	${MAKE} -C xml all
 	${MAKE} html
 	${MAKE} cwb-index
 	rm -fr data
 
+## index with ALL sentence alignments (also alternative ones
+## NOTE: this is probably not going to work for CWB as documents are 
+##       aligned to several other documents in the same language
 
-real-clean:
-	${MAKE} -C xml clean-align
-	${MAKE} clean-xml
-	${MAKE} clean-raw
+cwb-all-index:
+	${MAKE} -C xml complete-align-files
+	${MAKE} ALGEXT=all.xml.gz cwb-index
 
+cwb-all-index-ud:
+	${MAKE} -C xml complete-align-files
+	${MAKE} ALGEXT=all.xml.gz cwb-index-ud
+
+
+move: ${UNRELIABLE}
+
+## move unreliable files
+## (language identifier confidence below 0.1)
+
+unreliable/xml/%: xml/%
+	find $</ -type f |\
+	xargs scripts/move-unreliable.pl
+	-find $</ -type d -empty -exec rmdir {} \;
+	-find $</ -type d -empty -exec rmdir {} \;
+	-find $(subst xml,raw,$<)/ -type d -empty -exec rmdir {} \;
+	-find $(subst xml,raw,$<)/ -type d -empty -exec rmdir {} \;
+
+
+submit:
+	echo '#! /bin/bash' > move.sh; \
+	echo 'make move' >> move.sh; \
+	sbatch  -A ${HPC_PROJECT} -c 1 --mem-per-cpu=2G \
+		-t 48:00:00 move.sh
+
+
+
+submit-convert:
+	echo '#! /bin/bash' > moses-${SRC}-${TRG}.sh; \
+	echo 'make /usit/abel/u1/joerg/OPUS/html/OpenSubtitles2016/${SRC}-${TRG}.txt.zip' >> moses-${SRC}-${TRG}.sh; \
+	sbatch  -A ${HPC_PROJECT} -c 1 --mem-per-cpu=2G \
+		-t 8:00:00 moses-${SRC}-${TRG}.sh
 
 # include som standard OPUS variables/targets
 
+include ../Makefile.process
 include ../Makefile.annotate
-include ../Makefile.parse
 include ../Makefile.cwb
 # include ../Makefile.html
 include ../Makefile.release
 include ../Makefile.submit
-
-# convert all files for all languages (subdirectories in src/)
-
-convert: preprocess annotate
+include ../Makefile.udparse
+# include ../Makefile.parse
 
 
-# pre-processing is special for EUonst (from html to xml)
-# --> skip conversion from text (do not use standard ../Makefile.preprocess)
-# --> skip markup and run only the XMLFIX + sentence markup
-
-preprocess:
-	for l in ${LANGUAGES}; do \
-		${MAKE} LANGUAGE=$$l preprocess_files; \
-	done
-
-clean-raw:
-	for l in ${LANGUAGES}; do \
-	    if [ -d "raw/$$l" ]; then \
-		rm -fr raw/$$l; \
-	    fi \
-	done
-
-# SRCDIR = home directory of source files for current language
-# RAWFILES = XML targets with minimal markup (sentence boundaries)
-
-SRCDIR   = src/${LANGUAGE}
-RAWFILES = $(patsubst src/%.html,raw/%.${XMLEXT}, \
-		$(shell find ${SRCDIR} -name '*.html'))
+pack:
+	@echo '!!!!!!!! skip this for subtitles because it is too big !!!!!!!!!!'
 
 
-# convert all files from source format to "raw-xml"
+TMXSH=$(patsubst %.tmx.gz,%.sh,${TMX})
+INFOSH=$(patsubst ${CORPUSXML}/%.info,%.sh,${CES_INFO})
+LANGSH = $(patsubst %,%.sh,${LANGUAGES})
 
-preprocess_files: ${RAWFILES}
 
-# XMLFIX: a little perl hack to get some additional markup around 
-#      free-standing texts in the source XML (add <p> tags!)
-#      (not nice but seems to work ....)
+submit-all-tmx: $(TMXSH)
+submit-all-info: $(INFOSH)
+submit-all-pack: $(LANGSH)
 
-XMLFIX=perl -e 'while (<>){s/(\/\S+\>)([^\<]+)(<)/$$1<p>$$2<\/p>$$3/gs;print;}'
 
-raw/${LANGUAGE}/%.${XMLEXT}: src/${LANGUAGE}/%.html
-	mkdir -p $(shell dirname $@)
-	${XMLFIX} $< |\
-	${SENT} -out $@
+$(TMXSH):
+	if [ ! -e $(patsubst %.sh,%.tmx.gz,$@) ]; then \
+	  echo '#! /bin/bash' > $@; \
+	  echo 'make $(patsubst %.sh,%.txt.zip,$@)' >> $@; \
+	  echo 'make $(patsubst %.sh,%.tmx.gz,$@)' >> $@; \
+	  echo 'rm -f $@' >> $@; \
+	  sbatch  -A ${HPC_PROJECT} -c 1 --mem-per-cpu=2G \
+		-t 12:00:00 $@; \
+	fi
+
+$(INFOSH):
+	if [ ! -e $(patsubst %.sh,${CORPUSXML}/%.info,$@) ]; then \
+	  echo '#! /bin/bash' > $@; \
+	  echo 'make $(patsubst %.sh,${CORPUSXML}/%.info,$@)' >> $@; \
+	  echo 'make $(patsubst %.sh,${CORPUSXML}/%.txt.info,$@)' >> $@; \
+	  echo 'make $(patsubst %.sh,${CORPUSXML}/%.tmx.info,$@)' >> $@; \
+	  echo 'rm -f $@' >> $@; \
+	  sbatch  -A ${HPC_PROJECT} -c 1 --mem-per-cpu=2G \
+		-t 2:00:00 $@; \
+	fi
+
+$(LANGSH):
+	if [ ! -e $(patsubst %.sh,${CORPUSHTML}/%.tar.gz,$@) ]; then \
+	  echo '#! /bin/bash' > $@; \
+	  echo 'make $(patsubst %.sh,${CORPUSXML}/%.info,$@)' >> $@; \
+	  echo 'make $(patsubst %.sh,${CORPUSHTML}/%.tar.gz,$@)' >> $@; \
+	  echo 'make $(patsubst %.sh,${CORPUSHTML}/%.raw.tar.gz,$@)' >> $@; \
+	  echo 'rm -f $@' >> $@; \
+	  sbatch  -A ${HPC_PROJECT} -c 1 --mem-per-cpu=2G \
+		-t 12:00:00 $@; \
+	fi
+
+
