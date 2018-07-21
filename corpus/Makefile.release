@@ -20,11 +20,8 @@ ALG      = $(patsubst ${CORPUSXML}/%,${CORPUSRELEASE}/xml/%,$(CES))
 TMX      = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/tmx/%.tmx.gz,$(CES))
 MOSES    = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/moses/%.txt.zip,$(CES))
 SMT      = $(patsubst %,${CORPUSRELEASE}/smt/%.zip,\
-		$(notdir $(sort $(shell find ${CORPUSWORDALIGN} -maxdepth 1 -mindepth 1 -type d -name '*-*') \
-				$(shell find ${CORPUSRELEASE}/wordalign -maxdepth 1 -mindepth 1 -type d -name '*-*'))))
+		$(notdir $(sort $(shell find ${CORPUSWORDALIGN} -maxdepth 1 -mindepth 1 -type d -name '*-*'))))
 WORDALG  = $(patsubst %.zip,%.alg.zip,${SMT})
-
-
 
 LANG_XML = $(patsubst %,${CORPUSRELEASE}/xml/%.zip,${LANGUAGES})
 LANG_RAW = $(patsubst %,${CORPUSRELEASE}/raw/%.zip,${LANGUAGES})
@@ -589,7 +586,7 @@ pt: ${SMT}
 ## a zip file of SMT phrase translation tables
 ${SMT}: ${CORPUSRELEASE}/smt/%.zip: ${CORPUSWORDALIGN}/%
 	if [ -e $</model/phrase-table-filtered.gz ]; then \
-	  @${MKDIR} ${dir $@}; \
+	  ${MKDIR} ${dir $@}; \
 	  ${MKDIR} ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}; \
 	  rsync -av \
 		--include '*/lex.*' \
@@ -600,7 +597,7 @@ ${SMT}: ${CORPUSRELEASE}/smt/%.zip: ${CORPUSWORDALIGN}/%
 	  find ${TMPDIR}/$@/${CORPUS}/smt -type f -name '*.gz' |\
 	  xargs -P 8 gunzip -f; \
 	  ${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README; \
-	  -rm -f $@; \
+	  rm -f $@; \
 	  ( cd ${TMPDIR}/$@; zip -r $@ README ${CORPUS}; cd ${PWD} ); \
 	  rm -fr ${TMPDIR}/$@; \
 	  ${MKDIR} ${dir ${PACKAGES}}; \
