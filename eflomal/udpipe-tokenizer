@@ -1,0 +1,164 @@
+#!/usr/bin/env perl
+#-*-perl-*-
+#
+#
+
+=head1 NAME
+
+opus-udpipe
+
+=head1 SYNOPSIS
+
+ udpipe-tokenizer -l en < english.txt > toknized.txt
+
+=head1 OPTIONS:
+
+ -l <langid> ......... language ID (ISO639-1)
+ -m <modeldir> ....... path to udpipe models
+ -v <version> ........ model version
+ -L .................. list supported languages
+ -M .................. list UDPipe models
+
+Option -M can be combined with -L or -l
+
+=head1 LICENSE
+
+ ---------------------------------------------------------------------------
+ Copyright (C) 2004-2017 Joerg Tiedemann  <jorg.tiedemann@helsinki.fi>
+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ ---------------------------------------------------------------------------
+
+=cut
+
+
+use warnings;
+use strict;
+use open qw(:std :utf8);
+
+use Getopt::Std;
+use XML::Parser;
+use XML::Writer;
+
+use Ufal::UDPipe;
+
+use File::Basename;
+use FindBin qw($Bin);
+use lib $Bin;
+use OPUS::Tools::ISO639;
+
+our ($opt_l, $opt_m, $opt_v, $opt_L, $opt_M);
+
+getopts('l:m:v:LM');
+
+my $lang         = $opt_l || 'en';
+my $inputFormat  = 'horizontal';
+my $outputFormat = 'horizontal';
+
+my $ModelDir = $opt_m;
+my $version  = $opt_v;
+my $host     = `hostname -d`;
+
+my $DefaultVersion = 'ud-2.0-170801';
+
+# path alternatives for model-dir
+# (in case modeldir is not given on command-line)
+
+if (exists $ENV{UDPIPE_MODELS}){
+    $ModelDir = $ENV{UDPIPE_MODELS};
+}
+elsif ($host=~/csc/){
+    $ModelDir = "/proj/nlpl/software/udpipe/latest/ud-2.0-conll17";
+}
+elsif ($host=~/uio/){
+    $ModelDir = "/projects/nlpl/software/udpipe/latest/ud-2.0-conll17";
+}
+else{
+    my $OpusTools = '/home/joerg/OPUS/tools';
+    $version = '1.2-160523' unless ($version);
+    $ModelDir = "$OpusTools/public/preprocess/udpipe/udpipe-ud-$version";
+}
+
+# set model version
+unless ($version){
+    my @mod = glob("$ModelDir/*-ud-*.udpipe");
+    if ($mod[0] =~/ud-(.*).udpipe$/){
+	$version = $1;
+    }
+    else{
+	$version = $DefaultVersion;
+    }
+}
+
+
+## NEW: scan all model names in ModelDir
+##      (rely on name-to-iso639 conversion)
+
+my %UDmodels = ();
+my @AllModels = glob("$ModelDir/*-ud-*.udpipe");
+foreach (@AllModels){
+    my $modelbase = basename($_);
+    if ($modelbase=~/^(.+)\-(ud)\-$version.udpipe$/){
+	my $lang = $1;
+	$lang =~s/\_/ /g;
+	my $id = iso639_NameToTwo($lang);
+	if ($id=~/^..(\_..)?$/){
+	    $UDmodels{$id} = $modelbase;
+	}
+    }
+}
+
+
+# just list supported languages and models
+if ($opt_L){
+    print join(' ',sort keys %UDmodels);
+    # print "\n";
+    exit 0;
+}
+if ($opt_M){
+    if ($opt_l){
+	print $ModelDir,'/',$UDmodels{$opt_l} if (exists $UDmodels{$opt_l});
+	exit 0;
+    }
+    print join("\n",sort values %UDmodels);
+    # print "\n";
+    exit 0;
+}
+
+
+my $modelFile = $ModelDir.'/'.$UDmodels{$lang};
+
+print STDERR "Loading model $UDmodels{$lang} ... ";
+my $model = Ufal::UDPipe::Model::load($modelFile);
+$model or die "Cannot load model from file '$modelFile'\n";
+print STDERR "done\n";
+
+my $tokenizer = $model->newTokenizer($Ufal::UDPipe::Model::DEFAULT);
+my $writer    = Ufal::UDPipe::OutputFormat::newOutputFormat($outputFormat);
+my $sentence  = Ufal::UDPipe::Sentence->new();
+my $error     = Ufal::UDPipe::ProcessingError->new();
+
+binmode(STDIN,':utf8');
+binmode(STDOUT,':utf8');
+
+while (<>){
+    $tokenizer->setText($_);
+    my @sents = ();
+    while ($tokenizer->nextSentence($sentence)) {
+	push(@sents,$writer->writeSentence($sentence));
+	chomp($sents[-1]);
+    }
+    print join(' ',@sents),"\n";
+}
