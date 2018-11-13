@@ -7,7 +7,7 @@ include Makefile.def
 include ../Makefile.def
 
 DOWNLOADURL = https://s3.amazonaws.com/web-language-models/paracrawl
-TRGLANGS = ${sort de fr es it pt nl pl cs ro fi lv et ru}
+TRGLANGS = ${sort de fr es it pt nl pl cs ro fi lv et ru ga hr mt lt hu}
 
 ## make all:
 ##
@@ -82,7 +82,38 @@ include ../Makefile.tokenize
 MOSES2OPUS = ${HOME}/research/nlpl/opus-tools/scripts/moses2opus
 
 ## fetch and convert (simple for-loop - cannot run in parallel)
-fetch:
+#
+# https://s3.amazonaws.com/web-language-models/paracrawl/release2/paracrawl-release2.en-ga.withstats.filtered-zipporah.tmx.gz
+# https://s3.amazonaws.com/web-language-models/paracrawl/release2/paracrawl-release2.en-mt.withstats.filtered-zipporah.tmx.gz
+# https://s3.amazonaws.com/web-language-models/paracrawl/release2/paracrawl-release2.en-lt.withstats.filtered-bicleaner.tmx.gz
+
+.PHONY: fetch
+fetch: fetch-${VERSION}
+
+## fetch version 1 and convert (simple for-loop - cannot run in parallel)
+fetch-${VERSION}:
+	mkdir -p raw xml
+	for l in ${TRGLANGS}; do \
+	  s=`echo "en $$l" | tr " " "\n" | sort | head -1`;\
+	  t=`echo "en $$l" | tr " " "\n" | sort | tail -1`;\
+	  echo "xml/$$s-$$t.xml.gz"; \
+	  wget ${DOWNLOADURL}/release2/paracrawl-release2.en-$$l.withstats.filtered-${FILTER}.tmx.gz; \
+	  echo $$s;\
+	  echo $$t;\
+	  cd raw; \
+	  ${MOSES2OPUS} -s $$s -t $$t  \
+		-z -b paracrawl-zipporah0-dedup-clean.$$s-$$t \
+		-p 100000 \
+		../*-clean.$$s ../*-clean.$$t |\
+	  gzip -c > ../xml/$$s-$$t.xml.gz; \
+	  cd ..; \
+	  rm -f paracrawl-${VERSION}.en-$$l.zipporah0-dedup-clean.*; \
+	done
+	touch $@
+
+
+## fetch version 1 and convert (simple for-loop - cannot run in parallel)
+fetch-v1:
 	mkdir -p raw xml
 	for l in ${TRGLANGS}; do \
 	  s=`echo "en $$l" | tr " " "\n" | sort | head -1`;\
@@ -103,7 +134,6 @@ fetch:
 	  fi; \
 	  rm -f paracrawl-${VERSION}.en-$$l.zipporah0-dedup-clean.*; \
 	done
-
 
 
 

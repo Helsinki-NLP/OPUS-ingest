@@ -5,6 +5,9 @@
 #    (e.g. en-fr does not run with 64g)
 #    --> set MEM=128g
 #
+#  - en-fr still crashes with 128GB!
+#    make MEM=256g QUEUE=hugemem LANGPAIR=en-fr all.submit
+#
 #
 
 
@@ -44,11 +47,51 @@ data: ${WORKDIR}/train.${SRC}-${TRG}
 all-langs:
 	for p in $(patsubst %.txt.zip,%,\
 		$(sort $(notdir \
+		$(wildcard /proj/nlpl/data/OPUS/*/latest/moses/*-*.txt.zip)))); do \
+	  if [ ! -e work/$$p/$$p.priors ]; then \
+	    make LANGPAIR=$$p all.submit; \
+	  fi \
+	done
+
+
+## languages with 2-letter codes
+all-langs2:
+	for p in $(patsubst %.txt.zip,%,\
+		$(sort $(notdir \
 		$(wildcard /proj/nlpl/data/OPUS/*/latest/moses/??-??.txt.zip)))); do \
 	  if [ ! -e work/$$p/$$p.priors ]; then \
 	    make LANGPAIR=$$p all.submit; \
 	  fi \
 	done
+
+
+## languages with 3-letter codes
+all-langs3:
+	for p in $(patsubst %.txt.zip,%,\
+		$(sort $(notdir \
+		$(wildcard /proj/nlpl/data/OPUS/*/latest/moses/???-???.txt.zip)))); do \
+	  if [ ! -e work/$$p/$$p.priors ]; then \
+	    make LANGPAIR=$$p all.submit; \
+	  fi \
+	done
+	for p in $(patsubst %.txt.zip,%,\
+		$(sort $(notdir \
+		$(wildcard /proj/nlpl/data/OPUS/*/latest/moses/??-???.txt.zip)))); do \
+	  if [ ! -e work/$$p/$$p.priors ]; then \
+	    make LANGPAIR=$$p all.submit; \
+	  fi \
+	done
+	for p in $(patsubst %.txt.zip,%,\
+		$(sort $(notdir \
+		$(wildcard /proj/nlpl/data/OPUS/*/latest/moses/???-??.txt.zip)))); do \
+	  if [ ! -e work/$$p/$$p.priors ]; then \
+	    make LANGPAIR=$$p all.submit; \
+	  fi \
+	done
+
+
+
+
 
 all-langs-test:
 	for p in $(patsubst %.txt.zip,%,\

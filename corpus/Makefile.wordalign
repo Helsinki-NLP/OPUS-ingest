@@ -402,13 +402,13 @@ wordalign-align: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
 wordalign-pt: ${SRC}-${TRG}/model/phrase-table.gz
 
 .PHONY: wordalign-filter
-wordalign-filter: ${SRC}-${TRG}/model/phrase-table-filtered.gz ${CORPUSHOME}/dic ${CORPUSHTML}/dic/${SRC}-${TRG}.dic.gz
+wordalign-filter: ${SRC}-${TRG}/model/phrase-table-filtered.gz ${CORPUSHOME}/dic ${CORPUSHOME}/dic/${SRC}-${TRG}.dic.gz
 	rm -f ${SRC}-${TRG}/model/phrase-table.gz
 	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
 	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
 
 .PHONY: wordalign
-wordalign: ${SRC}-${TRG}/model/phrase-table-filtered.gz ${CORPUSHOME}/dic ${CORPUSHTML}/dic/${SRC}-${TRG}.dic.gz
+wordalign: ${SRC}-${TRG}/model/phrase-table-filtered.gz ${CORPUSHOME}/dic ${CORPUSHOME}/dic/${SRC}-${TRG}.dic.gz
 	rm -f ${SRC}-${TRG}/model/phrase-table.gz
 	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
 	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
@@ -608,9 +608,15 @@ ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz: \
 
 
 ## NEW: use eflomal (less memory usage)
+## NEW: use priors if they exist (NOTE: need eflomal - priors branch!)
 
 %/model/aligned.srctotgt.gz: %/model/aligned.${SRCEXT} %/model/aligned.${TRGEXT}
+ifneq ("$(wildcard $(OPUSHOME)/eflomal/${SRCEXT}-${TRGEXT}.priors)","")
+	${EFLOMAL} -v -s $< -t ${word 2,$^} -f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 \
+		-p $(OPUSHOME)/eflomal/${SRCEXT}-${TRGEXT}.priors
+else
 	${EFLOMAL} -v -s $< -t ${word 2,$^} -f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3
+endif
 	gzip -f ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
 
 %/model/aligned.tgttosrc.gz: %/model/aligned.srctotgt.gz
@@ -731,16 +737,35 @@ filter-all-phrase-tables: $(PHRASETABLES)
 .PHONY:
 filter-phrase-table: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 
-%/phrase-table-filtered.gz: %.src.sa_suffix %.trg.sa_suffix %/phrase-table.gz
+# %/phrase-table-filtered.gz: %.src.sa_suffix %.trg.sa_suffix %/phrase-table.gz
+# 	zcat $(subst -filtered,,$@) | \
+# 	${MOSESCONTRIB}/sigtest-filter/filter-pt \
+# 		-f $< \
+# 		-e $(subst src,trg,$<) \
+# 		-l a+e -n 30 2> $(@:.gz=.log) |\
+# 	gzip -c > $@
+# 	rm -f $<* $(subst src,trg,$<)*
+# 	rm -f $^
+# 	gzip -f $(@:.gz=.log)
+
+
+## NEW: don't depend on suffix arrays anymore (would cause to re-do phrase extraction)
+
+%/phrase-table-filtered.gz:
+	${MAKE} $(patsubst %/phrase-table-filtered.gz,%.src.sa_suffix,$@) \
+		$(patsubst %/phrase-table-filtered.gz,%.trg.sa_suffix,$@) \
+		${dir $@}phrase-table.gz
 	zcat $(subst -filtered,,$@) | \
 	${MOSESCONTRIB}/sigtest-filter/filter-pt \
-		-f $< \
-		-e $(subst src,trg,$<) \
+		-f $(patsubst %/phrase-table-filtered.gz,%.src.sa_suffix,$@) \
+		-e $(patsubst %/phrase-table-filtered.gz,%.trg.sa_suffix,$@) \
 		-l a+e -n 30 2> $(@:.gz=.log) |\
 	gzip -c > $@
-	rm -f $<* $(subst src,trg,$<)*
-	rm -f $^
+	rm -f $(patsubst %/phrase-table-filtered.gz,%.src.sa_suffix,$@)*
+	rm -f $(patsubst %/phrase-table-filtered.gz,%.trg.sa_suffix,$@)*
+	rm -f ${dir $@}phrase-table.gz
 	gzip -f $(@:.gz=.log)
+
 
 # create suffix arrays for the bitext (training corpus)
 

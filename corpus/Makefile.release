@@ -513,12 +513,14 @@ $(MOSES): ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSXML}/%.xml.gz
 	  sed 's/  */ /g' < $$BASE.$$T > $$BASE.$$T.tmp; \
 	  mv $$BASE.$$S.tmp $$BASE.$$S; \
 	  mv $$BASE.$$T.tmp $$BASE.$$T; \
+	  cat $$BASE.ids | ${OPUSTOOLS}/wordalign/ids2links.pl > $$BASE.xml;\
 	  ${MKDIR} ${TMPDIR}/$$BASE; \
 	  ${MAKE} PACKAGE="${CORPUS}.$$S-$$T in Moses format" ${TMPDIR}/$$BASE/README; \
+	  rm -f $$BASE.ids; \
 	  ${MAKE} ${TMPDIR}/$$BASE/LICENSE; \
 	  zip -j $@ ${TMPDIR}/$$BASE/README ${TMPDIR}/$$BASE/LICENSE \
-			$$BASE.$$S $$BASE.$$T $$BASE.ids; \
-	  rm -f $$BASE.$$S $$BASE.$$T $$BASE.ids;\
+			$$BASE.$$S $$BASE.$$T $$BASE.xml; \
+	  rm -f $$BASE.$$S $$BASE.$$T $$BASE.xml;\
 	  rm -f ${TMPDIR}/$$BASE/README ${TMPDIR}/$$BASE/LICENSE;\
 	  rmdir ${TMPDIR}/$$BASE; )
 	${MKDIR} ${dir ${PACKAGES}}
