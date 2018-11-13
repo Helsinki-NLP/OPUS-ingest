@@ -82,7 +82,8 @@ TRGCORPUS  = ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
 # try to guess memory and time consumption for batch jobs
 # (based on size on source language tokens)
 
-CORPUS_SIZE = ${shell sed -n '2p' ${CORPUSHOME}/xml/${LANGPAIR}.txt.info}
+CORPUS_SIZE = ${shell sed -n '2p' ${CORPUSRELEASE}/info/${LANGPAIR}.txt.info}
+
 
 ## for efmaral: we need a lot of memory!
 EFMARAL_ALIGN_MEM = ${shell \
