@@ -22,7 +22,8 @@ STEMSIZE = 4
 OPUS = ${wildcard /proj/nlpl/data/OPUS/*/latest/moses/${SRC}-${TRG}.txt.zip}
 # OPUS = ${wildcard /proj/nlpl/data/OPUS/EUconst/latest/moses/${SRC}-${TRG}.txt.zip}
 
-WORKDIR = work/${SRC}-${TRG}
+# WORKDIR = work/${SRC}-${TRG}
+WORKDIR = /tmp/eflomal/${SRC}-${TRG}
 EFLOMAL = ${HOME}/appl_taito/tools/eflomal
 
 ## skip e-mailing ...
@@ -40,7 +41,7 @@ QUEUE    = serial
 WALLTIME = 72
 
 
-all: ${WORKDIR}/${SRC}-${TRG}.priors
+all: ${SRC}-${TRG}.priors
 data: ${WORKDIR}/train.${SRC}-${TRG}
 
 
@@ -48,7 +49,7 @@ all-langs:
 	for p in $(patsubst %.txt.zip,%,\
 		$(sort $(notdir \
 		$(wildcard /proj/nlpl/data/OPUS/*/latest/moses/*-*.txt.zip)))); do \
-	  if [ ! -e work/$$p/$$p.priors ]; then \
+	  if [ ! -e $$p.priors ]; then \
 	    make LANGPAIR=$$p all.submit; \
 	  fi \
 	done
@@ -59,45 +60,18 @@ all-langs2:
 	for p in $(patsubst %.txt.zip,%,\
 		$(sort $(notdir \
 		$(wildcard /proj/nlpl/data/OPUS/*/latest/moses/??-??.txt.zip)))); do \
-	  if [ ! -e work/$$p/$$p.priors ]; then \
+	  if [ ! -e $$p.priors ]; then \
 	    make LANGPAIR=$$p all.submit; \
 	  fi \
 	done
-
-
-## languages with 3-letter codes
-all-langs3:
-	for p in $(patsubst %.txt.zip,%,\
-		$(sort $(notdir \
-		$(wildcard /proj/nlpl/data/OPUS/*/latest/moses/???-???.txt.zip)))); do \
-	  if [ ! -e work/$$p/$$p.priors ]; then \
-	    make LANGPAIR=$$p all.submit; \
-	  fi \
-	done
-	for p in $(patsubst %.txt.zip,%,\
-		$(sort $(notdir \
-		$(wildcard /proj/nlpl/data/OPUS/*/latest/moses/??-???.txt.zip)))); do \
-	  if [ ! -e work/$$p/$$p.priors ]; then \
-	    make LANGPAIR=$$p all.submit; \
-	  fi \
-	done
-	for p in $(patsubst %.txt.zip,%,\
-		$(sort $(notdir \
-		$(wildcard /proj/nlpl/data/OPUS/*/latest/moses/???-??.txt.zip)))); do \
-	  if [ ! -e work/$$p/$$p.priors ]; then \
-	    make LANGPAIR=$$p all.submit; \
-	  fi \
-	done
-
-
 
 
 
 all-langs-test:
 	for p in $(patsubst %.txt.zip,%,\
 		$(sort $(notdir \
-		$(wildcard /proj/nlpl/data/OPUS/*/latest/moses/??-??.txt.zip)))); do \
-	  if [ ! -e work/$$p/$$p.priors ]; then \
+		$(wildcard /proj/nlpl/data/OPUS/*/latest/moses/*-*.txt.zip)))); do \
+	  if [ ! -e $$p.priors ]; then \
 	    echo "make MEM=64g LANGPAIR=$$p all.submit"; \
 	  fi \
 	done
@@ -184,7 +158,7 @@ ${WORKDIR}/train.${SRC}-${TRG}: ${WORKDIR}/train.tok.${SRC} ${WORKDIR}/train.tok
 
 
 
-${WORKDIR}/${SRC}-${TRG}.priors: 
+${SRC}-${TRG}.priors: 
 	${MAKE} ${WORKDIR}/train.${SRC}-${TRG}
 	${EFLOMAL}/align.py \
 		-i ${WORKDIR}/train.${SRC}-${TRG} \
