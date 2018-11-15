@@ -30,6 +30,7 @@
     <h3>Latest News</h3>
 
     <ul>
+    <li>2018-10-06: New corpus: <a href="memat.php">memat</a> (Xhosa/English)</li>
     <li>2018-02-15: New corpora: <a href="ParaCrawl.php">ParaCrawl</a>, <a href="XhosaNavy.php">XhosaNavy</a></li>
     <li>2017-11-06: New version: <a href="OpenSubtitles2018.php">OpenSubtitles2018</a></li>
     <li>2017-11-01: New server location: <a href="http://opus.nlpl.eu">http://opus.nlpl.eu</a></li>
@@ -219,6 +220,9 @@
           <li><a href="KDEdoc.php">KDEdoc - the KDE manual corpus</a> ( <a href="download.php?f=KDEdoc.tar.gz" rel="nofollow">KDEdoc.tar.gz</a> - 45 MB)</li>
 
           <li><a href="MBS.php">MBS - Belgisch Staatsblad corpus</a> (<a href="download.php?f=MBS.tar.gz" rel="nofollow">MBS.tar.gz</a> - 1.5 GB)</li>
+
+          <li><a href="/memat.php">memat - Xhosa/English parallel data</a></li>
+          <li><a href="MontenegrinSubs.php">MontenegrinSubs - Montenegrin movie subtitles</a></li>
 
           <li><a href="MultiUN.php">MultiUN</a> - Translated UN documents (<a href="http://opus.nlpl.eu/download.php?f=MultiUN.tar.gz">MultiUN.tar.gz</a> - 27 GB)</li>
 
