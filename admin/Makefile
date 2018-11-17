@@ -20,12 +20,20 @@ CONTAINER = OPUS-${CORPUS}
 BIG_CORPORA = giga-fren MultiUN EUbookshop ParaCrawl OpenSubtitles
 SWIFT_EXTRA = 
 
+## missing corpora in import
+MISSING = PHP RF SETIMES SPC Tanzil Tatoeba TED2013 TedTalks TEP Ubuntu UN Wikipedia WikiSource WMT-News XhosaNavy
 
 all:
 	@for c in $(filter-out ${BIG_CORPORA},${CORPORA}); do \
-	  if [ "$$c" != "OpenSubtitles" ]; then \
 	    ${MAKE} CORPUS=$$c upload; \
-	  fi \
+	done
+	@for c in $(filter ${BIG_CORPORA},${CORPORA}); do \
+	    ${MAKE} CORPUS=$$c SWIFT_EXTRA='--use-slo --segment-size 5G' upload; \
+	done
+
+missing:
+	@for c in $(MISSING); do \
+	    ${MAKE} CORPUS=$$c upload; \
 	done
 	@for c in $(filter ${BIG_CORPORA},${CORPORA}); do \
 	    ${MAKE} CORPUS=$$c SWIFT_EXTRA='--use-slo --segment-size 5G' upload; \
@@ -37,12 +45,12 @@ upload:
 	@cd ${OPUS}; \
 	for v in ${VERSIONS}; do \
 	  cd ${CORPUS}; \
-	  for d in `find $$v -mindepth 1 -maxdepth 1 -type d -not -path '*\/info'`; do
-	    swift upload ${CONTAINER} --changed --skip-identical ${SWIFT_EXTRA} $$d; \
-	  do; \
+	  find $$v -mindepth 1 -maxdepth 1 -type d -not -path '*\/info' -exec \
+	       swift upload ${CONTAINER} --changed --skip-identical ${SWIFT_EXTRA} {} \; ;\
 	  cd ..; \
 	done
 	swift post ${CONTAINER} --read-acl ".r:*"
+
 
 
 
