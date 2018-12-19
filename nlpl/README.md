@@ -1,19 +1,53 @@
 # NLPL Activity: Create a new home for OPUS #
 
-The goal of this activity is to setup OPUS inside of a proper IT framework.
+The goal of this activity is to set up OPUS inside of a proper IT framework and to provide tools and services for working with the data.
 
+* Temporary OPUS server on CSC: http://vm1017.kaj.pouta.csc.fi
+* [Admin](Admin.md)
+* [Using ObjectStorage](ObjectStorage.md)
+* [Setting up LetsMT repository](LetsMT.md) (mostly obsolete)
+* [To-do and wish-list](ToDo.md)
 
-## Install ##
+## Software and Modules
 
-Build scripts are available in directory `software/build_scripts`.
-Install scripts and modules by running
+OPUS-related software and modules are available on taito:
+
+* look into `/proj/nlpl/software/`
+* modules: nlpl-uplug and nlpl-opus
 
 ~~~~
-make -C software/build_scripts install
+module use -a /proj/nlpl/modules
+module load nlpl-opus
 ~~~~
 
+You can try running `opus-read` to look at specific bitexts
 
-## Data ##
+~~~~
+# aligned English-French subtitles
+opus-read OpenSubtitles2016/en-fr | less
+
+# more info about opus-read
+man opus-read
+~~~~
+
+More information about using modules (is this the package we use on taito?)
+ * http://modules.sourceforge.net
+ * https://modules.readthedocs.io/en/stable/INSTALL.html
+ * https://modules.readthedocs.io/en/stable/module.html
+ * http://modules.sourceforge.net/tcl/modulefile.html
+ * http://modules.sourceforge.net/c/modulefile.html
+
+## Data
+
+* All OPUS data sets are now available on taito: `/proj/nlpl/corpora/OPUS`. 
+* The most important sub-directory is `/proj/nlpl/corpora/OPUS/corpus`. 
+* More (but slightly outdated) information about the corpus structure, data formats is available on the OPUS-Wiki: http://vm1017.kaj.pouta.csc.fi/trac
+* We have a temporary server on CSC: http://vm1017.kaj.pouta.csc.fi/
+
+
+# Tasks
+
+## Data-related tasks
 
 * move data to project directory on CSC (what is a good permanent space?)
 * corpus creation/processing environment on CSC

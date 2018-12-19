@@ -26,6 +26,7 @@ if [ `hostname --domain` == "csc.fi" ]; then
     export NLPL_COMMON=$NLPL_HOME/software/nlpl-common
     export PERL5LIB=$NLPL_COMMON/share/perl5:$NLPL_COMMON/lib64/perl5:$NLPL_COMMON/lib/perl5
     module load StdEnv
+    module load python-env/intelpython3.5
     mkdir -p $NLPL_COMMON
 else
     export NLPL_HOME=$NLPL_ABEL

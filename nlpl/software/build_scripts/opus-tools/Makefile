@@ -5,14 +5,18 @@
 # Joerg Tiedemann <jorg.tiedemann@helsinki.fi>
 # created: Tue Jun 27, 2017
 #
+# CHANGES:
+#  - 2018-12-19: moved to github instead of bitbucket
+#  - 2018-12-19: fetch tagged version instead of latest git source
+#
 
 include ../Makefile.common
 
 
 PACKAGE = opus-tools
-VERSION = latest
+VERSION = v0.2
 
-GITURL = https://bitbucket.org/tiedemann/opus-tools.git
+GITURL = https://github.com/Helsinki-NLP/opus-tools.git
 
 PACKAGE_SOURCE = ${NLPL_SOURCES}/${PACKAGE}/${VERSION}
 PACKAGE_HOME = ${NLPL_SOFTWARE}/${PACKAGE}/${VERSION}
@@ -37,6 +41,9 @@ clean:
 ${PACKAGE_SOURCE}:
 	${MKDIR} ${NLPL_SOURCES}/${PACKAGE}
 	git clone ${GITURL} $@
+	cd $@ && git fetch
+	cd $@ && git fetch --tags
+	cd $@ && git checkout ${VERSION}
 
 ## TODO: should we add UDPipe dependency?
 ##	@perl -e 'Ufal::UDPipe;' || ${CPAN} Ufal::UDPipe

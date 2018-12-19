@@ -5,7 +5,11 @@
 ## source /proj/OPUS/admin/project_2000661-openrc.sh
 
 
-OPUS     = /proj/nlpl/data/OPUS
+OPUS_TAITO = /proj/nlpl/data/OPUS
+OPUS_ABEL  = /projects/nlpl/data/OPUS
+ABEL_USER  = joerg@abel.uio.no
+
+OPUS     = ${OPUS_TAITO}
 CORPORA  = ${sort ${notdir ${shell find ${OPUS} -mindepth 1 -maxdepth 1 -type d }}}
 CORPUS   = ${firstword ${CORPORA}}
 VERSIONS = ${notdir ${shell find ${OPUS}/${CORPUS} -maxdepth 1 -mindepth 1 -type d}}
@@ -35,9 +39,49 @@ missing:
 	@for c in $(MISSING); do \
 	    ${MAKE} CORPUS=$$c upload; \
 	done
+
+big:
 	@for c in $(filter ${BIG_CORPORA},${CORPORA}); do \
 	    ${MAKE} CORPUS=$$c SWIFT_EXTRA='--use-slo --segment-size 5G' upload; \
 	done
+
+
+opus2abel:
+	for c in ${CORPORA}; do \
+	  ssh ${ABEL_USER} mkdir -p ${OPUS_ABEL}/$$c/latest; \
+	  rsync -ahv --delete --include '**/*.zip' \
+		${OPUS}/$$c/latest/raw ${ABEL_USER}:${OPUS_ABEL}/$$c/latest/; \
+	  rsync -ahv --delete \
+		--exclude '**/.*' \
+		--exclude '**/*.alt.xml.gz' \
+		--exclude '**/*.insert.xml.gz' \
+		--exclude '**/*.misaligned.xml.gz' \
+		--exclude '**/*.pct.xml.gz' \
+		--exclude '**/*.spell.xml.gz' \
+		--exclude '**/*.other.xml.gz' \
+		--include '**/*.xml.gz' \
+		--include '**/' \
+		--exclude '*' \
+	  ${OPUS}/$$c/latest/xml ${ABEL_USER}:${OPUS_ABEL}/$$c/latest/; \
+	  rsync -ahv ${OPUS}/$$c/latest/LICENSE \
+		${OPUS}/$$c/latest/raw ${ABEL_USER}:${OPUS_ABEL}/$$c/latest/; \
+	  rsync -ahv ${OPUS}/$$c/latest/README \
+		${OPUS}/$$c/latest/raw ${ABEL_USER}:${OPUS_ABEL}/$$c/latest/; \
+	done
+
+
+
+## upload eflomal model priors
+eflomal:
+	mkdir priors
+	cp ../eflomal/*.priors priors/
+	find priors -type f -empty -delete
+	gzip -f priors/*.priors
+	swift upload OPUS-eflomal --changed --skip-identical priors
+	swift post OPUS-eflomal --read-acl ".r:*"
+	rm -f priors/*.priors.gz
+	rmdir priors
+
 
 
 ## upload all subdir's in each version but not the info files
@@ -78,3 +122,5 @@ upload-with-latest:
 	    cd ..; \
 	  fi \
 	done
+
+

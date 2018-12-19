@@ -54,7 +54,8 @@ ifeq (${shell hostname --domain},csc.fi)
   export PATH=$(shell echo $${PATH} | sed "s/:[^:]*${ME}[^:]*//g")
   export PERL5LIB=${NLPL_SHARE}/perl5:${NLPL_LIB64}/perl5:${NLPL_LIB}/perl5
   CPAN=cpan
-else
+  PIP=pip
+else ifneq (${shell hostname},lm5-nkiel2.hum.helsinki.fi)
   export PATH=${shell 	module load perlmodules;\
 			eval $$(perl -Mlocal::lib=${NLPL_HOME}/software/nlpl-common);\
 			echo $${PATH} | sed "s/:[^:]*${ME}[^:]*//g"}
@@ -66,6 +67,7 @@ else
   export PERL_MB_OPT=--prefix ${NLPL_HOME}/software/nlpl-common
   export PERL_MM_OPT=PREFIX=${NLPL_HOME}/software/nlpl-common
   CPAN=cpanm -n
+  PIP=pip
 endif
 
 
