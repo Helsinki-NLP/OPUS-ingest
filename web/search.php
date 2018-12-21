@@ -254,7 +254,7 @@ function print_resource($corpus,$version,$src,$trg,$resource){
     }
   }
 
-  echo '<tr><td><a href="'.$corpus.'.php"><b>';
+  echo '<tr><td><a href="'.$corpus.'_'.$version.'.php"><b>';
   echo $corpus.'</b> '.$version.'</a></td>';
   echo "<td align='right'>".$nrDocs['xces']."</td>";
   echo "<td align='right'>".pretty_number($nrLinks['xces'])."</td>";
@@ -305,9 +305,9 @@ function print_resource($corpus,$version,$src,$trg,$resource){
   }
   else{ echo '<td></td>'; }
   
-  if (file_exists($corpus.'/'.$src.'-'.$trg.'_sample.html')){
+  if (file_exists($corpus.'/'.$version.'/'.$src.'-'.$trg.'_sample.html')){
     echo '<td>[';
-    echo '<a href="'.$corpus.'/'.$src.'-'.$trg.'_sample.html">sample</a>';
+    echo '<a href="'.$corpus.'/'.$version.'/'.$src.'-'.$trg.'_sample.html">sample</a>';
     echo ']</td>';;
   }
   else{ echo '<td></td>'; }
