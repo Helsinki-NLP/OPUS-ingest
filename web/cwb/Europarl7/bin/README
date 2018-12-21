@@ -1,0 +1,124 @@
+
+  CQP/Perl Web Demo  --  Installation Instructions
+
+
+1. Prerequisites
+
+  - a web server :o)
+  - a recent version of the IMS Corpus Workbench
+  - all CWB/Perl modules (installed globally, i.e. they must be
+    accessible without specifying additional search paths)
+  - the CWB demo corpus (DICKENS), 
+    preferably installed in the global corpus registry
+
+
+2. Installation
+
+This installation guide assumes that you are familiar with your web
+server and its directory layout. If you do not know how to publish a
+web page or install CGI scripts on the server, please read the
+relevant manuals before continuing with the installation.
+
+The document tree of a web server is usually subdivided into two
+separate parts, one for HTML documents (.../htdocs/ in Apache) and the
+other for executable CGI scripts (.../cgi-bin/ in Apache). First of
+all, you need to identify these directory trees and create a new
+directory for CQPDemo files in each tree. These new directories are
+referred to as <DATA> and <CGI> below. A possible choice on Apache
+servers would be:
+
+  <DATA> = .../htdocs/CWB/CQPDemo
+  <CGI>  = .../cgi-bin/CWB/CQPDemo
+
+Make sure that the new directories are world-readable (using the
+command "chmod go+rx ..."), as the web server will not be able to
+access them otherwise.
+
+Copy all files in html/ and its subdirectories to the <DATA>
+directory. Then copy all files in cgi-bin/ and its subdirectory to the
+<CGI> directory.  Again, make sure that the files are world-readable
+("chmod go+r ...") and that the CGI scripts (with extension ".pl") are
+also executable ("chmod go+x ...").
+
+  cp -pR html/* <DATA>
+  cp -pR cgi-bin/* <CGI>
+
+
+3. Configuration
+
+When you have installed the data files and CGI scripts, you need to
+configure CQPDemo, inserting the local URL paths corresponding to the
+chosen data and CGI directories. These local URLs usually consist of
+the last segments of the <DATA> and <CGI> paths, and are referred to
+by <DATAURL> and <CGIURL> below. In the Apache example above, the
+local URLs would be
+
+  <DATAURL> = /CWB/CQPDemo
+  <CGIURL>  = /cgi-bin/CWB/CQPDemo
+
+Please consult the documentation of your web server to find out how
+the directory paths <DATA> and <CGI> map to local URLs.
+
+Now you need to insert <CGIURL> into the following HTML files,
+replacing the text "/EDIT/THIS/PATH" as indicated by short comments in
+the files.
+
+  <DATA>/frames-cqp.html
+  <DATA>/frames-simple.html
+  <DATA>/frames-tools.html
+
+You also have to insert <DATAURL> in the configuration module for the
+CGI scripts:
+
+   <CGI>/My/Config.pm
+
+If necessary, you may adjust other configuration settings in this
+file. For instance, if the demo corpus DICKENS is not installed in the
+global corpus registry (/corpora/c1/registry), set the variable
+$Registry to the correct registry directory. You can also change the
+location and size of the cache directory for query results, and the
+maximum number of matches. In most cases, it is ok just to accept the
+defaults. 
+
+Finally, you may need insert the path to your Perl interpreter in the
+"shebang" (#!) line of the CGI scripts (with extension ".pl" in the
+<CGI> directory. If you have multiple versions of Perl on your
+machine, make sure to select one for which the CWB/Perl modules are
+installed.
+
+
+4. Giving it a try
+
+You should now be able to access CQPDemo on your web server under the
+local path <DATAURL>. In the Apache example above, type the URL
+
+  http://MY.WEB.SERVER/CWB/CQPDemo/
+
+into your web browser. If this test doesn't work for some reason,
+please have a look at the server's error logs, which should help you
+to find the source of the problem.
+
+
+5. Modifying CQPDemo
+
+You are welcome to use CQPDemo as a web interface to your own corpora,
+making any desired modifications to the scripts and HTML pages. You
+can simply change the configuration variable $Corpus in
+<CGI>/My/Config.pm, but you will almost certainly have to adjust
+various hard-coded settings in the scripts and modules to reflect the
+different structure and annotation of your corpora.  See the file
+"ARCHITECTURE" for a brief overview of the CQPDemo architecture. 
+
+
+6. Copyright Notice and License
+
+This software is provided AS IS and the author makes no warranty as to
+its use and performance. You may use the software, redistribute and
+modify it under the same terms as Perl itself.
+
+IN NO EVENT WILL THE AUTHOR BE LIABLE TO YOU FOR ANY CONSEQUENTIAL,
+INCIDENTAL OR SPECIAL DAMAGES, INCLUDING ANY LOST PROFITS OR LOST
+SAVINGS, EVEN IF AN IMS REPRESENTATIVE HAS BEEN ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES, OR FOR ANY CLAIM BY ANY THIRD PARTY.
+
+Copyright (C) 2003-2004 by Stefan Evert.

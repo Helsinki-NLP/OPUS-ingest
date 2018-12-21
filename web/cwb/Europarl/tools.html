@@ -1,0 +1,102 @@
+<html>
+<head>
+  <title>CQPDemo: Corpus Tools.</title>
+  <link rel="stylesheet" type="text/css" href="css/standard.css">
+</head>
+
+<body>
+
+<a href="index.html" target="_top">BACK</a> -
+<a href="query-cqp.html">CQP Mode</a> -
+<!-- <a href="query-simple.html" target="_top">Simple Mode</a> - -->
+<b>Tools</b> -
+<a href="help-cqp.html" target="kwic">Help Page</a>
+<br>
+
+<hr size="2" width="100%"noshade>
+
+<form action="bin/tools.pl" method="post" target="kwic">
+<input type="hidden" name="tool" value="wordlist">
+<b>Word list:</b>
+attribute = 
+<select name="attribute" size="1">
+  <option value="word" selected>word form</option>
+  <option value="pos">POS</option>
+  <option value="lemma">lemma</option>
+</select>
+sort =
+<select name="wlsort" size="1">
+  <option value="lexical" selected>lexical</option>
+  <option value="freq">by frequency</option>
+  <option value="case">case-folded</option>
+</select>
+f &gt;=
+<select name="wlcutoff" size="1">
+  <option value="1" selected>1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="10">10</option>
+  <option value="20">20</option>
+  <option value="50">50</option>
+  <option value="100">100</option>
+  <option value="500">500</option>
+  <option value="1000">1000</option>
+</select>
+<input type="submit" name="action" value="Go">
+</form>
+
+<hr size="2" width="100%"noshade>
+
+<form action="/cgi-bin/CQP/CQPDemo/tools.pl" method="post" target="kwic">
+<input type="hidden" name="tool" value="phrases">
+<b>Phrases:</b>
+attribute = 
+<select name="attribute" size="1">
+  <option value="word" selected>word form</option>
+  <option value="pos">POS</option>
+  <option value="lemma">lemma</option>
+</select>
+length = 
+<select name="phraselen" size="1">
+  <option value="3" selected>3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+</select>	     
+filter =
+<select name="phrasefilter" size="1">
+  <option value="none" selected>none</option>
+  <option value="noun">nouns only</option>
+  <option value="closed">closed-class</option>
+  <option value="open">open-class</option>
+</select>
+sort =
+<select name="wlsort" size="1">
+  <option value="lexical" selected>lexical</option>
+  <option value="freq">frequency</option>
+  <option value="case">case-folded</option>
+</select>
+f &gt;=
+<select name="wlcutoff" size="1">
+  <option value="1" selected>1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="10">10</option>
+  <option value="20">20</option>
+  <option value="50">50</option>
+  <option value="100">100</option>
+  <option value="500">500</option>
+  <option value="1000">1000</option>
+</select>
+<input type="submit" name="action" value="Go">
+</form>
+
+<hr size="2" width="100%"noshade>
+
+
+</body>
+</html>

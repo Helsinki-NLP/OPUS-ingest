@@ -255,7 +255,7 @@ function print_resource($corpus,$version,$src,$trg,$resource){
   }
 
   echo '<tr><td><a href="'.$corpus.'_'.$version.'.php"><b>';
-  echo $corpus.'</b> '.$version.'</a></td>';
+  echo $corpus.'</b>&nbsp;'.$version.'</a></td>';
   echo "<td align='right'>".$nrDocs['xces']."</td>";
   echo "<td align='right'>".pretty_number($nrLinks['xces'])."</td>";
   echo "<td align='right'>".pretty_number($nrSrcTok['xml'])."</td>";
@@ -416,7 +416,7 @@ function get_trg_languages($lang,$srclang,&$trgs){
     foreach ($ids as $id){
       $trgs[$id] = $srclang[$id];
     }
-    $trgs['any'] = '-- any language --';
+    // $trgs['any'] = '-- any language --';
     dba_close($dbh);
     return true;
   }
