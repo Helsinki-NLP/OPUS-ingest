@@ -1,0 +1,16 @@
+@InCollection{Tiedemann:RANLP5,
+  author =	  {J\"org Tiedemann},
+  title =	  {News from {OPUS} - {A} Collection of Multilingual
+                  Parallel Corpora with Tools and Interfaces},
+  booktitle =	  {Recent Advances in Natural Language Processing},
+  publisher =	  {John Benjamins, Amsterdam/Philadelphia},
+  year =          2009,
+  pages =         {237--248},
+  editor =        {N. Nicolov and K. Bontcheva and G. Angelova and
+                  R. Mitkov},
+  volume =	  {V},
+  address =	  {Borovets, Bulgaria},
+  isbn =          {978 90 272 4825 1},
+  pdf =           {http://stp.lingfil.uu.se/~joerg/published/ranlp-V.pdf},
+  topic  =        {Parallel corpora}
+}
