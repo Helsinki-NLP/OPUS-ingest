@@ -254,12 +254,12 @@ function print_resource($corpus,$version,$src,$trg,$resource){
     }
   }
 
-  echo '<tr><td><a href="'.$corpus.'_'.$version.'.php"><b>';
+  echo '<tr><td><a href="'.$corpus.'-'.$version.'.php"><b>';
   echo $corpus.'</b>&nbsp;'.$version.'</a></td>';
   echo "<td align='right'>".$nrDocs['xces']."</td>";
   echo "<td align='right'>".pretty_number($nrLinks['xces'])."</td>";
-  echo "<td align='right'>".pretty_number($nrSrcTok['xml'])."</td>";
-  echo "<td align='right'>".pretty_number($nrTrgTok['xml'])."</td>";
+  echo "<td align='right'>".pretty_number($nrSrcTok['xces'])."</td>";
+  echo "<td align='right'>".pretty_number($nrTrgTok['xces'])."</td>";
 
   ////////////////////////////////////////////////////////////////////////
   // XML files
@@ -358,8 +358,8 @@ function print_resource($corpus,$version,$src,$trg,$resource){
   $TotalTmxLinks += $nrLinks['tmx'];
 
   $TotalDocs     += $nrDocs['xces'];
-  $TotalSrcTok   += $nrSrcTok['xml'];
-  $TotalTrgTok   += $nrTrgTok['xml'];
+  $TotalSrcTok   += $nrSrcTok['xces'];
+  $TotalTrgTok   += $nrTrgTok['xces'];
 }
 
 
