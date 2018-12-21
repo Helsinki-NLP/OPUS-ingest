@@ -13,6 +13,11 @@ LANGUAGES   = $(sort $(notdir $(wildcard ${CORPUSRAW}/??)) \
 		     $(notdir $(wildcard ${CORPUSRAW}/???)) \
 		     $(notdir $(wildcard ${CORPUSRAW}/??_??)))
 
+ifndef LANGUAGE
+  LANGUAGE = xxxx
+endif
+
+
 all:
 	${MAKE} -C src all
 	${MAKE} convert

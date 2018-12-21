@@ -3,7 +3,11 @@ include ../Makefile.def
 include Makefile.def
 
 
-SRCDIR = src/rosetta-utopic
+## dummy dir (log) to avoid expensive find each time make is called
+##
+# SRCDIR = src/rosetta-utopic
+SRCDIR = log
+
 
 SCRIPTS = ${OPUSTOOLS}/KDE4
 PO2EN   = ${SCRIPTS}/po2en
@@ -13,8 +17,9 @@ ALIGNPO = ${TOOLS}/align-po
 SRC=de
 TRG=fi
 
-ALGFILES = $(patsubst %.po,xml/$(SRC)-$(TRG)/%.xml.gz,\
-	   $(shell find $(SRCDIR)/$(SRC) $(SRCDIR)/$(TRG) -name '*.po' -exec basename {} \; | sort | uniq -c | grep '^ *2 ' | sed 's/^ *2 //'))
+
+ALGFILES = $(patsubst %.po,xml/$(SRC)-$(TRGXX)/%.xml.gz,\
+	   $(shell find $(SRCDIR)/$(SRC) $(SRCDIR)/$(TRGXX) -name '*.po' -exec basename {} \; | sort | uniq -c | grep '^ *2 ' | sed 's/^ *2 //'))
 
 ENGFILES = $(patsubst ${SRCDIR}/fr/%,${SRCDIR}/en/%,$(shell find ${SRCDIR}/fr -name '*.po'))
 
@@ -41,11 +46,11 @@ web-corpus: tmx moses alg_samples html
 
 
 .PHONY: all-align
-all-align: ${ENFILES}
+all-align: english
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
 	    if `perl -e "exit 0 if ('$$s' lt '$$t');exit 1;"`; then \
-		${MAKE} SRC=$$s TRG=$$t align; \
+		${MAKE} SRC=$$s TRG=$$t SRCDIR=src/rosetta-utopic align; \
 	    fi; \
 	  done; \
 	done
@@ -54,8 +59,11 @@ all-align: ${ENFILES}
 
 ## dummy files for English (taken from the French localization files)
 
-.PHONY: english
-english: ${ENGFILES}
+.PHONY: english convert-english
+english: 
+	${MAKE} SRCDIR=src/rosetta-utopic convert-english
+
+convert-english: ${ENGFILES}
 
 ${ENGFILES}: ${SRCDIR}/en/%: ${SRCDIR}/fr/%
 	${PO2EN} $< $@

@@ -3,7 +3,10 @@ include ../Makefile.def
 include Makefile.def
 
 
-SRCDIR = src/l10n.gnome.org/POT
+## dummy dir (log) to avoid expensive find each time make is called
+##
+# SRCDIR = src/l10n.gnome.org/POT
+SRCDIR = log
 
 SCRIPTS = ${OPUSTOOLS}/KDE4
 PO2EN   = ${SCRIPTS}/po2en
@@ -11,6 +14,7 @@ PO2XCES = ${SCRIPTS}/po2xces
 
 SRC=de
 TRG=fi
+
 
 ALGFILES = $(patsubst $(SRCDIR)/%,xml/$(SRC)-$(TRG)/%.xml.gz,\
 	   $(shell find ${SRCDIR}/ -name '*.$(SRC).po' -o -name '*.$(TRG).po' | sed 's/\.\($(SRC)\|$(TRG)\)\.po//' | sort | uniq -c | grep '^ *2 ' | sed 's/^ *2 //'))
@@ -44,11 +48,11 @@ web-corpus:
 
 
 .PHONY: all-align
-all-align: ${ENFILES}
+all-align: english
 	for s in $(filter-out POT,${LANGUAGES}); do \
 	  for t in $(filter-out POT,${LANGUAGES}); do \
 	    if `perl -e "exit 0 if ('$$s' lt '$$t');exit 1;"`; then \
-		${MAKE} SRC=$$s TRG=$$t align; \
+		${MAKE} SRC=$$s TRG=$$t SRCDIR=src/l10n.gnome.org/POT align; \
 	    fi; \
 	  done; \
 	done
@@ -58,8 +62,11 @@ all-align: ${ENFILES}
 
 ## dummy files for English (taken from the French localization files)
 
-.PHONY: english
-english: ${ENGFILES}
+.PHONY: english convert-english
+english: 
+	${MAKE} SRCDIR=src/l10n.gnome.org/POT convert-english
+
+convert-english: ${ENGFILES}
 
 ${ENGFILES}: %.en.po: %.fr.po
 	${PO2EN} $< $@
