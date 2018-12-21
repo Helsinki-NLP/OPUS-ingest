@@ -1,55 +1,47 @@
+# -*-makefile-*-
+#--------------------------------------------------------------------
+# Joerg Tiedemann			2018-12-20
+# tiedeman@gmail.com
+#
+# some admin tasks
+#  - copying data to ObjectStorage
+#  - syncing files to abel
+#--------------------------------------------------------------------
 
-## NOTE!!!!!!!
-##
-## before running - don't forget to
-## source /proj/OPUS/admin/project_2000661-openrc.sh
+
+## include generic target for submitting jobs
+include ../corpus/Makefile.submit
 
 
+## location on taito and abel
 OPUS_TAITO = /proj/nlpl/data/OPUS
 OPUS_ABEL  = /projects/nlpl/data/OPUS
+OPUS       = ${OPUS_TAITO}
+
+## user and host to access abel
 ABEL_USER  = joerg@abel.uio.no
 
-OPUS     = ${OPUS_TAITO}
+## name of all corpora and their released versions
 CORPORA  = ${sort ${notdir ${shell find ${OPUS} -mindepth 1 -maxdepth 1 -type d }}}
 CORPUS   = ${firstword ${CORPORA}}
 VERSIONS = ${notdir ${shell find ${OPUS}/${CORPUS} -maxdepth 1 -mindepth 1 -type d}}
+
+## container name for object storage
 CONTAINER = OPUS-${CORPUS}
 
+##-------------------------------------------------------------------
+## uploading data to object storage
+##-------------------------------------------------------------------
+## sync selected release data to abel
+## (raw XML data and sentence alignments)
 ##
-## corpora with some files bigger than 5GB: find . -size +5G
-## (SWIFT_EXTRA can be set to extra swift arguments to take care
-##  of bigger files - see 'all')
-##
+##   make opus2abel.submit
+##-------------------------------------------------------------------
 
-BIG_CORPORA = giga-fren MultiUN EUbookshop ParaCrawl OpenSubtitles
-SWIFT_EXTRA = 
-
-## missing corpora in import
-MISSING = PHP RF SETIMES SPC Tanzil Tatoeba TED2013 TedTalks TEP Ubuntu UN Wikipedia WikiSource WMT-News XhosaNavy
-
-all:
-	@for c in $(filter-out ${BIG_CORPORA},${CORPORA}); do \
-	    ${MAKE} CORPUS=$$c upload; \
-	done
-	@for c in $(filter ${BIG_CORPORA},${CORPORA}); do \
-	    ${MAKE} CORPUS=$$c SWIFT_EXTRA='--use-slo --segment-size 5G' upload; \
-	done
-
-missing:
-	@for c in $(MISSING); do \
-	    ${MAKE} CORPUS=$$c upload; \
-	done
-
-big:
-	@for c in $(filter ${BIG_CORPORA},${CORPORA}); do \
-	    ${MAKE} CORPUS=$$c SWIFT_EXTRA='--use-slo --segment-size 5G' upload; \
-	done
-
-
-opus2abel:
+opus2abel: opus2abel-moses
 	for c in ${CORPORA}; do \
 	  ssh ${ABEL_USER} mkdir -p ${OPUS_ABEL}/$$c/latest; \
-	  rsync -ahv --delete --include '**/*.zip' \
+	  rsync -ahv --delete \
 		${OPUS}/$$c/latest/raw ${ABEL_USER}:${OPUS_ABEL}/$$c/latest/; \
 	  rsync -ahv --delete \
 		--exclude '**/.*' \
@@ -67,6 +59,48 @@ opus2abel:
 		${OPUS}/$$c/latest/raw ${ABEL_USER}:${OPUS_ABEL}/$$c/latest/; \
 	  rsync -ahv ${OPUS}/$$c/latest/README \
 		${OPUS}/$$c/latest/raw ${ABEL_USER}:${OPUS_ABEL}/$$c/latest/; \
+	done
+
+opus2abel-moses:
+	for c in ${CORPORA}; do \
+	  ssh ${ABEL_USER} mkdir -p ${OPUS_ABEL}/$$c/latest; \
+	  rsync -ahv --delete  \
+	    ${OPUS}/$$c/latest/moses ${ABEL_USER}:${OPUS_ABEL}/$$c/latest/; \
+	  rsync -ahv --delete --exclude '**/*.tok.gz' \
+	    ${OPUS}/$$c/latest/mono ${ABEL_USER}:${OPUS_ABEL}/$$c/latest/; \
+	done
+
+
+##-------------------------------------------------------------------
+## uploading data to object storage
+##-------------------------------------------------------------------
+##
+## NOTE!!!!!!!
+##
+## before running - don't forget to
+## source /proj/OPUS/admin/project_2000661-openrc.sh
+##
+## corpora with some files bigger than 5GB: find . -size +5G
+## (SWIFT_EXTRA can be set to extra swift arguments to take care
+##  of bigger files - see 'all')
+##
+##-------------------------------------------------------------------
+
+BIG_CORPORA = giga-fren MultiUN EUbookshop ParaCrawl OpenSubtitles
+SWIFT_EXTRA = 
+
+upload-all:
+	@for c in $(filter-out ${BIG_CORPORA},${CORPORA}); do \
+	    ${MAKE} CORPUS=$$c upload; \
+	done
+	@for c in $(filter ${BIG_CORPORA},${CORPORA}); do \
+	    ${MAKE} CORPUS=$$c SWIFT_EXTRA='--use-slo --segment-size 5G' upload; \
+	done
+
+
+big:
+	@for c in $(filter ${BIG_CORPORA},${CORPORA}); do \
+	    ${MAKE} CORPUS=$$c SWIFT_EXTRA='--use-slo --segment-size 5G' upload; \
 	done
 
 
