@@ -10,22 +10,28 @@
 #
 #----------------------------------------------
 
+ifndef PARSED_LANGUAGES
+  PARSED_LANGUAGES := $(sort $(notdir $(wildcard ${CORPUSPARSED}/??)) \
+                            $(notdir $(wildcard ${CORPUSPARSED}/???)) \
+                            $(notdir $(wildcard ${CORPUSPARSED}/??_??)))
+endif
 
-PARSED_LANGUAGES = $(sort $(notdir $(wildcard ${CORPUSPARSED}/??)) \
-                          $(notdir $(wildcard ${CORPUSPARSED}/???)) \
-                          $(notdir $(wildcard ${CORPUSPARSED}/??_??)))
+ifndef CES
+  CES    := $(wildcard ${CORPUSXML}/*.xml.gz)
+endif
+ALG      := $(patsubst ${CORPUSXML}/%,${CORPUSRELEASE}/xml/%,$(CES))
+TMX      := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/tmx/%.tmx.gz,$(CES))
+MOSES    := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/moses/%.txt.zip,$(CES))
 
-CES      = $(wildcard ${CORPUSXML}/*.xml.gz)
-ALG      = $(patsubst ${CORPUSXML}/%,${CORPUSRELEASE}/xml/%,$(CES))
-TMX      = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/tmx/%.tmx.gz,$(CES))
-MOSES    = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/moses/%.txt.zip,$(CES))
-SMT      = $(patsubst %,${CORPUSRELEASE}/smt/%.zip,\
+ifndef SMT
+  SMT    := $(patsubst %,${CORPUSRELEASE}/smt/%.zip,\
 		$(notdir $(sort $(shell find ${CORPUSWORDALIGN} -maxdepth 1 -mindepth 1 -type d -name '*-*'))))
-WORDALG  = $(patsubst %.zip,%.alg.zip,${SMT})
+endif
+WORDALG  := $(patsubst %.zip,%.alg.zip,${SMT})
 
-LANG_XML = $(patsubst %,${CORPUSRELEASE}/xml/%.zip,${LANGUAGES})
-LANG_RAW = $(patsubst %,${CORPUSRELEASE}/raw/%.zip,${LANGUAGES})
-LANG_UD  = $(patsubst %,${CORPUSRELEASE}/parsed/%.zip,${PARSED_LANGUAGES})
+LANG_XML := $(patsubst %,${CORPUSRELEASE}/xml/%.zip,${LANGUAGES})
+LANG_RAW := $(patsubst %,${CORPUSRELEASE}/raw/%.zip,${LANGUAGES})
+LANG_UD  := $(patsubst %,${CORPUSRELEASE}/parsed/%.zip,${PARSED_LANGUAGES})
 
 
 ## strict = bitexts with "high-quality" alignments only
@@ -483,7 +489,7 @@ $(TMX) $(TMX_STRICT): ${CORPUSRELEASE}/tmx/%.tmx.gz: ${CORPUSRELEASE}/moses/%.tx
 	  cut -f2,3 |\
 	  $(TAB2TMX) -s $$S -t $$T |\
 	  gzip -c > $@; \
-	  rm -f $$BASE.$$SEXT $$BASE.$$TEXT $$BASE.ids; )
+	  rm -f $$BASE.$$SEXT $$BASE.$$TEXT $$BASE.ids $$BASE.xml; )
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
@@ -693,7 +699,7 @@ ${TXT_INFO}: ${CORPUSRELEASE}/info/%.txt.info: ${CORPUSRELEASE}/moses/%.txt.zip
 	  wc -l < ${CORPUS}.$$P.$$S > $(CORPUSRELEASE)/info/$$P.txt.info; \
 	  wc -w < ${CORPUS}.$$P.$$S >> $(CORPUSRELEASE)/info/$$P.txt.info; \
 	  wc -w < ${CORPUS}.$$P.$$T >> $(CORPUSRELEASE)/info/$$P.txt.info; \
-	  rm -f *$$P.$$S *$$P.$$T *$$P.ids; )
+	  rm -f *$$P.$$S *$$P.$$T *$$P.ids *$$P.xml; )
 	chmod 644 $@
 
 

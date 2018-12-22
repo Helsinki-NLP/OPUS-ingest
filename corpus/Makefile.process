@@ -14,8 +14,10 @@ endif
 
 SRCDIR = src/${LANGUAGE}
 ifneq ("$(wildcard $(SRCDIR))","")
-  RAWFILES = $(patsubst src/%.${TXTEXT},raw/%.${XMLEXT}, \
+ifndef RAWFILES
+  RAWFILES := $(patsubst src/%.${TXTEXT},raw/%.${XMLEXT}, \
 		$(shell find ${SRCDIR} -name '*.${TXTEXT}'))
+endif
 endif
 
 ## make the corpus (all steps)

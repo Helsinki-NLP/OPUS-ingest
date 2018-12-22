@@ -106,9 +106,11 @@ $(ALLTRG): %.trg: %
 
 ifneq (${SRC},)
 ifneq (${TRG},)
-  ALGFILES = $(addprefix $(SRC)-$(TRG)/,\
+ifndef ALGFILES
+  ALGFILES := $(addprefix $(SRC)-$(TRG)/,\
 	   $(shell find ${SRC}/ ${TRG}/ -name '*.${XMLEXT}' -printf "%P\n" |\
 		   sort | uniq -c | grep '^ *2 *' | sed 's/^ *2 *//'))
+endif
 endif
 endif
 

@@ -282,11 +282,11 @@ function print_resource($corpus,$version,$src,$trg,$resource){
   foreach (array('tmx','moses','monotok','mono','ud','smt','dic','freq') as $format){  
     if (isset($ResourceHtml[$format])){
       if (in_array($format,array('smt','dic','freq'))){
-	echo '<td>[&nbsp;'.$ResourceHtml[$format].'&nbsp;]</td>';
+	echo '<td>[&nbsp;'.$ResourceHtml[$format].']</td>';
       }
       else{
 	echo '<td bgcolor="'.size_color($nrSrcTok[$format]+$nrTrgTok[$format]).'">[&nbsp;';
-	echo $ResourceHtml[$format].'&nbsp;]</td>';
+	echo $ResourceHtml[$format].']</td>';
       }
     }
     else{

@@ -169,8 +169,10 @@ OPUS2MOSES = $(OPUSTOOLS)/xces2moses
 
 # all language pairs in the corpus
 
-LANGPAIRS = $(patsubst $(CORPUSXML)/%.xml.gz,%,\
+ifndef LANGPAIRS
+  LANGPAIRS := $(patsubst $(CORPUSXML)/%.xml.gz,%,\
 			$(wildcard $(CORPUSXML)/*-*.xml.gz))
+endif
 
 # truecaser models
 #   TRUECASER_GZ - gzipped model files (that we like to keep after word alignment)
@@ -185,8 +187,10 @@ TRUECASER    = $(patsubst %,${CORPUSWORDALIGN}/truecaser/%, ${LANGUAGES})
 LMTEXT = $(patsubst %,${CORPUSWORDALIGN}/lm/${CORPUS}.%.gz, ${LANGUAGES})
 LMRAWTEXT = $(patsubst %,${CORPUSWORDALIGN}/lm/${CORPUS}.raw.%.gz, ${LANGUAGES})
 
-DICFILES = $(patsubst %/model/phrase-table-filtered.gz,${CORPUSHOME}/dic/%.dic.gz,\
+ifndef DICFILES
+  DICFILES := $(patsubst %/model/phrase-table-filtered.gz,${CORPUSHOME}/dic/%.dic.gz,\
 		$(wildcard */model/phrase-table-filtered.gz))
+endif
 
 
 .PHONY: all-wordalign wordalign-all
@@ -723,8 +727,10 @@ ${CORPUSWORDALIGN}/lm/${CORPUS}.raw.%.gz: ${CORPUSRAW}/%
 #
 ###########################################################################
 
-PHRASETABLES = $(patsubst %/phrase-table.gz,%/phrase-table-filtered.gz,\
-		$(wildcard */model/phrase-table.gz))
+ifndef PHRASETABLES
+  PHRASETABLES := $(patsubst %/phrase-table.gz,%/phrase-table-filtered.gz,\
+		  $(wildcard */model/phrase-table.gz))
+endif
 
 SMTTOOLSHOME = ${HOME}/projects/SMT
 SMTTOOLS     = ${SMTTOOLSHOME}/tools

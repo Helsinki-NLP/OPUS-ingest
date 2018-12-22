@@ -13,8 +13,10 @@ endif
 
 SRCDIR = src/${LANGUAGE}
 ifneq ("$(wildcard $(SRCDIR))","")
-  RAWFILES = $(patsubst src/%.${XMLEXT},raw/%.${XMLEXT}, \
+ifndef RAWFILES
+  RAWFILES := $(patsubst src/%.${XMLEXT},raw/%.${XMLEXT}, \
 		$(shell find ${SRCDIR} -name '*.${XMLEXT}'))
+endif
 endif
 
 

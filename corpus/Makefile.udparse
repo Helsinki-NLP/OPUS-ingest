@@ -28,8 +28,9 @@ endif
 
 
 RAWDIR   = ${CORPUSRAW}/${LANGUAGE}
-XMLFILES = $(subst :,\:,$(patsubst ${CORPUSRAW}/%,${CORPUSPARSED}/%,$(shell find ${RAWDIR}/ -name '*.${XMLEXT}')))
-
+ifndef XMLFILES
+  XMLFILES := $(subst :,\:,$(patsubst ${CORPUSRAW}/%,${CORPUSPARSED}/%,$(shell find ${RAWDIR}/ -name '*.${XMLEXT}')))
+endif
 
 .PHONY: udparse
 udparse:
@@ -66,8 +67,10 @@ ${CORPUSPARSED}/${LANGUAGE}/%: ${CORPUSRAW}/${LANGUAGE}/%
 	zcat "$<" | ${UDPARSE} -l ${LANGUAGE} | gzip -c > "$@"
 
 
-LANGPAIRS = $(patsubst $(CORPUSXML)/%.xml.gz,%,\
+ifndef LANGPAIRS
+  LANGPAIRS := $(patsubst $(CORPUSXML)/%.xml.gz,%,\
 			$(wildcard $(CORPUSXML)/*-*.xml.gz))
+endif
 
 PHONY: link-sentalign-files-to-parsed
 link-sentalign-files-to-parsed:

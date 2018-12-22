@@ -9,8 +9,10 @@ ifndef LANGUAGE
 endif
 
 RAWDIR   = raw/${LANGUAGE}
-XMLFILES = $(subst :,\:,$(patsubst raw/%,xml/%,$(shell find ${RAWDIR}/ -name '*.${XMLEXT}')))
 
+ifndef XMLFILES
+  XMLFILES := $(subst :,\:,$(patsubst raw/%,xml/%,$(shell find ${RAWDIR}/ -name '*.${XMLEXT}')))
+endif
 
 TAG = uplug -f opus/annotate opus/${LANGUAGE}/tag
 

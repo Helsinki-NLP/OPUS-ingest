@@ -11,11 +11,16 @@
 #----------------------------------------------
 
 
-PARSED_LANGUAGES = $(sort $(notdir $(wildcard ${CORPUSPARSED}/??)) \
+ifndef PARSED_LANGUAGES
+  PARSED_LANGUAGES := $(sort $(notdir $(wildcard ${CORPUSPARSED}/??)) \
                           $(notdir $(wildcard ${CORPUSPARSED}/???)) \
                           $(notdir $(wildcard ${CORPUSPARSED}/??_??)))
+endif
 
-CES      = $(wildcard ${CORPUSXML}/*.xml.gz)
+ifndef CES
+  CES    := $(wildcard ${CORPUSXML}/*.xml.gz)
+endif
+
 ALG      = $(patsubst ${CORPUSXML}/%,${CORPUSHTML}/%,$(CES))
 TMX      = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSHTML}/%.tmx.gz,$(CES))
 MOSES    = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSHTML}/%.txt.zip,$(CES))

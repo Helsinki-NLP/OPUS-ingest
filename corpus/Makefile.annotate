@@ -16,8 +16,9 @@ endif
 
 
 RAWDIR   = ${CORPUSRAW}/${LANGUAGE}
-XMLFILES = $(subst :,\:,$(patsubst ${CORPUSRAW}/%,${CORPUSXML}/%,$(shell find ${RAWDIR}/ -name '*.${XMLEXT}')))
-
+ifndef XMLFILES
+  XMLFILES := $(subst :,\:,$(patsubst ${CORPUSRAW}/%,${CORPUSXML}/%,$(shell find ${RAWDIR}/ -name '*.${XMLEXT}')))
+endif
 
 TAG = uplug -f opus/annotate opus/${LANGUAGE}/annotate
 

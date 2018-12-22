@@ -85,13 +85,13 @@ CORPUSWORDALIGN  = ${CORPUSHOME}/wordalign
 #                   'make' in source text directory first!
 
 ifndef LANGUAGES
-  LANGUAGES = $(sort $(notdir $(wildcard ${CORPUSSRC}/??)) \
-                     $(notdir $(wildcard ${CORPUSSRC}/???)) \
-                     $(notdir $(wildcard ${CORPUSSRC}/??_??)) \
-                     $(notdir $(wildcard ${CORPUSRAW}/??)) \
-                     $(notdir $(wildcard ${CORPUSRAW}/???)) \
-                     $(notdir $(wildcard ${CORPUSRAW}/??_??)) \
-		     ${patsubst %.raw.tar.gz,%,\
+  LANGUAGES := $(sort $(notdir $(wildcard ${CORPUSSRC}/??)) \
+                      $(notdir $(wildcard ${CORPUSSRC}/???)) \
+                      $(notdir $(wildcard ${CORPUSSRC}/??_??)) \
+                      $(notdir $(wildcard ${CORPUSRAW}/??)) \
+                      $(notdir $(wildcard ${CORPUSRAW}/???)) \
+                      $(notdir $(wildcard ${CORPUSRAW}/??_??)) \
+		      ${patsubst %.raw.tar.gz,%,\
 			$(notdir $(wildcard ${CORPUSHTML}/*.raw.tar.gz))})
 endif
 

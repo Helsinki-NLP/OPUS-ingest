@@ -9,7 +9,9 @@ ifndef LANGUAGE
 endif
 
 RAWDIR   = raw/${LANGUAGE}
-XMLFILES = $(patsubst raw/%,xml/%,$(shell find ${RAWDIR} -name '*.${XMLEXT}'))
+ifndef XMLFILES
+  XMLFILES := $(patsubst raw/%,xml/%,$(shell find ${RAWDIR} -name '*.${XMLEXT}'))
+endif
 
 ## OLD: for-loop (cannot be parallelized)
 ##

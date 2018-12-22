@@ -32,10 +32,10 @@
     <li>2017-11-06: New version: <a href="OpenSubtitles-v2018.php">OpenSubtitles2018</a></li>
     <li>2017-11-01: New server location: <a href="http://opus.nlpl.eu">http://opus.nlpl.eu</a></li>
     <li>2016-01-08: New version: <a href="OpenSubtitles-v2016.php">OpenSubtitles2016</a></li>
-    <li>2015-10-15: New versions of <a href="/TED2013.php">TED2013</a>, <a href="News-Commentary-v9.1.php">NCv9</a></li>
-    <li>2014-10-24: New: <a href="/JRC-Acquis.php">JRC-Acquis</a></li>
+    <li>2015-10-15: New versions of <a href="TED2013.php">TED2013</a>, <a href="News-Commentary-v9.1.php">NCv9</a></li>
+    <li>2014-10-24: New: <a href="JRC-Acquis.php">JRC-Acquis</a></li>
     <li>2014-10-20: <a href="News-Commentary-v9.0.php">NCv9</a>, <a href="TED2013.php">TED talks</a>, <a href="DGT.php">DGT</a>, <a href="WMT-News.php">WMT</a></li>
-    <li>2014-08-21: New: <a href="/Ubuntu.php">Ubuntu</a>, <a href="/GNOME.php">GNOME</a></li>
+    <li>2014-08-21: New: <a href="Ubuntu.php">Ubuntu</a>, <a href="GNOME.php">GNOME</a></li>
     <li>2014-07-30: New: <a href="Books-v1.php">Translated Books</a></li>
     <li>2014-07-27: New: <a href="DOGC-v2.php">DOGC</a>, <a href="Tanzil.php">Tanzil</a></li>
     <li>2014-05-07: Parallel coref corpus <a href="/ParCor">ParCor</a></li>
@@ -121,21 +121,22 @@
           <li><a href="EUbookshop.php">The EU bookshop corpus</a></li>
           <li><a href="EUconst.php">EUconst - The European constitution</a></li>
           <li><a href="Europarl.php">EUROPARL v7 - European Parliament Proceedings</a></li>
+          <li><a href="giga-fren.php">giga-fren</a> - French-English Gigal-Word Corpus</li>
           <li><a href="GNOME.php">GNOME</a> - GNOME localization files</li>
           <li><a href="GlobalVoices.php">Global Voices</a> - News stories in various languages</li>
           <li><a href="hrenWaC.php">The Croatian - English WaC corpus</a></li>
-          <li><a href="/JRC-Acquis.php">JRC-Acquis- legislative EU texts</a></li>
+          <li><a href="JRC-Acquis.php">JRC-Acquis- legislative EU texts</a></li>
           <li><a href="KDE4.php">KDE4 - KDE4 localization files (v.2)</a></li>
           <li><a href="KDEdoc.php">KDEdoc - the KDE manual corpus</a></li>
           <li><a href="MBS.php">MBS - Belgisch Staatsblad corpus</a></li>
-          <li><a href="/memat.php">memat - Xhosa/English parallel data</a></li>
+          <li><a href="memat.php">memat - Xhosa/English parallel data</a></li>
           <li><a href="MontenegrinSubs.php">MontenegrinSubs - Montenegrin movie subtitles</a></li>
           <li><a href="MultiUN.php">MultiUN</a> - Translated UN documents</li>
-          <li><a href="/News-Commentary11.php">News Commentary</a>, <a href="/News-Commentary.php">v9</a></li>
+          <li><a href="News-Commentary-v11.php">News Commentary</a>, <a href="News-Commentary-v9.0.php">v9.0</a>, <a href="News-Commentary-v9.1.php">v9.1</a></li>
           <li><a href="OfisPublik.php">OfisPublik</a> - Breton - French parallel texts</li>
-          <li><a href="OpenOffice.php">OO - the OpenOffice.org corpus</a></li>
-          <li><a href="OpenOffice3.php">OpenOffice.org 3 corpus</a></li>
-          <li><a href="OpenSubtitles.php">OpenSubtitles</a> - the opensubtitles.org corpus</li>
+          <li><a href="OpenOffice-v2.php">OO - the OpenOffice.org corpus</a></li>
+          <li><a href="OpenOffice-v3.php">OpenOffice.org 3 corpus</a></li>
+          <li><a href="OpenSubtitles-v1.php">OpenSubtitles</a> - the opensubtitles.org corpus</li>
           <li><a href="OpenSubtitles-v2011.php">OpenSubtitles2011</a>, 
 	      <a href="OpenSubtitles-v2012.php">OpenSubtitles2012</a>, 
               <a href="OpenSubtitles-v2013.php">OpenSubtitles2013</a></li>
@@ -145,15 +146,14 @@
 	  <li><a href="/ParCor">ParCor - A Parallel Pronoun-Coreference Corpus</a></li>
           <li><a href="PHP.php">PHP - the PHP manual corpus</a></li>
           <li><a href="RF.php">Regeringsf&ouml;rklaringen - a tiny example corpus</a></li>
-          <li><a href="/SETIMES.php">SETIMES</a> - A parallel corpus of the Balkan languages</li>
-          <li><a href="SETIMES-v2.php">SETIMES2</a> - A new version of SETIMES</li>
+          <li><a href="SETIMES.php">SETIMES</a> - A parallel corpus of the Balkan languages</li>
           <li><a href="SPC.php">SPC - Stockholm Parallel Corpora</a></li>
           <li><a href="Tatoeba.php">Tatoeba</a> - A DB of translated sentences</li>
           <li><a href="TedTalks.php">TedTalks hr-en</a></li>
           <li><a href="TED2013.php">TED Talks 2013</a></li>
           <li><a href="Tanzil.php">Tanzil</a> - A collection of Quran translations</li>
           <li><a href="TEP.php">TEP</a> - The Tehran English-Persian subtitle corpus</li>
-          <li><a href="/Ubuntu.php">Ubuntu</a> - Ubuntu localization files</li>
+          <li><a href="Ubuntu.php">Ubuntu</a> - Ubuntu localization files</li>
           <li><a href="UN.php">UN</a> - Translated UN documents</li>
           <li><a href="Wikipedia.php">Wikipedia</a> - translated sentences from Wikipedia</li>
           <li><a href="WikiSource.php">WikiSource</a> - (small en-sv sample only</li>

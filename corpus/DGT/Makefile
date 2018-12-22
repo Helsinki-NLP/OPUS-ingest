@@ -18,7 +18,7 @@ all:
 
 .PHONY: web-corpus
 web-corpus: tmx moses alg_samples html
-	cp ${OPUSPUB}/${CORPUS}.php ${OPUSPUB}/${CORPUS}${VERSION}.php
+#	cp ${OPUSPUB}/${CORPUS}.php ${OPUSPUB}/${CORPUS}${VERSION}.php
 
 
 # include some standard OPUS targets for processing/annotating data
