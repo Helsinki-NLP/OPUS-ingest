@@ -19,7 +19,7 @@
 <b>IMPORTANT:</b> If you use the OpenSubtitle corpus: <br/>Please, add a link to <b>http://www.opensubtitles.org/</b> to your website and to your reports and publications produced with the data! I promised this when I got the data from the providers of that website!</p>
 
 <p> This is a slightly cleaner and bigger version of the subtitle collection using improved sentence alignment and better language checking.<br/>
-The previous release is still available <a href="OpenSubtitles2011.php">here</a>.
+The previous release is still available <a href="OpenSubtitles-v2011.php">here</a>.
 </p>
 
 <p>55 languages, 1,076 bitexts<br>total number of files: 1,415,879<br>total number of tokens: 8.48G<br>total number of sentence fragments: 1.24G<br><p>Please <a href="http://opus.nlpl.eu/LREC2012.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J&ouml;rg Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)<br/>
@@ -28,7 +28,7 @@ The previous release is still available <a href="OpenSubtitles2011.php">here</a>
 
 <ul>
   <li><b>2014-10-23:</b> <a href="https://github.com/AlJohri/OpenSubtitles">Scripts for OpenSubtitles2012/2013</a> (by Atul Johri)</li>
-  <li><b>2013-11-18:</b> <a href="OpenSubtitles2013.php">An extension of the subtitle corpus is available</a></li>
+  <li><b>2013-11-18:</b> <a href="OpenSubtitles-v2013.php">An extension of the subtitle corpus is available</a></li>
 </ul>
 
 

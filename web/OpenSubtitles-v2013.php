@@ -30,7 +30,7 @@
 
 <h3>Download</h3>
 
-Note that you also need the files from <a href="OpenSubtitles2012.php">OpenSubtitles2012</a> if you download the XML source files of this collection. Some files are linked and aligned to the subtitles in the 2012 collection!
+Note that you also need the files from <a href="OpenSubtitles-v2012.php">OpenSubtitles2012</a> if you download the XML source files of this collection. Some files are linked and aligned to the subtitles in the 2012 collection!
 </p>
 
 <table><tr><td>Bottom-left triangle: download files<ul><li><i>ces</i> = sentence alignments in XCES format</li> <li><i>leftmost column language IDs</i> = tokenized corpus files in XML</li> <li>TMX and plain text files (Moses): see "Statistics" below</li> <li><i>lower row language IDs</i> = parsed corpus files (if they exist)</li></ul></td><td>Upper-right triangle: sample files <ul><li><i>view</i> = bilingual XML file samples</li> <li><i>upper row language IDs</i> = monolingual XML file samples</li> <li><i>rightmost column language IDs</i> = untokenized corpus files</li></ul></td></tr></table><p><div class="sample"><table border="0" cellpadding="0">
