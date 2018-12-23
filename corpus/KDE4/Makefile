@@ -22,7 +22,7 @@ all:
 	${MAKE} -C src all
 	${MAKE} convert
 	${MAKE} -C xml all
-	${MAKE} html
+	${MAKE} html-local
 	${MAKE} cwb-index
 	rm -fr data
 

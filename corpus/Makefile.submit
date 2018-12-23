@@ -55,3 +55,20 @@ endif
 	echo '${MAKE} -j ${HPC_CORES} ${MAKEARGS} ${@:.submit=}' >> $@
 	echo 'echo "Finishing at `date`"' >> $@
 	sbatch $@
+
+
+
+## run in a local tmp dir instead
+## --> reduce I/O! but requires massive copying ...
+## --> requires enough space in TMPDIR!
+%-local:
+	mkdir -p ${TMPDIR}/OPUS/corpus/${CORPUS}
+	-rsync ${OPUSCORPORA}/Makefile* ${TMPDIR}/OPUS/corpus/
+	-ln -s ${OPUSTOOLS} ${TMPDIR}/OPUS/tools
+	-rsync -av ${CORPUSHOME} ${TMPDIR}/OPUS/corpus/
+	${MAKE} -C ${TMPDIR}/OPUS/corpus/${CORPUS} OPUSHOME=${TMPDIR}/OPUS ${@:-local=}
+	-rsync -zav ${TMPDIR}/OPUS/corpus/${CORPUS} ${OPUSHOME}/corpus/
+	-rsync -zav ${TMPDIR}/OPUS/web/${CORPUS} ${OPUSHOME}/web/
+	-rsync -zav ${TMPDIR}/OPUS/web/${CORPUS}*php ${OPUSHOME}/web/
+	-rm -fr ${TMPDIR}/OPUS/corpus/${CORPUS}
+	-rm -fr ${TMPDIR}/OPUS/web/${CORPUS}*

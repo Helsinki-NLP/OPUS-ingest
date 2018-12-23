@@ -24,8 +24,10 @@ TMX      := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/tmx/%.tmx.gz,$(CES
 MOSES    := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/moses/%.txt.zip,$(CES))
 
 ifndef SMT
+ifneq ($(wildcard ${CORPUSWORDALIGN}),)
   SMT    := $(patsubst %,${CORPUSRELEASE}/smt/%.zip,\
 		$(notdir $(sort $(shell find ${CORPUSWORDALIGN} -maxdepth 1 -mindepth 1 -type d -name '*-*'))))
+endif
 endif
 WORDALG  := $(patsubst %.zip,%.alg.zip,${SMT})
 
@@ -87,6 +89,24 @@ MKDIR = mkdir -p -m 755
 html: 	${OPUSPUB}/${CORPUS}.php ${FREQ_COUNTS}
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
 	mv -f ${PACKAGES}.uniq ${PACKAGES}
+
+## run html in a local tmp dir instead
+## --> reduce I/O! but requires massive copying ...
+html-local:
+	mkdir -p ${TMPDIR}/OPUS/corpus/${CORPUS}
+	-rsync ${OPUSCORPORA}/Makefile* ${TMPDIR}/OPUS/corpus/
+	-ln -s ${OPUSTOOLS} ${TMPDIR}/OPUS/tools
+	-rsync -av ${CORPUSHOME}/Makefile* ${TMPDIR}/OPUS/corpus/${CORPUS}/
+	-rsync -av ${CORPUSHOME}/xml ${TMPDIR}/OPUS/corpus/${CORPUS}/
+	-rsync -av ${CORPUSHOME}/raw ${TMPDIR}/OPUS/corpus/${CORPUS}/
+	-rsync -av ${CORPUSHOME}/wordalign ${TMPDIR}/OPUS/corpus/${CORPUS}/
+	-rsync -av ${CORPUSHOME}/parsed ${TMPDIR}/OPUS/corpus/${CORPUS}/
+	-rsync -av ${CORPUSHOME}/ud ${TMPDIR}/OPUS/corpus/${CORPUS}/
+	${MAKE} -C ${TMPDIR}/OPUS/corpus/${CORPUS} OPUSHOME=${TMPDIR}/OPUS html
+	-rsync -zav ${TMPDIR}/OPUS/web/${CORPUS} ${OPUSHOME}/web/
+	-rsync -zav ${TMPDIR}/OPUS/web/${CORPUS}*php ${OPUSHOME}/web/
+	-rm -fr ${TMPDIR}/OPUS/corpus/${CORPUS}
+	-rm -fr ${TMPDIR}/OPUS/web/${CORPUS}*
 
 release packages: ${PACKAGES}
 

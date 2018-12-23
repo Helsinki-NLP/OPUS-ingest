@@ -40,7 +40,8 @@ all: corpus
 
 
 .PHONY: web-corpus
-web-corpus: tmx moses alg_samples html
+web-corpus: html-local
+# web-corpus: tmx moses alg_samples html
 #	${MAKE} cwb-index
 
 

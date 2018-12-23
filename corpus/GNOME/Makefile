@@ -39,10 +39,11 @@ all:
 
 .PHONY: web-corpus
 web-corpus:
-	${MAKE} tmx moses alg_samples
-	-cp ${OPUSPUB}/${CORPUS}.php ${OPUSPUB}/${CORPUS}_backup.php
-	${MAKE} html
-	cp ${OPUSPUB}/${CORPUS}.php ${OPUSPUB}/${CORPUS}${VERSION}.php
+	${MAKE} html-local
+#	${MAKE} tmx moses alg_samples
+#	-cp ${OPUSPUB}/${CORPUS}.php ${OPUSPUB}/${CORPUS}_backup.php
+#	${MAKE} html
+#	cp ${OPUSPUB}/${CORPUS}.php ${OPUSPUB}/${CORPUS}${VERSION}.php
 #	${MAKE} cwb-index
 
 

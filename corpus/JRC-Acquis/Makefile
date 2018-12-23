@@ -14,10 +14,10 @@ all:
 	${MAKE} web-corpus
 
 .PHONY: web-corpus
-web-corpus:
-	${MAKE} tmx moses alg_samples
-	${MAKE} html
-	cp ${OPUSPUB}/${CORPUS}.php ${OPUSPUB}/${CORPUS}${VERSION}.php
+web-corpus: html-local
+#	${MAKE} tmx moses alg_samples
+#	${MAKE} html
+#	cp ${OPUSPUB}/${CORPUS}.php ${OPUSPUB}/${CORPUS}${VERSION}.php
 #	${MAKE} cwb-index
 
 
