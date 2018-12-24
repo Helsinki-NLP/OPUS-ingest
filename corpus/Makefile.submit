@@ -66,7 +66,8 @@ endif
 	-rsync ${OPUSCORPORA}/Makefile* ${TMPDIR}/OPUS/corpus/
 	-ln -s ${OPUSTOOLS} ${TMPDIR}/OPUS/tools
 	-rsync -av ${CORPUSHOME} ${TMPDIR}/OPUS/corpus/
-	${MAKE} -C ${TMPDIR}/OPUS/corpus/${CORPUS} OPUSHOME=${TMPDIR}/OPUS ${@:-local=}
+	${MAKE} -C $(patsubst ${OPUSHOME}%,${TMPDIR}/OPUS%,${PWD}) \
+		OPUSHOME=${TMPDIR}/OPUS ${@:-local=}
 	-rsync -zav ${TMPDIR}/OPUS/corpus/${CORPUS} ${OPUSHOME}/corpus/
 	-rsync -zav ${TMPDIR}/OPUS/web/${CORPUS} ${OPUSHOME}/web/
 	-rsync -zav ${TMPDIR}/OPUS/web/${CORPUS}*php ${OPUSHOME}/web/

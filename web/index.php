@@ -66,8 +66,8 @@
 	  -->
           <li><a href="/cwb/Europarl7/frames-cqp.html">Europarl v7 search interface</a></li>
           <li><a href="/cwb/Europarl/frames-cqp.html">Europarl v3 search interface</a></li>
-          <!-- <li><a href="/cwb/OpenSubtitles/frames-cqp.html">OpenSubtitles search interface</a></li> 
-          <li><a href="/cwb/OpenSubtitles2016/frames-cqp.html">OpenSubtitles 2016 search interface</a></li> -->
+          <li><a href="/cwb/OpenSubtitles/frames-cqp.html">OpenSubtitles search interface</a></li> 
+          <li><a href="/cwb/OpenSubtitles2018/frames-cqp.html">OpenSubtitles 2018 search interface</a></li>
           <li><a href="/cwb/EUconst/frames-cqp.html">EUconst search interface</a></li>
           <li><a href="lex.php">Word Alignment Database</a> (<a href="/lex-old.php">old DB</a>)</li>
         </ul><b>Tools &amp; Info</b>

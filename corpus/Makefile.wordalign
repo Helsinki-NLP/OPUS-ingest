@@ -369,9 +369,10 @@ ${LANGPAIRS}: %: %/.${ACTION}
 ## NEW: submit next job if NEXTJOB is set
 %/.${ACTION}:
 	mkdir -p ${CORPUSWORDALIGN}/${@:/.${ACTION}=}
-	if [ ! -e ${@:/.${ACTION}=} ]; then \
-	  ln -s ${CORPUSWORDALIGN}/${@:/.${ACTION}=} ${@:/.${ACTION}=}; \
-	fi
+## OLD (delete?)
+#	if [ ! -e ${@:/.${ACTION}=} ]; then \
+#	  ln -s ${CORPUSWORDALIGN}/${@:/.${ACTION}=} ${@:/.${ACTION}=}; \
+#	fi
 	find ${dir $@} -type f -empty ! -iname '.*'
 	${MAKE} SRC=$(firstword $(subst -, ,${@:/.${ACTION}=})) \
 		TRG=$(lastword $(subst -, ,${@:/.${ACTION}=})) \
@@ -407,16 +408,18 @@ wordalign-align: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
 wordalign-pt: ${SRC}-${TRG}/model/phrase-table.gz
 
 .PHONY: wordalign-filter
-wordalign-filter: ${SRC}-${TRG}/model/phrase-table-filtered.gz ${CORPUSHOME}/dic ${CORPUSHOME}/dic/${SRC}-${TRG}.dic.gz
+wordalign-filter: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 	rm -f ${SRC}-${TRG}/model/phrase-table.gz
 	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
 	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
+	${MAKE} ${CORPUSHOME}/dic/${SRC}-${TRG}.dic.gz
 
 .PHONY: wordalign
-wordalign: ${SRC}-${TRG}/model/phrase-table-filtered.gz ${CORPUSHOME}/dic ${CORPUSHOME}/dic/${SRC}-${TRG}.dic.gz
+wordalign: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 	rm -f ${SRC}-${TRG}/model/phrase-table.gz
 	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
 	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
+	${MAKE} ${CORPUSHOME}/dic/${SRC}-${TRG}.dic.gz
 
 
 .PHONY: dictionaries

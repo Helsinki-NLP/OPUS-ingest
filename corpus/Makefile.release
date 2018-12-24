@@ -175,11 +175,21 @@ ${PACKAGES}:	${CORPUSRELEASE} ${ALG} \
 		${SMT} ${WORDALG} \
 		${CORPUSRELEASE}/README
 	${MKDIR} ${dir $@}
-	echo "${ALG}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
-	echo "${LANG_XML} ${LANG_RAW} ${LANG_UD}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
-	echo "${MONO_TOK} ${MONO_RAW} ${FREQ_COUNTS}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
-	echo "${TMX}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
-	echo "${MOSES}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
+	for f in ${ALG}; do \
+	  echo $$f | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@; \
+	done
+	for f in ${LANG_XML} ${LANG_RAW} ${LANG_UD}; do \
+	  echo $$f | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@; \
+	done
+	for f in ${MONO_TOK} ${MONO_RAW} ${FREQ_COUNTS}; do \
+	  echo $$f | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@; \
+	done
+	for f in ${TMX}; do \
+	  echo $$f | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@; \
+	done
+	for f in ${MOSES}; do \
+	  echo $$f | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@; \
+	done
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
 	mv -f ${PACKAGES}.uniq ${PACKAGES}
 	echo "-----------------------------"      >> ${CORPUSRELEASE}/README
@@ -196,6 +206,13 @@ ${PACKAGES}:	${CORPUSRELEASE} ${ALG} \
 	echo "Files in this release"          >> ${CORPUSRELEASE}/README
 	echo "-----------------------------"  >> ${CORPUSRELEASE}/README
 	cat ${PACKAGES} | grep '/${VERSION}/' >> ${CORPUSRELEASE}/README
+
+
+#	# echo "${ALG}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
+#	# echo "${LANG_XML} ${LANG_RAW} ${LANG_UD}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
+#	# echo "${MONO_TOK} ${MONO_RAW} ${FREQ_COUNTS}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
+#	# echo "${TMX}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
+#	# echo "${MOSES}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
 
 
 
