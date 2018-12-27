@@ -84,6 +84,9 @@ TRGCORPUS  = ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
 
 CORPUS_SIZE = ${shell sed -n '2p' ${CORPUSRELEASE}/info/${LANGPAIR}.txt.info}
 
+ifndef EFLOMAL_PRIORS
+  EFLOMAL_PRIORS = $(OPUSHOME)/eflomal
+endif
 
 ## for efmaral: we need a lot of memory!
 EFMARAL_ALIGN_MEM = ${shell \
@@ -430,12 +433,14 @@ all-monolingual: ${LMTEXT}
 all-raw-monolingual: ${LMRAWTEXT}
 
 
-# clean: take aware unpacked truecaser model files
+# clean: take away unpacked truecaser model files
 # - don't do that when aligning individual language pairs!
 # - several language pairs will depend on the same truecaser model!
 
 .PHONY: clean
 clean:
+	${MAKE} check-wordalign
+	${MAKE} check-bitexts
 	rm -f ${TRUECASER}
 	for l in ${LANGPAIRS}; do \
 	  rm -fr $$l/model/*.gz.*; \
@@ -619,11 +624,13 @@ ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz: \
 ## NEW: use priors if they exist (NOTE: need eflomal - priors branch!)
 
 %/model/aligned.srctotgt.gz: %/model/aligned.${SRCEXT} %/model/aligned.${TRGEXT}
-ifneq ("$(wildcard $(OPUSHOME)/eflomal/${SRCEXT}-${TRGEXT}.priors)","")
+ifneq ("$(wildcard $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors)","")
 	${EFLOMAL} -v -s $< -t ${word 2,$^} -f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 \
-		-p $(OPUSHOME)/eflomal/${SRCEXT}-${TRGEXT}.priors
+		-p $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors || \
+	touch ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
 else
-	${EFLOMAL} -v -s $< -t ${word 2,$^} -f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3
+	${EFLOMAL} -v -s $< -t ${word 2,$^} -f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 || \
+	touch ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
 endif
 	gzip -f ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
 
@@ -650,6 +657,7 @@ cleanup:
 	rm -fr ${LANGPAIR}/model/tmp.*
 	rm -fr ${LANGPAIR}/corpus
 	rm -fr ${LANGPAIR}/giza.*
+	${MAKE} ${LANGPAIR}-aligncheck ${LANGPAIR}-bitextcheck
 
 tmp: 
 	mkdir -p ${CORPUSWORDALIGN}/tmp
@@ -822,3 +830,37 @@ ${CORPUSHOME}/dic/%.dic.gz: | %/model/phrase-table-filtered.gz
 	${PHRASE2DICE} -d ${DICETHR} -f ${FREQTHR} -m |\
 	gzip -c > $@
 
+
+
+## check word word alignment files
+## - delete all langpairs with empty bitexts
+
+ALIGN_CHECKED  = $(patsubst %,%-aligncheck,${LANGPAIRS})
+BITEXT_CHECKED = $(patsubst %,%-bitextcheck,${LANGPAIRS})
+
+check-wordalign: ${ALIGN_CHECKED}
+check-bitexts: ${BITEXT_CHECKED}
+
+${ALIGN_CHECKED}:
+	@mkdir -p DELETE
+	@if [ -d ${@:-aligncheck=} ]; then \
+	  if [ -e ${@:-aligncheck=}/bitext.xml.gz ]; then \
+	    if [ `zgrep xtargets ${@:-aligncheck=}/bitext.xml.gz | wc -l` == "0" ]; then \
+	      echo "delete ${@:-aligncheck=}"; \
+	      mv -f ${@:-aligncheck=} DELETE/; \
+	    fi \
+	  else \
+	    echo "delete ${@:-aligncheck=}"; \
+	    mv -f ${@:-aligncheck=} DELETE/; \
+	  fi \
+	fi
+
+
+${BITEXT_CHECKED}:
+	@mkdir -p DELETE
+	@if [ -e ../xml/${@:-bitextcheck=}.xml.gz ]; then \
+	  if [ `zgrep xtargets ../xml/${@:-bitextcheck=}.xml.gz | wc -l` == "0" ]; then \
+	    echo "delete ../xml/${@:-bitextcheck=}.xml.gz"; \
+	    mv -f ../xml/${@:-bitextcheck=}.xml.gz DELETE/; \
+	  fi \
+	fi

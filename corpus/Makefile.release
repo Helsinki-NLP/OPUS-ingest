@@ -8,6 +8,12 @@
 #  make refresh-html ... remove old html and make new
 #  make packages ....... make download packages
 #
+#
+# NEW (ATTENTION - this is potentially very dangerous!)
+#
+#  make delete-empty-bitexts
+#  make delete-empty-corpora
+#
 #----------------------------------------------
 
 ifndef PARSED_LANGUAGES
@@ -753,3 +759,59 @@ ${TMX_INFO}: ${CORPUSRELEASE}/info/%.tmx.info: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	  	sed 's|^.*<seg>||;s|</seg>.*$$||;' | \
 	  	wc -w >> $@; )
 	chmod 644 $@
+
+
+
+
+delete-empty-bitexts:
+	mkdir -p ${CORPUSHOME}/DELETE/xml
+	for s in ${LANGUAGES}; do \
+	  for t in ${LANGUAGES}; do \
+	    if [ -e ${CORPUSXML}/$$s-$$t.xml.gz ]; then \
+	      if [ `zgrep xtargets ${CORPUSXML}/$$s-$$t.xml.gz | wc -l` == "0" ]; then \
+		echo "empty bitext: $$s-$$t"; \
+		mv -f ${CORPUSXML}/$$s-$$t.xml.gz ${CORPUSHOME}/DELETE/xml/; \
+		rm -f ${CORPUSRELEASE}/xml/$$s-$$t.xml.gz; \
+		rm -f ${CORPUSRELEASE}/moses/$$s-$$t.txt.zip; \
+		rm -f ${CORPUSRELEASE}/dic/$$s-$$t.dic.gz; \
+		rm -f ${CORPUSRELEASE}/smt/$$s-$$t.zip; \
+		rm -f ${CORPUSRELEASE}/smt/$$s-$$t.alg.zip; \
+		rm -f ${CORPUSRELEASE}/info/$$s-$$t.*info; \
+	      fi \
+	    fi; \
+	    if [ -e ${CORPUSRELEASE}/xml/$$s-$$t.xml.gz ]; then \
+	      if [ `zgrep xtargets ${CORPUSRELEASE}/xml/$$s-$$t.xml.gz | wc -l` == "0" ]; then \
+		echo "empty bitext: $$s-$$t"; \
+		rm -f ${CORPUSRELEASE}/xml/$$s-$$t.xml.gz; \
+		rm -f ${CORPUSRELEASE}/moses/$$s-$$t.txt.zip; \
+		rm -f ${CORPUSRELEASE}/dic/$$s-$$t.dic.gz; \
+		rm -f ${CORPUSRELEASE}/smt/$$s-$$t.zip; \
+		rm -f ${CORPUSRELEASE}/smt/$$s-$$t.alg.zip; \
+		rm -f ${CORPUSRELEASE}/info/$$s-$$t.*info; \
+	      fi \
+	    fi; \
+	  done \
+	done
+
+delete-empty-corpora:
+	mkdir -p ${CORPUSHOME}/DELETE/xml
+	mkdir -p ${CORPUSHOME}/DELETE/raw
+	mkdir -p ${CORPUSHOME}/DELETE/parsed
+	for s in ${LANGUAGES}; do \
+	    if [ -e ${CORPUSRELEASE}/mono/$$s.txt.gz ]; then \
+	      if [ `zcat ${CORPUSRELEASE}/mono/$$s.txt.gz | wc -l` == "0" ]; then \
+		echo "empty corpus: $$s"; \
+		rm -f ${CORPUSRELEASE}/mono/$$s.txt.gz; \
+		rm -f ${CORPUSRELEASE}/mono/$$s.tok.gz; \
+		rm -f ${CORPUSRELEASE}/info/$$s.info; \
+		rm -f ${CORPUSRELEASE}/freq/$$s.freq.gz; \
+		rm -f ${CORPUSRELEASE}/parsed/$$s.zip; \
+		rm -f ${CORPUSRELEASE}/raw/$$s.zip; \
+		rm -f ${CORPUSRELEASE}/xml/$$s.zip; \
+		rm -f ${CORPUSRELEASE}/truecaser/$$s.gz; \
+		mv -f ${CORPUSHOME}/xml/$$s ${CORPUSHOME}/DELETE/xml/; \
+		mv -f ${CORPUSHOME}/raw/$$s ${CORPUSHOME}/DELETE/raw/; \
+		mv -f ${CORPUSHOME}/parsed/$$s ${CORPUSHOME}/DELETE/parsed/; \
+	      fi \
+	    fi \
+	done
