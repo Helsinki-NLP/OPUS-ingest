@@ -109,10 +109,10 @@ html-local:
 	-rsync -av ${CORPUSHOME}/parsed ${TMPDIR}/OPUS/corpus/${CORPUS}/
 	-rsync -av ${CORPUSHOME}/ud ${TMPDIR}/OPUS/corpus/${CORPUS}/
 	${MAKE} -C ${TMPDIR}/OPUS/corpus/${CORPUS} OPUSHOME=${TMPDIR}/OPUS html
-	-rsync -zav ${TMPDIR}/OPUS/web/${CORPUS} ${OPUSHOME}/web/
-	-rsync -zav ${TMPDIR}/OPUS/web/${CORPUS}*php ${OPUSHOME}/web/
+	-rsync -zav ${TMPDIR}/OPUS/public_html/${CORPUS} ${OPUSHOME}/public_html/
+	-rsync -zav ${TMPDIR}/OPUS/public_html/${CORPUS}*php ${OPUSHOME}/public_html/
 	-rm -fr ${TMPDIR}/OPUS/corpus/${CORPUS}
-	-rm -fr ${TMPDIR}/OPUS/web/${CORPUS}*
+	-rm -fr ${TMPDIR}/OPUS/public_html/${CORPUS}*
 
 release packages: ${PACKAGES}
 
@@ -181,19 +181,23 @@ ${PACKAGES}:	${CORPUSRELEASE} ${ALG} \
 		${SMT} ${WORDALG} \
 		${CORPUSRELEASE}/README
 	${MKDIR} ${dir $@}
-	for f in ${ALG}; do \
-	  echo $$f | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@; \
+	for s in ${LANGUAGES}; do \
+	  for t in ${LANGUAGES}; do \
+	    if [ -e ${CORPUSRELEASE}/xml/$$s-$$t.xml.gz ]; then \
+	      echo "xml/$$s-$$t.xml.gz" >> $@; \
+	    fi; \
+	    if [ -e ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz ]; then \
+	      echo "tmx/$$s-$$t.tmx.gz" >> $@; \
+	    fi; \
+	    if [ -e ${CORPUSRELEASE}/moses/$$s-$$t.txt.zip ]; then \
+	      echo "tmx/$$s-$$t.txt.zip" >> $@; \
+	    fi; \
+	  done \
 	done
 	for f in ${LANG_XML} ${LANG_RAW} ${LANG_UD}; do \
 	  echo $$f | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@; \
 	done
 	for f in ${MONO_TOK} ${MONO_RAW} ${FREQ_COUNTS}; do \
-	  echo $$f | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@; \
-	done
-	for f in ${TMX}; do \
-	  echo $$f | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@; \
-	done
-	for f in ${MOSES}; do \
 	  echo $$f | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@; \
 	done
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
@@ -323,7 +327,7 @@ ${LANG_XML}: ${CORPUSRELEASE}/xml/%.zip: # ${CORPUSXML}/%
 		-xzf $(patsubst ${CORPUSRELEASE}/xml/%.zip,${CORPUSHTML}/%.tar.gz,$@); \
 	fi
 	find ${TMPDIR}/$@/${CORPUS}/xml -type l | xargs rm -f
-	find ${TMPDIR}/$@/${CORPUS}/xml -name '*.xml.gz' |\
+	find ${TMPDIR}/$@/${CORPUS}/xml -name '*.${XMLEXT}' |\
 	xargs -P 8 gunzip -f
 	${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README
 	${MAKE} ${TMPDIR}/$@/LICENSE
@@ -351,7 +355,7 @@ ${LANG_RAW}: ${CORPUSRELEASE}/raw/%.zip: # ${CORPUSRAW}/%
 		-xzf $(patsubst ${CORPUSRELEASE}/raw/%.zip,${CORPUSHTML}/%.raw.tar.gz,$@); \
 	fi
 	find ${TMPDIR}/$@/${CORPUS}/raw -type l | xargs rm -f
-	find ${TMPDIR}/$@/${CORPUS}/raw -name '*.xml.gz' |\
+	find ${TMPDIR}/$@/${CORPUS}/raw -name '*.${XMLEXT}' |\
 	xargs -P 8 gunzip -f
 	${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README
 	${MAKE} ${TMPDIR}/$@/LICENSE
@@ -379,7 +383,7 @@ ${LANG_UD}: ${CORPUSRELEASE}/parsed/%.zip: ${CORPUSPARSED}/%
 	@${MKDIR} ${dir $@}
 	${MKDIR} ${TMPDIR}/$</${CORPUS}/parsed
 	rsync -av $< ${TMPDIR}/$</${CORPUS}/parsed/
-	find ${TMPDIR}/$</${CORPUS}/parsed -name '*.xml.gz' |\
+	find ${TMPDIR}/$</${CORPUS}/parsed -name '*.${XMLEXT}' |\
 	xargs -P 8 gunzip -f
 	${MAKE} PACKAGE=${patsubst ${OPUSCORPORA}/%,%,$<} ${TMPDIR}/$</README
 	${MAKE} ${TMPDIR}/$</LICENSE
@@ -490,7 +494,7 @@ corpus_samples: ${CORPUS_SAMPLES}
 ${CORPUS_SAMPLES}:
 	@${MKDIR} ${dir $@}
 	echo '<html><head></head><body><pre>' >$@
-	find ${patsubst ${CORPUSPUB}/%_sample.html,${CORPUSXML}/%,$@}/ -name '*.xml.gz' | \
+	-find ${patsubst ${CORPUSPUB}/%_sample.html,${CORPUSXML}/%,$@}/ -name '*.${ALGEXT}' | \
 	xargs zcat | head -100 | recode utf8..utf16 | recode utf16..html >> $@
 	echo '</pre></body></html>' >> $@
 	chmod 644 $@
@@ -691,11 +695,11 @@ lang_info: ${LANG_INFO}
 
 ${LANG_INFO}:
 	${MKDIR} ${dir $@}
-	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSXML}/%,$@}/ -name '*.xml.gz' -type f | \
+	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSXML}/%,$@}/ -name '*.${XMLEXT}' -type f | \
 	wc -l > $@
-	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSXML}/%,$@}/ -name '*.xml.gz' -type f | \
+	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSXML}/%,$@}/ -name '*.${XMLEXT}' -type f | \
 	xargs zcat | grep '</s>' | wc -l >> $@
-	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSXML}/%,$@}/ -name '*.xml.gz' -type f | \
+	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSXML}/%,$@}/ -name '*.${XMLEXT}' -type f | \
 	xargs zcat | grep '</w>' | wc -l >> $@
 	chmod 644 $@
 
@@ -779,6 +783,18 @@ delete-empty-bitexts:
 		rm -f ${CORPUSRELEASE}/info/$$s-$$t.*info; \
 	      fi \
 	    fi; \
+	    for f in 	${CORPUSRELEASE}/moses/$$s-$$t.txt.zip \
+			${CORPUSRELEASE}/dic/$$s-$$t.dic.gz \
+			${CORPUSRELEASE}/smt/$$s-$$t.zip \
+			${CORPUSRELEASE}/smt/$$s-$$t.alg.zip; do \
+	      if [ -e $$f ]; then \
+	        if [ ! -e ${CORPUSXML}/$$s-$$t.xml.gz ]; then \
+		  echo "delete extra file $$f"; \
+		  rm -f $$f; \
+		  rm -f ${CORPUSRELEASE}/info/$$s-$$t.*info; \
+	        fi \
+	      fi; \
+	    done; \
 	    if [ -e ${CORPUSRELEASE}/xml/$$s-$$t.xml.gz ]; then \
 	      if [ `zgrep xtargets ${CORPUSRELEASE}/xml/$$s-$$t.xml.gz | wc -l` == "0" ]; then \
 		echo "empty bitext: $$s-$$t"; \
@@ -792,6 +808,7 @@ delete-empty-bitexts:
 	    fi; \
 	  done \
 	done
+	${MAKE} delete-empty-sample-files
 
 delete-empty-corpora:
 	mkdir -p ${CORPUSHOME}/DELETE/xml
@@ -814,4 +831,23 @@ delete-empty-corpora:
 		mv -f ${CORPUSHOME}/parsed/$$s ${CORPUSHOME}/DELETE/parsed/; \
 	      fi \
 	    fi \
+	done
+
+
+delete-empty-sample-files:
+	for s in ${LANGUAGES}; do \
+	  if [ -e ${CORPUSPUB}/$$s\_sample.html ]; then \
+	    if [ ! -e ${CORPUSRELEASE}/xml/$$s.zip ]; then \
+		echo "delete sample for $$s"; \
+		rm -f ${CORPUSPUB}/$$s\_sample.html; \
+	    fi \
+	  fi; \
+	  for t in ${LANGUAGES}; do \
+	    if [ -e ${CORPUSPUB}/$$s-$$t\_sample.html ]; then \
+	      if [ ! -e ${CORPUSRELEASE}/xml/$$s-$$t.xml.gz ]; then \
+		echo "delete sample for $$s-$$t"; \
+		rm -f ${CORPUSPUB}/$$s-$$t\_sample.html; \
+	      fi \
+	    fi \
+	  done; \
 	done

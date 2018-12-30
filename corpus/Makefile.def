@@ -35,7 +35,7 @@ OPUSDATA      = ${OPUSHOME}/data
 ## (hostname -d does not seem to work on Mac OS)
 
 ifeq ("${shell hostname | cut -f2- -d.}","novalocal")
-  OPUSPUB       = ${OPUSHOME}/web
+  OPUSPUB       = ${OPUSHOME}/public_html
   OPUSHTML      = /media/download
   OPUSRELEASE   = /media/releases
   OPUSWORDALIGN = /media/releases
@@ -47,7 +47,7 @@ else ifeq ("${shell hostname | cut -f2- -d.}","lingfil.uu.se")
 # else ifeq ("${shell hostname | cut -f2- -d.}","csc.fi")
 else
   OPUSNLPL      = /proj/nlpl/data/OPUS
-  OPUSPUB       = ${OPUSHOME}/web
+  OPUSPUB       = ${OPUSHOME}/public_html
   OPUSHTML      = ${OPUSHOME}/download
   OPUSWORDALIGN = ${OPUSHOME}/wordalign
   OPUSRELEASE   = ${OPUSNLPL}

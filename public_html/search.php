@@ -1,7 +1,6 @@
 <?php
 
 $opuspub = "/home/opus/public_html";
-$opusdownloads = "download/";
 
 $src = NULL;
 $trg = NULL;
@@ -17,12 +16,6 @@ if (array_key_exists('minsize',$_REQUEST)){
   $minsize = $_REQUEST['minsize'];
  }
 
-/*
-if ($trg == $src){
-  $trg=NULL;
-  //  unset($trg);
- }
-*/
 
 echo '<div class="query">';
 echo "\n<form method='post'>\n";
@@ -142,377 +135,240 @@ function table_tail(){
 
 
 
+
 function print_resources($src,$trg,$minsize='all',
 			 $sort_by='xces'){
-//			 $sort_by='moses'){
 
-    $resources = array();
-    find_resources($src,$trg,$resources);
+  $resources = array();
+  find_opus_resources($src,$trg,$resources);
 
-    $sorted = array();
-    foreach ($resources as $corpus => $res){
-      if ($sort_by == 'xces-links'){
-	$sorted[$corpus] = $res['xces'][4];
-      }
-      elseif ($sort_by == 'xces'){
-	$sorted[$corpus] = $res['xces'][5] + $res['xces'][6];
+  $sorted = array();
+  foreach ($resources as $corpus => $versions){
+    foreach ($versions as $version => $types){
+      // echo var_dump($types);
+      if ($sort_by == 'xces-links' || $sort_by == 'xces'){
+	$type = $types['xces'];
       }
       else{
-	$sorted[$corpus] = $res['moses'][2] + $res['moses'][3];
+	$type = $types['moses'];
+      }
+      foreach ($type as $lang => $res){
+	if ($sort_by == 'xces-links'){
+	  $sorted["$corpus:$version:$lang"] = $res['alignment_pairs'];
+	}
+	else{
+	  $sorted["$corpus:$version:$lang"] = $res['source_tokens'] + $res['target_tokens'];
+	}
       }
     }
-    arsort($sorted,SORT_NUMERIC);
-
-    foreach ($sorted as $bitext => $size){
-      if ($size < $minsize){ break; }
-      list($corpus,$src,$trg) = explode(':',$bitext);
-      print_resource($corpus,$src,$trg,$resources[$bitext]);
-    }
-}
-
-
-
-
-function find_resources($src,$trg,&$resources){
-
-  if ($src > $trg){
-    $tmp = $trg; $trg = $src; $src = $tmp;
   }
+  arsort($sorted,SORT_NUMERIC);
+  // echo var_dump($sorted);
 
-  $corpora = array();
-  get_corpora($src,$trg,$corpora);
-
-  foreach ($corpora as $corpus){
-    $res = array();
-    get_resources($corpus,$src,$trg,$res);
-    foreach ($res as $format => $descr){
-      $resources["$corpus:$src:$trg"][$format] = explode(':',$descr);
-    }
+  foreach ($sorted as $bitext => $size){
+    if ($size < $minsize){ break; }
+    list($corpus,$version,$src,$trg) = explode(':',$bitext);
+    // echo "$corpus $src $trg $version";
+    print_resource($corpus,$version,$src,$trg,$resources[$corpus][$version]);
   }
 }
 
 
 
 
-function print_resource($corpus,$src,$trg,$resource){
+
+
+function print_resource($corpus,$version,$src,$trg,$resource){
 
   global $TotalDocs,$TotalLinks,$TotalSrcTok,$TotalTrgTok,
-    $TotalTmxLinks,$TotalTxtLinks,$opusdownloads;
+    $TotalTmxLinks,$TotalTxtLinks;
 
-  foreach ($resource as $format => $parts){
+  if ($src > $trg){
+    $tmp = $trg;
+    $trg = $src;
+    $src = $tmp;
+  }
 
-      $link = 'download.php?f='.urlencode($parts[0]);
-      if ($format == 'xces'){
-	$nrDocs = $parts[3];
-	$nrLinks=$parts[4];
-	$title = $nrDocs." aligned documents,";
-	$title = pretty_number($nrLinks)." sentence alignments";
-	$ResourceHtml[$format]='<a href="'.$link.'" title="'.$title.'">';
-	$ResourceHtml[$format].=$format."</a>&nbsp;";
+  // bilingual data sets
+  $langpair = "$src:$trg";
+  foreach (array('xces','tmx','moses','alg','smt','dic') as $format){
+    if (array_key_exists($format,$resource)){
+      $res = $resource[$format];
+      if (array_key_exists($langpair,$res)){
+	$parts = $res[$langpair];
 
-	$nrSrcTok=$parts[5];
-	$title = pretty_number($nrSrcTok)." source language tokens";
-	$link = 'download.php?f='.urlencode($parts[1]);
-	$ResourceHtml[$format].='<a href="'.$link.'" title="'.$title.'">';
-	$ResourceHtml[$format].=$src."</a>";
+	$nrDocs[$format]   = $parts['documents'];
+	$nrLinks[$format]  = $parts['alignment_pairs'];
+	$nrSrcTok[$format] = $parts['source_tokens'];
+	$nrTrgTok[$format] = $parts['target_tokens'];
 
-	$rawsrc = preg_replace('/\.tar\.gz/','.raw.tar.gz',$parts[1]);
-	if (file_exists($opusdownloads.$rawsrc)){
-	  $link = 'download.php?f='.urlencode($rawsrc);
-	  $ResourceHtml['raw']='<a href="'.$link.'" title="'.$title.'">';
-	  $ResourceHtml['raw'].=$src."</a>";
+	$title   = $nrDocs[$format]." aligned documents,";
+	$title  .= pretty_number($nrLinks[$format])." sentence alignments";
+	if ($format == 'alg'){
+	  $ResourceHtml['smt'].='<a rel="nofollow" href="'.$parts['url'].'" title="'.$title.'">';
+	  $ResourceHtml['smt'].=$format."</a>&nbsp;";
 	}
+	else{
+	  $ResourceHtml[$format].='<a rel="nofollow" href="'.$parts['url'].'" title="'.$title.'">';
+	  $ResourceHtml[$format].=$format."</a>&nbsp;";
+	}
+      }
+    }
+  }
 
-	if ( $src != $trg ){
-	  $nrTrgTok=$parts[6];
-	  $title = pretty_number($nrTrgTok)." target language tokens";
-	  $link = 'download.php?f='.urlencode($parts[2]);
-	  $ResourceHtml[$format].='&nbsp;<a href="'.$link.'" title="'.$title.'">';
-	  $ResourceHtml[$format].=$trg."</a>";
-
-	  $rawtrg = preg_replace('/\.tar\.gz/','.raw.tar.gz',$parts[2]);
-	  if (file_exists($opusdownloads.$rawtrg)){
-	     $link = 'download.php?f='.urlencode($rawtrg);
-	     $ResourceHtml['raw'].='&nbsp;<a href="'.$link.'" title="'.$title.'">';
-	     $ResourceHtml['raw'].=$trg."</a>";
+  // monolingual data sets
+  foreach (array('xml','raw','mono','monotok','freq') as $format){
+    if (array_key_exists($format,$resource)){
+      $res = $resource[$format];
+      // echo var_dump($xml);
+      if (array_key_exists("$src:",$res)){
+	$parts = $res["$src:"];
+	$nrSrcTok[$format]=$parts['source_tokens'];
+	$title = $parts['documents']." documents,";
+	$title .= pretty_number($parts['source_tokens'])." tokens";
+	if ($format == 'xml'){
+	  $ResourceHtml['xces'].='<a rel="nofollow" href="'.$parts['url'].'" title="'.$title.'">';
+	  $ResourceHtml['xces'].=$src."</a>&nbsp;";
+	}
+	else{
+	  $ResourceHtml[$format].='<a rel="nofollow" href="'.$parts['url'].'" title="'.$title.'">';
+	  $ResourceHtml[$format].=$src."</a>&nbsp;";
+	}
+      }
+      if ( $src != $trg ){
+	if (array_key_exists("$trg:",$res)){
+	  $parts = $res["$trg:"];
+	  $nrTrgTok[$format]=$parts['source_tokens'];
+	  $title = $parts['documents']." documents,";
+	  $title .= pretty_number($parts['source_tokens'])." tokens";
+	  if ($format == 'xml'){
+	    $ResourceHtml['xces'].='<a rel="nofollow" href="'.$parts['url'].'" title="'.$title.'">';
+	    $ResourceHtml['xces'].=$trg."</a>";
+	  }
+	  else{
+	    $ResourceHtml[$format].='<a rel="nofollow" href="'.$parts['url'].'" title="'.$title.'">';
+	    $ResourceHtml[$format].=$trg."</a>";
 	  }
 	}
       }
-
-      elseif ($format == 'tmx'){
-	$nrTMXLinks=$parts[1];
-	$nrTMXSrcTok=$parts[2];
-	$nrTMXTrgTok=$parts[3];
-        if (file_exists($opusdownloads.$corpus.'/'.$src.'-'.$trg.'.tmx.gz')){
-	    $title = pretty_number($nrTMXLinks)." sentence alignments, ";
-	    $title .= pretty_number($nrTMXSrcTok)." source tokens,";
-	    $title .= pretty_number($nrTMXTrgTok)." target tokens";
-	    // $title .= pretty_number($nrTMXSrcTok+$nrTMXTrgTok)." tokens";
-	    $ResourceHtml[$format]='<a href="'.$link.'" title="'.$title.'">';
-	    $ResourceHtml[$format].=$format."</a>";
-	}
-	$TotalTmxLinks+=$nrTMXLinks;
-      }
-
-      elseif ($format == 'moses'){
-	$nrTXTLinks=$parts[1];
-	$nrTXTSrcTok=$parts[2];
-	$nrTXTTrgTok=$parts[3];
-        if (file_exists($opusdownloads.$corpus.'/'.$src.'-'.$trg.'.txt.zip')){
-	    $title = pretty_number($nrTXTLinks)." sentence alignments, ";
-	    $title .= pretty_number($nrTXTSrcTok)." source tokens,";
-	    $title .= pretty_number($nrTXTTrgTok)." target tokens";
-	    // $title .= pretty_number($nrTXTSrcTok+$nrTXTTrgTok)." tokens";
-	    $ResourceHtml[$format]='<a href="'.$link.'" title="'.$title.'">';
-	    $ResourceHtml[$format].=$format."</a>";
-	}
-	$TotalTxtLinks+=$nrTXTLinks;
-      }
-    }
-    echo '<tr><td><a href="'.$corpus.'.php"><b>';
-    echo $corpus.'</b></a></td>';
-    echo "<td align='right'>$nrDocs</td>";
-    //echo "<td align='right'>".pretty_number($nrTXTLinks)."</td>";
-    //echo "<td align='right'>".pretty_number($nrTXTSrcTok)."</td>";
-    //echo "<td align='right'>".pretty_number($nrTXTTrgTok)."</td>";
-    echo "<td align='right'>".pretty_number($nrLinks)."</td>";
-    echo "<td align='right'>".pretty_number($nrSrcTok)."</td>";
-    echo "<td align='right'>".pretty_number($nrTrgTok)."</td>";
-    // echo '<td bgcolor="'.size_color($nrLinks).'">[&nbsp;';
-
-    ////////////////////////////////////////////////////////////////////////
-    // XML files
-    ////////////////////////////////////////////////////////////////////////
-
-    echo '<td bgcolor="'.size_color($nrSrcTok+$nrTrgTok).'">[&nbsp;';
-    echo $ResourceHtml['xces'].'&nbsp;]</td>';
-    if (isset($ResourceHtml['raw'])){
-      echo '<td bgcolor="'.size_color($nrSrcTok+$nrTrgTok).'">[&nbsp;';
-      echo $ResourceHtml['raw'].'&nbsp;]</td>';
-    }
-    else{
-      echo '<td></td>';
-    }
-
-    ////////////////////////////////////////////////////////////////////////
-    // TMX files
-    ////////////////////////////////////////////////////////////////////////
-
-    if (isset($ResourceHtml['tmx'])){
-	//echo '<td bgcolor="'.size_color($nrTMXLinks).'">[&nbsp;';
-	echo '<td bgcolor="'.size_color($nrTMXSrcTok+$nrTMXTrgTok).'">[&nbsp;';
-	echo $ResourceHtml['tmx'].'&nbsp;]</td>';
-    }
-    else{
-      echo '<td></td>';
-    }
-
-    ////////////////////////////////////////////////////////////////////////
-    // Moses files
-    ////////////////////////////////////////////////////////////////////////
-
-    if (isset($ResourceHtml['moses'])){
-	//echo '<td bgcolor="'.size_color($nrTXTLinks).'">[&nbsp;';
-	echo '<td bgcolor="'.size_color($nrTXTSrcTok+$nrTXTTrgTok).'">[&nbsp;';
-	echo $ResourceHtml['moses'].'&nbsp;]</td>';
-    }
-    else{
-      echo '<td></td>';
-    }
-
-    ////////////////////////////////////////////////////////////////////////
-    // monolingual files
-    ////////////////////////////////////////////////////////////////////////
-
-    $monobase = $corpus.'/mono/'.$corpus.'.';
-    echo '<td>';
-    if (file_exists($opusdownloads.$monobase.$src.'.gz')){
-      $link = 'download.php?f='.urlencode($monobase.$src.'.gz');
-      echo '<a href="'.$link.'" title="tokenized '.$src.'">'.$src."</a>&nbsp;";
-    }
-    if ( $src != $trg ){
-       if (file_exists($opusdownloads.$monobase.$trg.'.gz')){
-       	  $link = 'download.php?f='.urlencode($monobase.$trg.'.gz');
-      	  echo '<a href="'.$link.'" title="tokenized '.$trg.'">'.$trg."</a>&nbsp;";
-       }
-    }
-    echo '</td>';
-    $monobase = $corpus.'/mono/'.$corpus.'.raw.';
-    echo '<td>';
-    if (file_exists($opusdownloads.$monobase.$src.'.gz')){
-      $link = 'download.php?f='.urlencode($monobase.$src.'.gz');
-      echo '<a href="'.$link.'" title="tokenized '.$src.'">'.$src."</a>&nbsp;";
-    }
-    if ( $src != $trg ){
-       if (file_exists($opusdownloads.$monobase.$trg.'.gz')){
-       	  $link = 'download.php?f='.urlencode($monobase.$trg.'.gz');
-      	  echo '<a href="'.$link.'" title="tokenized '.$trg.'">'.$trg."</a>&nbsp;";
-       }
-    }
-    echo '</td>';
-
-    echo '<td>';
-    $srcparsed = $corpus.'/'.$src.'.parsed.tar.gz';
-    if (file_exists($opusdownloads.$srcparsed)){
-      $link = 'download.php?f='.urlencode($srcparsed);
-      echo '<a href="'.$link.'" title="parsed '.$src.'">'.$src."</a>&nbsp;";
-    }
-    if ( $src != $trg ){
-       $trgparsed = $corpus.'/'.$trg.'.parsed.tar.gz';
-       if (file_exists($opusdownloads.$trgparsed)){
-       	  $link = 'download.php?f='.urlencode($trgparsed);
-      	  echo '<a href="'.$link.'" title="parsed '.$trg.'">'.$trg."</a>&nbsp;";
-       }
-    }
-    /*
-    $truedir = $corpus.'/wordalign/truecaser/';
-    if (file_exists($opusdownloads.$truedir.$src.'.gz')){
-      $link = 'download.php?f='.urlencode($truedir.$src.'.gz');
-      echo '<a href="'.$link.'" title="truecaser '.$src.'">'.$src."</a>&nbsp;";
-    }
-    if (file_exists($opusdownloads.$truedir.$trg.'.gz')){
-      $link = 'download.php?f='.urlencode($truedir.$trg.'.gz');
-      echo '<a href="'.$link.'" title="truecaser '.$trg.'">'.$trg."</a>&nbsp;";
-    }
-    */
-    echo '</td>';
-
-    echo '<td>';
-    if (is_dir("$opusdownloads$corpus/$src-$trg")){
-      echo "<a rel='nofollow' href='$opusdownloads$corpus/$src-$trg'>$src-$trg</a>";
-    }
-    elseif (is_dir("$corpus/wordalign/$src-$trg")){
-      echo "<a rel='nofollow' href='$corpus/wordalign/$src-$trg'>$src-$trg</a>";
-    }
-    echo '</td>';
-
-    // dictionary files
-    $dicfile = $corpus.'/dic/'.$src.'-'.$trg.'.dic.gz';
-    echo '<td>';
-    if (file_exists($opusdownloads.$dicfile)){
-      $link = 'download.php?f='.urlencode($dicfile);
-      echo '<a href="'.$link.'" title="dictionary">dic</a>&nbsp;';
-    }
-    echo '</td>';
-
-    // freq files
-    $freqbase = $corpus.'/freq/'.$corpus.'.';
-    echo '<td>';
-    if (file_exists($opusdownloads.$freqbase.$src.'.gz')){
-      $link = 'download.php?f='.urlencode($freqbase.$src.'.gz');
-      echo '<a href="'.$link.'" title="lowercased frequencies '.$src.'">'.$src."</a>&nbsp;";
-    }
-    if ( $src != $trg ){
-       if (file_exists($opusdownloads.$freqbase.$trg.'.gz')){
-       	  $link = 'download.php?f='.urlencode($freqbase.$trg.'.gz');
-      	  echo '<a href="'.$link.'" title="lowercased frequencies '.$trg.'">'.$trg."</a>&nbsp;";
-       }
-    }
-    echo '</td>';
-
-
-    ////////////////////////////////////////////////////////////////////////
-    // query and browse
-    ////////////////////////////////////////////////////////////////////////
-
-    if (file_exists('cwb/reg/'.$corpus.'/'.$src)){
-      echo '<td>[<a href="bin/opuscqp.pl';
-      echo '?corpus='.$corpus.';lang='.$src.'">query</a>';
-      echo ']</td>';;
-    }
-    else{ echo '<td></td>'; }
-
-    if (file_exists($corpus.'/'.$src.'-'.$trg.'_sample.html')){
-      echo '<td>[';
-      echo '<a href="'.$corpus.'/'.$src.'-'.$trg.'_sample.html">sample</a>';
-      echo ']</td>';;
-    }
-    else{ echo '<td></td>'; }
-
-    echo '<td style="text-align:left;">';
-
-    // alternative alignments
-    $altlinks = $corpus.'/'.$src.'-'.$trg.'.alt.xml.gz';
-    if (file_exists($opusdownloads.$altlinks)){
-      echo "[<a rel='nofollow' href='$altlinks'>alt</a>]";
-    }
-
-    // intra-lingual links with different categories
-    $ext = array( 'insert', 'pct' , 'spell', 'other');     
-    foreach( $ext as $e ) {
-        $altlinks = $corpus.'/'.$src.'-'.$trg.'.'.$e.'.xml.gz';
-        $alttmx   = $corpus.'/'.$src.'-'.$trg.'.'.$e.'.tmx.gz';
-        $altmoses = $corpus.'/'.$src.'-'.$trg.'.'.$e.'.txt.zip';
-   	if (file_exists($opusdownloads.$altlinks)){
-	   $link = 'download.php?f='.urlencode($altlinks);
-      	   echo "[<a rel='nofollow' href='$link'>$e</a>";
-   	   if (file_exists($opusdownloads.$alttmx)){
-	      $link = 'download.php?f='.urlencode($alttmx);
-      	      echo " <a rel='nofollow' href='$link'>tmx</a>";
-	   }
-   	   if (file_exists($opusdownloads.$altmoses)){
-	      $link = 'download.php?f='.urlencode($altmoses);
-      	      echo " <a rel='nofollow' href='$link'>txt</a>";
-	   }
-	   echo "]";
-    	}
-    }
-
-    // source directories of the exist
-    if (is_dir("$corpus/xml/$src")){
-      echo "[<a rel='nofollow' href='$corpus/xml/$src'>xml/$src</a>]";
-    }
-    if (is_dir("$corpus/xml/$trg")){
-      echo "[<a rel='nofollow' href='$corpus/xml/$trg'>xml/$trg</a>]";
-    }
-    if (is_dir("$corpus/xml/$src-$trg")){
-      echo "[<a rel='nofollow' href='$corpus/xml/$src-$trg'>xml/$src-$trg</a>]";
-    }
-    if (is_dir("$corpus/raw/$src")){
-      echo "[<a rel='nofollow' href='$corpus/raw/$src'>raw/$src</a>]";
-    }
-    if (is_dir("$corpus/raw/$trg")){
-      echo "[<a rel='nofollow' href='$corpus/raw/$trg'>raw/$trg</a>]";
-    }
-    echo '</td>';
-
-
-    echo "</tr>\n";
-
-    $TotalDocs+=$nrDocs;
-    $TotalLinks+=$nrLinks;
-    $TotalSrcTok+=$nrSrcTok;
-    $TotalTrgTok+=$nrTrgTok;
-}
-
-
-function get_corpora($src,$trg,&$corpora){
-  global $opuspub;
-  $dbh = dba_open( $opuspub."/Bitexts.db", "r", "db4") or die('ssss');
-  if (dba_exists("$src-$trg",$dbh)){
-    $string=dba_fetch("$src-$trg",$dbh);
-    $corpora = explode(':',$string);
-  }
-  dba_close($dbh);
-}
-
-
-
-
-function get_resources($corpus,$src,$trg,&$resources){
-  global $opuspub;
-  $key = $corpus.'/'.$src.'-'.$trg;
-  $dbh = dba_open( $opuspub."/Info.db", "r", "db4") or die('');
-  if (dba_exists($key,$dbh)){
-    $string=dba_fetch($key, $dbh);
-    $info = explode('+',$string);
-    foreach ($info as $res){
-      $parts = explode('=',$res);
-      $resources[$parts[0]] = $parts[1];
     }
   }
-  dba_close($dbh);
+
+  echo '<tr><td><a href="'.$corpus.'-'.$version.'.php"><b>';
+  echo $corpus.'</b>&nbsp;'.$version.'</a></td>';
+  echo "<td align='right'>".$nrDocs['xces']."</td>";
+  echo "<td align='right'>".pretty_number($nrLinks['xces'])."</td>";
+  echo "<td align='right'>".pretty_number($nrSrcTok['xces'])."</td>";
+  echo "<td align='right'>".pretty_number($nrTrgTok['xces'])."</td>";
+
+  ////////////////////////////////////////////////////////////////////////
+  // XML files
+  ////////////////////////////////////////////////////////////////////////
+
+  echo '<td bgcolor="'.size_color($nrSrcTok['xces']+$nrTrgTok['xces']).'">&nbsp;';
+  echo $ResourceHtml['xces'].'&nbsp;</td>';
+  if (isset($ResourceHtml['raw'])){
+    echo '<td bgcolor="'.size_color($nrSrcTok['raw']+$nrTrgTok['raw']).'">&nbsp;';
+    echo $ResourceHtml['raw'].'&nbsp;</td>';
+  }
+  else{
+    echo '<td></td>';
+  }
+
+  ////////////////////////////////////////////////////////////////////////
+  // all other formats
+  ////////////////////////////////////////////////////////////////////////
+
+  foreach (array('tmx','moses','monotok','mono','ud','smt','dic','freq') as $format){  
+    if (isset($ResourceHtml[$format])){
+      if (in_array($format,array('smt','dic','freq'))){
+	echo '<td>&nbsp;'.$ResourceHtml[$format].'</td>';
+      }
+      else{
+	echo '<td bgcolor="'.size_color($nrSrcTok[$format]+$nrTrgTok[$format]).'">&nbsp;';
+	echo $ResourceHtml[$format].'</td>';
+      }
+    }
+    else{
+      echo '<td></td>';
+    }
+  }
+
+  ////////////////////////////////////////////////////////////////////////
+  // query and browse
+  ////////////////////////////////////////////////////////////////////////
+
+
+  $oldname = new2old($corpus,$version);
+  if (file_exists('cwb/reg/'.$oldname.'/'.$src)){
+    echo '<td><a href="bin/opuscqp.pl';
+    echo '?corpus='.$oldname.';lang='.$src.'">query</a>';
+    echo '</td>';
+  }
+  elseif (file_exists('cwb/reg/'.$corpus.'/'.$src)){
+    echo '<td><a href="bin/opuscqp.pl';
+    echo '?corpus='.$corpus.';lang='.$src.'">query</a>';
+    echo '</td>';;
+  }
+  else{ echo '<td></td>'; }
+  
+  if (file_exists($corpus.'/'.$version.'/'.$src.'-'.$trg.'_sample.html')){
+    echo '<td>';
+    echo '<a href="'.$corpus.'/'.$version.'/'.$src.'-'.$trg.'_sample.html">sample</a>';
+    echo '</td>';;
+  }
+  else{ echo '<td></td>'; }
+
+  echo '<td style="text-align:left;">';
+
+
+
+  // alternative alignments
+  foreach (array('xces/alt', 'moses/strict',
+		 'xces/insert','tmx/insert','moses/insert',
+		 'xces/pct',   'tmx/pct',   'moses/pct',
+		 'xces/spell', 'tmx/spell', 'moses/spell',
+		 'xces/other', 'tmx/other', 'moses/other',) as $format){
+
+    if (array_key_exists($format,$resource)){
+      $res = $resource[$format];
+      if (array_key_exists($langpair,$res)){
+	$parts = $res[$langpair];
+	echo '<a rel="nofollow" href="'.$parts['url'].'">'.$format."</a>&nbsp;";
+      }
+    }
+  }
+
+  // links to source directories of they exist
+  if (is_dir("$corpus/xml/$src")){
+    echo "[<a rel='nofollow' href='$corpus/xml/$src'>xml/$src</a>]";
+  }
+  if (is_dir("$corpus/xml/$trg")){
+    echo "[<a rel='nofollow' href='$corpus/xml/$trg'>xml/$trg</a>]";
+  }
+  if (is_dir("$corpus/xml/$src-$trg")){
+    echo "[<a rel='nofollow' href='$corpus/xml/$src-$trg'>xml/$src-$trg</a>]";
+  }
+  if (is_dir("$corpus/raw/$src")){
+    echo "[<a rel='nofollow' href='$corpus/raw/$src'>raw/$src</a>]";
+  }
+  if (is_dir("$corpus/raw/$trg")){
+    echo "[<a rel='nofollow' href='$corpus/raw/$trg'>raw/$trg</a>]";
+  }
+  echo '</td>';
+
+
+  echo "</tr>\n";
+
+  $TotalLinks    += $nrLinks['xces'];
+  $TotalTxtLinks += $nrLinks['moses'];
+  $TotalTmxLinks += $nrLinks['tmx'];
+
+  $TotalDocs     += $nrDocs['xces'];
+  $TotalSrcTok   += $nrSrcTok['xces'];
+  $TotalTrgTok   += $nrTrgTok['xces'];
 }
+
 
 
 
@@ -567,7 +423,7 @@ function get_trg_languages($lang,$srclang,&$trgs){
     foreach ($ids as $id){
       $trgs[$id] = $srclang[$id];
     }
-    $trgs['any'] = '-- any language --';
+    // $trgs['any'] = '-- any language --';
     dba_close($dbh);
     return true;
   }
@@ -576,17 +432,6 @@ function get_trg_languages($lang,$srclang,&$trgs){
 }
 
 
-function print_db($name){
-  global $opuspub;
-  $dbh = dba_open( $opuspub."/".$name, "r", "db4") or die('');
-  $id=dba_firstkey($dbh);
-  while ($id != NULL){
-    $name = dba_fetch($id, $dbh);
-    echo "...$id... = $name <br/>";
-    $id=dba_nextkey($dbh);
-  }
-  dba_close($dbh);
-}
 
 function pretty_number($nr,$dec=1){
     if ($nr>1000000000){
@@ -632,5 +477,233 @@ function size_color($nr){
     return sprintf("#%x%x%x",$red,$green,$blue);
 }
 
+
+function find_opus_resources($src,$trg,&$resources){
+  $OPUSAPI = 'https://translate.ling.helsinki.fi/opusapi';
+  $url = $OPUSAPI.'/?source='.$src.'&target='.$trg;
+  $lines_array=file($url);
+  // turn array into one variable
+  $string=implode('',$lines_array);
+  $json = json_decode($string, true);
+  foreach ($json['corpora'] as $c){
+    if ($c['preprocessing'] != 'info'){
+      $file = basename($c['url']);
+      $parts = explode('.',$file);
+      $ext = $parts[1];
+
+      $type = $c['preprocessing'];
+      if ($type == 'xml' && $c['source'] != "" && $c['target'] != ""){
+	$type = 'xces';
+      }
+      elseif ($type == 'mono' && $ext == 'tok'){
+	$type = 'monotok';
+      }
+      elseif ($type == 'smt' && $ext == 'alg'){
+	$type = 'alg';
+      }
+
+      // alternative links
+      if (($type == 'xces' || $type == 'tmx' || $type == 'moses') && 
+	  ($ext != 'xml' && $ext != 'txt' && $ext != 'tmx') ){
+	$type = $type.'/'.$ext;
+      }
+
+      $lang = $c['source'].':'.$c['target'];
+      $resources[$c['corpus']][$c['version']][$type][$lang] = $c;
+      // $resources[$c['corpus']][$c['version']][$type] = $c;
+    }
+  }
+}
+
+
+
+// this is too slow!
+
+function storage_exists($file){
+  $file = old2new($file);
+  $storagehome = 'https://object.pouta.csc.fi/OPUS-';
+  $url = $storagehome.$file;
+
+  $file_headers = @get_headers($url);
+  if(!$file_headers || $file_headers[0] == 'HTTP/1.1 404 Not Found') {
+    return false;
+  }
+  return true;
+}
+
+
+
+function old2new($file) {
+
+   // latest version of each corpus in OPUS
+   $versions = array(
+		     "Books" => "Books/v1",
+		     "DGT" => "DGT/v4",
+		     "DOGC" => "DOGC/v2",
+		     "ECB" => "ECB/v1",
+		     "EhuHac" => "EhuHac/v1",
+		     "Elhuyar" => "Elhuyar/v1",
+		     "EMEA" => "EMEA/v3",
+		     "EUbookshop" => "EUbookshop/v2",
+		     "EUconst" => "EUconst/v1",
+		     "Europarl3" => "Europarl/v3",
+		     "Europarl" => "Europarl/v7",
+		     "giga-fren" => "giga-fren/v2",
+		     // "GlobalVoices" => "GlobalVoices/v2017q3",
+		     "GlobalVoices" => "GlobalVoices/v2015",
+		     "GNOME" => "GNOME/v1",
+		     "hrenWaC" => "hrenWaC/v1",
+		     "JRC-Acquis" => "JRC-Acquis/v3.0",
+		     "KDE4" => "KDE4/v2",
+		     "KDEdoc" => "KDEdoc/v1",
+		     "MBS" => "MBS/v1",
+		     "memat" => "memat/v1",
+		     "MontenegrinSubs" => "MontenegrinSubs/v1",
+		     "MPC1" => "MPC1/v1",
+		     "MultiUN" => "MultiUN/v1",
+		     "News-Commentary" => "News-Commentary/v9.1",
+		     "News-Commentary11" => "News-Commentary/v11",
+		     "OfisPublik" => "OfisPublik/v1",
+		     "OpenOffice" => "OpenOffice/v2",
+		     "OpenOffice3" => "OpenOffice/v3",
+		     "OpenSubtitles" => "OpenSubtitles/v1",
+		     "OpenSubtitles2011" => "OpenSubtitles/v2011",
+		     "OpenSubtitles2012" => "OpenSubtitles/v2012",
+		     "OpenSubtitles2013" => "OpenSubtitles/v2013",
+		     "OpenSubtitles2015" => "OpenSubtitles/v2015",
+		     "OpenSubtitles2016" => "OpenSubtitles/v2016",
+		     "OpenSubtitles2018" => "OpenSubtitles/v2018",
+		     "ParaCrawl" => "ParaCrawl/v1",
+		     "PHP" => "PHP/v1",
+		     "RF" => "RF/v1",
+		     "SETIMES" => "SETIMES/v1",
+		     "SETIMES2" => "SETIMES/v2",
+		     "SPC" => "SPC/v1",
+		     "Tanzil" => "Tanzil/v1",
+		     "Tatoeba" => "Tatoeba/v2",
+		     "TED2013" => "TED2013/v1.1",
+		     "TedTalks" => "TedTalks/v1",
+		     "TEP" => "TEP/v1",
+		     "Ubuntu" => "Ubuntu/v14.10",
+		     "UN" => "UN/v20090831",
+		     "Wikipedia" => "Wikipedia/v1.0",
+		     "WikiSource" => "WikiSource/v1",
+		     "WMT-News" => "WMT-News/v2014",
+		     "XhosaNavy" => "XhosaNavy/v1",
+		     );
+
+    // map between old and new formats
+    //
+    // <corpus>/<id>.tar.gz                --> <corpus>/<version>/xml/<id>.zip
+    // <corpus>/<id>.raw.tar.gz            --> <corpus>/<version>/raw/<id>.zip
+    // <corpus>/<id>.parsed.tar.gz         --> <corpus>/<version>/parsed/<id>.zip
+    // <corpus>/<ss>-<tt>.xml.gz           --> <corpus>/<version>/xml/<ss>-<tt>.xml.gz
+    // <corpus>/mono/<corpus>.<id>.gz      --> <corpus>/<version>/mono/<id>.tok.gz
+    // <corpus>/mono/<corpus>.raw.<id>.gz  --> <corpus>/<version>/mono/<id>.txt.gz
+    // <corpus>/<ss>-<tt>.tmx.gz           --> <corpus>/<version>/tmx/<ss>-<tt>.tmx.gz
+    // <corpus>/<ss>-<tt>.txt.zip          --> <corpus>/<version>/moses/<ss>-<tt>.txt.zip
+
+   $parts = explode('/',$file);
+   $version = $versions[$parts[0]];
+
+   if (count($parts) == 2){
+     $version = $versions[$parts[0]];
+     $ext = explode('.',$parts[1]);
+     if ($ext[1] == 'tar'){
+       $file = implode( '/', array($version,'xml',$ext[0].'.zip') );
+     } elseif ($ext[1] == 'raw'){
+       $file = implode( '/', array($version,'raw',$ext[0].'.zip') );
+     } elseif ($ext[1] == 'parsed'){
+       $file = implode( '/', array($version,'parsed',$ext[0].'.zip') );
+     } elseif ($ext[1] == 'xml'){
+       $file = implode( '/', array($version,'xml',$ext[0].'.xml.gz') );
+     } elseif ($ext[1] == 'tmx'){
+       $file = implode( '/', array($version,'tmx',$ext[0].'.tmx.gz') );
+     } elseif ($ext[1] == 'txt'){
+       $file = implode( '/', array($version,'moses',$ext[0].'.txt.zip') );
+     } else {
+       $file = implode( '/', array($version,'mono',$ext[2].'.tok.gz') );
+     }
+   }
+   if (count($parts) == 3){
+     if ($parts[1] == 'mono'){
+       $ext = explode('.',$parts[2]);
+       if ($ext[1] == 'raw'){
+	 $file = implode( '/', array($version,'mono',$ext[2].'.txt.gz') );
+       } elseif ($ext[1] != 'txt' && $ext[1] != 'tok'){
+	 $file = implode( '/', array($version,'mono',$ext[1].'.tok.gz') );
+       }
+     } elseif ($parts[1] == 'dic'){
+       $file = implode( '/', array($version,'dic',$parts[2]) );
+     } elseif ($parts[1] == 'freq'){
+       $ext = explode('.',$parts[2]);
+       $file = implode( '/', array($version,'freq',$ext[1].'.freq.gz') );
+     }
+   }
+   return $file;
+}
+
+function new2old($corpus,$version) {
+
+   // latest version of each corpus in OPUS
+   $versions = array(
+		     "Books" => "Books/v1",
+		     "DGT" => "DGT/v4",
+		     "DOGC" => "DOGC/v2",
+		     "ECB" => "ECB/v1",
+		     "EhuHac" => "EhuHac/v1",
+		     "Elhuyar" => "Elhuyar/v1",
+		     "EMEA" => "EMEA/v3",
+		     "EUbookshop" => "EUbookshop/v2",
+		     "EUconst" => "EUconst/v1",
+		     "Europarl3" => "Europarl/v3",
+		     "Europarl" => "Europarl/v7",
+		     "giga-fren" => "giga-fren/v2",
+		     // "GlobalVoices" => "GlobalVoices/v2017q3",
+		     "GlobalVoices" => "GlobalVoices/v2015",
+		     "GNOME" => "GNOME/v1",
+		     "hrenWaC" => "hrenWaC/v1",
+		     "JRC-Acquis" => "JRC-Acquis/v3.0",
+		     "KDE4" => "KDE4/v2",
+		     "KDEdoc" => "KDEdoc/v1",
+		     "MBS" => "MBS/v1",
+		     "memat" => "memat/v1",
+		     "MontenegrinSubs" => "MontenegrinSubs/v1",
+		     "MPC1" => "MPC1/v1",
+		     "MultiUN" => "MultiUN/v1",
+		     "News-Commentary" => "News-Commentary/v9.1",
+		     "News-Commentary11" => "News-Commentary/v11",
+		     "OfisPublik" => "OfisPublik/v1",
+		     "OpenOffice" => "OpenOffice/v2",
+		     "OpenOffice3" => "OpenOffice/v3",
+		     "OpenSubtitles" => "OpenSubtitles/v1",
+		     "OpenSubtitles2011" => "OpenSubtitles/v2011",
+		     "OpenSubtitles2012" => "OpenSubtitles/v2012",
+		     "OpenSubtitles2013" => "OpenSubtitles/v2013",
+		     "OpenSubtitles2015" => "OpenSubtitles/v2015",
+		     "OpenSubtitles2016" => "OpenSubtitles/v2016",
+		     "OpenSubtitles2018" => "OpenSubtitles/v2018",
+		     "ParaCrawl" => "ParaCrawl/v1",
+		     "PHP" => "PHP/v1",
+		     "RF" => "RF/v1",
+		     "SETIMES" => "SETIMES/v1",
+		     "SETIMES2" => "SETIMES/v2",
+		     "SPC" => "SPC/v1",
+		     "Tanzil" => "Tanzil/v1",
+		     "Tatoeba" => "Tatoeba/v2",
+		     "TED2013" => "TED2013/v1.1",
+		     "TedTalks" => "TedTalks/v1",
+		     "TEP" => "TEP/v1",
+		     "Ubuntu" => "Ubuntu/v14.10",
+		     "UN" => "UN/v20090831",
+		     "Wikipedia" => "Wikipedia/v1.0",
+		     "WikiSource" => "WikiSource/v1",
+		     "WMT-News" => "WMT-News/v2014",
+		     "XhosaNavy" => "XhosaNavy/v1",
+		     );
+
+   $flipped=array_flip($versions);
+   return $flipped[$corpus.'/'.$version];
+}
 
 ?>

@@ -9,6 +9,9 @@ include ../Makefile.def
 # - tokenise and sentence splitting
 # - sentence alignment (in xml/Makefile)
 
+## special for PHP corpus
+XMLEXT = html.gz
+
 LANGUAGES   = $(sort $(notdir $(wildcard ${CORPUSRAW}/??)) \
 		     $(notdir $(wildcard ${CORPUSRAW}/???)) \
 		     $(notdir $(wildcard ${CORPUSRAW}/??_??)))
