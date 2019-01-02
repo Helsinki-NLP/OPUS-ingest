@@ -28,10 +28,10 @@ CWBUD_LANGFILES = $(patsubst %,cwb-ud/%.gz,${LANGUAGES})
 
 ${CWB_LANGFILES}:
 	mkdir -p ${dir $@}
-	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
+	if [ ! -d ${CORPUS}-${VERSION} ]; then ln -s xml ${CORPUS}-${VERSION}; fi
 	mkdir -p $(CWBDATA)
 	mkdir -p $(CWBREG)
-	$(INDEXER) -C -v -c ${CORPUS} \
+	$(INDEXER) -C -v -c ${CORPUS}-${VERSION} \
 	           -d $(CWBDATA) \
 		   -m cwb \
 	           -r $(CWBREG) \
@@ -39,8 +39,8 @@ ${CWB_LANGFILES}:
 	           -t $(ALGEXT) \
 		   ${CWB_EXTRA_ARGS} \
 	           $(patsubst cwb/%.gz,%,$@)
-	chmod -R o+rX $(CWBDATA)/${CORPUS}
-	chmod o+rX $(CWBREG)/${CORPUS}
+	chmod -R o+rX $(CWBDATA)/${CORPUS}-${VERSION}
+	chmod o+rX $(CWBREG)/${CORPUS}-${VERSION}
 	-gzip -f $(@:.gz=)
 	-gzip -f $(@:.gz=.pos)
 
@@ -53,10 +53,10 @@ cwb-index: cwb/.done
 cwb/.done: ${CWB_LANGFILES}
 	mkdir -p cwb
 	-gunzip -f cwb/*.gz
-	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
+	if [ ! -d ${CORPUS}-${VERSION} ]; then ln -s xml ${CORPUS}-${VERSION}; fi
 	mkdir -p $(CWBDATA)
 	mkdir -p $(CWBREG)
-	$(INDEXER) -v -c ${CORPUS} \
+	$(INDEXER) -v -c ${CORPUS}-${VERSION} \
 	           -d $(CWBDATA) \
 		   -m cwb \
 	           -r $(CWBREG) \
@@ -64,8 +64,8 @@ cwb/.done: ${CWB_LANGFILES}
 	           -t $(ALGEXT) \
 		   ${CWB_EXTRA_ARGS} \
 	           $(LANGUAGES)
-	chmod -R o+rX $(CWBDATA)/${CORPUS}
-	chmod o+rX $(CWBREG)/${CORPUS}
+	chmod -R o+rX $(CWBDATA)/${CORPUS}-${VERSION}
+	chmod o+rX $(CWBREG)/${CORPUS}-${VERSION}
 	-gzip -f cwb/*
 	touch $@
 
@@ -73,10 +73,10 @@ cwb/.done: ${CWB_LANGFILES}
 cwb-convert:
 	mkdir -p cwb
 	-gunzip -f cwb/*.gz
-	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
+	if [ ! -d ${CORPUS}-${VERSION} ]; then ln -s xml ${CORPUS}-${VERSION}; fi
 	mkdir -p $(CWBDATA)
 	mkdir -p $(CWBREG)
-	$(INDEXER) -C -v -c ${CORPUS} \
+	$(INDEXER) -C -v -c ${CORPUS}-${VERSION} \
 	           -d $(CWBDATA) \
 		   -m cwb \
 	           -r $(CWBREG) \
@@ -84,8 +84,8 @@ cwb-convert:
 	           -t $(ALGEXT) \
 		   ${CWB_EXTRA_ARGS} \
 	           $(LANGUAGES)
-	chmod -R o+rX $(CWBDATA)/${CORPUS}
-	chmod o+rX $(CWBREG)/${CORPUS}
+	chmod -R o+rX $(CWBDATA)/${CORPUS}-${VERSION}
+	chmod o+rX $(CWBREG)/${CORPUS}-${VERSION}
 	-gzip -f cwb/*
 
 
@@ -95,10 +95,10 @@ cwb-convert:
 ${CWBUD_LANGFILES}:
 	mkdir -p ${dir $@}
 	-cd parsed && ln -s ../xml/*.xml.gz .
-	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
+	if [ ! -d ${CORPUS}-${VERSION} ]; then ln -s xml ${CORPUS}-${VERSION}; fi
 	mkdir -p $(UDCWBDATA)
 	mkdir -p $(UDCWBREG)
-	$(INDEXER) -C -v -c ${CORPUS} \
+	$(INDEXER) -C -v -c ${CORPUS}-${VERSION} \
 	           -d $(UDCWBDATA) \
 		   -m cwb-ud \
 	           -r $(UDCWBREG) \
@@ -107,8 +107,8 @@ ${CWBUD_LANGFILES}:
 	           -t $(ALGEXT) \
 		   ${CWB_EXTRA_ARGS} \
 	           $(patsubst cwb-ud/%.gz,%,$@)
-	chmod -R o+rX $(UDCWBDATA)/${CORPUS}
-	chmod o+rX $(UDCWBREG)/${CORPUS}
+	chmod -R o+rX $(UDCWBDATA)/${CORPUS}-${VERSION}
+	chmod o+rX $(UDCWBREG)/${CORPUS}-${VERSION}
 	-gzip -f $(@:.gz=)
 	-gzip -f $(@:.gz=.pos)
 
@@ -118,10 +118,10 @@ cwb-ud/.done: ${CWBUD_LANGFILES}
 	mkdir -p cwb-ud
 	-gunzip -f cwb-ud/*.gz
 	-cd parsed && ln -s ../xml/*.xml.gz .
-	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
+	if [ ! -d ${CORPUS}-${VERSION} ]; then ln -s xml ${CORPUS}-${VERSION}; fi
 	mkdir -p $(UDCWBDATA)
 	mkdir -p $(UDCWBREG)
-	$(INDEXER) -v -c ${CORPUS} \
+	$(INDEXER) -v -c ${CORPUS}-${VERSION} \
 	           -d $(UDCWBDATA) \
 		   -m cwb-ud \
 	           -r $(UDCWBREG) \
@@ -130,8 +130,8 @@ cwb-ud/.done: ${CWBUD_LANGFILES}
 	           -t $(ALGEXT) \
 		   ${CWB_EXTRA_ARGS} \
 	           $(LANGUAGES)
-	chmod -R o+rX $(UDCWBDATA)/${CORPUS}
-	chmod o+rX $(UDCWBREG)/${CORPUS}
+	chmod -R o+rX $(UDCWBDATA)/${CORPUS}-${VERSION}
+	chmod o+rX $(UDCWBREG)/${CORPUS}-${VERSION}
 	-gzip -f cwb-ud/*
 
 ## convert only for UD parsed data
@@ -140,10 +140,10 @@ cwb-convert-ud:
 	mkdir -p cwb-ud
 	-gunzip -f cwb-ud/*.gz
 	-cd parsed && ln -s ../xml/*.xml.gz .
-	if [ ! -d ${CORPUS} ]; then ln -s xml ${CORPUS}; fi
+	if [ ! -d ${CORPUS}-${VERSION} ]; then ln -s xml ${CORPUS}-${VERSION}; fi
 	mkdir -p $(UDCWBDATA)
 	mkdir -p $(UDCWBREG)
-	$(INDEXER) -C -v -c ${CORPUS} \
+	$(INDEXER) -C -v -c ${CORPUS}-${VERSION} \
 	           -d $(UDCWBDATA) \
 		   -m cwb-ud \
 	           -r $(UDCWBREG) \
@@ -152,8 +152,8 @@ cwb-convert-ud:
 	           -t $(ALGEXT) \
 		   ${CWB_EXTRA_ARGS} \
 	           $(LANGUAGES)
-	chmod -R o+rX $(UDCWBDATA)/${CORPUS}
-	chmod o+rX $(UDCWBREG)/${CORPUS}
+	chmod -R o+rX $(UDCWBDATA)/${CORPUS}-${VERSION}
+	chmod o+rX $(UDCWBREG)/${CORPUS}-${VERSION}
 	-gzip -f cwb-ud/*
 
 

@@ -89,19 +89,30 @@ opus2abel-moses:
 BIG_CORPORA = giga-fren MultiUN EUbookshop ParaCrawl OpenSubtitles
 SWIFT_EXTRA = 
 
-upload-all:
+upload-all: upload-small upload-big
+
+upload-small:
 	@for c in $(filter-out ${BIG_CORPORA},${CORPORA}); do \
 	    ${MAKE} CORPUS=$$c upload; \
 	done
+
+upload-big:
 	@for c in $(filter ${BIG_CORPORA},${CORPORA}); do \
 	    ${MAKE} CORPUS=$$c SWIFT_EXTRA='--use-slo --segment-size 5G' upload; \
+	    swift post OPUS-$$c_segments --read-acl ".r:*"; \
 	done
 
+upload-opensubs:
+	${MAKE} CORPUS=OpenSubtitles SWIFT_EXTRA='--use-slo --segment-size 5G' upload
 
-big:
-	@for c in $(filter ${BIG_CORPORA},${CORPORA}); do \
-	    ${MAKE} CORPUS=$$c SWIFT_EXTRA='--use-slo --segment-size 5G' upload; \
-	done
+upload-ubuntu:
+	${MAKE} CORPUS=Ubuntu upload-no-smt
+
+upload-gnome:
+	${MAKE} CORPUS=GNOME upload
+
+upload-kde4:
+	${MAKE} CORPUS=KDE4 upload
 
 
 
@@ -124,6 +135,17 @@ upload:
 	for v in ${VERSIONS}; do \
 	  cd ${CORPUS}; \
 	  find $$v -mindepth 1 -maxdepth 1 -type d -not -path '*\/info' -exec \
+	       swift upload ${CONTAINER} --changed --skip-identical ${SWIFT_EXTRA} {} \; ;\
+	  cd ..; \
+	done
+	swift post ${CONTAINER} --read-acl ".r:*"
+
+upload-no-smt:
+	@cd ${OPUS}; \
+	for v in ${VERSIONS}; do \
+	  cd ${CORPUS}; \
+	  find $$v -mindepth 1 -maxdepth 1 -type d -not -path '*\/info' \
+			-not -path '*\/smt' -exec \
 	       swift upload ${CONTAINER} --changed --skip-identical ${SWIFT_EXTRA} {} \; ;\
 	  cd ..; \
 	done

@@ -305,10 +305,10 @@ function print_resource($corpus,$version,$src,$trg,$resource){
     echo '?corpus='.$oldname.';lang='.$src.'">query</a>';
     echo '</td>';
   }
-  elseif (file_exists('cwb/reg/'.$corpus.'/'.$src)){
+  elseif (file_exists('cwb/reg/'.$corpus.'-'.$version.'/'.$src)){
     echo '<td><a href="bin/opuscqp.pl';
-    echo '?corpus='.$corpus.';lang='.$src.'">query</a>';
-    echo '</td>';;
+    echo '?corpus='.$corpus.'-'.$version.';lang='.$src.'">query</a>';
+    echo '</td>';
   }
   else{ echo '<td></td>'; }
   

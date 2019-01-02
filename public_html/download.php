@@ -142,6 +142,16 @@ function old2new($file) {
        $file = implode( '/', array($version,'freq',$ext[1].'.freq.gz') );
      }
    }
+   if (count($parts) == 4){
+     if ($parts[2] == 'mono'){
+       $ext = explode('.',$parts[3]);
+       if ($ext[1] == 'raw'){
+         $file = implode( '/', array($parts[0],$parts[1],'mono',$ext[2].'.txt.gz') );
+       } elseif ($ext[1] != 'txt' && $ext[1] != 'tok'){
+         $file = implode( '/', array($parts[0],$parts[1],'mono',$ext[1].'.tok.gz') );
+       }
+     }
+   }
    return $file;
 }
 

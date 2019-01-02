@@ -24,11 +24,13 @@ TRGDIR=/ida/sa/clarin/corpora/OPUS/releases
 ## all sub-corpora (that don't have to be packaged)
 
 CORPORA="Books DGT DOGC \
+         EhuHac Elhuyar \
          EMEA EUbookshop Europarl \
          giga-fren hrenWaC JRC-Acquis \
-         MBS MontenegrinSubs MPC1 MultiUN \
+         MBS memat MontenegrinSubs MPC1 MultiUN \
          News-Commentary \
          OfisPublik OpenOffice \
+         ParaCrawl \
          RF SETIMES SPC Tanzil TED2013 TedTalks TEP \
          UN Wikipedia WikiSource WMT-News XhosaNavy"
 
@@ -43,7 +45,7 @@ CORPORA="Books DGT DOGC \
 
 TARCORPORA="ECB EUconst GlobalVoices GNOME \
             KDE4 KDEdoc \
-            Tatoeba PHP Ubuntu"
+            PHP Tatoeba Ubuntu"
 
 for c in ${TARCORPORA}; do
     if [ -f "$SRCDIR/$c.tar.gz" ]; then

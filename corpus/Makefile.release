@@ -28,6 +28,7 @@ endif
 ALG      := $(patsubst ${CORPUSXML}/%,${CORPUSRELEASE}/xml/%,$(CES))
 TMX      := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/tmx/%.tmx.gz,$(CES))
 MOSES    := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/moses/%.txt.zip,$(CES))
+DIC      := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/dic/%.dic.gz,$(CES))
 
 ifndef SMT
 ifneq ($(wildcard ${CORPUSWORDALIGN}),)
@@ -178,7 +179,7 @@ ${PACKAGES}:	${CORPUSRELEASE} ${ALG} \
 		${LANG_XML} ${LANG_RAW} ${LANG_UD} \
 		${MONO_TOK} ${MONO_RAW} \
 		$(MOSES) $(TMX) ${FREQ_COUNTS} \
-		${SMT} ${WORDALG} \
+		${SMT} ${WORDALG} ${DIC} \
 		${CORPUSRELEASE}/README
 	${MKDIR} ${dir $@}
 	for s in ${LANGUAGES}; do \
@@ -661,6 +662,13 @@ ${SMT}: ${CORPUSRELEASE}/smt/%.zip: ${CORPUSWORDALIGN}/%
 	else \
 	  rm -f $@; \
 	fi
+
+.PHONY: dic-release
+dic-release: ${DIC}
+${DIC}: ${CORPUSRELEASE}/%: ${CORPUSHOME}/%
+	@${MKDIR} ${dir $@}
+	rsync $< $@
+	chmod 644 $@
 
 
 ## delete some packages that have no phrase table
