@@ -17,6 +17,12 @@ all: ${UNRELIABLE}
 	${MAKE} cwb-index
 	rm -fr data
 
+intraling-website: ${OPUSPUB}/${CORPUS}-alt-${VERSION}.php
+
+${OPUSPUB}/${CORPUS}-alt-${VERSION}.php:
+	scripts/make-intraling-website.pl ${CORPUS} ${VERSION} > $@
+	chmod 644 $@
+
 ## index with ALL sentence alignments (also alternative ones
 ## NOTE: this is probably not going to work for CWB as documents are 
 ##       aligned to several other documents in the same language
