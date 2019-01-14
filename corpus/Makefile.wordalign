@@ -854,6 +854,7 @@ ${ALIGN_CHECKED}:
 	    mv -f ${@:-aligncheck=} DELETE/; \
 	  fi \
 	fi
+	-rmdir DELETE
 
 
 ${BITEXT_CHECKED}:
@@ -864,3 +865,4 @@ ${BITEXT_CHECKED}:
 	    mv -f ../xml/${@:-bitextcheck=}.xml.gz DELETE/; \
 	  fi \
 	fi
+	-rmdir DELETE

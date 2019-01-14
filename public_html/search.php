@@ -85,9 +85,17 @@ function table_header($src,$trg){
   echo "<tr><th>corpus</th>";
   echo "<th>doc's</th>";
   echo "<th>sent's</th>";
-  echo "<th>$src tokens</th><th>";
+  if ($src > $trg){
+     echo "<th>$trg tokens</th><th>";
+  } else{
+     echo "<th>$src tokens</th><th>";
+  }
   if ( $src != $trg ){
-     echo "$trg tokens";
+    if ($src > $trg){
+      echo "$src tokens";
+    } else {
+      echo "$trg tokens";
+    }
   }
   echo "</th><th>XCES/XML</th><th>raw</th><th>TMX</th><th>Moses</th><th>mono</th><th>raw</th>";
   echo "<th>ud</th><th>alg</th><th>dic</th><th>freq</th>";

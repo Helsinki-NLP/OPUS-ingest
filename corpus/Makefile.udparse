@@ -28,8 +28,8 @@ endif
 
 
 RAWDIR   = ${CORPUSRAW}/${LANGUAGE}
-ifndef XMLFILES
-  XMLFILES := $(subst :,\:,$(patsubst ${CORPUSRAW}/%,${CORPUSPARSED}/%,$(shell find ${RAWDIR}/ -name '*.${XMLEXT}')))
+ifndef UDXMLFILES
+  UDXMLFILES := $(subst :,\:,$(patsubst ${CORPUSRAW}/%,${CORPUSPARSED}/%,$(shell find ${RAWDIR}/ -name '*.${XMLEXT}')))
 endif
 
 .PHONY: udparse
@@ -60,7 +60,7 @@ link-udparsed:
 
 
 .PHONY: udparse_files
-udparse_files: ${XMLFILES}
+udparse_files: ${UDXMLFILES}
 
 ${CORPUSPARSED}/${LANGUAGE}/%: ${CORPUSRAW}/${LANGUAGE}/%
 	mkdir -p $(shell dirname $@)
