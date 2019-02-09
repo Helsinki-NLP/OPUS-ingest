@@ -1,0 +1,21 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v2018
+
+LICENSE = CC-BY
+COPYRIGHT = 
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=The <a href="https://www.finlex.fi/en/">Finlex Data Base</a> is a comprehensive collection of legislative and other judicial information of Finland, which is available in Finnish, Swedish and partially in English. This corpus is taken from the <a href="https://data.finlex.fi/en/main">Semantic Finlex serice</a> that provides the Finnish and Swedish data as linked open data and also <a href="https://data.finlex.fi/en/download">raw XML files</a>.
+EXTRAHTML=
+# CITENOTE=
