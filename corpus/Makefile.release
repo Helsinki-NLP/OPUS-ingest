@@ -158,7 +158,9 @@ endif
 ${OPUSPUB}/${CORPUS}-${VERSION}.php: ${PACKAGES} \
 			${CORPUS_SAMPLES} ${ALG_SAMPLES} \
 			${LANG_INFO} ${CES_INFO} ${TXT_INFO} ${TMX_INFO}
-	${MKDIR} $(shell dirname $@)
+	${MKDIR} $(dir $@)
+	chmod 755 ${dir $@}
+	chmod 755 ${OPUSPUB}/${CORPUS}
 	${MAKEHTML} -h ${OPUSPUB} -o ${OPUSHOME} -d ${OPUSRELEASE} \
 		${CORPUS} ${VERSION} |\
 	sed -e 's#<h3>Download</h3>#<h3>Download</h3>${DOWNLOADINFO}${EXTRAHTML}#' \
@@ -624,7 +626,7 @@ ${WORDALG}: ${CORPUSRELEASE}/smt/%.alg.zip: ${CORPUSWORDALIGN}/% ${CORPUSWORDALI
 		--exclude '*\.wordalign*' \
 		--exclude '*/lex.*' \
 		--exclude '*/phrase*' \
-		--exclude '*\c.*' \
+		--exclude '*/c.*' \
 		$</ ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}
 	find ${TMPDIR}/$@/${CORPUS}/smt -type f -name '*.gz' |\
 	xargs -P 8 gunzip -f

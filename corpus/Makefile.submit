@@ -43,7 +43,6 @@ endif
 	echo '#SBATCH -p ${HPC_QUEUE}' >> $@
 	echo '#SBATCH -t ${HPC_TIME}:00' >> $@
 	echo '${HPC_EXTRA}' >> $@
-	echo 'module purge' >> $@
 	echo 'module use -a /proj/nlpl/modules' >> $@
 	for m in ${HPC_MODULES}; do \
 	  echo "module load $$m" >> $@; \
@@ -56,6 +55,7 @@ endif
 	echo 'echo "Finishing at `date`"' >> $@
 	sbatch $@
 
+#	echo 'module purge' >> $@
 
 
 ## run in a local tmp dir instead

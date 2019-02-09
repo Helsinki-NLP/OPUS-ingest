@@ -487,7 +487,10 @@ function size_color($nr){
 
 
 function find_opus_resources($src,$trg,&$resources){
-  $OPUSAPI = 'https://translate.ling.helsinki.fi/opusapi';
+  // $OPUSAPI = 'https://translate.ling.helsinki.fi/opusapi';
+  // $OPUSAPI = 'http://vm1637.kaj.pouta.csc.fi/opusapi';
+  $OPUSAPI = 'http://opus.nlpl.eu/opusapi';
+
   $url = $OPUSAPI.'/?source='.$src.'&target='.$trg;
   $lines_array=file($url);
   // turn array into one variable

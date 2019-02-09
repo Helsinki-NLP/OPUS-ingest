@@ -115,6 +115,45 @@ upload-kde4:
 	${MAKE} CORPUS=KDE4 upload
 
 
+## for some reason OpenSubs2018 sometimes breaks
+## and not all files are uploaded 
+## message: No JSON object could be decoded
+## (what can we do about it?)
+
+upload-opensubs2018:
+	${MAKE} VERSIONS=v2018 upload-opensubs
+
+upload-subs2018-zip-xml:
+	@cd ${OPUS}; \
+	cd OpenSubtitles; \
+	for f in v2018/xml/*.zip; do \
+	  swift upload OPUS-OpenSubtitles --changed --skip-identical \
+		--use-slo --segment-size 5G $$f ;\
+	done; \
+	cd ..;
+	swift post OPUS-OpenSubtitles --read-acl ".r:*"
+
+upload-subs2018-zip-raw:
+	@cd ${OPUS}; \
+	cd OpenSubtitles; \
+	for f in v2018/raw/*.zip; do \
+	  swift upload OPUS-OpenSubtitles --changed --skip-identical \
+		--use-slo --segment-size 5G $$f ;\
+	done; \
+	cd ..;
+	swift post OPUS-OpenSubtitles --read-acl ".r:*"
+
+upload-subs2018-gz:
+	@cd ${OPUS}; \
+	cd OpenSubtitles; \
+	for f in v2018/xml/*.gz; do \
+	  swift upload OPUS-OpenSubtitles --changed --skip-identical \
+		--use-slo --segment-size 5G $$f ;\
+	done; \
+	cd ..;
+	swift post OPUS-OpenSubtitles --read-acl ".r:*"
+
+
 
 ## upload eflomal model priors
 eflomal:
