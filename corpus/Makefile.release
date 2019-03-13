@@ -137,6 +137,8 @@ ${CORPUSRELEASE}:
 	${MAKE} PACKAGE="${CORPUS} in XML format" $@/xml/README
 	${MAKE} PACKAGE="${CORPUS} in Moses format" $@/moses/README
 	${MAKE} PACKAGE="${CORPUS} in TMX format" $@/tmx/README
+	rm -f ${dir $@}/latest
+	cd ${dir $@} && ln -s ${notdir $@} latest
 
 
 

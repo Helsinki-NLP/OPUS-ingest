@@ -42,6 +42,11 @@ bitexts:
 	${MAKE} wordalign
 	${MAKE} publish
 
+index:
+	${MAKE} CWB_EXTRA_ARGS='-p w -u s' cwb-index
+
+index-ud:
+	${MAKE} CWB_EXTRA_ARGS='-u s' cwb-index-ud
 
 ## standard procedures are specified in the following makefiles
 ##
