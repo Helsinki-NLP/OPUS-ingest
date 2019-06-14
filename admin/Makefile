@@ -114,6 +114,9 @@ upload-gnome:
 upload-kde4:
 	${MAKE} CORPUS=KDE4 upload
 
+upload-EUbookshop:
+	${MAKE} CORPUS=EUbookshop SWIFT_EXTRA='--use-slo --segment-size 5G' upload
+
 
 ## for some reason OpenSubs2018 sometimes breaks
 ## and not all files are uploaded 
@@ -132,6 +135,25 @@ upload-subs2018-zip-xml:
 	done; \
 	cd ..;
 	swift post OPUS-OpenSubtitles --read-acl ".r:*"
+
+upload-euBookshop-zip-xml:
+	@cd ${OPUS}; \
+	cd EUbookshop; \
+	for f in v2/xml/*.zip; do \
+	  swift upload OPUS-EUbookshop --changed --skip-identical \
+		--use-slo --segment-size 5G $$f ;\
+	done; \
+	cd ..;
+	swift post OPUS-EUbookshop --read-acl ".r:*"
+
+upload-euBookshop-zip-en-xml:
+	@cd ${OPUS}; \
+	cd EUbookshop; \
+	  swift upload OPUS-EUbookshop --changed --skip-identical \
+		--use-slo --segment-size 5G v2/xml/en.zip ;\
+	cd ..;
+	swift post OPUS-EUbookshop --read-acl ".r:*"
+
 
 upload-subs2018-zip-raw:
 	@cd ${OPUS}; \

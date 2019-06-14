@@ -1,5 +1,5 @@
 ## running on login node 4 on taito
 
-00 00 * * *     /homeappl/home/tiedeman/appl_taito/bin/rsnapshot -c /proj/OPUS/admin/rsnapshot.conf beta
-00 23 * * 6     /homeappl/home/tiedeman/appl_taito/bin/rsnapshot -c /proj/OPUS/admin/rsnapshot.conf gamma
-00 22 1 * *     /homeappl/home/tiedeman/appl_taito/bin/rsnapshot -c /proj/OPUS/admin/rsnapshot.conf delta
+00 00 * * *     /homeappl/home/tiedeman/appl_taito/bin/rsnapshot -c /proj/OPUS/admin/rsnapshot.conf daily
+00 23 * * 6     /homeappl/home/tiedeman/appl_taito/bin/rsnapshot -c /proj/OPUS/admin/rsnapshot.conf weekly
+00 22 1 * *     /homeappl/home/tiedeman/appl_taito/bin/rsnapshot -c /proj/OPUS/admin/rsnapshot.conf monthly

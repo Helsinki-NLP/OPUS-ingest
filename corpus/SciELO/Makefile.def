@@ -1,0 +1,20 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = CC–BY 4.0
+COPYRIGHT = 
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=Parallel corpus of full-text articles in Portuguese, English and Spanish from SciELO<br/>Source: <a href="https://sites.google.com/view/felipe-soares/datasets">https://sites.google.com/view/felipe-soares/datasets</a>
+EXTRAHTML=A parallel corpus of full-text scientific articles collected from <a href="https://www.scielo.org/en">Scielo database</a> in the following languages: English, Portuguese and Spanish. The corpus is sentence aligned for all language pairs, as well as trilingual aligned for a small subset of sentences. Alignment was carried out using the Hunalign algorithm. <br/> DOI: <a href ="https://doi.org/10.6084/m9.figshare.5382757.v2">https://doi.org/10.6084/m9.figshare.5382757.v2</a></br/>If you use this corpus, please cite the following work: <blockquote>@inproceedings{soares2018large,<br/>title={A Large Parallel Corpus of Full-Text Scientific Articles},<br/>author={Soares, Felipe and Moreira, Viviane and Becker, Karin},<br/>booktitle={Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC-2018)},<br/>year={2018}<br/>}</blockquote>

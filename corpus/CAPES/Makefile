@@ -79,32 +79,37 @@ MOSES2OPUS = moses2opus
 convert: ${CONVERTED} xml/Makefile
 	${MAKE} -C xml create-align-files
 
+
+## new here: use iconv to cleanup some windows code points
+##			iconv -f UTF-8 -t ISO-8859-1//TRANSLIT | \
+
 ${CONVERTED}:
 	mkdir -p raw xml log
 	for s in $(sort $(subst .,,$(suffix $(subst .gz,,${wildcard $(@:_done=)*})))); do \
 	  for t in $(sort $(subst .,,$(suffix $(subst .gz,,${wildcard $(@:_done=)*})))); do \
 	    if [ "$$s" != "$$t" ]; then \
 	      if [ ! -e "xml/$$t-$$s/$(notdir $(@:_done=)).xml.gz" ]; then \
-		if [ -e "$(@:_done=).$$s.gz" ]; then \
-		  src="$(@:_done=).$$s.gz"; \
-		else \
-		  src="$(@:_done=).$$s"; \
-		fi; \
-		if [ -e "$(@:_done=).$$t.gz" ]; then \
-		  trg="$(@:_done=).$$t.gz"; \
-		else \
-		  trg="$(@:_done=).$$t"; \
-		fi; \
+		src="$(@:_done=).$$s.gz"; \
+		trg="$(@:_done=).$$t.gz"; \
 		mkdir -p xml/$$s-$$t; \
 		if [ -e $$src ]; then \
 		  if [ -e $$trg ]; then \
+		    zcat $$src | \
+			${MOSESSCRIPTS}/tokenizer/remove-non-printing-char.perl |\
+			iconv -f UTF-8 -t cp1252//TRANSLIT | \
+			iconv -f cp1252 -t UTF-8 | gzip -c > $$src.clean.gz; \
+		    zcat $$trg | \
+			${MOSESSCRIPTS}/tokenizer/remove-non-printing-char.perl |\
+			iconv -f UTF-8 -t cp1252//TRANSLIT | \
+			iconv -f cp1252 -t UTF-8 | gzip -c > $$trg.clean.gz; \
 		    cd raw; \
 		    ${MOSES2OPUS} -z \
 			-s $$s -t $$t \
 			-b $(notdir $(@:_done=)) \
-			../$$src ../$$trg |\
+			../$$src.clean.gz ../$$trg.clean.gz |\
 		    gzip -c > ../xml/$$s-$$t/$(notdir $(@:_done=)).xml.gz; \
 		    cd ..; \
+		    rm -f $$src.clean.gz $$trg.clean.gz; \
 	          fi \
 	        fi \
 	      fi \
