@@ -1,5 +1,6 @@
 ## running on login node 4 on taito
 
-00 00 * * *     /homeappl/home/tiedeman/appl_taito/bin/rsnapshot -c /proj/OPUS/admin/rsnapshot.conf daily
-00 23 * * 6     /homeappl/home/tiedeman/appl_taito/bin/rsnapshot -c /proj/OPUS/admin/rsnapshot.conf weekly
-00 22 1 * *     /homeappl/home/tiedeman/appl_taito/bin/rsnapshot -c /proj/OPUS/admin/rsnapshot.conf monthly
+00 00 * * *     /proj/OPUS/admin/rsnapshot -c /proj/OPUS/admin/rsnapshot.conf daily
+00 23 * * 6     /proj/OPUS/admin/rsnapshot -c /proj/OPUS/admin/rsnapshot.conf weekly
+00 22 1 * *     /proj/OPUS/admin/rsnapshot -c /proj/OPUS/admin/rsnapshot.conf monthly
+00 02 * * 6     /proj/OPUS/admin/update-opus-api.sh > /proj/OPUS/admin/update-opus-api.log

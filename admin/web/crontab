@@ -1,7 +1,0 @@
-# run 15 minutes after midnight, every day
-# 15 0 * * * 
-
-
-# run at 1am every day
-
-0 1 * * *      rsync -zav /home/opus/OPUS_new/ joerg@stp.lingfil.uu.se:/opt/xcorp/joerg/OPUS > /tmp/rsync_OPUS_new.out 2> /tmp/rsync_OPUS_new.err

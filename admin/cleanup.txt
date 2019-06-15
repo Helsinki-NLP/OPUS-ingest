@@ -1,8 +1,0 @@
-
-cleaning the system:
---------------------
-
-gridengine message files grows a lot!
-
-/var/spool/gridengine/execd/opus/messages
-/var/spool/gridengine/qmaster/messages
