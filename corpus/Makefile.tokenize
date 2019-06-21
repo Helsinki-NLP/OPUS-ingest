@@ -38,7 +38,9 @@ tokenize_files annotate_files: ${XMLFILES}
 
 xml/${LANGUAGE}/%: raw/${LANGUAGE}/%
 	mkdir -p $(shell dirname $@)
-	${TOK} -in $< | tidy -xml -utf8 -i -w 0 | gzip -c > $@
+	${TOK} -in "$<" -out "$@"
+
+# 	${TOK} -in $< | tidy -xml -utf8 -i -w 0 | gzip -c > $@
 #	${TOK} -in $< -out $@
 
 clean-xml:

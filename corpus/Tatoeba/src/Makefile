@@ -1,5 +1,9 @@
 
 
+## new version:
+## https://tatoeba.org/eng/downloads
+
+
 URLS = 	http://tatoeba.org/files/downloads/sentences.csv \
 	http://tatoeba.org/files/downloads/links.csv \
 	http://tatoeba.org/files/downloads/tags.csv

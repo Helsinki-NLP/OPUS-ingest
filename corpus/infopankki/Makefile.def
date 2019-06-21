@@ -7,16 +7,15 @@
 CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
 
 ## current version
-VERSION = v1
+VERSION = v2019-03
+# VERSION = v${shell date +%Y-%m}
 
-LICENSE = 
+LICENSE = CC–BY 4.0 
 COPYRIGHT = 
 
 # with SRCHTML you can define some extra HTML code that will be placed just
 # after the name of the sub-corpus
 # EXTRAHTML is code which will be put just after the 'Download' header
-# CITENOTE if you want to change the default reference to be cited
 
-SRCHTML=This is my first parallel corpus
-EXTRAHTML=Simple example corpus
-# CITENOTE=
+SRCHTML=Source: <a href+"http://www.infopankki.fi">http://www.infopankki.fi</a> via the <a href="https://github.com/City-of-Helsinki/infopankki-api">Open Data API</a>
+EXTRAHTML=The corpus was compiled as part of the <a href="https://blogs.helsinki.fi/fiskmo-project/">fiskmö project</a>

@@ -29,6 +29,11 @@ VERSIONS = ${notdir ${shell find ${OPUS}/${CORPUS} -maxdepth 1 -mindepth 1 -type
 ## container name for object storage
 CONTAINER = OPUS-${CORPUS}
 
+
+
+update-api:
+	./update-opus-api.sh
+
 ##-------------------------------------------------------------------
 ## uploading data to object storage
 ##-------------------------------------------------------------------

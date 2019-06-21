@@ -116,6 +116,8 @@ endif
 
 
 ## this is the final target (all sentence alignments in one file)
+## new: merge with existing file instead of overwriting it
+## ---> requires opus-merge-align from opus-tools
 
 ${SRC}-${TRG}.xml.gz: ${ALGFILES}
 	mkdir -p ${SRC}-${TRG}
@@ -130,7 +132,11 @@ ${SRC}-${TRG}.xml.gz: ${ALGFILES}
 	  cat $@.links >> $@.tmp; \
 	  echo '</cesAlign>' >> $@.tmp; \
 	  gzip $@.tmp; \
-	  mv $@.tmp.gz $@; \
+	  if [ -e $@ ]; then \
+	    opus-merge-align $@ $@.tmp.gz | gzip -c > $@; \
+	  else \
+	    mv $@.tmp.gz $@; \
+	  fi; \
 	fi
 	rm -f $@.links
 
@@ -140,15 +146,28 @@ ${SRC}-${TRG}.xml.gz: ${ALGFILES}
 ## define variables for command line options
 ## to make it a bit more flexible to use other tools
 
-ALGSIDOPT=-s
-ALGTIDOPT=-t
-ALGSRCOPT=-src
-ALGTRGOPT=-trg
-ALGOUTOPT=-out
+ifeq (${SENTALIGN},srtalign)
+  ALGSIDOPT=-S
+  ALGTIDOPT=-T
+  ALGSRCOPT=
+  ALGTRGOPT=
+  ALGOUTOPT=>
+  ALGOPT=
+  # ALGOPT=-b -i 5 -m 10
+else
+  ALGSIDOPT=-s
+  ALGTIDOPT=-t
+  ALGSRCOPT=-src
+  ALGTRGOPT=-trg
+  ALGOUTOPT=-out
+  ALGOPT=
+endif
 
 ${ALGFILES}: ${SRC}-${TRG}/%: ${SRC}/% ${TRG}/%
 	mkdir -p $(shell dirname $@)
-	${SENTALIGN} ${ALGSIDOPT} ${SRC} ${ALGTIDOPT} ${TRG} \
+	${SENTALIGN} ${ALGOPT} \
+		${ALGSIDOPT} ${SRC} \
+		${ALGTIDOPT} ${TRG} \
 		${ALGSRCOPT} $< \
 		${ALGTRGOPT} $(patsubst ${SRC}/%,${TRG}/%,$<) \
 		${ALGOUTOPT} $@
@@ -170,6 +189,10 @@ create-align-files:
 	  done \
 	done
 
+
+## new: merge with existing alignment file instead of overwriting it!
+## ---> requires opus-merge-align from opus-tools
+
 .PHONY: create-align-file
 create-align-file:
 	if [ "${SRC}" != "${TRG}" ]; then \
@@ -186,7 +209,12 @@ create-align-file:
 	  cat ${SRC}-${TRG}.links >> ${SRC}-${TRG}.tmp; \
 	  echo '</cesAlign>' >> ${SRC}-${TRG}.tmp; \
 	  gzip ${SRC}-${TRG}.tmp; \
-	  mv ${SRC}-${TRG}.tmp.gz ${SRC}-${TRG}.xml.gz; \
+	  if [ -e ${SRC}-${TRG}.xml.gz ]; then \
+	    opus-merge-align ${SRC}-${TRG}.xml.gz ${SRC}-${TRG}.tmp.gz |\
+	    gzip -c > ${SRC}-${TRG}.xml.gz;
+	  else \
+	    mv ${SRC}-${TRG}.tmp.gz ${SRC}-${TRG}.xml.gz; \
+	  fi; \
 	fi; \
 	rm -f ${SRC}-${TRG}.links; \
 	  fi; \
