@@ -19,5 +19,5 @@ COPYRIGHT = Copyright Qatar Computing Research Institute. All rights reserved.
 
 SRCHTML=The QCRI Educational Domain Corpus (formerly QCRI AMARA Corpus) is an open multilingual collection of subtitles for educational videos and lectures collaboratively transcribed and translated over the <a href="http://www.amara.org/">AMARA</a> web-based platform.<br/>Developed by: Qatar Computing Research Institute, Arabic Language Technologies Group<br/>The QED Corpus is made public for RESEARCH purpose only.<br/>The corpus is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Copyright Qatar Computing Research Institute. All rights reserved.
 
-EXTRAHTML=An earlier release has been published at <a href="http://alt.qcri.org/resources/qedcorpus/">http://alt.qcri.org/resources/qedcorpus/</a>. This updated version is provided by Ahmed Abdelali <aabdelali at hbku.edu.qa>, Paco Guzman ‎<fguzman at fb.com>, Hassan Sajjad <hsajjad at hbku.edu.qa>
+EXTRAHTML=An earlier release has been published at <a href="http://alt.qcri.org/resources/qedcorpus/">http://alt.qcri.org/resources/qedcorpus/</a>. This updated version is provided by Ahmed Abdelali <aabdelali at hbku.edu.qa>, Paco Guzman <fguzman at fb.com>, Hassan Sajjad <hsajjad at hbku.edu.qa>
 # CITENOTE=

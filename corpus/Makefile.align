@@ -208,10 +208,13 @@ create-align-file:
 	  echo '<cesAlign version="1.0">' >> ${SRC}-${TRG}.tmp; \
 	  cat ${SRC}-${TRG}.links >> ${SRC}-${TRG}.tmp; \
 	  echo '</cesAlign>' >> ${SRC}-${TRG}.tmp; \
-	  gzip ${SRC}-${TRG}.tmp; \
+	  gzip -f ${SRC}-${TRG}.tmp; \
 	  if [ -e ${SRC}-${TRG}.xml.gz ]; then \
+	    echo "merge ${SRC}-${TRG}.xml.gz ${SRC}-${TRG}.tmp.gz"; \
 	    opus-merge-align ${SRC}-${TRG}.xml.gz ${SRC}-${TRG}.tmp.gz |\
-	    gzip -c > ${SRC}-${TRG}.xml.gz;
+	    gzip -c > ${SRC}-${TRG}.tmp2.gz; \
+	    mv ${SRC}-${TRG}.tmp2.gz ${SRC}-${TRG}.xml.gz; \
+	    rm -f ${SRC}-${TRG}.tmp.gz; \
 	  else \
 	    mv ${SRC}-${TRG}.tmp.gz ${SRC}-${TRG}.xml.gz; \
 	  fi; \
@@ -220,4 +223,3 @@ create-align-file:
 	  fi; \
 	  rm -fr ${SRC}-${TRG}; \
 	fi
-
