@@ -22,7 +22,10 @@ include ../Makefile.def
 
 all:
 	${MAKE} -C src all
-	find xml -name '*.xml.gz' | xargs touch
+	${MAKE} SENTALIGN=srtalign corpus
+	${MAKE} publish
+
+more:
 	${MAKE} SENTALIGN=srtalign corpus
 	${MAKE} publish
 

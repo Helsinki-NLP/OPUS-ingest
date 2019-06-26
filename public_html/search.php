@@ -5,6 +5,7 @@ $opuspub = "/home/opus/public_html";
 $src = NULL;
 $trg = NULL;
 $minsize = NULL;
+$version = 'latest';
 
 if (array_key_exists('src',$_REQUEST)){
   $src = $_REQUEST['src'];
@@ -15,6 +16,12 @@ if (array_key_exists('trg',$_REQUEST)){
 if (array_key_exists('minsize',$_REQUEST)){
   $minsize = $_REQUEST['minsize'];
  }
+if (array_key_exists('version',$_REQUEST)){
+  if ($_REQUEST['version'] != ''){
+    $version = $_REQUEST['version'];
+  }
+ }
+
 
 
 echo '<div class="query">';
@@ -43,7 +50,9 @@ $sizes = array('all' => 'all',
 	       250000000 => '>250M', 
 	       500000000 => '>500M');
 print_select($sizes,'minsize',$minsize,1,1,1);
-
+print '<input type="checkbox" name="version" value="all"';
+if ($version == 'all'){ print ' checked'; }
+print '> show all versions';
 echo "</form></div>\n";
 
 if (isset($src) && isset($trg) && $src != 'unknown' && $trg != 'unknown'){
@@ -490,8 +499,12 @@ function find_opus_resources($src,$trg,&$resources){
   // $OPUSAPI = 'https://translate.ling.helsinki.fi/opusapi';
   // $OPUSAPI = 'http://vm1637.kaj.pouta.csc.fi/opusapi';
   $OPUSAPI = 'http://opus.nlpl.eu/opusapi';
+  global $version;
 
   $url = $OPUSAPI.'/?source='.$src.'&target='.$trg;
+  if ( $version != 'all' ){
+    $url .= '&version='.$version;
+  }
   $lines_array=file($url);
   // turn array into one variable
   $string=implode('',$lines_array);

@@ -33,3 +33,5 @@ cleanup:
 
 include ../../Makefile.def
 include ../../Makefile.align
+include ../../Makefile.submit
+
