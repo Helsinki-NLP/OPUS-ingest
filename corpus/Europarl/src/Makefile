@@ -8,6 +8,11 @@ LANGUAGES = $(notdir $(wildcard txt/??))
 SRC=bg
 TRG=ro
 
+VERSION = 8
+PREV_VERSION = 7
+
+
+
 SENTSPLITTER = ./tools/split-sentences-joerg.perl
 ALIGNER = ./sentence-align-corpus-joerg.perl
 
@@ -17,7 +22,11 @@ MAKE_MORE = ${MAKE} -j ${NRJOBS}
 
 
 .PHONY: all
-all: europarl.tgz tools
+all: tools europarl-v${VERSION}.tgz
+	${MAKE} txt
+	for s in ${LANGUAGES}; do \
+	  ${MAKE} SRC=$$s srcxml; \
+	done
 	${MAKE} sentalign
 	${MAKE} cleanup
 
@@ -25,16 +34,52 @@ all: europarl.tgz tools
 .PHONY: cleanup
 cleanup:
 	rm -fr txt aligned
-	rm -f europarl.tgz
 
-europarl.tgz:
-	wget http://www.statmt.org/europarl/v7/europarl.tgz
+.PHONY: fetch
+fetch: europarl-v${VERSION}
 
-txt: europarl.tgz
-	tar -xzf $<
+europarl-v${VERSION}.tgz:
+	wget -O $@ http://www.statmt.org/europarl/v${VERSION}/europarl.tgz
+
+europarl-v${VERSION}: %: %.tgz
+	mkdir -p $@
+	tar -C $@ -xzf $@.tgz
+
+txt:
+	${MAKE} fetch
+	${MAKE} VERSION=${PREV_VERSION} fetch
+	${MAKE} compare
+	rm -fr europarl-v${VERSION}
+	rm -fr europarl-v${PREV_VERSION}
+
+TXTFILES = $(patsubst europarl-v${VERSION}/%,%,${wildcard europarl-v${VERSION}/txt/??/*.txt})
+
+compare: ${TXTFILES}
+
+${TXTFILES}: %: europarl-v${VERSION}/%
+	@mkdir -p ${dir $@}
+	@if [ ! -e europarl-v${PREV_VERSION}/$@ ]; then \
+	  mv $< $@; \
+	elif ! diff -q $< europarl-v${PREV_VERSION}/$@ &>/dev/null; then \
+	  echo "$@ differs"; \
+	  mv $< $@; \
+	fi
+
+
+## v9 is the same data as v8 but just with doc boundaries ....
+europarl-v9:
+	mkdir -p $@
+	cd $@ && wget http://www.statmt.org/europarl/v9/training/europarl-v9.cs-en.tsv.gz
+	cd $@ && wget http://www.statmt.org/europarl/v9/training/europarl-v9.cs-pl.tsv.gz
+	cd $@ && wget http://www.statmt.org/europarl/v9/training/europarl-v9.de-en.tsv.gz
+	cd $@ && wget http://www.statmt.org/europarl/v9/training/europarl-v9.es-pt.tsv.gz
+	cd $@ && wget http://www.statmt.org/europarl/v9/training/europarl-v9.fi-en.tsv.gz
+	cd $@ && wget http://www.statmt.org/europarl/v9/training/europarl-v9.lt-en.tsv.gz
+
+
 
 tools.tgz:
-	http://www.statmt.org/europarl/v7/tools.tgz
+	http://www.statmt.org/europarl/v8/tools.tgz
 
 sentence-align-corpus.perl tools: tools.tgz
 	tar -xzf $<
@@ -55,13 +100,27 @@ sentalign:
 		  if [ -d ${RAWDIR}/$$t-$$s ]; then \
 			echo "$$t-$$s exists!"; \
 		  else \
-		    if [ ! -d ${RAWDIR}/$$s-$$t ]; then \
 			${MAKE} SRC=$$s TRG=$$t ${RAWDIR}/$$s-$$t; \
-		    fi; \
 		  fi; \
 		fi; \
 	  done; \
 	done
+
+
+# sentalign:
+# 	for s in ${LANGUAGES}; do \
+# 	  for t in ${LANGUAGES}; do \
+# 		if [ "$$s" != "$$t" ] ; then \
+# 		  if [ -d ${RAWDIR}/$$t-$$s ]; then \
+# 			echo "$$t-$$s exists!"; \
+# 		  else \
+# 		    if [ ! -d ${RAWDIR}/$$s-$$t ]; then \
+# 			${MAKE} SRC=$$s TRG=$$t ${RAWDIR}/$$s-$$t; \
+# 		    fi; \
+# 		  fi; \
+# 		fi; \
+# 	  done; \
+# 	done
 
 
 
@@ -136,3 +195,5 @@ aligned/$(SRC)-$(TRG)/$(TRG)/%.xml.gz: aligned/$(SRC)-$(TRG)
 aligned/${SRC}-${TRG}: txt/${SRC} txt/${TRG}
 	${ALIGNER} ${SRC} ${TRG}
 
+
+include ../../Makefile.submit

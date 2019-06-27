@@ -3,7 +3,7 @@
 # name & version of the corpus
 
 CORPUS  = Europarl
-VERSION = v7
+VERSION = v8
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just

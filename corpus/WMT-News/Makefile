@@ -2,23 +2,14 @@
 include ../Makefile.def
 include Makefile.def
 
-.PHONY: corpus
-corpus:
+.PHONY: all
+all:
 	${MAKE} -C raw all
 	${MAKE} annotate
 	${MAKE} -C xml all
-	rm -fr data
-
-
-.PHONY: all
-all:
-	${MAKE} corpus
-	${MAKE} web-corpus
-
-
-.PHONY: web-corpus
-web-corpus: tmx moses alg_samples html
-	cp ${OPUSPUB}/${CORPUS}.php ${OPUSPUB}/${CORPUS}${VERSION}.php
+	${MAKE} udparse
+	${MAKE} wordalign
+	${MAKE} publish
 
 
 # include some standard OPUS targets for processing/annotating data
@@ -26,8 +17,9 @@ web-corpus: tmx moses alg_samples html
 # include ../Makefile.annotate
 include ../Makefile.tag
 include ../Makefile.cwb
-# include ../Makefile.html
+include ../Makefile.process
 include ../Makefile.release
 include ../Makefile.submit
 include ../Makefile.udparse
+
 

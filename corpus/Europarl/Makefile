@@ -9,10 +9,20 @@ all:
 	${MAKE} -C src all
 	${MAKE} -C raw all
 	${MAKE} annotate
-	( cd xml; ln -s ../raw/*.gz . )
-	${MAKE} html
-	${MAKE} cwb-index
-	rm -fr data
+	-( cd xml; ln -s ../raw/*.gz . )
+	${MAKE} publish
+
+#	${MAKE} html
+#	${MAKE} cwb-index
+#	rm -fr data
+
+
+## run word alignment
+## - first create all info files (for estimating memory requirements)
+## - then start all alignment jobs
+run-wordalign: wordalign/Makefile
+	${MAKE} ces_info
+	${MAKE} -C wordalign submit-all
 
 
 .PHONY: real-clean

@@ -21,6 +21,7 @@ LANGUAGES = fi sv
 .PHONY: all
 all:
 	${MAKE} convert
+	${MAKE} -C xml create-align-files
 	${MAKE} annotate
 	${MAKE} udparse
 	${MAKE} wordalign
@@ -57,24 +58,25 @@ include ../Makefile.tokenize
 # MOSES2OPUS = moses2opus
 MOSES2OPUS = ${HOME}/appl_taito/bin/moses2opus
 
-ALGFILES = ${patsubst src/%.txt.gz,xml/%.xml.gz,${wildcard src/*.txt.gz}}
+SRCFILE1 = ${patsubst src/%.txt.gz,xml/fi/%.0001.xml.gz,${wildcard src/*.txt.gz}}
 
 .PHONY: convert
-convert: xml/Makefile ${ALGFILES}
+convert: xml/Makefile ${SRCFILE1}
 
-${ALGFILES}: xml/%.xml.gz: src/%.txt.gz
+${SRCFILE1}: xml/fi/%.0001.xml.gz: src/%.txt.gz
+	mkdir -p raw xml log
+	mkdir -p $(dir ${patsubst src/%.txt.gz,xml/fi-sv/%.xml.gz,$<})
 	zcat $< | cut -f2 | gzip -c > $<.sim.gz
 	zcat $< | cut -f3 | gzip -c > $<.sv.gz
 	zcat $< | cut -f4 | gzip -c > $<.fi.gz
-	mkdir -p raw xml log
-	mkdir -p xml/fi-sv
 	cd raw && \
 	${MOSES2OPUS} 	-z \
 			-s fi -t sv \
-			-b $(notdir $@) \
+			-b $(notdir $(<:.txt.gz=)) \
 			-l ../$<.sim.gz -d \
+			-p 50000 \
 			../$<.fi.gz ../$<.sv.gz |\
-	gzip -c > ../$@
+	gzip -c > ${patsubst src/%.txt.gz,../xml/fi-sv/%.xml.gz,$<}
 	rm -f $<.sim.gz $<.fi.gz $<.sv.gz
 
 

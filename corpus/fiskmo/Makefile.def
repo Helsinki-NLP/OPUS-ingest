@@ -9,7 +9,7 @@ CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\
 ## current version
 VERSION = v2
 
-LICENSE = CC–BY 4.0
+LICENSE = CC–BY-NC-SA 4.0
 COPYRIGHT = 
 
 # with SRCHTML you can define some extra HTML code that will be placed just

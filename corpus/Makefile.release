@@ -530,7 +530,7 @@ tmx-strict: ${CORPUSRELEASE} $(TMX_STRICT)
 
 $(TMX) $(TMX_STRICT): ${CORPUSRELEASE}/tmx/%.tmx.gz: ${CORPUSRELEASE}/moses/%.txt.zip
 	@${MKDIR} ${dir $@}
-	unzip $< -x README INFO LICENSE
+	-unzip $< -x README INFO LICENSE
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  BASE=${CORPUS}.$(patsubst %.txt.zip,%,$(notdir $<));\
@@ -726,6 +726,7 @@ ${LANG_INFO}:
 ces_info: ${CES_INFO}
 
 ${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSXML}/%.xml.gz
+	${MKDIR} ${dir $@}
 	zgrep 'fromDoc' $< | wc -l > $@
 	zgrep 'xtargets' $< | wc -l >> $@
 	( cd ${CORPUSXML}; \
@@ -744,6 +745,7 @@ ${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSXML}/%.xml.gz
 txt_info: ${TXT_INFO}
 
 ${TXT_INFO}: ${CORPUSRELEASE}/info/%.txt.info: ${CORPUSRELEASE}/moses/%.txt.zip
+	${MKDIR} ${dir $@}
 	-unzip -d . $< -x README INFO LICENSE
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
@@ -765,6 +767,7 @@ ${TXT_INFO}: ${CORPUSRELEASE}/info/%.txt.info: ${CORPUSRELEASE}/moses/%.txt.zip
 tmx_info: ${TMX_INFO}
 
 ${TMX_INFO}: ${CORPUSRELEASE}/info/%.tmx.info: ${CORPUSRELEASE}/tmx/%.tmx.gz
+	${MKDIR} ${dir $@}
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	 zgrep '</tu>' $< | wc -l > $@; \

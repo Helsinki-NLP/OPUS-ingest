@@ -3,22 +3,14 @@ include ../Makefile.def
 include Makefile.def
 
 
-.PHONY: corpus
-corpus:
+.PHONY: all
+all:
 	${MAKE} -C src all
 	${MAKE} -C xml all
 	${MAKE} annotate
 	rm -fr data
-
-
-.PHONY: all
-all:
-	${MAKE} corpus
-	${MAKE} web-corpus
-
-
-.PHONY: web-corpus
-web-corpus: tmx moses alg_samples html
+	${MAKE} wordalign
+	${MAKE} publish
 
 
 # include some standard OPUS targets for processing/annotating data

@@ -3,13 +3,13 @@
 # name & version of the corpus
 
 CORPUS  = WMT-News
-VERSION = v2014
+VERSION = v2019
 
-LANGUAGES = cs de en es fr hi ru
+# LANGUAGES = cs de en es fr hi ru
 
 # with SRCHTML you can define some extra HTML code that will be placed just
 # after the name of the sub-corpus
 # EXTRAHTML is code which will be put just after the 'Download' header
 
-SRCHTML=<p>A parallel corpus of News Test Sets provided by WMT for training SMT: <a href="http://www.statmt.org/wmt14/">http://www.statmt.org/wmt14/</a></p>
+SRCHTML=<p>A parallel corpus of News Test Sets provided by WMT for training SMT: <a href="http://www.statmt.org/wmt19/">http://www.statmt.org/wmt19/</a></p>
 EXTRAHTML=

@@ -1,5 +1,5 @@
 
-
+include ../Makefile.def
 
 
 RAWDIR = ../raw
@@ -15,34 +15,78 @@ ALIGNER = ./sentence-align-corpus-joerg.perl
 NRJOBS = 4
 MAKE_MORE = ${MAKE} -j ${NRJOBS} 
 
-
 .PHONY: all
-all: txt
+all: documents-${VERSION}.tgz
+	${MAKE} txt
+	for s in ${LANGUAGES}; do \
+	  ${MAKE} SRC=$$s srcxml; \
+	done
 	${MAKE} sentalign
 	${MAKE} cleanup
 
 .PHONY: cleanup
 cleanup:
 	rm -fr txt aligned
-	rm -f txt.tgz
 
-txt.tgz:
-	wget http://www.casmacat.eu/corpus/news-commentary/txt.tgz
 
-txt: txt.tgz
-	tar -xzf $<
-	( cd txt; ln -s Arabic ar )
-	( cd txt; ln -s Chinese zh )
-	( cd txt; ln -s Czech cs )
-	( cd txt; ln -s Dutch nl )
-	( cd txt; ln -s English en )
-	( cd txt; ln -s French fr )
-	( cd txt; ln -s German de )
-	( cd txt; ln -s Italian it )
-	( cd txt; ln -s Japanese ja )
-	( cd txt; ln -s Portuguese pt )
-	( cd txt; ln -s Russian ru )
-	( cd txt; ln -s Spanish es )
+## fetch old version 11
+
+documents-v11.tgz:
+	wget -O $@ http://www.casmacat.eu/corpus/news-commentary/txt.tgz
+
+# txt: txt.tgz
+documents-v11: documents-v11.tgz
+	mkdir -p $@
+	tar -C $@ -xzf $<
+	( cd $@/txt; ln -s Arabic ar )
+	( cd $@/txt; ln -s Chinese zh )
+	( cd $@/txt; ln -s Czech cs )
+	( cd $@/txt; ln -s Dutch nl )
+	( cd $@/txt; ln -s English en )
+	( cd $@/txt; ln -s French fr )
+	( cd $@/txt; ln -s German de )
+	( cd $@/txt; ln -s Italian it )
+	( cd $@/txt; ln -s Japanese ja )
+	( cd $@/txt; ln -s Portuguese pt )
+	( cd $@/txt; ln -s Russian ru )
+	( cd $@/txt; ln -s Spanish es )
+
+
+## fetch new version 14
+
+documents-v14.tgz:
+	wget -O $@ http://data.statmt.org/news-commentary/v14/documents.tgz
+
+documents-v14: documents-v14.tgz
+	mkdir -p $@
+	tar -C $@ -xzf $<
+
+
+## get text files that are new
+
+txt:
+	${MAKE} documents-v11
+	${MAKE} documents-v14
+	${MAKE} compare
+	rm -fr documents-v11
+	rm -fr documents-v14
+
+## compare version 11 and 14
+
+TXTFILES = $(patsubst documents-v14/split/%,txt/%,${wildcard documents-v14/split/??/*.txt})
+compare: ${TXTFILES}
+
+${TXTFILES}: txt/%: documents-v14/split/%
+	@mkdir -p ${dir $@}
+	@if [ ! -e documents-v11/$@ ]; then \
+	  mv $< $@; \
+	elif ! diff -q $< documents-v11/$@ &>/dev/null; then \
+	  echo "$@ differs"; \
+	  mv $< $@; \
+	fi
+
+
+
 
 
 SRCFILES=$(patsubst txt/$(SRC)/%.txt,${RAWDIR}/$(SRC)/%.xml.gz,$(wildcard txt/$(SRC)/*.txt))
@@ -60,13 +104,26 @@ sentalign:
 		  if [ -d ${RAWDIR}/$$t-$$s ]; then \
 			echo "$$t-$$s exists!"; \
 		  else \
-		    if [ ! -d ${RAWDIR}/$$s-$$t ]; then \
 			${MAKE} SRC=$$s TRG=$$t ${RAWDIR}/$$s-$$t; \
-		    fi; \
 		  fi; \
 		fi; \
 	  done; \
 	done
+
+# sentalign:
+# 	for s in ${LANGUAGES}; do \
+# 	  for t in ${LANGUAGES}; do \
+# 		if [ "$$s" != "$$t" ] ; then \
+# 		  if [ -d ${RAWDIR}/$$t-$$s ]; then \
+# 			echo "$$t-$$s exists!"; \
+# 		  else \
+# 		    if [ ! -d ${RAWDIR}/$$s-$$t ]; then \
+# 			${MAKE} SRC=$$s TRG=$$t ${RAWDIR}/$$s-$$t; \
+# 		    fi; \
+# 		  fi; \
+# 		fi; \
+# 	  done; \
+# 	done
 
 
 

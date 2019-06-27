@@ -4,13 +4,13 @@
 
 
 CORPUS  = News-Commentary
-VERSION = v11
+VERSION = v14
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just
 # after the name of the sub-corpus
 # EXTRAHTML is code which will be put just after the 'Download' header
 
-SRCHTML=<p>A parallel corpus of News Commentaries provided by WMT for training SMT. The source is taken from CASMACAT: <a href="http://www.casmacat.eu/corpus/news-commentary.html">http://www.casmacat.eu/corpus/news-commentary.html</a></p>
+SRCHTML=<p>A parallel corpus of News Commentaries provided by WMT for training SMT. The source is taken from WMT 19: <a href="http://data.statmt.org/news-commentary/v14/documents.tgz">http://data.statmt.org/news-commentary/v14/documents.tgz</a></p>
 EXTRAHTML=
 

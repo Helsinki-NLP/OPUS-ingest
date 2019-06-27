@@ -7,11 +7,21 @@ all:
 	${MAKE} -C raw all
 	${MAKE} -C xml all
 	${MAKE} annotate
-	${MAKE} wordalign
 	${MAKE} publish
 
 # 	${MAKE} udparse
 # 	rm -fr data
+#	${MAKE} wordalign
+#	${MAKE} publish
+
+
+## run word alignment
+## - first create all info files (for estimating memory requirements)
+## - then start all alignment jobs
+run-wordalign: wordalign/Makefile
+	${MAKE} ces_info
+	${MAKE} -C wordalign submit-all
+
 
 
 

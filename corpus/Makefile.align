@@ -134,6 +134,7 @@ ${SRC}-${TRG}.xml.gz: ${ALGFILES}
 	  gzip $@.tmp; \
 	  if [ -e $@ ]; then \
 	    opus-merge-align $@ $@.tmp.gz | gzip -c > $@; \
+	    rm -f $@.tmp.gz; \
 	  else \
 	    mv $@.tmp.gz $@; \
 	  fi; \

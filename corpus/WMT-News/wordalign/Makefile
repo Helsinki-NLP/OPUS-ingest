@@ -1,11 +1,5 @@
 # -*-makefile-*-
-#
-
-all:
-	${MAKE} all-wordalign
-
 include ../Makefile.def
+all: wordalign-all
 include ../../Makefile.def
 include ../../Makefile.wordalign
-
-
