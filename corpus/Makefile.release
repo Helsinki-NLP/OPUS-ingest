@@ -28,7 +28,8 @@ endif
 ALG      := $(patsubst ${CORPUSXML}/%,${CORPUSRELEASE}/xml/%,$(CES))
 TMX      := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/tmx/%.tmx.gz,$(CES))
 MOSES    := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/moses/%.txt.zip,$(CES))
-DIC      := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/dic/%.dic.gz,$(CES))
+DIC      := $(patsubst ${CORPUSHOME}/%,${CORPUSRELEASE}/%,$(wildcard ${CORPUSDIC}/*.dic.gz))
+# DIC      := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/dic/%.dic.gz,$(CES))
 
 ifndef SMT
 ifneq ($(wildcard ${CORPUSWORDALIGN}),)

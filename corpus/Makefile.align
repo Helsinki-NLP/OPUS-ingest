@@ -133,13 +133,15 @@ ${SRC}-${TRG}.xml.gz: ${ALGFILES}
 	  echo '</cesAlign>' >> $@.tmp; \
 	  gzip $@.tmp; \
 	  if [ -e $@ ]; then \
-	    opus-merge-align $@ $@.tmp.gz | gzip -c > $@; \
+	    opus-merge-align $@ $@.tmp.gz | gzip -c > $@.tmp2.gz; \
+	    mv -f $@.tmp2.gz $@; \
 	    rm -f $@.tmp.gz; \
 	  else \
-	    mv $@.tmp.gz $@; \
+	    mv -f $@.tmp.gz $@; \
 	  fi; \
 	fi
 	rm -f $@.links
+	rm -fr ${SRC}-${TRG}
 
 
 # individual sentence alignment files (for each document pair)
@@ -214,13 +216,25 @@ create-align-file:
 	    echo "merge ${SRC}-${TRG}.xml.gz ${SRC}-${TRG}.tmp.gz"; \
 	    opus-merge-align ${SRC}-${TRG}.xml.gz ${SRC}-${TRG}.tmp.gz |\
 	    gzip -c > ${SRC}-${TRG}.tmp2.gz; \
-	    mv ${SRC}-${TRG}.tmp2.gz ${SRC}-${TRG}.xml.gz; \
+	    mv -f ${SRC}-${TRG}.tmp2.gz ${SRC}-${TRG}.xml.gz; \
 	    rm -f ${SRC}-${TRG}.tmp.gz; \
 	  else \
-	    mv ${SRC}-${TRG}.tmp.gz ${SRC}-${TRG}.xml.gz; \
+	    mv -f ${SRC}-${TRG}.tmp.gz ${SRC}-${TRG}.xml.gz; \
 	  fi; \
 	fi; \
 	rm -f ${SRC}-${TRG}.links; \
 	  fi; \
 	  rm -fr ${SRC}-${TRG}; \
 	fi
+
+
+fix-align-files:
+	for s in ${LANGUAGES}; do \
+	  for t in ${LANGUAGES}; do \
+	    if [ -e $$s-$$t.xml.gz ]; then \
+		echo "fix $$s-$$t.xml.gz"; \
+		opus-merge-align $$s-$$t.xml.gz | gzip -c > $$s-$$t.tmp.gz; \
+		mv -f $$s-$$t.tmp.gz $$s-$$t.xml.gz; \
+	    fi \
+	  done \
+	done

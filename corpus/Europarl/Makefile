@@ -7,14 +7,14 @@ include ../Makefile.def
 .PHONY: all
 all:
 	${MAKE} -C src all
-	${MAKE} -C raw all
+	${MAKE} -C xml all
 	${MAKE} annotate
-	-( cd xml; ln -s ../raw/*.gz . )
 	${MAKE} publish
 
 #	${MAKE} html
 #	${MAKE} cwb-index
 #	rm -fr data
+
 
 
 ## run word alignment

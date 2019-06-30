@@ -26,14 +26,16 @@ all:
 
 ## standard procedures are specified in the following makefiles
 ##
+##   Makefile.submit ....... submit a job to our cluster
 ##   Makefile.process ...... standard corpus processing tasks
-##   Makfile.html .......... download packages and website
+##   Makfile.release ....... download packages and website
 ##   Makefile.cwb .......... indexing with CWB
 ##   Makfile.udparse ....... dependency parsing
 
 
+include ../Makefile.submit
 include ../Makefile.process
-include ../Makefile.html
+include ../Makefile.release
 include ../Makefile.cwb
 include ../Makefile.udparse
 

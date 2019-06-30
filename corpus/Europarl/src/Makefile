@@ -3,6 +3,8 @@
 
 
 RAWDIR = ../raw
+XMLDIR = ../xml
+
 LANGUAGES = $(notdir $(wildcard txt/??))
 
 SRC=bg
@@ -90,17 +92,17 @@ TRGFILES=$(patsubst txt/$(TRG)/%.txt,${RAWDIR}/$(TRG)/%.xml.gz,$(wildcard txt/$(
 
 
 XMLFILES=$(patsubst ${RAWDIR}/$(SRC)/%.xml.gz,${RAWDIR}/$(SRC)/%.xml,$(wildcard ${RAWDIR}/$(SRC)/*.xml.gz))
-CESFILES=$(patsubst aligned/${SRC}-${TRG}/$(SRC)/%.txt,${RAWDIR}/$(SRC)-$(TRG)/%.xml.gz,$(wildcard aligned/${SRC}-${TRG}/${SRC}/*.txt))
+CESFILES=$(patsubst aligned/${SRC}-${TRG}/$(SRC)/%.txt,${XMLDIR}/$(SRC)-$(TRG)/%.xml.gz,$(wildcard aligned/${SRC}-${TRG}/${SRC}/*.txt))
 
 .PHONY: sentalign
 sentalign:
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
 		if [ "$$s" != "$$t" ] ; then \
-		  if [ -d ${RAWDIR}/$$t-$$s ]; then \
+		  if [ -d ${XMLDIR}/$$t-$$s ]; then \
 			echo "$$t-$$s exists!"; \
 		  else \
-			${MAKE} SRC=$$s TRG=$$t ${RAWDIR}/$$s-$$t; \
+			${MAKE} SRC=$$s TRG=$$t ${XMLDIR}/$$s-$$t; \
 		  fi; \
 		fi; \
 	  done; \
@@ -125,9 +127,9 @@ sentalign:
 
 
 .PHONY: bitext
-bitext: ${RAWDIR}/$(SRC)-$(TRG)
+bitext: ${XMLDIR}/$(SRC)-$(TRG)
 
-${RAWDIR}/$(SRC)-$(TRG): aligned/${SRC}-${TRG}
+${XMLDIR}/$(SRC)-$(TRG): aligned/${SRC}-${TRG}
 	${MAKE_MORE} srcxml
 	${MAKE_MORE} trgxml
 	mkdir -p $@
@@ -163,8 +165,9 @@ $(TRGFILES): ${RAWDIR}/$(TRG)/%.xml.gz: txt/$(TRG)/%.txt
 ces: $(CESFILES)
 
 $(CESFILES): %.xml.gz: %.xml
+	gzip -f $<
 
-${RAWDIR}/$(SRC)-$(TRG)/%.xml: aligned/$(SRC)-$(TRG)/$(SRC)/%.txt aligned/$(SRC)-$(TRG)/$(TRG)/%.txt 
+${XMLDIR}/$(SRC)-$(TRG)/%.xml: aligned/$(SRC)-$(TRG)/$(SRC)/%.txt aligned/$(SRC)-$(TRG)/$(TRG)/%.txt 
 	grep -v '^<' $< |\
         perl -e 'while(<>){while(/\#\#([0-9][0-9]*)\#\#/g){print "$$1 ";}print "\n"}' > $@.src.ids
 	grep -v '^<' $^ |\

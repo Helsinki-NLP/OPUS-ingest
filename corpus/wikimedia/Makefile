@@ -15,6 +15,11 @@
 include Makefile.def
 include ../Makefile.def
 
+
+WIKIDUMPS = https://dumps.wikimedia.org/other/contenttranslation
+DOWNLOADURL = ${WIKIDUMPS}/${patsubst v%,%,${VERSION}}/cx-corpora._2_.text.tmx.gz
+TMXFILE = src/cx-text-${VERSION}.tmx.gz
+
 ## all TMX files in the src/ directory
 ## we will convert them to Moses and use moses2opus as the second step
 
@@ -33,7 +38,10 @@ TMXGZDONE  = ${TMXGZFILES:.tmx.gz=_done}
 
 .PHONY: all
 all:
+	${MAKE} download
 	${MAKE} convert
+	${MAKE} xml/Makefile
+	mv -f raw/*-* xml/ 
 	${MAKE} annotate
 	${MAKE} udparse
 	${MAKE} wordalign
@@ -74,12 +82,16 @@ convert: ${TMXDONE} ${TMXGZDONE}
 
 ${TMXDONE}: %_done: %.tmx
 	mkdir -p raw
-	cat $< | tidy -xml -utf8 > $<.tmp
-	cd raw && ${TMX2OPUS} -o ${notdir $(<:.tmx=.xml.gz)} ../$<.tmp
-	rm -f $<.tmp
+	cd raw && ${TMX2OPUS} -o ${notdir $(<:.tmx=)} ../$<
 
 ${TMXGZDONE}: %_done: %.tmx.gz
 	mkdir -p raw
-	gzip -cd $< | tidy -xml -utf8 > $<.tmp
-	cd raw && ${TMX2OPUS} -o ${notdir $(<:.tmx.gz=.xml.gz)} ../$<.tmp
-	rm -f $<.tmp
+	cd raw && gzip -cd ../$< | ${TMX2OPUS} -o cx-corpora.xml.gz
+
+.PHONY: download
+download: ${TMXFILE}
+${TMXFILE}:
+	mkdir -p ${dir $@}
+	wget -O $@ ${DOWNLOADURL}
+	gzip -cd $@ | tidy -xml -utf8 > $@.tmp
+	mv -f $@.tmp $@

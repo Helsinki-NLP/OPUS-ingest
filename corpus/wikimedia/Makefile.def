@@ -1,0 +1,22 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v20190628
+
+LICENSE = CC-BY-SA 4.0
+COPYRIGHT = 
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML=Wikipedia translations published by the wikimedia foundation and their article translation system. The parallel data sets are published at <a href="https://dumps.wikimedia.org/other/contenttranslation">https://dumps.wikimedia.org/other/contenttranslation</a>
+EXTRAHTML=
+# CITENOTE=

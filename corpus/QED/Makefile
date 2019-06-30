@@ -25,23 +25,28 @@ all:
 	${MAKE} SENTALIGN=srtalign corpus
 	${MAKE} publish
 
-more:
-	${MAKE} SENTALIGN=srtalign corpus
-	${MAKE} publish
-
 convert:
 	${MAKE} -C src all
+
+## run word alignment
+## - first create all info files (for estimating memory requirements)
+## - then start all alignment jobs
+run-wordalign: wordalign/Makefile
+	${MAKE} ces_info
+	${MAKE} -C wordalign submit-all-wordalign
+
 
 ## standard procedures are specified in the following makefiles
 ##
 ##   Makefile.process ...... standard corpus processing tasks
-##   Makfile.html .......... download packages and website
+##   Makfile.release ....... download packages and website
 ##   Makefile.cwb .......... indexing with CWB
 ##   Makfile.udparse ....... dependency parsing
 
 
+include ../Makefile.submit
 include ../Makefile.process
-include ../Makefile.html
+include ../Makefile.release
 include ../Makefile.cwb
 include ../Makefile.udparse
 
