@@ -24,7 +24,7 @@ HPC_TIME    = 48:00
 HPC_NODES   = 1
 HPC_CORES   = 1
 HPC_QUEUE   = serial
-HPC_MODULES = nlpl-opus python-env/3.4.1 # efmaral
+HPC_MODULES = nlpl-opus python-env/3.4.1 
 HPC_EXTRA   = 
 
 

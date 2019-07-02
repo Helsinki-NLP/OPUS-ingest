@@ -15,7 +15,6 @@
 include Makefile.def
 include ../Makefile.def
 
-
 WIKIDUMPS = https://dumps.wikimedia.org/other/contenttranslation
 DOWNLOADURL = ${WIKIDUMPS}/${patsubst v%,%,${VERSION}}/cx-corpora._2_.text.tmx.gz
 TMXFILE = src/cx-text-${VERSION}.tmx.gz
@@ -42,6 +41,7 @@ all:
 	${MAKE} convert
 	${MAKE} xml/Makefile
 	mv -f raw/*-* xml/ 
+	${MAKE} -C xml create-align-files
 	${MAKE} annotate
 	${MAKE} udparse
 	${MAKE} wordalign
@@ -79,19 +79,22 @@ TMX2OPUS = tmx2opus
 
 .PHONY: convert
 convert: ${TMXDONE} ${TMXGZDONE}
+	find raw -name '*.xml' | xargs gzip -f 
 
 ${TMXDONE}: %_done: %.tmx
 	mkdir -p raw
-	cd raw && ${TMX2OPUS} -o ${notdir $(<:.tmx=)} ../$<
+	cd raw && ${TMX2OPUS} -o cx-corpora.xml ../$<
+	touch $@
 
 ${TMXGZDONE}: %_done: %.tmx.gz
 	mkdir -p raw
-	cd raw && gzip -cd ../$< | ${TMX2OPUS} -o cx-corpora.xml.gz
+	cd raw && gzip -cd ../$< | ${TMX2OPUS} -o cx-corpora.xml
+	touch $@
 
 .PHONY: download
 download: ${TMXFILE}
 ${TMXFILE}:
 	mkdir -p ${dir $@}
 	wget -O $@ ${DOWNLOADURL}
-	gzip -cd $@ | tidy -xml -utf8 > $@.tmp
-	mv -f $@.tmp $@
+	gzip -cd $@ | tidy -xml -utf8 | gzip -c > $@.tmp.gz
+	mv -f $@.tmp.gz $@

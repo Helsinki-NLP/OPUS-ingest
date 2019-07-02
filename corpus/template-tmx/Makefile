@@ -34,6 +34,9 @@ TMXGZDONE  = ${TMXGZFILES:.tmx.gz=_done}
 .PHONY: all
 all:
 	${MAKE} convert
+	${MAKE} xml/Makefile
+	mv -f raw/*-* xml/ 
+	${MAKE} -C xml create-align-files
 	${MAKE} annotate
 	${MAKE} udparse
 	${MAKE} wordalign
@@ -77,9 +80,11 @@ ${TMXDONE}: %_done: %.tmx
 	cat $< | tidy -xml -utf8 > $<.tmp
 	cd raw && ${TMX2OPUS} -o ${notdir $(<:.tmx=.xml.gz)} ../$<.tmp
 	rm -f $<.tmp
+	touch $@
 
 ${TMXGZDONE}: %_done: %.tmx.gz
 	mkdir -p raw
 	gzip -cd $< | tidy -xml -utf8 > $<.tmp
 	cd raw && ${TMX2OPUS} -o ${notdir $(<:.tmx.gz=.xml.gz)} ../$<.tmp
 	rm -f $<.tmp
+	touch $@

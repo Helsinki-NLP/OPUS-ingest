@@ -188,7 +188,11 @@ ${ALGFILES}: ${SRC}-${TRG}/%: ${SRC}/% ${TRG}/%
 create-align-files:
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
+	    if [ "$$s" != "$$t" ]; then \
+	      if [ -d "$$s-$$t" ]; then \
 		make SRC=$$s TRG=$$t create-align-file; \
+	      fi \
+	    fi \
 	  done \
 	done
 

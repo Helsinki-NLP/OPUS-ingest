@@ -21,4 +21,5 @@ include ../Makefile.tag
 include ../Makefile.cwb
 # include ../Makefile.html
 include ../Makefile.release
+include ../Makefile.udparse
 include ../Makefile.submit

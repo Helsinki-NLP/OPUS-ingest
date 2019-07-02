@@ -20,3 +20,5 @@ COPYRIGHT =
 SRCHTML=Wikipedia translations published by the wikimedia foundation and their article translation system. The parallel data sets are published at <a href="https://dumps.wikimedia.org/other/contenttranslation">https://dumps.wikimedia.org/other/contenttranslation</a>
 EXTRAHTML=
 # CITENOTE=
+
+LANGUAGES = $(sort $(notdir ${wildcard ${CORPUSRAW}/[a-z_]*}))

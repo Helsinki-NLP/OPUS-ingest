@@ -36,7 +36,7 @@ TAG = uplug -f opus/annotate opus/${LANGUAGE}/annotate
 ANNOTATE_DONE = ${patsubst %,log/.%.annotate.done,${LANGUAGES}}
 annotate: ${ANNOTATE_DONE}
 
-${ANNOTATE_DONE}:
+${ANNOTATE_DONE}: ${CORPUSRAW}
 	${MAKE} LANGUAGE=${patsubst log/.%.annotate.done,%,$@} annotate_files
 	mkdir -p ${dir $@}
 	touch $@

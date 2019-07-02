@@ -247,13 +247,19 @@ submit-all-filter:
 .PHONY: submit-all-languages
 submit-all-languages:
 	for l in ${LANGPAIRS}; do \
-	  ${MAKE} LANGPAIR=$$l submit-${ACTION}; \
+	  if [ ! -e $$l/.${ACTION} ]; then \
+	    ${MAKE} LANGPAIR=$$l submit-${ACTION}; \
+	  fi \
 	done
 
 .PHONY: submit-all
 submit-all:
 	for l in ${LANGPAIRS}; do \
-	  ${MAKE} NEXTJOB=1 LANGPAIR=$$l $$l/.wordalign-done; \
+	  if [ ! -e $$l/.wordalign-done ]; then \
+	    if [ ! -e $$l/.wordalign ]; then \
+	      ${MAKE} NEXTJOB=1 LANGPAIR=$$l $$l/.wordalign-done; \
+	    fi \
+	  fi \
 	done
 
 
@@ -266,6 +272,7 @@ submit-wordalign-prepare:
 	  ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
 		  HPC_MEM=4g \
 		  HPC_CORES=1 \
+		  HPC_MODULES="${HPC_MODULES} nlpl-efmaral" \
 		  EMAIL= \
 		  NEXTJOB=${NEXTJOB} \
 		  MAKEARGS="ACTION=wordalign-prepare NEXTJOB=${NEXTJOB}" \
@@ -283,6 +290,7 @@ submit-wordalign-align:
 	  ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
 		  HPC_MEM=${ALIGN_MEM} \
 		  HPC_CORES=2 \
+		  HPC_MODULES="${HPC_MODULES} nlpl-efmaral" \
 		  EMAIL= \
 		  NEXTJOB=${NEXTJOB} \
 		  MAKEARGS="ACTION=wordalign-align NEXTJOB=${NEXTJOB}" \
@@ -303,6 +311,7 @@ submit-wordalign-pt:
 	    ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
 		    HPC_MEM=${EXTRACT_MEM} \
 		    HPC_CORES=4 \
+		    HPC_MODULES="${HPC_MODULES} nlpl-efmaral" \
 		    EMAIL= \
 		    NEXTJOB=${NEXTJOB} \
 		    MAKEARGS="ACTION=wordalign-pt NEXTJOB=${NEXTJOB}" \
@@ -325,6 +334,7 @@ submit-wordalign-filter:
 	    ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
 		    HPC_MEM=${EXTRACT_MEM} \
 		    HPC_CORES=1 \
+		    HPC_MODULES="${HPC_MODULES} nlpl-efmaral" \
 		    EMAIL= \
 		    NEXTJOB=${NEXTJOB} \
 		    MAKEARGS="ACTION=wordalign-filter NEXTJOB=${NEXTJOB}" \
@@ -339,6 +349,7 @@ submit-wordalign-all:
 	  rm -f ${LANGPAIR}.submit; \
 	  ${MAKE} EMAIL= \
 		  MAKEARGS="ACTION=wordalign" \
+		  HPC_MODULES="${HPC_MODULES} nlpl-efmaral" \
 	  ${LANGPAIR}.submit;\
 	fi
 
@@ -350,6 +361,7 @@ submit-wordalign:
 	  rm -f ${LANGPAIR}.submit; \
 	  ${MAKE} EMAIL= \
 		  MAKEARGS="ACTION=wordalign-prepare" \
+		  HPC_MODULES="${HPC_MODULES} nlpl-efmaral" \
 		  NEXTJOB=1 \
 	  ${LANGPAIR}.submit;\
 	fi
@@ -361,6 +373,7 @@ submit-wordalign:
 	  if [ -e ${dir $@}/.wordalign-align ]; then \
 	    if [ -e ${dir $@}/.wordalign-pt ]; then \
 	      if [ -e ${dir $@}/.wordalign-filter ]; then \
+		mkdir -p ${dir $@}; \
 		touch $@; \
 	      else \
 		${MAKE} SRC=$(firstword $(subst -, ,${dir $@})) \
@@ -399,6 +412,7 @@ ${LANGPAIRS}: %: %/.${ACTION}
 	${MAKE} SRC=$(firstword $(subst -, ,${@:/.${ACTION}=})) \
 		TRG=$(lastword $(subst -, ,${@:/.${ACTION}=})) \
 	${ACTION}
+	mkdir -p ${dir $@}
 	touch $@
 ifdef NEXTJOB
 	sleep 1
@@ -429,19 +443,19 @@ wordalign-align: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
 .PHONY: wordalign-pt
 wordalign-pt: ${SRC}-${TRG}/model/phrase-table.gz
 
-.PHONY: wordalign-filter
-wordalign-filter: ${SRC}-${TRG}/model/phrase-table-filtered.gz
-	rm -f ${SRC}-${TRG}/model/phrase-table.gz
+.PHONY: wordalign-no-filter
+wordalign-no-filter: ${SRC}-${TRG}/model/phrase-table.gz
 	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
 	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
-	${MAKE} ${CORPUSHOME}/dic/${SRC}-${TRG}.dic.gz
+	${MAKE} ${LANGPAIR}-aligncheck ${LANGPAIR}-bitextcheck
 
-.PHONY: wordalign
-wordalign: ${SRC}-${TRG}/model/phrase-table-filtered.gz
+.PHONY: wordalign wordalign-filter
+wordalign-filter wordalign: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 	rm -f ${SRC}-${TRG}/model/phrase-table.gz
 	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
 	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
 	${MAKE} ${CORPUSHOME}/dic/${SRC}-${TRG}.dic.gz
+	${MAKE} ${LANGPAIR}-aligncheck ${LANGPAIR}-bitextcheck
 
 
 .PHONY: dictionaries
@@ -541,6 +555,7 @@ ${SRC}-${TRG}/c.clean.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	rm -f ${SRC}-${TRG}/ids.txt ${SRC}-${TRG}/line_numbers.txt
 	rm -f ${SRC}-${TRG}/c.${SRCEXT} ${SRC}-${TRG}/c.${TRGEXT}
 	gzip -f ${SRC}-${TRG}/c.clean.${SRCEXT} ${SRC}-${TRG}/c.clean.${TRGEXT}
+
 
 # without truecasing nor cleaning
 
@@ -644,11 +659,11 @@ ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz: \
 
 %/model/aligned.srctotgt.gz: %/model/aligned.${SRCEXT} %/model/aligned.${TRGEXT}
 ifneq ("$(wildcard $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors)","")
-	${EFLOMAL} -v -s $< -t ${word 2,$^} -f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 \
+	-${EFLOMAL} -v -s $< -t ${word 2,$^} -f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 \
 		-p $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors || \
 	touch ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
 else
-	${EFLOMAL} -v -s $< -t ${word 2,$^} -f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 || \
+	-${EFLOMAL} -v -s $< -t ${word 2,$^} -f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 || \
 	touch ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
 endif
 	gzip -f ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
@@ -676,7 +691,9 @@ cleanup:
 	rm -fr ${LANGPAIR}/model/tmp.*
 	rm -fr ${LANGPAIR}/corpus
 	rm -fr ${LANGPAIR}/giza.*
-	${MAKE} ${LANGPAIR}-aligncheck ${LANGPAIR}-bitextcheck
+	rm -f ${LANGPAIR}/model/aligned.${SRC}
+	rm -f ${LANGPAIR}/model/aligned.${TRG}
+#	${MAKE} ${LANGPAIR}-aligncheck ${LANGPAIR}-bitextcheck
 
 tmp: 
 	mkdir -p ${CORPUSWORDALIGN}/tmp
@@ -862,9 +879,22 @@ check-bitexts: ${BITEXT_CHECKED}
 
 ${ALIGN_CHECKED}:
 	@mkdir -p DELETE
-	@if [ -d ${@:-aligncheck=} ]; then \
+## check bitext
+	-@if [ -d ${@:-aligncheck=} ]; then \
 	  if [ -e ${@:-aligncheck=}/bitext.xml.gz ]; then \
-	    if [ `zgrep xtargets ${@:-aligncheck=}/bitext.xml.gz | wc -l` == "0" ]; then \
+	    if [ `zgrep xtargets ${@:-aligncheck=}/bitext.xml.gz | head | wc -l` == "0" ]; then \
+	      echo "delete ${@:-aligncheck=}"; \
+	      mv -f ${@:-aligncheck=} DELETE/; \
+	    fi \
+	  else \
+	    echo "delete ${@:-aligncheck=}"; \
+	    mv -f ${@:-aligncheck=} DELETE/; \
+	  fi \
+	fi
+## also check the alignment file
+	-@if [ -d ${@:-aligncheck=} ]; then \
+	  if [ -e ${@:-aligncheck=}/model/aligned.grow-diag-final-and.gz ]; then \
+	    if [ `zcat ${@:-aligncheck=}/model/aligned.grow-diag-final-and.gz | head | wc -l` == "0" ]; then \
 	      echo "delete ${@:-aligncheck=}"; \
 	      mv -f ${@:-aligncheck=} DELETE/; \
 	    fi \
@@ -879,8 +909,8 @@ ${ALIGN_CHECKED}:
 
 ${BITEXT_CHECKED}:
 	@mkdir -p DELETE
-	@if [ -e ../xml/${@:-bitextcheck=}.xml.gz ]; then \
-	  if [ `zgrep xtargets ../xml/${@:-bitextcheck=}.xml.gz | wc -l` == "0" ]; then \
+	-@if [ -e ../xml/${@:-bitextcheck=}.xml.gz ]; then \
+	  if [ `zgrep xtargets ../xml/${@:-bitextcheck=}.xml.gz | head | wc -l` == "0" ]; then \
 	    echo "delete ../xml/${@:-bitextcheck=}.xml.gz"; \
 	    mv -f ../xml/${@:-bitextcheck=}.xml.gz DELETE/; \
 	  fi \
