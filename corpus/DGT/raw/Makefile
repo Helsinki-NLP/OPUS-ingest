@@ -2,11 +2,6 @@
 # example
 # https://wt-public.emm4u.eu/Resources/DGT-TM-2015/Vol_2014_1.zip
 
-## old download URLs
-# URL2011 = http://optima.jrc.it/Resources/DGT-TM-2011
-# URL2012 = http://optima.jrc.it/Resources/DGT-TM-2012
-# URL2013 = http://optima.jrc.it/Resources/DGT-TM-2013
-# URL2014 = http://optima.jrc.it/Resources/DGT-TM-2014
 
 URL2011 = http://wt-public.emm4u.eu/Resources/DGT-TM-2011
 URL2012 = http://wt-public.emm4u.eu/Resources/DGT-TM-2012
@@ -36,102 +31,96 @@ VOLUMES2018 = 	2017_1 2017_2
 VOLUMES2019 = 	2018_1 2018_2 2018_3
 
 
-ZIP2011 = $(patsubst %,Vol_%.zip,$(VOLUMES2011))
-ZIP2012 = $(patsubst %,Vol_%.zip,$(VOLUMES2012))
-ZIP2013 = $(patsubst %,Vol_%.zip,$(VOLUMES2013))
-ZIP2014 = $(patsubst %,Vol_%.zip,$(VOLUMES2014))
-ZIP2015 = $(patsubst %,Vol_%.zip,$(VOLUMES2015))
-ZIP2016 = $(patsubst %,Vol_%.zip,$(VOLUMES2016))
-ZIP2017 = $(patsubst %,Vol_%.zip,$(VOLUMES2017))
-ZIP2018 = $(patsubst %,Vol_%.zip,$(VOLUMES2018))
-ZIP2019 = $(patsubst %,Vol_%.zip,$(VOLUMES2019))
+ZIP2011 = $(patsubst %,../src/Vol_%.zip,$(VOLUMES2011))
+ZIP2012 = $(patsubst %,../src/Vol_%.zip,$(VOLUMES2012))
+ZIP2013 = $(patsubst %,../src/Vol_%.zip,$(VOLUMES2013))
+ZIP2014 = $(patsubst %,../src/Vol_%.zip,$(VOLUMES2014))
+ZIP2015 = $(patsubst %,../src/Vol_%.zip,$(VOLUMES2015))
+ZIP2016 = $(patsubst %,../src/Vol_%.zip,$(VOLUMES2016))
+ZIP2017 = $(patsubst %,../src/Vol_%.zip,$(VOLUMES2017))
+ZIP2018 = $(patsubst %,../src/Vol_%.zip,$(VOLUMES2018))
+ZIP2019 = $(patsubst %,../src/Vol_%.zip,$(VOLUMES2019))
 
+## one file for testing
+ZIPTEST = ../src/Vol_2018_3.zip
 
-DONE = $(patsubst %.tmx,%.done,$(wildcard *.tmx))
 
 ## make targets for English XML files
 ## --> assume that there is English in all TMX files
 ENXML = $(patsubst %.tmx,en/%.xml.gz,$(wildcard *.tmx))
 
-ALGXMLGZ = $(patsubst %.xml,%.xml.gz,$(wildcard ??-??/*.xml))
-XMLGZ = $(patsubst %.xml,%.xml.gz,$(wildcard ??/*.xml))
-
 
 all: fetch
-	${MAKE} -j 4 convert
-	${MAKE} -j 4 compress
-	rm -f *.zip *.tmx *.done *.txt *.pdf
+	${MAKE} convert
+	rm -f *.zip *.txt *.pdf
+	find . -name '*.tmx' | xargs rm -f
 
 
-## fetching and renaming files with brackets
-
+## fetching and renaming files that have brackets
+.PHONY: fetch
 fetch: 	$(ZIP2011) $(ZIP2012) $(ZIP2013) $(ZIP2014) \
 	$(ZIP2015) $(ZIP2016) $(ZIP2017) $(ZIP2018) \
 	$(ZIP2019)
 	-find . -type f -name '*\(*.tmx' | perl -pe 'print $$_; s/[\(\) ]/_/g' | xargs -n2 mv
 
-# convert: $(DONE)
+## fetch a test file
+.PHONY: fetch-test
+fetch-test: ${ZIPTEST}
+
+## convert all tmx files
+.PHONY: convert
 convert: ${ENXML}
 
-compress: ${ALGXMLGZ} ${XMLGZ}
 
+## use English XML files as main target (assuming that there is always English)
+en/%.xml.gz: %.tmx
+	tmx2opus -r -o "${<:.tmx=.xml.gz}" "$<"
+
+
+## TODO: could we make this more general to download files
+##       for each release year?
 
 $(ZIP2011):
-	wget $(URL2011)/$@
+	mkdir -p ${dir $@}
+	wget -O $@ $(URL2011)/${notdir $@}
 	unzip -o $@
 
 $(ZIP2012):
-	wget $(URL2012)/$@
+	mkdir -p ${dir $@}
+	wget -O $@ $(URL2012)/${notdir $@}
 	unzip -o $@
 
 $(ZIP2013):
-	wget $(URL2013)/$@
+	mkdir -p ${dir $@}
+	wget -O $@ $(URL2013)/${notdir $@}
 	unzip -o $@
 
 $(ZIP2014):
-	wget $(URL2014)/$@
+	mkdir -p ${dir $@}
+	wget -O $@ $(URL2014)/${notdir $@}
 	unzip -o $@
 
 $(ZIP2015):
-	wget $(URL2015)/$@
+	mkdir -p ${dir $@}
+	wget -O $@ $(URL2015)/${notdir $@}
 	unzip -o $@
 
 $(ZIP2016):
-	wget $(URL2016)/$@
+	mkdir -p ${dir $@}
+	wget -O $@ $(URL2016)/${notdir $@}
 	unzip -o $@
 
 $(ZIP2017):
-	wget $(URL2017)/$@
+	mkdir -p ${dir $@}
+	wget -O $@ $(URL2017)/${notdir $@}
 	unzip -o $@
 
 $(ZIP2018):
-	wget $(URL2018)/$@
+	mkdir -p ${dir $@}
+	wget -O $@ $(URL2018)/${notdir $@}
 	unzip -o $@
 
 $(ZIP2019):
-	wget $(URL2019)/$@
+	mkdir -p ${dir $@}
+	wget -O $@ $(URL2019)/${notdir $@}
 	unzip -o $@
-
-## use English XML files as main target (assuming that there is always English)
-${ENXML}: en/%.xml.gz: %.tmx
-	recode UTF-16..UTF-8 < "$<" |\
-	sed 's/encoding="UTF-16LE"/encoding="UTF-8"/i' |\
-	perl -p -e 's/lang=\"(..)-..\"/lang=\"$$1\"/' > "$<.utf8"
-	letsmt_convert -i tmx -o xces "$<.utf8" "${<:.tmx=.xml}"
-	gzip -f ??/${<:.tmx=.xml}
-	gzip -f ??-??/${<:.tmx=.xml}
-	rm -f "$<.utf8"
-
-$(DONE): %.done: %.tmx
-	recode UTF-16..UTF-8 < "$<" |\
-	sed 's/encoding="UTF-16LE"/encoding="UTF-8"/i' |\
-	perl -p -e 's/lang=\"(..)-..\"/lang=\"$$1\"/' > "$@"
-	letsmt_convert -i tmx -o xces "$@" ${subst ),_,${subst (,_,${<:.tmx=.xml}}}
-
-$(ALGXMLGZ): %.xml.gz: %.xml
-	sed 's/.xml/.xml.gz/g' < $< | gzip -c > $@
-	rm -f $<
-
-$(XMLGZ): %.xml.gz: %.xml
-	gzip -f $<
-

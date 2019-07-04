@@ -23,6 +23,13 @@ run-wordalign: wordalign/Makefile
 	${MAKE} -C wordalign submit-all
 
 
+find-problems:
+	for l in ${LANGUAGES}; do \
+	  ls -al xml/$$l | grep ' 60 ' |\
+	  sed "s#^.* #$$l/#" >> $@; \
+	done
+
+
 
 
 # include some standard OPUS targets for processing/annotating data
