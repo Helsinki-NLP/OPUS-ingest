@@ -14,7 +14,7 @@ include ../Makefile.def
 
 .PHONY: all links cleanup
 all: links create-align-files cleanup
-	find . -name '*.xml.gz' | xargs touch
+
 
 ## better move than symlink ...
 links:

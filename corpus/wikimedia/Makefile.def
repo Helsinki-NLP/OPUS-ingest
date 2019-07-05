@@ -18,7 +18,7 @@ COPYRIGHT =
 # CITENOTE if you want to change the default reference to be cited
 
 SRCHTML=Wikipedia translations published by the wikimedia foundation and their article translation system. The parallel data sets are published at <a href="https://dumps.wikimedia.org/other/contenttranslation">https://dumps.wikimedia.org/other/contenttranslation</a>
-EXTRAHTML=
+EXTRAHTML=<p>License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC–BY-SA 4.0</a></p>
 # CITENOTE=
 
 LANGUAGES = $(sort $(notdir ${wildcard ${CORPUSRAW}/[a-z_]*}))

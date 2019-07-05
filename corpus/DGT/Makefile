@@ -15,6 +15,7 @@ all:
 #	${MAKE} publish
 
 
+
 ## run word alignment
 ## - first create all info files (for estimating memory requirements)
 ## - then start all alignment jobs

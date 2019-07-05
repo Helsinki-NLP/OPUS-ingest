@@ -1,0 +1,24 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1.0
+
+LICENSE = 
+COPYRIGHT = 
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML=United Nations Parallel Corpus<p>Source: <a href="https://cms.unov.org/UNCorpus">https://cms.unov.org/UNCorpus</a></p>
+
+EXTRAHTML=<p>The following disclaimer, an integral part of the United Nations Parallel Corpus, shall be respected with regard to the Corpus (no other restrictions apply):</p><ul><li>The United Nations Parallel Corpus is made available without warranty of any kind, explicit or implied. The United Nations specifically makes no warranties or representations as to the accuracy or completeness of the information contained in the United Nations Corpus.</li><li>Under no circumstances shall the United Nations be liable for any loss, liability, injury or damage incurred or suffered that is claimed to have resulted from the use of the United Nations Corpus. The use of the United Nations Corpus is at the user's sole risk. The user specifically acknowledges and agrees that the United Nations is not liable for the conduct of any user. If the user is dissatisfied with any of the material provided in the United Nations Corpus, the user's sole and exclusive remedy is to discontinue using the United Nations Corpus.</li><li>When using the United Nations Corpus, the user must acknowledge the United Nations as the source of the information. For references, please cite this reference: <a href="https://cms.unov.org/UNCorpus/Content/Doc/un.pdf">Ziemski, M., Junczys-Dowmunt, M., and Pouliquen, B., (2016), The United Nations Parallel Corpus, Language Resources and Evaluation (LREC’16), Portorož, Slovenia, May 2016</a>.</li><li>Nothing herein shall constitute or be considered to be a limitation upon or waiver, express or implied, of the privileges and immunities of the United Nations, which are specifically reserved.</li></ul>
+
+CITENOTE=For references, please cite this reference: <a href="https://cms.unov.org/UNCorpus/Content/Doc/un.pdf">Ziemski, M., Junczys-Dowmunt, M., and Pouliquen, B., (2016), The United Nations Parallel Corpus, Language Resources and Evaluation (LREC’16), Portorož, Slovenia, May 2016</a>.

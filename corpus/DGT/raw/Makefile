@@ -63,6 +63,14 @@ fetch: 	$(ZIP2011) $(ZIP2012) $(ZIP2013) $(ZIP2014) \
 	$(ZIP2019)
 	-find . -type f -name '*\(*.tmx' | perl -pe 'print $$_; s/[\(\) ]/_/g' | xargs -n2 mv
 
+unzip:
+	for f in $(ZIP2011) $(ZIP2012) $(ZIP2013) $(ZIP2014) \
+		 $(ZIP2015) $(ZIP2016) $(ZIP2017) $(ZIP2018) \
+		 $(ZIP2019); do \
+	  unzip -o $$f; \
+	done
+	-find . -type f -name '*\(*.tmx' | perl -pe 'print $$_; s/[\(\) ]/_/g' | xargs -n2 mv
+
 ## fetch a test file
 .PHONY: fetch-test
 fetch-test: ${ZIPTEST}

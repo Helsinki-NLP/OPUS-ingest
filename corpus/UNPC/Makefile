@@ -1,38 +1,35 @@
 # -*-makefile-*-
 #
 # template for converting aligned parallel corpora 
-# from the OPUS resource repository to OPUS internal
+# in MOSES format (sentence aligned plain text) to OPUS
+#
+# - assumes that there are plain text files in src/
+#   (they may be compressed with gzip)
+# - assumes that opus-tools are installed (moses2opus in PATH)
 #
 # BEFORE RUNNING:
 # - set corpus-specific info in Makefile.def
 # - change the include of preprocessing Makefiles if necessary
 #   (Makefile.tag for PoS tagging or Makefile.annotate)
-
-
-OPUSRR_DATA = /proj/OPUS/rsnapshots/daily.0/opusrr/media/letsmt/letsmt/www-data/infopankki
-OPUSRR_USER = joerg
+#
+# TODO
+# - does not work well for multilingual corpora yet
+#   (converts for every language pair!)
 
 
 include Makefile.def
 include ../Makefile.def
 
 
-## make all:
-## - annotate (tokenize/tag/chunk depending on Makefile that is included)
-## - udparse (parse with UDPipe)
-## - publish (various packages, cwb index, website etc)
-## - wordalign
-
 .PHONY: all
 all:
-	${MAKE} convert
+	${MAKE} -C src all
 	${MAKE} annotate
-	${MAKE} udparse
-	${MAKE} wordalign
 	${MAKE} publish
 
-sentalign-more:
-	${MAKE} -C xml all
+#	${MAKE} udparse
+#	${MAKE} wordalign
+
 
 ## standard procedures are specified in the following makefiles
 ##
@@ -60,16 +57,3 @@ include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate
 
-
-
-
-convert: ${CORPUSRAW}
-
-${CORPUSRAW}: ${OPUSRR_DATA}/${OPUSRR_USER}/xml
-	mkdir -p $@
-	rsync -za --exclude '*\.git*' $</* $@/
-	find $@ -name '*.xml' | xargs -P 8 gzip -f 
-	mkdir -p ${CORPUSXML}
-	mv -f $@/*-* ${CORPUSXML}/
-	${MAKE} xml/Makefile
-	${MAKE} -C ${CORPUSXML} create-align-files

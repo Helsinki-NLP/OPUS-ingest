@@ -18,5 +18,5 @@ COPYRIGHT =
 # CITENOTE if you want to change the default reference to be cited
 
 SRCHTML=This is part if <a href="https://blogs.helsinki.fi/fiskmo-project/">fiskmö</a>, a massive parallel corpus for Finnish and Swedish.
-EXTRAHTML=
+EXTRAHTML=<p>License: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC–BY-NC-SA 4.0</a></p>
 # CITENOTE=
