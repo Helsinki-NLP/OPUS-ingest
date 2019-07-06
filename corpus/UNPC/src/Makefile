@@ -1,3 +1,8 @@
+# -*-makefile-*-
+#
+# copy and convert the oringally released TEI files
+# to fit OPUS data structures
+
 
 include ../../Makefile.def
 include ../Makefile.def
@@ -10,15 +15,31 @@ BITEXTS = ${patsubst %,${CORPUSXML}/%.xml.gz,\
 		${notdir ${wildcard ${WORKDIR}/UN${VERSION}-TEI/links/*-*}}}
 
 
+## make all data and swap sentence alignment if necessary
 .PHONY: all
 all: ${CORPUSXML} ${RAWCORPORA}
+	@for s in ${LANGUAGES}; do \
+	  for t in ${LANGUAGES}; do \
+	    if [ -e "${CORPUSXML}/$${s}-$${t}.xml.gz" ]; then \
+	      if [[ "$$s" > "$$t" ]]; then \
+		echo "swap alignments for $$s and $$t"; \
+		zcat ${CORPUSXML}/$${s}-$${t}.xml.gz |\
+		opus-swap-align |\
+		gzip -c > ${CORPUSXML}/$${t}-$${s}.xml.gz; \
+		rm -f ${CORPUSXML}/$${s}-$${t}.xml.gz; \
+	      fi \
+	    fi \
+	  done \
+	done
 
 
 ## get all corpus files, compress and move
-${RAWCORPORA}: ${CORPUSRAW}/%: ${WORKDIR}/UN${VERSION}-TEI/%
+${CORPUSRAW}/%: ${WORKDIR}/UN${VERSION}-TEI/%
 	mkdir -p ${dir $@}
 	find $< -name '*.xml' | xargs -P 8 gzip -f
+	if [ -d $@ ]; then mv $@ $@.${shell date +%F}; fi
 	mv $< $@
+	touch $@
 
 ## extract tar-ball for each language
 ${WORKDIR}/UN${VERSION}-TEI/%: UN${VERSION}-TEI.%.tar.gz
@@ -35,6 +56,8 @@ ${CORPUSXML}: UN${VERSION}-TEI.links.tar.gz
 bitexts: ${BITEXTS}
 
 ## extract link files, change dir names, move readme/disclaimer
+.PHONY: unpack-links
+unpack-links: ${WORKDIR}/UN${VERSION}-TEI/links
 ${WORKDIR}/UN${VERSION}-TEI/links: UN${VERSION}-TEI.links.tar.gz
 	mkdir -p ${WORKDIR}
 	tar -C ${WORKDIR} -xzf $<
@@ -57,7 +80,7 @@ ${CORPUSXML}/%.xml.gz: ${WORKDIR}/UN${VERSION}-TEI/links/%
 	| sort \
 	| xargs grep --no-filename 'link' \
 	| sed 's/\.xml"/\.xml.gz"/g' \
-	| sed 's/"Xml/"/g' >> $@.links; \
+	| sed 's#"Xml/#"#g' >> $@.links; \
 	if [ -s $@.links ]; then \
 	  echo '<?xml version="1.0" encoding="utf-8"?>' > $@.tmp; \
 	  echo '<!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">' >> $@.tmp; \
