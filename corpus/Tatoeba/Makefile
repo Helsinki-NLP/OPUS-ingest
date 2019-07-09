@@ -14,26 +14,19 @@ LANGUAGES   = $(sort $(notdir $(wildcard ${CORPUSRAW}/??)) \
 all:
 	${MAKE} -C src all
 	${MAKE} convert
+	${MAKE} -C src archive
 	${MAKE} xml/Makefile
 	mv -f raw/*-* xml/ 
 	${MAKE} -C xml create-align-files
 	${MAKE} annotate
 	${MAKE} same-language
-	${MAKE} tmx
+	${MAKE} OPUS2MOSES=scripts/xces2plain moses tmx
 	${MAKE} sample-files
 	${MAKE} publish
 
 #	${MAKE} udparse
 #	${MAKE} wordalign
 
-
-# make all:
-#
-# - fetch sources (src/Makefile)
-# - tokenise and sentence splitting
-# - sentence alignment (xml/Makefile)
-# - make the download page (make html)
-# - create CWB index for on-line search
 
 
 # move alignment files for aligning the same language 
@@ -45,6 +38,10 @@ same-language:
 		mv xml/$$l-$$l.* same-lang/;\
 	done
 
+
+
+## create sample files from TMX rather than from XCES files
+## --> more efficient (non-monotonic sentence alignments!)
 
 SAMPLEFILES = $(patsubst ${CORPUSRELEASE}/tmx/%.tmx.gz,${CORPUSPUB}/%_sample.html,\
 		$(wildcard ${CORPUSRELEASE}/tmx/*.tmx.gz))
@@ -80,21 +77,18 @@ include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate
 include ../Makefile.cwb
-# include ../Makefile.html
 include ../Makefile.release
 include ../Makefile.submit
 include ../Makefile.udparse
 
-# convert all files for all languages (subdirectories in src/)
+
+# convert the Tatoeba database to OPUS XML (in raw/)
 
 convert:
 	mkdir -p raw xml
 	( cd raw; ../scripts/tatoeba2opus.pl \
-		../src/sentences_detailed.csv.gz \
+		../src/sentences_detailed_new.csv.gz \
 		../src/links.csv.gz \
 		../src/tags.csv.gz \
 		../src/sentences_in_lists.csv.gz )
-	mv -f raw/*.xml.gz xml/
-
-
 
