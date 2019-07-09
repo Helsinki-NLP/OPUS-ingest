@@ -1,20 +1,41 @@
 
+TATOEBA_EXPORTS = http://downloads.tatoeba.org/exports
 
-## new version:
-## https://tatoeba.org/eng/downloads
+TATOEBA_DATA = 	sentences.tar.bz2 \
+		sentences_detailed.tar.bz2 \
+		sentences_CC0.tar.bz2 \
+		links.tar.bz2 \
+		tags.tar.bz2 \
+		user_lists.tar.bz2 \
+		sentences_in_lists.tar.bz2 \
+		jpn_indices.tar.bz2 \
+		sentences_with_audio.tar.bz2 \
+		user_languages.tar.bz2 \
+		users_sentences.csv
 
 
-URLS = 	http://tatoeba.org/files/downloads/sentences.csv \
-	http://tatoeba.org/files/downloads/links.csv \
-	http://tatoeba.org/files/downloads/tags.csv
+CSVFILES = $(patsubst %.tar.bz2,%.csv.gz,${wildcard *.tar.bz2})
 
-#	http://tatoeba.org/files/downloads/sentences_detailed.csv
+all: fetch
 
 
-SOURCES = $(patsubst http://tatoeba.org/files/downloads/%,%,$(URLS))
+fetch: ${TATOEBA_DATA}
+	${MAKE} csv-files
+	gzip -f *.csv
 
-all: $(SOURCES)
+csv-files: ${CSVFILES}
 
-$(SOURCES): 
-	wget $(patsubst %,http://tatoeba.org/files/downloads/%,$@)
+archive: ${wildcard *.csv.gz}
+	mkdir -p $@
+	mv $^ $@/
+
+
+${CSVFILES}: %.csv.gz: %.tar.bz2
+	tar -xf $<
+	rm -f $<
+	gzip -f $(@:.gz=)
+
+${TATOEBA_DATA}:
+	wget ${TATOEBA_EXPORTS}/$@
+
 

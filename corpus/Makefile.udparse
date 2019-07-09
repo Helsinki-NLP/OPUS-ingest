@@ -17,7 +17,8 @@ endif
 
 
 ifndef LANGUAGE
-  LANGUAGE=$(firstword ${LANGUAGES})
+  LANGUAGE=xx
+  # LANGUAGE=$(firstword ${LANGUAGES})
 endif
 ifndef CORPUSRAW
   CORPUSRAW = raw

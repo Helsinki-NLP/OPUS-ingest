@@ -98,15 +98,35 @@ ${CORPUSXML}/%.xml.gz: ${WORKDIR}/UN${VERSION}-TEI/links/%
 
 
 
+
+###### old targets for fixing and swapping bitexts
+
+swap-align:
+	@for s in ${LANGUAGES}; do \
+	  for t in ${LANGUAGES}; do \
+	    if [ -e "${CORPUSXML}/$${s}-$${t}.xml.gz" ]; then \
+	      if [[ "$$s" > "$$t" ]]; then \
+		echo "swap alignments for $$s and $$t"; \
+		zcat ${CORPUSXML}/$${s}-$${t}.xml.gz |\
+		opus-swap-align |\
+		gzip -c > ${CORPUSXML}/$${t}-$${s}.xml.gz; \
+		rm -f ${CORPUSXML}/$${s}-$${t}.xml.gz; \
+	      fi \
+	    fi \
+	  done \
+	done
+
+
 fix-align:
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
 	    if [ -e "${CORPUSXML}/$${s}-$${t}.xml.gz" ]; then \
+		echo "fix $${s}-$${t}"; \
 		zcat ${CORPUSXML}/$${s}-$${t}.xml.gz \
 		| sed 's/fromDoc/toNewDoc/' \
 		| sed 's/toDoc/fromNewDoc/' \
 		| sed 's/NewDoc/Doc/g' \
-		gzip -c > ${CORPUSXML}/$${s}-$${t}.tmp.gz; \
+		| gzip -c > ${CORPUSXML}/$${s}-$${t}.tmp.gz; \
 		mv -f ${CORPUSXML}/$${s}-$${t}.tmp.gz ${CORPUSXML}/$${s}-$${t}.xml.gz; \
 	    fi \
 	  done \

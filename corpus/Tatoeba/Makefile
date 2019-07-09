@@ -11,12 +11,21 @@ LANGUAGES   = $(sort $(notdir $(wildcard ${CORPUSRAW}/??)) \
 
 # VERSION = $(shell date +%F)
 
-corpus:
+all:
 	${MAKE} -C src all
 	${MAKE} convert
-	${MAKE} -C xml corpus
+	${MAKE} xml/Makefile
+	mv -f raw/*-* xml/ 
+	${MAKE} -C xml create-align-files
 	${MAKE} annotate
-	rm -fr data
+	${MAKE} same-language
+	${MAKE} tmx
+	${MAKE} sample-files
+	${MAKE} publish
+
+#	${MAKE} udparse
+#	${MAKE} wordalign
+
 
 # make all:
 #
@@ -25,20 +34,6 @@ corpus:
 # - sentence alignment (xml/Makefile)
 # - make the download page (make html)
 # - create CWB index for on-line search
-
-all:
-	${MAKE} corpus
-	${MAKE} web-corpus
-	rm -fr data
-
-web-corpus:
-	${MAKE} -C xml web-corpus
-	${MAKE} sample-files
-	cp ${OPUSPUB}/${CORPUS}.php ${OPUSPUB}/${CORPUS}_backup.php
-	${MAKE} html
-	cp ${OPUSPUB}/${CORPUS}.php ${OPUSPUB}/${CORPUS}${VERSION}.php
-
-#	${MAKE} cwb-index
 
 
 # move alignment files for aligning the same language 
@@ -51,12 +46,12 @@ same-language:
 	done
 
 
-SAMPLEFILES = $(patsubst %.tmx.gz,%_sample.html,\
-		$(wildcard ${OPUSHTML}/${CORPUS}/*.tmx.gz))
+SAMPLEFILES = $(patsubst ${CORPUSRELEASE}/tmx/%.tmx.gz,${CORPUSPUB}/%_sample.html,\
+		$(wildcard ${CORPUSRELEASE}/tmx/*.tmx.gz))
 
 sample-files: $(SAMPLEFILES)
 
-$(SAMPLEFILES): %_sample.html: %.tmx.gz
+$(SAMPLEFILES): ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"' >$@
 	echo '"http://www.w3.org/TR/REC-html40/loose.dtd">' >> $@
 	echo '<html>' >> $@
@@ -80,8 +75,10 @@ real-clean:
 
 # include some standard OPUS targets for processing/annotating data
 
+include ../Makefile.process
+include ../Makefile.tokenize
+# include ../Makefile.tag
 # include ../Makefile.annotate
-include ../Makefile.tag
 include ../Makefile.cwb
 # include ../Makefile.html
 include ../Makefile.release
@@ -91,11 +88,13 @@ include ../Makefile.udparse
 # convert all files for all languages (subdirectories in src/)
 
 convert:
-	( cd raw; ../scripts/convert_tatoeba.pl \
-		../src/sentences.csv \
-		../src/links.csv \
-		../src/tags.csv )
-	-( cd xml; ln -s ../raw/*.xml.gz . )
+	mkdir -p raw xml
+	( cd raw; ../scripts/tatoeba2opus.pl \
+		../src/sentences_detailed.csv.gz \
+		../src/links.csv.gz \
+		../src/tags.csv.gz \
+		../src/sentences_in_lists.csv.gz )
+	mv -f raw/*.xml.gz xml/
 
 
 

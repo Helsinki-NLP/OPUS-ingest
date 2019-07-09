@@ -3,8 +3,12 @@
 # name & version of the corpus
 
 CORPUS  = Tatoeba
-VERSION = v2
+VERSION = v20190709
 # VERSION = $(shell date +%F)
+
+
+LICENSE = CC BY 2.0 FR
+COPYRIGHT = 
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just
@@ -12,4 +16,4 @@ VERSION = v2
 # EXTRAHTML is code which will be put just after the 'Download' header
 
 SRCHTML=This is a collection of translated sentences from <a href="http://tatoeba.org/">Tatoeba</a>
-EXTRAHTML=
+EXTRAHTML=<p>License: <a href="https://creativecommons.org/licenses/by/2.0/fr/">CC–BY 2.0 FR</a></p>
