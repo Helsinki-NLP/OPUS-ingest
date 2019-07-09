@@ -31,12 +31,19 @@ MOSES    := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/moses/%.txt.zip,$(
 DIC      := $(patsubst ${CORPUSHOME}/%,${CORPUSRELEASE}/%,$(wildcard ${CORPUSDIC}/*.dic.gz))
 # DIC      := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/dic/%.dic.gz,$(CES))
 
+# ifndef SMT
+# ifneq ($(wildcard ${CORPUSWORDALIGN}),)
+#   SMT    := $(patsubst %,${CORPUSRELEASE}/smt/%.zip,\
+# 		$(notdir $(sort $(shell find ${CORPUSWORDALIGN} -maxdepth 1 -mindepth 1 -type d -name '*-*'))))
+# endif
+# endif
 ifndef SMT
 ifneq ($(wildcard ${CORPUSWORDALIGN}),)
-  SMT    := $(patsubst %,${CORPUSRELEASE}/smt/%.zip,\
-		$(notdir $(sort $(shell find ${CORPUSWORDALIGN} -maxdepth 1 -mindepth 1 -type d -name '*-*'))))
+  SMT    := $(patsubst ${CORPUSWORDALIGN}/%/bitext.xml.gz,${CORPUSRELEASE}/smt/%.zip,\
+		${wildcard ${CORPUSWORDALIGN}/*/bitext.xml.gz})
 endif
 endif
+
 WORDALG  := $(patsubst %.zip,%.alg.zip,${SMT})
 
 LANG_XML := $(patsubst %,${CORPUSRELEASE}/xml/%.zip,${LANGUAGES})

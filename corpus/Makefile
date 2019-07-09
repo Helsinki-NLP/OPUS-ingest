@@ -15,3 +15,30 @@ fix-tmx:
 	rm -f /home/opus/public_html/${C}/*.tmx.gz
 	make -C ${C} html
 
+
+LANGUAGES = en sv zh de
+
+LANGPAIRS = ${shell \
+	for s in ${LANGUAGES}; do \
+	  for t in ${LANGUAGES}; do \
+	    if [[ "$$s" < "$$t" ]]; then \
+	      echo "$$s-$$t"; \
+	    fi \
+	  done \
+	done  }
+
+ttt:
+	echo ${LANGPAIRS}
+
+.SECONDEXPANSION:
+
+%.txt: $$(firstword $$(subst -, ,%)) $$(lastword $$(subst -, ,%))
+	echo $^
+
+en:
+	echo "hallo English"
+
+sv:
+	echo "hallo Swedish"
+
+

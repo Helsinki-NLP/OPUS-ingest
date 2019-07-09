@@ -96,6 +96,17 @@ ifndef LANGUAGES
 			$(notdir $(wildcard ${CORPUSHTML}/*.raw.tar.gz))})
 endif
 
+## all language pairs sorted by lang IDs
+## only one combination
+LANGPAIRS = ${shell \
+	for s in ${LANGUAGES}; do \
+	  for t in ${LANGUAGES}; do \
+	    if [[ "$$s" < "$$t" ]]; then \
+	      echo "$$s-$$t"; \
+	    fi \
+	  done \
+	done  }
+
 
 # general file extension of files in the corpus
 # (if you add .gz --> all files will be compressed)

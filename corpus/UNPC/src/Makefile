@@ -74,12 +74,16 @@ ${WORKDIR}/UN${VERSION}-TEI/links: UN${VERSION}-TEI.links.tar.gz
 	done
 
 ## merge all link files into one big alignment file
+## strange: fromDoc and toDoc seem to be wrong ....
 ${CORPUSXML}/%.xml.gz: ${WORKDIR}/UN${VERSION}-TEI/links/%
 	mkdir -p ${dir $@}
 	find $< -type f -name '*.lnk' \
 	| sort \
 	| xargs grep --no-filename 'link' \
 	| sed 's/\.xml"/\.xml.gz"/g' \
+	| sed 's/fromDoc/toNewDoc/' \
+	| sed 's/toDoc/fromNewDoc/' \
+	| sed 's/NewDoc/Doc/g' \
 	| sed 's#"Xml/#"#g' >> $@.links; \
 	if [ -s $@.links ]; then \
 	  echo '<?xml version="1.0" encoding="utf-8"?>' > $@.tmp; \
@@ -92,3 +96,18 @@ ${CORPUSXML}/%.xml.gz: ${WORKDIR}/UN${VERSION}-TEI/links/%
 	fi
 	rm -f $@.links
 
+
+
+fix-align:
+	for s in ${LANGUAGES}; do \
+	  for t in ${LANGUAGES}; do \
+	    if [ -e "${CORPUSXML}/$${s}-$${t}.xml.gz" ]; then \
+		zcat ${CORPUSXML}/$${s}-$${t}.xml.gz \
+		| sed 's/fromDoc/toNewDoc/' \
+		| sed 's/toDoc/fromNewDoc/' \
+		| sed 's/NewDoc/Doc/g' \
+		gzip -c > ${CORPUSXML}/$${s}-$${t}.tmp.gz; \
+		mv -f ${CORPUSXML}/$${s}-$${t}.tmp.gz ${CORPUSXML}/$${s}-$${t}.xml.gz; \
+	    fi \
+	  done \
+	done

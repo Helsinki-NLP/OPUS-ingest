@@ -75,31 +75,38 @@ lexicon: lexicon/Makefile
 	${MAKE} -C lexicon all
 
 
-
 xml/Makefile:
-	mkdir -p ${dir $@}
-	echo "# -*-makefile-*-" > $@
-	echo "include ../Makefile.def" >> $@
-	echo "all: align-all" >> $@
-	echo "include ../../Makefile.def" >> $@
-	echo "include ../../Makefile.align" >> $@
+	@mkdir -p ${dir $@}
+	@echo "# -*-makefile-*-" > $@
+	@echo ""  >> $@
+	@echo "include ../Makefile.def" >> $@
+	@echo "include ../../Makefile.def" >> $@
+	@echo "include ../../Makefile.sentalign" >> $@
+	@echo ""  >> $@
+	@echo "all: sentalign-all" >> $@
+	@echo "jobs: sentalign-jobs" >> $@
+
 
 wordalign/Makefile:
-	mkdir -p ${dir $@}
-	echo "# -*-makefile-*-" > $@
-	echo "include ../Makefile.def" >> $@
-	echo "all: wordalign-all" >> $@
-	echo "include ../../Makefile.def" >> $@
-	echo "include ../../Makefile.wordalign" >> $@
+	@mkdir -p ${dir $@}
+	@echo "# -*-makefile-*-" > $@
+	@echo ""  >> $@
+	@echo "include ../Makefile.def" >> $@
+	@echo "include ../../Makefile.def" >> $@
+	@echo "include ../../Makefile.wordalign" >> $@
+	@echo ""  >> $@
+	@echo "all: wordalign-all" >> $@
+
 
 lexicon/Makefile:
-	mkdir -p ${dir $@}
-	echo "# -*-makefile-*-" > $@
-	echo "include ../Makefile.def" >> $@
-	echo "all: lexicon-all" >> $@
-	echo "include ../../Makefile.def" >> $@
-	echo "include ../../Makefile.lexicon" >> $@
-
+	@mkdir -p ${dir $@}
+	@echo "# -*-makefile-*-" > $@
+	@echo ""  >> $@
+	@echo "include ../Makefile.def" >> $@
+	@echo "include ../../Makefile.def" >> $@
+	@echo "include ../../Makefile.lexicon" >> $@
+	@echo ""  >> $@
+	@echo "all: lexicon-all" >> $@
 
 
 .PHONY: preprocess_files

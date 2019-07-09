@@ -1,0 +1,212 @@
+# -*-makefile-*-
+#
+# Makfile targets for sentence alignment
+# should be included by CORPUS/xml/Makfile!
+#
+
+#--------------------------------------------------------------------
+# sentence alignment
+#   sent ... Gale&Church (original C-code via Uplug)
+#   hun .... hunalign (called from Uplug)
+#--------------------------------------------------------------------
+
+# hunalign with disctionaries, tokenized & lowercased text, timeout = 5 minutes
+ALIGNTIMEOUT = 300
+ALIGNMETHOD  = hun -tok -l -time ${ALIGNTIMEOUT}
+SENTALIGN    = ${UPLUG} align/$(ALIGNMETHOD)
+# SENTALIGN = ${UPLUG} align/sent
+
+
+SENTALIGNFILES = $(patsubst %,%.xml.gz,${LANGPAIRS})
+
+
+## submit sentalign jobs
+## (one job per language pair)
+
+sentalign-jobs:
+	mkdir -p log
+	for s in ${LANGUAGES}; do \
+	  for t in ${LANGUAGES}; do \
+	    if [[ "$$s" < "$$t" ]]; then \
+		${MAKE} SRC=$$s TRG=$$t sentalign.submit; \
+		mv sentalign.submit log/sentalign-$$s$$t.submit; \
+	    fi \
+	  done \
+	done
+
+# make sentalign-all: make sentence alignment files
+#                     for all language pairs
+#
+# (translate.txt is created by hunalign - don't know why ...)
+
+.PHONY: sentalign-all align-all all-align
+sentalign-all align-all all-align: ${SENTALIGNFILES}
+	rm -f translate.txt
+	rm -fr data
+
+sentalign-print:
+	echo ${SENTALIGNFILES}
+
+.PHONY: sentalign-clean clean-align
+sentalign-clean clean-align:
+	for s in ${LANGUAGES}; do \
+	  for t in ${LANGUAGES}; do \
+		rm -fr $$s-$$t; \
+	    	rm -f $$s-$$t.xml*; \
+	  done \
+	done
+
+## align all files for the current language pair
+## (only for different languages and sorted by lang ID)
+
+.PHONY: align sentalign
+sentalign align:
+ifneq (${SRC},${lastword ${sort ${SRC} ${TRG}}})
+	${MAKE} ${SRC}-${TRG}.xml.gz
+endif
+
+
+## files with the same name are parallel documents!
+##
+## NEW: use different variable names
+##      to avoid expensive find operations
+
+ifneq (${FINDSRC},)
+ifneq (${FINDTRG},)
+ifndef ALGFILES
+  ALGFILES := $(addprefix $(FINDSRC)-$(FINDTRG)/,\
+	   $(shell find ${FINDSRC}/ ${FINDTRG}/ -name '*.${XMLEXT}' -printf "%P\n" |\
+		   sort | uniq -c | grep '^ *2 *' | sed 's/^ *2 *//'))
+endif
+endif
+endif
+
+
+## make the sentence align file (merge all individual files)
+## SECONDEXPANSION is necessary to make it possible to use
+## text functions in pre-requisites (dependence on SRC/ and TRG/)
+##
+## new: merge with existing file instead of overwriting it
+## ---> requires opus-merge-align from opus-tools
+
+
+.SECONDEXPANSION:
+${SENTALIGNFILES}: %.xml.gz: $$(firstword $$(subst -, ,$(notdir %))) $$(lastword $$(subst -, ,$(notdir %)))
+	${MAKE} SRC=$(firstword $^) TRG=$(lastword $^) $(notdir $(@:.xml.gz=))
+	-( find $(@:.xml.gz=)/ -type f -name '*.xml.gz' |\
+		sort |\
+		xargs zgrep --no-filename 'link' >> $@.links )
+	if [ -s $@.links ]; then \
+	  echo '<?xml version="1.0" encoding="utf-8"?>' >$@.tmp; \
+	  echo '<!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">' \
+		  >>$@.tmp; \
+	  echo '<cesAlign version="1.0">' >> $@.tmp; \
+	  cat $@.links >> $@.tmp; \
+	  echo '</cesAlign>' >> $@.tmp; \
+	  gzip $@.tmp; \
+	  if [ -e $@ ]; then \
+	    opus-merge-align $@ $@.tmp.gz | gzip -c > $@.tmp2.gz; \
+	    mv -f $@.tmp2.gz $@; \
+	    rm -f $@.tmp.gz; \
+	  else \
+	    mv -f $@.tmp.gz $@; \
+	  fi; \
+	fi
+	rm -f $@.links
+	rm -fr $(@:.xml.gz=)
+
+
+
+
+
+# individual sentence alignment files (for each document pair)
+
+## define variables for command line options
+## to make it a bit more flexible to use other tools
+
+ifeq (${SENTALIGN},srtalign)
+  ALGSIDOPT=-S
+  ALGTIDOPT=-T
+  ALGSRCOPT=
+  ALGTRGOPT=
+  ALGOUTOPT=>
+  ALGOPT=
+  # ALGOPT=-b -i 5 -m 10
+else
+  ALGSIDOPT=-s
+  ALGTIDOPT=-t
+  ALGSRCOPT=-src
+  ALGTRGOPT=-trg
+  ALGOUTOPT=-out
+  ALGOPT=
+endif
+
+
+${SRC}-${TRG}: ${SRC} ${TRG}
+	mkdir -p $@
+	${MAKE} FINDSRC=${SRC} FINDTRG=${TRG} sentalign-all-files
+
+.PHONY: sentalign-all-files
+sentalign-all-files: ${ALGFILES}
+
+${SRC}-${TRG}/%: ${SRC}/% ${TRG}/%
+	mkdir -p $(shell dirname $@)
+	${SENTALIGN} ${ALGOPT} \
+		${ALGSIDOPT} ${SRC} \
+		${ALGTIDOPT} ${TRG} \
+		${ALGSRCOPT} $< \
+		${ALGTRGOPT} $(patsubst ${SRC}/%,${TRG}/%,$<) \
+		${ALGOUTOPT} $@
+
+
+
+
+# make only the alignment files for each language pair
+
+.PHONY: create-align-files
+create-align-files:
+	for s in ${LANGUAGES}; do \
+	  for t in ${LANGUAGES}; do \
+	    if [ "$$s" != "$$t" ]; then \
+	      if [ -d "$$s-$$t" ]; then \
+		make SRC=$$s TRG=$$t create-align-file; \
+	      fi \
+	    fi \
+	  done \
+	done
+
+
+## new: merge with existing alignment file instead of overwriting it!
+## ---> requires opus-merge-align from opus-tools
+
+.PHONY: create-align-file
+create-align-file:
+	if [ "${SRC}" != "${TRG}" ]; then \
+	  if [ -d "${SRC}-${TRG}" ]; then \
+	find ${SRC}-${TRG}/ -type f -name '*.xml.gz' |\
+		sort |\
+		xargs zgrep --no-filename 'link' |\
+	sed 's/\.xml"/\.xml.gz"/g' >> ${SRC}-${TRG}.links; \
+	if [ -s ${SRC}-${TRG}.links ]; then \
+	  echo '<?xml version="1.0" encoding="utf-8"?>' >${SRC}-${TRG}.tmp; \
+	  echo '<!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">' \
+		  >>${SRC}-${TRG}.tmp; \
+	  echo '<cesAlign version="1.0">' >> ${SRC}-${TRG}.tmp; \
+	  cat ${SRC}-${TRG}.links >> ${SRC}-${TRG}.tmp; \
+	  echo '</cesAlign>' >> ${SRC}-${TRG}.tmp; \
+	  gzip -f ${SRC}-${TRG}.tmp; \
+	  if [ -e ${SRC}-${TRG}.xml.gz ]; then \
+	    echo "merge ${SRC}-${TRG}.xml.gz ${SRC}-${TRG}.tmp.gz"; \
+	    opus-merge-align ${SRC}-${TRG}.xml.gz ${SRC}-${TRG}.tmp.gz |\
+	    gzip -c > ${SRC}-${TRG}.tmp2.gz; \
+	    mv -f ${SRC}-${TRG}.tmp2.gz ${SRC}-${TRG}.xml.gz; \
+	    rm -f ${SRC}-${TRG}.tmp.gz; \
+	  else \
+	    mv -f ${SRC}-${TRG}.tmp.gz ${SRC}-${TRG}.xml.gz; \
+	  fi; \
+	fi; \
+	rm -f ${SRC}-${TRG}.links; \
+	  fi; \
+	  rm -fr ${SRC}-${TRG}; \
+	fi
+
