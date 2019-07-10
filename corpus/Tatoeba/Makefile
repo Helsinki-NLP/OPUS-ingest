@@ -16,7 +16,7 @@ all:
 	${MAKE} convert
 	${MAKE} -C src archive
 	${MAKE} xml/Makefile
-	mv -f raw/*-* xml/ 
+	mv -f raw/*-* xml/
 	${MAKE} -C xml create-align-files
 	${MAKE} annotate
 	${MAKE} same-language
@@ -27,6 +27,10 @@ all:
 #	${MAKE} udparse
 #	${MAKE} wordalign
 
+more:
+	${MAKE} OPUS2MOSES=scripts/xces2plain moses tmx
+	${MAKE} sample-files
+	${MAKE} publish
 
 
 # move alignment files for aligning the same language 
@@ -47,22 +51,6 @@ SAMPLEFILES = $(patsubst ${CORPUSRELEASE}/tmx/%.tmx.gz,${CORPUSPUB}/%_sample.htm
 		$(wildcard ${CORPUSRELEASE}/tmx/*.tmx.gz))
 
 sample-files: $(SAMPLEFILES)
-
-$(SAMPLEFILES): ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
-	echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"' >$@
-	echo '"http://www.w3.org/TR/REC-html40/loose.dtd">' >> $@
-	echo '<html>' >> $@
-	echo '<head>' >> $@
-	echo '<title>Untitled Document</title>' >> $@
-	echo '<meta http-equiv="Content-Type" content="text/html;charset=utf-8">' >> $@
-	echo '</head>' >> $@
-	echo '<body>' >> $@
-	echo '<p>' >> $@
-	zgrep '</tuv>' $< |\
-	sed 's/^.*<seg>//;s#</seg></tuv>#<br/>#' |\
-	head -100 |\
-	sed ': loop; n; a <hr/>' >> $@
-	echo '</body></html/>' >> $@
 
 real-clean:
 	${MAKE} -C xml clean-align
@@ -90,5 +78,23 @@ convert:
 		../src/sentences_detailed_new.csv.gz \
 		../src/links.csv.gz \
 		../src/tags.csv.gz \
-		../src/sentences_in_lists.csv.gz )
+		../src/sentences_in_lists.csv.gz \
+		../src/users_sentences.csv.gz )
+	find raw -type f -name '*.xml' | xargs gzip -f
 
+
+$(SAMPLEFILES): ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
+	echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"' >$@
+	echo '"http://www.w3.org/TR/REC-html40/loose.dtd">' >> $@
+	echo '<html>' >> $@
+	echo '<head>' >> $@
+	echo '<title>Untitled Document</title>' >> $@
+	echo '<meta http-equiv="Content-Type" content="text/html;charset=utf-8">' >> $@
+	echo '</head>' >> $@
+	echo '<body>' >> $@
+	echo '<p>' >> $@
+	zgrep '</tuv>' $< |\
+	sed 's/^.*<seg>//;s#</seg></tuv>#<br/>#' |\
+	head -100 |\
+	sed ': loop; n; a <hr/>' >> $@
+	echo '</body></html/>' >> $@

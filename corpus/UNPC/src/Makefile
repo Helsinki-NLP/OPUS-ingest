@@ -84,7 +84,8 @@ ${CORPUSXML}/%.xml.gz: ${WORKDIR}/UN${VERSION}-TEI/links/%
 	| sed 's/fromDoc/toNewDoc/' \
 	| sed 's/toDoc/fromNewDoc/' \
 	| sed 's/NewDoc/Doc/g' \
-	| sed 's#"Xml/#"#g' >> $@.links; \
+	| sed 's#"Xml/#"#g' 
+	| ../scripts/fix-doclinks.pl >> $@.links; \
 	if [ -s $@.links ]; then \
 	  echo '<?xml version="1.0" encoding="utf-8"?>' > $@.tmp; \
 	  echo '<!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">' >> $@.tmp; \
@@ -126,6 +127,19 @@ fix-align:
 		| sed 's/fromDoc/toNewDoc/' \
 		| sed 's/toDoc/fromNewDoc/' \
 		| sed 's/NewDoc/Doc/g' \
+		| gzip -c > ${CORPUSXML}/$${s}-$${t}.tmp.gz; \
+		mv -f ${CORPUSXML}/$${s}-$${t}.tmp.gz ${CORPUSXML}/$${s}-$${t}.xml.gz; \
+	    fi \
+	  done \
+	done
+
+fix-doclinks:
+	for s in ${LANGUAGES}; do \
+	  for t in ${LANGUAGES}; do \
+	    if [ -e "${CORPUSXML}/$${s}-$${t}.xml.gz" ]; then \
+		echo "fix $${s}-$${t}"; \
+		zcat ${CORPUSXML}/$${s}-$${t}.xml.gz \
+		| ../scripts/fix-doclinks.pl \
 		| gzip -c > ${CORPUSXML}/$${s}-$${t}.tmp.gz; \
 		mv -f ${CORPUSXML}/$${s}-$${t}.tmp.gz ${CORPUSXML}/$${s}-$${t}.xml.gz; \
 	    fi \

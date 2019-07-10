@@ -184,17 +184,58 @@ ${ALGFILES}: ${SRC}-${TRG}/%: ${SRC}/% ${TRG}/%
 
 # make only the alignment files for each language pair
 
-.PHONY: create-align-files
+# .PHONY: create-align-files
+# create-align-files:
+# 	for s in ${LANGUAGES}; do \
+# 	  for t in ${LANGUAGES}; do \
+# 	    if [ "$$s" != "$$t" ]; then \
+# 	      if [ -d "$$s-$$t" ]; then \
+# 		make SRC=$$s TRG=$$t create-align-file; \
+# 	      fi \
+# 	    fi \
+# 	  done \
+# 	done
+
+
+## NEW: avoid calling make for each langpair
+## --> this can be quite slow for some big corpora!
+
 create-align-files:
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
 	    if [ "$$s" != "$$t" ]; then \
 	      if [ -d "$$s-$$t" ]; then \
-		make SRC=$$s TRG=$$t create-align-file; \
+		find $$s-$$t/ -type f -name '*.xml.gz' |\
+			sort |\
+			xargs zgrep --no-filename 'link' |\
+		sed 's/\.xml"/\.xml.gz"/g' >> $$s-$$t.links; \
+		if [ -s $$s-$$t.links ]; then \
+		  echo "make $$s-$$t.xml.gz"; \
+		  echo '<?xml version="1.0" encoding="utf-8"?>' >$$s-$$t.tmp; \
+		  echo '<!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">' \
+			  >>$$s-$$t.tmp; \
+		  echo '<cesAlign version="1.0">' >> $$s-$$t.tmp; \
+		  cat $$s-$$t.links >> $$s-$$t.tmp; \
+		  echo '</cesAlign>' >> $$s-$$t.tmp; \
+		  gzip -f $$s-$$t.tmp; \
+		  if [ -e $$s-$$t.xml.gz ]; then \
+		    echo "merge $$s-$$t.xml.gz $$s-$$t.tmp.gz"; \
+		    opus-merge-align $$s-$$t.xml.gz $$s-$$t.tmp.gz |\
+		    gzip -c > $$s-$$t.tmp2.gz; \
+		    mv -f $$s-$$t.tmp2.gz $$s-$$t.xml.gz; \
+		    rm -f $$s-$$t.tmp.gz; \
+		  else \
+		    mv -f $$s-$$t.tmp.gz $$s-$$t.xml.gz; \
+		  fi; \
+		fi; \
+		rm -f $$s-$$t.links; \
+		rm -fr $$s-$$t; \
 	      fi \
 	    fi \
 	  done \
 	done
+
+
 
 
 ## new: merge with existing alignment file instead of overwriting it!

@@ -8,7 +8,8 @@ TATOEBA_EXPORTS = http://downloads.tatoeba.org/exports
 TATOEBA_DATA = 	sentences_detailed.tar.bz2 \
 		links.tar.bz2 \
 		tags.tar.bz2 \
-		sentences_in_lists.tar.bz2
+		sentences_in_lists.tar.bz2 \
+		users_sentences.csv
 
 ## additional files available from Tatoeba
 ## (maybe useful for later versions of OPUS?)
@@ -17,8 +18,7 @@ TATOEBA_MORE = 	sentences.tar.bz2 \
 		user_lists.tar.bz2 \
 		jpn_indices.tar.bz2 \
 		sentences_with_audio.tar.bz2 \
-		user_languages.tar.bz2 \
-		users_sentences.csv
+		user_languages.tar.bz2
 
 
 CSVFILES = $(patsubst %.tar.bz2,%.csv.gz,${wildcard *.tar.bz2})

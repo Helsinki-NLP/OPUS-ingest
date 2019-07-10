@@ -177,8 +177,8 @@ OPUS2MOSES = $(OPUSTOOLS)/xces2moses
 
 # all language pairs in the corpus
 
-ifndef LANGPAIRS
-  LANGPAIRS := $(patsubst $(CORPUSXML)/%.xml.gz,%,\
+ifndef BITEXTS
+  BITEXTS := $(patsubst $(CORPUSXML)/%.xml.gz,%,\
 			$(wildcard $(CORPUSXML)/*-*.xml.gz))
 endif
 
@@ -202,18 +202,18 @@ endif
 
 
 .PHONY: all-wordalign wordalign-all
-wordalign-all all-wordalign: ${LANGPAIRS} clean
-# all-wordalign: ${TRUECASER} ${LANGPAIRS} clean
+wordalign-all all-wordalign: ${BITEXTS} clean
+# all-wordalign: ${TRUECASER} ${BITEXTS} clean
 
 .PHONY: all-cleanup cleanup-all
 claenup-all all-cleanup:
-	for l in ${LANGPAIRS}; do \
+	for l in ${BITEXTS}; do \
 	  ${MAKE} LANGPAIR=$$l cleanup; \
 	done
 
 
 
-# action to be done when calling LANGPAIRS
+# action to be done when calling BITEXTS
 ACTION = wordalign
 
 
@@ -246,7 +246,7 @@ submit-all-filter:
 
 .PHONY: submit-all-languages
 submit-all-languages:
-	for l in ${LANGPAIRS}; do \
+	for l in ${BITEXTS}; do \
 	  if [ ! -e $$l/.${ACTION} ]; then \
 	    ${MAKE} LANGPAIR=$$l submit-${ACTION}; \
 	  fi \
@@ -254,7 +254,7 @@ submit-all-languages:
 
 .PHONY: submit-all
 submit-all:
-	for l in ${LANGPAIRS}; do \
+	for l in ${BITEXTS}; do \
 	  if [ ! -e $$l/.wordalign-done ]; then \
 	    if [ ! -e $$l/.wordalign ]; then \
 	      ${MAKE} NEXTJOB=1 LANGPAIR=$$l $$l/.wordalign-done; \
@@ -398,7 +398,7 @@ submit-wordalign:
 
 
 
-${LANGPAIRS}: %: %/.${ACTION}
+${BITEXTS}: %: %/.${ACTION}
 
 ## NEW: remove empty files before runing action
 ## NEW: submit next job if NEXTJOB is set
@@ -475,7 +475,7 @@ clean:
 	${MAKE} check-wordalign
 	${MAKE} check-bitexts
 	rm -f ${TRUECASER}
-	for l in ${LANGPAIRS}; do \
+	for l in ${BITEXTS}; do \
 	  rm -fr $$l/model/*.gz.*; \
 	  rm -f $$l/model/lex.e2f $$l/model/lex.f2e; \
 	  rm -f $$l/model/aligned.grow-diag-final-and; \
@@ -871,8 +871,8 @@ ${CORPUSHOME}/dic/%.dic.gz: | %/model/phrase-table-filtered.gz
 ## check word word alignment files
 ## - delete all langpairs with empty bitexts
 
-ALIGN_CHECKED  = $(patsubst %,%-aligncheck,${LANGPAIRS})
-BITEXT_CHECKED = $(patsubst %,%-bitextcheck,${LANGPAIRS})
+ALIGN_CHECKED  = $(patsubst %,%-aligncheck,${BITEXTS})
+BITEXT_CHECKED = $(patsubst %,%-bitextcheck,${BITEXTS})
 
 check-wordalign: ${ALIGN_CHECKED}
 check-bitexts: ${BITEXT_CHECKED}

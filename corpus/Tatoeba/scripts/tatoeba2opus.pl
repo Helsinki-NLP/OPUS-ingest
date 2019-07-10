@@ -12,21 +12,21 @@ my $SentFile    = shift(@ARGV) || 'sentences_detailed.csv.gz';
 my $LinkFile    = shift(@ARGV) || 'links.csv.gz';
 my $TagFile     = shift(@ARGV) || 'tags.csv.gz';
 my $ListFile    = shift(@ARGV) || 'sentences_in_lists.csv.gz';
-# my $RatingsFile = shift(@ARGV) || 'users_sentences.csv.gz';
+my $RatingsFile = shift(@ARGV) || 'users_sentences.csv.gz';
 
 
 my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime();
 my $today = sprintf("%04d-%02d-%02d", $year+1900, $mon+1, $mday);
 
 
-print STDERR "read all links ...\n";
-my $links = read_links($LinkFile);
+print STDERR "read all user ratings ...\n";
+my ($ratings,$ratingCounts) = read_ratings($RatingsFile);
 print STDERR "read all tags ...\n";
 my $tags = read_tags($TagFile);
 print STDERR "read all lists ...\n";
 my $lists = read_lists($ListFile);
-# print STDERR "read all user ratings ...\n";
-# my $ratings = read_ratings($RatingsFile);
+print STDERR "read all links ...\n";
+my $links = read_links($LinkFile);
 
 
 
@@ -37,7 +37,8 @@ my %SentSplitter = ();
 
 # some non-standard language IDs and their 2-code variant
 
-my %OtherLangIds = ( ces => 'cs',
+my %OtherLangIds = ( bod => 'bo',
+		     ces => 'cs',
 		     cycl => 'cycl',
 		     cym => 'cy',
 		     ell => 'el',
@@ -50,6 +51,7 @@ my %OtherLangIds = ( ces => 'cs',
 		     lvs => 'lv',
 		     mri => 'mi',
 		     mkd => 'mk',
+		     mya => 'my',
 		     nld => 'nl',
 		     ron => 'ro',
 		     slk => 'sl',
@@ -87,14 +89,17 @@ while (<F>){
 	my %attr = ();
 	if ($id){
 	    if (exists($$tags{$id})){
-		$attr{tags} = join(' ',@{$$tags{$id}});
+		$attr{tags} = join(';',@{$$tags{$id}});
 	    }
 	    if (exists($$lists{$id})){
-		$attr{lists} = join(' ',@{$$lists{$id}});
+		$attr{lists} = join(';',@{$$lists{$id}});
 	    }
+	    $attr{rating} = $$ratings{$id} if (exists $$ratings{$id});
+	    $attr{nrRatings} = $$ratingCounts{$id} if (exists $$ratingCounts{$id});
 	}
 	$attr{user} = $user if ($user);
 	$attr{created} = $created if ($created=~/[1-9]/);
+
 	if (($modified ne $created) && ($modified=~/[1-9]/)){
 	    $attr{modified} = $modified;
 	}
@@ -129,20 +134,20 @@ foreach my $s (sort {$a <=> $b} keys %{$links}){
 	my $langPair = join('-',sort(@langs));
 	unless (exists $XcesFiles{$langPair}){
 	    mkdir $langPair unless (-d $langPair);
-	    open $XcesFiles{$langPair},"| gzip -c > $langPair/$today.xml.gz";
+	    open $XcesFiles{$langPair},"> $langPair/$today.xml";
 	    # open $XcesFiles{$langPair},"| gzip -c > $langPair.xml.gz";
 	    my $fh = $XcesFiles{$langPair};
 	    print $fh '<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">
 <cesAlign version="1.0">
 ';
-	    print $fh  "<linkGrp targType=\"s\" fromDoc=\"$langs[0]/tatoeba.xml.gz\" toDoc=\"$langs[1]/tatoeba.xml.gz\" >\n";
+	    print $fh  "<linkGrp targType=\"s\" fromDoc=\"$langs[0]/$today.xml.gz\" toDoc=\"$langs[1]/$today.xml.gz\" >\n";
 	}
 
 	my $fh = $XcesFiles{$langPair};
 	$LinkCount{$langPair}++;
-	my $sid = exists $Id2Sent{$s} ? $Id2Sent{$s} : 's'.$s;
-	my $tid = exists $Id2Sent{$t} ? $Id2Sent{$t} : 's'.$t;
+	my $sid = exists $Id2Sent{$s} ? $Id2Sent{$s} : $s;
+	my $tid = exists $Id2Sent{$t} ? $Id2Sent{$t} : $t;
 	print $fh '<link xtargets="';
 	print $fh $langs[0] eq $srcLang ? "$sid;$tid" : "$tid;$sid";
 	# print $fh $langs[0] eq $srcLang ? "s$s;s$t" : "s$t;s$s";
@@ -185,7 +190,7 @@ sub print_sentence{
 
     unless (exists $XMLFiles{$langID}){
 	mkdir $langID unless (-d $langID);
-	my $output = IO::File->new("| gzip -c > $langID/$today.xml.gz");
+	my $output = IO::File->new(">$langID/$today.xml");
 	binmode($output,":encoding(utf-8)");
 	$XMLFiles{$langID} = XML::Writer->new( OUTPUT => $output,
 					       DATA_MODE => 1,
@@ -213,6 +218,7 @@ sub print_sentence{
     my @ids = ();
     foreach my $s (0..$#sentences){
 	$attr{id} = $#sentences ? $sentID.'.'.$s : $sentID;
+	$ids[$s] = $attr{id};
 	( $#sentences == 0) ?
 	    $XMLFiles{$langID}->startTag('s',%attr) :
 	    $XMLFiles{$langID}->startTag('s','id'=>$attr{id});
@@ -283,5 +289,31 @@ sub read_lists{
     }
     close F;
     return $lists;
+}
+
+
+sub read_ratings{
+    my $file = shift;
+    my $ratings = shift || {};
+    my $counts = shift || {};
+
+    if ($file=~/\.gz$/){
+	open F,"gzip -cd <$file |" || die "cannot open list file $file\n";
+    }
+    else{
+	open F,"<$file" || die "cannot open tag file $file\n";
+    }
+    binmode(F,":encoding(utf8)");
+    while (<F>){
+	chomp;
+	my ($user,$id,$rating) = split(/\t/);
+	$$ratings{$id}+=$rating;
+	$$counts{$id}++
+    }
+    close F;
+    foreach (keys %{$ratings}){
+	$$ratings{$_}/=$$counts{$_};
+    }
+    return ($ratings,$counts);
 }
 

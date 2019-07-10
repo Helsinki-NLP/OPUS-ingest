@@ -111,15 +111,15 @@ html-local:
 	mkdir -p ${TMPDIR}/OPUS/corpus/${CORPUS}
 	-rsync ${OPUSCORPORA}/Makefile* ${TMPDIR}/OPUS/corpus/
 	-ln -s ${OPUSTOOLS} ${TMPDIR}/OPUS/tools
-	-rsync -av ${CORPUSHOME}/Makefile* ${TMPDIR}/OPUS/corpus/${CORPUS}/
-	-rsync -av ${CORPUSHOME}/xml ${TMPDIR}/OPUS/corpus/${CORPUS}/
-	-rsync -av ${CORPUSHOME}/raw ${TMPDIR}/OPUS/corpus/${CORPUS}/
-	-rsync -av ${CORPUSHOME}/wordalign ${TMPDIR}/OPUS/corpus/${CORPUS}/
-	-rsync -av ${CORPUSHOME}/parsed ${TMPDIR}/OPUS/corpus/${CORPUS}/
-	-rsync -av ${CORPUSHOME}/ud ${TMPDIR}/OPUS/corpus/${CORPUS}/
+	-rsync -a ${CORPUSHOME}/Makefile* ${TMPDIR}/OPUS/corpus/${CORPUS}/
+	-rsync -a ${CORPUSHOME}/xml ${TMPDIR}/OPUS/corpus/${CORPUS}/
+	-rsync -a ${CORPUSHOME}/raw ${TMPDIR}/OPUS/corpus/${CORPUS}/
+	-rsync -a ${CORPUSHOME}/wordalign ${TMPDIR}/OPUS/corpus/${CORPUS}/
+	-rsync -a ${CORPUSHOME}/parsed ${TMPDIR}/OPUS/corpus/${CORPUS}/
+	-rsync -a ${CORPUSHOME}/ud ${TMPDIR}/OPUS/corpus/${CORPUS}/
 	${MAKE} -C ${TMPDIR}/OPUS/corpus/${CORPUS} OPUSHOME=${TMPDIR}/OPUS html
-	-rsync -zav ${TMPDIR}/OPUS/public_html/${CORPUS} ${OPUSHOME}/public_html/
-	-rsync -zav ${TMPDIR}/OPUS/public_html/${CORPUS}*php ${OPUSHOME}/public_html/
+	-rsync -za ${TMPDIR}/OPUS/public_html/${CORPUS} ${OPUSHOME}/public_html/
+	-rsync -za ${TMPDIR}/OPUS/public_html/${CORPUS}*php ${OPUSHOME}/public_html/
 	-rm -fr ${TMPDIR}/OPUS/corpus/${CORPUS}
 	-rm -fr ${TMPDIR}/OPUS/public_html/${CORPUS}*
 
@@ -333,7 +333,7 @@ ${LANG_XML}: ${CORPUSRELEASE}/xml/%.zip: # ${CORPUSXML}/%
 	@${MKDIR} ${dir $@}
 	${MKDIR} ${TMPDIR}/$@/${CORPUS}/xml
 	if [ -d ${patsubst ${CORPUSRELEASE}/xml/%.zip,${CORPUSXML}/%,$@} ]; then \
-	  rsync -av ${patsubst ${CORPUSRELEASE}/xml/%.zip,${CORPUSXML}/%,$@} \
+	  rsync -a ${patsubst ${CORPUSRELEASE}/xml/%.zip,${CORPUSXML}/%,$@} \
 			${TMPDIR}/$@/${CORPUS}/xml/; \
 	else \
 	  tar -C ${TMPDIR}/$@/${CORPUS} --strip-components=1 \
@@ -362,7 +362,7 @@ ${LANG_RAW}: ${CORPUSRELEASE}/raw/%.zip: # ${CORPUSRAW}/%
 	@${MKDIR} ${dir $@}
 	${MKDIR} ${TMPDIR}/$@/${CORPUS}/raw
 	if [ -d ${patsubst ${CORPUSRELEASE}/raw/%.zip,${CORPUSRAW}/%,$@} ]; then \
-	  rsync -av ${patsubst ${CORPUSRELEASE}/raw/%.zip,${CORPUSRAW}/%,$@} ${TMPDIR}/$@/${CORPUS}/raw/; \
+	  rsync -a ${patsubst ${CORPUSRELEASE}/raw/%.zip,${CORPUSRAW}/%,$@} ${TMPDIR}/$@/${CORPUS}/raw/; \
 	else \
 	  tar -C ${TMPDIR}/$@/${CORPUS} --strip-components=1 \
 		-xzf $(patsubst ${CORPUSRELEASE}/raw/%.zip,${CORPUSHTML}/%.raw.tar.gz,$@); \
@@ -395,7 +395,7 @@ lang_parsed lang_parsed_tar:
 ${LANG_UD}: ${CORPUSRELEASE}/parsed/%.zip: ${CORPUSPARSED}/%
 	@${MKDIR} ${dir $@}
 	${MKDIR} ${TMPDIR}/$</${CORPUS}/parsed
-	rsync -av $< ${TMPDIR}/$</${CORPUS}/parsed/
+	rsync -a $< ${TMPDIR}/$</${CORPUS}/parsed/
 	find ${TMPDIR}/$</${CORPUS}/parsed -name '*.${XMLEXT}' |\
 	xargs -P 8 gunzip -f
 	${MAKE} PACKAGE=${patsubst ${OPUSCORPORA}/%,%,$<} ${TMPDIR}/$</README
@@ -579,7 +579,11 @@ $(MOSES): ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSXML}/%.xml.gz
 	  sed 's/  */ /g' < $$BASE.$$T > $$BASE.$$T.tmp; \
 	  mv $$BASE.$$S.tmp $$BASE.$$S; \
 	  mv $$BASE.$$T.tmp $$BASE.$$T; \
-	  cat $$BASE.ids | ${OPUSTOOLS}/wordalign/ids2links.pl > $$BASE.xml;\
+	  if [ -e "$$BASE.ids" ]; then \
+	    cat $$BASE.ids | ${OPUSTOOLS}/wordalign/ids2links.pl > $$BASE.xml;\
+	  else \
+	    gzip -cd $< > $$BASE.xml; \
+	  fi; \
 	  ${MKDIR} ${TMPDIR}/$$BASE; \
 	  ${MAKE} PACKAGE="${CORPUS}.$$S-$$T in Moses format" ${TMPDIR}/$$BASE/README; \
 	  rm -f $$BASE.ids; \
@@ -632,7 +636,7 @@ wordalg: ${WORDALG}
 ${WORDALG}: ${CORPUSRELEASE}/smt/%.alg.zip: ${CORPUSWORDALIGN}/% ${CORPUSWORDALIGN}/%/bitext.xml.gz
 	@${MKDIR} ${dir $@}
 	${MKDIR} ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}
-	rsync -av \
+	rsync -a \
 		--exclude '*\.wordalign*' \
 		--exclude '*/lex.*' \
 		--exclude '*/phrase*' \
@@ -656,7 +660,7 @@ ${SMT}: ${CORPUSRELEASE}/smt/%.zip: ${CORPUSWORDALIGN}/%
 	if [ -e $</model/phrase-table-filtered.gz ]; then \
 	  ${MKDIR} ${dir $@}; \
 	  ${MKDIR} ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}; \
-	  rsync -av \
+	  rsync -a \
 		--include '*/lex.*' \
 		--include '*/phrase*' \
 		--include="*/" \
