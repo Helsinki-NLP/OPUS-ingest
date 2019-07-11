@@ -30,6 +30,10 @@ all:
 #	${MAKE} udparse
 #	${MAKE} wordalign
 
+run-wordalign: wordalign/Makefile
+	${MAKE} ces_info
+	${MAKE} -C wordalign submit-all
+
 
 ## standard procedures are specified in the following makefiles
 ##

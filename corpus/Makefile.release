@@ -424,10 +424,7 @@ ${CORPUSRELEASE}/mono/%.tok.gz: ${CORPUSXML}/%
 	@${MKDIR} ${dir $@}
 	if [ -d $< ]; then \
 	  find $</ -name '*.${CORPUS_EXT}.gz' -type f | \
-	  xargs zcat | \
-	  perl ${TOOLS}/opus/xml2text.pl | \
-	  sed 's/  */ /g;s/^ *//;s/ *$$//' |\
-	  gzip -c > $@; \
+	  xargs zcat | opus2text | gzip -c > $@; \
 	fi
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
@@ -440,8 +437,7 @@ ${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRAW}/%
 	  find $</ -name '*.${CORPUS_EXT}.gz' -type f | \
 	  xargs zcat | \
 	  perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g' |\
-	  perl ${TOOLS}/opus/rawxml2text.pl | \
-	  sed 's/  */ /g;s/^ *//;s/ *$$//' |\
+	  xargs zcat | opus2text | gzip -c > $@; \
 	  gzip -c > $@; \
 	fi
 	${MKDIR} ${dir ${PACKAGES}}

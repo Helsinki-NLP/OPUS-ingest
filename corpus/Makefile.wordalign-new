@@ -1,0 +1,923 @@
+# -*-makefile-*-
+#
+# wordalign bitexts using efmaral & Moses
+#
+#--------------------------------------------------------------------
+#
+# make SRC=de TRG=en wordalign . align & extract phrase-table for "de-en" 
+# make wordalign-all ........... run wordalign for all language pairs
+# make cleanup-all ............. cleanup for all language pairs
+#
+#--------------------------------------------------------------------
+#
+# individual steps for one bitext (set SRC and TRG like above):
+# (must run them in the given order)
+#
+# make wordalign-prepare ......  convert and preprocess bitext
+# make wordalign-align ......... run word-aligner
+# make wordalign-pt ............ extract phrase-table
+# make wordalign-filter ........ significance filtering
+#
+#--------------------------------------------------------------------
+#
+# start jobs on HPC cluster for a selected language pair:
+# (set language pair with SRC and TRG)
+#
+#   make submit-wordalign
+#
+# This will trigger all sub-tasks below by submitting new jobs
+# at the end of the previous task. Each sub-task may require 
+# different resources (in terms of memory or walltime)
+#
+#   make submit-wordalign-prepare
+#   make submit-wordalign-align
+#   make submit-wordalign-pt
+#   make submit-wordalign-filter
+#
+#--------------------------------------------------------------------
+#
+# start jobs on HPC cluster for all language pairs:
+#
+# make submit-all .............. start jobs for all bitexts (one per ACTION)
+#
+# start ACTION-specific jobs (one job per language pair):
+#
+# make submit-all-wordalign .... everything from prepare to filter
+# make submit-all-prepare ...... convert & preprocess all bitexts
+# make submit-all-align ........ word-align all bitext
+# make submit-all-pt ........... extract all phrase tables
+# make submit-all-filter ....... significance filtering for all bitexts
+#
+#--------------------------------------------------------------------
+
+ifndef SRC
+  SRC = xx
+endif
+ifndef TRG
+  TRG = yy
+endif
+
+ifndef LANGPAIR
+  LANGPAIR=${SRC}-${TRG}
+endif
+
+# make it possible to align bitexts with identical SRC and TRG language as well!
+# SRCEXT and TRGEXT will add a suffix 1 and 2 as used in the plain text package in OPUS
+
+ifeq (${SRC},$(TRG))
+  SRCEXT=${SRC}1
+  TRGEXT=${SRC}2
+else
+  SRCEXT=${SRC}
+  TRGEXT=${TRG}
+endif
+
+## set CORPUSBASE depending on preprocessing to be done
+## - c.true  = cleanup and truecasing
+## - c.clean = cleanup
+## - c       = all (no cleanup nor truecasing)
+
+# CORPUSBASE = c
+# CORPUSBASE = c.true
+CORPUSBASE = c.clean
+SRCCORPUS  = ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
+TRGCORPUS  = ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
+
+# try to guess memory and time consumption for batch jobs
+# (based on size on source language tokens)
+
+# CORPUS_SIZE = ${shell sed -n '2p' ${CORPUSRELEASE}/info/${LANGPAIR}.txt.info}
+CORPUS_SIZE = ${shell sed -n '3p' ${CORPUSRELEASE}/info/${LANGPAIR}.info}
+
+ifndef EFLOMAL_PRIORS
+  EFLOMAL_PRIORS = $(OPUSHOME)/eflomal
+endif
+
+## for efmaral: we need a lot of memory!
+EFMARAL_ALIGN_MEM = ${shell \
+	if [ ${CORPUS_SIZE} -gt 100000000 ]; then \
+	  echo "250g"; \
+	elif [ ${CORPUS_SIZE} -gt 10000000 ]; then \
+	  echo "120g"; \
+	elif [ ${CORPUS_SIZE} -gt 5000000 ]; then \
+	  echo "64g"; \
+	elif [ ${CORPUS_SIZE} -gt 1000000 ]; then \
+	  echo "32g"; \
+	else \
+	  echo "16g"; \
+	fi }
+
+## for elomal: much less!
+ALIGN_MEM = ${shell \
+	if [ ${CORPUS_SIZE} -gt 100000000 ]; then \
+	  echo "64g"; \
+	elif [ ${CORPUS_SIZE} -gt 50000000 ]; then \
+	  echo "32g"; \
+	elif [ ${CORPUS_SIZE} -gt 10000000 ]; then \
+	  echo "24g"; \
+	elif [ ${CORPUS_SIZE} -gt 5000000 ]; then \
+	  echo "16g"; \
+	elif [ ${CORPUS_SIZE} -gt 1000000 ]; then \
+	  echo "8g"; \
+	else \
+	  echo "4g"; \
+	fi }
+ALIGN_TIME = ${shell \
+	if [ ${CORPUS_SIZE} -gt 100000000 ]; then \
+	  echo "72"; \
+	elif [ ${CORPUS_SIZE} -gt 10000000 ]; then \
+	  echo "48"; \
+	elif [ ${CORPUS_SIZE} -gt 5000000 ]; then \
+	  echo "12"; \
+	elif [ ${CORPUS_SIZE} -gt 1000000 ]; then \
+	  echo "6"; \
+	else \
+	  echo "4"; \
+	fi }
+EXTRACT_MEM = ${shell \
+	if [ ${CORPUS_SIZE} -gt 500000000 ]; then \
+	  echo "250g"; \
+	elif [ ${CORPUS_SIZE} -gt 250000000 ]; then \
+	  echo "196g"; \
+	elif [ ${CORPUS_SIZE} -gt 100000000 ]; then \
+	  echo "120g"; \
+	elif [ ${CORPUS_SIZE} -gt 50000000 ]; then \
+	  echo "64g"; \
+	elif [ ${CORPUS_SIZE} -gt 10000000 ]; then \
+	  echo "32g"; \
+	elif [ ${CORPUS_SIZE} -gt 5000000 ]; then \
+	  echo "16g"; \
+	elif [ ${CORPUS_SIZE} -gt 1000000 ]; then \
+	  echo "8g"; \
+	else \
+	  echo "4g"; \
+	fi }
+
+
+## convert phrase tables to dictionaries with Dice scores
+PHRASE2DICE = opus-pt2dice
+DICETHR     = 0.05
+FREQTHR     = 2
+
+# max_phr_length ... for phrase tabel extraction
+# alignment ........ default alignment symmetrization heuristics
+# alignments ....... other symmetrization heuristics that will be used
+
+MAX_PHR_LENGTH = 7
+ALIGNMENT      = grow-diag-final-and
+ALIGNMENTS     = # intersect grow-diag grow-diag-final
+
+# parameters for corpus cleaning (min & max sentence lengths)
+
+MIN = 1
+MAX = 100
+# MAX = 80
+
+# OPUS2MOSES = $(OPUSTOOLS)/xces2moses
+OPUS2MOSES = opus2moses
+
+
+# all language pairs in the corpus
+
+ifndef BITEXTS
+  BITEXTS := $(patsubst $(CORPUSXML)/%.xml.gz,%,\
+			$(wildcard $(CORPUSXML)/*-*.xml.gz))
+endif
+
+# truecaser models
+#   TRUECASER_GZ - gzipped model files (that we like to keep after word alignment)
+#   TRUECASER - model files used when creating the truecased bitext
+
+TRUECASER_GZ = $(patsubst %,${CORPUSWORDALIGN}/truecaser/%.gz, ${LANGUAGES})
+TRUECASER    = $(patsubst %,${CORPUSWORDALIGN}/truecaser/%, ${LANGUAGES})
+
+# monolingual text files for language modeling
+# (TODO: still needed here? isn't it moved to Makefile.html?)
+
+LMTEXT = $(patsubst %,${CORPUSWORDALIGN}/lm/${CORPUS}.%.gz, ${LANGUAGES})
+LMRAWTEXT = $(patsubst %,${CORPUSWORDALIGN}/lm/${CORPUS}.raw.%.gz, ${LANGUAGES})
+
+ifndef DICFILES
+  DICFILES := $(patsubst %/model/phrase-table-filtered.gz,${CORPUSHOME}/dic/%.dic.gz,\
+		$(wildcard */model/phrase-table-filtered.gz))
+endif
+
+
+.PHONY: all-wordalign wordalign-all
+wordalign-all all-wordalign: ${BITEXTS} clean
+# all-wordalign: ${TRUECASER} ${BITEXTS} clean
+
+.PHONY: all-cleanup cleanup-all
+claenup-all all-cleanup:
+	for l in ${BITEXTS}; do \
+	  ${MAKE} LANGPAIR=$$l cleanup; \
+	done
+
+
+
+# action to be done when calling BITEXTS
+ACTION = wordalign
+
+
+.PHONY: submit-all-prepare 
+submit-all-wordalign:
+	${MAKE} ACTION=wordalign-all submit-all-languages
+
+## submit batch jobs of various kinds
+## - do prepare first
+## - align requires more memory! (second step after prepare is done)
+## - pt creates the phrase tables and requires less memory!
+## - filter runs only on one thread
+
+.PHONY: submit-all-prepare 
+submit-all-prepare:
+	${MAKE} ACTION=wordalign-prepare submit-all-languages
+
+.PHONY: submit-all-align
+submit-all-align:
+	${MAKE} ACTION=wordalign-align submit-all-languages
+
+.PHONY: submit-all-pt
+submit-all-pt:
+	${MAKE} ACTION=wordalign-pt submit-all-languages
+
+.PHONY: submit-all-filter
+submit-all-filter:
+	${MAKE} ACTION=wordalign-filter submit-all-languages
+
+
+.PHONY: submit-all-languages
+submit-all-languages:
+	for l in ${BITEXTS}; do \
+	  if [ ! -e $$l/.${ACTION} ]; then \
+	    ${MAKE} LANGPAIR=$$l submit-${ACTION}; \
+	  fi \
+	done
+
+.PHONY: submit-all
+submit-all:
+	for l in ${BITEXTS}; do \
+	  if [ ! -e $$l/.wordalign-done ]; then \
+	    if [ ! -e $$l/.wordalign ]; then \
+	      ${MAKE} NEXTJOB=1 LANGPAIR=$$l $$l/.wordalign-done; \
+	    fi \
+	  fi \
+	done
+
+
+# batch job for preparing the corpus data
+# --> single core, little memory
+.PHONY: submit-wordalign-prepare
+submit-wordalign-prepare:
+	if [ ! -e ${LANGPAIR}/.wordalign-prepare ]; then \
+	  rm -f ${LANGPAIR}.submit; \
+	  ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
+		  HPC_MEM=4g \
+		  HPC_CORES=1 \
+		  HPC_MODULES="${HPC_MODULES} nlpl-efmaral" \
+		  EMAIL= \
+		  NEXTJOB=${NEXTJOB} \
+		  MAKEARGS="ACTION=wordalign-prepare NEXTJOB=${NEXTJOB}" \
+	  ${LANGPAIR}.submit;\
+	else \
+	  ${MAKE} submit-wordalign-align;\
+	fi
+
+# batch job for word alignment
+# --> high memory consumption for efmaral! (but OK with eflomal)
+.PHONY: submit-wordalign-align
+submit-wordalign-align:
+	if [ ! -e ${LANGPAIR}/.wordalign-align ]; then \
+	  rm -f ${LANGPAIR}.submit; \
+	  ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
+		  HPC_MEM=${ALIGN_MEM} \
+		  HPC_CORES=2 \
+		  HPC_MODULES="${HPC_MODULES} nlpl-efmaral" \
+		  EMAIL= \
+		  NEXTJOB=${NEXTJOB} \
+		  MAKEARGS="ACTION=wordalign-align NEXTJOB=${NEXTJOB}" \
+	  ${LANGPAIR}.submit;\
+	else \
+	  ${MAKE} submit-wordalign-pt;\
+	fi
+
+# batch job for creating phrase-tables
+# (assume that word alignment is done already!)
+.PHONY: submit-wordalign-pt
+submit-wordalign-pt:
+	if [ ! -e ${LANGPAIR}/.wordalign-align ]; then \
+	  echo "run alignment for ${LANGPAIR} first!"; \
+	elif [ ! -e ${LANGPAIR}/.wordalign-pt ]; then \
+	  if [ ! -e ${LANGPAIR}/.wordalign ]; then \
+	    rm -f ${LANGPAIR}.submit; \
+	    ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
+		    HPC_MEM=${EXTRACT_MEM} \
+		    HPC_CORES=4 \
+		    HPC_MODULES="${HPC_MODULES} nlpl-efmaral" \
+		    EMAIL= \
+		    NEXTJOB=${NEXTJOB} \
+		    MAKEARGS="ACTION=wordalign-pt NEXTJOB=${NEXTJOB}" \
+	    ${LANGPAIR}.submit;\
+	  fi; \
+	else \
+	  ${MAKE} submit-wordalign-filter;\
+	fi
+
+
+# batch job for filtering phrase-tables
+# (assume that phrase extraction is done already!)
+.PHONY: submit-wordalign-filter
+submit-wordalign-filter:
+	if [ ! -e ${LANGPAIR}/.wordalign-pt ]; then \
+	  echo "run phrase extraction for ${LANGPAIR} first!"; \
+	elif [ ! -e ${LANGPAIR}/.wordalign-filter ]; then \
+	  if [ ! -e ${LANGPAIR}/.wordalign ]; then \
+	    rm -f ${LANGPAIR}.submit; \
+	    ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
+		    HPC_MEM=${EXTRACT_MEM} \
+		    HPC_CORES=1 \
+		    HPC_MODULES="${HPC_MODULES} nlpl-efmaral" \
+		    EMAIL= \
+		    NEXTJOB=${NEXTJOB} \
+		    MAKEARGS="ACTION=wordalign-filter NEXTJOB=${NEXTJOB}" \
+	    ${LANGPAIR}.submit;\
+	  fi;\
+	fi
+
+# batch job for word alignment (all steps at once)
+.PHONY: submit-wordalign-all
+submit-wordalign-all:
+	if [ ! -e ${LANGPAIR}/.wordalign ]; then \
+	  rm -f ${LANGPAIR}.submit; \
+	  ${MAKE} EMAIL= \
+		  MAKEARGS="ACTION=wordalign" \
+		  HPC_MODULES="${HPC_MODULES} nlpl-efmaral" \
+	  ${LANGPAIR}.submit;\
+	fi
+
+# batch job for word alignment
+# NEW: start with prepare but set NEXTJOB
+.PHONY: submit-wordalign
+submit-wordalign:
+	if [ ! -e ${LANGPAIR}/.wordalign ]; then \
+	  rm -f ${LANGPAIR}.submit; \
+	  ${MAKE} EMAIL= \
+		  MAKEARGS="ACTION=wordalign-prepare" \
+		  HPC_MODULES="${HPC_MODULES} nlpl-efmaral" \
+		  NEXTJOB=1 \
+	  ${LANGPAIR}.submit;\
+	fi
+
+
+## check what we have to do
+%/.wordalign-done:
+	if [ -e ${dir $@}/.wordalign-prepare ]; then \
+	  if [ -e ${dir $@}/.wordalign-align ]; then \
+	    if [ -e ${dir $@}/.wordalign-pt ]; then \
+	      if [ -e ${dir $@}/.wordalign-filter ]; then \
+		mkdir -p ${dir $@}; \
+		touch $@; \
+	      else \
+		${MAKE} SRC=$(firstword $(subst -, ,${dir $@})) \
+			TRG=$(lastword $(subst -, ,${dir $@})) \
+		submit-wordalign-filter; \
+	      fi \
+	    else \
+	      ${MAKE} SRC=$(firstword $(subst -, ,${dir $@})) \
+		      TRG=$(lastword $(subst -, ,${dir $@})) \
+	      submit-wordalign-pt; \
+	    fi \
+	  else \
+	    ${MAKE} SRC=$(firstword $(subst -, ,${dir $@})) \
+		    TRG=$(lastword $(subst -, ,${dir $@})) \
+	    submit-wordalign-align; \
+	  fi \
+	else \
+	  ${MAKE} SRC=$(firstword $(subst -, ,${dir $@})) \
+		  TRG=$(lastword $(subst -, ,${dir $@})) \
+	  submit-wordalign-prepare; \
+	fi
+
+
+
+${BITEXTS}: %: %/.${ACTION}
+
+## NEW: remove empty files before runing action
+## NEW: submit next job if NEXTJOB is set
+%/.${ACTION}:
+	mkdir -p ${CORPUSWORDALIGN}/${@:/.${ACTION}=}
+## OLD (delete?)
+#	if [ ! -e ${@:/.${ACTION}=} ]; then \
+#	  ln -s ${CORPUSWORDALIGN}/${@:/.${ACTION}=} ${@:/.${ACTION}=}; \
+#	fi
+	find ${dir $@} -type f -empty ! -iname '.*'
+	${MAKE} SRC=$(firstword $(subst -, ,${@:/.${ACTION}=})) \
+		TRG=$(lastword $(subst -, ,${@:/.${ACTION}=})) \
+	${ACTION}
+	mkdir -p ${dir $@}
+	touch $@
+ifdef NEXTJOB
+	sleep 1
+ifeq (${ACTION},wordalign-prepare)
+	${MAKE} SRC=$(firstword $(subst -, ,${@:/.${ACTION}=})) \
+		TRG=$(lastword $(subst -, ,${@:/.${ACTION}=})) \
+	submit-wordalign-align
+else ifeq (${ACTION},wordalign-align)
+	${MAKE} SRC=$(firstword $(subst -, ,${@:/.${ACTION}=})) \
+		TRG=$(lastword $(subst -, ,${@:/.${ACTION}=})) \
+	submit-wordalign-pt
+else ifeq (${ACTION},wordalign-pt)
+	${MAKE} SRC=$(firstword $(subst -, ,${@:/.${ACTION}=})) \
+		TRG=$(lastword $(subst -, ,${@:/.${ACTION}=})) \
+	submit-wordalign-filter
+endif
+endif
+
+
+## define some actions (prepare, align, ...)
+
+.PHONY: wordalign-prepare
+wordalign-prepare: ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
+
+.PHONY: wordalign-align
+wordalign-align: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
+
+.PHONY: wordalign-pt
+wordalign-pt: ${SRC}-${TRG}/model/phrase-table.gz
+
+.PHONY: wordalign-no-filter
+wordalign-no-filter: ${SRC}-${TRG}/model/phrase-table.gz
+	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
+	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
+	${MAKE} ${LANGPAIR}-aligncheck ${LANGPAIR}-bitextcheck
+
+.PHONY: wordalign wordalign-filter
+wordalign-filter wordalign: ${SRC}-${TRG}/model/phrase-table-filtered.gz
+	rm -f ${SRC}-${TRG}/model/phrase-table.gz
+	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
+	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
+	${MAKE} ${CORPUSHOME}/dic/${SRC}-${TRG}.dic.gz
+	${MAKE} ${LANGPAIR}-aligncheck ${LANGPAIR}-bitextcheck
+
+
+.PHONY: dictionaries
+dictionaries: $(DICFILES)
+
+.PHONY: all-monolingual all-raw-monolingual
+all-monolingual: ${LMTEXT}
+all-raw-monolingual: ${LMRAWTEXT}
+
+
+# clean: take away unpacked truecaser model files
+# - don't do that when aligning individual language pairs!
+# - several language pairs will depend on the same truecaser model!
+
+.PHONY: clean
+clean:
+	${MAKE} check-wordalign
+	${MAKE} check-bitexts
+	rm -f ${TRUECASER}
+	for l in ${BITEXTS}; do \
+	  rm -fr $$l/model/*.gz.*; \
+	  rm -f $$l/model/lex.e2f $$l/model/lex.f2e; \
+	  rm -f $$l/model/aligned.grow-diag-final-and; \
+	  rm -fr $$l/model.src.*; \
+	  rm -fr $$l/model.trg.*; \
+	done
+
+
+.PHONY: alignments
+alignments:
+	for a in ${ALIGNMENTS}; do \
+		make ALIGNMENT=$$a ${SRC}-${TRG}/model/aligned.$$a.gz; \
+	done
+	-gzip ${SRC}-${TRG}/model/aligned.${ALIGNMENT}
+	rm -f ${SRC}-${TRG}/model/aligned.${ALIGNMENT}
+
+# extract phrases and create phrase-table
+
+${SRC}-${TRG}/model/phrase-table.gz: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
+	mkdir -p ${dir $@}
+	gzip -cd ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz > $@.${SRCEXT}
+	gzip -cd ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz > $@.${TRGEXT}
+	${SCRIPTS_ROOTDIR}/training/train-model.perl \
+		-parallel \
+		-external-bin-dir=${HOME}/projects/SMT/bin \
+		-max-phrase-length=${MAX_PHR_LENGTH} \
+		-scripts-root-dir ${SCRIPTS_ROOTDIR} \
+		-root-dir ${SRC}-${TRG} \
+		-temp-dir tmp \
+		-corpus $@ -f ${SRCEXT} -e ${TRGEXT} \
+		-alignment ${ALIGNMENT} \
+		--do-steps 4-6
+	gzip -f ${SRC}-${TRG}/model/lex.*
+	rm -f $@.${SRCEXT} $@.${TRGEXT}
+	${MAKE} alignments
+	${MAKE} cleanup
+
+
+# create clean and truecased data (source and target language)
+
+${SRC}-${TRG}/c.true.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
+	mkdir -p ${dir $@}
+	${MAKE} ${SRC}-${TRG}/c.${SRCEXT} ${SRC}-${TRG}/c.${TRGEXT}
+	${MAKE} ${SRC}-${TRG}/c.clean.${SRCEXT} ${SRC}-${TRG}/c.clean.${TRGEXT}
+	${OPUSTOOLS}/wordalign/retained-sentences.pl \
+		${SRC}-${TRG}/ids.txt \
+		${SRC}-${TRG}/line_numbers.txt |\
+	${OPUSTOOLS}/wordalign/ids2links.pl |\
+		gzip -c > ${SRC}-${TRG}/bitext.xml.gz
+	rm -f ${SRC}-${TRG}/ids.txt ${SRC}-${TRG}/line_numbers.txt
+	${MAKE} ${CORPUSWORDALIGN}/truecaser/${SRC}
+	${TOOLS}/public/preprocess/recaser/mytruecase.perl \
+                -model ${CORPUSWORDALIGN}/truecaser/${SRC} \
+		< ${SRC}-${TRG}/c.clean.${SRCEXT} \
+		> ${SRC}-${TRG}/c.true.${SRCEXT} 2>/dev/null
+	${MAKE} ${CORPUSWORDALIGN}/truecaser/${TRG}
+	${TOOLS}/public/preprocess/recaser/mytruecase.perl \
+                -model ${CORPUSWORDALIGN}/truecaser/${TRG} \
+		< ${SRC}-${TRG}/c.clean.${TRGEXT} \
+		> ${SRC}-${TRG}/c.true.${TRGEXT} 2>/dev/null
+	gzip -f ${SRC}-${TRG}/c.true.${SRCEXT}
+	gzip -f ${SRC}-${TRG}/c.true.${TRGEXT}
+	rm -f ${SRC}-${TRG}/c.${SRCEXT} ${SRC}-${TRG}/c.${TRGEXT}
+	rm -f ${SRC}-${TRG}/c.clean.${SRCEXT} ${SRC}-${TRG}/c.clean.${TRGEXT}
+
+# without truecasing
+
+${SRC}-${TRG}/c.clean.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
+	mkdir -p ${dir $@}
+	${MAKE} ${SRC}-${TRG}/c.${SRCEXT} ${SRC}-${TRG}/c.${TRGEXT}
+	${MAKE} ${SRC}-${TRG}/c.clean.${SRCEXT} ${SRC}-${TRG}/c.clean.${TRGEXT}
+	${OPUSTOOLS}/wordalign/retained-sentences.pl \
+		${SRC}-${TRG}/ids.txt \
+		${SRC}-${TRG}/line_numbers.txt |\
+	${OPUSTOOLS}/wordalign/ids2links.pl |\
+		gzip -c > ${SRC}-${TRG}/bitext.xml.gz
+	rm -f ${SRC}-${TRG}/ids.txt ${SRC}-${TRG}/line_numbers.txt
+	rm -f ${SRC}-${TRG}/c.${SRCEXT} ${SRC}-${TRG}/c.${TRGEXT}
+	gzip -f ${SRC}-${TRG}/c.clean.${SRCEXT} ${SRC}-${TRG}/c.clean.${TRGEXT}
+
+
+# without truecasing nor cleaning
+
+${SRC}-${TRG}/c.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
+	mkdir -p ${dir $@}
+	zcat $< |\
+	$(OPUS2MOSES) -r -d ${CORPUSXML} \
+		-e ${SRC}-${TRG}/c.${SRCEXT} \
+		-f ${SRC}-${TRG}/c.${TRGEXT} \
+		-b ${SRC}-${TRG}/bitext.xml
+	gzip -f ${SRC}-${TRG}/c.${SRCEXT}
+	gzip -f ${SRC}-${TRG}/c.${TRGEXT}
+	gzip -f ${SRC}-${TRG}/bitext.xml
+
+${TRGCORPUS}: ${SRCCORPUS}
+
+
+# intermediate files for cleanup/truecasing (will be deleted later)
+
+${SRC}-${TRG}/c.${SRCEXT}: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
+	mkdir -p ${dir $@}
+	zcat $< |\
+	$(OPUS2MOSES) -r -d ${CORPUSXML} \
+		-e ${SRC}-${TRG}/c.${SRCEXT} \
+		-f ${SRC}-${TRG}/c.${TRGEXT} \
+		-p ${SRC}-${TRG}/ids.txt
+
+
+${SRC}-${TRG}/c.${TRGEXT}: ${SRC}-${TRG}/c.${SRCEXT}
+
+${SRC}-${TRG}/c.clean.${SRCEXT}: ${SRC}-${TRG}/c.${SRCEXT}
+	${SCRIPTS_ROOTDIR}/training/clean-corpus-n.perl \
+		${SRC}-${TRG}/c ${SRCEXT} ${TRGEXT} \
+		${SRC}-${TRG}/c.clean ${MIN} ${MAX} \
+		${SRC}-${TRG}/line_numbers.txt
+
+${SRC}-${TRG}/c.clean.${TRGEXT}: ${SRC}-${TRG}/c.clean.${SRCEXT}
+
+
+
+# ## directly from download directory
+# ## without converting again
+# ## (don't do this because we may want to align different 
+# ##  versions of the corpus, e.g. the UDpipe version)
+
+# ${SRC}-${TRG}/c.${SRCEXT}.gz: ${CORPUSHTML}/${SRC}-${TRG}.txt.zip
+# 	mkdir -p ${dir $@}
+# 	unzip -d ${dir $@} $<
+# 	mv ${wildcard ${dir $@}${CORPUS}.*.${SRCEXT}} ${SRC}-${TRG}/c.${SRCEXT}
+# 	mv ${wildcard ${dir $@}${CORPUS}.*.${TRGEXT}} ${SRC}-${TRG}/c.${TRGEXT}
+# 	rm -f ${dir $@}${CORPUS}.*.ids.gz
+# 	gzip -f ${SRC}-${TRG}/c.${SRCEXT}
+# 	gzip -f ${SRC}-${TRG}/c.${TRGEXT}
+
+
+
+# symmetrised word alignments
+
+${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz: \
+		${SRC}-${TRG}/model/aligned.srctotgt.gz \
+		${SRC}-${TRG}/model/aligned.tgttosrc.gz
+	gzip -cd < ${SRC}-${TRG}/model/aligned.srctotgt.gz > $@.s2t
+	gzip -cd < ${SRC}-${TRG}/model/aligned.tgttosrc.gz > $@.t2s
+	$(ATOOLS) -c ${ALIGNMENT} -i $@.s2t -j $@.t2s | gzip -c > $@
+	rm -f $@.s2t $@.t2s
+
+# wordalignment with efmaral (both directions)
+# use prefix-stemming and lowercasing to improve statistics
+
+%/model/aligned.${SRCEXT}: %/${CORPUSBASE}.${SRCEXT}.gz
+	mkdir -p ${dir $@}
+	gzip -cd $< > $@.tmp
+	${MOSESSCRIPTS}/training/wrappers/make-factor-stem.perl 4 $@.tmp $@.stem4
+	${MOSESSCRIPTS}/tokenizer/lowercase.perl < $@.stem4 > $@
+	rm -f $@.tmp $@.stem4
+
+%/model/aligned.${TRGEXT}: %/${CORPUSBASE}.${SRCEXT}.gz
+	mkdir -p ${dir $@}
+	gzip -cd ${<:${SRCEXT}.gz=${TRGEXT}.gz} > $@.tmp
+	${MOSESSCRIPTS}/training/wrappers/make-factor-stem.perl 4 $@.tmp $@.stem4
+	${MOSESSCRIPTS}/tokenizer/lowercase.perl < $@.stem4 > $@
+	rm -f $@.tmp $@.stem4
+
+4COL = /dev/null /dev/null /dev/null /dev/null
+%/aligned.${SRCEXT}-${TRGEXT}: %/aligned.${SRCEXT} %/aligned.${TRGEXT}
+	paste -d ' ||| ' ${word 1,$^} ${4COL} ${word 2,$^} > $@
+
+
+# don't delete those intermediate files
+.SECONDARY: ${SRC}-${TRG}/model/aligned.srctotgt.gz ${SRC}-${TRG}/model/aligned.tgttosrc.gz
+
+## OLD: use efmaral
+##
+# %.srctotgt.gz: %.${SRCEXT}-${TRGEXT}
+# 	${EFMARAL} -i $< | gzip -c > $@
+
+# %.tgttosrc.gz: %.${SRCEXT}-${TRGEXT}
+# 	${EFMARAL} -i $< -r | gzip -c > $@
+
+
+## NEW: use eflomal (less memory usage)
+## NEW: use priors if they exist (NOTE: need eflomal - priors branch!)
+
+%/model/aligned.srctotgt.gz: %/model/aligned.${SRCEXT} %/model/aligned.${TRGEXT}
+ifneq ("$(wildcard $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors)","")
+	-${EFLOMAL} -v -s $< -t ${word 2,$^} -f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 \
+		-p $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors || \
+	touch ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
+else
+	-${EFLOMAL} -v -s $< -t ${word 2,$^} -f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 || \
+	touch ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
+endif
+	gzip -f ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
+
+%/model/aligned.tgttosrc.gz: %/model/aligned.srctotgt.gz
+	@echo "done!"
+
+
+# grep phrase pairs with only alphabetic characters and freq>1 for both
+# sort numerically on score 1
+
+${SRC}-${TRG}/phrases-alpha.gz: ${SRC}-${TRG}/model/phrase-table.gz
+	( export LC_ALL=en_US.UTF-8; \
+	gzip -cd $< | \
+	egrep -i '^[[:alpha:] ]+\|\|\|[[:alpha:] ]+\|\|\|' |\
+	cut -f1,4,7,13 -d '|' | \
+	egrep -v '\| 1 [0-9]*$$' | \
+	egrep -v '\| [0-9]* 1$$' | \
+	LC_ALL=C sort -t '|' -k 3.1gr,1 |\
+	gzip -c > $@ )
+
+
+cleanup:
+	rm -f ${LANGPAIR}/model/extract*
+	rm -fr ${LANGPAIR}/model/tmp.*
+	rm -fr ${LANGPAIR}/corpus
+	rm -fr ${LANGPAIR}/giza.*
+	rm -f ${LANGPAIR}/model/aligned.${SRC}
+	rm -f ${LANGPAIR}/model/aligned.${TRG}
+#	${MAKE} ${LANGPAIR}-aligncheck ${LANGPAIR}-bitextcheck
+
+tmp: 
+	mkdir -p ${CORPUSWORDALIGN}/tmp
+	ln -s ${CORPUSWORDALIGN}/tmp tmp
+
+
+#-----------------------------
+# train truecaser models
+#-----------------------------
+
+
+# train truecaser model for all languages
+
+all-truecaser: ${TRUECASER}
+
+# train truecaser model for source and target language
+
+truecaser: 	${CORPUSWORDALIGN}/truecaser/${SRC} \
+		${CORPUSWORDALIGN}/truecaser/${TRG}
+
+# a very simplistic way of changing tokenized XML to plain text
+
+${CORPUSWORDALIGN}/truecaser/%.txt: ${CORPUSXML}/%
+	mkdir -p `dirname $@`
+	find $< -name '*.xml.gz' | \
+	xargs zcat | \
+	perl -p -e 'chomp;s/<\/s>/\n/;' | \
+	grep -v '^ *$$' | \
+	sed	-e 's/<[^>]*>//g' \
+		-e 's/  */ /g' \
+		-e 's/\&gt;/>/g' \
+		-e 's/\&lt;/</g' \
+		-e 's/\&amp;/&/g' \
+		-e 's/\&quot;/"/g' \
+		-e "s/\&apos;/'/g" | \
+	sed 	-e 's/^ *//' \
+		-e 's/ *$$//' > $@
+
+${TRUECASER_GZ}:
+	mkdir -p `dirname $@`
+	make $(patsubst %.gz, %.txt,$@)
+	${TOOLS}/public/preprocess/recaser/my-train-truecaser.perl \
+		--corpus $(patsubst %.gz, %.txt,$@) \
+		--model $@.tmp
+	gzip -f $@.tmp
+	mv $@.tmp.gz $@
+	rm -f $(patsubst %.gz, %.txt,$@)
+
+${TRUECASER}: %: %.gz
+	gzip -cd $< > $@
+
+
+# monolingual data for language modeling
+
+${CORPUSWORDALIGN}/lm/${CORPUS}.%.gz: ${CORPUSXML}/%
+	mkdir -p `dirname $@`
+	find $< -name '*.xml.gz' | \
+	xargs zcat | \
+	perl ${TOOLS}/opus/xml2txt.pl | \
+	sed 's/  */ /g;s/^ *//;s/ *$$//' |\
+	gzip -c > $@
+
+
+${CORPUSWORDALIGN}/lm/${CORPUS}.raw.%.gz: ${CORPUSRAW}/%
+	mkdir -p `dirname $@`
+	find $< -name '*.xml.gz' | \
+	xargs zcat | \
+	perl ${TOOLS}/opus/xml2txt.pl | \
+	sed 's/  */ /g;s/^ *//;s/ *$$//' |\
+	gzip -c > $@
+
+
+
+
+###########################################################################
+#
+# filter phrase tables
+#
+###########################################################################
+
+ifndef PHRASETABLES
+  PHRASETABLES := $(patsubst %/phrase-table.gz,%/phrase-table-filtered.gz,\
+		  $(wildcard */model/phrase-table.gz))
+endif
+
+SMTTOOLSHOME = ${HOME}/projects/SMT
+SMTTOOLS     = ${SMTTOOLSHOME}/tools
+
+MOSESHOME    = ${SMTTOOLSHOME}/mosesdecoder
+MOSESCONTRIB = ${MOSESHOME}/contrib
+
+.PHONY: filter-all-phrase-tables
+filter-all-phrase-tables: $(PHRASETABLES)
+
+.PHONY:
+filter-phrase-table: ${SRC}-${TRG}/model/phrase-table-filtered.gz
+
+# %/phrase-table-filtered.gz: %.src.sa_suffix %.trg.sa_suffix %/phrase-table.gz
+# 	zcat $(subst -filtered,,$@) | \
+# 	${MOSESCONTRIB}/sigtest-filter/filter-pt \
+# 		-f $< \
+# 		-e $(subst src,trg,$<) \
+# 		-l a+e -n 30 2> $(@:.gz=.log) |\
+# 	gzip -c > $@
+# 	rm -f $<* $(subst src,trg,$<)*
+# 	rm -f $^
+# 	gzip -f $(@:.gz=.log)
+
+
+## NEW: don't depend on suffix arrays anymore (would cause to re-do phrase extraction)
+
+%/phrase-table-filtered.gz:
+	${MAKE} $(patsubst %/phrase-table-filtered.gz,%.src.sa_suffix,$@) \
+		$(patsubst %/phrase-table-filtered.gz,%.trg.sa_suffix,$@) \
+		${dir $@}phrase-table.gz
+	zcat $(subst -filtered,,$@) | \
+	${MOSESCONTRIB}/sigtest-filter/filter-pt \
+		-f $(patsubst %/phrase-table-filtered.gz,%.src.sa_suffix,$@) \
+		-e $(patsubst %/phrase-table-filtered.gz,%.trg.sa_suffix,$@) \
+		-l a+e -n 30 2> $(@:.gz=.log) |\
+	gzip -c > $@
+	rm -f $(patsubst %/phrase-table-filtered.gz,%.src.sa_suffix,$@)*
+	rm -f $(patsubst %/phrase-table-filtered.gz,%.trg.sa_suffix,$@)*
+	rm -f ${dir $@}phrase-table.gz
+	gzip -f $(@:.gz=.log)
+
+
+# create suffix arrays for the bitext (training corpus)
+
+%.src.sa_suffix: ${SRCCORPUS}
+	gzip -cd < $< > $@
+	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
+
+%.trg.sa_suffix: ${TRGCORPUS}
+	gzip -cd < $< > $@
+	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
+
+
+# %.src.sa_suffix: ${SRCCORPUS}
+# 	if [ $(word 1,$(subst -, ,$@)) != $(word 2,$(subst -, ,$(subst /, ,$@))) ]; then \
+# 	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 1,$(subst -, ,$@)).gz > $@; \
+# 	else \
+# 	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 1,$(subst -, ,$@))1.gz > $@; \
+# 	fi
+# 	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
+
+# %.trg.sa_suffix: ${TRGCORPUS}
+# 	if [ $(word 1,$(subst -, ,$@)) != $(word 2,$(subst -, ,$(subst /, ,$@))) ]; then \
+# 	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 2,$(subst -, ,$(subst /, ,$@))).gz > $@; \
+# 	else \
+# 	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 2,$(subst -, ,$(subst /, ,$@)))2.gz > $@; \
+# 	fi
+# 	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
+
+
+## OLD VERSION OF DIC's
+##
+# ${CORPUSHTML}/dic/%.dic.gz: | %/model/phrase-table-filtered.gz ${CORPUSHOME}/dic
+# 	mkdir -p ${dir $@}
+# 	zcat ${firstword $|} |\
+# 	perl ${OPUSTOOLS}/phrase2dic.pl \
+# 	    -s $(word 1,$(subst -, ,$(subst ., ,${notdir $@}))) \
+# 	    -t $(word 2,$(subst -, ,$(subst ., ,$@))) |\
+# 	gzip -c > $@
+
+
+${CORPUSHOME}/dic/%.dic.gz: | %/model/phrase-table-filtered.gz
+	mkdir -p ${dir $@}
+	zcat ${firstword $|} |\
+	${PHRASE2DICE} -d ${DICETHR} -f ${FREQTHR} -m |\
+	gzip -c > $@
+
+
+
+## check word word alignment files
+## - delete all langpairs with empty bitexts
+
+ALIGN_CHECKED  = $(patsubst %,%-aligncheck,${BITEXTS})
+BITEXT_CHECKED = $(patsubst %,%-bitextcheck,${BITEXTS})
+
+check-wordalign: ${ALIGN_CHECKED}
+check-bitexts: ${BITEXT_CHECKED}
+
+${ALIGN_CHECKED}:
+	@mkdir -p DELETE
+## check bitext
+	-@if [ -d ${@:-aligncheck=} ]; then \
+	  if [ -e ${@:-aligncheck=}/bitext.xml.gz ]; then \
+	    if [ `zgrep xtargets ${@:-aligncheck=}/bitext.xml.gz | head | wc -l` == "0" ]; then \
+	      echo "delete ${@:-aligncheck=}"; \
+	      mv -f ${@:-aligncheck=} DELETE/; \
+	    fi \
+	  else \
+	    echo "delete ${@:-aligncheck=}"; \
+	    mv -f ${@:-aligncheck=} DELETE/; \
+	  fi \
+	fi
+## also check the alignment file
+	-@if [ -d ${@:-aligncheck=} ]; then \
+	  if [ -e ${@:-aligncheck=}/model/aligned.grow-diag-final-and.gz ]; then \
+	    if [ `zcat ${@:-aligncheck=}/model/aligned.grow-diag-final-and.gz | head | wc -l` == "0" ]; then \
+	      echo "delete ${@:-aligncheck=}"; \
+	      mv -f ${@:-aligncheck=} DELETE/; \
+	    fi \
+	  else \
+	    echo "delete ${@:-aligncheck=}"; \
+	    mv -f ${@:-aligncheck=} DELETE/; \
+	  fi \
+	fi
+	-rmdir --ignore-fail-on-non-empty DELETE/*
+	-rmdir --ignore-fail-on-non-empty DELETE
+
+
+${BITEXT_CHECKED}:
+	@mkdir -p DELETE
+	-@if [ -e ../xml/${@:-bitextcheck=}.xml.gz ]; then \
+	  if [ `zgrep xtargets ../xml/${@:-bitextcheck=}.xml.gz | head | wc -l` == "0" ]; then \
+	    echo "delete ../xml/${@:-bitextcheck=}.xml.gz"; \
+	    mv -f ../xml/${@:-bitextcheck=}.xml.gz DELETE/; \
+	  fi \
+	fi
+	-rmdir --ignore-fail-on-non-empty DELETE/*
+	-rmdir --ignore-fail-on-non-empty DELETE

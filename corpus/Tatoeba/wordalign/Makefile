@@ -11,6 +11,6 @@ all:
 
 include ../Makefile.def
 include ../../Makefile.def
-include ../../Makefile.wordalign
+include ../../Makefile.wordalign-new
 
 
