@@ -10,13 +10,13 @@ while (<>){
     if (/fromDoc="([^"]*)"/){
 	my $file = $1;
 	unless ( -e "../raw/$file" || -e "raw/$file" || -e $file ){
-	    if ($file=~s/\_.xml/.xml/){
+	    if ($file=~s/\_+.xml/.xml/){
 		if ( -e "../raw/$file" || -e "raw/$file" || -e $file ){
 		    print STDERR "remove '_' from $file\n";
 		    s/(fromDoc=")[^"]*"/$1$file"/;
 		}
 	    }
-	    elsif ( $file=~s/\/\_/\//){
+	    elsif ( $file=~s/\/\_+/\//){
 		if ( -e "../raw/$file" || -e "raw/$file" || -e $file ){
 		    print STDERR "remove '_' from path in $file\n";
 		    s/(fromDoc=")[^"]*"/$1$file"/;
@@ -30,13 +30,13 @@ while (<>){
     if (/toDoc="([^"]*)"/){
 	my $file = $1;
 	unless ( -e "../raw/$file" || -e "raw/$file" || -e $file ){
-	    if ($file=~s/\_.xml/.xml/){
+	    if ($file=~s/\_+.xml/.xml/){
 		if ( -e "../raw/$file" || -e "raw/$file" || -e $file ){
 		    print STDERR "remove '_' from $file\n";
 		    s/(toDoc=")[^"]*"/$1$file"/;
 		}
 	    }
-	    elsif ( $file=~s/\/\_/\//){
+	    elsif ( $file=~s/\/\_+/\//){
 		if ( -e "../raw/$file" || -e "raw/$file" || -e $file ){
 		    print STDERR "remove '_' from path in $file\n";
 		    s/(toDoc=")[^"]*"/$1$file"/;
