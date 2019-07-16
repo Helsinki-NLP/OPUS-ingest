@@ -439,8 +439,7 @@ ${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRAW}/%
 	  find $</ -name '*.${CORPUS_EXT}.gz' -type f | \
 	  xargs zcat | \
 	  perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g' |\
-	  xargs zcat | opus2text | gzip -c > $@; \
-	  gzip -c > $@; \
+	  opus2text | gzip -c > $@; \
 	fi
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
