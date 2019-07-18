@@ -9,8 +9,8 @@ RELEASE_LANGS = bg da el sk sl sv ga hr mt lt hu et de fr es it pt nl pl cs ro f
 
 RELEASEURL   = https://s3.amazonaws.com/web-language-models/paracrawl/release${RELEASE}
 BONUSURL     = https://s3.amazonaws.com/web-language-models/paracrawl/ebay
-RELEASED_TMX = ${patsubst %,en-%.bicleaner07.tmx.gz,${RELEASE_LANGS}}
-BONUS_TMX    = pl-de.bicleaner07.tmx.gz nl-fr.bicleaner07.tmx.gz
+RELEASED_TMX = ${patsubst %,en-%.${FILTER}.tmx.gz,${RELEASE_LANGS}}
+BONUS_TMX    = pl-de.${FILTER}.tmx.gz nl-fr.${FILTER}.tmx.gz
 
 CONVERTED_BITEXTS = ${patsubst %.tmx.gz,${PWD}/%.done,${RELEASED_TMX} ${BONUS_TMX}}
 MAXSIZE = 50000

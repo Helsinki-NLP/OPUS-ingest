@@ -94,14 +94,14 @@ opus2abel-moses:
 BIG_CORPORA = giga-fren MultiUN EUbookshop ParaCrawl OpenSubtitles
 SWIFT_EXTRA = 
 
-upload-all: upload-small upload-big
+upload-all: upload-all-small upload-all-big
 
-upload-small:
+upload-all-small:
 	@for c in $(filter-out ${BIG_CORPORA},${CORPORA}); do \
 	    ${MAKE} CORPUS=$$c upload; \
 	done
 
-upload-big:
+upload-all-big:
 	@for c in $(filter ${BIG_CORPORA},${CORPORA}); do \
 	    ${MAKE} CORPUS=$$c SWIFT_EXTRA='--use-slo --segment-size 5G' upload; \
 	    swift post OPUS-$$c_segments --read-acl ".r:*"; \
@@ -206,6 +206,12 @@ upload:
 	done
 	swift post ${CONTAINER} --read-acl ".r:*"
 
+
+## upload for big corpora
+upload-big:
+	${MAKE} SWIFT_EXTRA='--use-slo --segment-size 5G' upload
+
+
 upload-no-smt:
 	@cd ${OPUS}; \
 	for v in ${VERSIONS}; do \
@@ -219,16 +225,6 @@ upload-no-smt:
 
 
 
-
-## with all files
-upload-all:
-	@cd ${OPUS}; \
-	for v in ${VERSIONS}; do \
-	  cd ${CORPUS}; \
-	  swift upload ${CONTAINER} --changed --skip-identical ${SWIFT_EXTRA} $$v; \
-	  cd ..; \
-	done
-	swift post ${CONTAINER} --read-acl ".r:*"
 
 
 

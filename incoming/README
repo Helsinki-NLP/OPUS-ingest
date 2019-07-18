@@ -1,4 +1,33 @@
 
+
+* Edinburgh Bible corpus (CC0 license)
+https://github.com/christos-c/bible-corpus/tree/master/bibles
+
+* Tilde MODEL corpus: https://tilde-model.s3-eu-west-1.amazonaws.com/Tilde_MODEL_Corpus.html
+
+* nice website of lyrics translations:
+https://lyricstranslate.com/
+
+
+* from here: https://github.com/neulab/word-embeddings-for-nmt
+
+* http://phontron.com/data/ted_talks.tar.gz
+
+
+* PHP-documentation
+http://www.php.net/download-docs.php
+(http://php.rinet.ru/download-docs.php)
+
+
+* linux on-line magazine		http://www.linuxfocus.org/
+* gnu				http://www.gnu.org
+* linux documentation project	http://tldp.org/
+
+
+* franska+engelska:	http://www.gutenberg.org/index/by-author/ve2.html
+* isländska:		http://www.snerpa.is/net/
+
+
 * eur-lex
 http://eur-lex.europa.eu/Notice.do?mode=dbl&lang=pl&lng1=pl,en&lng2=bg,cs,da,de,el,en,es,et,fi,fr,hu,it,lt,lv,mt,nl,pl,pt,ro,sk,sl,sv,&val=225365:cs&page=1&hwords=bieganie~
 
@@ -41,7 +70,7 @@ http://www.kicktionary.de/
 http://www.kicktionary.de/cv.html
 
 
-Dutch Parallel Corpus
+* Dutch Parallel Corpus
 (non-commercial use)
 http://www.inl.nl/en/corpora/dpc-corpus
 
@@ -65,7 +94,7 @@ http://www.vasamuseet.se/Vasamuseet/international/French.aspx?lang=en
 ....
 
 
-parallel books
+* parallel books
 http://docstore.mik.ua/manuals/freebsd.html
 http://docstore.mik.ua/orelly/
 http://www.e-reading.org.ua/

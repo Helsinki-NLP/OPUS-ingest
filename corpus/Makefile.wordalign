@@ -87,7 +87,12 @@ TRGCORPUS  = ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
 # (based on size on source language tokens)
 
 # CORPUS_SIZE = ${shell sed -n '2p' ${CORPUSRELEASE}/info/${LANGPAIR}.txt.info}
-CORPUS_SIZE = ${shell sed -n '3p' ${CORPUSRELEASE}/info/${LANGPAIR}.info}
+# CORPUS_SIZE = ${shell sed -n '3p' ${CORPUSRELEASE}/info/${LANGPAIR}.info}
+
+## take the biggest size of source and target corpus
+CORPUS_SIZE1 = ${shell sed -n '3p' ${CORPUSRELEASE}/info/${LANGPAIR}.info}
+CORPUS_SIZE2 = ${shell sed -n '4p' ${CORPUSRELEASE}/info/${LANGPAIR}.info}
+CORPUS_SIZE  = ${shell if [[ ${CORPUS_SIZE1} -gt ${CORPUS_SIZE1} ]]; then echo ${CORPUS_SIZE1}; else echo ${CORPUS_SIZE2}; fi }
 
 ifndef EFLOMAL_PRIORS
   EFLOMAL_PRIORS = $(OPUSHOME)/eflomal
@@ -139,6 +144,8 @@ EXTRACT_MEM = ${shell \
 	  echo "250g"; \
 	elif [ ${CORPUS_SIZE} -gt 250000000 ]; then \
 	  echo "196g"; \
+	elif [ ${CORPUS_SIZE} -gt 150000000 ]; then \
+	  echo "160g"; \
 	elif [ ${CORPUS_SIZE} -gt 100000000 ]; then \
 	  echo "120g"; \
 	elif [ ${CORPUS_SIZE} -gt 50000000 ]; then \

@@ -19,16 +19,22 @@ all:
 	${MAKE} copy-tmx-files
 	${MAKE} publish
 
+more:
+	${MAKE} moses
+	${MAKE} copy-tmx-files
+	${MAKE} publish
+
+
 copy-tmx-files:
 	mkdir -p ${CORPUSRELEASE}/tmx
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
 	    if [[ "$$s" < "$$t" ]]; then \
-	      if [ -e "src/$$s-$$t.bicleaner07.tmx.gz" ]; then \
-		rsync src/$$s-$$t.bicleaner07.tmx.gz ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
+	      if [ -e "src/$$s-$$t.${FILTER}.tmx.gz" ]; then \
+		rsync src/$$s-$$t.${FILTER}.tmx.gz ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
 		touch ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
-	      elif [ -e "src/$$t-$$s.bicleaner07.tmx.gz" ]; then \
-		rsync src/$$t-$$s.bicleaner07.tmx.gz ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
+	      elif [ -e "src/$$t-$$s.${FILTER}.tmx.gz" ]; then \
+		rsync src/$$t-$$s.${FILTER}.tmx.gz ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
 		touch ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
 	      fi \
 	    fi \

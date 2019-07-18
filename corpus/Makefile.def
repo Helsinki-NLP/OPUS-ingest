@@ -91,10 +91,13 @@ ifndef LANGUAGES
                       $(notdir $(wildcard ${CORPUSSRC}/??_??)) \
                       $(notdir $(wildcard ${CORPUSRAW}/??)) \
                       $(notdir $(wildcard ${CORPUSRAW}/???)) \
-                      $(notdir $(wildcard ${CORPUSRAW}/??_??)) \
-		      ${patsubst %.raw.tar.gz,%,\
-			$(notdir $(wildcard ${CORPUSHTML}/*.raw.tar.gz))})
+                      $(notdir $(wildcard ${CORPUSRAW}/??_??)))
 endif
+
+## removed this from old versions:
+#		      ${patsubst %.raw.tar.gz,%,\
+#			$(notdir $(wildcard ${CORPUSHTML}/*.raw.tar.gz))})
+
 
 ## all language pairs sorted by lang IDs
 ## only one combination
