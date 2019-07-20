@@ -12,17 +12,38 @@ all: fetch
 	${MAKE} -C ${CORPUSXML} create-align-files
 
 
-CONVERTED_DONE = ${patsubst %.tmx.zip,%.done,${wildcard *.tmx.zip}}
+## NEW: do one conversion per sub-corpus
+
+SUBSETS = ${sort ${basename ${basename ${basename ${wildcard *.tmx.zip}}}}}
+SUBSETS_DONE = ${patsubst %,%.done,${SUBSETS}}
 
 .PHONY: convert
-convert: ${CONVERTED_DONE}
+convert: ${SUBSETS_DONE}
 
-%.done: %.tmx.zip
+%.done:
 	mkdir -p ${CORPUSRAW}
 	( cd ${CORPUSRAW} && \
-	  unzip -p ${PWD}/$< | \
-	  tmx2opus -o $(notdir $(@:.done=.xml.gz)) )
+	  unzip -p '${PWD}/$(@:.done=)*.tmx.zip' | \
+	  tmx2opus -u -d -o $(notdir $(@:.done=.xml.gz)) )
 	touch $@
+
+
+
+# ## OLD: do each TMX file separately
+
+# CONVERTED_DONE = ${patsubst %.tmx.zip,%.done,${wildcard *.tmx.zip}}
+
+# .PHONY: convert
+# convert: ${CONVERTED_DONE}
+
+# %.done: %.tmx.zip
+# 	mkdir -p ${CORPUSRAW}
+# 	( cd ${CORPUSRAW} && \
+# 	  unzip -p ${PWD}/$< | \
+# 	  tmx2opus -o $(notdir $(@:.done=.xml.gz)) )
+# 	touch $@
+
+
 
 EESC = ${shell \
 	for s in de en fr; do \

@@ -81,7 +81,8 @@ LANG_INFO = $(patsubst %,${CORPUSRELEASE}/info/%.info,${LANGUAGES})
 
 
 # script for creating websites
-MAKEHTML   = opus-website
+# MAKEHTML   = opus-website
+MAKEHTML   = ${HOME}/bin/opus-website
 
 ## some scripts for conversion
 ## TODO: should update to some better implementation
