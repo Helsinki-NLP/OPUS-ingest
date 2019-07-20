@@ -20,15 +20,21 @@ all:
 	${MAKE} -C xml create-align-files
 	${MAKE} annotate
 	${MAKE} same-language
-	${MAKE} OPUS2MOSES=scripts/xces2plain moses tmx
+	${MAKE} moses tmx
 	${MAKE} sample-files
 	${MAKE} publish
 
+
+## BEFORE MOVING TO NEW opus2moses:
+# 	${MAKE} OPUS2MOSES=scripts/xces2plain moses tmx
+
+## EXTRA stuff:
 #	${MAKE} udparse
 #	${MAKE} wordalign
 
+
 more:
-	${MAKE} OPUS2MOSES=scripts/xces2plain moses tmx
+	${MAKE} moses tmx
 	${MAKE} sample-files
 	${MAKE} publish
 

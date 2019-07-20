@@ -87,7 +87,11 @@ MAKEHTML   = ${HOME}/bin/opus-website
 ## some scripts for conversion
 ## TODO: should update to some better implementation
 TAB2TMX    = ${OPUSTOOLS}/tab2tmx
-OPUS2MOSES = $(OPUSTOOLS)/xces2moses
+OPUS2MOSES = opus2moses
+
+## OLD
+# OPUS2MOSES = $(OPUSTOOLS)/xces2moses
+
 
 # file with all packages that can be distributed
 # PACKDIRS = subdir's that will be included in tar-ball
@@ -559,7 +563,6 @@ $(TMX) $(TMX_STRICT): ${CORPUSRELEASE}/tmx/%.tmx.gz: ${CORPUSRELEASE}/moses/%.tx
 # convert all bitexts to Moses format
 #----------------------------------------------------------------------------
 
-
 .PHONY: moses
 moses: ${CORPUSRELEASE} $(MOSES)
 
@@ -569,19 +572,12 @@ $(MOSES): ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSXML}/%.xml.gz
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  BASE=${CORPUS}.$(patsubst %.xml.gz,%,$(notdir $<));\
 	  if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
-	  $(OPUS2MOSES) -d ${CORPUSRAW} -s $$S -t $$T \
-		-P $$BASE.ids \
-		$< $$BASE; \
+	  zcat $< |\
+	  $(OPUS2MOSES) -r -d ${CORPUSRAW} \
+		-e $$BASE.$$S \
+		-f $$BASE.$$T \
+		-b $$BASE.xml; \
 	  rm -f $@; \
-	  sed 's/  */ /g' < $$BASE.$$S > $$BASE.$$S.tmp; \
-	  sed 's/  */ /g' < $$BASE.$$T > $$BASE.$$T.tmp; \
-	  mv $$BASE.$$S.tmp $$BASE.$$S; \
-	  mv $$BASE.$$T.tmp $$BASE.$$T; \
-	  if [ -e "$$BASE.ids" ]; then \
-	    cat $$BASE.ids | ${OPUSTOOLS}/wordalign/ids2links.pl > $$BASE.xml;\
-	  else \
-	    gzip -cd $< > $$BASE.xml; \
-	  fi; \
 	  ${MKDIR} ${TMPDIR}/$$BASE; \
 	  ${MAKE} PACKAGE="${CORPUS}.$$S-$$T in Moses format" ${TMPDIR}/$$BASE/README; \
 	  rm -f $$BASE.ids; \
@@ -595,6 +591,23 @@ $(MOSES): ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSXML}/%.xml.gz
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
 
+
+# ## OLD:
+# 	  $(OPUS2MOSES) -d ${CORPUSRAW} -s $$S -t $$T \
+# 		-P $$BASE.ids \
+# 		$< $$BASE; \
+# 	  rm -f $@; \
+# 	  sed 's/  */ /g' < $$BASE.$$S > $$BASE.$$S.tmp; \
+# 	  sed 's/  */ /g' < $$BASE.$$T > $$BASE.$$T.tmp; \
+# 	  mv $$BASE.$$S.tmp $$BASE.$$S; \
+# 	  mv $$BASE.$$T.tmp $$BASE.$$T; \
+# 	  if [ -e "$$BASE.ids" ]; then \
+# 	    cat $$BASE.ids | ${OPUSTOOLS}/wordalign/ids2links.pl > $$BASE.xml;\
+# 	  else \
+# 	    gzip -cd $< > $$BASE.xml; \
+# 	  fi; \
+
+
 ## plain text bitexts with 1:1 sentence alignments
 .PHONY: moses-strict
 moses-strict: ${CORPUSRELEASE} $(MOSES_STRICT)
@@ -606,21 +619,28 @@ $(MOSES_STRICT): ${CORPUSRELEASE}/moses/%.strict.txt.zip: ${CORPUSXML}/%.xml.gz
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  BASE=${CORPUS}.$(patsubst %.xml.gz,%,$(notdir $<));\
 	  if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
-	  $(OPUS2MOSES) -d ${CORPUSRAW} -s $$S -t $$T \
-		-P $$BASE.ids \
-		$(<:gz=11) $$BASE; \
+	  cat $(<:gz=11) |\
+	  $(OPUS2MOSES) -r -d ${CORPUSRAW} \
+		-e $$BASE.$$S \
+		-f $$BASE.$$T \
+		-b $$BASE.xml; \
 	  rm -f $@; \
 	  ${MKDIR} ${TMPDIR}/$$BASE; \
 	  ${MAKE} PACKAGE="${CORPUS}.$$S-$$T in Moses format" ${TMPDIR}/$$BASE/README; \
 	  ${MAKE} ${TMPDIR}/$$BASE/LICENSE; \
 	  zip -j $@ ${TMPDIR}/$$BASE/README ${TMPDIR}/$$BASE/LICENSE \
-			$$BASE.$$S $$BASE.$$T $$BASE.ids; \
+			$$BASE.$$S $$BASE.$$T $$BASE.xml; \
 	  rm -f $$BASE.$$S $$BASE.$$T $$BASE.ids ${TMPDIR}/$$BASE/README;\
 	  rmdir ${TMPDIR}/$$BASE; )
 	rm -f $(<:gz=11)
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
+
+## OLD:
+#	  $(OPUS2MOSES) -d ${CORPUSRAW} -s $$S -t $$T \
+#		-P $$BASE.ids \
+#		$(<:gz=11) $$BASE; \
 
 
 .PHONY: smt
