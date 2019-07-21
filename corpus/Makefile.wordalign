@@ -82,6 +82,9 @@ endif
 CORPUSBASE = c.clean
 SRCCORPUS  = ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
 TRGCORPUS  = ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
+BITEXT     = ${SRC}-${TRG}/bitext.xml.gz
+
+
 
 # try to guess memory and time consumption for batch jobs
 # (based on size on source language tokens)
@@ -415,10 +418,6 @@ ${BITEXTS}: %: %/.${ACTION}
 ## NEW: submit next job if NEXTJOB is set
 %/.${ACTION}:
 	mkdir -p ${CORPUSWORDALIGN}/${@:/.${ACTION}=}
-## OLD (delete?)
-#	if [ ! -e ${@:/.${ACTION}=} ]; then \
-#	  ln -s ${CORPUSWORDALIGN}/${@:/.${ACTION}=} ${@:/.${ACTION}=}; \
-#	fi
 	find ${dir $@} -type f -empty ! -iname '.*'
 	${MAKE} SRC=$(firstword $(subst -, ,${@:/.${ACTION}=})) \
 		TRG=$(lastword $(subst -, ,${@:/.${ACTION}=})) \
@@ -446,7 +445,7 @@ endif
 ## define some actions (prepare, align, ...)
 
 .PHONY: wordalign-prepare
-wordalign-prepare: ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
+wordalign-prepare: ${SRCCORPUS}
 
 .PHONY: wordalign-align
 wordalign-align: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
@@ -456,15 +455,15 @@ wordalign-pt: ${SRC}-${TRG}/model/phrase-table.gz
 
 .PHONY: wordalign-no-filter
 wordalign-no-filter: ${SRC}-${TRG}/model/phrase-table.gz
-	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
-	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
+	rm -f ${SRCCORPUS}
+	rm -f ${TRGCORPUS}
 	${MAKE} ${LANGPAIR}-aligncheck ${LANGPAIR}-bitextcheck
 
 .PHONY: wordalign wordalign-filter
 wordalign-filter wordalign: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 	rm -f ${SRC}-${TRG}/model/phrase-table.gz
-	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz
-	rm -f ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz
+	rm -f ${SRCCORPUS}
+	rm -f ${TRGCORPUS}
 	${MAKE} ${CORPUSHOME}/dic/${SRC}-${TRG}.dic.gz
 	${MAKE} ${LANGPAIR}-aligncheck ${LANGPAIR}-bitextcheck
 
@@ -503,12 +502,27 @@ alignments:
 	-gzip ${SRC}-${TRG}/model/aligned.${ALIGNMENT}
 	rm -f ${SRC}-${TRG}/model/aligned.${ALIGNMENT}
 
+
+## create bitext files
+.PHONY: bitext
+bitext: ${BITEXT}
+	if [ ! -e ${SRCCORPUS} ] || [ ! -e ${TRGCORPUS} ]; then \
+	  zcat ${BITEXT} |\
+	  $(OPUS2MOSES) -r -d ${CORPUSXML} \
+		-e ${patsubst %.gz,%,${SRCCORPUS}} \
+		-f ${patsubst %.gz,%,${TRGCORPUS}}; \
+	  gzip -f ${patsubst %.gz,%,${SRCCORPUS}}; \
+	  gzip -f ${patsubst %.gz,%,${TRGCORPUS}}; \
+	fi
+
+
 # extract phrases and create phrase-table
 
 ${SRC}-${TRG}/model/phrase-table.gz: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
 	mkdir -p ${dir $@}
-	gzip -cd ${SRC}-${TRG}/${CORPUSBASE}.${SRCEXT}.gz > $@.${SRCEXT}
-	gzip -cd ${SRC}-${TRG}/${CORPUSBASE}.${TRGEXT}.gz > $@.${TRGEXT}
+	${MAKE} bitext
+	gzip -cd ${SRCCORPUS} > $@.${SRCEXT}
+	gzip -cd ${TRGCORPUS} > $@.${TRGEXT}
 	${SCRIPTS_ROOTDIR}/training/train-model.perl \
 		-parallel \
 		-external-bin-dir=${HOME}/projects/SMT/bin \
@@ -525,6 +539,12 @@ ${SRC}-${TRG}/model/phrase-table.gz: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
 	${MAKE} cleanup
 
 
+
+## create the corpus files
+
+${BITEXT}: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
+	${MAKE} ${SRCCORPUS} ${TRGCORPUS}
+
 # create clean and truecased data (source and target language)
 
 ${SRC}-${TRG}/c.true.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
@@ -534,8 +554,7 @@ ${SRC}-${TRG}/c.true.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	${OPUSTOOLS}/wordalign/retained-sentences.pl \
 		${SRC}-${TRG}/ids.txt \
 		${SRC}-${TRG}/line_numbers.txt |\
-	${OPUSTOOLS}/wordalign/ids2links.pl |\
-		gzip -c > ${SRC}-${TRG}/bitext.xml.gz
+	${OPUSTOOLS}/wordalign/ids2links.pl | gzip -c > ${BITEXT}
 	rm -f ${SRC}-${TRG}/ids.txt ${SRC}-${TRG}/line_numbers.txt
 	${MAKE} ${CORPUSWORDALIGN}/truecaser/${SRC}
 	${TOOLS}/public/preprocess/recaser/mytruecase.perl \
@@ -561,8 +580,7 @@ ${SRC}-${TRG}/c.clean.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	${OPUSTOOLS}/wordalign/retained-sentences.pl \
 		${SRC}-${TRG}/ids.txt \
 		${SRC}-${TRG}/line_numbers.txt |\
-	${OPUSTOOLS}/wordalign/ids2links.pl |\
-		gzip -c > ${SRC}-${TRG}/bitext.xml.gz
+	${OPUSTOOLS}/wordalign/ids2links.pl | gzip -c > ${BITEXT}
 	rm -f ${SRC}-${TRG}/ids.txt ${SRC}-${TRG}/line_numbers.txt
 	rm -f ${SRC}-${TRG}/c.${SRCEXT} ${SRC}-${TRG}/c.${TRGEXT}
 	gzip -f ${SRC}-${TRG}/c.clean.${SRCEXT} ${SRC}-${TRG}/c.clean.${TRGEXT}
@@ -658,25 +676,26 @@ ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz: \
 # don't delete those intermediate files
 .SECONDARY: ${SRC}-${TRG}/model/aligned.srctotgt.gz ${SRC}-${TRG}/model/aligned.tgttosrc.gz
 
-## OLD: use efmaral
-##
-# %.srctotgt.gz: %.${SRCEXT}-${TRGEXT}
-# 	${EFMARAL} -i $< | gzip -c > $@
-
-# %.tgttosrc.gz: %.${SRCEXT}-${TRGEXT}
-# 	${EFMARAL} -i $< -r | gzip -c > $@
 
 
 ## NEW: use eflomal (less memory usage)
 ## NEW: use priors if they exist (NOTE: need eflomal - priors branch!)
+## NEW: remove dependency on aligned.?? files
 
-%/model/aligned.srctotgt.gz: %/model/aligned.${SRCEXT} %/model/aligned.${TRGEXT}
+%/model/aligned.srctotgt.gz:
+	${MAKE} ${dir $@}model/aligned.${SRCEXT} ${dir $@}model/aligned.${TrgEXT}
 ifneq ("$(wildcard $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors)","")
-	-${EFLOMAL} -v -s $< -t ${word 2,$^} -f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 \
+	-${EFLOMAL} -v \
+		-s ${dir $@}model/aligned.${SRCEXT} \
+		-t ${dir $@}model/aligned.${SRCEXT} \
+		-f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 \
 		-p $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors || \
 	touch ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
 else
-	-${EFLOMAL} -v -s $< -t ${word 2,$^} -f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 || \
+	-${EFLOMAL} -v \
+		-s ${dir $@}model/aligned.${SRCEXT} \
+		-t ${dir $@}model/aligned.${SRCEXT} \
+		-f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 || \
 	touch ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
 endif
 	gzip -f ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
@@ -804,21 +823,11 @@ filter-all-phrase-tables: $(PHRASETABLES)
 .PHONY:
 filter-phrase-table: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 
-# %/phrase-table-filtered.gz: %.src.sa_suffix %.trg.sa_suffix %/phrase-table.gz
-# 	zcat $(subst -filtered,,$@) | \
-# 	${MOSESCONTRIB}/sigtest-filter/filter-pt \
-# 		-f $< \
-# 		-e $(subst src,trg,$<) \
-# 		-l a+e -n 30 2> $(@:.gz=.log) |\
-# 	gzip -c > $@
-# 	rm -f $<* $(subst src,trg,$<)*
-# 	rm -f $^
-# 	gzip -f $(@:.gz=.log)
-
 
 ## NEW: don't depend on suffix arrays anymore (would cause to re-do phrase extraction)
+## NEW: add dependency on alignment file
 
-%/phrase-table-filtered.gz:
+%/phrase-table-filtered.gz: %/aligned.${ALIGNMENT}.gz
 	${MAKE} $(patsubst %/phrase-table-filtered.gz,%.src.sa_suffix,$@) \
 		$(patsubst %/phrase-table-filtered.gz,%.trg.sa_suffix,$@) \
 		${dir $@}phrase-table.gz
@@ -836,42 +845,16 @@ filter-phrase-table: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 
 # create suffix arrays for the bitext (training corpus)
 
-%.src.sa_suffix: ${SRCCORPUS}
-	gzip -cd < $< > $@
+%.src.sa_suffix: bitext
+	gzip -cd < ${SRCCORPUS} > $@
 	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
 
-%.trg.sa_suffix: ${TRGCORPUS}
-	gzip -cd < $< > $@
+%.trg.sa_suffix: bitext
+	gzip -cd < ${TRGCORPUS} > $@
 	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
 
 
-# %.src.sa_suffix: ${SRCCORPUS}
-# 	if [ $(word 1,$(subst -, ,$@)) != $(word 2,$(subst -, ,$(subst /, ,$@))) ]; then \
-# 	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 1,$(subst -, ,$@)).gz > $@; \
-# 	else \
-# 	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 1,$(subst -, ,$@))1.gz > $@; \
-# 	fi
-# 	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
-
-# %.trg.sa_suffix: ${TRGCORPUS}
-# 	if [ $(word 1,$(subst -, ,$@)) != $(word 2,$(subst -, ,$(subst /, ,$@))) ]; then \
-# 	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 2,$(subst -, ,$(subst /, ,$@))).gz > $@; \
-# 	else \
-# 	  gzip -cd < $(dir $@)${CORPUSBASE}.$(word 2,$(subst -, ,$(subst /, ,$@)))2.gz > $@; \
-# 	fi
-# 	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
-
-
-## OLD VERSION OF DIC's
-##
-# ${CORPUSHTML}/dic/%.dic.gz: | %/model/phrase-table-filtered.gz ${CORPUSHOME}/dic
-# 	mkdir -p ${dir $@}
-# 	zcat ${firstword $|} |\
-# 	perl ${OPUSTOOLS}/phrase2dic.pl \
-# 	    -s $(word 1,$(subst -, ,$(subst ., ,${notdir $@}))) \
-# 	    -t $(word 2,$(subst -, ,$(subst ., ,$@))) |\
-# 	gzip -c > $@
-
+## extract word-alignment dictionaries
 
 ${CORPUSHOME}/dic/%.dic.gz: | %/model/phrase-table-filtered.gz
 	mkdir -p ${dir $@}

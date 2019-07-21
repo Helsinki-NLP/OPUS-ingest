@@ -658,6 +658,7 @@ ${WORDALG}: ${CORPUSRELEASE}/smt/%.alg.zip: ${CORPUSWORDALIGN}/% ${CORPUSWORDALI
 		--exclude '*\.wordalign*' \
 		--exclude '*/lex.*' \
 		--exclude '*/phrase*' \
+		--exclude 'c.*' \
 		--exclude '*/c.*' \
 		$</ ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}
 	find ${TMPDIR}/$@/${CORPUS}/smt -type f -name '*.gz' |\

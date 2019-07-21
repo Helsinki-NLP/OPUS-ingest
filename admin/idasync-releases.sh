@@ -23,16 +23,16 @@ TRGDIR=/ida/sa/clarin/corpora/OPUS/releases
 
 ## all sub-corpora (that don't have to be packaged)
 
-CORPORA="Books DGT DOGC \
+CORPORA="ada83 Bianet Books CAPES DGT DOGC \
          EhuHac Elhuyar \
-         EMEA EUbookshop Europarl \
+         EMEA EUbookshop Europarl Finlex fiskmo \
          giga-fren hrenWaC JRC-Acquis \
          MBS memat MontenegrinSubs MPC1 MultiUN \
          News-Commentary \
          OfisPublik OpenOffice \
          ParaCrawl \
-         RF SETIMES SPC Tanzil TED2013 TedTalks TEP \
-         UN Wikipedia WikiSource WMT-News XhosaNavy"
+         RF sardware SciELO SETIMES SPC Tanzil TED2013 TedTalks TEP \
+         UN UNPC wikimedia Wikipedia WikiSource WMT-News XhosaNavy"
 
 
 ## leave "OpenSubtitles" as a separate job
@@ -45,7 +45,9 @@ CORPORA="Books DGT DOGC \
 
 TARCORPORA="ECB EUconst GlobalVoices GNOME \
             KDE4 KDEdoc \
-            PHP Tatoeba Ubuntu"
+            PHP QED Tatoeba Ubuntu"
+
+## Debian infopankki
 
 for c in ${TARCORPORA}; do
     if [ -f "$SRCDIR/$c.tar.gz" ]; then
