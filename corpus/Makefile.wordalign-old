@@ -94,8 +94,6 @@ CORPUS_SIZE1 = ${shell sed -n '3p' ${CORPUSRELEASE}/info/${LANGPAIR}.info}
 CORPUS_SIZE2 = ${shell sed -n '4p' ${CORPUSRELEASE}/info/${LANGPAIR}.info}
 CORPUS_SIZE  = ${shell if [[ ${CORPUS_SIZE1} -gt ${CORPUS_SIZE1} ]]; then echo ${CORPUS_SIZE1}; else echo ${CORPUS_SIZE2}; fi }
 
-
-
 ifndef EFLOMAL_PRIORS
   EFLOMAL_PRIORS = $(OPUSHOME)/eflomal
 endif
@@ -182,9 +180,7 @@ MIN = 1
 MAX = 100
 # MAX = 80
 
-# OPUS2MOSES = $(OPUSTOOLS)/xces2moses
-OPUS2MOSES = opus2moses
-
+OPUS2MOSES = $(OPUSTOOLS)/xces2moses
 
 # all language pairs in the corpus
 
@@ -572,11 +568,12 @@ ${SRC}-${TRG}/c.clean.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 
 ${SRC}-${TRG}/c.${SRCEXT}.gz: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	mkdir -p ${dir $@}
-	zcat $< |\
-	$(OPUS2MOSES) -r -d ${CORPUSXML} \
-		-e ${SRC}-${TRG}/c.${SRCEXT} \
-		-f ${SRC}-${TRG}/c.${TRGEXT} \
-		-b ${SRC}-${TRG}/bitext.xml
+	$(OPUS2MOSES) -d ${CORPUSXML} -s ${SRCEXT} -t ${TRGEXT} \
+		-P ${SRC}-${TRG}/ids \
+		$< ${SRC}-${TRG}/c
+	${OPUSTOOLS}/wordalign/ids2links.pl \
+		< ${SRC}-${TRG}/ids \
+		> ${SRC}-${TRG}/bitext.xml
 	gzip -f ${SRC}-${TRG}/c.${SRCEXT}
 	gzip -f ${SRC}-${TRG}/c.${TRGEXT}
 	gzip -f ${SRC}-${TRG}/bitext.xml
@@ -588,12 +585,9 @@ ${TRGCORPUS}: ${SRCCORPUS}
 
 ${SRC}-${TRG}/c.${SRCEXT}: ${CORPUSXML}/${SRC}-${TRG}.xml.gz
 	mkdir -p ${dir $@}
-	zcat $< |\
-	$(OPUS2MOSES) -r -d ${CORPUSXML} \
-		-e ${SRC}-${TRG}/c.${SRCEXT} \
-		-f ${SRC}-${TRG}/c.${TRGEXT} \
-		-p ${SRC}-${TRG}/ids.txt
-
+	$(OPUS2MOSES) -d ${CORPUSXML} -s ${SRCEXT} -t ${TRGEXT} \
+		-p ${SRC}-${TRG}/ids.txt \
+		$< ${SRC}-${TRG}/c
 
 ${SRC}-${TRG}/c.${TRGEXT}: ${SRC}-${TRG}/c.${SRCEXT}
 
