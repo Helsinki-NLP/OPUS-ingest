@@ -31,7 +31,7 @@ corpus:
 
 ## publish the corpus (create website and download packages)
 .PHONY: publish
-publish: packages webpage cwb-index
+publish: packages webpage
 
 
 ## prepare makefiles

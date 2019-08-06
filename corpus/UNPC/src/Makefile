@@ -74,7 +74,8 @@ ${WORKDIR}/UN${VERSION}-TEI/links: UN${VERSION}-TEI.links.tar.gz
 	done
 
 ## merge all link files into one big alignment file
-## strange: fromDoc and toDoc seem to be wrong ....
+## strange: alignments in xtargets seem to be wrong
+## ---> change fromDoc and toDoc and then swap alignment to match langpair
 ${CORPUSXML}/%.xml.gz: ${WORKDIR}/UN${VERSION}-TEI/links/%
 	mkdir -p ${dir $@}
 	find $< -type f -name '*.lnk' \
@@ -85,7 +86,8 @@ ${CORPUSXML}/%.xml.gz: ${WORKDIR}/UN${VERSION}-TEI/links/%
 	| sed 's/toDoc/fromNewDoc/' \
 	| sed 's/NewDoc/Doc/g' \
 	| sed 's#"Xml/#"#g' 
-	| ../scripts/fix-doclinks.pl >> $@.links; \
+	| ../scripts/fix-doclinks.pl \
+	| opus-swap-align > $@.links; \
 	if [ -s $@.links ]; then \
 	  echo '<?xml version="1.0" encoding="utf-8"?>' > $@.tmp; \
 	  echo '<!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">' >> $@.tmp; \
@@ -116,6 +118,21 @@ swap-align:
 	    fi \
 	  done \
 	done
+
+
+swap-bitexts:
+	@for s in ${LANGUAGES}; do \
+	  for t in ${LANGUAGES}; do \
+	    if [ -e "${CORPUSXML}/$${s}-$${t}.xml.gz" ]; then \
+		echo "swap alignments for $$s and $$t"; \
+		zcat ${CORPUSXML}/$${s}-$${t}.xml.gz |\
+		opus-swap-align |\
+		gzip -c > ${CORPUSXML}/$${t}-$${s}.xml.gz; \
+		mv -f ${CORPUSXML}/$${t}-$${s}.xml.gz ${CORPUSXML}/$${s}-$${t}.xml.gz; \
+	    fi \
+	  done \
+	done
+
 
 
 fix-align:

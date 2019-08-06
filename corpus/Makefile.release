@@ -87,7 +87,8 @@ MAKEHTML   = ${HOME}/bin/opus-website
 ## some scripts for conversion
 ## TODO: should update to some better implementation
 TAB2TMX    = ${OPUSTOOLS}/tab2tmx
-OPUS2MOSES = opus2moses
+OPUS2MOSES = ${HOME}/bin/opus2moses
+# OPUS2MOSES = opus2moses
 
 ## OLD
 # OPUS2MOSES = $(OPUSTOOLS)/xces2moses

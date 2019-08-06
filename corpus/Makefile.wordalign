@@ -284,7 +284,7 @@ submit-wordalign-prepare:
 	if [ ! -e ${LANGPAIR}/.wordalign-prepare ]; then \
 	  rm -f ${LANGPAIR}.submit; \
 	  ${MAKE} HPC_TIME=${ALIGN_TIME}:00 \
-		  HPC_MEM=4g \
+		  HPC_MEM=8g \
 		  HPC_CORES=1 \
 		  HPC_MODULES="${HPC_MODULES} nlpl-efmaral" \
 		  EMAIL= \
@@ -521,8 +521,8 @@ bitext: ${BITEXT}
 ${SRC}-${TRG}/model/phrase-table.gz: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
 	mkdir -p ${dir $@}
 	${MAKE} bitext
-	gzip -cd ${SRCCORPUS} > $@.${SRCEXT}
-	gzip -cd ${TRGCORPUS} > $@.${TRGEXT}
+	gzip -cd ${SRCCORPUS} | sed 's/>/&gt;/g;s/</&lt;/g;s/\|/_/g;' > $@.${SRCEXT}
+	gzip -cd ${TRGCORPUS} | sed 's/>/&gt;/g;s/</&lt;/g;s/\|/_/g;' > $@.${TRGEXT}
 	${SCRIPTS_ROOTDIR}/training/train-model.perl \
 		-parallel \
 		-external-bin-dir=${HOME}/projects/SMT/bin \
@@ -640,7 +640,6 @@ ${SRC}-${TRG}/c.clean.${TRGEXT}: ${SRC}-${TRG}/c.clean.${SRCEXT}
 # 	gzip -f ${SRC}-${TRG}/c.${TRGEXT}
 
 
-
 # symmetrised word alignments
 
 ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz: \
@@ -683,18 +682,18 @@ ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz: \
 ## NEW: remove dependency on aligned.?? files
 
 %/model/aligned.srctotgt.gz:
-	${MAKE} ${dir $@}model/aligned.${SRCEXT} ${dir $@}model/aligned.${TrgEXT}
+	${MAKE} ${dir $@}aligned.${SRCEXT} ${dir $@}aligned.${TrgEXT}
 ifneq ("$(wildcard $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors)","")
 	-${EFLOMAL} -v \
-		-s ${dir $@}model/aligned.${SRCEXT} \
-		-t ${dir $@}model/aligned.${SRCEXT} \
+		-s ${dir $@}aligned.${SRCEXT} \
+		-t ${dir $@}aligned.${SRCEXT} \
 		-f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 \
 		-p $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors || \
 	touch ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
 else
 	-${EFLOMAL} -v \
-		-s ${dir $@}model/aligned.${SRCEXT} \
-		-t ${dir $@}model/aligned.${SRCEXT} \
+		-s ${dir $@}aligned.${SRCEXT} \
+		-t ${dir $@}aligned.${SRCEXT} \
 		-f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 || \
 	touch ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
 endif
