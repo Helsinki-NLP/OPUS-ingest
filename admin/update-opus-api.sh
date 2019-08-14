@@ -2,6 +2,8 @@
 #
 # update the OPUS API DB and copy to the pouta instance
 
+echo "Starting at `date`"
+
 module load python-env/3.5.3
 
 OPUSAPIDIR=/proj/OPUS/API
@@ -19,12 +21,20 @@ if [ -e opusdata.db ]; then
   echo "saved old database in backups/${d}_opusdata.db ..."
 fi
 
-echo -e "\nCreating opusdata.db ..."
-python3 readopusdata.py
+echo -e "\nCreating opusdata.db in `pwd` ..."
+python3 readopusdata.py || echo "readopusdata failed!"
 echo -e "\nopusdata.db created"
 
-echo -e "\nUpload database to OPUS server ..."
-chmod 664 opusdata.db
-rsync opusdata.db cloud-user@193.166.25.9:/var/www/OPUS-API/
-ssh cloud-user@193.166.25.9 "sudo service apache2 restart"
+
+if [ -e opusdata.db ]; then 
+  echo -e "\nUpload database to OPUS server ..."
+  chmod 664 opusdata.db
+  rsync -v opusdata.db cloud-user@193.166.25.9:/var/www/OPUS-API/ || echo "rsync failed!"
+  ssh cloud-user@193.166.25.9 "sudo service apache2 restart"
+else
+  echo "no database file created!"
+fi
+
 echo -e "\nDatabase update done!"
+
+echo "Finishing at `date`"

@@ -13,14 +13,17 @@ a:hover {background-color: #d8d8d8 ;color: #000000; text-decoration: none;}
 .footer { font-size:10pt; }
 .header { text-align:center;font-size:10pt; }
 
+.header th { font-size:10pt;text-align:center; }
+.header td { font-size:10pt;text-align:center; }
+
 table { 
 	padding:0;
 	border-spacing:0;
 	border-width:0;
 	border-style:none;
 }
-td { padding-right:5px;padding-left:5px; }
-th { padding-right:5px;padding-left:5px; }
+td { padding-right:5px;padding-left:5px;vertical-align:top; }
+th { padding-right:5px;padding-left:5px;vertical-align:top; }
 
 
 .tools table

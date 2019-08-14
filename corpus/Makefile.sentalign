@@ -18,21 +18,61 @@ SENTALIGN    = ${UPLUG} align/$(ALIGNMETHOD)
 
 
 SENTALIGNFILES = $(patsubst %,%.xml.gz,${LANGPAIRS})
-
+TMPLANGTAR     = ${patsubst %,%.tar,${LANGUAGES}}
 
 ## submit sentalign jobs
 ## (one job per language pair)
 
+.PHONY: sentalign-jobs
 sentalign-jobs:
-	mkdir -p log
+	mkdir -p ${CORPUSHOME}/log
+	${MAKE} ${TMPLANGTAR}
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
 	    if [[ "$$s" < "$$t" ]]; then \
 		${MAKE} SRC=$$s TRG=$$t sentalign.submit; \
-		mv sentalign.submit log/sentalign-$$s$$t.submit; \
+		mv sentalign.submit ${CORPUSHOME}/log/sentalign-$$s$$t.submit; \
 	    fi \
 	  done \
 	done
+
+
+
+## only pairs with the current source language
+
+SRCLANGPAIRS = ${shell \
+	  for t in ${LANGUAGES}; do \
+	    if [[ "${SRC}" < "$$t" ]]; then \
+	      echo "${SRC}-$$t"; \
+	    fi \
+	done  }
+
+SRCSENTALIGNFILES = $(patsubst %,%.xml.gz,${SRCLANGPAIRS})
+
+## make all bitexts with the current source language
+sentalign-source: ${SRCSENTALIGNFILES}
+
+## submit align jobs, one per language
+## (to be aligned to all other languages)
+sentalign-source-jobs:
+	mkdir -p ${CORPUSHOME}/log
+	${MAKE} ${TMPLANGTAR}
+	for s in ${LANGUAGES}; do \
+	  ${MAKE} SRC=$$s sentalign-source.submit; \
+	  mv sentalign-source.submit ${CORPUSHOME}/log/sentalign-source-$$s.submit; \
+	done
+
+new-sentalign-source-jobs:
+	mkdir -p ${CORPUSHOME}/log
+	${MAKE} ${TMPLANGTAR}
+	for s in ${LANGUAGES}; do \
+	  if [ ! -e ${CORPUSHOME}/log/sentalign-source-$$s.submit ]; then \
+	    ${MAKE} SRC=$$s sentalign-source.submit; \
+	    mv sentalign-source.submit ${CORPUSHOME}/log/sentalign-source-$$s.submit; \
+	  fi \
+	done
+
+
 
 # make sentalign-all: make sentence alignment files
 #                     for all language pairs
@@ -40,9 +80,10 @@ sentalign-jobs:
 # (translate.txt is created by hunalign - don't know why ...)
 
 .PHONY: sentalign-all align-all all-align
-sentalign-all align-all all-align: ${SENTALIGNFILES}
-	rm -f translate.txt
-	rm -fr data
+sentalign-all align-all all-align:
+	${MAKE} ${TMPLANGTAR}
+	${MAKE} ${SENTALIGNFILES}
+	${MAKE} cleanup
 
 sentalign-print:
 	echo ${SENTALIGNFILES}
@@ -64,6 +105,7 @@ sentalign align:
 ifneq (${SRC},${lastword ${sort ${SRC} ${TRG}}})
 	${MAKE} ${SRC}-${TRG}.xml.gz
 endif
+
 
 
 ## files with the same name are parallel documents!
@@ -89,11 +131,44 @@ endif
 ## new: merge with existing file instead of overwriting it
 ## ---> requires opus-merge-align from opus-tools
 
+## NEW: run in local tempdir to speed up things
+##      for large corpora with many files
+LOCALTMP  := ${shell mktemp -d}
+
+## make temporary archives of all language files
+
+.PHONY: tmplangtar
+tmplangtar: ${TMPLANGTAR}
+
+.PHONY: cleanup
+cleanup:
+	rm -f ${TMPLANGTAR}
+	rm -f translate.txt
+	rm -fr data
+
+
+%.tar: %
+	tar -cf $@ $<
 
 .SECONDEXPANSION:
-${SENTALIGNFILES}: %.xml.gz: $$(firstword $$(subst -, ,$(notdir %))) $$(lastword $$(subst -, ,$(notdir %)))
-	${MAKE} SRC=$(firstword $^) TRG=$(lastword $^) $(notdir $(@:.xml.gz=))
-	-( find $(@:.xml.gz=)/ -type f -name '*.xml.gz' |\
+${SENTALIGNFILES}: %.xml.gz: $$(firstword $$(subst -, ,$(notdir %))).tar $$(lastword $$(subst -, ,$(notdir %))).tar
+	@echo "copy things to local tmpdir ${LOCALTMP}/$@"
+	mkdir -p ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/xml
+	rsync -za Makefile* ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/xml/
+	tar -C ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/xml -xf $(firstword $^)
+	tar -C ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/xml -xf $(lastword $^)
+	-ln -s ${OPUSHOME}/*    ${LOCALTMP}/$@/OPUS/
+	-ln -s ${OPUSCORPORA}/* ${LOCALTMP}/$@/OPUS/corpus/
+	-ln -s ${CORPUSHOME}/*  ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/
+	@echo "align $@ in tmpdir"
+	${MAKE} -C ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/xml \
+		OPUSHOME=${LOCALTMP}/$@/OPUS \
+		SRC=${patsubst %.tar,%,$(firstword $^)} \
+		TRG=${patsubst %.tar,%,$(lastword $^)} \
+	$(notdir $(@:.xml.gz=))
+	@echo "merge alignment files into $@"
+	-( find ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/xml/$(@:.xml.gz=)/ \
+		-type f -name '*.xml.gz' |\
 		sort |\
 		xargs zgrep --no-filename 'link' >> $@.links )
 	if [ -s $@.links ]; then \
@@ -112,11 +187,12 @@ ${SENTALIGNFILES}: %.xml.gz: $$(firstword $$(subst -, ,$(notdir %))) $$(lastword
 	    mv -f $@.tmp.gz $@; \
 	  fi; \
 	fi
+	@echo "cleanup temporary files for alignment of $@"
 	rm -f $@.links
 	rm -fr $(@:.xml.gz=)
-
-
-
+	rm -fr ${LOCALTMP}/$@/OPUS
+	-rmdir ${LOCALTMP}/$@
+	-rmdir ${LOCALTMP}
 
 
 # individual sentence alignment files (for each document pair)

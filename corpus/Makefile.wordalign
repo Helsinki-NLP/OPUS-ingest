@@ -521,8 +521,8 @@ bitext: ${BITEXT}
 ${SRC}-${TRG}/model/phrase-table.gz: ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz
 	mkdir -p ${dir $@}
 	${MAKE} bitext
-	gzip -cd ${SRCCORPUS} | sed 's/>/&gt;/g;s/</&lt;/g;s/\|/_/g;' > $@.${SRCEXT}
-	gzip -cd ${TRGCORPUS} | sed 's/>/&gt;/g;s/</&lt;/g;s/\|/_/g;' > $@.${TRGEXT}
+	gzip -cd ${SRCCORPUS} | sed 's/>/&gt;/g;s/</&lt;/g;s/|/_/g;' > $@.${SRCEXT}
+	gzip -cd ${TRGCORPUS} | sed 's/>/&gt;/g;s/</&lt;/g;s/|/_/g;' > $@.${TRGEXT}
 	${SCRIPTS_ROOTDIR}/training/train-model.perl \
 		-parallel \
 		-external-bin-dir=${HOME}/projects/SMT/bin \
@@ -682,18 +682,18 @@ ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz: \
 ## NEW: remove dependency on aligned.?? files
 
 %/model/aligned.srctotgt.gz:
-	${MAKE} ${dir $@}aligned.${SRCEXT} ${dir $@}aligned.${TrgEXT}
+	${MAKE} ${dir $@}aligned.${SRCEXT} ${dir $@}aligned.${TRGEXT}
 ifneq ("$(wildcard $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors)","")
 	-${EFLOMAL} -v \
 		-s ${dir $@}aligned.${SRCEXT} \
-		-t ${dir $@}aligned.${SRCEXT} \
+		-t ${dir $@}aligned.${TRGEXT} \
 		-f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 \
 		-p $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors || \
 	touch ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
 else
 	-${EFLOMAL} -v \
 		-s ${dir $@}aligned.${SRCEXT} \
-		-t ${dir $@}aligned.${SRCEXT} \
+		-t ${dir $@}aligned.${TRGEXT} \
 		-f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 || \
 	touch ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
 endif
@@ -855,9 +855,9 @@ filter-phrase-table: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 
 ## extract word-alignment dictionaries
 
-${CORPUSHOME}/dic/%.dic.gz: | %/model/phrase-table-filtered.gz
+${CORPUSHOME}/dic/%.dic.gz: %/model/phrase-table-filtered.gz
 	mkdir -p ${dir $@}
-	zcat ${firstword $|} |\
+	zcat $< |\
 	${PHRASE2DICE} -d ${DICETHR} -f ${FREQTHR} -m |\
 	gzip -c > $@
 
