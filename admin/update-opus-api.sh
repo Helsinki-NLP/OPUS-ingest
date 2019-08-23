@@ -4,7 +4,12 @@
 
 echo "Starting at `date`"
 
-module load python-env/3.5.3
+module use -a /proj/nlpl/modules
+module load nlpl-opus
+module load python-env/3.4.1
+module list
+
+# module load python-env/3.5.3
 
 OPUSAPIDIR=/proj/OPUS/API
 cd ${OPUSAPIDIR}/update-opusapi
@@ -22,14 +27,14 @@ if [ -e opusdata.db ]; then
 fi
 
 echo -e "\nCreating opusdata.db in `pwd` ..."
-python3 readopusdata.py || echo "readopusdata failed!"
-echo -e "\nopusdata.db created"
-
+python3 readopusdata.py 
+# || echo "readopusdata failed!"
 
 if [ -e opusdata.db ]; then 
   echo -e "\nUpload database to OPUS server ..."
   chmod 664 opusdata.db
-  rsync -v opusdata.db cloud-user@193.166.25.9:/var/www/OPUS-API/ || echo "rsync failed!"
+  rsync -v opusdata.db cloud-user@193.166.25.9:/var/www/OPUS-API/ 
+  # || echo "rsync failed!"
   ssh cloud-user@193.166.25.9 "sudo service apache2 restart"
 else
   echo "no database file created!"

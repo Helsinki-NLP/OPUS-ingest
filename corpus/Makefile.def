@@ -110,6 +110,15 @@ LANGPAIRS = ${shell \
 	  done \
 	done  }
 
+## all pairs for a specific source language
+## (this is handy to work with all bitexts for the curren language)
+SRCLANGPAIRS = ${shell \
+	for t in ${LANGUAGES}; do \
+	  if [[ "${SRC}" < "$$t" ]]; then \
+	    echo "${SRC}-$$t"; \
+	  fi \
+	done  }
+
 
 # general file extension of files in the corpus
 # (if you add .gz --> all files will be compressed)

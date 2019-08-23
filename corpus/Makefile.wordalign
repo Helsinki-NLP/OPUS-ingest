@@ -196,6 +196,15 @@ ifndef BITEXTS
 			$(wildcard $(CORPUSXML)/*-*.xml.gz))
 endif
 
+## only bitexts with the current source language
+SRCBITEXTS = ${shell \
+	for t in ${LANGUAGES}; do \
+	  if [ -e ${CORPUSXML}/${SRC}-$$t.xml.gz ]; then \
+	    echo "${SRC}-$$t"; \
+	  fi \
+	done  }
+
+
 # truecaser models
 #   TRUECASER_GZ - gzipped model files (that we like to keep after word alignment)
 #   TRUECASER - model files used when creating the truecased bitext
@@ -218,6 +227,14 @@ endif
 .PHONY: all-wordalign wordalign-all
 wordalign-all all-wordalign: ${BITEXTS} clean
 # all-wordalign: ${TRUECASER} ${BITEXTS} clean
+
+wordalign-srcall: ${SRCBITEXTS}
+
+wordalign-srcjobs:
+	for l in ${LANGUAGES}; do \
+	  rm -f wordalign-srcall.submit; \
+	  ${MAKE} SRC=$$l wordalign-srcall.submit; \
+	done
 
 .PHONY: all-cleanup cleanup-all
 claenup-all all-cleanup:

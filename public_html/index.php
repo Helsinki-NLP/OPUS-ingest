@@ -82,7 +82,7 @@
 	  <li><a href="https://opus-repository.ling.helsinki.fi/">OPUS interface</a> (<a href="https://github.com/Helsinki-NLP/OPUS-interface">@github</a>)</li>
 	  <li><a href="https://translate.ling.helsinki.fi">OPUS translator</a> (<a href="https://github.com/Helsinki-NLP/OPUS-translator">@github</a>)</li>
 	  <li><a href="https://pypi.org/project/opustools-pkg/">OPUS tools</a> (Python package)</li>
-	  <li><a href="https://github.com/Helsinki-NLP/">OPUS tools</a> (Perl package)</li>
+	  <li><a href="https://github.com/Helsinki-NLP/opus-tools">OPUS tools</a> (Perl package)</li>
           <li><a href="https://github.com/Helsinki-NLP/Uplug">Uplug</a> (<a href="https://bitbucket.org/tiedemann/uplug">@bitbucket</a>)</li>
 	  <!-- <li><a href="https://github.com/yonkornilov/opus-api">OPUS API</a> by Yonathan Koren</li> -->
         </ul>

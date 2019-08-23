@@ -80,6 +80,18 @@ LANG_INFO = $(patsubst %,${CORPUSRELEASE}/info/%.info,${LANGUAGES})
 # LANG_INFO = $(patsubst %,${CORPUSXML}/%.info,${LANGUAGES})
 
 
+## only CES files for the current source language
+SRCCES = ${shell \
+	for t in ${LANGUAGES}; do \
+	  if [ -e ${CORPUSXML}/${SRC}-$$t.xml.gz ]; then \
+	    echo "${CORPUSXML}/${SRC}-$$t.xml.gz"; \
+	  fi \
+	done  }
+
+
+
+
+
 # script for creating websites
 # MAKEHTML   = opus-website
 MAKEHTML   = ${HOME}/bin/opus-website
@@ -104,6 +116,9 @@ PACKDIRS   = xml raw
 
 ## create directories with read permissions for everyone
 MKDIR = mkdir -p -m 755
+
+
+LOCALTMP  := ${shell mktemp -d}
 
 
 .PHONY: html packages release refresh-html download-dirs webpage website
@@ -539,20 +554,34 @@ tmx: ${CORPUSRELEASE} $(TMX)
 
 tmx-strict: ${CORPUSRELEASE} $(TMX_STRICT)
 
+## only process bitexts with the current source language
+srctmx:
+	${MAKE} CES="${SRCCES}" tmx
+
+## submit jobs for each 
+srctmx-jobs:
+	for l in ${LANGUAGES}; do \
+	  rm -f srctmx.submit; \
+	  ${MAKE} SRC=$$l srctmx.submit; \
+	done
+
+
 $(TMX) $(TMX_STRICT): ${CORPUSRELEASE}/tmx/%.tmx.gz: ${CORPUSRELEASE}/moses/%.txt.zip
 	@${MKDIR} ${dir $@}
-	-unzip $< -x README INFO LICENSE
-	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
-	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
-	  BASE=${CORPUS}.$(patsubst %.txt.zip,%,$(notdir $<));\
-	  SEXT=$$S; TEXT=$$T; \
-	  if [ "$$SEXT" == "$$TEXT" ]; then SEXT=$${SEXT}1;TEXT=$${TEXT}2; fi; \
-	  paste $$BASE.$$SEXT $$BASE.$$TEXT |\
-	  nl | sort -k 2 | uniq -f 1 | sort -n |\
-	  cut -f2,3 |\
-	  $(TAB2TMX) -s $$S -t $$T |\
-	  gzip -c > $@; \
-	  rm -f $$BASE.$$SEXT $$BASE.$$TEXT $$BASE.ids $$BASE.xml; )
+	-( mkdir -p ${LOCALTMP}; \
+	   cd ${LOCALTMP}; \
+	   unzip $< -x README INFO LICENSE; \
+	   S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	   T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	   BASE=${CORPUS}.$(patsubst %.txt.zip,%,$(notdir $<));\
+	   SEXT=$$S; TEXT=$$T; \
+	   if [ "$$SEXT" == "$$TEXT" ]; then SEXT=$${SEXT}1;TEXT=$${TEXT}2; fi; \
+	   paste $$BASE.$$SEXT $$BASE.$$TEXT |\
+	   nl | sort -k 2 | uniq -f 1 | sort -n |\
+	   cut -f2,3 |\
+	   $(TAB2TMX) -s $$S -t $$T |\
+	   gzip -c > $@; \
+	   rm -f $$BASE.$$SEXT $$BASE.$$TEXT $$BASE.ids $$BASE.xml; )
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
@@ -642,6 +671,18 @@ $(MOSES_STRICT): ${CORPUSRELEASE}/moses/%.strict.txt.zip: ${CORPUSXML}/%.xml.gz
 #	  $(OPUS2MOSES) -d ${CORPUSRAW} -s $$S -t $$T \
 #		-P $$BASE.ids \
 #		$(<:gz=11) $$BASE; \
+
+## only process bitexts with the current source language
+srcmoses:
+	${MAKE} CES="${SRCCES}" moses
+
+## submit jobs for each 
+srcmoses-jobs:
+	for l in ${LANGUAGES}; do \
+	  rm -f srcmoses.submit; \
+	  ${MAKE} SRC=$$l srcmoses.submit; \
+	done
+
 
 
 .PHONY: smt
@@ -778,21 +819,23 @@ txt_info: ${TXT_INFO}
 
 ${TXT_INFO}: ${CORPUSRELEASE}/info/%.txt.info: ${CORPUSRELEASE}/moses/%.txt.zip
 	${MKDIR} ${dir $@}
-	-unzip -d . $< -x README INFO LICENSE
-	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
-	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
-	  P=$$S-$$T; \
-	  if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
-	  if [ ! -e ${CORPUS}.$$P.$$S ]; then \
+	-( mkdir -p ${LOCALTMP}; \
+	   cd ${LOCALTMP}; \
+	   unzip -d . $< -x README INFO LICENSE; \
+	   S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	   T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+	   P=$$S-$$T; \
+	   if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
+	   if [ ! -e ${CORPUS}.$$P.$$S ]; then \
 		find home -name "*$$P.$$S" -exec mv {} ${CORPUS}.$$P.$$S \; ; \
 		find home -name "*$$P.$$T" -exec mv {} ${CORPUS}.$$P.$$T \; ; \
 		rm -f $< ;\
 		zip $< ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T; \
-	  fi; \
-	  wc -l < ${CORPUS}.$$P.$$S > $(CORPUSRELEASE)/info/$$P.txt.info; \
-	  wc -w < ${CORPUS}.$$P.$$S >> $(CORPUSRELEASE)/info/$$P.txt.info; \
-	  wc -w < ${CORPUS}.$$P.$$T >> $(CORPUSRELEASE)/info/$$P.txt.info; \
-	  rm -f *$$P.$$S *$$P.$$T *$$P.ids *$$P.xml; )
+	   fi; \
+	   wc -l < ${CORPUS}.$$P.$$S > $(CORPUSRELEASE)/info/$$P.txt.info; \
+	   wc -w < ${CORPUS}.$$P.$$S >> $(CORPUSRELEASE)/info/$$P.txt.info; \
+	   wc -w < ${CORPUS}.$$P.$$T >> $(CORPUSRELEASE)/info/$$P.txt.info; \
+	   rm -f *$$P.$$S *$$P.$$T *$$P.ids *$$P.xml; )
 	chmod 644 $@
 
 
