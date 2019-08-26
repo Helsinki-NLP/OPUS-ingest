@@ -223,6 +223,16 @@ upload-no-smt:
 	done
 	swift post ${CONTAINER} --read-acl ".r:*"
 
+upload-no-tmx-smt:
+	@cd ${OPUS}; \
+	for v in ${VERSIONS}; do \
+	  cd ${CORPUS}; \
+	  find $$v -mindepth 1 -maxdepth 1 -type d -not -path '*\/info' \
+			-not -path '*\/tmx' -not -path '*\/smt' -exec \
+	       swift upload ${CONTAINER} --changed --skip-identical ${SWIFT_EXTRA} {} \; ;\
+	  cd ..; \
+	done
+	swift post ${CONTAINER} --read-acl ".r:*"
 
 
 
@@ -242,3 +252,46 @@ upload-with-latest:
 	done
 
 
+
+
+
+
+
+## new upload target:
+## - one container per version
+## - separate containers for moses, tmx, smt
+## - skip info
+
+upload-new:
+	@cd ${OPUS}; \
+	cd ${CORPUS}; \
+	for v in ${VERSIONS}; do \
+	  cd $$v; \
+	  find . -mindepth 1 -maxdepth 1 -type d \
+		-not -path '*\/moses' \
+		-not -path '*\/tmx' \
+		-not -path '*\/smt' \
+		-not -path '*\/info' -exec \
+	       swift upload ${CONTAINER}-$$v --changed --skip-identical ${SWIFT_EXTRA} {} \; ;\
+	  swift post ${CONTAINER}-$$v --read-acl ".r:*"; \
+	  for d in moses tmx smt; do \
+	    if [ -d $$d ]; then \
+	      cd $$d; \
+	      find . -type f -exec \
+	         swift upload ${CONTAINER}-$$v-$$d --changed --skip-identical ${SWIFT_EXTRA} {} \; ;\
+	      swift post ${CONTAINER}-$$v-$$d --read-acl ".r:*"; \
+	      cd ..; \
+	    fi; \
+	  done; \
+	  cd ..; \
+	done
+
+
+
+delete-new:
+	for v in ${VERSIONS}; do \
+	  swift delete ${CONTAINER}-$$v; \
+	  swift delete ${CONTAINER}-$$v-moses; \
+	  swift delete ${CONTAINER}-$$v-tmx; \
+	  swift delete ${CONTAINER}-$$v-smt; \
+	done

@@ -186,8 +186,8 @@ ifndef DOWNLOADINFO
 endif
 
 
-${OPUSPUB}/${CORPUS}-${VERSION}.php: ${PACKAGES} \
-			${CORPUS_SAMPLES} ${ALG_SAMPLES} \
+
+${OPUSPUB}/${CORPUS}-${VERSION}.php: ${PACKAGES} ${CORPUS_SAMPLES} ${ALG_SAMPLES} \
 			${LANG_INFO} ${CES_INFO} ${TXT_INFO} ${TMX_INFO}
 	${MKDIR} $(dir $@)
 	chmod 755 ${dir $@}
