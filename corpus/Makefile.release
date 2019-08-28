@@ -89,6 +89,23 @@ SRCCES = ${shell \
 	done  }
 
 
+## NEW: reduce packages if we have > 10,000 bitexts in the corpus
+
+REDUCED_PACKAGES   = ${ALG} ${LANG_XML} ${LANG_RAW} ${LANG_UD} ${MONO_TOK} ${MONO_RAW} ${FREQ_COUNTS}
+REDUCED_INFOFILES  = ${LANG_INFO} ${CES_INFO}
+STANDARD_PACKAGES  = ${REDUCED_PACKAGES} $(MOSES) $(TMX) ${SMT} ${WORDALG} ${DIC}
+STANDARD_INFOFILES = ${REDUCED_INFOFILES} ${TXT_INFO} ${TMX_INFO}
+
+ifeq ($(shell test $(words ${CES}) -gt 10000; echo $$?),0)
+  SELECTED_PACKAGES = ${REDUCED_PACKAGES}
+  INFOFILES         = ${REDUCED_INFOFILES}
+else
+  SELECTED_PACKAGES = ${STANDARD_PACKAGES}
+  INFOFILES         = ${STANDARD_INFOFILES}
+endif
+
+show-nrof-packages:
+	echo "nr of packages in release: $(words ${SELECTED_PACKAGES})"
 
 
 
@@ -187,8 +204,7 @@ endif
 
 
 
-${OPUSPUB}/${CORPUS}-${VERSION}.php: ${PACKAGES} ${CORPUS_SAMPLES} ${ALG_SAMPLES} \
-			${LANG_INFO} ${CES_INFO} ${TXT_INFO} ${TMX_INFO}
+${OPUSPUB}/${CORPUS}-${VERSION}.php: ${PACKAGES} ${CORPUS_SAMPLES} ${ALG_SAMPLES} ${INFOFILES}
 	${MKDIR} $(dir $@)
 	chmod 755 ${dir $@}
 	chmod 755 ${OPUSPUB}/${CORPUS}
@@ -207,13 +223,10 @@ ${OPUSPUB}/${CORPUS}.php: ${OPUSPUB}/${CORPUS}-${VERSION}.php
 	( cd ${OPUSPUB}; ln -s $(notdir $<) $(notdir $@) )
 
 
-${PACKAGES}:	${CORPUSRELEASE} ${ALG} \
+${PACKAGES}:	${CORPUSRELEASE} \
 		${CORPUSRELEASE}/LICENSE \
-		${LANG_XML} ${LANG_RAW} ${LANG_UD} \
-		${MONO_TOK} ${MONO_RAW} \
-		$(MOSES) $(TMX) ${FREQ_COUNTS} \
-		${SMT} ${WORDALG} ${DIC} \
-		${CORPUSRELEASE}/README
+		${CORPUSRELEASE}/README \
+		${SELECTED_PACKAGES}
 	${MKDIR} ${dir $@}
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
@@ -693,8 +706,9 @@ smt: ${WORDALG} ${SMT}
 wordalg: ${WORDALG}
 
 ## a zip file of word alignments (including corpus files)
-${WORDALG}: ${CORPUSRELEASE}/smt/%.alg.zip: ${CORPUSWORDALIGN}/% ${CORPUSWORDALIGN}/%/bitext.xml.gz
-	@${MKDIR} ${dir $@}
+${WORDALG}: ${CORPUSRELEASE}/smt/%.alg.zip: ${CORPUSWORDALIGN}/% # ${CORPUSWORDALIGN}/%/bitext.xml.gz
+ifneq ($(wildcard $</model/aligned.grow-diag-final-and.gz),)
+	${MKDIR} ${dir $@}
 	${MKDIR} ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}
 	rsync -a \
 		--exclude '*\.wordalign*' \
@@ -706,39 +720,40 @@ ${WORDALG}: ${CORPUSRELEASE}/smt/%.alg.zip: ${CORPUSWORDALIGN}/% ${CORPUSWORDALI
 	find ${TMPDIR}/$@/${CORPUS}/smt -type f -name '*.gz' |\
 	xargs -P 8 gunzip -f
 	${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README
-	-rm -f $@
+	rm -f $@
 	( cd ${TMPDIR}/$@; zip -r $@ README ${CORPUS}; cd ${PWD} )
 	rm -fr ${TMPDIR}/$@
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
+endif
+
 
 .PHONY: pt
 pt: ${SMT}
 
 ## a zip file of SMT phrase translation tables
 ${SMT}: ${CORPUSRELEASE}/smt/%.zip: ${CORPUSWORDALIGN}/%
-	if [ -e $</model/phrase-table-filtered.gz ]; then \
-	  ${MKDIR} ${dir $@}; \
-	  ${MKDIR} ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}; \
-	  rsync -a \
+ifneq ($(wildcard $</model/phrase-table-filtered.gz),)
+	${MKDIR} ${dir $@}
+	${MKDIR} ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}
+	rsync -a \
 		--include '*/lex.*' \
 		--include '*/phrase*' \
 		--include="*/" \
 		--exclude="*" \
-		$</ ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}; \
-	  find ${TMPDIR}/$@/${CORPUS}/smt -type f -name '*.gz' |\
-	  xargs -P 8 gunzip -f; \
-	  ${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README; \
-	  rm -f $@; \
-	  ( cd ${TMPDIR}/$@; zip -r $@ README ${CORPUS}; cd ${PWD} ); \
-	  rm -fr ${TMPDIR}/$@; \
-	  ${MKDIR} ${dir ${PACKAGES}}; \
-	  echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}; \
-	  chmod 644 $@; \
-	else \
-	  rm -f $@; \
-	fi
+		$</ ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}
+	find ${TMPDIR}/$@/${CORPUS}/smt -type f -name '*.gz' |\
+	xargs -P 8 gunzip -f
+	${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README
+	rm -f $@
+	( cd ${TMPDIR}/$@; zip -r $@ README ${CORPUS}; cd ${PWD} )
+	rm -fr ${TMPDIR}/$@
+	${MKDIR} ${dir ${PACKAGES}}
+	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+	chmod 644 $@
+endif
+
 
 .PHONY: dic-release
 dic-release: ${DIC}

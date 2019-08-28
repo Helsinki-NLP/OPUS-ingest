@@ -10,7 +10,9 @@
 
 
 ## include generic target for submitting jobs
-include ../corpus/Makefile.submit
+ifneq ($(wildcard ../corpus/Makefile.submit),)
+  include ../corpus/Makefile.submit
+endif
 
 
 ## location on taito and abel
@@ -29,6 +31,42 @@ VERSIONS = ${notdir ${shell find ${OPUS}/${CORPUS} -maxdepth 1 -mindepth 1 -type
 ## container name for object storage
 CONTAINER = OPUS-${CORPUS}
 
+DATE = ${shell date '+%F'}
+
+## file statistics
+statistics: ${OPUS}/statistics-${DATE}.md
+
+## print usage on ObjectStorage
+storage-usage:
+	module load bioconda/3
+	source /appl/opt/allas_conf
+	rclone about pouta:
+
+${OPUS}/statistics-${DATE}.md:
+	echo '# Some file statistics of OUS releases' > $@
+	echo '' >> $@
+	echo "* size per corpus" >> $@
+	echo '' >> $@
+	echo '```' >> $@
+	cd ${OPUS} && du -hs * |\
+	grep -v statistics |\
+	grep -v README >> $@
+	echo '```' >> $@
+	echo '' >> $@
+	echo "* total size" >> $@
+	echo '' >> $@
+	echo '```' >> $@
+	du -hs . >> $@
+	echo '```' >> $@
+	echo '' >> $@
+	echo "* nr of files per corpus" >> $@
+	echo '' >> $@
+	echo '```' >> $@
+	for c in ${CORPORA}; do \
+	  echo -n "$$c: "; \
+	  find ${OPUS}/$$c -type f | wc -l >> $@; \
+	done
+	echo '```' >> $@
 
 
 update-api:
@@ -89,23 +127,38 @@ opus2abel-moses:
 ## (SWIFT_EXTRA can be set to extra swift arguments to take care
 ##  of bigger files - see 'all')
 ##
+## BIG_CORPORA ...... corpora with files > 5G
+## MASSIVE_CORPORA .. corpora with lots of languages (bitexts)
+##
 ##-------------------------------------------------------------------
 
 BIG_CORPORA = giga-fren MultiUN EUbookshop ParaCrawl OpenSubtitles
+MASSIVE_CORPORA = JW300 Ubuntu GNOME
 SWIFT_EXTRA = 
 
-upload-all: upload-all-small upload-all-big
+upload-all: upload-all-normal upload-all-big upload-all-massive
 
-upload-all-small:
-	@for c in $(filter-out ${BIG_CORPORA},${CORPORA}); do \
+upload-all-normal:
+	@for c in $(filter-out ${MASSIVE_CORPORA} ${BIG_CORPORA},${CORPORA}); do \
 	    ${MAKE} CORPUS=$$c upload; \
 	done
 
 upload-all-big:
-	@for c in $(filter ${BIG_CORPORA},${CORPORA}); do \
+	@for c in ${BIG_CORPORA}; do \
 	    ${MAKE} CORPUS=$$c SWIFT_EXTRA='--use-slo --segment-size 5G' upload; \
 	    swift post OPUS-$$c_segments --read-acl ".r:*"; \
 	done
+
+upload-all-massive:
+	@for c in ${MASSIVE_CORPORA}; do \
+	    ${MAKE} CORPUS=$$c upload-no-moses-tmx-smt; \
+	done
+
+
+
+
+
+
 
 upload-opensubs:
 	${MAKE} CORPUS=OpenSubtitles SWIFT_EXTRA='--use-slo --segment-size 5G' upload
@@ -217,7 +270,7 @@ upload-no-smt:
 	for v in ${VERSIONS}; do \
 	  cd ${CORPUS}; \
 	  find $$v -mindepth 1 -maxdepth 1 -type d -not -path '*\/info' \
-			-not -path '*\/smt' -exec \
+			-not -path '*\/smt' -not -path '*\/dic' -exec \
 	       swift upload ${CONTAINER} --changed --skip-identical ${SWIFT_EXTRA} {} \; ;\
 	  cd ..; \
 	done
@@ -228,13 +281,23 @@ upload-no-tmx-smt:
 	for v in ${VERSIONS}; do \
 	  cd ${CORPUS}; \
 	  find $$v -mindepth 1 -maxdepth 1 -type d -not -path '*\/info' \
-			-not -path '*\/tmx' -not -path '*\/smt' -exec \
+			-not -path '*\/tmx' -not -path '*\/smt' -not -path '*\/dic' -exec \
 	       swift upload ${CONTAINER} --changed --skip-identical ${SWIFT_EXTRA} {} \; ;\
 	  cd ..; \
 	done
 	swift post ${CONTAINER} --read-acl ".r:*"
 
-
+upload-no-moses-tmx-smt:
+	@cd ${OPUS}; \
+	for v in ${VERSIONS}; do \
+	  swift delete ${CONTAINER} $$v/moses; \
+	  cd ${CORPUS}; \
+	  find $$v -mindepth 1 -maxdepth 1 -type d -not -path '*\/info' \
+			-not -path '*\/moses' -not -path '*\/tmx' -not -path '*\/smt' -not -path '*\/dic' -exec \
+	       swift upload ${CONTAINER} --changed --skip-identical ${SWIFT_EXTRA} {} \; ;\
+	  cd ..; \
+	done
+	swift post ${CONTAINER} --read-acl ".r:*"
 
 
 

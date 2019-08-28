@@ -28,6 +28,7 @@ corpus:
 	${MAKE} align
 	${MAKE} udparse
 	${MAKE} wordalign
+	${MAKE} cwb-index
 
 ## publish the corpus (create website and download packages)
 .PHONY: publish

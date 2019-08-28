@@ -27,8 +27,6 @@ LANGPAIRS = ${shell \
 	  done \
 	done  }
 
-ttt:
-	echo ${LANGPAIRS}
 
 .SECONDEXPANSION:
 

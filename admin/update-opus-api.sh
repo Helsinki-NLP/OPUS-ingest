@@ -4,6 +4,8 @@
 
 echo "Starting at `date`"
 
+## for some reason module is not available in cron-jobs ...
+## --> why?
 module use -a /proj/nlpl/modules
 module load nlpl-opus
 module load python-env/3.4.1
@@ -27,7 +29,11 @@ if [ -e opusdata.db ]; then
 fi
 
 echo -e "\nCreating opusdata.db in `pwd` ..."
-python3 readopusdata.py 
+
+## because we cannot load modules we need to give the full path for python3
+## ---> do we need this? Does this work without setting up proper environment?
+# python3 readopusdata.py 
+/appl/opt/python/3.4.1-gcc491-shared/bin/python3 readopusdata.py 
 # || echo "readopusdata failed!"
 
 if [ -e opusdata.db ]; then 

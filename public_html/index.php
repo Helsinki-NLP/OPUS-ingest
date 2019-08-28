@@ -27,6 +27,7 @@
   <div class="news">
     <h3>Latest News</h3>
     <ul>
+      <li>2019-08-28: <a href="JW300.php">JW300 corpus</a> added</li>
       <li>2019-08-14: Various new and updated corpora</li>
     <li>2018-10-06: New corpus: <a href="memat.php">memat</a> (Xhosa/English)</li>
     <li>2018-02-15: New corpora: <a href="ParaCrawl.php">ParaCrawl</a>, <a href="XhosaNavy.php">XhosaNavy</a></li>
@@ -146,17 +147,18 @@
           <li><a href="GNOME.php">GNOME</a> - GNOME localization files</li>
           <li><a href="hrenWaC.php">The Croatian - English WaC corpus</a></li>
           <li><a href="JRC-Acquis.php">JRC-Acquis- legislative EU texts</a></li>
+          <li><a href="JW300.php">JW300 multilingual corpus</a></li>
           <li><a href="KDE4.php">KDE4 - KDE4 localization files (v.2)</a></li>
           <li><a href="KDEdoc.php">KDEdoc - the KDE manual corpus</a></li>
           <li><a href="MBS.php">MBS - Belgisch Staatsblad corpus</a></li>
           <li><a href="memat.php">memat - Xhosa/English parallel data</a></li>
           <li><a href="MontenegrinSubs.php">MontenegrinSubs - Montenegrin movie subtitles</a></li>
           <li><a href="MultiUN.php">MultiUN</a> - Translated UN documents</li>
-          <li><a href="News-Commentary.php">News Commentary</a> (<a href="News-Commentary-v1.php">v11</a>, <a href="News-Commentary-v1.php">v9.1</a>,<a href="News-Commentary-v9.php">v9</a>)</li>
         </ul>
 	    </td>
 	    <td>
         <ul>
+          <li><a href="News-Commentary.php">News Commentary</a> (<a href="News-Commentary-v1.php">v11</a>, <a href="News-Commentary-v1.php">v9.1</a>,<a href="News-Commentary-v9.php">v9</a>)</li>
           <li><a href="OfisPublik.php">OfisPublik</a> - Breton - French parallel texts</li>
           <li><a href="OpenOffice.php">OO - the OpenOffice.org corpus</a> (<a href="OpenOffice-v2.php">v2</a>)</li>
           <li><a href="OpenSubtitles.php">OpenSubtitles</a> - translated subtitles
@@ -178,7 +180,7 @@
           <li><a href="Tatoeba.php">Tatoeba</a> - A DB of translated sentences</li>
           <li><a href="TedTalks.php">TedTalks hr-en</a></li>
           <li><a href="TED2013.php">TED Talks 2013</a></li>
-          <li><a href="TildeModel.php">The Tilde MODEL corpus</a></li>
+          <li><a href="TildeMODEL.php">The Tilde MODEL corpus</a></li>
           <li><a href="TEP.php">TEP</a> - The Tehran English-Persian subtitle corpus</li>
           <li><a href="Ubuntu.php">Ubuntu</a> - Ubuntu localization files</li>
           <li><a href="UN.php">UN</a> - Translated UN documents</li>

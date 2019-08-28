@@ -41,6 +41,7 @@ all:
 	${MAKE} annotate
 	${MAKE} udparse
 	${MAKE} wordalign
+	${MAKE} cwb-index
 	${MAKE} publish
 
 ## standard procedures are specified in the following makefiles
