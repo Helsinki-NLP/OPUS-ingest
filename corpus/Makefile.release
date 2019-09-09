@@ -701,13 +701,15 @@ srcmoses-jobs:
 .PHONY: smt
 smt: ${WORDALG} ${SMT}
 
+smt-test:
+	echo ${WORDALG}
+	echo ${SMT}
 
 .PHONY: wordalg
 wordalg: ${WORDALG}
 
 ## a zip file of word alignments (including corpus files)
 ${WORDALG}: ${CORPUSRELEASE}/smt/%.alg.zip: ${CORPUSWORDALIGN}/% # ${CORPUSWORDALIGN}/%/bitext.xml.gz
-ifneq ($(wildcard $</model/aligned.grow-diag-final-and.gz),)
 	${MKDIR} ${dir $@}
 	${MKDIR} ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}
 	rsync -a \
@@ -726,7 +728,6 @@ ifneq ($(wildcard $</model/aligned.grow-diag-final-and.gz),)
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
-endif
 
 
 .PHONY: pt
@@ -734,7 +735,6 @@ pt: ${SMT}
 
 ## a zip file of SMT phrase translation tables
 ${SMT}: ${CORPUSRELEASE}/smt/%.zip: ${CORPUSWORDALIGN}/%
-ifneq ($(wildcard $</model/phrase-table-filtered.gz),)
 	${MKDIR} ${dir $@}
 	${MKDIR} ${TMPDIR}/$@/${CORPUS}/smt/${notdir $<}
 	rsync -a \
@@ -752,7 +752,6 @@ ifneq ($(wildcard $</model/phrase-table-filtered.gz),)
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
-endif
 
 
 .PHONY: dic-release

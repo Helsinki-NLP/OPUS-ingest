@@ -135,6 +135,7 @@ opus2abel-moses:
 BIG_CORPORA = giga-fren MultiUN EUbookshop ParaCrawl OpenSubtitles
 MASSIVE_CORPORA = JW300 Ubuntu GNOME
 SWIFT_EXTRA = 
+MAXSIZE = 5G
 
 upload-all: upload-all-normal upload-all-big upload-all-massive
 
@@ -145,7 +146,7 @@ upload-all-normal:
 
 upload-all-big:
 	@for c in ${BIG_CORPORA}; do \
-	    ${MAKE} CORPUS=$$c SWIFT_EXTRA='--use-slo --segment-size 5G' upload; \
+	    ${MAKE} CORPUS=$$c SWIFT_EXTRA='--use-slo --segment-size ${MAXSIZE}' upload; \
 	    swift post OPUS-$$c_segments --read-acl ".r:*"; \
 	done
 
@@ -161,7 +162,7 @@ upload-all-massive:
 
 
 upload-opensubs:
-	${MAKE} CORPUS=OpenSubtitles SWIFT_EXTRA='--use-slo --segment-size 5G' upload
+	${MAKE} CORPUS=OpenSubtitles SWIFT_EXTRA='--use-slo --segment-size ${MAXSIZE}' upload
 
 upload-ubuntu:
 	${MAKE} CORPUS=Ubuntu upload-no-smt
@@ -173,7 +174,7 @@ upload-kde4:
 	${MAKE} CORPUS=KDE4 upload
 
 upload-EUbookshop:
-	${MAKE} CORPUS=EUbookshop SWIFT_EXTRA='--use-slo --segment-size 5G' upload
+	${MAKE} CORPUS=EUbookshop SWIFT_EXTRA='--use-slo --segment-size ${MAXSIZE}' upload
 
 
 ## for some reason OpenSubs2018 sometimes breaks
@@ -189,7 +190,7 @@ upload-subs2018-zip-xml:
 	cd OpenSubtitles; \
 	for f in v2018/xml/*.zip; do \
 	  swift upload OPUS-OpenSubtitles --changed --skip-identical \
-		--use-slo --segment-size 5G $$f ;\
+		--use-slo --segment-size ${MAXSIZE} $$f ;\
 	done; \
 	cd ..;
 	swift post OPUS-OpenSubtitles --read-acl ".r:*"
@@ -199,7 +200,7 @@ upload-euBookshop-zip-xml:
 	cd EUbookshop; \
 	for f in v2/xml/*.zip; do \
 	  swift upload OPUS-EUbookshop --changed --skip-identical \
-		--use-slo --segment-size 5G $$f ;\
+		--use-slo --segment-size ${MAXSIZE} $$f ;\
 	done; \
 	cd ..;
 	swift post OPUS-EUbookshop --read-acl ".r:*"
@@ -208,7 +209,7 @@ upload-euBookshop-zip-en-xml:
 	@cd ${OPUS}; \
 	cd EUbookshop; \
 	  swift upload OPUS-EUbookshop --changed --skip-identical \
-		--use-slo --segment-size 5G v2/xml/en.zip ;\
+		--use-slo --segment-size ${MAXSIZE} v2/xml/en.zip ;\
 	cd ..;
 	swift post OPUS-EUbookshop --read-acl ".r:*"
 
@@ -218,7 +219,7 @@ upload-subs2018-zip-raw:
 	cd OpenSubtitles; \
 	for f in v2018/raw/*.zip; do \
 	  swift upload OPUS-OpenSubtitles --changed --skip-identical \
-		--use-slo --segment-size 5G $$f ;\
+		--use-slo --segment-size ${MAXSIZE} $$f ;\
 	done; \
 	cd ..;
 	swift post OPUS-OpenSubtitles --read-acl ".r:*"
@@ -228,7 +229,7 @@ upload-subs2018-gz:
 	cd OpenSubtitles; \
 	for f in v2018/xml/*.gz; do \
 	  swift upload OPUS-OpenSubtitles --changed --skip-identical \
-		--use-slo --segment-size 5G $$f ;\
+		--use-slo --segment-size ${MAXSIZE} $$f ;\
 	done; \
 	cd ..;
 	swift post OPUS-OpenSubtitles --read-acl ".r:*"
@@ -253,6 +254,8 @@ upload:
 	@cd ${OPUS}; \
 	for v in ${VERSIONS}; do \
 	  cd ${CORPUS}; \
+	  echo "running find $$v -mindepth 1 -maxdepth 1 -type d -not -path '*\/info' -exec \
+	       swift upload ${CONTAINER} --changed --skip-identical ${SWIFT_EXTRA} {} \;"; \
 	  find $$v -mindepth 1 -maxdepth 1 -type d -not -path '*\/info' -exec \
 	       swift upload ${CONTAINER} --changed --skip-identical ${SWIFT_EXTRA} {} \; ;\
 	  cd ..; \
@@ -262,7 +265,7 @@ upload:
 
 ## upload for big corpora
 upload-big:
-	${MAKE} SWIFT_EXTRA='--use-slo --segment-size 5G' upload
+	${MAKE} SWIFT_EXTRA='--use-slo --segment-size ${MAXSIZE}' upload
 
 
 upload-no-smt:
