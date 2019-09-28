@@ -44,7 +44,7 @@ copy-tmx-files:
 
 ## submit a job for fetching and processing all data
 all-job:
-	${MAKE} HPC_CORES=4 HPC_MEM=4g HPC_TIME=72:00 convert-job.submit
+	${MAKE} HPC_CORES=4 HPC_MEM=8g HPC_TIME=72:00 convert-job.submit
 
 ## a job for fetching and converting all files
 ## that will submit tokenization jobs when ready
@@ -52,7 +52,7 @@ convert-job:
 	${MAKE} -C src all
 	for l in $(sort $(notdir $(wildcard ${CORPUSRAW}/??))); do \
 	  ${MAKE} MAKEARGS="LANGUAGE=$$l" LANGUAGE=$$l \
-		HPC_CORES=8 HPC_MEM=4g HPC_TIME=48:00 \
+		HPC_CORES=8 HPC_MEM=4g HPC_TIME=72:00 \
 	  tokenize-job.submit; \
 	  rm -f tokenize-job.submit;\
 	done
@@ -65,6 +65,8 @@ tokenize-job:
 	fi
 
 publish-job:
+	${MAKE} moses
+	${MAKE} copy-tmx-files
 	${MAKE} publish
 	${MAKE} wordalign/Makefile
 	${MAKE} -C wordalign submit-all
