@@ -12,6 +12,14 @@ include ../Makefile.def
 ## - prepare, align, annotate corpus (see ../Makefile.process)
 ## - index, package and publish corpus (see ../Makefile.process)
 
+fix-raw:
+	for l in ga  hr  hu  it  lt  lv  mt  nl  pl  pt  ro  sk; do \
+	 mkdir -p raw/$$l; \
+	 zcat raw-unfinished/$$l/bicleaner07.xml.gz > raw/$$l/bicleaner07.xml; \
+	 echo '</text>' >> raw/$$l/bicleaner07.xml; \
+	 gzip raw/$$l/bicleaner07.xml; \
+	done
+
 all:
 	${MAKE} -C src all
 	${MAKE} annotate

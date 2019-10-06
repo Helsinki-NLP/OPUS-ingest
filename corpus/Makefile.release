@@ -202,6 +202,9 @@ ifndef DOWNLOADINFO
   DOWNLOADINFO=<p>Below you can download data files for all language pairs in different formats and with different kind of annotation (if available). You can click on the various links as explained below. In addition to the files shown on this webpage, OPUS also provides pre-compiled word alignments and phrase tables, bilingual dictionaries, frequency counts, and these files can be found through the <a href="/index.php">resources search form on the top-level website of OPUS</a>. 
 endif
 
+ifndef OTHERVERSIONS
+  OTHERVERSIONS=<h3>Other releases:</h3><p><ul>${shell find ${OPUSPUB} -name '${CORPUS}-v*.php' -printf "%f\n" | sort | sed 's/${CORPUS}-\(v.*\).php/<li><a href=\"${CORPUS}-\1.php\">${CORPUS} \1<\/a><\/li>/'}</ul></p>
+endif
 
 
 ${OPUSPUB}/${CORPUS}-${VERSION}.php: ${PACKAGES} ${CORPUS_SAMPLES} ${ALG_SAMPLES} ${INFOFILES}
@@ -210,10 +213,10 @@ ${OPUSPUB}/${CORPUS}-${VERSION}.php: ${PACKAGES} ${CORPUS_SAMPLES} ${ALG_SAMPLES
 	chmod 755 ${OPUSPUB}/${CORPUS}
 	${MAKEHTML} -h ${OPUSPUB} -o ${OPUSHOME} -d ${OPUSRELEASE} \
 		${CORPUS} ${VERSION} |\
-	sed -e 's#<h3>Download</h3>#<h3>Download</h3>${DOWNLOADINFO}${EXTRAHTML}#' \
+	sed -e 's#<h3>Download</h3>#<h3>Download</h3>${DOWNLOADINFO}${EXTRAHTML}${OTHERVERSIONS}#' \
 	    -e 's#<h3>Download</h3>#${CITENOTE}<h3>Download</h3>#' \
-	    -e 's#<h1>${CORPUS}${VERSION}</h1>#<h1>${CORPUS}</h1>#' \
-	    -e 's#<h1>${CORPUS}</h1>#<h1>${CORPUS}</h1>${SRCHTML}#' > $@
+	    -e 's#<h1>${CORPUS}${VERSION}</h1>#<h1>${CORPUS} ${VERSION}</h1>${SRCHTML}#' \
+	    -e 's#<h1>${CORPUS}</h1>#<h1>${CORPUS} ${VERSION}</h1>${SRCHTML}#' > $@
 	chmod 644 $@
 #	chmod go+r $@
 

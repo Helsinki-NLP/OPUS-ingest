@@ -29,11 +29,7 @@ all: ${CORPUSRAW}
 	${MAKE} -C ${CORPUSXML} create-align-files
 	for s in ${RELEASE_LANGS}; do \
 	  for t in ${RELEASE_LANGS}; do \
-	    if [[ "$$s" > "$$t" ]]; then \
-	      opus-pivoting `ls ${CORPUSXML}/*$$s*.xml.gz | grep 'en'` \
-	                    `ls ${CORPUSXML}/*$$t*.xml.gz | grep 'en'` \
-	      | gzip -c > ${CORPUSXML}/$$t-$$s.xml.gz; \
-	    else \
+	    if [[ "$$t" > "$$s" ]]; then \
 	      opus-pivoting `ls ${CORPUSXML}/*$$s*.xml.gz | grep 'en'` \
 	                    `ls ${CORPUSXML}/*$$t*.xml.gz | grep 'en'` \
 	      | gzip -c > ${CORPUSXML}/$$s-$$t.xml.gz; \
