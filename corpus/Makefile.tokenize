@@ -4,50 +4,115 @@
 #
 #
 
+FILE_SIZE_THRESHOLD = 50M
+
+# SPLITSIZE = 10000
+SPLITSIZE = 100000
+# SPLITSIZE = 500000
+
+
 ifndef LANGUAGE
   LANGUAGE=$(firstword ${LANGUAGES})
 endif
 
-RAWDIR   = raw/${LANGUAGE}
+## TODO: make use of division into big and small ...
+
 ifndef XMLFILES
-  XMLFILES := $(patsubst raw/%,xml/%,$(shell find ${RAWDIR} -name '*.${XMLEXT}'))
+  SMALL_RAWFILES := $(shell find ${CORPUSRAW}/${LANGUAGE} -name '*.xml.gz' -size -${FILE_SIZE_THRESHOLD})
+  BIG_RAWFILES := $(shell find ${CORPUSRAW}/${LANGUAGE} -name '*.xml.gz' -size +${FILE_SIZE_THRESHOLD})
+  SMALL_XMLFILES := $(patsubst ${CORPUSRAW}/%,${CORPUSXML}/%,$(SMALL_RAWFILES))
+  BIG_XMLFILES := $(patsubst ${CORPUSRAW}/%,${CORPUSXML}/%,$(BIG_RAWFILES))
+  RAWFILES := $(SMALL_RAWFILES) $(BIG_RAWFILES)
+  XMLFILES := $(SMALL_XMLFILES) $(BIG_XMLFILES)
 endif
 
-## OLD: for-loop (cannot be parallelized)
-##
-# tokenize annotate:
-# 	for l in ${LANGUAGES}; do \
-# 		${MAKE} LANGUAGE=$$l tokenize_files; \
-# 	done
 
 
+# TOKENIZED_DIRS = ${patsubst %,${CORPUSXML}/%,${LANGUAGES}}
 
-## NEW: use flags to indicate finished processes
-## --> allow parallelization
+# tokenize annotate: ${TOKENIZED_DIRS}
 
-TOKENIZE_DONE = ${patsubst %,log/.%.tokenize.done,${LANGUAGES}}
-tokenize annotate: ${TOKENIZE_DONE}
+# ${TOKENIZED_DIRS}:
+# 	${MAKE} LANGUAGE=${notdir $@} tokenize_files
+# 	touch $@
 
-${TOKENIZE_DONE}:
-	mkdir -p ${dir $@}
-	${MAKE} LANGUAGE=${patsubst log/.%.tokenize.done,%,$@} tokenize_files
-	mkdir -p ${dir $@}
+
+TOKENIZATION_DONE = ${patsubst %,log/.tok.%,${LANGUAGES}}
+
+.PHONY: tokenize annotate
+tokenize annotate: ${TOKENIZATION_DONE}
+
+${TOKENIZATION_DONE}:
+	${MAKE} LANGUAGE=${patsubst log/.tok.%,%,$@} tokenize_files
 	touch $@
 
-
+.PHONY: tokenize_files annotate_files
 tokenize_files annotate_files: ${XMLFILES}
 
-xml/${LANGUAGE}/%: raw/${LANGUAGE}/%
+## treat big files differently from small files
+## --> split them to run things in parallel and then merge again
+
+${BIG_XMLFILES}: ${CORPUSXML}/${LANGUAGE}/%: ${CORPUSRAW}/${LANGUAGE}/%
+	${MAKE} ${patsubst ${CORPUSRAW}/%.xml.gz,${TMPDIR}/${CORPUS}/%,$<}
+	mkdir -p $(dir $@)
+	echo '<?xml version="1.0" encoding="utf-8"?>' > ${@:.gz=}
+	echo '<corpus>' >> ${@:.gz=}
+	find ${patsubst ${CORPUSRAW}/%.xml.gz,${TMPDIR}/${CORPUS}/%,$<}/xml -name '*.xml.gz' |\
+	sort | xargs zcat | grep -v '<?xml ' >> ${@:.gz=}
+	echo '</corpus>' >> ${@:.gz=}
+	gzip -f ${@:.gz=}
+	rm -fr ${patsubst ${CORPUSRAW}/%.xml.gz,${TMPDIR}/${CORPUS}/%,$<}
+
+
+${SMALL_XMLFILES}: ${CORPUSXML}/${LANGUAGE}/%: ${CORPUSRAW}/${LANGUAGE}/%
 	mkdir -p $(shell dirname $@)
 	${TOK} -in "$<" -out "$@"
 
-# 	${TOK} -in $< | tidy -xml -utf8 -i -w 0 | gzip -c > $@
-#	${TOK} -in $< -out $@
+
 
 clean-xml:
 	for l in ${LANGUAGES}; do \
-	    if [ -d "xml/$$l" ]; then \
-		rm -fr xml/$$l; \
+	    if [ -d "${CORPUSXML}/$$l" ]; then \
+		rm -fr ${CORPUSXML}/$$l; \
 	    fi \
 	done
 
+
+
+## TODO: is it OK to just grep for sentence boundary tags?
+
+SPLIT_FILE_DIRS = ${patsubst ${CORPUSRAW}/%.${XMLEXT},${TMPDIR}/${CORPUS}/%,${RAWFILES}}
+
+${SPLIT_FILE_DIRS}: ${TMPDIR}/${CORPUS}/%: ${CORPUSRAW}/%.xml.gz
+	mkdir -p $@/raw
+	zgrep '</s>' $< |\
+	split --suffix-length=4 -l ${SPLITSIZE} - $@/raw/
+	${MAKE} SPLIT_RAW_DIR=$@/raw xmlify_split_files
+	mkdir -p $@/xml
+	${MAKE} XMLEXT=xml SPLIT_RAW_DIR=$@/raw SPLIT_XML_DIR=$@/xml tokenize_split_files
+
+
+ifneq (${wildcard ${SPLIT_RAW_DIR}},)
+  SPLIT_IN_FILES  := $(patsubst %,%.xml.gz,$(filter-out %.xml.gz,$(wildcard ${SPLIT_RAW_DIR}/*)))
+  SPLIT_RAW_FILES := $(wildcard ${SPLIT_RAW_DIR}/*.xml.gz)
+  SPLIT_XML_FILES := ${patsubst ${SPLIT_RAW_DIR}/%,${SPLIT_XML_DIR}/%,${SPLIT_RAW_FILES}}
+endif
+
+
+## make proper XML files from the split files
+xmlify_split_files: ${SPLIT_IN_FILES}
+
+${SPLIT_RAW_DIR}/%.xml.gz: ${SPLIT_RAW_DIR}/%
+	echo '<?xml version="1.0" encoding="utf-8"?>' > ${@:.gz=}
+	echo '<text>' >> ${@:.gz=}
+	cat $< >> ${@:.gz=}
+	echo '</text>' >> ${@:.gz=}
+	gzip -f ${@:.gz=}
+	rm -f $<
+
+## tokenize the split files
+tokenize_split_files: ${SPLIT_XML_FILES}
+
+${SPLIT_XML_FILES}: ${SPLIT_XML_DIR}/%: ${SPLIT_RAW_DIR}/%
+	mkdir -p $(dir $@)
+	${TOK} -in "$<" -out "$@"
