@@ -29,6 +29,7 @@ TOKENIZE_DONE = ${patsubst %,log/.%.tokenize.done,${LANGUAGES}}
 tokenize annotate: ${TOKENIZE_DONE}
 
 ${TOKENIZE_DONE}:
+	mkdir -p ${dir $@}
 	${MAKE} LANGUAGE=${patsubst log/.%.tokenize.done,%,$@} tokenize_files
 	mkdir -p ${dir $@}
 	touch $@

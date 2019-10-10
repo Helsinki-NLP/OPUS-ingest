@@ -354,11 +354,11 @@ ${ALG}: ${CORPUSRELEASE}/%: ${CORPUSHOME}/%
 # pack all language files in tar-archives
 #----------------------------------------------------------------------------
 
-$(patsubst %,${CORPUSXML}/%,${LANGUAGES}):
-	@echo "XML files do not exist. Try to unpack from tar-ball"
+# $(patsubst %,${CORPUSXML}/%,${LANGUAGES}):
+# 	@echo "XML files do not exist. Try to unpack from tar-ball"
 
-$(patsubst %,${CORPUSRAW}/%,${LANGUAGES}):
-	@echo "XML files do not exist. Try to unpack from tar-ball"
+# $(patsubst %,${CORPUSRAW}/%,${LANGUAGES}):
+# 	@echo "XML files do not exist. Try to unpack from tar-ball"
 
 
 

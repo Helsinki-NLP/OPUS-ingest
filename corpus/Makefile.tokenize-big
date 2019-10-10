@@ -1,0 +1,124 @@
+# -*-makefile-*-
+#
+# Makefile targets for tokenization ...
+#
+#
+
+FILE_SIZE_THRESHOLD = 50M
+
+# SPLITSIZE = 10000
+SPLITSIZE = 100000
+# SPLITSIZE = 500000
+
+
+ifndef LANGUAGE
+  LANGUAGE=$(firstword ${LANGUAGES})
+endif
+
+## TODO: make use of division into big and small ...
+
+ifndef XMLFILES
+  SMALL_RAWFILES := $(shell find ${CORPUSRAW}/${LANGUAGE} -name '*.xml.gz' -size -${FILE_SIZE_THRESHOLD})
+  BIG_RAWFILES := $(shell find ${CORPUSRAW}/${LANGUAGE} -name '*.xml.gz' -size +${FILE_SIZE_THRESHOLD})
+  SMALL_XMLFILES := $(patsubst ${CORPUSRAW}/%,${CORPUSXML}/%,$(SMALL_RAWFILES))
+  BIG_XMLFILES := $(patsubst ${CORPUSRAW}/%,${CORPUSXML}/%,$(BIG_RAWFILES))
+  RAWFILES := $(SMALL_RAWFILES) $(BIG_RAWFILES)
+  XMLFILES := $(SMALL_XMLWFILES) $(BIG_XMLFILES)
+endif
+
+
+
+TOKENIZED_DIRS = ${patsubst %,${CORPUSXML}/%,${LANGUAGES}}
+tokenize annotate: ${TOKENIZED_DIRS}
+
+${TOKENIZED_DIRS}:
+	${MAKE} LANGUAGE=${notdir $@} tokenize_files
+	touch $@
+
+
+tokenize_files annotate_files: ${XMLFILES}
+
+## TODO: do the splitting only for big files!
+## --> test file size and some heuristics on when to split ...
+
+${CORPUSXML}/${LANGUAGE}/%: ${CORPUSRAW}/${LANGUAGE}/%
+	mkdir -p $(dir $@)
+	${MAKE} ${patsubst ${CORPUSRAW}/%.xml.gz,${TMPDIR}/${CORPUS}/%,$<}
+	echo '<?xml version="1.0" encoding="utf-8"?>' > ${@:.gz=}
+	echo '<corpus>' >> ${@:.gz=}
+	find ${patsubst ${CORPUSRAW}/%.xml.gz,${TMPDIR}/${CORPUS}/%,$<}/xml -name '*.xml' |\
+	sort | xargs cat | grep -v '<?xml ' >> ${@:.gz=}
+	echo '</corpus>' >> ${@:.gz=}
+	gzip -f ${@:.gz=}
+	rm -fr ${patsubst ${CORPUSRAW}/%.xml.gz,${TMPDIR}/${CORPUS}/%,$<}
+
+
+## TODO: test the division into big and small below!
+
+# ${BIG_XMLFILES}: ${CORPUSXML}/${LANGUAGE}/%: ${CORPUSRAW}/${LANGUAGE}/%
+# 	mkdir -p $(dir $@)
+# 	${MAKE} ${patsubst ${CORPUSRAW}/%.xml.gz,${TMPDIR}/${CORPUS}/%,$<}
+# 	echo '<?xml version="1.0" encoding="utf-8"?>' > ${@:.gz=}
+# 	echo '<corpus>' >> ${@:.gz=}
+# 	find ${patsubst ${CORPUSRAW}/%.xml.gz,${TMPDIR}/${CORPUS}/%,$<}/xml -name '*.xml' |\
+# 	sort | xargs cat | grep -v '<?xml ' >> ${@:.gz=}
+# 	echo '</corpus>' >> ${@:.gz=}
+# 	gzip -f ${@:.gz=}
+# 	rm -fr ${patsubst ${CORPUSRAW}/%.xml.gz,${TMPDIR}/${CORPUS}/%,$<}
+
+
+# ${SMALL_XMLFILES}: xml/${LANGUAGE}/%: raw/${LANGUAGE}/%
+# 	mkdir -p $(shell dirname $@)
+# 	${TOK} -in "$<" -out "$@"
+
+
+
+clean-xml:
+	for l in ${LANGUAGES}; do \
+	    if [ -d "${CORPUSXML}/$$l" ]; then \
+		rm -fr ${CORPUSXML}/$$l; \
+	    fi \
+	done
+
+
+
+## TODO: is it OK to just grep for sentence boundary tags?
+
+SPLIT_FILE_DIRS = ${patsubst ${CORPUSRAW}/%.${XMLEXT},${TMPDIR}/${CORPUS}/%,${RAWFILES}}
+
+${SPLIT_FILE_DIRS}: ${TMPDIR}/${CORPUS}/%: ${CORPUSRAW}/%.xml.gz
+	mkdir -p $@/raw
+	zgrep '</s>' $< |\
+	split --suffix-length=4 -l ${SPLITSIZE} - $@/raw/
+	${MAKE} SPLIT_RAW_DIR=$@/raw xmlify_split_files
+	mkdir -p $@/xml
+	${MAKE} XMLEXT=xml SPLIT_RAW_DIR=$@/raw SPLIT_XML_DIR=$@/xml tokenize_split_files
+
+
+ifneq (${wildcard ${SPLIT_RAW_DIR}},)
+  SPLIT_IN_FILES  := $(patsubst %,%.xml,$(filter-out %.xml,$(wildcard ${SPLIT_RAW_DIR}/*)))
+  SPLIT_RAW_FILES := $(wildcard ${SPLIT_RAW_DIR}/*.xml)
+  SPLIT_XML_FILES := ${patsubst ${SPLIT_RAW_DIR}/%,${SPLIT_XML_DIR}/%,${SPLIT_RAW_FILES}}
+endif
+
+
+ttt:
+	echo ${SPLIT_IN_FILES}
+	echo $(wildcard ${SPLIT_RAW_DIR}/*)
+
+## make proper XML files from the split files
+xmlify_split_files: ${SPLIT_IN_FILES}
+
+${SPLIT_RAW_DIR}/%.xml: ${SPLIT_RAW_DIR}/%
+	echo '<?xml version="1.0" encoding="utf-8"?>' > $@
+	echo '<text>' >> $@
+	cat $< >> $@
+	echo '</text>' >> $@
+	rm -f $<
+
+## tokenize the split files
+tokenize_split_files: ${SPLIT_XML_FILES}
+
+${SPLIT_XML_FILES}: ${SPLIT_XML_DIR}/%: ${SPLIT_RAW_DIR}/%
+	mkdir -p $(dir $@)
+	${TOK} -in "$<" -out "$@"

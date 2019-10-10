@@ -12,14 +12,6 @@ include ../Makefile.def
 ## - prepare, align, annotate corpus (see ../Makefile.process)
 ## - index, package and publish corpus (see ../Makefile.process)
 
-fix-raw:
-	for l in ga  hr  hu  it  lt  lv  mt  nl  pl  pt  ro  sk; do \
-	 mkdir -p raw/$$l; \
-	 zcat raw-unfinished/$$l/bicleaner07.xml.gz > raw/$$l/bicleaner07.xml; \
-	 echo '</text>' >> raw/$$l/bicleaner07.xml; \
-	 gzip raw/$$l/bicleaner07.xml; \
-	done
-
 all:
 	${MAKE} -C src all
 	${MAKE} annotate
@@ -52,7 +44,7 @@ copy-tmx-files:
 
 ## submit a job for fetching and processing all data
 all-job:
-	${MAKE} HPC_CORES=1 HPC_MEM=8g HPC_TIME=7-00:00 HPC_QUEUE=longrun convert-job.submit
+	${MAKE} HPC_CORES=1 HPC_MEM=16g HPC_TIME=7-00:00 HPC_QUEUE=longrun convert-job.submit
 
 ## a job for fetching and converting all files
 ## that will submit tokenization jobs when ready
@@ -69,7 +61,7 @@ convert-job:
 tokenize-job:
 	${MAKE} annotate_files
 	if [ `ls log/.*tokenize.done | wc -l` == ${words ${LANGUAGES}} ]; then \
-	  ${MAKE} HPC_CORES=8 HPC_MEM=4g HPC_TIME=72:00 publish-job.submit; \
+	  ${MAKE} HPC_CORES=8 HPC_MEM=32g HPC_TIME=72:00 publish-job.submit; \
 	fi
 
 publish-job:
@@ -98,13 +90,14 @@ include ../Makefile.udparse
 ## select one of the following to set the annotation level in xml/
 ##
 ##   Makefile.tokenize-simple . simple regex tokenizer
+##   Makefile.tokenize-moses .. moses tokenizer
 ##   Makefile.tokenize ........ tokenization only
 ##   Makefile.tag ............. tokenization and PoS tagging (if available)
 ##   Makefile.annotate ........ all annotation in Uplug
 
 # include ../Makefile.tokenize-simple
 # include ../Makefile.tokenize-moses
-include ../Makefile.tokenize
+include ../Makefile.tokenize-big
 # include ../Makefile.tag
 # include ../Makefile.annotate
 
