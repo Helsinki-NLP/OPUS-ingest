@@ -60,8 +60,8 @@ convert-job:
 ## tokenize and submit wordalign jobs when all languages are done
 tokenize-job:
 	${MAKE} annotate_files
-	if [ `ls log/.*tokenize.done | wc -l` == ${words ${LANGUAGES}} ]; then \
-	  ${MAKE} HPC_CORES=8 HPC_MEM=32g HPC_TIME=72:00 publish-job.submit; \
+	if [ `ls log/.*tok* | wc -l` == ${words ${LANGUAGES}} ]; then \
+	  ${MAKE} HPC_CORES=4 HPC_MEM=128g HPC_TIME=72:00 publish-job.submit; \
 	fi
 
 publish-job:
@@ -70,7 +70,7 @@ publish-job:
 	${MAKE} publish
 	${MAKE} wordalign/Makefile
 	${MAKE} -C wordalign submit-all
-	${MAKE} HPC_CORES=8 HPC_MEM=8g HPC_TIME=72:00 udparse.submit
+#	${MAKE} HPC_CORES=2 HPC_MEM=8g HPC_TIME=72:00 udparse.submit
 
 ## standard procedures are specified in the following makefiles
 ##

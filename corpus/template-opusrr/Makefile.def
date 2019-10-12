@@ -11,7 +11,7 @@
 # OPUSRR_HOST = vm0081.kaj.pouta.csc.fi
 OPUSRR_HOST   = vm1637.kaj.pouta.csc.fi
 OPUSRR_USER   = cloud-user
-REPO_NAME     = komi
+REPO_NAME     = infopankki
 REPO_USER     = joerg
 
 

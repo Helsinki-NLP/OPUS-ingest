@@ -3,12 +3,26 @@
 # name & version of the corpus
 
 
+
+## - specify the server of the OPUS repository
+## - specify the repository name and the user name
+## (this assumes that ssh keys are set up to access the server)
+
+# OPUSRR_HOST = vm0081.kaj.pouta.csc.fi
+OPUSRR_HOST   = vm1637.kaj.pouta.csc.fi
+OPUSRR_USER   = cloud-user
+REPO_NAME     = infopankki
+REPO_USER     = joerg
+
+
+
 ## CORPUSNAME = subdir under OPUS/corpus/
 CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
 
 ## current version
-VERSION = v2019-03
-# VERSION = v${shell date +%Y-%m}
+## TODO: can we take that from the OPUSRR repo?
+VERSION = v1
+
 
 LICENSE = CC–BY 4.0 
 COPYRIGHT = 

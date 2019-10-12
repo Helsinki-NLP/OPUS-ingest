@@ -1,38 +1,52 @@
 # -*-makefile-*-
 #
-# template for converting aligned parallel corpora 
-# from the OPUS resource repository to OPUS internal
+# template for fetching aligned parallel corpora 
+# from the OPUS repository server
+#
+# - assumes that opus-tools are installed (moses2opus in PATH)
 #
 # BEFORE RUNNING:
 # - set corpus-specific info in Makefile.def
 # - change the include of preprocessing Makefiles if necessary
 #   (Makefile.tag for PoS tagging or Makefile.annotate)
-
-
-OPUSRR_DATA = /proj/OPUS/rsnapshots/daily.0/opusrr/media/letsmt/letsmt/www-data/infopankki
-OPUSRR_USER = joerg
+#
 
 
 include Makefile.def
 include ../Makefile.def
 
 
+
 ## make all:
+## - convert (see below)
 ## - annotate (tokenize/tag/chunk depending on Makefile that is included)
 ## - udparse (parse with UDPipe)
 ## - publish (various packages, cwb index, website etc)
 ## - wordalign
 
 .PHONY: all
-all:
-	${MAKE} convert
-	${MAKE} annotate
+all: xml
 	${MAKE} udparse
 	${MAKE} wordalign
+	${MAKE} cwb-index
 	${MAKE} publish
 
-sentalign-more:
-	${MAKE} -C xml all
+
+## TODO: add some dependency here to update if necessary
+
+xml:
+	git clone ssh://${OPUSRR_USER}@${OPUSRR_HOST}/var/lib/letsmt/www-data/.githome/${REPO_NAME}
+	cd ${REPO_NAME} && git checkout ${REPO_USER}
+	${MAKE} xml/Makefile
+	mv ${REPO_NAME}/xml/*-* xml/
+	mkdir -p raw
+	mv ${REPO_NAME}/xml/* raw/
+	find xml -name '*.xml' | xargs gzip -f
+	find raw -name '*.xml' | xargs gzip -f
+	${MAKE} -C xml create-align-files
+	${MAKE} annotate
+	rm -fr ${REPO_NAME}
+
 
 ## standard procedures are specified in the following makefiles
 ##
@@ -61,15 +75,3 @@ include ../Makefile.tokenize
 # include ../Makefile.annotate
 
 
-
-
-convert: ${CORPUSRAW}
-
-${CORPUSRAW}: ${OPUSRR_DATA}/${OPUSRR_USER}/xml
-	mkdir -p $@
-	rsync -za --exclude '*\.git*' $</* $@/
-	find $@ -name '*.xml' | xargs -P 8 gzip -f 
-	mkdir -p ${CORPUSXML}
-	mv -f $@/*-* ${CORPUSXML}/
-	${MAKE} xml/Makefile
-	${MAKE} -C ${CORPUSXML} create-align-files

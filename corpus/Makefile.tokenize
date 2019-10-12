@@ -44,6 +44,7 @@ tokenize annotate: ${TOKENIZATION_DONE}
 
 ${TOKENIZATION_DONE}:
 	${MAKE} LANGUAGE=${patsubst log/.tok.%,%,$@} tokenize_files
+	mkdir -p $(dir $@)
 	touch $@
 
 .PHONY: tokenize_files annotate_files

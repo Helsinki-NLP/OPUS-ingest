@@ -60,7 +60,7 @@ convert-job:
 ## tokenize and submit wordalign jobs when all languages are done
 tokenize-job:
 	${MAKE} annotate_files
-	if [ `ls log/.*tokenize.done | wc -l` == ${words ${LANGUAGES}} ]; then \
+	if [ `ls log/.*tok* | wc -l` == ${words ${LANGUAGES}} ]; then \
 	  ${MAKE} HPC_CORES=8 HPC_MEM=4g HPC_TIME=72:00 publish-job.submit; \
 	fi
 
