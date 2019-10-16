@@ -9,10 +9,23 @@ FILTER  = bicleaner07
 RELEASE = 5
 VERSION = v${RELEASE}
 
+
+## release 4.0 languages
+RELEASE4_LANGS = bg cs da de el es et fi fr ga hr hu it lv lt nl mt pl pt ro sk sl sv
+
+## release 5.0 languages
+RELEASE5_LANGS = ${RELEASE4_LANGS}
+
+
+RELEASE_LANGS  = ${RELEASE5_LANGS}
+RELEASEURL     = https://s3.amazonaws.com/web-language-models/paracrawl/release${RELEASE}
+RELEASED_TMX   = ${patsubst %,en-%.${FILTER}.tmx.gz,${RELEASE_LANGS}}
+
+
 # with SRCHTML you can define some extra HTML code that will be placed just
 # after the name of the sub-corpus
 # EXTRAHTML is code which will be put just after the 'Download' header
 
-SRCHTML = Parallel corpora from Web Crawls collected in the <a href="http://paracrawl.eu/download.html">ParaCrawl project</a> and further processed for making it a multi-parallel corpus by pivoting via English
+SRCHTML = Parallel corpora from Web Crawls collected in the <a href="http://paracrawl.eu/download.html">ParaCrawl project</a> and further processed for making it a multi-parallel corpus by pivoting via English. Here we only provide the additional language pairs that came out of pivoting. The bitexts for English are available from the <a href="http://opus.nlpl.eu/ParaCrawl-${VERSION}.php">ParaCrawl release</a>.
 EXTRAHTML = The data is released under the <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">Creative Commons CC0 license</a> ("no rights reserved"), see <a href="http://paracrawl.eu/download.html">http://paracrawl.eu/download.html</a> for more details
 CITENOTE = Please, acknowledge the ParaCrawl project at <a href="http://paracrawl.eu">http://paracrawl.eu</a>. This version is derived from the original release at their website adjusted for redistribution via the OPUS corpus collection. Please, acknowledge OPUS as well for this service.

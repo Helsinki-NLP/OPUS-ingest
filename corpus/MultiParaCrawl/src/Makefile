@@ -4,17 +4,6 @@ include ../Makefile.def
 
 PWD := ${shell pwd}
 
-## release 4.0 languages
-RELEASE4_LANGS = bg cs da de el es et fi fr ga hr hu it lv lt nl mt pl pt ro sk sl sv
-BONUS4_TMX     = pl-de.${FILTER}.tmx.gz nl-fr.${FILTER}.tmx.gz
-
-## release 5.0 languages
-RELEASE5_LANGS = ${RELEASE4_LANGS}
-RELEASE_LANGS  = ${RELEASE5_LANGS}
-RELEASEURL     = https://s3.amazonaws.com/web-language-models/paracrawl/release${RELEASE}
-RELEASED_TMX   = ${patsubst %,en-%.${FILTER}.tmx.gz,${RELEASE_LANGS}}
-
-
 ## conversion script to be used
 ## --> tmx2opus-tc = use TokyoCabinet as tmp DB
 

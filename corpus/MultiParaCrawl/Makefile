@@ -17,13 +17,25 @@ all:
 	${MAKE} annotate
 	${MAKE} moses
 	${MAKE} copy-tmx-files
+	${MAKE} sample-files
 	${MAKE} publish
 
-more:
-	${MAKE} moses
-	${MAKE} copy-tmx-files
-	${MAKE} publish
 
+all-no-english:
+	${MAKE} -C src all
+	${MAKE} LANGUAGES="${RELEASE_LANGS}" annotate
+	${MAKE} LANGUAGES="${RELEASE_LANGS}" sample-files
+	${MAKE} LANGUAGES="${RELEASE_LANGS}" publish
+
+publish-no-english:
+	${MAKE} LANGUAGES="${RELEASE_LANGS}" sample-files
+	${MAKE} LANGUAGES="${RELEASE_LANGS}" publish
+
+
+SAMPLEFILES = $(patsubst ${CORPUSRELEASE}/tmx/%.tmx.gz,${CORPUSPUB}/%_sample.html,\
+		$(wildcard ${CORPUSRELEASE}/tmx/*.tmx.gz))
+
+sample-files: $(SAMPLEFILES)
 
 copy-tmx-files:
 	mkdir -p ${CORPUSRELEASE}/tmx
@@ -40,7 +52,6 @@ copy-tmx-files:
 	    fi \
 	  done \
 	done
-
 
 ## submit a job for fetching and processing all data
 all-job:
@@ -64,13 +75,14 @@ tokenize-job:
 	  ${MAKE} HPC_CORES=4 HPC_MEM=128g HPC_TIME=72:00 publish-job.submit; \
 	fi
 
+publish-job-no-english:
+	${MAKE} LANGUAGES="${RELEASE_LANGS}" publish-job
+
 publish-job:
-	${MAKE} moses
-	${MAKE} copy-tmx-files
 	${MAKE} publish
 	${MAKE} wordalign/Makefile
 	${MAKE} -C wordalign submit-all
-#	${MAKE} HPC_CORES=2 HPC_MEM=8g HPC_TIME=72:00 udparse.submit
+	${MAKE} HPC_CORES=2 HPC_MEM=8g HPC_TIME=72:00 udparse.submit
 
 ## standard procedures are specified in the following makefiles
 ##
@@ -97,7 +109,24 @@ include ../Makefile.udparse
 
 # include ../Makefile.tokenize-simple
 # include ../Makefile.tokenize-moses
-include ../Makefile.tokenize-big
+include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate
 
+
+$(SAMPLEFILES): ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
+	echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"' >$@
+	echo '"http://www.w3.org/TR/REC-html40/loose.dtd">' >> $@
+	echo '<html>' >> $@
+	echo '<head>' >> $@
+	echo '<title>Untitled Document</title>' >> $@
+	echo '<meta http-equiv="Content-Type" content="text/html;charset=utf-8">' >> $@
+	echo '</head>' >> $@
+	echo '<body>' >> $@
+	echo '<p>' >> $@
+	zgrep '</tuv>' $< |\
+	sed 's/^.*<seg>//;s#</seg></tuv>#<br/>#' |\
+	head -100 |\
+	sed ': loop; n; a <hr/>' >> $@
+	echo '</body></html/>' >> $@
+	chmod 644 $@

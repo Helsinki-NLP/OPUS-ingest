@@ -592,8 +592,8 @@ srctmx-jobs:
 
 $(TMX) $(TMX_STRICT): ${CORPUSRELEASE}/tmx/%.tmx.gz: ${CORPUSRELEASE}/moses/%.txt.zip
 	@${MKDIR} ${dir $@}
-	-( mkdir -p ${LOCALTMP}; \
-	   cd ${LOCALTMP}; \
+	-( mkdir -p ${LOCALTMP}/tmx; \
+	   cd ${LOCALTMP}/tmx; \
 	   unzip $< -x README INFO LICENSE; \
 	   S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	   T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
@@ -620,6 +620,8 @@ $(TMX) $(TMX_STRICT): ${CORPUSRELEASE}/tmx/%.tmx.gz: ${CORPUSRELEASE}/moses/%.tx
 .PHONY: moses
 moses: ${CORPUSRELEASE} $(MOSES)
 
+## NEW: create zip file in LOCALTMP first to avoid some racing situations
+##      in make with parallel threads
 $(MOSES): ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSXML}/%.xml.gz
 	@${MKDIR} ${dir $@}
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
@@ -636,11 +638,14 @@ $(MOSES): ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSXML}/%.xml.gz
 	  ${MAKE} PACKAGE="${CORPUS}.$$S-$$T in Moses format" ${TMPDIR}/$$BASE/README; \
 	  rm -f $$BASE.ids; \
 	  ${MAKE} ${TMPDIR}/$$BASE/LICENSE; \
-	  zip -j $@ ${TMPDIR}/$$BASE/README ${TMPDIR}/$$BASE/LICENSE \
+	  mkdir -p ${LOCALTMP}; \
+	  zip -j ${LOCALTMP}/${notdir $@} ${TMPDIR}/$$BASE/README ${TMPDIR}/$$BASE/LICENSE \
 			$$BASE.$$S $$BASE.$$T $$BASE.xml; \
+	  mv -f ${LOCALTMP}/${notdir $@} $@; \
 	  rm -f $$BASE.$$S $$BASE.$$T $$BASE.xml;\
 	  rm -f ${TMPDIR}/$$BASE/README ${TMPDIR}/$$BASE/LICENSE;\
 	  rmdir ${TMPDIR}/$$BASE; )
+	sleep 1
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@

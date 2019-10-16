@@ -27,16 +27,19 @@
   <div class="news">
     <h3>Latest News</h3>
     <ul>
+      <li>2019-10-16: New: <a href="MultuParaCrawl-v5.php">MultiParaCrawl</a></li>
+      <li>2019-10-14: New: <a href="infopankki-v1.php">Infopankki v1</a></li>
+      <li>2019-09-28: Update: <a href="ParaCrawl-v5.php">ParaCrawl v5</a></li>
       <li>2019-08-28: <a href="JW300.php">JW300 corpus</a> added</li>
       <li>2019-08-14: Various new and updated corpora</li>
     <li>2018-10-06: New corpus: <a href="memat.php">memat</a> (Xhosa/English)</li>
     <li>2018-02-15: New corpora: <a href="ParaCrawl.php">ParaCrawl</a>, <a href="XhosaNavy.php">XhosaNavy</a></li>
     <li>2017-11-06: New version: <a href="OpenSubtitles-v2018.php">OpenSubtitles2018</a></li>
-    <li>2017-11-01: New server location: <a href="http://opus.nlpl.eu">http://opus.nlpl.eu</a></li>
+    <li>2017-11-01: New URL: <a href="http://opus.nlpl.eu">http://opus.nlpl.eu</a></li>
     <li>2016-01-08: New version: <a href="OpenSubtitles-v2016.php">OpenSubtitles2016</a></li>
+<!--
     <li>2015-10-15: New versions of <a href="TED2013.php">TED2013</a>, <a href="News-Commentary-v9.1.php">NCv9</a></li>
     <li>2014-10-24: New: <a href="JRC-Acquis.php">JRC-Acquis</a></li>
-<!--
     <li>2014-10-20: <a href="News-Commentary-v9.0.php">NCv9</a>, <a href="TED2013.php">TED talks</a>, <a href="DGT.php">DGT</a>, <a href="WMT-News.php">WMT</a></li>
     <li>2014-08-21: New: <a href="Ubuntu.php">Ubuntu</a>, <a href="GNOME.php">GNOME</a></li>
     <li>2014-07-30: New: <a href="Books-v1.php">Translated Books</a></li>
@@ -146,6 +149,7 @@
           <li><a href="GlobalVoices.php">Global Voices</a> - News stories in various languages</li>
           <li><a href="GNOME.php">GNOME</a> - GNOME localization files</li>
           <li><a href="hrenWaC.php">The Croatian - English WaC corpus</a></li>
+	  <li><a href="infopankki-v1.php">Infopankki</a></li>
           <li><a href="JRC-Acquis.php">JRC-Acquis- legislative EU texts</a></li>
           <li><a href="JW300.php">JW300 multilingual corpus</a></li>
           <li><a href="KDE4.php">KDE4 - KDE4 localization files (v.2)</a></li>
@@ -153,11 +157,12 @@
           <li><a href="MBS.php">MBS - Belgisch Staatsblad corpus</a></li>
           <li><a href="memat.php">memat - Xhosa/English parallel data</a></li>
           <li><a href="MontenegrinSubs.php">MontenegrinSubs - Montenegrin movie subtitles</a></li>
-          <li><a href="MultiUN.php">MultiUN</a> - Translated UN documents</li>
         </ul>
 	    </td>
 	    <td>
         <ul>
+          <li><a href="MultuParaCrawl.php">MultiParaCrawl</a> - Non-English Bitexts from ParaCrawl</li>
+          <li><a href="MultiUN.php">MultiUN</a> - Translated UN documents</li>
           <li><a href="News-Commentary.php">News Commentary</a> (<a href="News-Commentary-v1.php">v11</a>, <a href="News-Commentary-v1.php">v9.1</a>,<a href="News-Commentary-v9.php">v9</a>)</li>
           <li><a href="OfisPublik.php">OfisPublik</a> - Breton - French parallel texts</li>
           <li><a href="OpenOffice.php">OO - the OpenOffice.org corpus</a> (<a href="OpenOffice-v2.php">v2</a>)</li>
