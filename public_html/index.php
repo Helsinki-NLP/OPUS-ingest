@@ -27,7 +27,7 @@
   <div class="news">
     <h3>Latest News</h3>
     <ul>
-      <li>2019-10-16: New: <a href="MultuParaCrawl-v5.php">MultiParaCrawl</a></li>
+      <li>2019-10-16: New: <a href="MultiParaCrawl-v5.php">MultiParaCrawl</a></li>
       <li>2019-10-14: New: <a href="infopankki-v1.php">Infopankki v1</a></li>
       <li>2019-09-28: Update: <a href="ParaCrawl-v5.php">ParaCrawl v5</a></li>
       <li>2019-08-28: <a href="JW300.php">JW300 corpus</a> added</li>
@@ -161,7 +161,7 @@
 	    </td>
 	    <td>
         <ul>
-          <li><a href="MultuParaCrawl.php">MultiParaCrawl</a> - Non-English Bitexts from ParaCrawl</li>
+          <li><a href="MultiParaCrawl.php">MultiParaCrawl</a> - Non-English Bitexts from ParaCrawl</li>
           <li><a href="MultiUN.php">MultiUN</a> - Translated UN documents</li>
           <li><a href="News-Commentary.php">News Commentary</a> (<a href="News-Commentary-v1.php">v11</a>, <a href="News-Commentary-v1.php">v9.1</a>,<a href="News-Commentary-v9.php">v9</a>)</li>
           <li><a href="OfisPublik.php">OfisPublik</a> - Breton - French parallel texts</li>
