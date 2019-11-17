@@ -827,11 +827,18 @@ ifndef PHRASETABLES
 		  $(wildcard */model/phrase-table.gz))
 endif
 
-SMTTOOLSHOME = ${HOME}/projects/SMT
-SMTTOOLS     = ${SMTTOOLSHOME}/tools
+# SMTTOOLSHOME = ${HOME}/projects/SMT
+# SMTTOOLS     = ${SMTTOOLSHOME}/tools
+
+# MOSESHOME    = ${SMTTOOLSHOME}/mosesdecoder
+# MOSESCONTRIB = ${MOSESHOME}/contrib
+
+SMTTOOLSHOME = ${HOME}/appl_taito/tools/
+SMTTOOLS     = ${SMTTOOLSHOME}
 
 MOSESHOME    = ${SMTTOOLSHOME}/mosesdecoder
 MOSESCONTRIB = ${MOSESHOME}/contrib
+
 
 .PHONY: filter-all-phrase-tables
 filter-all-phrase-tables: $(PHRASETABLES)
