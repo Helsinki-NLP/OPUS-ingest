@@ -74,13 +74,29 @@ ifndef LANGPAIRS
 endif
 
 PHONY: link-sentalign-files-to-parsed
+# link-sentalign-files-to-parsed:
+# 	for l in ${LANGPAIRS}; do \
+# 	  if [ -d ${CORPUSPARSED}/`echo -n "$$l" | sed 's/^.*-//'` ]; then \
+# 	    if [ -d ${CORPUSPARSED}/`echo -n "$$l" | sed 's/-.*$$//'` ]; then \
+# 	      if [ ! -e "${CORPUSPARSED}/$$l.xml.gz" ]; then \
+# 		ln -s ../xml/$$l.xml.gz ${CORPUSPARSED}/; \
+# 	      fi \
+# 	    fi \
+# 	  fi \
+# 	done
+
+
 link-sentalign-files-to-parsed:
-	for l in ${LANGPAIRS}; do \
-	  if [ -d ${CORPUSPARSED}/`echo -n "$$l" | sed 's/^.*-//'` ]; then \
-	    if [ -d ${CORPUSPARSED}/`echo -n "$$l" | sed 's/-.*$$//'` ]; then \
-	      if [ ! -e "${CORPUSPARSED}/$$l.xml.gz" ]; then \
-		ln -s ../xml/$$l.xml.gz ${CORPUSPARSED}/; \
+	for s in ${LANGUAGES}; do \
+	  for t in ${LANGUAGES}; do \
+	    if [ -e ${CORPUSXML}/$$s-$$t.xml.gz ]; then \
+	      if [ -d ${CORPUSPARSED}/$$s ]; then \
+	        if [ -d ${CORPUSPARSED}/$$t ]; then \
+	          if [ ! -e ${CORPUSPARSED}/$$s-$$t.xml.gz ]; then \
+		    ln -s ../xml/$$s-$$t.xml.gz ${CORPUSPARSED}/; \
+	          fi \
+	        fi \
 	      fi \
 	    fi \
-	  fi \
+	  done \
 	done

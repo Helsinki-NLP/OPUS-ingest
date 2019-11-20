@@ -219,7 +219,7 @@ LMTEXT = $(patsubst %,${CORPUSWORDALIGN}/lm/${CORPUS}.%.gz, ${LANGUAGES})
 LMRAWTEXT = $(patsubst %,${CORPUSWORDALIGN}/lm/${CORPUS}.raw.%.gz, ${LANGUAGES})
 
 ifndef DICFILES
-  DICFILES := $(patsubst %/model/phrase-table-filtered.gz,${CORPUSHOME}/dic/%.dic.gz,\
+  DICFILES := $(patsubst %/model/phrase-table-filtered.gz,${CORPUSDIC}/%.dic.gz,\
 		$(wildcard */model/phrase-table-filtered.gz))
 endif
 
@@ -237,7 +237,7 @@ wordalign-srcjobs:
 	done
 
 .PHONY: all-cleanup cleanup-all
-claenup-all all-cleanup:
+cleanup-all all-cleanup:
 	for l in ${BITEXTS}; do \
 	  ${MAKE} LANGPAIR=$$l cleanup; \
 	done
@@ -481,7 +481,7 @@ wordalign-filter wordalign: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 	rm -f ${SRC}-${TRG}/model/phrase-table.gz
 	rm -f ${SRCCORPUS}
 	rm -f ${TRGCORPUS}
-	${MAKE} ${CORPUSHOME}/dic/${SRC}-${TRG}.dic.gz
+	${MAKE} ${CORPUSDIC}/${SRC}-${TRG}.dic.gz
 	${MAKE} ${LANGPAIR}-aligncheck ${LANGPAIR}-bitextcheck
 
 
@@ -741,6 +741,7 @@ cleanup:
 	rm -fr ${LANGPAIR}/giza.*
 	rm -f ${LANGPAIR}/model/aligned.${SRC}
 	rm -f ${LANGPAIR}/model/aligned.${TRG}
+	rm -f ${LANGPAIR}/c.clean.${SRCEXT} ${LANGPAIR}/c.clean.${TRGEXT}
 #	${MAKE} ${LANGPAIR}-aligncheck ${LANGPAIR}-bitextcheck
 
 tmp: 
@@ -879,7 +880,7 @@ filter-phrase-table: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 
 ## extract word-alignment dictionaries
 
-${CORPUSHOME}/dic/%.dic.gz: %/model/phrase-table-filtered.gz
+${CORPUSDIC}/%.dic.gz: %/model/phrase-table-filtered.gz
 	mkdir -p ${dir $@}
 	zcat $< |\
 	${PHRASE2DICE} -d ${DICETHR} -f ${FREQTHR} -m |\

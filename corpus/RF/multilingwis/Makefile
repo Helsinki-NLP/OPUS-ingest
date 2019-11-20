@@ -3,18 +3,19 @@ include ../Makefile.def
 include ../../Makefile.def
 
 
-WORDALIGNDIR = ../wordalign-ud
 
-LANGPAIRS = ${notdir $(wildcard $(CORPUSWORDALIGN)/ud/*-*)}
+LANGPAIRS = ${notdir $(wildcard $(CORPUSWORDALIGN)-ud/*-*)}
 ALIGNDBS = ${patsubst %,%.db,${LANGPAIRS}}
+
+OPUS-TOOLS = ${HOME}/appl_taito/tools/OpusTools-perl
 
 ALIGN2DB = ${OPUS-TOOLS}/scripts/multilingwis/align2db.pl
 OPUS2MLW = ${OPUS-TOOLS}/scripts/multilingwis/opus2mlw.pl
 TAGID2DB = ${OPUS-TOOLS}/scripts/multilingwis/tagid-db.pl
 
-
-OPUS2MLW = /homeappl/home/tiedeman/research/nlpl/opus-tools/scripts/multilingwis/opus2mlw.pl
-TAGID2DB = /homeappl/home/tiedeman/research/nlpl/opus-tools/scripts/multilingwis/tagid-db.pl
+# ALIGN2DB = /homeappl/home/tiedeman/research/nlpl/opus-tools/scripts/multilingwis/align2db.pl
+# OPUS2MLW = /homeappl/home/tiedeman/research/nlpl/opus-tools/scripts/multilingwis/opus2mlw.pl
+# TAGID2DB = /homeappl/home/tiedeman/research/nlpl/opus-tools/scripts/multilingwis/tagid-db.pl
 
 all: ${CORPUS}.tsv
 
@@ -45,8 +46,8 @@ sentid.db: docid.db
 
 ${ALIGNDBS}:
 	${ALIGN2DB} \
-		$(CORPUSWORDALIGN)/ud/$(@:.db=)/ids.gz \
-		$(CORPUSWORDALIGN)/ud/$(@:.db=)/model/aligned.grow-diag-final-and.gz
+		$(CORPUSWORDALIGN)-ud/$(@:.db=)/bitext.xml.gz \
+		$(CORPUSWORDALIGN)-ud/$(@:.db=)/model/aligned.grow-diag-final-and.gz
 
 # ${CORPUS}.tsv: docids.txt sentids.txt wordids.txt ${ALIGNDBS}
 # 	${OPUS2MLW} $^ > $@

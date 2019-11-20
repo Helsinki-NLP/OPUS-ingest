@@ -1,14 +1,8 @@
 # -*-makefile-*-
 #
 
-
-align:
-	${MAKE} ACTION=wordalign-align all-wordalign
-	${MAKE} cleanup-all
-
 all:
-	${MAKE} all-wordalign
-
+	${MAKE} ACTION=wordalign-align all-wordalign
 
 include ../Makefile.def
 include ../../Makefile.def
