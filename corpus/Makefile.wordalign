@@ -697,24 +697,56 @@ ${SRC}-${TRG}/model/aligned.${ALIGNMENT}.gz: \
 ## NEW: use eflomal (less memory usage)
 ## NEW: use priors if they exist (NOTE: need eflomal - priors branch!)
 ## NEW: remove dependency on aligned.?? files
+## NEW: split big corpora into smaller pieces to be more efficient
+
+# %/model/aligned.srctotgt.gz:
+# 	${MAKE} ${dir $@}aligned.${SRCEXT} ${dir $@}aligned.${TRGEXT}
+# ifneq ("$(wildcard $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors)","")
+# 	-${EFLOMAL} -v \
+# 		-s ${dir $@}aligned.${SRCEXT} \
+# 		-t ${dir $@}aligned.${TRGEXT} \
+# 		-f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 \
+# 		-p $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors || \
+# 	touch ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
+# else
+# 	-${EFLOMAL} -v \
+# 		-s ${dir $@}aligned.${SRCEXT} \
+# 		-t ${dir $@}aligned.${TRGEXT} \
+# 		-f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 || \
+# 	touch ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
+# endif
+# 	gzip -f ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
+
+ifndef MAX_EFLOMAL_CORPUS_SIZE
+  MAX_EFLOMAL_CORPUS_SIZE = 5000000
+endif
+
+ifneq ("$(wildcard $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors)","")
+  EFLOMAL_PRIOS = -p $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors
+endif
 
 %/model/aligned.srctotgt.gz:
 	${MAKE} ${dir $@}aligned.${SRCEXT} ${dir $@}aligned.${TRGEXT}
-ifneq ("$(wildcard $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors)","")
-	-${EFLOMAL} -v \
-		-s ${dir $@}aligned.${SRCEXT} \
-		-t ${dir $@}aligned.${TRGEXT} \
-		-f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 \
-		-p $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors || \
-	touch ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
-else
-	-${EFLOMAL} -v \
-		-s ${dir $@}aligned.${SRCEXT} \
-		-t ${dir $@}aligned.${TRGEXT} \
-		-f ${@:.gz=} -r ${@:srctotgt.gz=tgttosrc} -m 3 || \
-	touch ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
-endif
-	gzip -f ${@:.gz=} ${@:srctotgt.gz=tgttosrc}
+	mkdir -p ${dir $@}aligned.${SRCEXT}.d
+	mkdir -p ${dir $@}aligned.${TRGEXT}.d
+	rm -f ${dir $@}aligned.${SRCEXT}.d/*
+	rm -f ${dir $@}aligned.${TRGEXT}.d/*
+	split -l ${MAX_EFLOMAL_CORPUS_SIZE} ${dir $@}aligned.${SRCEXT} ${dir $@}aligned.${SRCEXT}.d/
+	split -l ${MAX_EFLOMAL_CORPUS_SIZE} ${dir $@}aligned.${TRGEXT} ${dir $@}aligned.${TRGEXT}.d/
+	-for s in `ls ${dir $@}aligned.${SRCEXT}.d`; do \
+	  echo "align part $$s"; \
+	  ${EFLOMAL} -v -m 3 ${EFLOMAL_PRIOS} \
+		-s ${dir $@}aligned.${SRCEXT}.d/$$s \
+		-t ${dir $@}aligned.${TRGEXT}.d/$$s \
+		-f ${dir $@}aligned.${SRCEXT}.d/$$s.fwd \
+		-r ${dir $@}aligned.${TRGEXT}.d/$$s.rev; \
+	done
+	cat ${dir $@}aligned.${SRCEXT}.d/*.fwd | gzip -c > $@
+	cat ${dir $@}aligned.${TRGEXT}.d/*.rev | gzip -c > ${@:srctotgt.gz=tgttosrc.gz}
+	rm -f ${dir $@}aligned.${SRCEXT}.d/*
+	rm -f ${dir $@}aligned.${TRGEXT}.d/*
+	rmdir ${dir $@}aligned.${SRCEXT}.d
+	rmdir ${dir $@}aligned.${TRGEXT}.d
 
 %/model/aligned.tgttosrc.gz: %/model/aligned.srctotgt.gz
 	@echo "done!"

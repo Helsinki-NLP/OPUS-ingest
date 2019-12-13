@@ -19,6 +19,7 @@ endif
 OPUS_TAITO = /proj/nlpl/data/OPUS
 OPUS_ABEL  = /projects/nlpl/data/OPUS
 OPUS       = ${OPUS_TAITO}
+OPUS_DEV   = /proj/OPUS
 
 ## user and host to access abel
 ABEL_USER  = joerg@abel.uio.no
@@ -43,7 +44,9 @@ storage-usage:
 	rclone about pouta:
 
 ${OPUS}/statistics-${DATE}.md:
-	echo '# Some file statistics of OUS releases' > $@
+	echo '# Some file statistics of OPUS releases' > $@
+	echo '' >> $@
+	echo '* number of released corpora: $(words $(CORPORA))' >> $@
 	echo '' >> $@
 	echo "* size per corpus" >> $@
 	echo '' >> $@
@@ -53,20 +56,72 @@ ${OPUS}/statistics-${DATE}.md:
 	grep -v README >> $@
 	echo '```' >> $@
 	echo '' >> $@
-	echo "* total size" >> $@
+	echo -n "* total size: " >> $@
+	cd ${OPUS} && du -hs . >> $@
 	echo '' >> $@
-	echo '```' >> $@
-	du -hs . >> $@
-	echo '```' >> $@
-	echo '' >> $@
-	echo "* nr of files per corpus" >> $@
+	echo "* nr of released files per corpus" >> $@
 	echo '' >> $@
 	echo '```' >> $@
 	for c in ${CORPORA}; do \
-	  echo -n "$$c: "; \
+	  echo -n "$$c: " >> $@; \
 	  find ${OPUS}/$$c -type f | wc -l >> $@; \
 	done
 	echo '```' >> $@
+	echo '' >> $@
+	echo "* nr of languages per corpus (without regional variants)" >> $@
+	echo '' >> $@
+	echo '```' >> $@
+	for c in ${CORPORA}; do \
+	  echo -n "$$c: " >> $@; \
+	  find ${OPUS}/$$c -path '*/raw/*' -name '*.zip' -exec basename {} \; |\
+	  sed 's/.zip//' | sed 's/\_..//g' | tr '[[:upper:]]' '[[:lower:]]' | sort | uniq | wc -l >> $@; \
+	done
+	echo '```' >> $@
+	echo '' >> $@
+	echo -n "* total nr of languages (without regional variants): " >> $@
+	find ${OPUS} -path '*/raw/*' -name '*.zip' -exec basename {} \; |\
+	sed 's/.zip//' | sed 's/\_..//g' | tr '[[:upper:]]' '[[:lower:]]' | sort | uniq | wc -l >> $@
+	echo '' >> $@
+	echo "* nr of bitexts (language pairs) per corpus (without regional variants): " >> $@
+	echo '' >> $@
+	echo '```' >> $@
+	for c in ${CORPORA}; do \
+	  echo -n "$$c: " >> $@; \
+	  find ${OPUS}/$$c -path '*/xml/*' -name '*-*.xml.gz' -exec basename {} \; |\
+	  sed 's/.xml.gz//' | sed 's/\_..//g' | tr '[[:upper:]]' '[[:lower:]]' | sort | uniq | wc -l >> $@; \
+	done
+	echo '```' >> $@
+	echo '' >> $@
+	echo -n "* total nr of language pairs (without regional variants): " >> $@
+	find ${OPUS} -path '*/xml/*' -name '*-*.xml.gz' -exec basename {} \; |\
+	sed 's/.xml.gz//' | sed 's/\_..//g' | tr '[[:upper:]]' '[[:lower:]]' | sort | uniq | wc -l >> $@
+	echo '' >> $@
+	echo "* nr of documents per corpus" >> $@
+	echo '' >> $@
+	echo '```' >> $@
+	for c in ${CORPORA}; do \
+	  echo -n "$$c: " >> $@; \
+	  find ${OPUS_DEV}/corpus/$$c/raw -name '*.xml.gz' | wc -l >> $@; \
+	done
+	echo -n "* total nr of documents: " >> $@
+	find ${OPUS_DEV}/corpus -path '*/raw/*' -name '*.xml.gz' | wc -l >> $@
+
+
+
+
+
+${OPUS}/languages-raw-${DATE}.txt:
+	find ${OPUS} -path '*/raw/*' -name '*.zip' -exec basename {} \; |\
+	sed 's/.zip//' | sort | uniq -c > $@
+
+${OPUS}/languages-xml-${DATE}.txt:
+	find ${OPUS} -path '*/xml/*' -name '*.zip' -exec basename {} \; |\
+	sed 's/.zip//' | sort | uniq -c > $@
+
+${OPUS}/bitexts-${DATE}.txt:
+	find ${OPUS} -path '*/xml/*' -name '*-*.xml.gz' -exec basename {} \; |\
+	sed 's/.xml.gz//' | sort | uniq -c > $@
+
 
 
 update-api:
@@ -194,6 +249,17 @@ upload-subs2018-zip-xml:
 	done; \
 	cd ..;
 	swift post OPUS-OpenSubtitles --read-acl ".r:*"
+
+upload-subs2018-alg-xml:
+	@cd ${OPUS}; \
+	cd OpenSubtitles; \
+	for f in v2018/xml/*.xml.gz; do \
+	  swift upload OPUS-OpenSubtitles --changed --skip-identical \
+		--use-slo --segment-size ${MAXSIZE} $$f ;\
+	done; \
+	cd ..;
+	swift post OPUS-OpenSubtitles --read-acl ".r:*"
+
 
 upload-euBookshop-zip-xml:
 	@cd ${OPUS}; \

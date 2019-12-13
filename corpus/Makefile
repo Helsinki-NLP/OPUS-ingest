@@ -1,5 +1,18 @@
 
 
+
+ALLRAW = ${wildcard /proj/nlpl/data/OPUS/*/latest/raw/*.zip}
+ALLRAW_LANGID = ${subst /raw/,/raw-langid/,${ALLRAW}}
+
+run-langid: ${ALLRAW_LANGID}
+
+${ALLRAW_LANGID}:
+	mkdir -p $(dir $@)
+	TMPDIR=/proj/nlpl/data/OPUS/tmp opus_langid -f ${subst /raw-langid/,/raw/,$@} -t $@
+
+
+
+
 CORPORA = ECB EMEA EUconst Europarl3 KDE4 KDEdoc MBS OpenOffice \
 	OpenOffice3 OpenSubtitles OpenSubtitles2011 PHP \
 	RF SETIMES SPC TEP WikiSource

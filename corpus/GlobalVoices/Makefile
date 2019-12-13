@@ -41,3 +41,4 @@ include ../Makefile.cwb
 # include ../Makefile.html
 include ../Makefile.release
 include ../Makefile.submit
+include ../Makefile.udparse

@@ -158,6 +158,10 @@ EFLOMAL         = align_eflomal.py
 EFMARAL         = align.py
 ATOOLS          = atools
 
+## max size of a bitext to be aligned
+## (the makefile will automatically split before aligning)
+MAX_EFLOMAL_CORPUS_SIZE = 5000000
+
 #--------------------------------------------------------------------
 # individual pre-processing steps (using Uplug)
 #
