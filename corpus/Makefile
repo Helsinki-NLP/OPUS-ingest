@@ -72,18 +72,19 @@ ${BIG_CORPORA_DONE}: ${WORKDIR}/%.allas: %
 	cd $<; \
 	mkdir -p ${WORKDIR}/allas/$<; \
 	for d in `find . -mindepth 1 -maxdepth 1 -type d -printf ' %P'`; do \
+	  echo "processing $</$$d"; \
 	  if [ `find $$d -mindepth 1 -maxdepth 1 -type d | wc -l` -le 100 ]; then \
-	    a-put --skip-filelist -b ${CONTAINER}-$<-$$d `find $$d -mindepth 1 -maxdepth 1 -type d -printf ' %p'`; \
-	    echo "find $$d -maxdepth 1 -type f | tar -cf $$d-files.tar -T -"; \
+	    for f in `find $$d -mindepth 1 -maxdepth 1 -type d -printf ' %p'`; do \
+	      a-put --skip-filelist -b ${CONTAINER}-$<-$$d $$f; \
+	    done; \
 	    find $$d -maxdepth 1 -type f | tar -cf ${WORKDIR}/allas/$</$$d-files.tar -T -; \
-	    echo "a-put -b ${CONTAINER}-$<-$$d $$d-files.tar"; \
 	    a-put -b ${CONTAINER}-$<-$$d ${WORKDIR}/allas/$</$$d-files.tar; \
 	    rm -f ${WORKDIR}/allas/$</$$d-files.tar; \
 	  else \
 	    a-put --skip-filelist -b ${CONTAINER}-$< $$d ; \
 	  fi \
 	done
-	find . -maxdepth 1 -type f tar -cf ${WORKDIR}/allas/$</$<-files.tar -T -
+	find . -maxdepth 1 -type f | tar -cf ${WORKDIR}/allas/$</$<-files.tar -T -
 	a-put --skip-filelist -b ${CONTAINER}-$< ${WORKDIR}/allas/$</$<-files.tar
 	rm -f ${WORKDIR}/allas/$</$<-files.tar
 
