@@ -111,7 +111,7 @@ NOTE: some files are missing because of access permissions.
 ## fiskmö
 
 * released files are on allas in the container `fiskmo` and 
-* development data files are in `fiskmo-dev`
+* development data files are in `proj-fiskmo`
 * SVENFI with access keys for OPUS repositories
 
 

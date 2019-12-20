@@ -4,16 +4,19 @@
 
 ## container base name
 CONTAINER = proj-OPUS-corpus
+CSC_PROJECT = project_2000661
 
 ## corpora in OPUS
 OPUS_CORPORA = $(subst /,,$(wildcard */))
 BIG_CORPORA = DGT JRC-Acquis JW300 MultiUN OpenSubtitles UNPC Europarl GlobalVoices News-Commentary QED EUbookshop
 NORMAL_CORPORA = $(filter-out ${BIG_CORPORA},$(OPUS_CORPORA))
 
+WORKDIR = /wrk/tiedeman
+
 ## target flags for uploading corpora
-OPUS_CORPORA_DONE   = $(patsubst %,%.allas,${OPUS_CORPORA})
-BIG_CORPORA_DONE    = $(patsubst %,%.allas,${BIG_CORPORA})
-NORMAL_CORPORA_DONE = $(patsubst %,%.allas,${NORMAL_CORPORA})
+OPUS_CORPORA_DONE   = $(patsubst %,${WORKDIR}/%.allas,${OPUS_CORPORA})
+BIG_CORPORA_DONE    = $(patsubst %,${WORKDIR}/%.allas,${BIG_CORPORA})
+NORMAL_CORPORA_DONE = $(patsubst %,${WORKDIR}/%.allas,${NORMAL_CORPORA})
 
 ## number of files in a corpus dir to decide
 ## whethr to rclone or package it up
@@ -42,9 +45,10 @@ upload-corpora: ${OPUS_CORPORA_DONE}
 ## - don't upload again if the package is already there
 ## TODO ---> do we need some other treatment later for updating corpora?
 
+
 upload-normal-corpora: ${NORMAL_CORPORA_DONE}
 
-${NORMAL_CORPORA_DONE}: %.allas: %
+${NORMAL_CORPORA_DONE}: ${WORKDIR}/%.allas: %
 	if [ `rclone ls allas:${CONTAINER}/$<.tar.zst | wc -l` -lt 1 ]; then \
 	  if [ `find $< -type f | wc -l` -le ${MAX_NR_FILES} ]; then \
 	    rclone -l sync $< allas:${CONTAINER}-$<; \
@@ -64,41 +68,62 @@ ${NORMAL_CORPORA_DONE}: %.allas: %
 
 upload-big-corpora: ${BIG_CORPORA_DONE}
 
-${BIG_CORPORA_DONE}: %.allas: %
+${BIG_CORPORA_DONE}: ${WORKDIR}/%.allas: %
 	cd $<; \
-	for d in ${SPLIT_SUB_DIRS}; do \
-	  if [ -d $$d ]; then \
-	    if [ `ls $$d | wc -l` -le ${MAX_NR_SUBDIR_FILES} ]; then \
-	      cd $$d; \
-	      for l in `ls`; do \
-	        if [ -d $$l ]; then \
-	          if [ `rclone ls allas:${CONTAINER}-$<-$$d/$$l.tar.zst | wc -l` -lt 1 ]; then \
-	            a-put --skip-filelist -b ${CONTAINER}-$<-$$d $$l; \
-	          fi \
-	        elif [ -f $$l ]; then \
-	          if [ ! -h $$l ]; then \
-	            rclone -l copyto $$l allas:${CONTAINER}-$<-$$d/$$l; \
-	          fi \
-	        fi \
-	      done; \
-	      cd ..; \
-	    fi \
-	  fi \
-	done; \
-	for d in `ls`; do \
-	  if [ -d $$d ]; then \
-	    if [ `a-list | grep "${CONTAINER}-$<-$$d" | wc -l` -lt 1 ]; then \
-	      if [ `rclone ls allas:${CONTAINER}-$</$$d.tar.zst | wc -l` -lt 1 ]; then \
-	        a-put --skip-filelist -b ${CONTAINER}-$< $$d; \
-	      fi \
-	    fi \
-	  elif [ -f $$d ]; then \
-	    if [ ! -h $$d ]; then \
-	      rclone -l copy $$d allas:${CONTAINER}-$</$$d; \
-	    fi \
+	mkdir -p ${WORKDIR}/allas/$<; \
+	for d in `find . -mindepth 1 -maxdepth 1 -type d -printf ' %P'`; do \
+	  if [ `find $$d -mindepth 1 -maxdepth 1 -type d | wc -l` -le 100 ]; then \
+	    a-put --skip-filelist -b ${CONTAINER}-$<-$$d `find $$d -mindepth 1 -maxdepth 1 -type d -printf ' %p'`; \
+	    echo "find $$d -maxdepth 1 -type f | tar -cf $$d-files.tar -T -"; \
+	    find $$d -maxdepth 1 -type f | tar -cf ${WORKDIR}/allas/$</$$d-files.tar -T -; \
+	    echo "a-put -b ${CONTAINER}-$<-$$d $$d-files.tar"; \
+	    a-put -b ${CONTAINER}-$<-$$d ${WORKDIR}/allas/$</$$d-files.tar; \
+	    rm -f ${WORKDIR}/allas/$</$$d-files.tar; \
+	  else \
+	    a-put --skip-filelist -b ${CONTAINER}-$< $$d ; \
 	  fi \
 	done
-	touch $@
+	find . -maxdepth 1 -type f tar -cf ${WORKDIR}/allas/$</$<-files.tar -T -
+	a-put --skip-filelist -b ${CONTAINER}-$< ${WORKDIR}/allas/$</$<-files.tar
+	rm -f ${WORKDIR}/allas/$</$<-files.tar
+
+
+# ${BIG_CORPORA_DONE}: %.allas: %
+# 	cd $<; \
+# 	for d in ${SPLIT_SUB_DIRS}; do \
+# 	  if [ -d $$d ]; then \
+# 	    if [ `ls $$d | wc -l` -le ${MAX_NR_SUBDIR_FILES} ]; then \
+# 	      cd $$d; \
+# 	      for l in `ls`; do \
+# 	        if [ -d $$l ]; then \
+# 	          if [ `rclone ls allas:${CONTAINER}-$<-$$d/$$l.tar.zst | wc -l` -lt 1 ]; then \
+# 	            a-put --skip-filelist -b ${CONTAINER}-$<-$$d $$l; \
+# 	          fi \
+# 	        elif [ -f $$l ]; then \
+# 	          if [ ! -h $$l ]; then \
+# 	            rclone -l copyto $$l allas:${CONTAINER}-$<-$$d/$$l; \
+# 	          fi \
+# 	        fi \
+# 	      done; \
+# 	      cd ..; \
+# 	    fi \
+# 	  fi \
+# 	done; \
+# 	for d in `ls`; do \
+# 	  if [ -d $$d ]; then \
+# 	    allas-conf -k ${CSC_PROJECT}; \
+# 	    if [ `a-list | grep "${CONTAINER}-$<-$$d" | wc -l` -lt 1 ]; then \
+# 	      if [ `rclone ls allas:${CONTAINER}-$</$$d.tar.zst | wc -l` -lt 1 ]; then \
+# 	        a-put --skip-filelist -b ${CONTAINER}-$< $$d; \
+# 	      fi \
+# 	    fi \
+# 	  elif [ -f $$d ]; then \
+# 	    if [ ! -h $$d ]; then \
+# 	      rclone -l copy $$d allas:${CONTAINER}-$</$$d; \
+# 	    fi \
+# 	  fi \
+# 	done
+# 	touch $@
 
 
 #######################################################################
