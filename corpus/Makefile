@@ -3,90 +3,249 @@
 #----------------------------------------
 
 ## container base name
-CONTAINER = proj-OPUS-corpus
+CONTAINER   = project-OPUS-corpus
 CSC_PROJECT = project_2000661
 
 ## corpora in OPUS
 OPUS_CORPORA = $(subst /,,$(wildcard */))
-BIG_CORPORA = DGT JRC-Acquis JW300 MultiUN OpenSubtitles UNPC Europarl GlobalVoices News-Commentary QED EUbookshop
-NORMAL_CORPORA = $(filter-out ${BIG_CORPORA},$(OPUS_CORPORA))
 
 WORKDIR = /wrk/tiedeman
 
 ## target flags for uploading corpora
-OPUS_CORPORA_DONE   = $(patsubst %,${WORKDIR}/%.allas,${OPUS_CORPORA})
-BIG_CORPORA_DONE    = $(patsubst %,${WORKDIR}/%.allas,${BIG_CORPORA})
-NORMAL_CORPORA_DONE = $(patsubst %,${WORKDIR}/%.allas,${NORMAL_CORPORA})
-
-## number of files in a corpus dir to decide
-## whethr to rclone or package it up
-MAX_NR_FILES = 10000
-
-## for BIG_CORPORA:
-## directories to split even further
-## (only of max nr of files in those subdirs)
-SPLIT_SUB_DIRS = raw xml parsed
-MAX_NR_SUBDIR_FILES = 5000
+OPUS_CORPORA_DONE   = $(patsubst %,${WORKDIR}/OPUS-corpus/%.allas,${OPUS_CORPORA})
 
 
-list-corpora:
-	@echo ${OPUS_CORPORA}
-	@echo ${BIG_CORPORA}
-	@echo ${NORMAL_CORPORA}
+############################################
+## new: treat all corpora the same!
+## (and don't compress again)
+############################################
+
+APUT_FLAGS = -p ${CSC_PROJECT} --override --nc --skip-filelist
 
 upload-corpora: ${OPUS_CORPORA_DONE}
 
-
-## upload corpora to allas using both rclone sync and a-put
-##
-# - all directories with > 10000 files --> package with a-put
-# - all directories with <= 10000 files --> rclone sync
-#
-## - don't upload again if the package is already there
-## TODO ---> do we need some other treatment later for updating corpora?
-
-
-upload-normal-corpora: ${NORMAL_CORPORA_DONE}
-
-${NORMAL_CORPORA_DONE}: ${WORKDIR}/%.allas: %
-	if [ `rclone ls allas:${CONTAINER}/$<.tar.zst | wc -l` -lt 1 ]; then \
-	  if [ `find $< -type f | wc -l` -le ${MAX_NR_FILES} ]; then \
-	    rclone -l sync $< allas:${CONTAINER}-$<; \
-	  else \
-	    a-put --skip-filelist -b ${CONTAINER} $<; \
-	  fi \
-	fi
-	touch $@
-
-
-
-## special treatment for big corpora
-## - upload each subdirectory separately
-## - special treatment for subdir's raw, xml, parsed
-## - don't upload again if the package is already there
-## TODO ---> do we need some other treatment later for updating corpora?
-
-upload-big-corpora: ${BIG_CORPORA_DONE}
-
-${BIG_CORPORA_DONE}: ${WORKDIR}/%.allas: %
+${OPUS_CORPORA_DONE}: ${WORKDIR}/OPUS-corpus/%.allas: %
+	echo "upload $<"
 	cd $<; \
 	mkdir -p ${WORKDIR}/allas/$<; \
 	for d in `find . -mindepth 1 -maxdepth 1 -type d -printf ' %P'`; do \
 	  echo "processing $</$$d"; \
-	  if [ `find $$d -mindepth 1 -maxdepth 1 -type d | wc -l` -le 100 ]; then \
+	  mkdir -p ${WORKDIR}/allas/$</$$d; \
+	  if [[ ( $$d == "xml" ) || ( $$d == "parsed" ) || ( $$d == "raw" ) ]]; then \
 	    for f in `find $$d -mindepth 1 -maxdepth 1 -type d -printf ' %p'`; do \
-	      a-put --skip-filelist -b ${CONTAINER}-$<-$$d $$f; \
+	      echo "processing $</$$f"; \
+	      tar -cf ${WORKDIR}/allas/$</$$f.tar $$f; \
+	      a-put ${APUT_FLAGS} -b ${CONTAINER}-$<-$$d ${WORKDIR}/allas/$</$$f.tar; \
+	      rm -f ${WORKDIR}/allas/$</$$f.tar; \
 	    done; \
 	    find $$d -maxdepth 1 -type f | tar -cf ${WORKDIR}/allas/$</$$d-files.tar -T -; \
-	    a-put -b ${CONTAINER}-$<-$$d ${WORKDIR}/allas/$</$$d-files.tar; \
+	    a-put ${APUT_FLAGS} -b ${CONTAINER}-$<-$$d ${WORKDIR}/allas/$</$$d-files.tar; \
 	    rm -f ${WORKDIR}/allas/$</$$d-files.tar; \
 	  else \
-	    a-put --skip-filelist -b ${CONTAINER}-$< $$d ; \
-	  fi \
+	    echo "processing $</$$d"; \
+	    tar -cf ${WORKDIR}/allas/$</$$d.tar $$d; \
+	    a-put ${APUT_FLAGS} -b ${CONTAINER}-$< ${WORKDIR}/allas/$</$$d.tar ; \
+	    rm -f ${WORKDIR}/allas/$</$$d.tar; \
+	  fi; \
+	  rmdir ${WORKDIR}/allas/$</$$d; \
 	done
 	find . -maxdepth 1 -type f | tar -cf ${WORKDIR}/allas/$</$<-files.tar -T -
-	a-put --skip-filelist -b ${CONTAINER}-$< ${WORKDIR}/allas/$</$<-files.tar
+	a-put ${APUT_FLAGS} -b ${CONTAINER}-$< ${WORKDIR}/allas/$</$<-files.tar
 	rm -f ${WORKDIR}/allas/$</$<-files.tar
+	rmdir ${WORKDIR}/allas/$<; \
+	mkdir -p ${dir $@}
+	touch $@
+
+#	    a-put -p ${CSC_PROJECT} --nc --skip-filelist -b ${CONTAINER}-$< $$d ; \
+
+OLD_CONTAINER = proj-OPUS-corpus-Bianet \
+proj-OPUS-corpus-Books \
+proj-OPUS-corpus-CAPES \
+proj-OPUS-corpus-DGT \
+proj-OPUS-corpus-DGT-data \
+proj-OPUS-corpus-DGT-dic \
+proj-OPUS-corpus-DGT-log \
+proj-OPUS-corpus-DGT-parsed \
+proj-OPUS-corpus-DGT-raw \
+proj-OPUS-corpus-DGT-src \
+proj-OPUS-corpus-DGT-src_segments \
+proj-OPUS-corpus-DGT-tmxt \
+proj-OPUS-corpus-DGT-xml \
+proj-OPUS-corpus-DGT_segments \
+proj-OPUS-corpus-DOGC \
+proj-OPUS-corpus-ECB \
+proj-OPUS-corpus-ECB_segments \
+proj-OPUS-corpus-EhuHac \
+proj-OPUS-corpus-Elhuyar \
+proj-OPUS-corpus-Europarl \
+proj-OPUS-corpus-Europarl-data \
+proj-OPUS-corpus-Europarl-dic \
+proj-OPUS-corpus-Europarl-multi \
+proj-OPUS-corpus-Europarl-multilingwis \
+proj-OPUS-corpus-Europarl-multilingwis_segments \
+proj-OPUS-corpus-Europarl-scripts \
+proj-OPUS-corpus-Europarl-xml \
+proj-OPUS-corpus-Europarl_segments \
+proj-OPUS-corpus-JRC-Acquis \
+proj-OPUS-corpus-JRC-Acquis-log \
+proj-OPUS-corpus-JRC-Acquis-raw \
+proj-OPUS-corpus-JRC-Acquis-scripts \
+proj-OPUS-corpus-JRC-Acquis-src \
+proj-OPUS-corpus-JRC-Acquis-wordalign \
+proj-OPUS-corpus-JRC-Acquis-xml \
+proj-OPUS-corpus-JW300 \
+proj-OPUS-corpus-JW300-data \
+proj-OPUS-corpus-JW300-dic \
+proj-OPUS-corpus-JW300-dic_segments \
+proj-OPUS-corpus-JW300-v1 \
+proj-OPUS-corpus-JW300_segments \
+proj-OPUS-corpus-MBS \
+proj-OPUS-corpus-MPC1 \
+proj-OPUS-corpus-MontenegrinSubs \
+proj-OPUS-corpus-MultiParaCrawl \
+proj-OPUS-corpus-MultiParaCrawlTest \
+proj-OPUS-corpus-MultiParaCrawl_segments \
+proj-OPUS-corpus-MultiUN \
+proj-OPUS-corpus-MultiUN-dic.old \
+proj-OPUS-corpus-MultiUN-log \
+proj-OPUS-corpus-MultiUN-raw \
+proj-OPUS-corpus-MultiUN-src \
+proj-OPUS-corpus-MultiUN-wordalign \
+proj-OPUS-corpus-MultiUN-xml \
+proj-OPUS-corpus-MultiUN-xml_segments \
+proj-OPUS-corpus-OfisPublik \
+proj-OPUS-corpus-OpenSubtitles-scripts \
+proj-OPUS-corpus-OpenSubtitles-xml \
+proj-OPUS-corpus-OpenSubtitles-xml_segments \
+proj-OPUS-corpus-ParCor \
+proj-OPUS-corpus-RF \
+proj-OPUS-corpus-SETIMES \
+proj-OPUS-corpus-SPC \
+proj-OPUS-corpus-SciELO \
+proj-OPUS-corpus-TED2013 \
+proj-OPUS-corpus-TEP \
+proj-OPUS-corpus-TedTalks \
+proj-OPUS-corpus-TildeMODEL \
+proj-OPUS-corpus-UN \
+proj-OPUS-corpus-UNPC \
+proj-OPUS-corpus-UNPC-cwb \
+proj-OPUS-corpus-UNPC-cwb_segments \
+proj-OPUS-corpus-UNPC-data \
+proj-OPUS-corpus-UNPC-dic \
+proj-OPUS-corpus-UNPC-hunalign \
+proj-OPUS-corpus-UNPC-log \
+proj-OPUS-corpus-UNPC-raw \
+proj-OPUS-corpus-UNPC-scripts \
+proj-OPUS-corpus-UNPC-src \
+proj-OPUS-corpus-UNPC-src_segments \
+proj-OPUS-corpus-UNPC-wordalign \
+proj-OPUS-corpus-UNPC-wordalign_segments \
+proj-OPUS-corpus-UNPC-xml \
+proj-OPUS-corpus-UNPC-xml_segments \
+proj-OPUS-corpus-WMT-News \
+proj-OPUS-corpus-WikiSource \
+proj-OPUS-corpus-Wikipedia \
+proj-OPUS-corpus-XhosaNavy \
+proj-OPUS-corpus-ada83 \
+proj-OPUS-corpus-bible-gu \
+proj-OPUS-corpus-fiskmo \
+proj-OPUS-corpus-giga-fren \
+proj-OPUS-corpus-giga-fren_segments \
+proj-OPUS-corpus-hrenWaC \
+proj-OPUS-corpus-komi \
+proj-OPUS-corpus-memat \
+proj-OPUS-corpus-sardware \
+proj-OPUS-corpus-template-moses \
+proj-OPUS-corpus-template-opusrr \
+proj-OPUS-corpus-template-text \
+proj-OPUS-corpus-template-tmx \
+proj-OPUS-corpus-testcorpus \
+proj-OPUS-corpus_segments
+
+delete-old:
+	for c in ${OLD_CONTAINER}; do \
+	  swift delete $$c; \
+	done
+
+
+# ############################################
+# # old: do it differntly for each corpus
+# ############################################
+
+# BIG_CORPORA = DGT JRC-Acquis JW300 MultiUN OpenSubtitles UNPC Europarl GlobalVoices News-Commentary QED EUbookshop
+# NORMAL_CORPORA = $(filter-out ${BIG_CORPORA},$(OPUS_CORPORA))
+# BIG_CORPORA_DONE    = $(patsubst %,${WORKDIR}/%.allas,${BIG_CORPORA})
+# NORMAL_CORPORA_DONE = $(patsubst %,${WORKDIR}/%.allas,${NORMAL_CORPORA})
+
+# ## number of files in a corpus dir to decide
+# ## whethr to rclone or package it up
+# MAX_NR_FILES = 10000
+
+# ## for BIG_CORPORA:
+# ## directories to split even further
+# ## (only of max nr of files in those subdirs)
+# SPLIT_SUB_DIRS = raw xml parsed
+# MAX_NR_SUBDIR_FILES = 5000
+
+# list-corpora:
+# 	@echo ${OPUS_CORPORA}
+# 	@echo ${BIG_CORPORA}
+# 	@echo ${NORMAL_CORPORA}
+
+# ## upload corpora to allas using both rclone sync and a-put
+# ##
+# # - all directories with > 10000 files --> package with a-put
+# # - all directories with <= 10000 files --> rclone sync
+# #
+# ## - don't upload again if the package is already there
+# ## TODO ---> do we need some other treatment later for updating corpora?
+
+
+# upload-normal-corpora: ${NORMAL_CORPORA_DONE}
+
+# ${NORMAL_CORPORA_DONE}: ${WORKDIR}/%.allas: %
+# 	if [ `rclone ls allas:${CONTAINER}/$<.tar.zst | wc -l` -lt 1 ]; then \
+# 	  if [ `find $< -type f | wc -l` -le ${MAX_NR_FILES} ]; then \
+# 	    rclone -l sync $< allas:${CONTAINER}-$<; \
+# 	  else \
+# 	    a-put --skip-filelist -b ${CONTAINER} $<; \
+# 	  fi \
+# 	fi
+# 	touch $@
+
+
+
+
+
+
+
+# ## special treatment for big corpora
+# ## - upload each subdirectory separately
+# ## - special treatment for subdir's raw, xml, parsed
+# ## - don't upload again if the package is already there
+# ## TODO ---> do we need some other treatment later for updating corpora?
+
+# upload-big-corpora: ${BIG_CORPORA_DONE}
+
+# ${BIG_CORPORA_DONE}: ${WORKDIR}/%.allas: %
+# 	cd $<; \
+# 	mkdir -p ${WORKDIR}/allas/$<; \
+# 	for d in `find . -mindepth 1 -maxdepth 1 -type d -printf ' %P'`; do \
+# 	  echo "processing $</$$d"; \
+# 	  if [ `find $$d -mindepth 1 -maxdepth 1 -type d | wc -l` -le 100 ]; then \
+# 	    for f in `find $$d -mindepth 1 -maxdepth 1 -type d -printf ' %p'`; do \
+# 	      a-put --skip-filelist -b ${CONTAINER}-$<-$$d $$f; \
+# 	    done; \
+# 	    find $$d -maxdepth 1 -type f | tar -cf ${WORKDIR}/allas/$</$$d-files.tar -T -; \
+# 	    a-put -b ${CONTAINER}-$<-$$d ${WORKDIR}/allas/$</$$d-files.tar; \
+# 	    rm -f ${WORKDIR}/allas/$</$$d-files.tar; \
+# 	  else \
+# 	    a-put --skip-filelist -b ${CONTAINER}-$< $$d ; \
+# 	  fi \
+# 	done
+# 	find . -maxdepth 1 -type f | tar -cf ${WORKDIR}/allas/$</$<-files.tar -T -
+# 	a-put --skip-filelist -b ${CONTAINER}-$< ${WORKDIR}/allas/$</$<-files.tar
+# 	rm -f ${WORKDIR}/allas/$</$<-files.tar
 
 
 # ${BIG_CORPORA_DONE}: %.allas: %
