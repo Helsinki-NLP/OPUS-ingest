@@ -148,7 +148,7 @@ cleanup:
 
 
 %.tar: %
-	tar -cf $@ $<
+	tar -chf $@ $<
 
 .SECONDEXPANSION:
 ${SENTALIGNFILES}: %.xml.gz: $$(firstword $$(subst -, ,$(notdir %))).tar $$(lastword $$(subst -, ,$(notdir %))).tar
