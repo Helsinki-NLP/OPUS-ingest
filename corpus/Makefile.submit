@@ -23,8 +23,9 @@ HPC_MEM     = 4g
 HPC_TIME    = 48:00
 HPC_NODES   = 1
 HPC_CORES   = 1
-HPC_QUEUE   = serial
-HPC_MODULES = nlpl-opus python-env/3.4.1 
+HPC_QUEUE   = small
+# HPC_MODULES = nlpl-opus python-env/3.4.1 
+HPC_MODULES = python-env nlpl-efmaral nlpl-opus nlpl-moses 
 HPC_EXTRA   = 
 
 
@@ -34,6 +35,9 @@ HPC_EXTRA   =
 	echo '#SBATCH -o ${@:.submit=}.out.%j' >> $@
 	echo '#SBATCH -e ${@:.submit=}.err.%j' >> $@
 	echo '#SBATCH --mem=${HPC_MEM}' >> $@
+ifeq (${shell hostname --domain},bullx)
+	echo '#SBATCH --account=project_2000661' >> $@
+endif
 ifdef EMAIL
 	echo '#SBATCH --mail-type=END' >> $@
 	echo '#SBATCH --mail-user=${EMAIL}' >> $@
@@ -44,6 +48,7 @@ endif
 	echo '#SBATCH -t ${HPC_TIME}:00' >> $@
 	echo '${HPC_EXTRA}' >> $@
 	echo 'module use -a /proj/nlpl/modules' >> $@
+	echo 'module use -a /projappl/nlpl/software/modules/etc' >> $@
 	for m in ${HPC_MODULES}; do \
 	  echo "module load $$m" >> $@; \
 	done
@@ -69,7 +74,6 @@ endif
 	-rsync -av ${CORPUSHOME} ${TMPDIR}/OPUS/corpus/
 	-${MAKE} -C $(patsubst ${OPUSHOME}%,${TMPDIR}/OPUS%,${PWD}) \
 		--keep-going \
-		EFLOMAL_PRIORS=$(OPUSHOME)/eflomal \
 		OPUSHOME=${TMPDIR}/OPUS ${@:-local=}
 	-rsync -zav ${TMPDIR}/OPUS/corpus/${CORPUS} ${OPUSHOME}/corpus/
 	-rsync -zav ${TMPDIR}/OPUS/web/${CORPUS} ${OPUSHOME}/web/

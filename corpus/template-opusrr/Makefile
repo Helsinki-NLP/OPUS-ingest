@@ -70,7 +70,8 @@ include ../Makefile.udparse
 ##   Makefile.annotate ..... all annotation in Uplug
 
 
-include ../Makefile.tokenize
+include ../Makefile.tokenize-moses
+# include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate
 

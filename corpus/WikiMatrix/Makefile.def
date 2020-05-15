@@ -1,0 +1,16 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = WikiMatrix
+
+RELEASE = 1
+VERSION = v${RELEASE}
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML = Parallel corpora from Wikimedia compiled by <a href="https://github.com/facebookresearch/LASER/tree/master/tasks/WikiMatrix">Facebook Research</a>
+EXTRAHTML = The data is released under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a>
+CITENOTE = Please, cite the following paper when downloading or using the data: Holger Schwenk, Vishrav Chaudhary, Shuo Sun, Hongyu Gong and Paco Guzman, <a href="https://arxiv.org/abs/1907.05791">WikiMatrix: Mining 135M Parallel Sentences in 1620 Language Pairs from Wikipedia</a>, arXiv, July 11 2019.
