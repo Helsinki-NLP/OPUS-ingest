@@ -5,8 +5,12 @@
 use utf8;
 use strict;
 
-use DB_File;
+# use BerkeleyDB;
+# use DB_File;
 # use DBM_Filter;
+# use KyotoCabinet;
+use TokyoCabinet;
+
 
 use vars qw($opt_l $opt_s $opt_t $opt_S $opt_T);
 use Getopt::Std;
@@ -33,8 +37,29 @@ my %TrgLangDB = ();
 my $SrcDbFile = "sent.".$SrcLang;
 my $TrgDbFile = "sent.".$TrgLang;
 
-tie %SrcLangDB, "DB_File", $SrcDbFile;
-tie %TrgLangDB, "DB_File", $TrgDbFile;
+
+# tie %SrcLangDB, 'BerkeleyDB::Hash', -Filename => $SrcDbFile, -Flags => DB_CREATE, -Cachesize => 64000000;
+# tie %TrgLangDB, 'BerkeleyDB::Hash', -Filename => $TrgDbFile, -Flags => DB_CREATE, -Cachesize => 64000000;
+
+# tie %SrcLangDB, "DB_File", $SrcDbFile;
+# tie %TrgLangDB, "DB_File", $TrgDbFile;
+
+
+my $sdb = tie(%SrcLangDB, "TokyoCabinet::HDB", $SrcDbFile, 
+	      TokyoCabinet::HDB::OWRITER | TokyoCabinet::HDB::OCREAT,,,
+	      TokyoCabinet::HDB::TLARGE) ||
+    die "tie sdb error\n";
+my $tdb = tie(%TrgLangDB, "TokyoCabinet::HDB", $TrgDbFile, 
+	      TokyoCabinet::HDB::OWRITER | TokyoCabinet::HDB::OCREAT,,,
+	      TokyoCabinet::HDB::TLARGE) ||
+    die "tie tdb error\n";
+
+$sdb->setcache(12000000);
+$tdb->setcache(12000000);
+
+$sdb->setxmsiz(750000000);
+$tdb->setxmsiz(750000000);
+
 
 my $SrcID = 0;
 my $TrgID = 0;
@@ -54,7 +79,7 @@ while (<>){
 	$SrcLangDB{$src} = $SrcID;
 	print S join("\t",$SrcID,$src),"\n";
     }
-    if (exists $SrcLangDB{$trg}){
+    if (exists $TrgLangDB{$trg}){
 	$TrgID = $TrgLangDB{$trg};
     }
     else{

@@ -110,8 +110,8 @@ show-nrof-packages:
 
 
 # script for creating websites
-# MAKEHTML   = opus-website
-MAKEHTML   = ${HOME}/bin/opus-website
+MAKEHTML   = opus-website
+# MAKEHTML   = ${HOME}/bin/opus-website
 
 ## some scripts for conversion
 ## TODO: should update to some better implementation
@@ -203,7 +203,7 @@ ifdef LICENSE
 endif
 
 ifdef COPYRIGHT
-  COPYRIGHTINFO=<b>License:</b> ${CORPYRIGHT}<br/>
+  COPYRIGHTINFO=<b>Copyright:</b> ${COPYRIGHT}<br/>
 endif
 
 ifndef DOWNLOADINFO

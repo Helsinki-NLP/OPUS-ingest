@@ -12,6 +12,7 @@ SENTALGS = ${patsubst %,../xml/%.xml.gz,${WIKI_LANGPAIRS}}
 XMLDOCS  = ${patsubst %,../raw/%/WikiMatrix.xml.gz,${WIKI_LANGS}}
 
 
+
 .PHONY: all
 all: fetch convert
 
@@ -36,8 +37,10 @@ ${SENTALGS}: ../xml/%.xml.gz: v1/WikiMatrix.%.tsv.gz
 	../scripts/alg2xml.pl \
 		-s $(firstword $(subst -, ,${patsubst ../xml/%.xml.gz,%,$@}))/WikiMatrix.xml.gz \
 		-t $(lastword $(subst -, ,${patsubst ../xml/%.xml.gz,%,$@}))/WikiMatrix.xml.gz \
-		< $@.txt > $@
+		< $@.txt |\
+	gzip -c > $@
 	rm -f $@.txt
+
 
 
 .SECONDARY: corpus.%
@@ -53,3 +56,17 @@ v1:
 	rm -f WikiMatrix.v1.1620_language_pairs.tar
 
 
+
+ ## test with another DB ....
+
+# SENTALGS2 = ${patsubst %,../xml2/%.xml.gz,${WIKI_LANGPAIRS}}
+# tsv2db-kc: ${SENTALGS2}
+
+# ${SENTALGS2}: ../xml2/%.xml.gz: v1/WikiMatrix.%.tsv.gz
+# 	mkdir -p ${dir $@}
+# 	zcat $< | ../scripts/tsv2db-kc.pl -l ${patsubst ../xml2/%.xml.gz,%,$@} > $@.txt
+# 	../scripts/alg2xml.pl \
+# 		-s $(firstword $(subst -, ,${patsubst ../xml2/%.xml.gz,%,$@}))/WikiMatrix.xml.gz \
+# 		-t $(lastword $(subst -, ,${patsubst ../xml2/%.xml.gz,%,$@}))/WikiMatrix.xml.gz \
+# 		< $@.txt > $@
+# 	rm -f $@.txt

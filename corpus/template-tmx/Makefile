@@ -80,13 +80,13 @@ convert: ${TMXDONE} ${TMXGZDONE}
 ${TMXDONE}: %_done: %.tmx
 	mkdir -p raw
 	cat $< | tidy -xml -utf8 > $<.tmp
-	cd raw && ${TMX2OPUS} -o ${notdir $(<:.tmx=.xml.gz)} ../$<.tmp
+	cd raw && ${TMX2OPUS} -r -o ${notdir $(<:.tmx=.xml.gz)} ../$<.tmp
 	rm -f $<.tmp
 	touch $@
 
 ${TMXGZDONE}: %_done: %.tmx.gz
 	mkdir -p raw
 	gzip -cd $< | tidy -xml -utf8 > $<.tmp
-	cd raw && ${TMX2OPUS} -o ${notdir $(<:.tmx.gz=.xml.gz)} ../$<.tmp
+	cd raw && ${TMX2OPUS} -r -o ${notdir $(<:.tmx.gz=.xml.gz)} ../$<.tmp
 	rm -f $<.tmp
 	touch $@

@@ -15,6 +15,15 @@
 * `tools`: scripts and tools
 
 
+## Pre-requisites
+
+* OpusTools
+* OpusTools-perl
+* Moses
+* recode
+* tidy
+
+
 ## TODO
 
 * clearly define pre-requisites

@@ -90,10 +90,14 @@ print &h2(&a({-href=>'/index.php'},'OPUS')." - Corpus query (CWB)");
 my $url=url();
 my %corpora=();
 
-my $corpus = url_param('corpus');
-my $lang = url_param('lang');
-my $advanced = url_param('adv');
-my @alg = param('alg');
+# my $corpus = url_param('corpus');
+my $corpus = param('corpus') || url_param('corpus');
+my ($lang,$advanced,@alg);
+if ($corpus eq url_param('corpus')){
+    $lang = url_param('lang');
+    $advanced = url_param('adv');
+    @alg = param('alg');
+}
 
 ##------------------------------
 ## decode UTF-8 characters
@@ -581,24 +585,26 @@ sub RegistryLinks{
     my $url=shift;
 
     my @rows=(&th({},['corpora','languages']));
-    my %trans=();
 
-    ## new way: dense list of corpora
+    my $CorpHtml = &startform();
+    my @corpora = sort keys %{$corpora};
 
-    my $CorpHtml = '';
+    $CorpHtml .= &popup_menu(-name => 'corpus',
+			     -onchange => 'this.form.submit()',
+			     -values => \@corpora,
+			     -default => $corpus);
+    $CorpHtml .= '<noscript><input type="submit" value="Submit"></noscript>';
+    $CorpHtml .= &endform();
+
     my $LangHtml = '';
-    foreach my $c (sort keys %{$corpora}){
-	my $link=&AddUrlParam($url,'corpus',$c);
-	if ($corpus eq $c){
-	    $CorpHtml .= ' <b>['.$c.']</b> ';
-	    foreach my $l (sort keys %{$$corpora{$c}}){
-		my $link=&AddUrlParam($link,'lang',$l);
-		$LangHtml.=&a({-href=>$link},$l).' ';
-		$trans{$l}{$c}=$link;
-	    }
-	}
-	else{
-	    $CorpHtml .= ' ('.&a({-href=>$link},$c).') ';
+    my $baselink=&AddUrlParam($url,'corpus',$corpus);
+    foreach my $l (sort keys %{$$corpora{$corpus}}){
+	if ($lang eq $l){
+	    $LangHtml.=$l.' ';
+	} 
+	else {
+	    my $link=&AddUrlParam($baselink,'lang',$l);
+	    $LangHtml.=&a({-href=>$link},$l).' ';
 	}
     }
     push (@rows,&td({},[$CorpHtml,$LangHtml]));
