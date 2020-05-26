@@ -27,6 +27,7 @@
   <div class="news">
     <h3>Latest News</h3>
     <ul>
+      <li>2020-05-22: New: <a href="ELRC.php">ELRC public</a></li>
       <li>2019-10-16: New: <a href="MultiParaCrawl-v5.php">MultiParaCrawl</a></li>
       <li>2019-10-14: New: <a href="infopankki-v1.php">Infopankki v1</a></li>
       <li>2019-09-28: Update: <a href="ParaCrawl-v5.php">ParaCrawl v5</a></li>
@@ -139,6 +140,7 @@
           <li><a href="ECB.php">ECB - European Central Bank corpus</a></li>
           <li><a href="EhuHac.php">EhuHac</a> - Hizkuntzen Arteko Corpusa</li>
           <li><a href="Elhuyar.php">Elhuyar corpus</a></li>
+          <li><a href="ELRC.php">ELRC public corpora</a></li>
           <li><a href="EMEA.php">EMEA - European Medicines Agency documents</a></li>
           <li><a href="EUbookshop.php">The EU bookshop corpus</a></li>
           <li><a href="EUconst.php">EUconst - The European constitution</a></li>

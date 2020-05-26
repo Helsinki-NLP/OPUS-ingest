@@ -44,6 +44,14 @@ else ifeq ("${shell hostname | cut -f2- -d.}","lingfil.uu.se")
   OPUSHTML      = ${OPUSHOME}/html
   OPUSRELEASE   = ${OPUSHOME}/releases
   OPUSWORDALIGN = ${OPUSHOME}/wordalign
+else ifeq ("${shell hostname -d}","bullx")
+  OPUSNLPL      = /projappl/nlpl/data/OPUS
+  OPUSPUB       = ${OPUSHOME}/public_html
+  OPUSHTML      = ${OPUSHOME}/download
+  OPUSWORDALIGN = ${OPUSHOME}/wordalign
+  OPUSRELEASE   = ${OPUSNLPL}
+  EFLOMAL_PRIORS = /projappl/nlpl/data/translation/eflomal
+  TMPDIR         = /scratch/project_2000661/tmp
 # else ifeq ("${shell hostname | cut -f2- -d.}","csc.fi")
 else
   OPUSNLPL      = /proj/nlpl/data/OPUS
@@ -52,6 +60,8 @@ else
   OPUSWORDALIGN = ${OPUSHOME}/wordalign
   OPUSRELEASE   = ${OPUSNLPL}
 endif
+
+EFLOMAL_PRIORS ?= $(OPUSHOME)/eflomal
 
 
 # CWB home for standard annotation
@@ -145,9 +155,18 @@ UPLUG      = $(shell which uplug)
 
 # SMT tools via Moses (TODO: adjust to NLPL!)
 
-MOSESHOME       = ${USERAPPL}/tools/mosesdecoder-2017
-MOSESSCRIPTS    = ${MOSESHOME}/scripts
-SCRIPTS_ROOTDIR = ${MOSESSCRIPTS}
+# MOSESHOME       := ${USERAPPL}/tools/mosesdecoder-2017
+MOSESHOME       := ${patsubst %/bin/moses,%,${shell which moses}}
+MOSESSCRIPTS    := ${MOSESHOME}/scripts
+SCRIPTS_ROOTDIR := ${MOSESSCRIPTS}
+
+
+# SMTTOOLSHOME = ${HOME}/appl_taito/tools/
+# SMTTOOLS     = ${SMTTOOLSHOME}
+# SALMHOME     = ${SMTTOOLS}/SALM
+
+SALMHOME        := ${OPUSTOOLS}/SALM
+
 
 # Word alignment tools (TODO: adjust to NLPL!)
 

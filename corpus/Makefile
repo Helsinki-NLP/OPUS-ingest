@@ -457,7 +457,7 @@ run-langid: ${ALLRAW_LANGID}
 
 ${ALLRAW_LANGID}:
 	mkdir -p $(dir $@)
-	TMPDIR=/proj/nlpl/data/OPUS/tmp opus_langid -f ${subst /raw-langid/,/raw/,$@} -t $@
+	TMPDIR=${OPUSRELEASE}/tmp opus_langid -f ${subst /raw-langid/,/raw/,$@} -t $@
 
 
 

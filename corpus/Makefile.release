@@ -110,14 +110,14 @@ show-nrof-packages:
 
 
 # script for creating websites
-# MAKEHTML   = opus-website
-MAKEHTML   = ${HOME}/bin/opus-website
+MAKEHTML   = opus-website
+# MAKEHTML   = ${HOME}/bin/opus-website
 
 ## some scripts for conversion
 ## TODO: should update to some better implementation
 TAB2TMX    = ${OPUSTOOLS}/tab2tmx
-OPUS2MOSES = ${HOME}/bin/opus2moses
-# OPUS2MOSES = opus2moses
+# OPUS2MOSES = ${HOME}/bin/opus2moses
+OPUS2MOSES = opus2moses
 
 ## OLD
 # OPUS2MOSES = $(OPUSTOOLS)/xces2moses
@@ -203,7 +203,7 @@ ifdef LICENSE
 endif
 
 ifdef COPYRIGHT
-  COPYRIGHTINFO=<b>License:</b> ${CORPYRIGHT}<br/>
+  COPYRIGHTINFO=<b>Copyright:</b> ${COPYRIGHT}<br/>
 endif
 
 ifndef DOWNLOADINFO
@@ -314,6 +314,9 @@ endif
 %/LICENSE:
 	if [ -e ${CORPUSHOME}/LICENSE ]; then \
 	  cp ${CORPUSHOME}/LICENSE $@; \
+	elif [ -e ${CORPUSHOME}/LICENSE.pdf ]; then \
+	  pdftotext -layout ${CORPUSHOME}/LICENSE.pdf; \
+	  cp ${CORPUSHOME}/LICENSE.txt $@; \
 	else \
 	  echo "The data set comes with the same license" > $@; \
 	  echo "as the original sources." >> $@; \

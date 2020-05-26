@@ -1,0 +1,150 @@
+ELRA-W0130 CC-BY-2.5-SE ELRC_1013_English-Swedish parallel corpus from the translation
+ELRA-W0131 openUnder-PSI ELRC_1015_Bilingual hr-en parallel corpus from Croatian
+ELRA-W0133 openUnder-PSI ELRC_1055_Bilingual documents Bulgarian-English in the field
+ELRA-W0134 openUnder-PSI ELRC_1056_Bilingual documents Bulgarian-English in the field
+ELRA-W0135 openUnder-PSI ELRC_1058_Bilingual hr-en parallel corpus from the
+ELRA-W0136 openUnder-PSI ELRC_1072_English-Slovak corpus of annual reports on
+ELRA-W0137 openUnder-PSI ELRC_1073_English-Slovak corpus of annual reports from
+ELRA-W0138 publicDomain ELRC_1075_EUIPO - IP case law French-English
+ELRA-W0142 openUnder-PSI ELRC_1080_Croatian-English corpus with Acts on Biological
+ELRA-W0143 publicDomain ELRC_1092_EUIPO - list of goods and
+ELRA-W0144 publicDomain ELRC_1093_EUIPO - list of goods and
+ELRA-W0145 publicDomain ELRC_1094_EUIPO - list of goods and
+ELRA-W0146 publicDomain ELRC_1095_EUIPO - list of goods and
+ELRA-W0147 publicDomain ELRC_1096_EUIPO - list of goods and
+ELRA-W0148 publicDomain ELRC_1098_EUIPO - list of goods and
+ELRA-W0149 publicDomain ELRC_1100_EUIPO - list of goods and
+ELRA-W0150 publicDomain ELRC_1101_EUIPO - list of goods and
+ELRA-W0151 publicDomain ELRC_1102_EUIPO - list of goods and
+ELRA-W0152 publicDomain ELRC_1104_EUIPO - list of goods and
+ELRA-W0154 CC-BY-4.0 ELRC_393_Parallel corpus from Estonian Cabinet of
+ELRA-W0156 CC-BY-4.0 ELRC_396_Translation memories from The Ministry of
+ELRA-W0157 CC-BY-NC-4.0 ELRC_397_DA-EN Danish Ministry of Higher Education
+ELRA-W0158 CC-BY-SA-4.0 ELRC_399_International Agreements (Processed)
+ELRA-W0159 CC-BY-SA-4.0 ELRC_402_Parallel Corpus from the Web Site
+ELRA-W0160 CC-BY-SA-4.0 ELRC_405_Website of the President of the
+ELRA-W0164 CC-BY-4.0 ELRC_419_Greek anti-corruption legislation and National Anti-Corruption
+ELRA-W0165 CC-BY-4.0 ELRC_425_Translations of Lithuanian legislation from Seimas
+ELRA-W0167 CC-BY-4.0 ELRC_429_Legal texts from Estonian Ministry of
+ELRA-W0168 CC-BY-4.0 ELRC_431_Parallel corpus from Estonian Ministry of
+ELRA-W0169 CC-BY-SA-4.0 ELRC_433_Corpus of State-related content from the
+ELRA-W0170 CC-BY-4.0 ELRC_435_Romanian – English New Criminal Procedure
+ELRA-W0173 publicDomain ELRC_471_Bilingual Bulgarian-English corpus from the National
+ELRA-W0174 publicDomain ELRC_472_Central Statistical Office Dataset (Processed)
+ELRA-W0175 CC-BY-4.0 ELRC_473_PKN Orlen Dataset (Processed)
+ELRA-W0176 CC-BY-4.0 ELRC_474_Natolin European Centre Dataset (Processed)
+ELRA-W0177 CC-BY-4.0 ELRC_475_Polish Food Dataset (Processed)
+ELRA-W0178 CC-BY-4.0 ELRC_477_National Health Fund Dataset (Processed)
+ELRA-W0180 CC-BY-4.0 ELRC_479_Polish Food Dataset 2 (Processed)
+ELRA-W0181 CC-BY-4.0 ELRC_480_Polish Food DataSet 3 (Processed)
+ELRA-W0182 openUnder-PSI ELRC_481_Polish Ministry of Foreign Affairs Regional
+ELRA-W0183 openUnder-PSI ELRC_482_Polish Ministry of Foreign Affairs Historical
+ELRA-W0184 openUnder-PSI ELRC_483_Polish Ministry of Foreign Affairs Youth
+ELRA-W0185 publicDomain ELRC_484_Public Procurement Dataset 2 (Processed)
+ELRA-W0186 publicDomain ELRC_485_Civil Aviation Regulations (Processed)
+ELRA-W0187 publicDomain ELRC_486_Public Procurement Dataset 1 (Processed)
+ELRA-W0188 publicDomain ELRC_487_English-Slovak parallel corpus of texts from
+ELRA-W0189 publicDomain ELRC_488_English-Slovak parallel corpus of texts from
+ELRA-W0190 publicDomain ELRC_489_Secretariat-General parallel corpus SL-EN and EN-SL
+ELRA-W0191 publicDomain ELRC_490_Secretariat-General parallel corpus SL-EN and EN-SL
+ELRA-W0192 CC-BY-4.0 ELRC_491_Romanian - English literature corpus (Processed)
+ELRA-W0193 CC-BY-SA-3.0 ELRC_492_General Romanian-English bilingual corpus (Processed)
+ELRA-W0194 CC-BY-4.0 ELRC_493_Romanian - English news corpus (Processed)
+ELRA-W0195 CC-BY-4.0 ELRC_494_English-Norwegian parallel corpus from Forbruker Europa,
+ELRA-W0196 CC-BY-4.0 ELRC_496_Convention on the transfer of sentenced
+ELRA-W0197 openUnder-PSI ELRC_630_BMVI Publications (Processed)
+ELRA-W0198 openUnder-PSI ELRC_631_BMVI Website (Processed)
+ELRA-W0199 openUnder-PSI ELRC_633_BMI Brochures and Website 2016 (Processed)
+ELRA-W0200 openUnder-PSI ELRC_634_BMI Brochures 2011-2015 (Processed)
+ELRA-W0201 openUnder-PSI ELRC_638_Luxembourg Museum Websites (de-en) (Processed)
+ELRA-W0202 CC-BY-3.0 ELRC_645_Parallel Global Voices (Greek - English)
+ELRA-W0203 openUnder-PSI ELRC_649_Parallel corpus (Greek - English) in
+ELRA-W0204 openUnder-PSI ELRC_651_Bilingual Croatian-English Parallel Corpus (Processed)
+ELRA-W0205 publicDomain ELRC_652_Parallel corpus (Greek - English) in
+ELRA-W0206 CC-BY-4.0 ELRC_654_Romanian Ombudsman archive (Processed)
+ELRA-W0207 publicDomain ELRC_656_Macroeconomic Developments (Processed)
+ELRA-W0208 publicDomain ELRC_658_Methodological Reconciliation (Processed)
+ELRA-W0209 publicDomain ELRC_662_Expression of interest (Processed)
+ELRA-W0210 publicDomain ELRC_663_Memorandum for a ESM programme (Processed)
+ELRA-W0211 openUnder-PSI ELRC_664_Parallel corpus (Bulgarian - English) in
+ELRA-W0212 openUnder-PSI ELRC_674_Parallel corpus (Polish - English) from
+ELRA-W0213 publicDomain ELRC_712_Parallel corpus from Social Insurance Agency
+ELRA-W0214 CC-BY-2.0 ELRC_713_English-Danish Parallel corpus from Tatoeba project
+ELRA-W0215 CC-BY-4.0 ELRC_714_Parallel corpus from Parliament of Estonia
+ELRA-W0216 CC-BY-SA-4.0 ELRC_715_Corpus on Finance and Economics from
+ELRA-W0217 CC-BY-4.0 ELRC_716_English-Finnish corpus from Finnish Information Bank
+ELRA-W0218 CC-BY-4.0 ELRC_717_English-Estonian corpus from Finnish Information Bank
+ELRA-W0220 CC-BY-4.0 ELRC_724_Hallituskausi 2007-2011 -- Finnish-English Translation Memory
+ELRA-W0221 CC-BY-4.0 ELRC_725_Hallituskausi 2011-2015 -- Finnish-English Translation Memory
+ELRA-W0222 CC-BY-4.0 ELRC_744_English-Swedish corpus from Finnish Information Bank
+ELRA-W0223 openUnder-PSI ELRC_781_The Gaois bilingual corpus of English-Irish
+ELRA-W0224 openUnder-PSI ELRC_784_The Coimisineir Teanga Bilingual Corpus of
+ELRA-W0225 openUnder-PSI ELRC_785_Compendium The Social Insurance Institution (Processed)
+ELRA-W0226 openUnder-PSI ELRC_788_Bilingual hr-en parallel corpus from Croatian
+ELRA-W0227 openUnder-PSI ELRC_793_ENGLISH_POLISH PHRASE BOOK FOR ADMINISTRATIVE STAFF
+ELRA-W0228 publicDomain ELRC_798_Financial Stability Reports from the National
+ELRA-W0229 publicDomain ELRC_799_Financial Stability Reports from the National
+ELRA-W0230 openUnder-PSI ELRC_801_The Coimisineir Teanga Bilingual Corpus of
+ELRA-W0232 openUnder-PSI ELRC_806_Maltese-English website parallel corpus (Processed)
+ELRA-W0233 openUnder-PSI ELRC_807_Malta Government Gazette (Processed)
+ELRA-W0234 openUnder-PSI ELRC_808_Laws of Malta (Processed)
+ELRA-W0235 openUnder-PSI ELRC_813_Polish Ministry of Foreign Affairs reports
+ELRA-W0238 openUnder-PSI ELRC_825_English - Croatian parallel corpus from
+ELRA-W0239 publicDomain ELRC_829_English-Swedish parallel corpus from the web
+ELRA-W0241 CC-BY-3.0 ELRC_834_Parallel Global Voices (English - Polish)
+ELRA-W0242 openUnder-PSI ELRC_841_Employment in Poland 2009 report in
+ELRA-W0243 openUnder-PSI ELRC_842_Quarterly Reports of the Parliamentary Budget
+ELRA-W0244 CC-BY-SA-4.0 ELRC_843_Bilingual collection of reports of the
+ELRA-W0245 openUnder-PSI ELRC_846_Portuguese-English bilingual corpus from Legislation concerning
+ELRA-W0246 openUnder-PSI ELRC_853_Portuguese-English bilingual corpus from the Portuguese
+ELRA-W0247 openUnder-PSI ELRC_858_Parallel corpus (en-pl) from the Export
+ELRA-W0248 openUnder-PSI ELRC_863_Spanish-English website parallel corpus (Processed)
+ELRA-W0249 openUnder-PSI ELRC_864_Parallel corpus from the website of
+ELRA-W0251 CC-BY-4.0 ELRC_869_Polish-English parallel corpus from the website
+ELRA-W0252 openUnder-PSI ELRC_871_Polish-English parallel corpus from the website
+ELRA-W0253 openUnder-PSI ELRC_873_Polish-English parallel corpus from the website
+ELRA-W0254 openUnder-PSI ELRC_876_Polish-English parallel corpus from the website
+ELRA-W0255 openUnder-PSI ELRC_878_Polish-English parallel corpus from the website
+ELRA-W0256 openUnder-PSI ELRC_880_Polish-English parallel corpus from the website
+ELRA-W0257 openUnder-PSI ELRC_882_Polish-English parallel corpus from the website
+ELRA-W0258 openUnder-PSI ELRC_884_Polish-English parallel corpus from the website
+ELRA-W0259 openUnder-PSI ELRC_888_Polish-English parallel corpus from the website
+ELRA-W0260 openUnder-PSI ELRC_898_Polish-English parallel corpus from the website
+ELRA-W0261 CC-BY-3.0 ELRC_906_Polish-English parallel corpus from the website
+ELRA-W0262 openUnder-PSI ELRC_910_Polish-English parallel corpus from the website
+ELRA-W0263 openUnder-PSI ELRC_913_Bilingual Bulgarian-English corpus from the 2018
+ELRA-W0264 openUnder-PSI ELRC_915_Croatian-English corpus with statistical reports and
+ELRA-W0265 openUnder-PSI ELRC_919_English-Estonian Parallel corpus compiled from translated
+ELRA-W0266 openUnder-PSI ELRC_921_Croatian-English corpus with studies on the
+ELRA-W0267 openUnder-PSI ELRC_924_Slovenian-English corpus with statistical reports from
+ELRA-W0270 openUnder-PSI ELRC_930_Romanian-English corpus with studies, reports and
+ELRA-W0271 openUnder-PSI ELRC_932_Hellenic Ministry of Foreign Affairs Greek-English
+ELRA-W0272 openUnder-PSI ELRC_936_Greek-English parallel corpus from the website
+ELRA-W0273 CC-BY-4.0 ELRC_943_Bilingual hr-en parallel corpus from the
+ELRA-W0274 openUnder-PSI ELRC_945_Polish-English parallel corpus from the website
+ELRA-W0275 openUnder-PSI ELRC_947_Polish-English parallel corpus from the website
+ELRA-W0276 openUnder-PSI ELRC_949_Polish-English parallel corpus from the website
+ELRA-W0277 openUnder-PSI ELRC_951_Polish-English parallel corpus from the website
+ELRA-W0278 openUnder-PSI ELRC_953_Polish-English parallel corpus from the website
+ELRA-W0279 openUnder-PSI ELRC_956_Polish-English parallel corpus from the website
+ELRA-W0280 openUnder-PSI ELRC_958_Polish-English parallel corpus from the website
+ELRA-W0281 openUnder-PSI ELRC_960_Polish-English parallel corpus from the website
+ELRA-W0282 openUnder-PSI ELRC_962_Polish-English parallel corpus from the website
+ELRA-W0283 openUnder-PSI ELRC_966_Polish-English parallel corpus from the website
+ELRA-W0284 openUnder-PSI ELRC_968_Polish-English parallel corpus from the website
+ELRA-W0285 openUnder-PSI ELRC_970_Polish-English parallel corpus from the website
+ELRA-W0286 openUnder-PSI ELRC_973_Polish-English parallel corpus from the website
+ELRA-W0287 openUnder-PSI ELRC_975_Polish-English parallel corpus from the website
+ELRA-W0288 openUnder-PSI ELRC_977_Polish-English parallel corpus from the website
+ELRA-W0289 openUnder-PSI ELRC_979_Polish-English parallel corpus from the website
+ELRA-W0290 openUnder-PSI ELRC_981_Polish-English parallel corpus from the website
+ELRA-W0291 openUnder-PSI ELRC_984_Croatian-English parallel corpus from the website
+ELRA-W0292 openUnder-PSI ELRC_986_Croatian-English parallel corpus from the website
+ELRA-W0293 openUnder-PSI ELRC_989_Croatian-English parallel corpus from the website
+ELRA-W0294 CC-BY-ND-3.0 ELRC_991_Croatian-English parallel corpus from the website
+ELRA-W0297 CC-BY-3.0 ELRC_997_Parallel Global Voices (Bulgarian - English)
+ELRA-W0301 CC-BY-4.0 ELRC_403_Letter of rights for persons arrested
+ELRA-W0305 publicDomain ELRC_436_Parallel texts from Swedish National Food
+ELRA-W0307 publicDomain ELRC_646_Trilingual Documents related to International Judicial
+ELRA-W0308 openUnder-PSI ELRC_648_Letter of rights for persons arrested
+ELRA-W0309 publicDomain ELRC_745_Convention against Torture and Other Cruel,

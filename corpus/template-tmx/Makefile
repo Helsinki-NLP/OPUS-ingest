@@ -35,7 +35,7 @@ TMXGZDONE  = ${TMXGZFILES:.tmx.gz=_done}
 all:
 	${MAKE} convert
 	${MAKE} xml/Makefile
-	mv -f raw/*-* xml/ 
+	-mv -f raw/*-* xml/ 
 	${MAKE} -C xml create-align-files
 	${MAKE} annotate
 	${MAKE} udparse
@@ -65,7 +65,8 @@ include ../Makefile.udparse
 ##   Makefile.annotate ..... all annotation in Uplug
 
 
-include ../Makefile.tokenize
+include ../Makefile.tokenize-moses
+# include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate
 
@@ -79,13 +80,13 @@ convert: ${TMXDONE} ${TMXGZDONE}
 ${TMXDONE}: %_done: %.tmx
 	mkdir -p raw
 	cat $< | tidy -xml -utf8 > $<.tmp
-	cd raw && ${TMX2OPUS} -o ${notdir $(<:.tmx=.xml.gz)} ../$<.tmp
+	cd raw && ${TMX2OPUS} -r -o ${notdir $(<:.tmx=.xml.gz)} ../$<.tmp
 	rm -f $<.tmp
 	touch $@
 
 ${TMXGZDONE}: %_done: %.tmx.gz
 	mkdir -p raw
 	gzip -cd $< | tidy -xml -utf8 > $<.tmp
-	cd raw && ${TMX2OPUS} -o ${notdir $(<:.tmx.gz=.xml.gz)} ../$<.tmp
+	cd raw && ${TMX2OPUS} -r -o ${notdir $(<:.tmx.gz=.xml.gz)} ../$<.tmp
 	rm -f $<.tmp
 	touch $@

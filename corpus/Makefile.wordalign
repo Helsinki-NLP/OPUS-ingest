@@ -99,10 +99,6 @@ CORPUS_SIZE  = ${shell if [[ ${CORPUS_SIZE1} -gt ${CORPUS_SIZE1} ]]; then echo $
 
 
 
-ifndef EFLOMAL_PRIORS
-  EFLOMAL_PRIORS = $(OPUSHOME)/eflomal
-endif
-
 ## for efmaral: we need a lot of memory!
 EFMARAL_ALIGN_MEM = ${shell \
 	if [ ${CORPUS_SIZE} -gt 100000000 ]; then \
@@ -721,9 +717,14 @@ ifndef MAX_EFLOMAL_CORPUS_SIZE
   MAX_EFLOMAL_CORPUS_SIZE = 5000000
 endif
 
-ifneq ("$(wildcard $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors)","")
-  EFLOMAL_PRIOS = -p $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors
+ifneq ("$(wildcard $(EFLOMAL_PRIORS)/${SRC}-${TRG}.priors)","")
+  EFLOMAL_PRIORS_ARGS = -p $(EFLOMAL_PRIORS)/${SRC}-${TRG}.priors
 endif
+
+show-eflomal-priors:
+	@echo ${EFLOMAL_PRIORS}
+	@echo $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors
+	@echo ${EFLOMAL_PRIORS_ARGS}
 
 %/model/aligned.srctotgt.gz:
 	${MAKE} ${dir $@}aligned.${SRCEXT} ${dir $@}aligned.${TRGEXT}
@@ -735,7 +736,7 @@ endif
 	split -l ${MAX_EFLOMAL_CORPUS_SIZE} ${dir $@}aligned.${TRGEXT} ${dir $@}aligned.${TRGEXT}.d/
 	-for s in `ls ${dir $@}aligned.${SRCEXT}.d`; do \
 	  echo "align part $$s"; \
-	  ${EFLOMAL} -v -m 3 ${EFLOMAL_PRIOS} \
+	  ${EFLOMAL} -v -m 3 ${EFLOMAL_PRIORS_ARGS} \
 		-s ${dir $@}aligned.${SRCEXT}.d/$$s \
 		-t ${dir $@}aligned.${TRGEXT}.d/$$s \
 		-f ${dir $@}aligned.${SRCEXT}.d/$$s.fwd \
@@ -860,25 +861,22 @@ ifndef PHRASETABLES
 		  $(wildcard */model/phrase-table.gz))
 endif
 
-# SMTTOOLSHOME = ${HOME}/projects/SMT
-# SMTTOOLS     = ${SMTTOOLSHOME}/tools
-
 # MOSESHOME    = ${SMTTOOLSHOME}/mosesdecoder
 # MOSESCONTRIB = ${MOSESHOME}/contrib
+# MOSES_FILTER_PT = ${MOSESCONTRIB}/sigtest-filter/filter-pt
 
-SMTTOOLSHOME = ${HOME}/appl_taito/tools/
-SMTTOOLS     = ${SMTTOOLSHOME}
+MOSES_FILTER_PT   = ${shell which filter-pt}
 
-MOSESHOME    = ${SMTTOOLSHOME}/mosesdecoder
-MOSESCONTRIB = ${MOSESHOME}/contrib
 
 
 .PHONY: filter-all-phrase-tables
 filter-all-phrase-tables: $(PHRASETABLES)
 
-.PHONY:
+.PHONY: filter-phrase-table
 filter-phrase-table: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 
+.PHONY: corpus-suffix-array
+corpus-suffix-array: ${SRC}-${TRG}/model.src.sa_suffix ${SRC}-${TRG}/model.trg.sa_suffix
 
 ## NEW: don't depend on suffix arrays anymore (would cause to re-do phrase extraction)
 ## NEW: add dependency on alignment file
@@ -888,7 +886,7 @@ filter-phrase-table: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 		$(patsubst %/phrase-table-filtered.gz,%.trg.sa_suffix,$@) \
 		${dir $@}phrase-table.gz
 	zcat $(subst -filtered,,$@) | \
-	${MOSESCONTRIB}/sigtest-filter/filter-pt \
+	${MOSES_FILTER_PT} \
 		-f $(patsubst %/phrase-table-filtered.gz,%.src.sa_suffix,$@) \
 		-e $(patsubst %/phrase-table-filtered.gz,%.trg.sa_suffix,$@) \
 		-l a+e -n 30 2> $(@:.gz=.log) |\
@@ -903,11 +901,11 @@ filter-phrase-table: ${SRC}-${TRG}/model/phrase-table-filtered.gz
 
 %.src.sa_suffix: bitext
 	gzip -cd < ${SRCCORPUS} > $@
-	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
+	${SALMHOME}/Bin/Linux/Index/IndexSA.O32 $@
 
 %.trg.sa_suffix: bitext
 	gzip -cd < ${TRGCORPUS} > $@
-	${SMTTOOLS}/SALM/Bin/Linux/Index/IndexSA.O32 $@
+	${SALMHOME}/Bin/Linux/Index/IndexSA.O32 $@
 
 
 ## extract word-alignment dictionaries
