@@ -1,19 +1,91 @@
-#----------------------------------------
-# upload data to allas
-#----------------------------------------
+
+CORPUS ?= RF
+
 
 ## container base name
 CONTAINER   = project-OPUS-corpus
 CSC_PROJECT = project_2000661
 
+
+ifdef LOCAL_SCRATCH
+  TMPDIR = ${LOCAL_SCRATCH}
+endif
+
+ifeq ("${shell hostname -d}","bullx")
+  WORKDIR = ${TMPDIR}
+else
+  WORKDIR = /wrk/tiedeman
+endif
+
+
+#-------------------------------------------------
+# download corpus from allas to local dir
+# requires to load and configure allas-module!
+#
+#    module load allas
+#    allas-conf -k
+#-------------------------------------------------
+
+CORPUSHOME = ${PWD}
+LOCALOPUS  = ${TMPDIR}/OPUS
+
+retrieve-local-corpus:
+	if [ ! -e ${LOCALOPUS} ]; then \
+	  cd ${TMPDIR} && git clone git@github.com:Helsinki-NLP/OPUS.git; \
+	fi
+	${MAKE} CORPUSHOME=${LOCALOPUS}/corpus retrieve-corpus
+
+retrieve-corpus: ${CORPUSHOME}/${CORPUS} \
+		${CORPUSHOME}/${CORPUS}/raw \
+		${CORPUSHOME}/${CORPUS}/xml \
+		${CORPUSHOME}/${CORPUS}/parsed
+
+${CORPUSHOME}/${CORPUS}:
+	mkdir -p $@
+	( cd $@; \
+          for o in $(shell a-list ${CONTAINER}-${CORPUS}); do \
+            a-get $$o; \
+          done )
+
+${CORPUSHOME}/${CORPUS}/raw:
+	mkdir -p ${dir $@}
+	( cd ${dir $@}; \
+          for o in $(shell a-list ${CONTAINER}-${CORPUS}-raw); do \
+            a-get $$o; \
+          done )
+
+${CORPUSHOME}/${CORPUS}/xml:
+	mkdir -p ${dir $@}
+	( cd ${dir $@}; \
+          for o in $(shell a-list ${CONTAINER}-${CORPUS}-xml); do \
+            a-get $$o; \
+          done )
+
+${CORPUSHOME}/${CORPUS}/parsed:
+	mkdir -p ${dir $@}
+	( cd ${dir $@}; \
+          for o in $(shell a-list ${CONTAINER}-${CORPUS}-parsed); do \
+            a-get $$o; \
+          done )
+
+
+
+#-------------------------------------------------
+# upload data to allas
+# requires to load and configure allas-module!
+#
+#    module load allas
+#    allas-conf -k
+#-------------------------------------------------
+
+
 ## corpora in OPUS
 OPUS_CORPORA = $(subst /,,$(wildcard */))
-
-WORKDIR = /wrk/tiedeman
 
 ## target flags for uploading corpora
 OPUS_CORPORA_DONE   = $(patsubst %,${WORKDIR}/OPUS-corpus/%.allas,${OPUS_CORPORA})
 
+upload-corpora: ${OPUS_CORPORA_DONE}
 
 ############################################
 ## new: treat all corpora the same!
@@ -22,12 +94,11 @@ OPUS_CORPORA_DONE   = $(patsubst %,${WORKDIR}/OPUS-corpus/%.allas,${OPUS_CORPORA
 
 APUT_FLAGS = -p ${CSC_PROJECT} --override --nc --skip-filelist
 
-upload-corpora: ${OPUS_CORPORA_DONE}
 
 ${OPUS_CORPORA_DONE}: ${WORKDIR}/OPUS-corpus/%.allas: %
 	echo "upload $<"
-	cd $<; \
-	mkdir -p ${WORKDIR}/allas/$<; \
+	mkdir -p ${WORKDIR}/allas/$<
+	( cd $<; \
 	for d in `find . -mindepth 1 -maxdepth 1 -type d -printf ' %P'`; do \
 	  echo "processing $</$$d"; \
 	  mkdir -p ${WORKDIR}/allas/$</$$d; \
@@ -48,8 +119,8 @@ ${OPUS_CORPORA_DONE}: ${WORKDIR}/OPUS-corpus/%.allas: %
 	    rm -f ${WORKDIR}/allas/$</$$d.tar; \
 	  fi; \
 	  rmdir ${WORKDIR}/allas/$</$$d; \
-	done
-	find . -maxdepth 1 -type f | tar -cf ${WORKDIR}/allas/$</$<-files.tar -T -
+	done )
+	cd $< && find . -maxdepth 1 -type f | tar -cf ${WORKDIR}/allas/$</$<-files.tar -T -
 	a-put ${APUT_FLAGS} -b ${CONTAINER}-$< ${WORKDIR}/allas/$</$<-files.tar
 	rm -f ${WORKDIR}/allas/$</$<-files.tar
 	rmdir ${WORKDIR}/allas/$<; \

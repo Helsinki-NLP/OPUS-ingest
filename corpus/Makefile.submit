@@ -36,6 +36,9 @@ HPC_EXTRA   =
 	echo '#SBATCH -e ${@:.submit=}.err.%j' >> $@
 	echo '#SBATCH --mem=${HPC_MEM}' >> $@
 ifeq (${shell hostname --domain},bullx)
+ifdef HPC_DISK
+	echo '#SBATCH --gres=nvme:${HPC_DISK}' >> $@
+endif
 	echo '#SBATCH --account=project_2000661' >> $@
 endif
 ifdef EMAIL

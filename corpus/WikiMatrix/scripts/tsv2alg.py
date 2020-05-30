@@ -24,14 +24,20 @@ for line in sys.stdin:
     if fields[1] in srcdb:
         if fields[2] in trgdb:
             sid = srcdb[fields[1]]
-            tid = srcdb[fields[2]]
-            print("\t".join(sid,tid,fields[0]));
+            tid = trgdb[fields[2]]
+            print("\t".join((sid,tid,fields[0])), flush=True);
+        else:
+            print("not found (trg): " + fields[2], file=sys.stderr, flush=True)
+    else:
+        print("not found (src): " + fields[1], file=sys.stderr, flush=True)
+
+            
 
     count += 1
-    if (count % 100000 == 0):
-        print('.', end = '', flush=True)
-    if (count % 5000000 == 0):
-        print(count, flush=True)
+    if (count % 10000 == 0):
+        print('.', end = '', file=sys.stderr, flush=True)
+    if (count % 500000 == 0):
+        print(count, file=sys.stderr, flush=True)
 
 srcdb.close()
 trgdb.close()

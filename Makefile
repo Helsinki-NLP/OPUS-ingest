@@ -1,3 +1,11 @@
+#
+#
+#
+# for the procedures to upload corpus data to allas"
+#  look at corpus/Makefile
+#
+#
+
 
 WORKDIR     = /wrk/tiedeman
 CSC_PROJECT = project_2000661
