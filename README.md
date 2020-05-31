@@ -27,9 +27,9 @@
 ## Documentation
 
 
-* [Creating a new corpus](blob/master/doc/create-corpus.md)
-* [Updating corpora](blob/master/doc/update-corpus.md)
-* [Word alignment](blob/master/doc/wordalign.md)
+* [Creating a new corpus](doc/create-corpus.md)
+* [Updating corpora](doc/update-corpus.md)
+* [Word alignment](doc/wordalign.md)
 
 
 ## TODO
