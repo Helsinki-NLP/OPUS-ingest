@@ -3,12 +3,12 @@
 # name & version of the corpus
 
 CORPUS  = Tatoeba
-VERSION = v20190709
-# VERSION = $(shell date +%F)
+# VERSION = v20190709
+VERSION = v$(shell date +%F)
 
 
-LICENSE = CC BY 2.0 FR
-COPYRIGHT = 
+LICENSE = <a href="https://creativecommons.org/licenses/by/2.0/fr/">CC BY 2.0 FR</a>
+COPYRIGHT = see <a href="https://tatoeba.org/eng/terms_of_use">https://tatoeba.org/eng/terms_of_use</a>
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just

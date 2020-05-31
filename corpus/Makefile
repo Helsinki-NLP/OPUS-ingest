@@ -30,12 +30,13 @@ CORPUSHOME = ${PWD}
 LOCALOPUS  = ${TMPDIR}/OPUS
 
 retrieve-local-corpus:
-	if [ ! -e ${LOCALOPUS} ]; then \
-	  cd ${TMPDIR} && git clone git@github.com:Helsinki-NLP/OPUS.git; \
-	fi
 	${MAKE} CORPUSHOME=${LOCALOPUS}/corpus retrieve-corpus
 
-retrieve-corpus: ${CORPUSHOME}/${CORPUS} \
+retrieve-corpus:
+ifneq (${wildcard ${CORPUSHOME}/${CORPUS}},,)
+	mv ${CORPUSHOME}/${CORPUS} ${CORPUSHOME}/${CORPUS}-$(shell date +%F)
+endif
+	${MAKE} ${CORPUSHOME}/${CORPUS} \
 		${CORPUSHOME}/${CORPUS}/raw \
 		${CORPUSHOME}/${CORPUS}/xml \
 		${CORPUSHOME}/${CORPUS}/parsed
@@ -85,7 +86,13 @@ OPUS_CORPORA = $(subst /,,$(wildcard */))
 ## target flags for uploading corpora
 OPUS_CORPORA_DONE   = $(patsubst %,${WORKDIR}/OPUS-corpus/%.allas,${OPUS_CORPORA})
 
+.PHONY: upload-corpora
 upload-corpora: ${OPUS_CORPORA_DONE}
+
+.PHONY: update-corpus-storage
+update-corpus-storage:
+	rm -f ${WORKDIR}/OPUS-corpus/${CORPUS}.allas
+	${MAKE} ${WORKDIR}/OPUS-corpus/${CORPUS}.allas
 
 ############################################
 ## new: treat all corpora the same!

@@ -18,6 +18,7 @@ all:
 	${MAKE} xml/Makefile
 	mv -f raw/*-* xml/
 	${MAKE} -C xml create-align-files
+	rm -f log/.tok* log/.*.done
 	${MAKE} annotate
 	${MAKE} same-language
 	${MAKE} moses tmx
@@ -47,7 +48,6 @@ same-language:
 	-for l in ${LANGUAGES}; do \
 		mv xml/$$l-$$l.* same-lang/;\
 	done
-
 
 
 ## create sample files from TMX rather than from XCES files

@@ -99,10 +99,24 @@ ifndef LANGUAGES
   LANGUAGES = $(sort $(notdir $(wildcard ${CORPUSSRC}/??)) \
                       $(notdir $(wildcard ${CORPUSSRC}/???)) \
                       $(notdir $(wildcard ${CORPUSSRC}/??_??)) \
-                      $(notdir $(wildcard ${CORPUSRAW}/??)) \
-                      $(notdir $(wildcard ${CORPUSRAW}/???)) \
-                      $(notdir $(wildcard ${CORPUSRAW}/??_??)))
+                      $(notdir ${shell find ${CORPUSRAW} -mindepth 1 -maxdepth 1 -type d -printf "%f "}))
 endif
+
+## OLD: match patterns in raw, NEW: take all sub-dirs in raw
+##
+# ifndef LANGUAGES
+#   LANGUAGES = $(sort $(notdir $(wildcard ${CORPUSSRC}/??)) \
+#                       $(notdir $(wildcard ${CORPUSSRC}/???)) \
+#                       $(notdir $(wildcard ${CORPUSSRC}/??_??)) \
+#                       $(notdir $(wildcard ${CORPUSRAW}/??)) \
+#                       $(notdir $(wildcard ${CORPUSRAW}/???)) \
+#                       $(notdir $(wildcard ${CORPUSRAW}/????)) \
+#                       $(notdir $(wildcard ${CORPUSRAW}/??_??)))
+# endif
+
+
+
+
 
 ## removed this from old versions:
 #		      ${patsubst %.raw.tar.gz,%,\
