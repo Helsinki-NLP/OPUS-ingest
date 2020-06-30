@@ -10,7 +10,7 @@
     <?php include("header.php"); ?>
   </div>
 
-<img src="opus-100.svg" alt="OPUS-100" width="200"/>
+<img src="img/opus-100.svg" alt="OPUS-100" width="200"/>
 
 <!-- <h1>OPUS-100</h1> -->
 
