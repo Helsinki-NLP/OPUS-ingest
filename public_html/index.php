@@ -27,6 +27,7 @@
   <div class="news">
     <h3>Latest News</h3>
     <ul>
+      <li>2020-06-30: New: <a href="opus-100.php">OPUS-100 corpus</a></li>
       <li>2020-05-22: New: <a href="ELRC.php">ELRC public</a></li>
       <li>2019-10-16: New: <a href="MultiParaCrawl-v5.php">MultiParaCrawl</a></li>
       <li>2019-10-14: New: <a href="infopankki-v1.php">Infopankki v1</a></li>
@@ -174,6 +175,7 @@
 	    <a href="OpenSubtitles-v2012.php">v2012</a>,
 	    <a href="OpenSubtitles-v2013.php">v2013</a>,
 	    <a href="OpenSubtitles-v2016.php">v2016</a>)</li>
+          <li><a href="opus-100.php">OPUS-100 corpus</a></li>
           <li><a href="ParaCrawl.php">ParaCrawl corpus</a></li>
 	  <li><a href="/ParCor">ParCor - A Parallel Pronoun-Coreference Corpus</a></li>
           <li><a href="PHP.php">PHP - the PHP manual corpus</a></li>

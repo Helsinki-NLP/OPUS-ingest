@@ -10,17 +10,22 @@
     <?php include("header.php"); ?>
   </div>
 
-<h1>OPUS-100</h1>
+<img src="opus-100.svg" alt="OPUS-100" width="200"/>
+
+<!-- <h1>OPUS-100</h1> -->
 
 
 <p>OPUS-100 is an English-centric multilingual corpus covering 100 languages. It was randomly sampled from the OPUS collection [1].</p>
 
 <p>
-The entire corpus can be downloaded from <a href="https://object.pouta.csc.fi/OPUS-100/v1.0/opus-100-corpus-v1.0.tar.gz">opus-100-corpus-v1.0.tar.gz</a>. More information and scripts that have been used to create this corpus are available from <a href="https://github.com/EdinburghNLP/opus-100-corpus">github</a>. Individual language pairs are also available from <a href="http://data.statmt.org/opus-100-corpus/v1.0">http://data.statmt.org/opus-100-corpus/v1.0</a> or from the OPUS object storage, e.g. <a href="https://object.pouta.csc.fi/OPUS-100/v1.0/opus-100-corpus-de-en-v1.0.tar.gz">https://object.pouta.csc.fi/OPUS-100/v1.0/opus-100-corpus-de-en-v1.0.tar.gz</a> (replace 'de-en' with the language pair you need) and from <a href="https://object.pouta.csc.fi/OPUS-100/v1.0/opus-100-corpus-zeroshot-v1.0.tar.gz">https://object.pouta.csc.fi/OPUS-100/v1.0/opus-100-corpus-zeroshot-v1.0.tar.gz</a> (all zero-shot language pairs).
+The entire corpus can be downloaded from <a href="https://object.pouta.csc.fi/OPUS-100/v1.0/opus-100-corpus-v1.0.tar.gz">opus-100-corpus-v1.0.tar.gz</a>.<br/> 
+Individual language pairs are also available from <a href="http://data.statmt.org/opus-100-corpus/v1.0">http://data.statmt.org/opus-100-corpus/v1.0</a>
+or from the OPUS object storage, e.g. <a href="https://object.pouta.csc.fi/OPUS-100/v1.0/opus-100-corpus-de-en-v1.0.tar.gz">https://object.pouta.csc.fi/OPUS-100/v1.0/opus-100-corpus-de-en-v1.0.tar.gz</a> (replace 'de-en' with the language pair you need)
+and from <a href="https://object.pouta.csc.fi/OPUS-100/v1.0/opus-100-corpus-zeroshot-v1.0.tar.gz">https://object.pouta.csc.fi/OPUS-100/v1.0/opus-100-corpus-zeroshot-v1.0.tar.gz</a> (all zero-shot language pairs).
 </p>
     
 
-OPUS-100 was used for the experiments in the paper "Improving Massively Multilingual Neural Machine Translation and Zero-Shot Translation" [2]. Please cite that paper if you use this corpus.</p>
+OPUS-100 was used for the experiments in the paper "Improving Massively Multilingual Neural Machine Translation and Zero-Shot Translation" [2]. Please cite that paper if you use this corpus and, pleae, also acknowledge OPUS.</p>
 
 
 <h2>Description</h2>
@@ -57,7 +62,7 @@ OPUS-100 was used for the experiments in the paper "Improving Massively Multilin
 <h2>Acknowledgements</h2>
 
 
-<p>OPUS-100 was developed with the support of Samsung Electronics Polska sp. z o.o. - Samsung R&D Institute Poland. We thank all contributors to the OPUS project.</p>
+<p>OPUS-100 was developed with the support of Samsung Electronics Polska sp. z o.o. - Samsung R&amp;D Institute Poland and has received funding from the European Union’s Horizon 2020 Research and Innovation Programme under Grant Agreements 825460 (ELITR). We thank all contributors to the OPUS project.</p>
 
 
 <h2>References</h2>
@@ -74,6 +79,11 @@ Biao Zhang, Philip Williams, Ivan Titov, Rico Sennrich (2020). "Improving Massiv
 Roee Aharoni, Melvin Johnson, and Orhan Firat (2019). "Massively Multilingual Neural Machine Translation." Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers).</li>
 </ul>
 
+
+
+<h2>Links</h2>
+
+More information and scripts that have been used to create this corpus are available from <a href="https://github.com/EdinburghNLP/opus-100-corpus">github</a>.
 
 </body>
 </html>
