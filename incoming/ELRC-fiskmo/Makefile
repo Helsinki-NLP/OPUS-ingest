@@ -79,7 +79,8 @@ endif
 
 move-failed:
 	mkdir -p ../../corpus-failed-${shell date "+%Y-%m-%d"}
-	for d in ${DATASET_IDS}; do \
+	for i in ${DATASET_IDS}; do \
+	  d=`echo $$i | sed 's/^[0-9]*\_//'`; \
 	  if [ ! -d ../../corpus/$$d/xml ]; then \
 	    echo $$d; \
 	    mv -f ../../corpus/$$d ../../corpus-failed-${shell date "+%Y-%m-%d"}/ ; \

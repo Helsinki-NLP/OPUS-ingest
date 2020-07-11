@@ -140,6 +140,7 @@
           <li><a href="DOGC.php">DOGC</a> - Documents from the Catalan Goverment</li>
           <li><a href="ECB.php">ECB - European Central Bank corpus</a></li>
           <li><a href="EhuHac.php">EhuHac</a> - Hizkuntzen Arteko Corpusa</li>
+          <li><a href="EiTB-ParCC.php">EiTB-ParCC</a> - Parallel Corpus of Comparable News</li>
           <li><a href="Elhuyar.php">Elhuyar corpus</a></li>
           <li><a href="ELRC.php">ELRC public corpora</a></li>
           <li><a href="EMEA.php">EMEA - European Medicines Agency documents</a></li>

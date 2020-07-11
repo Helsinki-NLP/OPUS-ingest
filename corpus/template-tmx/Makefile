@@ -74,19 +74,24 @@ include ../Makefile.tokenize-moses
 ## change this if tmx2opus is not in your PATH
 TMX2OPUS = tmx2opus
 
+BASIC_FILTERS = | perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' \
+		| perl -CS -pe 's/\&\s*\#\s*160\s*\;/ /g' \
+		| perl -pe 's/[\p{C}-[\n\t]]/ /g;' \
+		| recode -f utf8..utf16 | recode -f utf16..utf8
+
 .PHONY: convert
 convert: ${TMXDONE} ${TMXGZDONE}
 
 ${TMXDONE}: %_done: %.tmx
 	mkdir -p raw
-	cat $< | tidy -xml -utf8 > $<.tmp
+	cat $< ${BASIC_FILTERS} | tidy -xml -utf8 > $<.tmp
 	cd raw && ${TMX2OPUS} -r -o ${notdir $(<:.tmx=.xml.gz)} ../$<.tmp
 	rm -f $<.tmp
 	touch $@
 
 ${TMXGZDONE}: %_done: %.tmx.gz
 	mkdir -p raw
-	gzip -cd $< | tidy -xml -utf8 > $<.tmp
+	gzip -cd $< ${BASIC_FILTERS} | tidy -xml -utf8 > $<.tmp
 	cd raw && ${TMX2OPUS} -r -o ${notdir $(<:.tmx.gz=.xml.gz)} ../$<.tmp
 	rm -f $<.tmp
 	touch $@

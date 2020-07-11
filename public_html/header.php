@@ -10,6 +10,7 @@
       [<a href="DOGC.php">DOGC</a>]
       [<a href="ECB.php">ECB</a>] 
       [<a href="EhuHac.php">EhuHac</a>]
+      [<a href="EiTB-ParCC.php">EiTB</a>]
       [<a href="Elhuyar.php">Elhuyar</a>]
       [<a href="ELRC.php">ELRC</a>]
       [<a href="EMEA.php">EMEA</a>]
