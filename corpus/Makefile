@@ -41,6 +41,16 @@ endif
 		${CORPUSHOME}/${CORPUS}/xml \
 		${CORPUSHOME}/${CORPUS}/parsed
 
+.PHONY: upload store-corpus
+upload store-corpus: ${WORKDIR}/OPUS-corpus/${CORPUS}.allas
+
+.PHONY: update-corpus-storage
+update-corpus-storage:
+	rm -f ${WORKDIR}/OPUS-corpus/${CORPUS}.allas
+	${MAKE} ${WORKDIR}/OPUS-corpus/${CORPUS}.allas
+
+
+
 ${CORPUSHOME}/${CORPUS}:
 	mkdir -p $@
 	( cd $@; \
@@ -89,10 +99,6 @@ OPUS_CORPORA_DONE   = $(patsubst %,${WORKDIR}/OPUS-corpus/%.allas,${OPUS_CORPORA
 .PHONY: upload-corpora
 upload-corpora: ${OPUS_CORPORA_DONE}
 
-.PHONY: update-corpus-storage
-update-corpus-storage:
-	rm -f ${WORKDIR}/OPUS-corpus/${CORPUS}.allas
-	${MAKE} ${WORKDIR}/OPUS-corpus/${CORPUS}.allas
 
 ############################################
 ## new: treat all corpora the same!
