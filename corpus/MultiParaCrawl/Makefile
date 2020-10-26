@@ -55,7 +55,7 @@ copy-tmx-files:
 
 ## submit a job for fetching and processing all data
 all-job:
-	${MAKE} HPC_CORES=1 HPC_MEM=16g HPC_TIME=7-00:00 HPC_QUEUE=longrun convert-job.submit
+	${MAKE} HPC_CORES=1 HPC_DISK=500 HPC_MEM=16g HPC_TIME=7-00:00 HPC_QUEUE=longrun convert-job.submit
 
 ## a job for fetching and converting all files
 ## that will submit tokenization jobs when ready
@@ -79,6 +79,9 @@ publish-job-no-english:
 	${MAKE} LANGUAGES="${RELEASE_LANGS}" publish-job
 
 publish-job:
+	${MAKE} moses
+	${MAKE} copy-tmx-files
+	${MAKE} sample-files
 	${MAKE} publish
 	${MAKE} wordalign/Makefile
 	${MAKE} -C wordalign submit-all
@@ -108,8 +111,8 @@ include ../Makefile.udparse
 ##   Makefile.annotate ........ all annotation in Uplug
 
 # include ../Makefile.tokenize-simple
-# include ../Makefile.tokenize-moses
-include ../Makefile.tokenize
+include ../Makefile.tokenize-moses
+# include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate
 

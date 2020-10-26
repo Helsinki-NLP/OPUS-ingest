@@ -6,20 +6,20 @@ CORPUS  = MultiParaCrawl
 # FILTER  = zipporah
 FILTER  = bicleaner07
 
-RELEASE = 5
+RELEASE = 7.1
 VERSION = v${RELEASE}
 
 
-## release 4.0 languages
-RELEASE4_LANGS = bg cs da de el es et fi fr ga hr hu it lv lt nl mt pl pt ro sk sl sv
+PARACRAWL_RELEASE4   = https://paracrawl.eu/v4
+PARACRAWL_RELEASE5   = https://paracrawl.eu/v5
+PARACRAWL_RELEASE7.1 = https://paracrawl.eu
 
-## release 5.0 languages
-RELEASE5_LANGS = ${RELEASE4_LANGS}
+## current release to work with
+PARACRAWL_RELEASE    = ${PARACRAWL_RELEASE7.1}
+PARACRAWL_URL        = https://s3.amazonaws.com/web-language-models/paracrawl
 
-
-RELEASE_LANGS  = ${RELEASE5_LANGS}
-RELEASEURL     = https://s3.amazonaws.com/web-language-models/paracrawl/release${RELEASE}
-RELEASED_TMX   = ${patsubst %,en-%.${FILTER}.tmx.gz,${RELEASE_LANGS}}
+## additional hidden bonus files
+PARACRAWL_BONUS      = bonus/en-ha.tmx.gz bonus/en-ig.tmx.gz
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just

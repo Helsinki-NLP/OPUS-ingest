@@ -7,8 +7,22 @@ PWD := ${shell pwd}
 ## conversion script to be used
 ## --> tmx2opus-tc = use TokyoCabinet as tmp DB
 
-TMX2OPUS = tmx2opus
+PARACRAWL_URL = https://s3.amazonaws.com/web-language-models/paracrawl
+PARACRAWL_TMX = $(patsubst ${PARACRAWL_URL}/%,%,${PARACRAWL_BONUS} \
+		${shell wget -q -O - ${PARACRAWL_RELEASE} | \
+			grep '${PARACRAWL_URL}' | \
+			grep tmx | sed "s/^.*href='\([^']*\)'.*$$/\1/" | grep -v roam})
+
+
+# TMX2OPUS  = tmx2opus
+TMX2OPUS  = ../scripts/tmx2opus
 # TMX2OPUS = ../scripts/tmx2opus-tc
+
+
+## use the fast local-scratch partition if available
+ifdef LOCAL_SCRATCH
+  TMPDIR       = ${LOCAL_SCRATCH}
+endif
 
 
 .PHONY: all
@@ -28,23 +42,28 @@ all: ${CORPUSRAW}
 	  done \
 	done
 
+
+
 .PHONY: fetch
-fetch: ${RELEASED_TMX}
+fetch: ${PARACRAWL_TMX}
 
 .PHONY: convert
 convert: ${CORPUSRAW}
 
-${CORPUSRAW}:
+
+${PARACRAWL_TMX}:
+	mkdir -p ${dir $@}
+	wget -q -O $@ ${PARACRAWL_URL}/$@
+
+
+${CORPUSRAW}: ${PARACRAWL_TMX}
 	mkdir -p ${CORPUSRAW}
 	( cd ${CORPUSRAW} && \
-	  gzip -cd ${PWD}/*.tmx.gz |\
+	  find ${PWD} -name '*.tmx.gz' |\
+	  xargs zcat |\
 	  perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' |\
-	  ${TMX2OPUS} -u -d -o ${FILTER}.xml.gz )
+	  ${TMX2OPUS} -u -d -t ${TMPDIR} -o paracrawl${RELEASE}.xml.gz )
 	touch ${CORPUSRAW}
-
-${RELEASED_TMX}:
-	wget -q ${RELEASEURL}/$@
-
 
 
 
@@ -58,6 +77,29 @@ convert-with-tc: ../raw-tc
 	( cd $@ && \
 	  gzip -cd ${PWD}/*.tmx.gz |\
 	  ../scripts/tmx2opus-tc -u -d -o ${FILTER}.xml.gz )
+
+
+
+
+
+
+
+
+convert-btree-job: 
+	${MAKE} HPC_DISK=500 HPC_CORES=1 HPC_MEM=16g HPC_TIME=7-00:00 HPC_QUEUE=longrun convert-with-btree.submit
+
+convert-with-btree: ../raw-btree
+
+../raw-btree:
+	mkdir -p $@
+	( cd $@ && \
+	  find ${PWD} -name '*.tmx.gz' |\
+	  xargs zcat |\
+	  perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' |\
+	  ../scripts/tmx2opus-btree -u -d -t ${TMPDIR} -o paracrawl${RELEASE}.xml.gz )
+	touch $@
+
+
 
 fix:
 	mkdir -p ../raw-fix

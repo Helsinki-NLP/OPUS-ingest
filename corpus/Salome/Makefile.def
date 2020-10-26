@@ -17,7 +17,7 @@ COPYRIGHT = <a href="https://creativecommons.org/licenses/by-sa/3.0/">Wikisource
 # EXTRAHTML is code which will be put just after the 'Download' header
 # CITENOTE if you want to change the default reference to be cited
 
-SRCHTML=This is a parallel corpus compiled from <a href="https://en.wikisource.org/wiki/Salomé">translations of Salome by Oscar Wilde</a> compiled by Alberto Poncelas and Jan Buts, James Hadley and Adny Way
+SRCHTML=This is a parallel corpus compiled from <a href="https://en.wikisource.org/wiki/Salomé">translations of Oscar Wilde’s Salomé</a>, a play originally written in French. Supported by the QuantiQual Project [Irish Research Council, COALESCE/2017/117]
 
 # EXTRAHTML=Simple example corpus
 CITENOTE= Please, cite: <blockquote><pre>@article{poncelas2020esperanto,<br/>  title = {Using Multiple Subwords for Improving English-Esperanto Automated Literary Translation Quality},<br/>  author={Poncelas, Alberto and Buts, Jan and Hadley, James and Way, Andy}<br/>}</pre></blockquote>
