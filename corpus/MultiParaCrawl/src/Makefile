@@ -29,19 +29,17 @@ endif
 all: ${CORPUSRAW}
 	${MAKE} -C .. xml/Makefile
 	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/ 
-	${MAKE} -C ${CORPUSXML} create-align-files
 	for s in ${RELEASE_LANGS}; do \
 	  for t in ${RELEASE_LANGS}; do \
-	    if [ ! -e "${CORPUSXML}/$$s-$$t.xml.gz" ]; then \
-	      if [[ "$$t" > "$$s" ]]; then \
-	        opus-pivoting `ls ${CORPUSXML}/*$$s*.xml.gz | grep 'en'` \
+	    if [[ "$$t" > "$$s" ]]; then \
+	      mkdir -p ${CORPUSXML}/$$s-$$t; \
+	      opus-pivoting `ls ${CORPUSXML}/*$$s*.xml.gz | grep 'en'` \
 	                    `ls ${CORPUSXML}/*$$t*.xml.gz | grep 'en'` \
-	        | gzip -c > ${CORPUSXML}/$$s-$$t.xml.gz; \
-	      fi \
+	        | gzip -c > ${CORPUSXML}/$$s-$$t/paracrawl-pivoted${RELEASE}.xml.gz; \
 	    fi \
 	  done \
 	done
-
+	${MAKE} -C ${CORPUSXML} create-align-files
 
 
 .PHONY: fetch

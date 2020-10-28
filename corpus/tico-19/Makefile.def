@@ -1,0 +1,22 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v$(shell date +%F)
+
+LICENSE = <a hre="https://tico-19.github.io/LICENSE.md CC0">Creative Commons CC0 license</a>
+COPYRIGHT = All content is made publicly available through a Creative Commons CC0 license.
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML=The data is coming from a collection of translation memories from the <a href="https://tico-19.github.io/index.html">Translation Initiative for COVID-19</a>
+EXTRAHTML=<a href="https://tico-19.github.io/data/paper/ticopaper.pdf">A paper describing the TICO-19 initiative</a>; <a href="https://tico-19.github.io/testset.html">test set results are listed here</a>.
+# CITENOTE=
