@@ -1,0 +1,22 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = EuroPat
+RELEASE = 1
+VERSION = v${RELEASE}
+
+## current release to work with
+EUROPAT_RELEASE = https://europat.net
+
+LICENSE = <a hre="https://tico-19.github.io/LICENSE.md">Creative Commons CC0 license</a>
+COPYRIGHT = All content is made publicly available through a Creative Commons CC0 license.
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML = Parallel corpora of patents from the United States Patent and Trademark Office and from the European Patent Organisation compiled into aligned data sets available from <a href="https://europat.net/">https://europat.net/</a>
+EXTRAHTML = The data is released under the <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">Creative Commons CC0 license</a> ("no rights reserved"), see <a href="https://europat.net/">https://europat.net/</a> for more details
+CITENOTE = Please, acknowledge the EuroPat project at <a href="https://europat.net/">https://europat.net/</a>. This version is derived from the original release at their website adjusted for redistribution via the OPUS corpus collection. Please, acknowledge OPUS as well for this service.
+

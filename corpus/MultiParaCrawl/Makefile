@@ -32,6 +32,17 @@ publish-no-english:
 	${MAKE} LANGUAGES="${RELEASE_LANGS}" publish
 
 
+ALLXMLFILES = ${patsubst ${CORPUSRAW}/%,${CORPUSXML}/%,${wildcard ${CORPUSRAW}/*/*.xml.gz}}
+
+tokenize-all: ${ALLXMLFILES}
+
+${CORPUSXML}/%.xml.gz: ${CORPUSRAW}/%.xml.gz
+	zcat $< |\
+	python3 scripts/opus-tokenize.py \
+		-l $(word 1,$(subst /, ,${patsubst ${CORPUSXML}/%,%,$@})) |\
+	gzip -c > $@
+
+
 SAMPLEFILES = $(patsubst ${CORPUSRELEASE}/tmx/%.tmx.gz,${CORPUSPUB}/%_sample.html,\
 		$(wildcard ${CORPUSRELEASE}/tmx/*.tmx.gz))
 
@@ -61,9 +72,16 @@ all-job:
 ## that will submit tokenization jobs when ready
 convert-job:
 	${MAKE} -C src all
+	${MAKE} tokenize-jobs
+
+pivoting-job:
+	${MAKE} -C src pivoting
+	${MAKE} tokenize-jobs
+
+tokenize-jobs:
 	for l in $(sort $(notdir $(wildcard ${CORPUSRAW}/??))); do \
 	  ${MAKE} MAKEARGS="LANGUAGE=$$l" LANGUAGE=$$l \
-		HPC_CORES=8 HPC_MEM=4g HPC_TIME=72:00 \
+		HPC_CORES=1 HPC_MEM=4g HPC_TIME=72:00 \
 	  tokenize-job.submit; \
 	  rm -f tokenize-job.submit;\
 	done

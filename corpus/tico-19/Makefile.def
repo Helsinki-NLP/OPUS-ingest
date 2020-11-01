@@ -9,7 +9,7 @@ CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\
 ## current version
 VERSION = v$(shell date +%F)
 
-LICENSE = <a hre="https://tico-19.github.io/LICENSE.md CC0">Creative Commons CC0 license</a>
+LICENSE = <a hre="https://tico-19.github.io/LICENSE.md">Creative Commons CC0 license</a>
 COPYRIGHT = All content is made publicly available through a Creative Commons CC0 license.
 
 # with SRCHTML you can define some extra HTML code that will be placed just

@@ -15,7 +15,7 @@ PARACRAWL_TMX = $(patsubst ${PARACRAWL_URL}/%,%,${PARACRAWL_BONUS} \
 
 
 # TMX2OPUS  = tmx2opus
-TMX2OPUS  = ../scripts/tmx2opus
+TMX2OPUS  = ../scripts/tmx2opus-btree
 # TMX2OPUS = ../scripts/tmx2opus-tc
 
 
@@ -29,17 +29,45 @@ endif
 all: ${CORPUSRAW}
 	${MAKE} -C .. xml/Makefile
 	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/ 
-	for s in ${RELEASE_LANGS}; do \
-	  for t in ${RELEASE_LANGS}; do \
+	${MAKE} pivoting
+
+PIVOT = en
+
+pivoting:
+	${MAKE} -C ${CORPUSXML} create-align-files
+	for s in $(filter-out ${PIVOT},${LANGUAGES}); do \
+	  for t in $(filter-out ${PIVOT},${LANGUAGES}); do \
 	    if [[ "$$t" > "$$s" ]]; then \
 	      mkdir -p ${CORPUSXML}/$$s-$$t; \
-	      opus-pivoting `ls ${CORPUSXML}/*$$s*.xml.gz | grep 'en'` \
-	                    `ls ${CORPUSXML}/*$$t*.xml.gz | grep 'en'` \
-	        | gzip -c > ${CORPUSXML}/$$s-$$t/paracrawl-pivoted${RELEASE}.xml.gz; \
+	      opus-pivoting `ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'` \
+	                    	`ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'` \
+	      | gzip -c > ${CORPUSXML}/$$s-$$t/paracrawl-pivoted${RELEASE}.xml.gz; \
+	      if [ -e ${CORPUSXML}/$$s-$$t.xml.gz ]; then \
+		mv ${CORPUSXML}/$$s-$$t.xml.gz ${CORPUSXML}/$$s-$$t/paracrawl${RELEASE}.xml.gz; \
+	      fi; \
+	      zgrep --no-filename 'link ' ${CORPUSXML}/$$s-$$t/*.xml.gz | sort -u > $$s-$$t.links; \
+	      echo '<?xml version="1.0" encoding="utf-8"?>' > $$s-$$t.tmp; \
+	      echo '<!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">' >> $$s-$$t.tmp; \
+	      echo '<cesAlign version="1.0">' >> $$s-$$t.tmp; \
+	      zgrep --no-filename '<linkGrp ' ${CORPUSXML}/$$s-$$t.xml.gz >> $$s-$$t.tmp; \
+	      cat $$s-$$t.links >> $$s-$$t.tmp; \
+	      zgrep --no-filename '</linkGrp' ${CORPUSXML}/$$s-$$t.xml.gz >> $$s-$$t.tmp; \
+	      echo '</cesAlign>' >> $$s-$$t.tmp; \
+	      gzip -f $$s-$$t.tmp; \
+	      mv -f $$s-$$t.tmp.gz ${CORPUSXML}/$$s-$$t.xml.gz; \
+	      if [ -e ${CORPUSXML}/$$s-$$t/paracrawl${RELEASE}.xml.gz ]; then \
+	        mkdir -p backup; \
+		mv -f ${CORPUSXML}/$$s-$$t/paracrawl${RELEASE}.xml.gz backup/$$s-$$t.xml.gz ; \
+	      fi; \
+	      rm -f $$s-$$t.links; \
+	      rm -f ${CORPUSXML}/$$s-$$t/paracrawl-pivoted${RELEASE}.xml.gz
+	      rmdir ${CORPUSXML}/$$s-$$t
+	      if [ `zcat ${CORPUSXML}/$$s-$$t.xml.gz | head | wc -l` == "0" ]; then \
+	        rm -f ${CORPUSXML}/$$s-$$t.xml.gz; \
+	      fi; \
 	    fi \
 	  done \
 	done
-	${MAKE} -C ${CORPUSXML} create-align-files
 
 
 .PHONY: fetch

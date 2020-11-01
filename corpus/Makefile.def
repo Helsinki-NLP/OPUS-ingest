@@ -51,7 +51,8 @@ else ifeq ("${shell hostname -d}","bullx")
   OPUSWORDALIGN = ${OPUSHOME}/wordalign
   OPUSRELEASE   = ${OPUSNLPL}
   EFLOMAL_PRIORS = /projappl/nlpl/data/translation/eflomal
-  TMPDIR         = /scratch/project_2000661/tmp
+  # TMPDIR         = /scratch/project_2000661/tmp
+  TMPDIR         = /scratch/project_2001569/tmp
 # else ifeq ("${shell hostname | cut -f2- -d.}","csc.fi")
 else
   OPUSNLPL      = /proj/nlpl/data/OPUS

@@ -17,13 +17,15 @@ all:
 	${MAKE} annotate
 	${MAKE} moses
 	${MAKE} copy-tmx-files
+	${MAKE} sample-files
 	${MAKE} publish
 
-more:
-	${MAKE} moses
-	${MAKE} copy-tmx-files
-	${MAKE} publish
 
+
+SAMPLEFILES = $(patsubst ${CORPUSRELEASE}/tmx/%.tmx.gz,${CORPUSPUB}/%_sample.html,\
+		$(wildcard ${CORPUSRELEASE}/tmx/*.tmx.gz))
+
+sample-files: $(SAMPLEFILES)
 
 copy-tmx-files:
 	mkdir -p ${CORPUSRELEASE}/tmx
@@ -41,10 +43,9 @@ copy-tmx-files:
 	  done \
 	done
 
-
 ## submit a job for fetching and processing all data
 all-job:
-	${MAKE} HPC_CORES=4 HPC_MEM=8g HPC_TIME=72:00 convert-job.submit
+	${MAKE} HPC_CORES=1 HPC_DISK=500 HPC_MEM=16g HPC_TIME=7-00:00 HPC_QUEUE=longrun convert-job.submit
 
 ## a job for fetching and converting all files
 ## that will submit tokenization jobs when ready
@@ -53,9 +54,9 @@ convert-job:
 	${MAKE} tokenize-jobs
 
 tokenize-jobs:
-	for l in $(sort $(notdir $(wildcard ${CORPUSRAW}/??))); do \
+	for l in $(LANGUAGES); do \
 	  ${MAKE} MAKEARGS="LANGUAGE=$$l" LANGUAGE=$$l \
-		HPC_CORES=8 HPC_MEM=4g HPC_TIME=72:00 \
+		HPC_CORES=1 HPC_MEM=4g HPC_TIME=72:00 \
 	  tokenize-job.submit; \
 	  rm -f tokenize-job.submit;\
 	done
@@ -64,16 +65,20 @@ tokenize-jobs:
 tokenize-job:
 	${MAKE} annotate_files
 	if [ `ls log/.*tok* | wc -l` == ${words ${LANGUAGES}} ]; then \
-	  ${MAKE} HPC_CORES=8 HPC_MEM=4g HPC_TIME=72:00 publish-job.submit; \
+	  ${MAKE} HPC_CORES=2 HPC_MEM=64g HPC_TIME=72:00 publish-job.submit; \
 	fi
+
+publish-job-no-english:
+	${MAKE} LANGUAGES="${RELEASE_LANGS}" publish-job
 
 publish-job:
 	${MAKE} moses
 	${MAKE} copy-tmx-files
+	${MAKE} sample-files
 	${MAKE} publish
 	${MAKE} wordalign/Makefile
 	${MAKE} -C wordalign submit-all
-	${MAKE} HPC_CORES=8 HPC_MEM=8g HPC_TIME=72:00 udparse.submit
+	${MAKE} HPC_CORES=2 HPC_MEM=8g HPC_TIME=72:00 udparse.submit
 
 ## standard procedures are specified in the following makefiles
 ##
@@ -93,6 +98,7 @@ include ../Makefile.udparse
 ## select one of the following to set the annotation level in xml/
 ##
 ##   Makefile.tokenize-simple . simple regex tokenizer
+##   Makefile.tokenize-moses .. moses tokenizer
 ##   Makefile.tokenize ........ tokenization only
 ##   Makefile.tag ............. tokenization and PoS tagging (if available)
 ##   Makefile.annotate ........ all annotation in Uplug
@@ -103,3 +109,20 @@ include ../Makefile.tokenize-moses
 # include ../Makefile.tag
 # include ../Makefile.annotate
 
+
+$(SAMPLEFILES): ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
+	echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"' >$@
+	echo '"http://www.w3.org/TR/REC-html40/loose.dtd">' >> $@
+	echo '<html>' >> $@
+	echo '<head>' >> $@
+	echo '<title>Untitled Document</title>' >> $@
+	echo '<meta http-equiv="Content-Type" content="text/html;charset=utf-8">' >> $@
+	echo '</head>' >> $@
+	echo '<body>' >> $@
+	echo '<p>' >> $@
+	zgrep '</tuv>' $< |\
+	sed 's/^.*<seg>//;s#</seg></tuv>#<br/>#' |\
+	head -100 |\
+	sed ': loop; n; a <hr/>' >> $@
+	echo '</body></html/>' >> $@
+	chmod 644 $@
