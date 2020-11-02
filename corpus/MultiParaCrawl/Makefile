@@ -103,7 +103,7 @@ publish-job:
 	${MAKE} publish
 	${MAKE} wordalign/Makefile
 	${MAKE} -C wordalign submit-all
-	${MAKE} HPC_CORES=2 HPC_MEM=8g HPC_TIME=72:00 udparse.submit
+#	${MAKE} HPC_CORES=2 HPC_MEM=8g HPC_TIME=72:00 udparse.submit
 
 ## standard procedures are specified in the following makefiles
 ##
@@ -134,6 +134,9 @@ include ../Makefile.tokenize-moses
 # include ../Makefile.tag
 # include ../Makefile.annotate
 
+
+## use a different tool
+OPUS2MOSES = opus2bitext
 
 $(SAMPLEFILES): ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"' >$@

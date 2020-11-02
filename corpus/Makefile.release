@@ -22,14 +22,12 @@ ifndef PARSED_LANGUAGES
                             $(notdir $(wildcard ${CORPUSPARSED}/??_??)))
 endif
 
-ifndef CES
-  CES    := $(wildcard ${CORPUSXML}/*.xml.gz)
-endif
-ALG      := $(patsubst ${CORPUSXML}/%,${CORPUSRELEASE}/xml/%,$(CES))
-TMX      := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/tmx/%.tmx.gz,$(CES))
-MOSES    := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/moses/%.txt.zip,$(CES))
-DIC      := $(patsubst ${CORPUSHOME}/%,${CORPUSRELEASE}/%,$(wildcard ${CORPUSDIC}/*.dic.gz))
-# DIC      := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/dic/%.dic.gz,$(CES))
+CES    ?= $(wildcard ${CORPUSXML}/*.xml.gz)
+ALG    := $(patsubst ${CORPUSXML}/%,${CORPUSRELEASE}/xml/%,$(CES))
+TMX    := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/tmx/%.tmx.gz,$(CES))
+MOSES  := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/moses/%.txt.zip,$(CES))
+DIC    := $(patsubst ${CORPUSHOME}/%,${CORPUSRELEASE}/%,$(wildcard ${CORPUSDIC}/*.dic.gz))
+# DIC    := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/dic/%.dic.gz,$(CES))
 
 # ifndef SMT
 # ifneq ($(wildcard ${CORPUSWORDALIGN}),)
@@ -39,7 +37,7 @@ DIC      := $(patsubst ${CORPUSHOME}/%,${CORPUSRELEASE}/%,$(wildcard ${CORPUSDIC
 # endif
 ifndef SMT
 ifneq ($(wildcard ${CORPUSWORDALIGN}),)
-  SMT    := $(patsubst ${CORPUSWORDALIGN}/%/bitext.xml.gz,${CORPUSRELEASE}/smt/%.zip,\
+  SMT := $(patsubst ${CORPUSWORDALIGN}/%/bitext.xml.gz,${CORPUSRELEASE}/smt/%.zip,\
 		${wildcard ${CORPUSWORDALIGN}/*/bitext.xml.gz})
 endif
 endif
@@ -110,16 +108,18 @@ show-nrof-packages:
 
 
 # script for creating websites
-MAKEHTML   = opus-website
-# MAKEHTML   = ${HOME}/bin/opus-website
+MAKEHTML   := opus-website
 
 ## some scripts for conversion
-## TODO: should update to some better implementation
-TAB2TMX    = ${OPUSTOOLS}/tab2tmx
-# OPUS2MOSES = ${HOME}/bin/opus2moses
-OPUS2MOSES = opus2moses
+TAB2TMX    := bitext2tmx
+OPUS2MOSES := opus2bitext
+
 
 ## OLD
+# MAKEHTML   = ${HOME}/bin/opus-website
+# TAB2TMX    = ${OPUSTOOLS}/tab2tmx
+# OPUS2MOSES = ${HOME}/bin/opus2moses
+# OPUS2MOSES = opus2moses
 # OPUS2MOSES = $(OPUSTOOLS)/xces2moses
 
 
@@ -132,9 +132,7 @@ PACKDIRS   = xml raw
 
 
 ## create directories with read permissions for everyone
-MKDIR = mkdir -p -m 755
-
-
+MKDIR     := mkdir -p -m 755
 LOCALTMP  := ${shell mktemp -d}
 
 
