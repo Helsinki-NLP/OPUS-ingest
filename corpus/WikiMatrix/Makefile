@@ -16,6 +16,7 @@ all:
 	${MAKE} -C src all
 	${MAKE} annotate
 	${MAKE} moses
+	${MAKE} sample-files
 	${MAKE} publish
 
 
@@ -33,6 +34,8 @@ include ../Makefile.release
 include ../Makefile.cwb
 include ../Makefile.udparse
 
+OPUS2MOSES := opus2bitext -c 1.04 -C score
+
 
 ## select one of the following to set the annotation level in xml/
 ##
@@ -41,9 +44,43 @@ include ../Makefile.udparse
 ##   Makefile.tag ............. tokenization and PoS tagging (if available)
 ##   Makefile.annotate ........ all annotation in Uplug
 
+include ../Makefile.tokenize-fast
 # include ../Makefile.tokenize-simple
-include ../Makefile.tokenize-moses
+# include ../Makefile.tokenize-moses
 # include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate
 
+
+# ALLXMLFILES = ${patsubst ${CORPUSRAW}/%,${CORPUSXML}/%,${wildcard ${CORPUSRAW}/*/*.xml.gz}}
+
+# annotate tokenize-all: ${ALLXMLFILES}
+
+# ${CORPUSXML}/%.xml.gz: ${CORPUSRAW}/%.xml.gz
+# 	zcat $< |\
+# 	python3 scripts/opus-tokenize.py \
+# 		-l $(word 1,$(subst /, ,${patsubst ${CORPUSXML}/%,%,$@})) |\
+# 	gzip -c > $@
+
+
+SAMPLEFILES = $(patsubst ${CORPUSRELEASE}/tmx/%.tmx.gz,${CORPUSPUB}/%_sample.html,\
+		$(wildcard ${CORPUSRELEASE}/tmx/*.tmx.gz))
+
+sample-files: $(SAMPLEFILES)
+
+$(SAMPLEFILES): ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
+	echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"' >$@
+	echo '"http://www.w3.org/TR/REC-html40/loose.dtd">' >> $@
+	echo '<html>' >> $@
+	echo '<head>' >> $@
+	echo '<title>Untitled Document</title>' >> $@
+	echo '<meta http-equiv="Content-Type" content="text/html;charset=utf-8">' >> $@
+	echo '</head>' >> $@
+	echo '<body>' >> $@
+	echo '<p>' >> $@
+	zgrep '</tuv>' $< |\
+	sed 's/^.*<seg>//;s#</seg></tuv>#<br/>#' |\
+	head -100 |\
+	sed ': loop; n; a <hr/>' >> $@
+	echo '</body></html/>' >> $@
+	chmod 644 $@

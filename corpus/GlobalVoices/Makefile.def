@@ -4,7 +4,8 @@
 
 CORPUS  = GlobalVoices
 # VERSION = v2015
-VERSION = v2017q3
+# VERSION = v2017q3
+VERSION = 2018Q4
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just

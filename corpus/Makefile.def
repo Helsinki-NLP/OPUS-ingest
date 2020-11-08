@@ -62,8 +62,12 @@ else
   OPUSRELEASE   = ${OPUSNLPL}
 endif
 
-EFLOMAL_PRIORS ?= $(OPUSHOME)/eflomal
 
+ifdef LOCAL_SCRATCH
+  TMPDIR       = ${LOCAL_SCRATCH}
+endif
+
+EFLOMAL_PRIORS ?= $(OPUSHOME)/eflomal
 
 # CWB home for standard annotation
 OPUSCWB      = ${OPUSHOME}/cwb

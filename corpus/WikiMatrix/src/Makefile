@@ -4,8 +4,8 @@ include ../Makefile.def
 
 PWD := ${shell pwd}
 
-WIKI_BITEXTS   = $(sort ${wildcard v1/WikiMatrix.*.tsv.gz})
-WIKI_LANGPAIRS = ${patsubst v1/WikiMatrix.%.tsv.gz,%,${WIKI_BITEXTS}}
+WIKI_BITEXTS   = $(sort ${wildcard version1/WikiMatrix.*.tsv.gz})
+WIKI_LANGPAIRS = ${patsubst version1/WikiMatrix.%.tsv.gz,%,${WIKI_BITEXTS}}
 WIKI_LANGS     = ${sort ${subst -, ,${WIKI_LANGPAIRS}}}
 
 SENTALGS  = ${patsubst %,../xml/%.xml.gz,${WIKI_LANGPAIRS}}
@@ -35,7 +35,7 @@ convert-job:
 	${MAKE} HPC_DISK=1000 convert.submit
 
 .PHONY: fetch
-fetch: v1
+fetch: version1
 
 .PHONY: convert
 convert: ${XMLDOCS} ${SENTALGS}
@@ -46,11 +46,11 @@ sentalgs: ${SENTALGS}
 
 ## get the source files
 
-v1:
+version1:
 	wget https://dl.fbaipublicfiles.com/laser/WikiMatrix/WikiMatrix.v1.1620_language_pairs.tar
 	tar -xf WikiMatrix.v1.1620_language_pairs.tar
 	rm -f WikiMatrix.v1.1620_language_pairs.tar
-
+	mv v1 $@
 
 ## raw corpus files
 
@@ -62,7 +62,7 @@ ${XMLDOCS}: ../raw/%/WikiMatrix.xml.gz: ${TMPDIR}/WikiMatrix.sent.%.txt
 ## in memory without any key-value store
 ## ---> requires quite some memory 
 
-${SENTALGS}: ../xml/%.xml.gz: v1/WikiMatrix.%.tsv.gz ${UNIQSENTS}
+${SENTALGS}: ../xml/%.xml.gz: version1/WikiMatrix.%.tsv.gz ${UNIQSENTS}
 	mkdir -p ${dir $@}
 	zcat $< | \
 	( s=${firstword ${subst -, ,${patsubst ../xml/%.xml.gz,%,$@}}}; \
@@ -78,7 +78,7 @@ ${SENTALGS}: ../xml/%.xml.gz: v1/WikiMatrix.%.tsv.gz ${UNIQSENTS}
 ## sentence alignment files
 ## CDB-based lookup: fast but still takes quite some time
 
-# ${SENTALGS}: ../xml/%.xml.gz: v1/WikiMatrix.%.tsv.gz ${SENTDBS}
+# ${SENTALGS}: ../xml/%.xml.gz: version1/WikiMatrix.%.tsv.gz ${SENTDBS}
 # 	mkdir -p ${dir $@}
 # 	zcat $< | \
 # 	( s=${firstword ${subst -, ,${patsubst ../xml/%.xml.gz,%,$@}}}; \
@@ -93,7 +93,7 @@ ${SENTALGS}: ../xml/%.xml.gz: v1/WikiMatrix.%.tsv.gz ${UNIQSENTS}
 
 ## with SQLite - this is very slow ....
 #
-# ${SENTALGS}: ../xml/%.xml.gz: v1/WikiMatrix.%.tsv.gz 
+# ${SENTALGS}: ../xml/%.xml.gz: version1/WikiMatrix.%.tsv.gz 
 # 	${MAKE} ../db/WikiMatrix.${firstword ${subst -, ,${patsubst ../xml/%.xml.gz,%,$@}}}.db \
 # 		../db/WikiMatrix.${lastword ${subst -, ,${patsubst ../xml/%.xml.gz,%,$@}}}.db
 # 	mkdir -p ${dir $@}
@@ -117,10 +117,10 @@ ${SENTALGS}: ../xml/%.xml.gz: v1/WikiMatrix.%.tsv.gz ${UNIQSENTS}
 ${TMPDIR}/WikiMatrix.sent.%.txt:
 	rm -f $@.tmp
 	( l=${patsubst ${TMPDIR}/WikiMatrix.sent.%.txt,%,$@}; \
-	  for d in `ls v1/WikiMatrix.$$l-*.tsv.gz 2>/dev/null`; do \
+	  for d in `ls version1/WikiMatrix.$$l-*.tsv.gz 2>/dev/null`; do \
 	    zcat $$d | cut -f2 >> $@.tmp; \
 	  done; \
-	  for d in `ls v1/WikiMatrix.*-$$l.tsv.gz 2>/dev/null`; do \
+	  for d in `ls version1/WikiMatrix.*-$$l.tsv.gz 2>/dev/null`; do \
 	    zcat $$d | cut -f3 >> $@.tmp; \
 	  done )
 	LANG=C sort -T ${TMPDIR} $@.tmp --parallel=${THREADS} -u $@.tmp | \

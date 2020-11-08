@@ -15,21 +15,8 @@ include ../Makefile.def
 all:
 	${MAKE} -C src all
 	${MAKE} annotate
-	${MAKE} moses
-	${MAKE} copy-tmx-files
 	${MAKE} sample-files
 	${MAKE} publish
-
-
-all-no-english:
-	${MAKE} -C src all
-	${MAKE} LANGUAGES="${RELEASE_LANGS}" annotate
-	${MAKE} LANGUAGES="${RELEASE_LANGS}" sample-files
-	${MAKE} LANGUAGES="${RELEASE_LANGS}" publish
-
-publish-no-english:
-	${MAKE} LANGUAGES="${RELEASE_LANGS}" sample-files
-	${MAKE} LANGUAGES="${RELEASE_LANGS}" publish
 
 
 ALLXMLFILES = ${patsubst ${CORPUSRAW}/%,${CORPUSXML}/%,${wildcard ${CORPUSRAW}/*/*.xml.gz}}
@@ -128,8 +115,9 @@ include ../Makefile.udparse
 ##   Makefile.tag ............. tokenization and PoS tagging (if available)
 ##   Makefile.annotate ........ all annotation in Uplug
 
+include ../Makefile.tokenize-fast
 # include ../Makefile.tokenize-simple
-include ../Makefile.tokenize-moses
+# include ../Makefile.tokenize-moses
 # include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate

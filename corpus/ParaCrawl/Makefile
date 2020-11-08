@@ -30,13 +30,14 @@ copy-tmx-files:
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
 	    if [[ "$$s" < "$$t" ]]; then \
-	      if [ -e "src/$$s-$$t.${FILTER}.tmx.gz" ]; then \
-		rsync src/$$s-$$t.${FILTER}.tmx.gz ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
+	      f=`ls src/*/$$s-$$t.*tmx.gz 2>/dev/null`; \
+	      if [ "$$f" == "" ]; then \
+	        f=`ls src/*/$$t-$$s.*tmx.gz 2>/dev/null`; \
+	      fi; \
+	      if [ "$$f" != "" ]; then \
+		rsync $$f ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
 		touch ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
-	      elif [ -e "src/$$t-$$s.${FILTER}.tmx.gz" ]; then \
-		rsync src/$$t-$$s.${FILTER}.tmx.gz ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
-		touch ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
-	      fi \
+              fi; \
 	    fi \
 	  done \
 	done
@@ -97,8 +98,9 @@ include ../Makefile.udparse
 ##   Makefile.tag ............. tokenization and PoS tagging (if available)
 ##   Makefile.annotate ........ all annotation in Uplug
 
+include ../Makefile.tokenize-fast
 # include ../Makefile.tokenize-simple
-include ../Makefile.tokenize-moses
+# include ../Makefile.tokenize-moses
 # include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate

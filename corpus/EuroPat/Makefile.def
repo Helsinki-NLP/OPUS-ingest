@@ -9,7 +9,7 @@ VERSION = v${RELEASE}
 ## current release to work with
 EUROPAT_RELEASE = https://europat.net
 
-LICENSE = <a hre="https://tico-19.github.io/LICENSE.md">Creative Commons CC0 license</a>
+LICENSE = <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">Creative Commons CC0 license</a>
 COPYRIGHT = All content is made publicly available through a Creative Commons CC0 license.
 
 # with SRCHTML you can define some extra HTML code that will be placed just

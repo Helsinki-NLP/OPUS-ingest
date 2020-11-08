@@ -7,6 +7,8 @@ CORPUS  = WikiMatrix
 RELEASE = 1
 VERSION = v${RELEASE}
 
+LICENSE = <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">CC-BY-SA 4.0</a>
+
 # with SRCHTML you can define some extra HTML code that will be placed just
 # after the name of the sub-corpus
 # EXTRAHTML is code which will be put just after the 'Download' header
