@@ -17,13 +17,24 @@ all:
 	${MAKE} -C src archive
 	${MAKE} xml/Makefile
 	mv -f raw/*-* xml/
+	${MAKE} same-language
 	${MAKE} -C xml create-align-files
 	rm -f log/.tok* log/.*.done
 	${MAKE} annotate
-	${MAKE} same-language
 	${MAKE} moses tmx
 	${MAKE} sample-files
 	${MAKE} publish
+
+update:
+	${MAKE} -C src all
+	${MAKE} convert
+	${MAKE} -C src archive
+	${MAKE} xml/Makefile
+	mv -f raw/*-* xml/
+	${MAKE} same-language
+	${MAKE} -C xml create-align-files
+	rm -f log/.tok* log/.*.done
+	${MAKE} annotate
 
 
 ## BEFORE MOVING TO NEW opus2moses:
@@ -46,8 +57,13 @@ more:
 same-language:
 	mkdir -p same-lang
 	-for l in ${LANGUAGES}; do \
-		mv xml/$$l-$$l.* same-lang/;\
+	  mkdir -p same-lang/$$l-$$l; \
+	  mv xml/$$l-$$l/* same-lang/$$l-$$l/;\
+	  rmdir xml/$$l-$$l; \
 	done
+
+#	  mv xml/$$l-$$l.xml.gz same-lang/$$l-$$l/${VERSION}.xml.gz;\
+
 
 
 ## create sample files from TMX rather than from XCES files

@@ -14,6 +14,8 @@ include ../Makefile.def
 
 all:
 	${MAKE} -C src all
+	mkdir -p english/raw
+	mv ${CORPUSRAW}/*en* english/raw/
 	${MAKE} annotate
 	${MAKE} sample-files
 	${MAKE} publish
@@ -79,9 +81,6 @@ tokenize-job:
 	if [ `ls log/.*tok* | wc -l` == ${words ${LANGUAGES}} ]; then \
 	  ${MAKE} HPC_CORES=4 HPC_MEM=128g HPC_TIME=72:00 publish-job.submit; \
 	fi
-
-publish-job-no-english:
-	${MAKE} LANGUAGES="${RELEASE_LANGS}" publish-job
 
 publish-job:
 	${MAKE} moses

@@ -32,6 +32,7 @@ convert-${VERSION}.done:
 .PHONY: convert-files
 convert-files:
 	for l in ${LANGUAGES}; do \
+	  echo "${MAKE} SRC=$$l srcxml"; \
 	  ${MAKE} SRC=$$l srcxml; \
 	done
 
@@ -68,11 +69,13 @@ xliff: xliff.tgz
 split: split.tgz
 	tar -xzf $<
 	find split -type f | sed 's/^/"/;s/$$/"/'  > split-files.txt
-	cat split-files.txt | sed 's/"$$/.txt"/' | tr '|:%&;' '____' > split-files-clean.txt
+	cat split-files.txt | sed 's/"$$/.txt"/' | sed 's/.txt.txt"/.txt"/' | \
+	tr '|:%&;' '____' > split-files-clean.txt
 	paste -d ' ' split-files.txt split-files-clean.txt | sed 's/^/mv /' > move.sh
 	chmod +x move.sh
 	./move.sh
 	rm -f move.sh split-files.txt split-files-clean.txt
+	touch $@
 
 
 SRCFILES=$(sort $(patsubst split/$(SRC)/%.txt,${RAWDIR}/$(SRC)/%.xml.gz,$(wildcard split/$(SRC)/*.txt)))
