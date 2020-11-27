@@ -2,17 +2,15 @@
 include ../Makefile.def
 include Makefile.def
 
-.PHONY: corpus
-corpus:
-	${MAKE} -C src all
-	${MAKE} annotate
-	rm -fr data
-
 
 .PHONY: all
 all:
-	${MAKE} corpus
-	${MAKE} web-corpus
+	${MAKE} -C src all
+	${MAKE} annotate
+	${MAKE} udparse
+	${MAKE} wordalign
+	${MAKE} publish
+	${MAKE} cwb-index
 
 backup: before-${VERSION}
 
@@ -29,12 +27,9 @@ before-${VERSION}:
 	-mv $@/wordalign/Makefile wordalign/
 
 
-.PHONY: web-corpus
-web-corpus: tmx moses alg_samples html
-
-
 # include some standard OPUS targets for processing/annotating data
 
+include ../Makefile.process
 # include ../Makefile.annotate
 include ../Makefile.tag
 include ../Makefile.cwb

@@ -1,0 +1,22 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = Please respect the <a href="https://www.ted.com/about/our-organization/our-policies-terms/ted-talks-usage-policy">TED Talks Usage Policy</a>
+COPYRIGHT = 
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML= This dataset contains a crawl of nearly 4000 <a hef="https://www.ted.com/">TED and TED-X</a> transcripts from July 2020. The transcripts have been <a href="https://www.ted.com/participate/translate">translated by a global community of volunteers</a> to more than 100 languages. The parallel corpus is available from <a href="https://github.com/UKPLab/sentence-transformers/blob/master/docs/datasets/TED2020.md">https://www.ted.com/participate/translate</a>
+EXTRAHTML=
+# CITENOTE=

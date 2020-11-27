@@ -17,7 +17,6 @@ all:
 	${MAKE} -C src archive
 	${MAKE} xml/Makefile
 	mv -f raw/*-* xml/
-	${MAKE} same-language
 	${MAKE} -C xml create-align-files
 	rm -f log/.tok* log/.*.done
 	${MAKE} annotate
@@ -31,7 +30,6 @@ update:
 	${MAKE} -C src archive
 	${MAKE} xml/Makefile
 	mv -f raw/*-* xml/
-	${MAKE} same-language
 	${MAKE} -C xml create-align-files
 	rm -f log/.tok* log/.*.done
 	${MAKE} annotate
