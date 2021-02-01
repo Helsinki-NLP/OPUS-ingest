@@ -17,6 +17,7 @@ COPYRIGHT =
 # EXTRAHTML is code which will be put just after the 'Download' header
 # CITENOTE if you want to change the default reference to be cited
 
-SRCHTML= This dataset contains a crawl of nearly 4000 <a hef="https://www.ted.com/">TED and TED-X</a> transcripts from July 2020. The transcripts have been <a href="https://www.ted.com/participate/translate">translated by a global community of volunteers</a> to more than 100 languages. The parallel corpus is available from <a href="https://github.com/UKPLab/sentence-transformers/blob/master/docs/datasets/TED2020.md">https://www.ted.com/participate/translate</a>
+SRCHTML= This dataset is described in <a href="https://arxiv.org/abs/2004.09813">Reimers, Nils and Gurevych, Iryna: Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation</a> and  contains a crawl of nearly 4000 <a hef="https://www.ted.com/">TED and TED-X</a> transcripts from July 2020. The transcripts have been <a href="https://www.ted.com/participate/translate">translated by a global community of volunteers</a> to more than 100 languages. The parallel corpus and the code fopr cerating it is available from <a href="https://github.com/UKPLab/sentence-transformers/blob/master/docs/datasets/TED2020.md">https://www.ted.com/participate/translate</a>
 EXTRAHTML=
-# CITENOTE=
+CITENOTE=Please, cite: <blockquote><pre>@inproceedings{reimers-2020-multilingual-sentence-bert,<br/>    title = "Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation",<br/>    author = "Reimers, Nils and Gurevych, Iryna",<br/>    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing",<br/>    month = "11",<br/>    year = "2020",<br/>    publisher = "Association for Computational Linguistics",<br/>    url = "https://arxiv.org/abs/2004.09813",<br/>}</pre></blockquote> and, please, acknowledge OPUS as well for this service.
+

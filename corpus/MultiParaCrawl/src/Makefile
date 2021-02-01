@@ -39,35 +39,20 @@ pivoting:
 	  for t in $(filter-out ${PIVOT},${LANGUAGES}); do \
 	    if [[ "$$t" > "$$s" ]]; then \
 	      mkdir -p ${CORPUSXML}/$$s-$$t; \
+	      echo "processing ..."; \
+	      ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'; \
+	      ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'; \
 	      opus-pivoting `ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'` \
 	                    	`ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'` \
-	      | gzip -c > ${CORPUSXML}/$$s-$$t/paracrawl-pivoted${RELEASE}.xml.gz; \
+	      | gzip -c > ${CORPUSXML}/$$s-$$t/paracrawl-pivoted-${VERSION}.xml.gz; \
 	      if [ -e ${CORPUSXML}/$$s-$$t.xml.gz ]; then \
-		mv ${CORPUSXML}/$$s-$$t.xml.gz ${CORPUSXML}/$$s-$$t/paracrawl${RELEASE}.xml.gz; \
-	      fi; \
-	      zgrep --no-filename 'link ' ${CORPUSXML}/$$s-$$t/*.xml.gz | sort -u > $$s-$$t.links; \
-	      echo '<?xml version="1.0" encoding="utf-8"?>' > $$s-$$t.tmp; \
-	      echo '<!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">' >> $$s-$$t.tmp; \
-	      echo '<cesAlign version="1.0">' >> $$s-$$t.tmp; \
-	      zgrep --no-filename '<linkGrp ' ${CORPUSXML}/$$s-$$t.xml.gz >> $$s-$$t.tmp; \
-	      cat $$s-$$t.links >> $$s-$$t.tmp; \
-	      zgrep --no-filename '</linkGrp' ${CORPUSXML}/$$s-$$t.xml.gz >> $$s-$$t.tmp; \
-	      echo '</cesAlign>' >> $$s-$$t.tmp; \
-	      gzip -f $$s-$$t.tmp; \
-	      mv -f $$s-$$t.tmp.gz ${CORPUSXML}/$$s-$$t.xml.gz; \
-	      if [ -e ${CORPUSXML}/$$s-$$t/paracrawl${RELEASE}.xml.gz ]; then \
 	        mkdir -p backup; \
-		mv -f ${CORPUSXML}/$$s-$$t/paracrawl${RELEASE}.xml.gz backup/$$s-$$t.xml.gz ; \
-	      fi; \
-	      rm -f $$s-$$t.links; \
-	      rm -f ${CORPUSXML}/$$s-$$t/paracrawl-pivoted${RELEASE}.xml.gz
-	      rmdir ${CORPUSXML}/$$s-$$t
-	      if [ `zcat ${CORPUSXML}/$$s-$$t.xml.gz | head | wc -l` == "0" ]; then \
-	        rm -f ${CORPUSXML}/$$s-$$t.xml.gz; \
+		mv -f ${CORPUSXML}/$$s-$$t.xml.gz backup/ ; \
 	      fi; \
 	    fi \
 	  done \
 	done
+	${MAKE} -C ${CORPUSXML} create-align-files
 
 
 .PHONY: fetch

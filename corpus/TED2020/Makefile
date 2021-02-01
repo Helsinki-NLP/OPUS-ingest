@@ -44,6 +44,7 @@ ${CORPUSRAW}: ${CORPUSSRC}/ted2020.tsv.gz
 	mkdir -p ${CORPUSRAW}
 	cd ${CORPUSRAW} && zcat $< | ${CORPUSHOME}/scripts/tsv2opus
 	find ${CORPUSRAW} -name '*.xml' | xargs gzip -f
+	mkdir -p ${CORPUSXML}
 	mv ${CORPUSRAW}/*-*.xml.gz ${CORPUSXML}/
 	touch $@
 

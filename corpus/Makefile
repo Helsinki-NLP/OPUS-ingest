@@ -41,6 +41,13 @@ endif
 		${CORPUSHOME}/${CORPUS}/xml \
 		${CORPUSHOME}/${CORPUS}/parsed
 
+retrieve-corpus-base:
+ifneq (${wildcard ${CORPUSHOME}/${CORPUS}},,)
+	mv ${CORPUSHOME}/${CORPUS} ${CORPUSHOME}/${CORPUS}-$(shell date +%F)
+endif
+	${MAKE} ${CORPUSHOME}/${CORPUS}
+
+
 .PHONY: upload store-corpus
 upload store-corpus: ${WORKDIR}/OPUS-corpus/${CORPUS}.allas
 

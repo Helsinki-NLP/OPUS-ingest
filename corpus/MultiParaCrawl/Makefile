@@ -17,6 +17,8 @@ all:
 	mkdir -p english/raw
 	mv ${CORPUSRAW}/*en* english/raw/
 	${MAKE} annotate
+	${MAKE} moses
+	${MAKE} copy-tmx-files
 	${MAKE} sample-files
 	${MAKE} publish
 
