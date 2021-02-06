@@ -80,3 +80,17 @@ include ../Makefile.tokenize-fast
 # include ../Makefile.tag
 # include ../Makefile.annotate
 
+
+
+
+### removing romanized versions from links
+### DELETE THIS NOW
+
+OLDXML = ${wildcard xml/*.xml.gz}
+NEWXML = ${patsubst xml/%,new/%,${wildcard xml/*.xml.gz}}
+
+remove-rom: ${NEWXML}
+
+${NEWXML}: new/%: xml/%
+	mkdir -p new
+	zcat $< | perl scripts/remove_rom.pl | gzip -c > $@

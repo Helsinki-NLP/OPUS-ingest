@@ -17,10 +17,16 @@ ${CORPUSXML}: ${CORPUSRAW}
 ${CORPUSRAW}: .unpacked
 	${MAKE} rawfiles
 
+#.unpacked: articles.tar.gz
+#	tar -xzf articles.tar.gz \
+#	--transform='s#^.*/\([a-z]*\)\_\([^/]*\).txt#\1/\2.txt#'
+#	touch $@
+
 .unpacked: articles.tar.gz
 	tar -xzf articles.tar.gz \
-	--transform='s#^.*/\([a-z]*\)\_\([^/]*\).txt#\1/\2.txt#'
+	--transform='s#^.*/\([^/]*\)\_\([^/]*\).txt#\1/\2.txt#'
 	touch $@
+
 
 .PHONY: cleanup
 cleanup:

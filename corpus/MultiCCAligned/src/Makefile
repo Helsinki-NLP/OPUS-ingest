@@ -15,7 +15,7 @@ ALIGNED_DOCS  = $(shell wget -qq -O - http://www.statmt.org/cc-aligned/index.htm
 		grep '<a href="en_XX' | cut -f2 -d'"')
 
 ALIGNED_SENTS = $(shell wget -qq -O - http://www.statmt.org/cc-aligned/index.html | \
-		grep '<a href="sentence-aligned' | cut -f2 -d'"')
+		grep '<a href="sentence-aligned' | grep -v '_rom' | cut -f2 -d'"')
 
 ALIGNED_WITH_LANG = ${patsubst %.tsv.xz,%.tsv.gz,${ALIGNED_SENTS}}
 
@@ -36,6 +36,7 @@ endif
 all: ${CORPUSRAW}
 	${MAKE} -C .. xml/Makefile
 	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/ 
+	${MAKE} -C ${CORPUSXML} create-align-files
 	${MAKE} pivoting
 
 
@@ -55,6 +56,10 @@ ${ALIGNED_SENTS}:
 
 .PHONY: convert
 convert: ${CORPUSRAW}
+	${MAKE} -C .. xml/Makefile
+	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/ 
+	${MAKE} -C ${CORPUSXML} create-align-files
+
 
 ${CORPUSRAW}: ${ALIGNED_WITH_LANG}
 	mkdir -p ${CORPUSRAW}
@@ -72,27 +77,55 @@ ${CORPUSRAW}: ${ALIGNED_WITH_LANG}
 	gzip -c > $@
 
 
-
-
 PIVOT = en
 
-pivoting:
-	${MAKE} -C ${CORPUSXML} create-align-files
+## all alignment files with pivot language
+PIVOTALGFILES = ${wildcard ${CORPUSXML}/${PIVOT}-*.xml.gz} \
+		${wildcard ${CORPUSXML}/*-${PIVOT}.xml.gz}
+
+## all language pairs that can be made out of pivot alignments
+NEWLANGPAIRS = ${shell \
 	for s in $(filter-out ${PIVOT},${LANGUAGES}); do \
 	  for t in $(filter-out ${PIVOT},${LANGUAGES}); do \
-	    if [[ "$$t" > "$$s" ]]; then \
-	      mkdir -p ${CORPUSXML}/$$s-$$t; \
-	      echo "processing ..."; \
-	      ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'; \
-	      ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'; \
-	      opus-pivoting `ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'` \
-	                    	`ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'` \
-	      | gzip -c > ${CORPUSXML}/$$s-$$t/ccaligned-pivoted-${VERSION}.xml.gz; \
-	      if [ -e ${CORPUSXML}/$$s-$$t.xml.gz ]; then \
-	        mkdir -p backup; \
-		mv -f ${CORPUSXML}/$$s-$$t.xml.gz backup/ ; \
-	      fi; \
-	    fi \
+	    if [[ "$$t" > "$$s" ]]; then echo $$s-$$t; fi \
 	  done \
-	done
-	${MAKE} -C ${CORPUSXML} create-align-files
+	done}
+
+## all new pivot-based alignment files
+NEWALGFILES = ${patsubst %,${CORPUSXML}/%.xml.gz,${NEWLANGPAIRS}}
+
+${NEWALGFILES}: ${PIVOTALGFILES}
+	mkdir -p ${@:.xml.gz=}
+	( s=${firstword ${subst -, ,${notdir ${@:.xml.gz=}}}}; \
+	  t=${lastword ${subst -, ,${notdir ${@:.xml.gz=}}}}; \
+	  opus-pivoting `ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'` \
+	                `ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'` \
+	      | gzip -c > ${CORPUSXML}/$$s-$$t/ccaligned-pivoted-${VERSION}.xml.gz; \
+	  if [ -e $@ ]; then \
+	    mv -f $@ ${CORPUSXML}/$$s-$$t/; \
+	  fi; \
+	  ${MAKE} -C ${CORPUSXML} SRC=$$s TRG=$$t create-align-file; )
+
+pivoting: ${NEWALGFILES}
+
+
+# pivoting:
+# 	${MAKE} -C ${CORPUSXML} create-align-files
+# 	for s in $(filter-out ${PIVOT},${LANGUAGES}); do \
+# 	  for t in $(filter-out ${PIVOT},${LANGUAGES}); do \
+# 	    if [[ "$$t" > "$$s" ]]; then \
+# 	      mkdir -p ${CORPUSXML}/$$s-$$t; \
+# 	      echo "processing ..."; \
+# 	      ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'; \
+# 	      ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'; \
+# 	      opus-pivoting `ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'` \
+# 	                    	`ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'` \
+# 	      | gzip -c > ${CORPUSXML}/$$s-$$t/ccaligned-pivoted-${VERSION}.xml.gz; \
+# 	      if [ -e ${CORPUSXML}/$$s-$$t.xml.gz ]; then \
+# 	        mkdir -p backup; \
+# 		mv -f ${CORPUSXML}/$$s-$$t.xml.gz backup/ ; \
+# 	      fi; \
+# 	    fi \
+# 	  done \
+# 	done
+# 	${MAKE} -C ${CORPUSXML} create-align-files

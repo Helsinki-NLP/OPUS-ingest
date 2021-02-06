@@ -1,73 +1,77 @@
 # -*-makefile-*-
 #--------------------------------------------------------------------
-# Joerg Tiedemann			2010-11-05
+# Joerg Tiedemann
 # tiedeman@gmail.com
 #
-# general variables for OPUS corpora
+# general variables for the OPUS corpus project
 #--------------------------------------------------------------------
 
 
-# assume that the first subdir OPUS is our root-dir
-ifndef OPUSHOME
-  OPUSHOME=$(shell pwd | sed 's|OPUS/.*|OPUS|')
+## CSC specific information
+
+CSC_WORK_PROJECT    ?= project_2003093
+CSC_RELEASE_PROJECT ?= project_2000661
+CSC_OPUSMT_PROJECT  ?= project_2003288
+NLPLHOME            ?= /projappl/nlpl
+
+## CSC default billing project
+CSC_PROJECT         ?= ${CSC_WORK_PROJECT}
+
+
+## Object storage container names
+
+WORK_CONTAINER_BASENAME    = project-OPUS
+RELEASE_CONTAINER_BASENAME = OPUS
+
+## scratch/work space
+## TODO: remove hard-coded scratch space location
+
+ifneq (${wildcard /scratch/project_2001569/tmp},)
+  TMPDIR = /scratch/project_2001569/tmp
 endif
-
-# set version to latest if necessary
-ifndef VERSION
-  VERSION=latest
-endif
-
-
-#
-# OPUSCORPORA ..... home directory of all corpora in OPUS
-# OPUSDATA ........ data files like original sources etc
-# OPUSPUB ......... public www data (public_html)
-# OPUSHTML ........ downloadable files (to be available from www)
-# OPUSWORDALIGN ... word alignment and translation models
-
-
-OPUSCORPORA   = ${OPUSHOME}/corpus
-OPUSDATA      = ${OPUSHOME}/data
-
-
-## old OPUS server: public_html is next to OPUS
-## new OPUS: public_html is within OPUS and html,wordalign is in download
-## (hostname -d does not seem to work on Mac OS)
-
-ifeq ("${shell hostname | cut -f2- -d.}","novalocal")
-  OPUSPUB       = ${OPUSHOME}/public_html
-  OPUSHTML      = /media/download
-  OPUSRELEASE   = /media/releases
-  OPUSWORDALIGN = /media/releases
-else ifeq ("${shell hostname | cut -f2- -d.}","lingfil.uu.se")
-  OPUSPUB       = ${OPUSHOME}/../public_html
-  OPUSHTML      = ${OPUSHOME}/html
-  OPUSRELEASE   = ${OPUSHOME}/releases
-  OPUSWORDALIGN = ${OPUSHOME}/wordalign
-else ifeq ("${shell hostname -d}","bullx")
-  OPUSNLPL      = /projappl/nlpl/data/OPUS
-  OPUSPUB       = ${OPUSHOME}/public_html
-  OPUSHTML      = ${OPUSHOME}/download
-  OPUSWORDALIGN = ${OPUSHOME}/wordalign
-  OPUSRELEASE   = ${OPUSNLPL}
-  EFLOMAL_PRIORS = /projappl/nlpl/data/translation/eflomal
-  # TMPDIR         = /scratch/project_2000661/tmp
-  TMPDIR         = /scratch/project_2001569/tmp
-# else ifeq ("${shell hostname | cut -f2- -d.}","csc.fi")
-else
-  OPUSNLPL      = /proj/nlpl/data/OPUS
-  OPUSPUB       = ${OPUSHOME}/public_html
-  OPUSHTML      = ${OPUSHOME}/download
-  OPUSWORDALIGN = ${OPUSHOME}/wordalign
-  OPUSRELEASE   = ${OPUSNLPL}
-endif
-
 
 ifdef LOCAL_SCRATCH
-  TMPDIR       = ${LOCAL_SCRATCH}
+  TMPDIR = ${LOCAL_SCRATCH}
 endif
 
-EFLOMAL_PRIORS ?= $(OPUSHOME)/eflomal
+
+WORKDIR         ?= ${TMPDIR}
+OPUSHOME        ?= $(shell pwd | sed 's|\(.*\)OPUS/.*|\1OPUS|')
+LOCAL_OPUSHOME  ?= ${WORKDIR}/OPUS
+CORPUS          ?= RF
+
+
+# OPUSCORPORA ..... home directory of all corpora in OPUS
+# OPUSPUB ......... public www data (public_html)
+# OPUSRELEASE ..... released data packages
+
+OPUSCORPORA   = ${OPUSHOME}/corpus
+OPUSPUB       = ${OPUSHOME}/public_html
+OPUSNLPL      = ${NLPLHOME}/data/OPUS
+OPUSRELEASE   = ${OPUSNLPL}
+
+
+# corpus-specific directories
+CORPUSHOME       = ${OPUSCORPORA}/${CORPUS}
+CORPUSSRC        = ${CORPUSHOME}/src
+CORPUSXML        = ${CORPUSHOME}/xml
+CORPUSRAW        = ${CORPUSHOME}/raw
+CORPUSDIC        = ${CORPUSHOME}/dic
+CORPUSPARSED     = ${CORPUSHOME}/parsed
+CORPUSPUB        = ${OPUSPUB}/${CORPUS}/${VERSION}
+CORPUSRELEASE    = ${OPUSRELEASE}/${CORPUS}/${VERSION}
+CORPUSWORDALIGN  = ${CORPUSHOME}/wordalign
+
+## TODO: rename this to CORPUSVERSION?
+VERSION         ?= latest
+
+
+## DEPRECATED?
+OPUSDATA      = ${OPUSHOME}/data
+OPUSHTML      = ${OPUSHOME}/download
+OPUSWORDALIGN = ${OPUSHOME}/wordalign
+CORPUSHTML    = ${OPUSHTML}/${CORPUS}
+
 
 # CWB home for standard annotation
 OPUSCWB      = ${OPUSHOME}/cwb
@@ -80,25 +84,18 @@ UDCWBDATA    = ${UDCWB}/data
 UDCWBREG     = ${UDCWB}/reg
 
 
-# corpus-specific directories
-CORPUSHOME       = ${OPUSCORPORA}/${CORPUS}
-CORPUSSRC        = ${CORPUSHOME}/src
-CORPUSXML        = ${CORPUSHOME}/xml
-CORPUSRAW        = ${CORPUSHOME}/raw
-CORPUSDIC        = ${CORPUSHOME}/dic
-CORPUSPARSED     = ${CORPUSHOME}/parsed
-CORPUSPUB        = ${OPUSPUB}/${CORPUS}/${VERSION}
-CORPUSHTML       = ${OPUSHTML}/${CORPUS}
-CORPUSRELEASE    = ${OPUSRELEASE}/${CORPUS}/${VERSION}
-# CORPUSWORDALIGN  = ${CORPUSRELEASE}/wordalign
-# CORPUSWORDALIGN  = ${OPUSWORDALIGN}/${CORPUS}
-CORPUSWORDALIGN  = ${CORPUSHOME}/wordalign
+
+
 
 
 # LANGUAGES ....... sorted list of languages (2/3-letter codes possibly
 #                   with region extension); need to be subdirectories of
 #                   the source text directory! --> might have to run 
 #                   'make' in source text directory first!
+#
+## TODO: not a perfect solution! 
+##       - What happens with non-standard codes?
+##       - What happens with accidentally matching files and sub-dir's?
 
 ifndef LANGUAGES
   LANGUAGES = $(sort $(notdir $(wildcard ${CORPUSSRC}/??)) \
@@ -107,25 +104,6 @@ ifndef LANGUAGES
                       $(notdir ${shell find ${CORPUSRAW} -mindepth 1 -maxdepth 1 -type d -printf "%f "}))
 endif
 
-## OLD: match patterns in raw, NEW: take all sub-dirs in raw
-##
-# ifndef LANGUAGES
-#   LANGUAGES = $(sort $(notdir $(wildcard ${CORPUSSRC}/??)) \
-#                       $(notdir $(wildcard ${CORPUSSRC}/???)) \
-#                       $(notdir $(wildcard ${CORPUSSRC}/??_??)) \
-#                       $(notdir $(wildcard ${CORPUSRAW}/??)) \
-#                       $(notdir $(wildcard ${CORPUSRAW}/???)) \
-#                       $(notdir $(wildcard ${CORPUSRAW}/????)) \
-#                       $(notdir $(wildcard ${CORPUSRAW}/??_??)))
-# endif
-
-
-
-
-
-## removed this from old versions:
-#		      ${patsubst %.raw.tar.gz,%,\
-#			$(notdir $(wildcard ${CORPUSHTML}/*.raw.tar.gz))})
 
 
 ## all language pairs sorted by lang IDs
@@ -156,9 +134,10 @@ XMLEXT = xml.gz
 TXTEXT = txt.gz
 ALGEXT = xml.gz
 
-#
+
+#---------------------------------------------------------------
 # general tools that we will use for pre-processing & alignment
-#
+#---------------------------------------------------------------
 
 TOOLS       = ${OPUSHOME}/tools
 OPUSTOOLS   = ${TOOLS}
@@ -166,39 +145,52 @@ CORPUSTOOLS = ${OPUSTOOLS}/${CORPUS}
 
 ISO639      = opus-iso639
 
+
 ## TODO: get rid of local UPLUG
+##       or create git submodules or install pre-requisites
+##       even better: get rid of Uplug ....
+
 UPLUGHOME  = ${TOOLS}/public/uplug/uplug-main
 UPLUGCWB   = ${TOOLS}/public/uplug/uplug-cwb
 UPLUGTOOLS = ${UPLUGHOME}/tools
 UPLUG      = $(shell which uplug)
 
-# SMT tools via Moses (TODO: adjust to NLPL!)
+## SMT tools via Moses 
+## TODO: adjust to NLPL
+##       moses as git submodule?
 
-# MOSESHOME       := ${USERAPPL}/tools/mosesdecoder-2017
-MOSESHOME       := ${patsubst %/bin/moses,%,${shell which moses}}
+
+MOSESHOME       := ${patsubst %/bin/moses,%,${shell which moses 2>/dev/null}}
 MOSESSCRIPTS    := ${MOSESHOME}/scripts
 SCRIPTS_ROOTDIR := ${MOSESSCRIPTS}
 
 
-# SMTTOOLSHOME = ${HOME}/appl_taito/tools/
-# SMTTOOLS     = ${SMTTOOLSHOME}
-# SALMHOME     = ${SMTTOOLS}/SALM
+## TODO: local compiled version of SALM!
 
 SALMHOME        := ${OPUSTOOLS}/SALM
 
 
-# Word alignment tools (TODO: adjust to NLPL!)
+## Word alignment tools 
+## TODO: adjust to NLPL!
 
-# EFLOMAL         = ${USERAPPL}/tools/eflomal/align.py
-# EFMARAL         = ${USERAPPL}/tools/efmaral/efmaral.py
-# ATOOLS          = ${USERAPPL}/tools/fast_align/atools
 EFLOMAL         = align_eflomal.py
 EFMARAL         = align.py
 ATOOLS          = atools
 
+## word alignment priors
+
+ifneq (${wildcard ${NLPLHOME}/data/translation/eflomal},)
+  EFLOMAL_PRIORS = ${NLPLHOME}/data/translation/eflomal}
+endif
+
+EFLOMAL_PRIORS ?= $(OPUSHOME)/eflomal
+
 ## max size of a bitext to be aligned
 ## (the makefile will automatically split before aligning)
+
 MAX_EFLOMAL_CORPUS_SIZE = 5000000
+
+
 
 #--------------------------------------------------------------------
 # individual pre-processing steps (using Uplug)

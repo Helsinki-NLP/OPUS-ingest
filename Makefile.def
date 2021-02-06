@@ -1,0 +1,21 @@
+# -*-makefile-*-
+
+
+
+CSC_WORK_PROJECT    = project_2003093
+CSC_RELEASE_PROJECT = project_2000661
+CSC_OPUSMT_PROJECT  = project_2003288
+
+WORK_CONTAINER_BASENAME    = project-OPUS
+RELEASE_CONTAINER_BASENAME = OPUS
+
+
+ifdef LOCAL_SCRATCH
+  TMPDIR = ${LOCAL_SCRATCH}
+endif
+
+ifeq ("${shell hostname -d}","bullx")
+  WORKDIR = ${TMPDIR}
+else
+  WORKDIR = /wrk/tiedeman
+endif

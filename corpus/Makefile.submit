@@ -39,7 +39,7 @@ ifeq (${shell hostname --domain},bullx)
 ifdef HPC_DISK
 	echo '#SBATCH --gres=nvme:${HPC_DISK}' >> $@
 endif
-	echo '#SBATCH --account=project_2000661' >> $@
+	echo '#SBATCH --account=${CSC_PROJECT}' >> $@
 endif
 ifdef EMAIL
 	echo '#SBATCH --mail-type=END' >> $@

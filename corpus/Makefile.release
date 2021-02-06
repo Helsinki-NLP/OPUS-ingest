@@ -809,7 +809,7 @@ info: lang_info ces_info txt_info tmx_info
 
 lang_info: ${LANG_INFO}
 
-${LANG_INFO}:
+${LANG_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/raw/%.zip ${CORPUSRELEASE}/xml/%.zip
 	${MKDIR} ${dir $@}
 	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSXML}/%,$@}/ -name '*.${XMLEXT}' -type f | \
 	wc -l > $@
@@ -829,7 +829,7 @@ ${LANG_INFO}:
 
 ces_info: ${CES_INFO}
 
-${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSXML}/%.xml.gz
+${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/xml/%.xml.gz
 	${MKDIR} ${dir $@}
 	zgrep 'fromDoc' $< | wc -l > $@
 	zgrep 'xtargets' $< | wc -l >> $@

@@ -1,0 +1,22 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = <a href="/ELRC_2681/LICENSE.pdf">CC-BY-4.0</a>
+COPYRIGHT = <a href="https://www.elrc-share.eu">ELRC</a>
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML=ELRC_2681: Multilingual\ corpus\ from\ the\ Publications\ Office\ of\ the\ EU\ on\ the\ medical\ domain (public data set from <a href="https://elrc-share.eu/repository/browse/multilingual-corpus-from-the-publications-office-of-the-eu-on-the-medical-domain/4c0cf2a0854811ea913100155d026706787b772f28f840bda632dc86d5c87ae1/">https://www.elrc-share.eu</a>)
+EXTRAHTML=For more information, please look at <a href="https://www.elrc-share.eu">https://www.elrc-share.eu</a>) and data set with ID ELRC_2681.
+# CITENOTE=

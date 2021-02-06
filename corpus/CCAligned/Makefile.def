@@ -31,7 +31,7 @@ CITENOTE = If you use the dataset or code, please cite (<a href="https://www.acl
  doi = "10.18653/v1/2020.emnlp-main.480",</br>\
  pages = "5960--5969"</br>\
 }</pre></blockquote> and, please, acknowledge OPUS as well for this service.\
-<p> For more on sentence pair mining method, see (pdf):\
+<p> For more information on the sentence pair mining method, see (<a href="https://www.aclweb.org/anthology/W19-5435.pdf">pdf</a>):\
 <blockquote><pre>\
 @InProceedings{chaudhary-EtAl:2019:WMT,</br>\
   author    = {Chaudhary, Vishrav  and  Tang, Yuqing  and  Guzmán, Francisco  and  Schwenk, Holger  and  Koehn, Philipp},</br>\

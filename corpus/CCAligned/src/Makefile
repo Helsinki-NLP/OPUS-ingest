@@ -15,7 +15,7 @@ ALIGNED_DOCS  = $(shell wget -qq -O - http://www.statmt.org/cc-aligned/index.htm
 		grep '<a href="en_XX' | cut -f2 -d'"')
 
 ALIGNED_SENTS = $(shell wget -qq -O - http://www.statmt.org/cc-aligned/index.html | \
-		grep '<a href="sentence-aligned' | cut -f2 -d'"')
+		grep '<a href="sentence-aligned' | grep -v '_rom' | cut -f2 -d'"')
 
 CONVERTED_BITEXTS = ${patsubst %.tsv.xz,%.done,${ALIGNED_SENTS}}
 

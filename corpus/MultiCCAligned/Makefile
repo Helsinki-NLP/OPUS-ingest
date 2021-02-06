@@ -36,7 +36,11 @@ all-job:
 ## a job for fetching and converting all files
 ## that will submit tokenization jobs when ready
 convert-job:
-	${MAKE} -C src all
+	${MAKE} -C src convert
+	${MAKE} HPC_CORES=8 HPC_MEM=128g pivoting-job.submit
+
+pivoting-job:
+	${MAKE} -C src -j 8 pivoting
 	${MAKE} tokenize-jobs
 
 tokenize-jobs:
@@ -52,14 +56,16 @@ tokenize-jobs:
 tokenize-job:
 	${MAKE} annotate_files
 	if [ `ls log/.*tok* | wc -l` == ${words ${LANGUAGES}} ]; then \
-	  ${MAKE} HPC_CORES=8 HPC_MEM=4g HPC_TIME=72:00 publish-job.submit; \
+	  ${MAKE} HPC_CORES=8 HPC_MEM=64g HPC_TIME=72:00 publish-job.submit; \
 	fi
 
 publish-job:
+	${MAKE} tmx
+	${MAKE} sample-files
 	${MAKE} publish
 	${MAKE} wordalign/Makefile
 	${MAKE} -C wordalign submit-all
-	${MAKE} HPC_CORES=8 HPC_MEM=8g HPC_TIME=72:00 udparse.submit
+#	${MAKE} HPC_CORES=8 HPC_MEM=8g HPC_TIME=72:00 udparse.submit
 
 ## standard procedures are specified in the following makefiles
 ##
