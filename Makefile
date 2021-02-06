@@ -1,4 +1,0 @@
-# -*-makefile-*-
-
-
-include Makefile.def

@@ -1,0 +1,21 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">Creative Commons CC0 license</a>
+COPYRIGHT = All content is made publicly available through a Creative Commons CC0 license.
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML = Parallel corpora from Web Crawls collected in the <a href="https://gourmet-project.eu/data-model-releases/">gourmet project</a> and further processed for making it a multi-parallel corpus by pivoting via English.
+EXTRAHTML = The data is released under the <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">Creative Commons CC0 license</a> ("no rights reserved")
+CITENOTE = Please, acknowledge the gourmet project at <a href="https://gourmet-project.eu">https://gourmet-project.eu</a>. This version is derived from the original release at their website adjusted for redistribution via the OPUS corpus collection. Please, acknowledge OPUS as well for this service.
