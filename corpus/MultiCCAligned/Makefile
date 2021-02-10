@@ -63,8 +63,8 @@ publish-job:
 	${MAKE} tmx
 	${MAKE} sample-files
 	${MAKE} publish
-	${MAKE} wordalign/Makefile
-	${MAKE} -C wordalign submit-all
+#	${MAKE} wordalign/Makefile
+#	${MAKE} -C wordalign submit-all
 #	${MAKE} HPC_CORES=8 HPC_MEM=8g HPC_TIME=72:00 udparse.submit
 
 ## standard procedures are specified in the following makefiles

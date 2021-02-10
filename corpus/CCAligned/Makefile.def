@@ -11,9 +11,8 @@ SOURCE_URL = http://www.statmt.org/cc-aligned
 # after the name of the sub-corpus
 # EXTRAHTML is code which will be put just after the 'Download' header
 
-SRCHTML = This corpus was created from 68 Commoncrawl Snapshots (up until March 2020). The documents are split into sentences based on punctuations and deduplication is performed. No claims of intellectual property are made on the work of preparation of the corpus. The original distribution is available from <a href="http://www.statmt.org/cc-aligned/">http://www.statmt.org/cc-aligned/</a>
-
-EXTRAHTML = CCAligned consists of parallel or comparable web-document pairs in 137 languages aligned with English. These web-document pairs were constructed by performing language identification on raw web-documents, and ensuring corresponding language codes were corresponding in the URLs of web documents. This pattern matching approach yielded more than 100 million aligned documents paired with English. Recognizing that each English document was often aligned to mulitple documents in different target language, we can join on English documents to obtain aligned documents that directly pair two non-English documents (e.g., Arabic-French). \
+SRCHTML = This corpus was created from 68 Commoncrawl Snapshots (up until March 2020). The documents are split into sentences based on punctuations and deduplication is performed. No claims of intellectual property are made on the work of preparation of the corpus. The original distribution is available from <a href="http://www.statmt.org/cc-aligned/">http://www.statmt.org/cc-aligned/</a> \
+<p>CCAligned consists of parallel or comparable web-document pairs in 137 languages aligned with English. These web-document pairs were constructed by performing language identification on raw web-documents, and ensuring corresponding language codes were corresponding in the URLs of web documents. This pattern matching approach yielded more than 100 million aligned documents paired with English. Recognizing that each English document was often aligned to mulitple documents in different target language, we can join on English documents to obtain aligned documents that directly pair two non-English documents (e.g., Arabic-French).</p> \
 <p>Sentence pairs were extracted using similarity scores of LASER embeddings from the document pairs (minimum similarity 1.04, sorted based on decreasing similarity score). It misses some languages not covered by LASER.</p>
 
 
@@ -30,19 +29,22 @@ CITENOTE = If you use the dataset or code, please cite (<a href="https://www.acl
  url = "https://www.aclweb.org/anthology/2020.emnlp-main.480",</br>\
  doi = "10.18653/v1/2020.emnlp-main.480",</br>\
  pages = "5960--5969"</br>\
-}</pre></blockquote> and, please, acknowledge OPUS as well for this service.\
-<p> For more information on the sentence pair mining method, see (<a href="https://www.aclweb.org/anthology/W19-5435.pdf">pdf</a>):\
-<blockquote><pre>\
-@InProceedings{chaudhary-EtAl:2019:WMT,</br>\
-  author    = {Chaudhary, Vishrav  and  Tang, Yuqing  and  Guzmán, Francisco  and  Schwenk, Holger  and  Koehn, Philipp},</br>\
-  title     = {Low-Resource Corpus Filtering Using Multilingual Sentence Embeddings},</br>\
-  booktitle = {Proceedings of the Fourth Conference on Machine Translation (Volume 3: Shared Task Papers, Day 2)},</br>\
-  month     = {August},</br>\
-  year      = {2019},</br>\
-  address   = {Florence, Italy},</br>\
-  publisher = {Association for Computational Linguistics},</br>\
-  pages     = {263--268},</br>\
-  url       = {http://www.aclweb.org/anthology/W19-5435}</br>\
-}</pre></blockquote>
+}</pre></blockquote> \
+and, please, acknowledge <a href="https://www.aclweb.org/anthology/L12-1246/">OPUS</a> (<a href="https://www.aclweb.org/anthology/L12-1246.bib">bib</a>, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf">pdf</a>) as well for this service. For more information on the sentence pair mining method, see <a href="https://www.aclweb.org/anthology/W19-5435/">Chaudhary et al., WMT 2019</a> (<a href="https://www.aclweb.org/anthology/W19-5435.bib">bib</a>, <a href="https://www.aclweb.org/anthology/W19-5435.pdf">pdf</a>).
+
+# and, please, acknowledge OPUS as well for this service.\
+# <p> For more information on the sentence pair mining method, see (<a href="https://www.aclweb.org/anthology/W19-5435.pdf">pdf</a>):\
+# <blockquote><pre>\
+# @InProceedings{chaudhary-EtAl:2019:WMT,</br>\
+#   author    = {Chaudhary, Vishrav  and  Tang, Yuqing  and  Guzmán, Francisco  and  Schwenk, Holger  and  Koehn, Philipp},</br>\
+#   title     = {Low-Resource Corpus Filtering Using Multilingual Sentence Embeddings},</br>\
+#   booktitle = {Proceedings of the Fourth Conference on Machine Translation (Volume 3: Shared Task Papers, Day 2)},</br>\
+#   month     = {August},</br>\
+#   year      = {2019},</br>\
+#   address   = {Florence, Italy},</br>\
+#   publisher = {Association for Computational Linguistics},</br>\
+#   pages     = {263--268},</br>\
+#   url       = {http://www.aclweb.org/anthology/W19-5435}</br>\
+# }</pre></blockquote>
 
 

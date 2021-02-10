@@ -27,11 +27,11 @@ RELEASE_CONTAINER_BASENAME = OPUS
 ## TODO: remove hard-coded scratch space location
 
 ifneq (${wildcard /scratch/project_2001569/tmp},)
-  TMPDIR = /scratch/project_2001569/tmp
+  TMPDIR := /scratch/project_2001569/tmp
 endif
 
 ifdef LOCAL_SCRATCH
-  TMPDIR = ${LOCAL_SCRATCH}
+  TMPDIR := ${LOCAL_SCRATCH}
 endif
 
 

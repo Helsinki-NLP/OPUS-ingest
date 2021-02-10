@@ -15,6 +15,10 @@
 #   make CORPUSNAME.stored
 #   make CORPUSNAME.fetched
 #
+# fetch from old containers (requires release project)
+#
+#   make CORPUSNAME.fetchold
+#
 #
 # store individual sub-directories in a corpus
 #
