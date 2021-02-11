@@ -6,16 +6,18 @@ include ../Makefile.def
 all: ${CORPUSXML}
 	${MAKE} cleanup
 
-TXTFILES = ${wildcard */*.txt}
+FILE_EXT = xxx
+TXTFILES = ${wildcard */*.${FILE_EXT}}
 XMLFILES = ${patsubst %.txt,${CORPUSXML}/%.xml.gz,${TXTFILES}}
 RAWFILES = ${patsubst %.txt,${CORPUSRAW}/%.xml.gz,${TXTFILES}}
 
 
 ${CORPUSXML}: ${CORPUSRAW}
-	${MAKE} xmlfiles
+	${MAKE} FILE_EXT=txt xmlfiles
 
 ${CORPUSRAW}: .unpacked
-	${MAKE} rawfiles
+	${MAKE} normalise-langcodes
+	${MAKE} FILE_EXT=txt rawfiles
 
 #.unpacked: articles.tar.gz
 #	tar -xzf articles.tar.gz \
@@ -27,10 +29,30 @@ ${CORPUSRAW}: .unpacked
 	--transform='s#^.*/\([^/]*\)\_\([^/]*\).txt#\1/\2.txt#'
 	touch $@
 
+normalise-langcodes:
+	for d in `ls .`; do \
+	  if [ -d $$d ]; then \
+	    i=`iso639 -2 -k $$d`; \
+	    if [ ! "$$i" = "xx" ]; then \
+	      if [ "$$i" = 'sr' ]; then \
+	        i=`echo $$d | sed 's/\-/\_/'`; \
+	      fi; \
+	      if [ ! "$$i" = "$$d" ]; then \
+	        echo "mkdir -p $$i"; \
+	        echo "mv $$d/* $$i/"; \
+	        echo "rmdir $$d"; \
+	      fi \
+	    fi \
+	  fi \
+	done
 
+
+## TODO: is this too dangerous?
 .PHONY: cleanup
 cleanup:
-	rm -fr ?? ??? home
+	find . -maxdepth 1 -mindepth 1 -type d |\
+	xargs rm -fr
+#	rm -fr ?? ??? home
 
 
 .PHONY: xmlfiles
