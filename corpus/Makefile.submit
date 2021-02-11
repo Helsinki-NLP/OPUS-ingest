@@ -41,6 +41,9 @@ ifdef HPC_DISK
 endif
 	echo '#SBATCH --account=${CSC_PROJECT}' >> $@
 endif
+ifeq (${shell hostname --domain},mahti.csc.fi)
+	echo '#SBATCH --account=${CSC_PROJECT}' >> $@
+endif
 ifdef EMAIL
 	echo '#SBATCH --mail-type=END' >> $@
 	echo '#SBATCH --mail-user=${EMAIL}' >> $@
@@ -83,3 +86,19 @@ endif
 	-rsync -zav ${TMPDIR}/OPUS/web/${CORPUS}*php ${OPUSHOME}/web/
 	-rm -fr ${TMPDIR}/OPUS/corpus/${CORPUS}
 	-rm -fr ${TMPDIR}/OPUS/web/${CORPUS}*
+
+
+
+# run a recipe on a local copy in TMPDIR
+# NOTE: may overwrite existing files
+#       when copying back and force!!!
+
+%-runlocal:
+	mkdir -p ${TMPDIR}/OPUS/corpus
+	rsync -a ${CORPUSHOME} ${TMPDIR}/OPUS/corpus/
+	-ln -s ${OPUSHOME}/* ${TMPDIR}/OPUS/
+	-ln -s ${OPUSCORPORA}/* ${TMPDIR}/OPUS/corpus/
+	${MAKE} -C ${patsubst ${OPUSHOME}/%,${TMPDIR}/OPUS/%,${shell pwd}} \
+		OPUSHOME=${TMPDIR}/OPUS ${@:-runlocal=}
+	rsync -a ${TMPDIR}/OPUS/corpus/${CORPUS} ${OPUSCORPORA}/
+
