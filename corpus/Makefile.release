@@ -525,6 +525,7 @@ alg_samples: ${ALG_SAMPLES}
 # which would be used for many sample files (year = 0)
 # (they look messy and should actually be removed from the corpus)
 
+ifndef UNSORTED_SENTALIGN
 ${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%.xml.gz
 	@${MKDIR} ${dir $@}
 	opus-read \
@@ -533,6 +534,25 @@ ${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%.xml.gz
 		-N '\/0\/' \
 	$< > $@
 	chmod 644 $@
+else
+${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
+	echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"' >$@
+	echo '"http://www.w3.org/TR/REC-html40/loose.dtd">' >> $@
+	echo '<html>' >> $@
+	echo '<head>' >> $@
+	echo '<title>Untitled Document</title>' >> $@
+	echo '<meta http-equiv="Content-Type" content="text/html;charset=utf-8">' >> $@
+	echo '</head>' >> $@
+	echo '<body>' >> $@
+	echo '<p>' >> $@
+	zgrep '</tuv>' $< |\
+	sed 's/^.*<seg>//;s#</seg></tuv>#<br/>#' |\
+	head -100 |\
+	sed ': loop; n; a <hr/>' >> $@
+	echo '</body></html/>' >> $@
+	chmod 644 $@
+endif
+
 
 ## NEW: could use zip archives
 ## disadvantage: it is slow!

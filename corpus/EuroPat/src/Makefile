@@ -42,8 +42,8 @@ pivoting:
 	      opus-pivoting `ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'` \
 	                    	`ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'` \
 	      | gzip -c > ${CORPUSXML}/$$s-$$t/europat-pivoted${RELEASE}.xml.gz; \
-	      if [ `zcat ${CORPUSXML}/$$s-$$t/paracrawl-pivoted${RELEASE}.xml.gz | head | wc -l` == "0" ]; then \
-	        rm -f ${CORPUSXML}/$$s-$$t/paracrawl-pivoted${RELEASE}.xml.gz; \
+	      if [ `zcat ${CORPUSXML}/$$s-$$t/europat-pivoted${RELEASE}.xml.gz | head | wc -l` == "0" ]; then \
+	        rm -f ${CORPUSXML}/$$s-$$t/europat-pivoted${RELEASE}.xml.gz; \
 	      fi; \
 	    fi \
 	  done \

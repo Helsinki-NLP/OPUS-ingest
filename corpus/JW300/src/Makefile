@@ -1,30 +1,43 @@
 
-SHELL = bash
-
 include ../../Makefile.def
 include ../Makefile.def
 
-all: ${CORPUSXML}
+.PHONY: all convert
+all: .unpacked
+## merging and normalising lang-dirs is not a good idea! 
+## this overwrites some language variants and script variants!
+#	${MAKE} merge-subdirs
+#	${MAKE} normalise-and-merge-langcodes
+	${MAKE} normalise-langcodes
+	${MAKE} convert
 	${MAKE} cleanup
 
-FILE_EXT = xxx
-TXTFILES = ${wildcard */*.${FILE_EXT}}
+LANGDIRS = $(shell find . -maxdepth 1 -mindepth 1 -type d -printf '%f\n')
+XMLDIRS  = ${patsubst %,${CORPUSXML}/%,${LANGDIRS}}
+RAWDIRS  = ${patsubst %,${CORPUSRAW}/%,${LANGDIRS}}
+
+LANGDIR  = ${firstword ${LANGDIRS}}
+TXTFILES = ${wildcard ${LANGDIR}/*.txt}
 XMLFILES = ${patsubst %.txt,${CORPUSXML}/%.xml.gz,${TXTFILES}}
 RAWFILES = ${patsubst %.txt,${CORPUSRAW}/%.xml.gz,${TXTFILES}}
 
 
-${CORPUSXML}: ${CORPUSRAW}
-	${MAKE} FILE_EXT=txt xmlfiles
+.PHONY: convert convert-to-xml convert-to-raw
+convert: ${RAWDIRS} ${XMLDIRS}
+convert-to-xml: ${XMLFILES}
+convert-to-raw: ${RAWFILES}
 
-${CORPUSRAW}: .unpacked
-	${MAKE} merge-subdirs
-	${MAKE} normalise-langcodes
-	${MAKE} FILE_EXT=txt rawfiles
+${XMLDIRS}: ${CORPUSXML}/%: %
+	${MAKE} LANGDIR=$< convert-to-xml
 
-#.unpacked: articles.tar.gz
-#	tar -xzf articles.tar.gz \
-#	--transform='s#^.*/\([a-z]*\)\_\([^/]*\).txt#\1/\2.txt#'
-#	touch $@
+${RAWDIRS}: ${CORPUSRAW}/%: %
+	${MAKE} LANGDIR=$< convert-to-raw
+
+## TODO: is this too dangerous?
+.PHONY: cleanup
+cleanup:
+	find . -maxdepth 1 -mindepth 1 -type d |\
+	xargs rm -fr
 
 .unpacked: articles.tar.gz
 	tar -xzf articles.tar.gz \
@@ -32,6 +45,36 @@ ${CORPUSRAW}: .unpacked
 	touch $@
 
 
+
+
+## make sure that the raw files are produced before the tokenized ones
+${CORPUSXML}/%.xml.gz: %.txt
+	@mkdir -p ${dir $@}
+	@echo '<?xml version="1.0" encoding="utf-8"?>' > ${@:.gz=}
+	@echo '<text>' >> ${@:.gz=}
+	@cat -n $< | \
+	sed 's/\&/\&amp;/g;s/>/\&gt;/g;s/</\&lt;/g;' |\
+	./white-space-tokenizer.pl >> ${@:.gz=}
+	@echo '</text>' >> ${@:.gz=}
+	${GZIP} -f ${@:.gz=}
+
+#	sed 's/^ *\([0-9][0-9]*\)\s*/<s id="\1">/;s#\s*$$#</s>#' >> ${@:.gz=}
+
+
+${CORPUSRAW}/%.xml.gz: %.txt
+	@mkdir -p ${dir $@}
+	@echo '<?xml version="1.0" encoding="utf-8"?>' > ${@:.gz=}
+	@echo '<text>' >> ${@:.gz=}
+	@cat -n $< | \
+	./detokenizer.perl -l $(subst /,,${dir $<}) -q |\
+	sed 's/\&/\&amp;/g;s/>/\&gt;/g;s/</\&lt;/g;' |\
+	sed 's/^ *\([0-9][0-9]*\)\s*/<s id="\1">/;s#\s*$$#</s>#' >> ${@:.gz=}
+	@echo '</text>' >> ${@:.gz=}
+	${GZIP} -f ${@:.gz=}
+
+
+
+.PHONY: merge-subdirs
 merge-subdirs:
 	for d in `find . -maxdepth 1 -mindepth 1 -type d -name '*-*' -printf "%f\n" | cut -f1 -d- | sort -u`; do \
 	  echo "processing '$$d'"; \
@@ -45,12 +88,13 @@ merge-subdirs:
 	  fi \
 	done 
 
-normalise-langcodes:
+.PHONY: normalise-and-merge-langcodes
+normalise-and-merge-langcodes:
 	for d in `ls .`; do \
 	  if [ -d $$d ]; then \
 	    i=`iso639 -2 -k $$d`; \
 	    if [ ! "$$i" = "xx" ]; then \
-	      s=`echo $$d | cut -f2 -d- | sed s/cyrl/Cyrl/`; \
+	      s=`echo $$d | cut -f2- -d- | sed s/cyrl/Cyrl/`; \
 	      if [ ! "$$s" = "$$d" ]; then \
 	        n="$${i}_$$s"; \
 	      else \
@@ -67,41 +111,14 @@ normalise-langcodes:
 	done
 
 
-## TODO: is this too dangerous?
-.PHONY: cleanup
-cleanup:
-	find . -maxdepth 1 -mindepth 1 -type d |\
-	xargs rm -fr
-#	rm -fr ?? ??? home
-
-
-.PHONY: xmlfiles
-xmlfiles: ${XMLFILES}
-
-## make sure that the raw files are produced before the tokenized ones
-${XMLFILES}: ${CORPUSXML}/%.xml.gz: %.txt ${CORPUSRAW}/%.xml.gz
-	@mkdir -p ${dir $@}
-	@echo '<?xml version="1.0" encoding="utf-8"?>' > ${@:.gz=}
-	@echo '<text>' >> ${@:.gz=}
-	@cat -n $< | \
-	sed 's/\&/\&amp;/g;s/>/\&gt;/g;s/</\&lt;/g;' |\
-	./white-space-tokenizer.pl >> ${@:.gz=}
-	@echo '</text>' >> ${@:.gz=}
-	gzip -f ${@:.gz=}
-
-#	sed 's/^ *\([0-9][0-9]*\)\s*/<s id="\1">/;s#\s*$$#</s>#' >> ${@:.gz=}
-
-
-.PHONY: rawfiles
-rawfiles: ${RAWFILES}
-
-${RAWFILES}: ${CORPUSRAW}/%.xml.gz: %.txt
-	@mkdir -p ${dir $@}
-	@echo '<?xml version="1.0" encoding="utf-8"?>' > ${@:.gz=}
-	@echo '<text>' >> ${@:.gz=}
-	@cat -n $< | \
-	./detokenizer.perl -l ${dir $<} -q |\
-	sed 's/\&/\&amp;/g;s/>/\&gt;/g;s/</\&lt;/g;' |\
-	sed 's/^ *\([0-9][0-9]*\)\s*/<s id="\1">/;s#\s*$$#</s>#' >> ${@:.gz=}
-	@echo '</text>' >> ${@:.gz=}
-	gzip -f ${@:.gz=}
+.PHONY: normalise-langcodes
+normalise-langcodes:
+	for d in `ls .`; do \
+	  if [ -d $$d ]; then \
+	    n=`echo $$d | tr '-' '_' | sed s/cyrl/Cyrl/`; \
+	    if [ ! "$$n" = "$$d" ]; then \
+	      echo "move $$d to $$n"; \
+	      mv $$d $$n; \
+	    fi \
+	  fi \
+	done

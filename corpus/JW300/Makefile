@@ -22,23 +22,21 @@ include ../Makefile.def
 
 all:
 	${MAKE} -C src all
-	${MAKE} preprocess
-	${MAKE} annotate
 	${MAKE} align
-	${MAKE} udparse
 	${MAKE} publish
+#	${MAKE} udparse
 
 
-all-with-wordalign:
-	${MAKE} -C src all
-	${MAKE} corpus
-	${MAKE} publish
+convert-job:
+	${MAKE} -C src HPC_DISK=500 all-runlocal.submit
 
+align-jobs:
+	${MAKE} xml/Makefile
+	${MAKE} -C xml EMAIL= HPC_CORES=8 sentalign-source-jobs
 
-continue:
-	${MAKE} align
-	${MAKE} udparse
-	${MAKE} publish
+publish-job:
+	${MAKE} -C xml cleanup
+	${MAKE} HPC_CORES=16 HPC_MEM=16g publish.submit
 
 
 ## standard procedures are specified in the following makefiles
@@ -64,6 +62,6 @@ include ../Makefile.udparse
 ##   Makefile.annotate ..... all annotation in Uplug
 
 
-include ../Makefile.tokenize
+# include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate

@@ -37,6 +37,8 @@ ${TOKENIZED_DIRS}:
 
 
 tokenize_files annotate_files: ${XMLFILES}
+	touch log/${LANGUAGE}.tokenize.done
+
 
 ## TODO: do the splitting only for big files!
 ## --> test file size and some heuristics on when to split ...

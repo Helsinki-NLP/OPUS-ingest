@@ -3,7 +3,7 @@
 # name & version of the corpus
 
 CORPUS  = EuroPat
-RELEASE = 1
+RELEASE = 2
 VERSION = v${RELEASE}
 
 ## current release to work with
@@ -20,3 +20,6 @@ SRCHTML = Parallel corpora of patents from the United States Patent and Trademar
 EXTRAHTML = The data is released under the <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">Creative Commons CC0 license</a> ("no rights reserved"), see <a href="https://europat.net/">https://europat.net/</a> for more details
 CITENOTE = Please, acknowledge the EuroPat project at <a href="https://europat.net/">https://europat.net/</a>. This version is derived from the original release at their website adjusted for redistribution via the OPUS corpus collection. Please, acknowledge OPUS as well for this service.
 
+## sentence alignment is not sorted
+## --> influences recipe for extracting sample files
+UNSORTED_SENTALIGN = 1

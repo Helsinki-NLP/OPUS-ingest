@@ -25,11 +25,11 @@ module load allas
 allas-conf -k
 ```
 
-Give your access passord and select project `project_2000661`.
+Give your access passord and select project `project_2003093`.
 
 ```
 cd OPUS/corpus
-make CORPUS=Tatoeba retrieve-corpus
+make CORPUS=Tatoeba fetch
 ```
 
 This retrieves all data related to that corpus and this make take quite some time. Note that this makes a fresh copy of that corpus directory. The call above moves the old sub-directory to a backup copy in `OPUS/corpus/Tatoeba-<date>` (with date being the current date). 
@@ -63,7 +63,7 @@ Then run the update command in the `OPUS/corpus` directory:
 
 ```
 cd ..
-make CORPUS=Tatoeba update-corpus-storage
+make CORPUS=Tatoeba store
 ```
 
 

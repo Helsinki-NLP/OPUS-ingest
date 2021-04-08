@@ -17,26 +17,21 @@ all:
 	${MAKE} annotate
 	${MAKE} moses
 	${MAKE} copy-tmx-files
-	${MAKE} sample-files
 	${MAKE} publish
 
 
 
-SAMPLEFILES = $(patsubst ${CORPUSRELEASE}/tmx/%.tmx.gz,${CORPUSPUB}/%_sample.html,\
-		$(wildcard ${CORPUSRELEASE}/tmx/*.tmx.gz))
-
-sample-files: $(SAMPLEFILES)
 
 copy-tmx-files:
 	mkdir -p ${CORPUSRELEASE}/tmx
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
 	    if [[ "$$s" < "$$t" ]]; then \
-	      if [ -e "src/$$s-$$t.${FILTER}.tmx.gz" ]; then \
-		rsync src/$$s-$$t.${FILTER}.tmx.gz ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
+	      if [ -e "src/$$s-$$t.tmx.gz" ]; then \
+		rsync src/$$s-$$t.tmx.gz ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
 		touch ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
-	      elif [ -e "src/$$t-$$s.${FILTER}.tmx.gz" ]; then \
-		rsync src/$$t-$$s.${FILTER}.tmx.gz ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
+	      elif [ -e "src/$$t-$$s.tmx.gz" ]; then \
+		rsync src/$$t-$$s.tmx.gz ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
 		touch ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
 	      fi \
 	    fi \
@@ -103,26 +98,10 @@ include ../Makefile.udparse
 ##   Makefile.tag ............. tokenization and PoS tagging (if available)
 ##   Makefile.annotate ........ all annotation in Uplug
 
+include ../Makefile.tokenize-fast
 # include ../Makefile.tokenize-simple
-include ../Makefile.tokenize-moses
+# include ../Makefile.tokenize-moses
 # include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate
 
-
-$(SAMPLEFILES): ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
-	echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"' >$@
-	echo '"http://www.w3.org/TR/REC-html40/loose.dtd">' >> $@
-	echo '<html>' >> $@
-	echo '<head>' >> $@
-	echo '<title>Untitled Document</title>' >> $@
-	echo '<meta http-equiv="Content-Type" content="text/html;charset=utf-8">' >> $@
-	echo '</head>' >> $@
-	echo '<body>' >> $@
-	echo '<p>' >> $@
-	zgrep '</tuv>' $< |\
-	sed 's/^.*<seg>//;s#</seg></tuv>#<br/>#' |\
-	head -100 |\
-	sed ': loop; n; a <hr/>' >> $@
-	echo '</body></html/>' >> $@
-	chmod 644 $@

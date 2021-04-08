@@ -16,17 +16,10 @@ include Makefile.def
 include ../Makefile.def
 
 WIKIDUMPS = https://dumps.wikimedia.org/other/contenttranslation
-DOWNLOADURL = ${WIKIDUMPS}/${patsubst v%,%,${VERSION}}/cx-corpora._2_.text.tmx.gz
-TMXFILE = src/cx-text-${VERSION}.tmx.gz
-
-## all TMX files in the src/ directory
-## we will convert them to Moses and use moses2opus as the second step
-
-TMXFILES   = ${wildcard src/*.tmx}
-TMXGZFILES = ${wildcard src/*.tmx.gz}
-
-TMXDONE    = ${TMXFILES:.tmx=_done}
-TMXGZDONE  = ${TMXGZFILES:.tmx.gz=_done}
+DOWNLOADINDEX = ${WIKIDUMPS}/${patsubst v%,%,${VERSION}}
+RELEASEDTMX = $(sort ${shell wget -q -O - ${DOWNLOADINDEX} | grep -o 'cx-corpora[^"]*.tmx.gz'})
+TMXFILES = ${patsubst %,${PWD}/src/%,${RELEASEDTMX}}
+TMXDONE  = ${TMXFILES:.tmx.gz=_done}
 
 ## make all:
 ## - convert (see below)
@@ -37,15 +30,37 @@ TMXGZDONE  = ${TMXGZFILES:.tmx.gz=_done}
 
 .PHONY: all
 all:
-	${MAKE} download
+	${MAKE} -j 1 download
 	${MAKE} convert
 	${MAKE} xml/Makefile
 	mv -f raw/*-* xml/ 
 	${MAKE} -C xml create-align-files
 	${MAKE} annotate
-	${MAKE} udparse
-	${MAKE} wordalign
 	${MAKE} publish
+
+#	${MAKE} udparse
+#	${MAKE} wordalign
+
+
+
+## submit a job for fetching and processing all data
+all-job:
+	${MAKE} HPC_CORES=1 HPC_TIME=72:00 HPC_DISK=100 convert-job.submit
+
+## download and convert job (single CPU)
+convert-job:
+	${MAKE} -j 1 download
+	${MAKE} convert
+	${MAKE} xml/Makefile
+	mv -f raw/*-* xml/ 
+	${MAKE} -C xml create-align-files
+	${MAKE} HPC_CORES=8 HPC_MEM=16g HPC_TIME=72:00 publish-job.submit
+
+## tokenize and publish (multi-threaded)
+publish-job:
+	${MAKE} annotate
+	${MAKE} publish
+
 
 ## standard procedures are specified in the following makefiles
 ##
@@ -69,32 +84,38 @@ include ../Makefile.udparse
 ##   Makefile.annotate ..... all annotation in Uplug
 
 
-include ../Makefile.tokenize
+include ../Makefile.tokenize-fast
+# include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate
 
 
 ## change this if tmx2opus is not in your PATH
-TMX2OPUS = tmx2opus
+TMX2OPUS = ${PWD}/scripts/tmx2opus
+
+ifdef LOCAL_SCRATCH
+  TMPDIR       = ${LOCAL_SCRATCH}
+endif
+
 
 .PHONY: convert
-convert: ${TMXDONE} ${TMXGZDONE}
-	find raw -name '*.xml' | xargs gzip -f 
+convert: ${TMXFILES}
+	mkdir -p ${CORPUSRAW}
+	( cd ${CORPUSRAW} && \
+	  find ${PWD} -name '*.tmx.gz' |\
+	  xargs zcat |\
+	  perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' |\
+	  ${TMX2OPUS} -a -e -I -u -d -t ${TMPDIR} -o wikimedia-${VERSION}.xml.gz; )
 
-${TMXDONE}: %_done: %.tmx
-	mkdir -p raw
-	cd raw && ${TMX2OPUS} -o cx-corpora.xml ../$<
-	touch $@
-
-${TMXGZDONE}: %_done: %.tmx.gz
-	mkdir -p raw
-	cd raw && gzip -cd ../$< | ${TMX2OPUS} -o cx-corpora.xml
-	touch $@
+## OLD: without alignment and keeping empty strings:
+#
+#	  ${TMX2OPUS} -I -u -d -t ${TMPDIR} -o wikimedia-${VERSION}.xml.gz; )
 
 .PHONY: download
-download: ${TMXFILE}
-${TMXFILE}:
+download: ${TMXFILES}
+${TMXFILES}:
 	mkdir -p ${dir $@}
-	wget -O $@ ${DOWNLOADURL}
-	gzip -cd $@ | tidy -xml -utf8 | gzip -c > $@.tmp.gz
-	mv -f $@.tmp.gz $@
+	wget -q -O $@ ${DOWNLOADINDEX}/${notdir $@}
+
+#	wget -q -O - ${DOWNLOADINDEX}/${notdir $@} |\
+#	gzip -cd | tidy -xml -utf8 | gzip -c > $@

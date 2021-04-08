@@ -139,6 +139,12 @@ ALGEXT = xml.gz
 # general tools that we will use for pre-processing & alignment
 #---------------------------------------------------------------
 
+GZIP     := ${shell which pigz 2>/dev/null || echo gzip}
+GZCAT    := ${GZIP} -cd
+ZCAT     := gzip -cd
+UNIQ     := ${SORT} -u
+
+
 TOOLS       = ${OPUSHOME}/tools
 OPUSTOOLS   = ${TOOLS}
 CORPUSTOOLS = ${OPUSTOOLS}/${CORPUS}

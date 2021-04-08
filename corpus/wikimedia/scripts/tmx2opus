@@ -1,0 +1,639 @@
+#!/usr/bin/env perl
+#-*-perl-*-
+#
+#  attempt to combine -u and -p
+#  --> implementation not complete
+#  --> problem: sentences in TU's are found in different partitions
+
+
+=head1 NAME
+
+tmx2opus - convert TMX into OPUS XML
+
+=head1 USAGE
+
+  tmx2opus [OPTIONS] [-o outfile] tmxfile
+
+=head1 OPTIONS
+
+  -o outfile ........ name of the output file (default = tmxfile)
+  -p size ........... new files after <size> translation units
+  -I ................ skip identical aligned sentences
+  -P ................ do NOT change some property names from ParaCrawl TMX
+  -r ................ always remove regional codes
+  -u ................ store unique sentences only
+  -d ................ use DB_File to store sentences when using -u
+  -a ................ sentence align translation units (split if necessary)
+  -e ................ skip translation units that are empty on one side
+  -v ................ verbose output
+
+=head1 DESCRIPTION
+
+C<tmx2opus> converts TMX files into OPUS format. It handles translation units with several languages and it also does sentence-splitting based on Lingua::Sentence. Regional codes can be removed from the language attribute. If the C<outfile> has the extension C<.gz> then it will write to compressed files (corpus files and XCES link files)
+
+=cut
+
+
+use utf8;
+use strict;
+
+use IO::File;
+use File::Basename qw/dirname basename/;
+use XML::Parser;
+use XML::Writer;
+use Lingua::Sentence;
+
+use File::Temp qw/ tempfile /;
+use DB_File;
+# use DBM_Filter;
+
+use vars qw($opt_a $opt_d $opt_e $opt_o $opt_p $opt_P $opt_r $opt_t $opt_u $opt_v $opt_I);
+use Getopt::Std;
+getopts('adeo:p:Prt:uvI');
+
+
+$DB_BTREE->{'cachesize'} = 1000000 ;
+
+
+my $outfile = $opt_o || @ARGV[0] || 'text.xml.gz';
+
+if ($opt_u && $opt_p){
+    warn "Options -u and -p are not compatible! Value of -p is ignored!\n";
+    $opt_p = undef;
+}
+
+my $maxsize = $opt_p;          # split into parts of size <p>
+my $part    = $maxsize ? 1 : 0;
+
+## partial files
+if ($part){
+    my $ext  = sprintf('%04d',$part);
+    $outfile =~s/(\.xml)(\.gz)?$/.$ext$1$2/
+}
+
+
+my %LangSeg = ();
+my %LangDB  = ();
+my %LangDBH = ();
+my $CurrentLang = 'en';
+
+my %SentID = ();
+my %LinkID = ();
+my %LinkProp = ();
+
+my %CorpusWriter = ();
+my %BitextWriter = ();
+my %TextSplitter = ();
+
+
+my $TMXParser = new XML::Parser(Handlers => {Start => \&XmlTagStart,
+					     End => \&XmlTagEnd,
+					     Char => \&XmlChar});
+my $TMXHandler = $TMXParser->parse_start;
+
+
+my $count = 0;
+binmode(STDIN);
+binmode(STDERR,":utf8");
+
+while (<>){
+
+    ## fix un-escaped XML entities
+    s/&(?!(#\d+|\w+);)/&amp;/g;
+
+    ## make it possible to pipe more than one TMX file
+    ## delete everything before the XML declaration
+    if (/<\?xml/){
+	s/^.*(<\?xml)/$1/s;
+	print STDERR "\nparse TMX file\n" if ($opt_v);
+	$TMXParser = new XML::Parser(Handlers => {Start => \&XmlTagStart,
+						  End => \&XmlTagEnd,
+						  Char => \&XmlChar});
+	$TMXHandler = $TMXParser->parse_start;
+    }
+
+    eval { $TMXHandler->parse_more($_); };
+    if ($@){
+	print STDERR $_;
+	die $@;
+    }
+}
+
+&close_corpora();
+&close_bitexts();
+
+
+
+sub close_corpora{
+    foreach my $c (values %CorpusWriter){
+	close_corpus($c);
+    }
+    %CorpusWriter = ();
+}
+
+sub close_bitexts{
+    foreach my $c (values %BitextWriter){
+	close_bitext($c);
+    }
+    %BitextWriter = ();
+}
+
+
+
+
+
+
+sub XmlTagStart{
+    my ($p,$e,%a)=@_;
+
+    if ($e eq 'tuv'){
+	$CurrentLang = $a{'xml:lang'} if (exists $a{'xml:lang'});
+	$CurrentLang = $a{'lang'} if (exists $a{'lang'});
+
+	## replace hyphens with underscores
+	## lowercase the language IDs
+	## remove regional identifier if it is a copy of the lang ID
+	$CurrentLang=~s/\-/\_/g;
+	$CurrentLang=lc($CurrentLang);   # lower-case
+	$CurrentLang=~s/^(.*)\_\1$/$1/g; # remove copies of lang ID
+	# $CurrentLang=~s/\_[^a-z]$//g;    # remove non-alphabetic extension
+
+	## always remove regional extension if -r
+	$CurrentLang=~s/^(.*)\_.*$/$1/g if ($opt_r);
+
+	$LangSeg{$CurrentLang} = [];
+    }
+    elsif ($e eq 'seg'){
+	$p->{OPEN_SEG} = 1;
+	push(@{$LangSeg{$CurrentLang}},'');
+    }
+    elsif ($e eq 'prop'){
+	## skip source document properties from ParaCrawl!
+	if ($opt_P && $a{type}=~/^[a-zA-Z\-\_]*$/){
+	    $p->{OPEN_PROP} = $a{type};
+	}
+	# elsif ($a{type}=~/^(score[a-zA-Z\-\_]*|type|info)$/){
+	elsif ($a{type}=~/^(score[a-zA-Z\-\_]*|info)$/){
+	    $p->{OPEN_PROP} = $a{type};
+	}
+    }
+}
+
+sub XmlTagEnd{
+    my ($p,$e)=@_;
+
+    if ($e eq 'tu'){
+	## print the translations collected in segments
+	print_alignments(\%LangSeg);
+	%LangSeg = ();
+	%LinkProp = ();
+    }
+    elsif ($e eq 'seg'){
+	$p->{OPEN_SEG} = 0;
+    }
+    elsif ($e eq 'prop'){
+	if ($p->{OPEN_PROP}){
+	    if (exists $LinkProp{$p->{OPEN_PROP}}){
+		if ($LinkProp{$p->{OPEN_PROP}}!~/\S/){
+		    delete $LinkProp{$p->{OPEN_PROP}};
+		}
+		## fix type to standard in xces align
+		elsif ( (! $opt_P) && $p->{OPEN_PROP} eq 'type' ){
+		    $LinkProp{$p->{OPEN_PROP}}=~s/\:/\-/;
+		}
+	    }
+	    $p->{OPEN_PROP} = undef;
+	}
+    }
+}
+
+sub XmlChar{
+    my ($p,$c)=@_;
+    if ($p->{OPEN_SEG}){
+	$LangSeg{$CurrentLang}[-1] .= $c;
+    }
+    elsif ($p->{OPEN_PROP}){
+	$LinkProp{$p->{OPEN_PROP}} .= ';' 
+	    if ($LinkProp{$p->{OPEN_PROP}});
+	$LinkProp{$p->{OPEN_PROP}} .= $c;
+    }
+}
+
+
+sub print_alignments{
+    my $seg = shift;
+
+    return unless (ref($seg) eq 'HASH');
+    my @langs = sort keys %{$seg};
+    return unless ($#langs);
+
+    ## skip translation units made of identical strings
+    ## --> they are not translated!
+    if ($opt_I){
+	my %str = ();
+	foreach my $l (@langs){
+	    my $s = join("\n",@{$$seg{$l}});
+
+	    ## skip TUs with empty strings
+	    if ($opt_e){
+		return unless ($s=~/\S/);
+	    }
+	    if (exists $str{$s}){
+		print STDERR "skip $l: identical $s\n" if ($opt_v);
+		delete $$seg{$l};
+	    }
+	    $str{$s}++;
+	}
+	@langs = sort keys %{$seg};
+	return unless ($#langs);
+    }
+
+    ## in case we want to split the data
+    ## close and reopen data files
+    if ($maxsize && $count>=$maxsize){
+	$count = 0;
+	$part++;
+	my $ext  = sprintf('%04d',$part);
+	$outfile =~s/\.[0-9]{4}(\.xml)(\.gz)?$/.$ext$1$2/
+	&close_corpora();
+	&close_bitexts();
+	%SentID = ();
+    }
+
+    my %IDs = {};
+    my %lengths = {};
+    foreach my $s (0..$#langs){
+	if ($opt_a){
+	    @{$lengths{$langs[$s]}} = ();
+	    @{$IDs{$langs[$s]}} = print_sentences($seg,$langs[$s],$lengths{$langs[$s]});
+	}
+	else{
+	    @{$IDs{$langs[$s]}} = print_sentences($seg,$langs[$s]);
+	}
+    }
+
+    foreach my $s (0..$#langs-1){
+	foreach my $t ($s+1..$#langs){
+
+	    ## sentence-align the text in the TU
+	    if ($opt_a){
+		my @links = sentence_align($lengths{$langs[$s]},$lengths{$langs[$t]},
+					   $IDs{$langs[$s]},$IDs{$langs[$t]});
+		foreach my $l (@links){
+		    next unless (ref($$l{src}) eq 'ARRAY');
+		    next unless (ref($$l{trg}) eq 'ARRAY');
+		    print_links($$l{src},$$l{trg},$langs[$s],$langs[$t]);
+		}
+	    }
+	    else{
+		print_links($IDs{$langs[$s]},$IDs{$langs[$t]},$langs[$s],$langs[$t]);
+	    }
+	}
+    }
+
+    $count++;
+    print STDERR '.' if (! ($count % 1000));
+    print STDERR " $count\n" if (! ($count % 50000));
+
+
+}
+
+sub print_links{
+    my ($SrcIDs,$TrgIDs,$SrcLang,$TrgLang) = @_;
+
+    my $LangPair = "$SrcLang-$TrgLang";
+    $BitextWriter{$LangPair} = open_bitext($outfile,$SrcLang,$TrgLang) 
+	unless ($BitextWriter{$LangPair});
+    $LinkID{$LangPair}++;
+    my $link = join(' ',@{$SrcIDs}).';'.join(' ',@{$TrgIDs});
+
+    ## make some minor adjustments to link properties coming from ParaCrawl data
+    unless ($opt_P){
+	if (exists $LinkProp{'score-aligner'}){
+	    $LinkProp{'hunalign'} = $LinkProp{'score-aligner'};
+	    delete $LinkProp{'score-aligner'};
+	}
+	if (exists $LinkProp{'score-bicleaner'}){
+	    $LinkProp{'score'} = $LinkProp{'score-bicleaner'};
+	    delete $LinkProp{'score-bicleaner'};
+	}
+	delete $LinkProp{'lengthRatio'};
+    }
+
+    $BitextWriter{$LangPair}->emptyTag('link',
+				       'id' => 'L'.$LinkID{$LangPair},
+				       'xtargets' => $link, 
+				       %LinkProp );
+}
+
+sub print_sentences{
+    my ($segments, $lang, $lengths) = @_;
+    $CorpusWriter{$lang} = open_corpus($outfile,$lang) 
+	unless ($CorpusWriter{$lang});
+
+    if (ref($lengths) eq 'ARRAY'){
+	@{$lengths} = (0);
+    }
+
+    my @ids = ();
+    my @sentences = get_sentences($segments->{$lang},$lang);
+    my $key;
+    
+    $CorpusWriter{$lang}->startTag('p') if ( $#sentences && (!$opt_u) );
+    foreach my $sent (@sentences){
+	my $sid = undef;
+	if ($opt_u){
+	    $key = $sent;
+	    utf8::encode($key) if ($opt_d);  # to make DB_FILE happy
+	    $sid = &find_sentence($key,$lang);
+	}
+	# if ($opt_v && $sid){
+	#     print STDERR "repeated sentence found (id = $sid)\n";
+	# }
+	unless ($sid){
+	    $SentID{$lang}++;
+	    $sid=$SentID{$lang};
+
+	    $CorpusWriter{$lang}->startTag('s', 'id' => $sid);
+	    $CorpusWriter{$lang}->characters($sent);
+	    $CorpusWriter{$lang}->endTag('s');
+
+	    $LangDB{$lang}{$key} = $sid if ($opt_u);
+	}
+	push(@ids,$sid);
+	if (ref($lengths) eq 'ARRAY'){
+	    push(@{$lengths},$$lengths[-1] + length($sent));
+	}
+    }
+    $CorpusWriter{$lang}->endTag('p') if ($#sentences && (!$opt_u));
+    return @ids;
+}
+
+
+sub get_tempfile{
+    my $dir = shift;
+    if ($dir && -d $dir){
+	my ($fh, $filename) = tempfile(DIR => $opt_t );
+	close $fh;
+	return $filename;
+    }
+    my ($fh, $filename) = tempfile();
+    close $fh;
+    return $filename;	
+}
+
+
+## check whether the sentence is stored in our cache
+sub find_sentence{
+    my ($sent,$lang) = @_;
+
+    unless (exists $LangDB{$lang}){
+	%{$LangDB{$lang}} = ();
+	## create a new DB file if necessary
+	if ($opt_d){
+	    my $filename = get_tempfile($opt_t);
+	    $LangDBH{$lang} = tie %{$LangDB{$lang}}, "DB_File", $filename, O_CREAT|O_RDWR, 0666, $DB_BTREE ;
+	    ## this does not seem to work
+	    ## from https://www.perl.com/pub/2012/06/perlunicook-unicode-text-in-dbm-files-the-easy-way.html/
+	    # my $dbobj = tie %{$LangDB{$lang}}, "DB_File", $filename ;
+	    # $dbobj->Filter_Value_Push("utf8");
+	    print STDERR "Sentence in language $lang stored in $filename\n"; # if ($opt_v);
+	}
+    }
+    if (exists $LangDB{$lang}{$sent}){
+	return $LangDB{$lang}{$sent};
+    }
+    return undef;
+}
+
+sub get_sentences{
+    my $segments = shift;
+    my $lang = shift;
+
+    my @sentences = ();
+    foreach my $seg (@{$segments}){
+	if ($seg=~/\S/){
+	    $seg =~s/\n/ /gs;
+	    $seg =~s/\s{2,}/ /g;
+	    push(@sentences,$TextSplitter{$lang}->split_array($seg));
+	}
+    }
+    return @sentences;
+}
+
+
+
+sub open_file{
+    my $file = shift;
+
+    ## make sub dir if necessary
+    my $dir = dirname($file);
+    system("mkdir -p ".$dir) unless (-d $dir);
+
+    ## open pipe to gzip if necessary
+    return $file=~/\.gz$/ ?
+	IO::File->new("| gzip -c > $file") :
+	IO::File->new(">$file");
+}
+
+sub open_corpus{
+    my $file = shift;
+    my $lang = shift;
+
+    my $fh = open_file($lang.'/'.$file);
+    binmode($fh,":encoding(utf-8)");
+    my $XmlWriter = XML::Writer->new( OUTPUT => $fh,
+				      DATA_MODE => 1,
+				      DATA_INDENT => 1 );
+    $XmlWriter->xmlDecl("UTF-8");
+    $XmlWriter->startTag("text");
+
+    ## Lingua::Sentences requires 2-letter language codes
+    my $isolang = $lang;
+    $isolang =~s/[-_].+$//;
+    $isolang = 'en' unless ($isolang =~ /^[a-z][a-z]$/i);
+
+    $TextSplitter{$lang} = Lingua::Sentence->new($isolang) unless $TextSplitter{$lang};
+
+    return $XmlWriter;
+}
+
+sub open_bitext{
+    my $file = shift;
+    my $srclang = shift;
+    my $trglang = shift;
+
+    my $fh = open_file($srclang.'-'.$trglang.'/'.$file);
+    my $XmlWriter = XML::Writer->new( OUTPUT => $fh,
+				      DATA_MODE => 1,
+				      DATA_INDENT => 1 );
+    $XmlWriter->xmlDecl("UTF-8");
+    $XmlWriter->doctype('cesAlign', "-//CES//DTD XML cesAlign//EN", "");
+    $XmlWriter->startTag('cesAlign','version' => '1.0');
+    $XmlWriter->startTag('linkGrp',
+			 'targType' => 's',
+			 'fromDoc'  => $srclang.'/'.$file,
+			 'toDoc'    => $trglang.'/'.$file);
+    return $XmlWriter;
+}
+
+
+sub close_corpus{
+    my $XmlWriter = shift;
+    $XmlWriter->endTag('text');
+}
+
+sub close_bitext{
+    my $XmlWriter = shift;
+    $XmlWriter->endTag('linkGrp');
+    $XmlWriter->endTag('cesAlign');
+}
+
+
+
+
+
+
+
+
+sub prepare_align{
+    my @src_length=();
+    my @trg_length=();
+
+    my @src_ids=();
+    my @trg_ids=();
+
+}
+
+
+
+
+
+
+
+# this is a vanilla implementation of church and gale
+sub sentence_align {
+  my ($LEN1,$LEN2,$IDS1,$IDS2) = @_;
+
+  if (not @{$LEN1}){
+      my @LINKS=();
+      $LINKS[0]{src} = [];
+      foreach (0..$#{$LEN2}-1){
+#	  push(@{$LINKS[0]{trg}},$$IDS2{$$LEN2[$_]});
+	  push(@{$LINKS[0]{trg}},$$IDS2[$_]);
+      }
+      return @LINKS;
+  }
+  if (not @{$LEN2}){
+      my @LINKS=();
+      $LINKS[0]{trg} = [];
+      foreach (0..$#{$LEN1}-1){
+#	  push(@{$LINKS[0]{src}},$$IDS1{$$LEN1[$_]});
+	  push(@{$LINKS[0]{src}},$$IDS1[$_]);
+      }
+      return @LINKS;
+  }
+
+  # parameters
+  my %PRIOR;
+ $PRIOR{1}{1} = 0.89;
+ $PRIOR{1}{0} = 0.01/2;
+ $PRIOR{0}{1} = 0.01/2;
+ $PRIOR{2}{1} = 0.089/2;
+ $PRIOR{1}{2} = 0.089/2;
+ $PRIOR{2}{2} = 0.011;
+ $PRIOR{3}{1} = 0.011/2;
+ $PRIOR{1}{3} = 0.011/2;
+
+  # dynamic programming
+  my (@COST,@BACK);
+  $COST[0][0] = 0;
+  for(my $i1=0;$i1<=$#{$LEN1};$i1++) {
+    for(my $i2=0;$i2<=$#{$LEN2};$i2++) {
+      next if $i1 + $i2 == 0;
+      $COST[$i1][$i2] = 1e10;
+      foreach my $d1 (keys %PRIOR) {
+	next if $d1>$i1;
+	foreach my $d2 (keys %{$PRIOR{$d1}}) {
+	  next if $d2>$i2;
+	  my $cost = $COST[$i1-$d1][$i2-$d2] - log($PRIOR{$d1}{$d2}) +  
+	    &match($$LEN1[$i1]-$$LEN1[$i1-$d1], $$LEN2[$i2]-$$LEN2[$i2-$d2]);
+#	  print "($i1->".($i1-$d1).",$i2->".($i2-$d2).") [".($LEN1[$i1]-$LEN1[$i1-$d1]).",".($LEN2[$i2]-$LEN2[$i2-$d2])."] = $COST[$i1-$d1][$i2-$d2] - ".log($PRIOR{$d1}{$d2})." + ".&match($LEN1[$i1]-$LEN1[$i1-$d1], $LEN2[$i2]-$LEN2[$i2-$d2])." = $cost\n";
+	  if ($cost < $COST[$i1][$i2]) {
+	    $COST[$i1][$i2] = $cost;
+	    @{$BACK[$i1][$i2]} = ($i1-$d1,$i2-$d2);
+	  }
+	}
+      }
+#      print $COST[$i1][$i2]."($i1-$BACK[$i1][$i2][0],$i2-$BACK[$i1][$i2][1]) ";
+    }
+#    print "\n";
+  }
+
+
+  # back tracking
+  my %NEXT=();
+  my @LINKS=();
+
+  my $i1 = $#{$LEN1};
+  my $i2 = $#{$LEN2};
+
+  while($i1>0 || $i2>0) {
+#    print "back $i1 $i2\n";
+      @{$NEXT{$BACK[$i1][$i2][0]}{$BACK[$i1][$i2][1]}} = ($i1,$i2);
+      ($i1,$i2) = ($BACK[$i1][$i2][0],$BACK[$i1][$i2][1]);
+  }
+  while($i1<$#{$LEN1} || $i2<$#{$LEN2}) {
+      push(@LINKS,{});
+#     print "fwd $i1 $i2\n";
+#      print '<link id="SL'.$LINK_ID.'" xtargets="';
+      for(my $i=$i1;$i<$NEXT{$i1}{$i2}[0];$i++) {
+#	  my $sid = $$IDS1{$$LEN1[$i]};
+	  my $sid = $$IDS1[$i];
+	  push(@{$LINKS[-1]{src}},$sid);
+#	  print " " unless $i == $i1;
+#	  print $$IDS1[$i];
+      }
+#      print ";";
+      for(my $i=$i2;$i<$NEXT{$i1}{$i2}[1];$i++) {
+#	  my $sid = $$IDS2{$$LEN2[$i]};
+	  my $sid = $$IDS2[$i];
+	  push(@{$LINKS[-1]{trg}},$sid);
+#	  push(@{$LINKS[-1]{trg}},$$LEN2[$i]);
+#	  print " " unless $i == $i2;
+#	  print $$IDS2[$i];
+      }
+#      print "\" />\n";
+      ($i1,$i2) = @{$NEXT{$i1}{$i2}};
+  }  
+
+  return @LINKS;
+}
+
+
+
+sub match {
+  my ($len1,$len2) = @_;
+  my $c = 1;
+  my $s2 = 6.8;
+
+  if ($len1==0 && $len2==0) { return 0; }
+  my $mean = ($len1 + $len2/$c) / 2;
+  my $z = ($c * $len1 - $len2)/sqrt($s2 * $mean);
+  if ($z < 0) { $z = -$z; }
+  my $pd = 2 * (1 - &pnorm($z));
+  if ($pd>0) { return -log($pd); }
+  return 25;
+}
+
+sub pnorm {
+  my ($z) = @_;
+  my $t = 1/(1 + 0.2316419 * $z);
+  return 1 - 0.3989423 * exp(-$z * $z / 2) *
+    ((((1.330274429 * $t 
+	- 1.821255978) * $t 
+       + 1.781477937) * $t 
+      - 0.356563782) * $t
+     + 0.319381530) * $t;
+}
+

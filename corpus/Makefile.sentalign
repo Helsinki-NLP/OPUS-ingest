@@ -30,7 +30,7 @@ sentalign-jobs:
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
 	    if [[ "$$s" < "$$t" ]]; then \
-		${MAKE} SRC=$$s TRG=$$t sentalign.submit; \
+		${MAKE} SRC=$$s TRG=$$t HPC_DISK=500 sentalign.submit; \
 		mv sentalign.submit ${CORPUSHOME}/log/sentalign-$$s$$t.submit; \
 	    fi \
 	  done \
@@ -58,7 +58,7 @@ sentalign-source-jobs:
 	mkdir -p ${CORPUSHOME}/log
 	${MAKE} ${TMPLANGTAR}
 	for s in ${LANGUAGES}; do \
-	  ${MAKE} SRC=$$s sentalign-source.submit; \
+	  ${MAKE} SRC=$$s HPC_DISK=500 sentalign-source.submit; \
 	  mv sentalign-source.submit ${CORPUSHOME}/log/sentalign-source-$$s.submit; \
 	done
 
@@ -67,7 +67,7 @@ new-sentalign-source-jobs:
 	${MAKE} ${TMPLANGTAR}
 	for s in ${LANGUAGES}; do \
 	  if [ ! -e ${CORPUSHOME}/log/sentalign-source-$$s.submit ]; then \
-	    ${MAKE} SRC=$$s sentalign-source.submit; \
+	    ${MAKE} SRC=$$s HPC_DISK=500 sentalign-source.submit; \
 	    mv sentalign-source.submit ${CORPUSHOME}/log/sentalign-source-$$s.submit; \
 	  fi \
 	done
@@ -87,6 +87,10 @@ sentalign-all align-all all-align:
 
 sentalign-print:
 	echo ${SENTALIGNFILES}
+
+srcsentalign-print:
+	echo ${SRCSENTALIGNFILES}
+
 
 .PHONY: sentalign-clean clean-align
 sentalign-clean clean-align:
@@ -150,17 +154,26 @@ cleanup:
 %.tar: %
 	tar -chf $@ $<
 
+
+## create tar-balls of xml files
+## unpack them in a local temp dir
+## align files there
+## merge alignments and move back
+## TODO: is it a problem to make it a dependency?
+
 .SECONDEXPANSION:
-${SENTALIGNFILES}: %.xml.gz: $$(firstword $$(subst -, ,$(notdir %))).tar $$(lastword $$(subst -, ,$(notdir %))).tar
+${SENTALIGNFILES}: %.xml.gz: 	$$(firstword $$(subst -, ,$(notdir %))).tar \
+				$$(lastword $$(subst -, ,$(notdir %))).tar
 	@echo "copy things to local tmpdir ${LOCALTMP}/$@"
 	mkdir -p ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/xml
-	rsync -za Makefile* ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/xml/
+	rsync -a Makefile* ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/xml/
 	tar -C ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/xml -xf $(firstword $^)
 	tar -C ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/xml -xf $(lastword $^)
 	-ln -s ${OPUSHOME}/*    ${LOCALTMP}/$@/OPUS/
 	-ln -s ${OPUSCORPORA}/* ${LOCALTMP}/$@/OPUS/corpus/
 	-ln -s ${CORPUSHOME}/*  ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/
-	@echo "align $@ in tmpdir"
+	-ln -s ${CORPUSHOME}/xml/*  ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/xml/
+	@echo "align $@ in tmpdir ..."
 	${MAKE} -C ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/xml \
 		OPUSHOME=${LOCALTMP}/$@/OPUS \
 		SRC=${patsubst %.tar,%,$(firstword $^)} \
@@ -191,8 +204,6 @@ ${SENTALIGNFILES}: %.xml.gz: $$(firstword $$(subst -, ,$(notdir %))).tar $$(last
 	rm -f $@.links
 	rm -fr $(@:.xml.gz=)
 	rm -fr ${LOCALTMP}/$@/OPUS
-	-rmdir ${LOCALTMP}/$@
-	-rmdir ${LOCALTMP}
 
 
 # individual sentence alignment files (for each document pair)

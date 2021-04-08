@@ -49,6 +49,7 @@ ${TOKENIZATION_DONE}:
 
 .PHONY: tokenize_files annotate_files
 tokenize_files annotate_files: ${XMLFILES}
+	touch log/.${LANGUAGE}.tokenize.done
 
 ## treat big files differently from small files
 ## --> split them to run things in parallel and then merge again

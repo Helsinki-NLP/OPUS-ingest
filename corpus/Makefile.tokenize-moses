@@ -36,6 +36,7 @@ ${TOKENIZE_DONE}:
 
 
 tokenize_files annotate_files: ${XMLFILES}
+	touch log/.${LANGUAGE}.tokenize.done
 
 xml/${LANGUAGE}/%: raw/${LANGUAGE}/%
 	mkdir -p $(shell dirname $@)

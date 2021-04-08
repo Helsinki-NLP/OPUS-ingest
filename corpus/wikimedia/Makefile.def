@@ -7,9 +7,9 @@
 CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
 
 ## current version
-VERSION = v20190628
+VERSION = v20210402
 
-LICENSE = CC-BY-SA 4.0
+LICENSE = <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC–BY-SA 4.0</a></p>
 COPYRIGHT = 
 
 # with SRCHTML you can define some extra HTML code that will be placed just
@@ -17,8 +17,14 @@ COPYRIGHT =
 # EXTRAHTML is code which will be put just after the 'Download' header
 # CITENOTE if you want to change the default reference to be cited
 
-SRCHTML=Wikipedia translations published by the wikimedia foundation and their article translation system. The parallel data sets are published at <a href="https://dumps.wikimedia.org/other/contenttranslation">https://dumps.wikimedia.org/other/contenttranslation</a>
-EXTRAHTML=<p>License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC–BY-SA 4.0</a></p>
+SRCHTML=<p>Wikipedia translations published by the wikimedia foundation and their article translation system. The parallel data sets are published at <a href="https://dumps.wikimedia.org/other/contenttranslation">https://dumps.wikimedia.org/other/contenttranslation</a></p>\
+<p>NEW: additional sentence alignment to avoid long segments in translation units</p>
+# EXTRAHTML=<p>License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC–BY-SA 4.0</a></p>
 # CITENOTE=
 
 LANGUAGES = $(sort $(notdir ${wildcard ${CORPUSRAW}/[a-z_]*}))
+
+
+## sentence alignment is not sorted
+## --> influences recipe for extracting sample files
+UNSORTED_SENTALIGN = 1
