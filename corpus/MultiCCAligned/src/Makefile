@@ -23,6 +23,8 @@ ALIGNED_WITH_LANG = ${patsubst %.tsv.xz,%.tsv.gz,${ALIGNED_SENTS}}
 # TSV2OPUS  = tsv2opus
 TSV2OPUS  = ../scripts/tsv2opus-btree
 # TSV2OPUS = ../scripts/tsv2opus-tc
+# OPUS_PIVOTING = opus-pivoting
+OPUS_PIVOTING = ../scripts/opus-pivoting -t score -n 1
 
 
 ## use the fast local-scratch partition if available
@@ -98,7 +100,7 @@ ${NEWALGFILES}: ${PIVOTALGFILES}
 	mkdir -p ${@:.xml.gz=}
 	( s=${firstword ${subst -, ,${notdir ${@:.xml.gz=}}}}; \
 	  t=${lastword ${subst -, ,${notdir ${@:.xml.gz=}}}}; \
-	  opus-pivoting `ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'` \
+	  ${OPUS_PIVOTING} `ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'` \
 	                `ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'` \
 	      | gzip -c > ${CORPUSXML}/$$s-$$t/ccaligned-pivoted-${VERSION}.xml.gz; \
 	  if [ -e $@ ]; then \
@@ -107,6 +109,8 @@ ${NEWALGFILES}: ${PIVOTALGFILES}
 	  ${MAKE} -C ${CORPUSXML} SRC=$$s TRG=$$t create-align-file; )
 
 pivoting: ${NEWALGFILES}
+
+test-pivoting: ${CORPUSXML}/af-cy.xml.gz
 
 
 # pivoting:

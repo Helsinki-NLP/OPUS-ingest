@@ -17,6 +17,8 @@ PARACRAWL_TMX = $(patsubst ${PARACRAWL_URL}/%,%,${PARACRAWL_BONUS} \
 # TMX2OPUS  = tmx2opus
 TMX2OPUS  = ../scripts/tmx2opus-btree
 # TMX2OPUS = ../scripts/tmx2opus-tc
+# OPUS_PIVOTING = opus-pivoting
+OPUS_PIVOTING = ../scripts/opus-pivoting -t score -n 1
 
 
 ## use the fast local-scratch partition if available
@@ -42,7 +44,7 @@ pivoting:
 	      echo "processing ..."; \
 	      ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'; \
 	      ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'; \
-	      opus-pivoting `ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'` \
+	      ${OPUS_PIVOTING} `ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'` \
 	                    	`ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'` \
 	      | gzip -c > ${CORPUSXML}/$$s-$$t/paracrawl-pivoted-${VERSION}.xml.gz; \
 	      if [ -e ${CORPUSXML}/$$s-$$t.xml.gz ]; then \

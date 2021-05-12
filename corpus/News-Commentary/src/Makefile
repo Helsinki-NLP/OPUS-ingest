@@ -12,7 +12,7 @@ SENTSPLITTER = ./tools/split-sentences-joerg.perl
 ALIGNER = ./sentence-align-corpus-joerg.perl
 
 
-NRJOBS = 4
+NRJOBS = 8
 MAKE_MORE = ${MAKE} -j ${NRJOBS} 
 
 .PHONY: all
@@ -52,37 +52,44 @@ documents-v11: documents-v11.tgz
 	( cd $@/txt; ln -s Spanish es )
 
 
-## fetch new version 14
+## fetch latest version
 
-documents-v14.tgz:
-	wget -O $@ http://data.statmt.org/news-commentary/v14/documents.tgz
+documents-${VERSION}.tgz:
+	wget -O $@ http://data.statmt.org/news-commentary/${VERSION}/documents.tgz
 
-documents-v14: documents-v14.tgz
+documents-${VERSION}: documents-${VERSION}.tgz
 	mkdir -p $@
 	tar -C $@ -xzf $<
+
 
 
 ## get text files that are new
 
 txt:
-	${MAKE} documents-v11
-	${MAKE} documents-v14
-	${MAKE} compare
-	rm -fr documents-v11
-	rm -fr documents-v14
+	${MAKE} documents-${VERSION}
+	${MAKE_MORE} compare
+	rm -fr documents-${VERSION}
+
+#	${MAKE} documents-v11
+#	rm -fr documents-v11
 
 ## compare version 11 and 14
 
-TXTFILES = $(patsubst documents-v14/split/%,txt/%,${wildcard documents-v14/split/??/*.txt})
+TXTFILES = $(patsubst documents-${VERSION}/split/%,txt/%,${wildcard documents-${VERSION}/split/??/*.txt})
+.PHONY: compare
 compare: ${TXTFILES}
 
-${TXTFILES}: txt/%: documents-v14/split/%
+${TXTFILES}: txt/%: documents-${VERSION}/split/%
 	@mkdir -p ${dir $@}
 	@if [ ! -e documents-v11/$@ ]; then \
 	  mv $< $@; \
+	  echo "new: $@"; \
 	elif ! diff -q $< documents-v11/$@ &>/dev/null; then \
-	  echo "$@ differs"; \
 	  mv $< $@; \
+	  echo "updated: $@"; \
+	else \
+	  rm -f $<; \
+	  echo "identical: $@"; \
 	fi
 
 

@@ -5,11 +5,14 @@
 include ../Makefile.def
 
 
-.PHONY: all links cleanup
-all: links create-align-files cleanup
+.PHONY: all move-links cleanup
+all:
+	${MAKE} move-links
+	${MAKE} create-align-files
+	${MAKE} cleanup
 
-links:
-	-ln -s ../raw/*-* .
+move-links:
+	mv ../raw/*-* .
 
 cleanup:
 	for s in ${LANGUAGES}; do \

@@ -13,11 +13,18 @@ all:
 	${MAKE} publish
 
 
+more:
+	${MAKE} annotate
+	rm -fr data
+	${MAKE} wordalign
+	${MAKE} publish
+
+
 # include some standard OPUS targets for processing/annotating data
 
 include ../Makefile.process
-# include ../Makefile.annotate
-include ../Makefile.tag
+include ../Makefile.annotate
+# include ../Makefile.tag
 include ../Makefile.cwb
 # include ../Makefile.html
 include ../Makefile.release

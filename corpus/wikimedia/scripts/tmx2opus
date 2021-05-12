@@ -262,10 +262,12 @@ sub print_alignments{
 
     my %IDs = {};
     my %lengths = {};
+    my %sents = {};
     foreach my $s (0..$#langs){
 	if ($opt_a){
 	    @{$lengths{$langs[$s]}} = ();
-	    @{$IDs{$langs[$s]}} = print_sentences($seg,$langs[$s],$lengths{$langs[$s]});
+	    %{$sents{$langs[$s]}} = ();
+	    @{$IDs{$langs[$s]}} = print_sentences($seg,$langs[$s],$lengths{$langs[$s]},$sents{$langs[$s]});
 	}
 	else{
 	    @{$IDs{$langs[$s]}} = print_sentences($seg,$langs[$s]);
@@ -282,6 +284,19 @@ sub print_alignments{
 		foreach my $l (@links){
 		    next unless (ref($$l{src}) eq 'ARRAY');
 		    next unless (ref($$l{trg}) eq 'ARRAY');
+
+		    ## check again whether the strings are identical
+		    if ($opt_I){
+			my $src="";
+			my $trg="";
+			foreach (@{$$l{src}}){ $src.=$sents{$langs[$s]}{$_}." "; }
+			foreach (@{$$l{trg}}){ $trg.=$sents{$langs[$t]}{$_}." "; }
+			if ($src eq $trg){
+			    print STDERR "skip identical sentence pair for $langs[$s]-$langs[$t] ($src)\n" if ($opt_v);
+			    next;
+			}
+		    }
+
 		    print_links($$l{src},$$l{trg},$langs[$s],$langs[$t]);
 		}
 	    }
@@ -327,7 +342,7 @@ sub print_links{
 }
 
 sub print_sentences{
-    my ($segments, $lang, $lengths) = @_;
+    my ($segments, $lang, $lengths, $sents) = @_;
     $CorpusWriter{$lang} = open_corpus($outfile,$lang) 
 	unless ($CorpusWriter{$lang});
 
@@ -361,8 +376,13 @@ sub print_sentences{
 	    $LangDB{$lang}{$key} = $sid if ($opt_u);
 	}
 	push(@ids,$sid);
+	## save the cumulative sentence length
 	if (ref($lengths) eq 'ARRAY'){
 	    push(@{$lengths},$$lengths[-1] + length($sent));
+	}
+	## save the sentence in a hash
+	if (ref($sents) eq 'HASH'){
+	    $$sents{$sid} = $sent;
 	}
     }
     $CorpusWriter{$lang}->endTag('p') if ($#sentences && (!$opt_u));
