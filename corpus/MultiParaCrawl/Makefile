@@ -57,7 +57,7 @@ copy-tmx-files:
 
 ## submit a job for fetching and processing all data
 all-job:
-	${MAKE} HPC_CORES=1 HPC_DISK=500 HPC_MEM=16g HPC_TIME=7-00:00 HPC_QUEUE=longrun convert-job.submit
+	${MAKE} HPC_CORES=1 HPC_DISK=1000 HPC_MEM=16g HPC_TIME=14-00:00 HPC_QUEUE=longrun convert-job.submit
 
 ## a job for fetching and converting all files
 ## that will submit tokenization jobs when ready

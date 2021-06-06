@@ -7,7 +7,7 @@
 CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
 
 ## current version
-VERSION = v1
+VERSION = v1.01
 
 LICENSE = 
 COPYRIGHT = 

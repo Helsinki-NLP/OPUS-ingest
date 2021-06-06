@@ -37,7 +37,7 @@ all-job:
 ## that will submit tokenization jobs when ready
 convert-job:
 	${MAKE} -C src convert
-	${MAKE} HPC_CORES=8 HPC_MEM=128g pivoting-job.submit
+	${MAKE} HPC_CORES=8 HPC_MEM=256g pivoting-job.submit
 
 pivoting-job:
 	${MAKE} -C src -j 8 pivoting

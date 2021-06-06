@@ -3,6 +3,8 @@
 # quick fix:
 # add names to CWB registry files
 
+use utf8;
+
 my %names = (
     de01 => 'de01_mentelin',
     de02 => 'de02_koelner',
@@ -36,6 +38,13 @@ my %names = (
     sv02 => 'sv02_karlxii',
     sv03 => 'sv03_kyrko',
     sv04 => 'sv04_sfb' );
+
+binmode(STDIN,":utf8");
+while (<>){
+    chomp;
+    my ($k,$v) = split(/\t/);
+    $names{$k} = $v;
+}
 
 foreach (keys %names){
     if (-e $_){

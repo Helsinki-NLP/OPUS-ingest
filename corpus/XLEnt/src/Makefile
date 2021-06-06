@@ -4,6 +4,7 @@ include ../Makefile.def
 
 PWD := ${shell pwd}
 
+OPUS_PIVOTING = ../scripts/opus-pivoting
 
 
 ALIGNED_SENTS = ${wildcard XLEnt/Combined/*.tsv.gz}
@@ -80,7 +81,7 @@ ${NEWALGFILES}: ${PIVOTALGFILES}
 	mkdir -p ${@:.xml.gz=}
 	( s=${firstword ${subst -, ,${notdir ${@:.xml.gz=}}}}; \
 	  t=${lastword ${subst -, ,${notdir ${@:.xml.gz=}}}}; \
-	  opus-pivoting `ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'` \
+	  ${OPUS_PIVOTING} `ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'` \
 	                `ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'` \
 	      | gzip -c > ${CORPUSXML}/$$s-$$t/xlent-pivoted-${VERSION}.xml.gz; \
 	  if [ -e $@ ]; then \

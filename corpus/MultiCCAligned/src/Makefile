@@ -24,7 +24,8 @@ ALIGNED_WITH_LANG = ${patsubst %.tsv.xz,%.tsv.gz,${ALIGNED_SENTS}}
 TSV2OPUS  = ../scripts/tsv2opus-btree
 # TSV2OPUS = ../scripts/tsv2opus-tc
 # OPUS_PIVOTING = opus-pivoting
-OPUS_PIVOTING = ../scripts/opus-pivoting -t score -n 1
+# OPUS_PIVOTING = ../scripts/opus-pivoting -t score -n 1
+OPUS_PIVOTING = ../scripts/opus-pivoting
 
 
 ## use the fast local-scratch partition if available

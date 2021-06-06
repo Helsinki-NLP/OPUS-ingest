@@ -17,6 +17,7 @@ RELEASE5_LANGS = ${RELEASE4_LANGS}
 RELEASE5_TMX   = ${patsubst %,releas5/en-%.${FILTER}.tmx.gz,${RELEASE5_LANGS}}
 
 
+## release 7 languages
 RELEASE7_LANGS = bg cs da de el es et fi fr ga hr hu is it lt lv mt nb nl nn pl pt ro sk sl sv
 RELEASE7_PAIRS = ${patsubst %,en-%,${RELEASE7_LANGS}}
 EXTRA7_PAIRS   = es-eu es-ca es-gl
@@ -25,13 +26,27 @@ REGULAR7_TMX   = ${patsubst %,release7/%.tmx.gz,${RELEASE7_PAIRS} ${EXTRA7_PAIRS
 BONUS7_TMX     = ${patsubst %,release7/%.tmx.gz,${BONUS7_PAIRS}}
 RELEASE7_TMX   = ${REGULAR7_TMX} ${BONUS7_TMX} ${BONUS4_TMX}
 BONUS7_URL     = https://s3.amazonaws.com/web-language-models/paracrawl/bonus
+RELEASEURL     = https://s3.amazonaws.com/web-language-models/paracrawl/release${RELEASE}
 
 
+RELEASE8_TMX_URLS = $(shell wget -q -O - https://www.paracrawl.eu/ | \
+			grep 'tmx\.gz' | grep -v deferred | grep -v roam |\
+			sed "s/^.*href='\([^']*\)'.*$$/\1/" |\
+			sed 's|archive.org/download/ParaCrawl-v8.*/|s3.amazonaws.com/web-language-models/paracrawl/release8/|')
 
-RELEASED_TMX      = ${RELEASE7_TMX}
-RELEASEURL        = https://s3.amazonaws.com/web-language-models/paracrawl/release${RELEASE}
+RELEASE8_TMX_URLS_ORG = $(shell wget -q -O - https://www.paracrawl.eu/ | \
+			grep 'tmx\.gz' | grep -v deferred | grep -v roam |\
+			sed "s/^.*href='\([^']*\)'.*$$/\1/")
+
+
+RELEASE8_TMX = ${patsubst %,release8/%,${notdir ${RELEASE8_TMX_URLS}}}
+
+
+RELEASED_TMX      = ${RELEASE8_TMX}
 CONVERTED_BITEXTS = ${patsubst %.tmx.gz,%.done,${RELEASED_TMX}}
 MAXSIZE = 50000
+
+
 
 
 .PHONY: all
@@ -42,12 +57,31 @@ all: ${CONVERTED_BITEXTS}
 
 
 .PHONY: fetch
-fetch: ${RELEASED_TMX}
+fetch: fetch${RELEASE}
+
+fetch8:
+	mkdir -p release8
+	-for t in ${RELEASE8_TMX_URLS}; do \
+	  f=`basename $$t`; \
+	  if [ ! -e release8/$$f ]; then \
+	    echo "wget -q -O release8/$$f $$t"; \
+	    wget -q -O release8/$$f $$t; \
+	  fi \
+	done
+	touch $@
+
+
+
+.PHONY: fetch7
+fetch7: ${RELEASED_TMX}
 
 fetch4-bonus: ${BONUS4_TMX}
 
 .PHONY: convert
 convert: ${CONVERTED_BITEXTS}
+
+
+${RELEASE8_TMX}: fetch8
 
 ${REGULAR4_TMX} ${REGULAR5_TMX}:
 	mkdir -p ${dir $@}

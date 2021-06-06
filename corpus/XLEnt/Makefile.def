@@ -3,7 +3,7 @@
 # name & version of the corpus
 
 CORPUS  = XLEnt
-VERSION = v1
+VERSION = v1.1
 
 SOURCE_URL = http://data.statmt.org/xlent/
 
@@ -13,7 +13,7 @@ SOURCE_URL = http://data.statmt.org/xlent/
 
 SRCHTML = <p>This corpus was created by mining CCAligned, CCMatrix, and WikiMatrix parallel sentences. These three sources were themselves extracted from web data from Commoncrawl Snapshots and Wikipedia snapshots. Entity pairs were obtained by performing named entity recognition and typing on English sentences and projecting labels to non-English aligned sentence pairs. No claims of intellectual property are made on the work of preparation of the corpus.</p> \
 <p>XLEnt consists of parallel entity mentions in 120 languages aligned with English. These entity pairs were constructed by performing named entity recognition (NER) and typing on English sentences from mined sentence pairs. These extracted English entity labels and types were projected to the non-English sentences through word alignment. Word alignment was performed by combining three alignment signals ((1) word co-occurence alignment with FastAlign (2) semantic alignment using LASER embeddings, and (3) phonetic alignment via transliteration) into a unified word-alignment model. This lexical/semantic/phonetic alignment approach yielded more than 160 million aligned entity pairs in 120 languages paired with English. Recognizing that each English is often aligned to mulitple entities in different target languages, we can join on English entities to obtain aligned entity pairs that directly pair two non-English entities (e.g., Arabic-French) </p> \
-<p>The original distribution is available from <a href="http://data.statmt.org/xlent/">http://data.statmt.org/xlent/</a></p>
+<p>The original distribution is available from <a href="http://data.statmt.org/xlent/">http://data.statmt.org/xlent/</a></p> The difference to version 1 is that pivoting now only uses the link with best score in case of alternative alignments for a pivot entity.
 
 
 CITENOTE = If you use the dataset or code, please cite (<a href="http://data.statmt.org/xlent/elkishky_XLEnt.pdf">pdf</a>): \

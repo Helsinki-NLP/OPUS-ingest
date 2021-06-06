@@ -649,21 +649,21 @@ $(MOSES): ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSXML}/%.xml.gz
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  BASE=${CORPUS}.$(patsubst %.xml.gz,%,$(notdir $<));\
 	  if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
+	  mkdir -p ${LOCALTMP}; \
 	  zcat $< |\
 	  $(OPUS2MOSES) -r -d ${CORPUSRAW} \
-		-e $$BASE.$$S \
-		-f $$BASE.$$T \
-		-b $$BASE.xml; \
+		-e ${LOCALTMP}/$$BASE.$$S \
+		-f ${LOCALTMP}/$$BASE.$$T \
+		-b ${LOCALTMP}/$$BASE.xml; \
 	  rm -f $@; \
 	  ${MKDIR} ${TMPDIR}/$$BASE; \
 	  ${MAKE} PACKAGE="${CORPUS}.$$S-$$T in Moses format" ${TMPDIR}/$$BASE/README; \
-	  rm -f $$BASE.ids; \
+	  rm -f ${LOCALTMP}/$$BASE.ids; \
 	  ${MAKE} ${TMPDIR}/$$BASE/LICENSE; \
-	  mkdir -p ${LOCALTMP}; \
 	  zip -j ${LOCALTMP}/${notdir $@} ${TMPDIR}/$$BASE/README ${TMPDIR}/$$BASE/LICENSE \
-			$$BASE.$$S $$BASE.$$T $$BASE.xml; \
+		 ${LOCALTMP}/$$BASE.$$S ${LOCALTMP}/$$BASE.$$T ${LOCALTMP}/$$BASE.xml; \
 	  mv -f ${LOCALTMP}/${notdir $@} $@; \
-	  rm -f $$BASE.$$S $$BASE.$$T $$BASE.xml;\
+	  rm -f ${LOCALTMP}/$$BASE.$$S ${LOCALTMP}/$$BASE.$$T ${LOCALTMP}/$$BASE.xml;\
 	  rm -f ${TMPDIR}/$$BASE/README ${TMPDIR}/$$BASE/LICENSE;\
 	  rmdir ${TMPDIR}/$$BASE; )
 	sleep 1

@@ -17,9 +17,20 @@ all:
 	${MAKE} annotate
 #	${MAKE} udparse
 #	${MAKE} wordalign
+	${MAKE} -j 1 OPUSCWB=${OPUSHOME}/cwb-restricted cwb-index
+	cd ${OPUSHOME}/cwb-restricted/reg/${CORPUS}-${VERSION} && \
+	perl ${PWD}/scripts/fix-reg-names.pl ${PWD}/src/OpusEDGeS_${VERSION}/langcodes_biblenames.tsv
+#	${MAKE} publish
+
+index:
 	${MAKE} OPUSCWB=${OPUSHOME}/cwb-restricted cwb-index
 
-#	${MAKE} publish
+fix-registry:
+	cd ${OPUSHOME}/cwb-restricted/reg/${CORPUS}-${VERSION} && \
+	perl ${PWD}/scripts/fix-reg-names.pl ${PWD}/src/OpusEDGeS_${VERSION}/langcodes_biblenames.tsv
+
+
+
 
 ## standard procedures are specified in the following makefiles
 ##

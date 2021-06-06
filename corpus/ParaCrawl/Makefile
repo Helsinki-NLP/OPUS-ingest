@@ -45,6 +45,11 @@ copy-tmx-files:
 
 ## submit a job for fetching and processing all data
 all-job:
+	${MAKE} HPC_CORES=1 HPC_MEM=4g HPC_TIME=72:00 fetch-job.submit
+
+
+fetch-job:
+	${MAKE} -C src fetch
 	${MAKE} HPC_CORES=4 HPC_MEM=8g HPC_TIME=72:00 convert-job.submit
 
 ## a job for fetching and converting all files
@@ -65,16 +70,16 @@ tokenize-jobs:
 tokenize-job:
 	${MAKE} annotate_files
 	if [ `ls log/.*tok* | wc -l` == ${words ${LANGUAGES}} ]; then \
-	  ${MAKE} HPC_CORES=8 HPC_MEM=4g HPC_TIME=72:00 publish-job.submit; \
+	  ${MAKE} HPC_CORES=8 HPC_MEM=16g HPC_DISK=2000 HPC_TIME=72:00 publish-job.submit; \
 	fi
 
 publish-job:
 	${MAKE} moses
 	${MAKE} copy-tmx-files
 	${MAKE} publish
-	${MAKE} wordalign/Makefile
-	${MAKE} -C wordalign submit-all
-	${MAKE} HPC_CORES=8 HPC_MEM=8g HPC_TIME=72:00 udparse.submit
+#	${MAKE} wordalign/Makefile
+#	${MAKE} -C wordalign submit-all
+#	${MAKE} HPC_CORES=8 HPC_MEM=8g HPC_TIME=72:00 udparse.submit
 
 ## standard procedures are specified in the following makefiles
 ##

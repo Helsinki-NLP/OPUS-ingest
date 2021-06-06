@@ -7,18 +7,36 @@ PWD := ${shell pwd}
 ## conversion script to be used
 ## --> tmx2opus-tc = use TokyoCabinet as tmp DB
 
-PARACRAWL_URL = https://s3.amazonaws.com/web-language-models/paracrawl
-PARACRAWL_TMX = $(patsubst ${PARACRAWL_URL}/%,%,${PARACRAWL_BONUS} \
+PARACRAWL7.1_URL = https://s3.amazonaws.com/web-language-models/paracrawl
+PARACRAWL7.1_TMX = $(patsubst ${PARACRAWL_URL}/%,%,${PARACRAWL_BONUS} \
 		${shell wget -q -O - ${PARACRAWL_RELEASE} | \
 			grep '${PARACRAWL_URL}' | \
 			grep tmx | sed "s/^.*href='\([^']*\)'.*$$/\1/" | grep -v roam})
+
+RELEASE8_TMX_URLS = $(shell wget -q -O - https://www.paracrawl.eu/ | \
+			grep 'tmx\.gz' | grep -v deferred | grep -v roam |\
+			sed "s/^.*href='\([^']*\)'.*$$/\1/" |\
+			sed 's|archive.org/download/ParaCrawl-v8.*/|s3.amazonaws.com/web-language-models/paracrawl/release8/|')
+
+RELEASE8_TMX_URLS_ORG = $(shell wget -q -O - https://www.paracrawl.eu/ | \
+			grep 'tmx\.gz' | grep -v deferred | grep -v roam |\
+			sed "s/^.*href='\([^']*\)'.*$$/\1/")
+
+
+RELEASE8_TMX = ${patsubst %,release8/%,${notdir ${RELEASE8_TMX_URLS}}}
+
+
+PARACRAWL_TMX = ${RELEASE8_TMX}
+
+
 
 
 # TMX2OPUS  = tmx2opus
 TMX2OPUS  = ../scripts/tmx2opus-btree
 # TMX2OPUS = ../scripts/tmx2opus-tc
 # OPUS_PIVOTING = opus-pivoting
-OPUS_PIVOTING = ../scripts/opus-pivoting -t score -n 1
+# OPUS_PIVOTING = ../scripts/opus-pivoting -t score -n 1
+OPUS_PIVOTING = ../scripts/opus-pivoting
 
 
 ## use the fast local-scratch partition if available
@@ -58,21 +76,35 @@ pivoting:
 
 
 .PHONY: fetch
-fetch: ${PARACRAWL_TMX}
+fetch: fetch${RELEASE}
+
+fetch8:
+	mkdir -p release8
+	-for t in ${RELEASE8_TMX_URLS}; do \
+	  f=`basename $$t`; \
+	  if [ ! -e release8/$$f ]; then \
+	    echo "wget -q -O release8/$$f $$t"; \
+	    wget -q -O release8/$$f $$t; \
+	  fi \
+	done
+	touch $@
+
+.PHONY: fetch7
+fetch7: ${PARACRAWL7.1_TMX}
 
 .PHONY: convert
 convert: ${CORPUSRAW}
 
 
-${PARACRAWL_TMX}:
+${PARACRAWL7.1_TMX}:
 	mkdir -p ${dir $@}
-	wget -q -O $@ ${PARACRAWL_URL}/$@
+	wget -q -O $@ ${PARACRAWL7.1_URL}/$@
 
 
 ${CORPUSRAW}: ${PARACRAWL_TMX}
 	mkdir -p ${CORPUSRAW}
 	( cd ${CORPUSRAW} && \
-	  find ${PWD} -name '*.tmx.gz' |\
+	  find -L ${PWD} -name '*.tmx.gz' |\
 	  xargs zcat |\
 	  perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' |\
 	  ${TMX2OPUS} -u -d -t ${TMPDIR} -o paracrawl${RELEASE}.xml.gz )
