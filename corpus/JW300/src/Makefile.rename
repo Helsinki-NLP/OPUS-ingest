@@ -1,0 +1,20 @@
+file_list.txt:
+	find * -mindepth 1 -maxdepth 1 -name '*.txt' | cut -d / -f 1 | sort | uniq -c | sort -n > file_list.txt
+
+rename_list: file_list.txt
+	python3 fixcodes.py > rename_list
+
+rename: rename_list
+#	cat rename_list | xargs -n 2 echo mv
+	cat rename_list | xargs -n 2 mv
+
+trash_list: file_list.txt
+	python3 fixcodes.py -o | sort | uniq > trash_list
+
+trash: 
+	mkdir trash
+
+filtertrash: trash trash_list
+#	cat trash_list | xargs -I% echo mv % trash
+	cat trash_list | xargs -I% mv % trash
+

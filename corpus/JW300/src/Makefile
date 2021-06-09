@@ -1,6 +1,7 @@
 
 include ../../Makefile.def
 include ../Makefile.def
+include Makefile.rename
 
 .PHONY: all convert
 all: .unpacked
