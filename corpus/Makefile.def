@@ -139,10 +139,19 @@ ALGEXT = xml.gz
 # general tools that we will use for pre-processing & alignment
 #---------------------------------------------------------------
 
+## number of cores available and number of threads to be used
+## restrict threads to 4 on login nodes
+## (TODO: should we restrict threads in sort etc to leave some cores
+##        for other tasks as well?)
+CORES    := ${shell nproc}
+THREADS  ?= $(shell if [ `hostname | grep login | wc -l` -gt 0 ]; then echo 4; else echo ${CORES}; fi )
+
 GZIP     := ${shell which pigz 2>/dev/null || echo gzip}
 GZCAT    := ${GZIP} -cd
 ZCAT     := gzip -cd
+SORT     := sort -T ${TMPDIR} --parallel=${THREADS} --compress-program=${GZIP}
 UNIQ     := ${SORT} -u
+PARALLEL := ${shell if [ `which parallel 2>/dev/null | wc -l` -gt 0 ]; then echo 'parallel --pipe -q'; fi }
 
 
 TOOLS       = ${OPUSHOME}/tools

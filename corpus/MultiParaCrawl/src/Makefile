@@ -101,7 +101,7 @@ ${PARACRAWL7.1_TMX}:
 	wget -q -O $@ ${PARACRAWL7.1_URL}/$@
 
 
-${CORPUSRAW}: ${PARACRAWL_TMX}
+${CORPUSRAW}: # ${PARACRAWL_TMX}
 	mkdir -p ${CORPUSRAW}
 	( cd ${CORPUSRAW} && \
 	  find -L ${PWD} -name '*.tmx.gz' |\
