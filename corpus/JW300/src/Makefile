@@ -11,6 +11,7 @@ all: .unpacked2
 #	${MAKE} normalise-and-merge-langcodes
 	${MAKE} normalise-langcodes
 	${MAKE} rename
+	${MAKE} filtertrash
 	${MAKE} convert
 	${MAKE} cleanup
 

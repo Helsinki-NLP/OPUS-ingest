@@ -16,5 +16,5 @@ trash:
 
 filtertrash: trash trash_list
 #	cat trash_list | xargs -I% echo mv % trash
-	cat trash_list | xargs -I% mv % trash
+	cat trash_list | xargs -I% mv % trash 2> /dev/null || true
 
