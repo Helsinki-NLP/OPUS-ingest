@@ -4,12 +4,13 @@ include ../Makefile.def
 include Makefile.rename
 
 .PHONY: all convert
-all: .unpacked
+all: .unpacked2
 ## merging and normalising lang-dirs is not a good idea! 
 ## this overwrites some language variants and script variants!
 #	${MAKE} merge-subdirs
 #	${MAKE} normalise-and-merge-langcodes
 	${MAKE} normalise-langcodes
+	${MAKE} rename
 	${MAKE} convert
 	${MAKE} cleanup
 
@@ -45,7 +46,9 @@ cleanup:
 	--transform='s#^.*/\([^/]*\)\_\([^/]*\).txt#\1/\2.txt#'
 	touch $@
 
-
+.unpacked2: output.tar.gz
+	tar -xzf output.tar.gz --strip-components=1
+	touch $@
 
 
 ## make sure that the raw files are produced before the tokenized ones
@@ -67,7 +70,7 @@ ${CORPUSRAW}/%.xml.gz: %.txt
 	@echo '<?xml version="1.0" encoding="utf-8"?>' > ${@:.gz=}
 	@echo '<text>' >> ${@:.gz=}
 	@cat -n $< | \
-	./detokenizer.perl -l $(subst /,,${dir $<}) -q |\
+#	./detokenizer.perl -l $(subst /,,${dir $<}) -q |\
 	sed 's/\&/\&amp;/g;s/>/\&gt;/g;s/</\&lt;/g;' |\
 	sed 's/^ *\([0-9][0-9]*\)\s*/<s id="\1">/;s#\s*$$#</s>#' >> ${@:.gz=}
 	@echo '</text>' >> ${@:.gz=}
