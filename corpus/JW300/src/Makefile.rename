@@ -6,7 +6,7 @@ rename_list: file_list.txt
 
 rename: rename_list
 #	cat rename_list | xargs -n 2 echo mv
-	cat rename_list | xargs -n 2 mv
+	cat rename_list | xargs -n 2 ./rename.sh
 
 trash_list: file_list.txt
 	python3 fixcodes.py -o | sort | uniq > trash_list
