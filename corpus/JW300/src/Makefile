@@ -58,6 +58,7 @@ ${CORPUSXML}/%.xml.gz: %.txt
 	@echo '<text>' >> ${@:.gz=}
 	@cat -n $< | \
 	sed 's/\&/\&amp;/g;s/>/\&gt;/g;s/</\&lt;/g;' |\
+	perl -CSD -pe "s/\N{U+200B}//gu" |\
 	./white-space-tokenizer.pl >> ${@:.gz=}
 	@echo '</text>' >> ${@:.gz=}
 	${GZIP} -f ${@:.gz=}
