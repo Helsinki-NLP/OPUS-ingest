@@ -6,7 +6,17 @@ rename_list: file_list.txt
 
 rename: rename_list
 #	cat rename_list | xargs -n 2 echo mv
-	cat rename_list | xargs -n 2 ./rename.sh
+#	cat rename_list | xargs -n 2 ./rename.sh
+	for lang in `cat rename_list`; do \
+          if [ "X$$lang1" == "X" ]; then \
+            lang1=$$lang; \
+          else \
+            if [ -d $$lang1 ]; then \
+	      mv $$lang1 $$lang; \
+            fi; \
+            unset lang1; \
+          fi \
+	done
 
 trash_list: file_list.txt
 	python3 fixcodes.py -o | sort | uniq > trash_list
