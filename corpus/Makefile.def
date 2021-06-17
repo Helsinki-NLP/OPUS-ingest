@@ -146,12 +146,22 @@ ALGEXT = xml.gz
 CORES    := ${shell nproc}
 THREADS  ?= $(shell if [ `hostname | grep login | wc -l` -gt 0 ]; then echo 4; else echo ${CORES}; fi )
 
+## use pigz for multi-threaded (de-)compression
+## TODO: should we optimise some parameters?
 GZIP     := ${shell which pigz 2>/dev/null || echo gzip}
 GZCAT    := ${GZIP} -cd
 ZCAT     := gzip -cd
 SORT     := sort -T ${TMPDIR} --parallel=${THREADS} --compress-program=${GZIP}
 UNIQ     := ${SORT} -u
-PARALLEL := ${shell if [ `which parallel 2>/dev/null | wc -l` -gt 0 ]; then echo 'parallel --pipe -q'; fi }
+
+## use GNU parallel if available
+## TODO: should we reduce number of threads?
+## TODO: should we optimise other settings?
+PARALLEL_ARGS := --compress --compress-program ${GZIP} \
+		 --max-procs ${THREADS} \
+		 --pipe --keep-order -q
+
+PARALLEL := ${shell if [ `which parallel 2>/dev/null | wc -l` -gt 0 ]; then echo 'parallel ${PARALLEL_ARGS}'; fi }
 
 
 TOOLS       = ${OPUSHOME}/tools

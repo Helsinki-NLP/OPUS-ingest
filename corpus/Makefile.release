@@ -88,6 +88,7 @@ SRCCES = ${shell \
 
 
 ## NEW: reduce packages if we have > 10,000 bitexts in the corpus
+## NEW: forget about tokenized monolingual corpora (${MONO_TOK})
 
 REDUCED_PACKAGES   = ${ALG} ${LANG_XML} ${LANG_RAW} ${LANG_UD} ${MONO_RAW} ${MONO_TOK} ${FREQ_COUNTS}
 REDUCED_INFOFILES  = ${LANG_INFO} ${CES_INFO}
@@ -104,6 +105,9 @@ endif
 
 show-nrof-packages:
 	echo "nr of packages in release: $(words ${SELECTED_PACKAGES})"
+
+show-packages:
+	@echo  "${notdir ${SELECTED_PACKAGES}}" | tr ' ' "\n"
 
 
 
@@ -251,10 +255,14 @@ ${PACKAGES}:	${CORPUSRELEASE} \
 	  done \
 	done
 	for f in ${LANG_XML} ${LANG_RAW} ${LANG_UD}; do \
-	  echo $$f | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@; \
+	  if [ -e $$f ]; then \
+	    echo $$f | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@; \
+	  fi \
 	done
 	for f in ${MONO_RAW} ${MONO_TOK} ${FREQ_COUNTS}; do \
-	  echo $$f | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@; \
+	  if [ -e $$f ]; then \
+	    echo $$f | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@; \
+	  fi \
 	done
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
 	mv -f ${PACKAGES}.uniq ${PACKAGES}
@@ -468,12 +476,14 @@ mono_raw: ${MONO_RAW}
 CORPUS_EXT = xml
 
 # monolingual data for language modeling
+# (make sure that data can be parsed and 
+#  that we have sentence per line to avoid that GNU parallel will break the pipe)
 ${CORPUSRELEASE}/mono/%.tok.gz: ${CORPUSXML}/%
 	@${MKDIR} ${dir $@}
 	if [ -d $< ]; then \
 	  find $</ -name '*.${CORPUS_EXT}.gz' -type f | \
 	  xargs ${GZCAT} | \
-	  ${PARALLEL} perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g' |\
+	  ${PARALLEL} perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g;chomp;s/<\/s>/<\/s>\n/' |\
 	  ${PARALLEL} opus2text | \
 	  ${GZIP} -c > $@; \
 	fi
@@ -487,7 +497,7 @@ ${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRAW}/%
 	if [ -d $< ]; then \
 	  find $</ -name '*.${CORPUS_EXT}.gz' -type f | \
 	  xargs ${GZCAT} | \
-	  ${PARALLEL} perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g' |\
+	  ${PARALLEL} perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g;chomp;s/<\/s>/<\/s>\n/' |\
 	  ${PARALLEL} opus2text | \
 	  ${GZIP} -c > $@; \
 	fi
