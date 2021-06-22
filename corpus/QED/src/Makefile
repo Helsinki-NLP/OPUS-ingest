@@ -1,19 +1,28 @@
 
 
 ## all raw XML files (that will be big)
-RAWXML = ${patsubst %.srt,../raw/%.xml.gz,${wildcard */*.srt}}
+#RAWXML = ${patsubst %.srt,../raw/%.xml.gz,${wildcard */*.srt}}
+RAWTXT = ${patsubst %.srt,../txt/%.txt,${wildcard */*.srt}}
+#RAWTXT = ${patsubst %.srt,../txt/%.txt,${wildcard fi/*.srt}}
+#RAWTXT = ${patsubst %.srt,../txt/%.txt,${wildcard en/*.srt}}
+XMLFILES = ${patsubst ../txt/%.txt,../xml/%.xml.gz,${RAWTXT}}
 
 .PHONY: all
 all: .langdirs .rename
-	${MAKE} convert cleanup
+	${MAKE} convert2
+#	${MAKE} cleanup
 
 .PHONY: convert
 convert: ${RAWXML}
+
+.PHONY: convert2
+convert2: ${RAWTXT} ${XMLFILES}
 
 .PHONY: cleanup
 cleanup:
 	rm -fr AllSrt_Dec2016a
 	rm -f .rename
+	find . -type f -name '*.srt' | xargs rm
 	-rmdir `cut -f3 -d'.' QED_v2.0a_srts_list.txt | sort | uniq`
 	rm -f .langdirs
 
@@ -34,6 +43,21 @@ AllSrt_Dec2016a:
 	perl -pe 'print $$_; s/^.*\/(.*)\.(.*)\.(.*?)\.(.*?)\.srt*$$/$$3\/$$1.srt/g' | \
 	xargs -n2 mv -f
 	touch $@
+
+## convert to plain text
+${RAWTXT}: ../txt/%.txt: %.srt
+	@mkdir -p ${dir $@}
+	python3 resplit.py -i $< 2>/dev/null > $@
+
+${XMLFILES}: ../xml/%.xml.gz: ../txt/%.txt
+	@mkdir -p ${dir $@}
+	@echo '<?xml version="1.0" encoding="utf-8"?>' > ${@:.gz=}
+	@echo '<text>' >> ${@:.gz=}
+	@cat -n $< | \
+	sed 's/\&/\&amp;/g;s/>/\&gt;/g;s/</\&lt;/g;' |\
+	sed 's/^ *\([0-9][0-9]*\)\s*/<s id="\1">/;s#\s*$$#</s>#' >> ${@:.gz=}
+	@echo '</text>' >> ${@:.gz=}
+	gzip -f ${@:.gz=}
 
 ## convert to XML (and cleanup srt file)
 ${RAWXML}: ../raw/%.xml.gz: %.srt
