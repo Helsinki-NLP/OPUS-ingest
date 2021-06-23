@@ -15,8 +15,9 @@ all: .langdirs .rename
 .PHONY: convert
 convert: ${RAWXML}
 
-.PHONY: convert2
-convert2: ${RAWTXT} ${XMLFILES}
+convert2: .rename
+	@mkdir -p ../txt
+	python3 resplit2.py -i . -o ../txt
 
 .PHONY: cleanup
 cleanup:
@@ -60,9 +61,9 @@ ${XMLFILES}: ../xml/%.xml.gz: ../txt/%.txt
 	gzip -f ${@:.gz=}
 
 ## convert to XML (and cleanup srt file)
-${RAWXML}: ../raw/%.xml.gz: %.srt
-	-mkdir -p ${dir $@}
-	-mkdir -p $(patsubst ../raw/%,../xml/%,${dir $@})
-	srt2xml -r $@ -e utf8 -l ${firstword ${subst /, ,$<}} $< |\
-		gzip -c	> $(patsubst ../raw/%,../xml/%,$@)
-	rm -f $<
+#${RAWXML}: ../raw/%.xml.gz: %.srt
+#	-mkdir -p ${dir $@}
+#	-mkdir -p $(patsubst ../raw/%,../xml/%,${dir $@})
+#	srt2xml -r $@ -e utf8 -l ${firstword ${subst /, ,$<}} $< |\
+#		gzip -c	> $(patsubst ../raw/%,../xml/%,$@)
+#	rm -f $<
