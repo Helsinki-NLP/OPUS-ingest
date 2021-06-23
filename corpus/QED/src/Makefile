@@ -9,13 +9,14 @@ XMLFILES = ${patsubst ../txt/%.txt,../xml/%.xml.gz,${RAWTXT}}
 
 .PHONY: all
 all: .langdirs .rename
-	${MAKE} convert2
+	${MAKE} resplit
+	${MAKE} convert
 #	${MAKE} cleanup
 
 .PHONY: convert
-convert: ${RAWXML}
+convert: ${XMLFILES}
 
-convert2: .rename
+resplit: .rename
 	@mkdir -p ../txt
 	python3 resplit2.py -i . -o ../txt
 
