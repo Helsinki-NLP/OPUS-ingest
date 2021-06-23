@@ -7,6 +7,7 @@ import os.path
 import logging
 import argparse
 from mosestokenizer import MosesSentenceSplitter
+from util import srt_reader
 
 logging.basicConfig(level=logging.INFO)
 logging.getLogger('mosestokenizer').setLevel(logging.INFO)
@@ -23,35 +24,21 @@ parser.add_argument('-i', '--input',
 
 args = parser.parse_args()
 
-lines = []
-
 if not os.path.isfile(args.input):
     logging.warning('Not a file: %s', args.input)
     sys.exit()
 
-follows = False
-
-with open(args.input) as f:
-    for line in f.readlines():
-        if '-->' in line:
-            follows = True
-            continue
-        elif follows:
-            line = line.rstrip()
-            if line:
-                lines.append(line)
-            else:
-                follows = False
 
 language = args.input.split('.')[0]
+splitter = MosesSentenceSplitter(language, more=False, even_more=True)
 
-if lines:
-    splitter = MosesSentenceSplitter(language, more=False)
+for ls in srt_reader(args.input):
 
-    data = '\n'.join(lines)
+    data = '\n'.join(ls)
+    # print(data)
     for sentence in splitter([data]):
         print(sentence)
 
-        splitter.close()
-else:
-    print()
+
+if splitter:
+    splitter.close()

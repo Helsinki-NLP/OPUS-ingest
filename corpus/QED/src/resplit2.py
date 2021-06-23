@@ -2,12 +2,16 @@
 
 # pylint: disable=invalid-name, line-too-long, too-many-branches
 
+from typing import Dict, List, Iterator
+
 import sys
 import os.path
 import logging
+import collections
 import argparse
 from tqdm import tqdm
 from mosestokenizer import MosesSentenceSplitter
+from util import srt_reader
 
 logging.basicConfig(level=logging.INFO)
 logging.getLogger('mosestokenizer').setLevel(logging.WARNING)
@@ -38,71 +42,88 @@ if not os.path.isdir(args.output):
     sys.exit()
 
 
-def resplit_file(infile: str = None, out: str = None, filesplitter=None):
+def resplit_file(f: str = None, out: str = None, filesplitter=None):
     """ Resplit srt file """
-    follows = False
-    lines = []
-
-    with open(infile) as f:
-        for line in f.readlines():
-            if '-->' in line:
-                follows = True
-                continue
-            elif follows:
-                line = line.rstrip()
-
-                if line:
-                    lines.append(line)
-                else:
-                    follows = False
 
     with open(out, 'w') as of:
-        if lines:
-            data = []
-            curritem = ''
 
-            for line in lines:
-                if curritem:
-                    curritem += '\n' + line
-                else:
-                    curritem = line
+        for ls in srt_reader(f):
 
-                if line.endswith('?') or line.endswith('!'):
-                    data.append(curritem)
-                    curritem = ''
+            data = '\n'.join(ls)
+            # print(data)
+            for sentence in filesplitter([data]):
+                print(sentence, file=of)
 
-            if curritem:
-                data.append(curritem)
+logger.info('Recording language directories')
 
-#            print(lines)
-#            print(data)
+# Record files to be processed first
+filesets = collections.defaultdict()
+total = 0
 
-            for doc in data:
-                for sentence in filesplitter([doc]):
-                    print(sentence, file=of)
+for langdir in tqdm(os.listdir(args.input)):
+    fpdir = args.input + '/' + langdir
+    if os.path.isdir(fpdir):
+        for srtfile in os.listdir(fpdir):
+            origpath = '/'.join([args.input, langdir, srtfile])
+            outpath = args.output + '/' + langdir
+            outfile = outpath + '/' + srtfile.replace('.srt', '.txt')
+            if srtfile.endswith('.srt') and not os.path.isfile(outfile):
+                if langdir not in filesets:
+                    if not os.path.isdir(outpath):
+                        os.mkdir(outpath)
+                    filesets[langdir] = []
+                filesets[langdir].append([origpath, outfile])
+                total += 1
 
-        else:
-            print('', file=of)
+# print(filesets)
 
+def set_reader(dirs: Dict) -> Iterator[List[str]]:
+    """ Iterate over language dir sets """
 
+    for ldir in dirs:
+        for pair in dirs[ldir]:
+            yield ldir, pair[0], pair[1]
+
+splitter = None
+uselang = None
+
+logger.info('%d files to process for %d languages', total, len(filesets.keys()))
 logger.info('Processing language directories')
 
-for langdir in tqdm(os.listdir(args.input), position=0, leave=False, desc='dirs'.ljust(10, ' ')):
+for lang, infile, outfile in tqdm(set_reader(filesets), total=total):
+    if uselang != lang:
+        if splitter:
+            splitter.close()
+        uselang = lang
+        # TODO: more=True might make sense for some languages
+        splitter = MosesSentenceSplitter(lang, more=False, even_more=True)
+
+#    print(lang, infile, outfile)
+    resplit_file(infile, outfile, splitter)
+
+if splitter:
+    splitter.close()
+
+sys.exit()
+
+for langdir in tqdm(os.listdir(args.input), position=0, leave=True, desc='dirs'.ljust(10, ' ')):
     fpdir = args.input + '/' + langdir
     if os.path.isdir(fpdir):
         splitter = None
         outpath = None
         langdesc = 'lang='+langdir
+        outpath = args.output + '/' + langdir
+        if not os.path.isdir(outpath):
+            os.mkdir(outpath)
+
         for srtfile in tqdm(os.listdir(fpdir), position=1, leave=False, desc=langdesc.ljust(10, ' ')):
             if srtfile.endswith('.srt'):
-                if not splitter:
-                    splitter = MosesSentenceSplitter(langdir, more=False)
-                    outpath = args.output + '/' + langdir
-                    if not os.path.isdir(outpath):
-                        os.mkdir(outpath)
-                fpfile = fpdir + '/' + srtfile
                 outfile = outpath + '/' + srtfile.replace('.srt', '.txt')
                 if not os.path.isfile(outfile):
+                    fpfile = fpdir + '/' + srtfile
+                    if not splitter:
+#                        splitter = MosesSentenceSplitter(langdir, more=False)
+                        splitter = MosesSentenceSplitter(langdir, more=False, even_more=True)
                     # print(fpfile, outfile)
                     resplit_file(fpfile, outfile, splitter)
         if splitter:
