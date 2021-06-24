@@ -48,12 +48,13 @@ endif
 .PHONY: all
 all: ${CORPUSRAW}
 	${MAKE} -C .. xml/Makefile
-	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/ 
 	${MAKE} pivoting
 
 PIVOT = en
 
 pivoting:
+	mkdir -p ${CORPUSXML}
+	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/ 
 	${MAKE} -C ${CORPUSXML} create-align-files
 	for s in $(filter-out ${PIVOT},${LANGUAGES}); do \
 	  for t in $(filter-out ${PIVOT},${LANGUAGES}); do \
@@ -65,15 +66,18 @@ pivoting:
 	      ${OPUS_PIVOTING} `ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'` \
 	                    	`ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'` \
 	      | gzip -c > ${CORPUSXML}/$$s-$$t/paracrawl-pivoted-${VERSION}.xml.gz; \
-	      if [ -e ${CORPUSXML}/$$s-$$t.xml.gz ]; then \
-	        mkdir -p backup; \
-		mv -f ${CORPUSXML}/$$s-$$t.xml.gz backup/ ; \
-	      fi; \
 	    fi \
 	  done \
 	done
 	${MAKE} -C ${CORPUSXML} create-align-files
 
+## don't move previous link files away anymore
+## --> this removes some non-English language pairs
+##
+#	      if [ -e ${CORPUSXML}/$$s-$$t.xml.gz ]; then \
+#	        mkdir -p backup; \
+#		mv -f ${CORPUSXML}/$$s-$$t.xml.gz backup/ ; \
+#	      fi;
 
 .PHONY: fetch
 fetch: fetch${RELEASE}
@@ -108,6 +112,8 @@ ${CORPUSRAW}: # ${PARACRAWL_TMX}
 	  xargs zcat |\
 	  perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' |\
 	  ${TMX2OPUS} -u -d -t ${TMPDIR} -o paracrawl${RELEASE}.xml.gz )
+	mkdir -p ${CORPUSXML}
+	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/ 
 	touch ${CORPUSRAW}
 
 

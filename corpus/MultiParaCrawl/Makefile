@@ -62,15 +62,21 @@ all-job:
 ## a job for fetching and converting all files
 ## that will submit tokenization jobs when ready
 convert-job:
-	${MAKE} -C src all
-	${MAKE} tokenize-jobs
+	${MAKE} -C src convert
+	${MAKE} HPC_CORES=1 HPC_MEM=256g HPC_TIME=3-00:00 pivoting-job.submit
 
 pivoting-job:
-	${MAKE} -C src pivoting
 	${MAKE} tokenize-jobs
+	${MAKE} -C src pivoting
+	mkdir -p english/raw english/xml
+	-mv ${CORPUSRAW}/*en* english/raw/
+	-mv ${CORPUSXML}/en-* english/xml/
+	-mv ${CORPUSXML}/*-en english/xml/
+	-mv ${CORPUSXML}/*-en.* english/xml/
 
 tokenize-jobs:
-	for l in $(sort $(notdir $(wildcard ${CORPUSRAW}/??))); do \
+	mkdir -p log
+	for l in $(filter-out en,$(sort $(notdir $(wildcard ${CORPUSRAW}/??)))); do \
 	  ${MAKE} MAKEARGS="LANGUAGE=$$l" LANGUAGE=$$l \
 		HPC_CORES=1 HPC_MEM=4g HPC_TIME=72:00 \
 	  tokenize-job.submit; \
@@ -80,7 +86,7 @@ tokenize-jobs:
 ## tokenize and submit wordalign jobs when all languages are done
 tokenize-job:
 	${MAKE} annotate_files
-	if [ `ls log/.*tok* | wc -l` == ${words ${LANGUAGES}} ]; then \
+	if [ `ls log/.*tok* | wc -l` == ${words $(filter-out en,${LANGUAGES})} ]; then \
 	  ${MAKE} HPC_CORES=4 HPC_MEM=128g HPC_TIME=72:00 publish-job.submit; \
 	fi
 

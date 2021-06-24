@@ -157,9 +157,11 @@ UNIQ     := ${SORT} -u
 ## use GNU parallel if available
 ## TODO: should we reduce number of threads?
 ## TODO: should we optimise other settings?
-PARALLEL_ARGS := --compress --compress-program ${GZIP} \
-		 --max-procs ${THREADS} \
+PARALLEL_ARGS := --max-procs 25% \
 		 --pipe --keep-order -q
+
+# --max-procs ${THREADS} \
+# --compress --compress-program ${GZIP}
 
 PARALLEL := ${shell if [ `which parallel 2>/dev/null | wc -l` -gt 0 ]; then echo 'parallel ${PARALLEL_ARGS}'; fi }
 

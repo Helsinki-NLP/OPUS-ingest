@@ -7,7 +7,7 @@
 CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
 
 ## current version
-VERSION = v1b
+VERSION = v1c
 
 LICENSE = CC-BY-NC-SA
 COPYRIGHT = 
@@ -17,7 +17,7 @@ COPYRIGHT =
 # EXTRAHTML is code which will be put just after the 'Download' header
 # CITENOTE if you want to change the default reference to be cited
 
-SRCHTML=<p>JW300 is a parallel corpus of over 300 languages with around 100 thousand parallel sentences per language pair on average. The corpus has been compiled by Željko Agić and Ivan Vulić.</p> Version 1b provides some small corrections to the first release (some languages and language variants were missing and some smaller fixes in pre-processing.)\
+SRCHTML=<p>JW300 is a parallel corpus of over 300 languages with around 100 thousand parallel sentences per language pair on average. The corpus has been compiled by Željko Agić and Ivan Vulić.</p> Version 1c provides properly raw untokenized texts and als fixes some additional problems with language codes. \
 <h3>License</h3><p>For all practical purpose, the license is CC-BY-NC-SA.</p><p>Still, <a href="https://www.jw.org/en/terms-of-use/">jw.org maintains custom terms of use</a>; in doubt, make sure to observe their license!</p>
 EXTRAHTML=
 

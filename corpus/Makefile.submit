@@ -25,7 +25,9 @@ HPC_NODES   = 1
 HPC_CORES   = 1
 HPC_QUEUE   = small
 # HPC_MODULES = nlpl-opus python-env/3.4.1 
-HPC_MODULES = parallel python-env nlpl-efmaral nlpl-opus nlpl-moses 
+# HPC_MODULES = parallel python-env nlpl-efmaral nlpl-opus nlpl-moses 
+## NEW: don't load nlpl-opus ---> too old!
+HPC_MODULES = parallel python-env nlpl-efmaral nlpl-moses 
 HPC_EXTRA   = 
 
 

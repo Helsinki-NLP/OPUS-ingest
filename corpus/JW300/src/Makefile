@@ -1,64 +1,48 @@
 
 include ../../Makefile.def
 include ../Makefile.def
+include Makefile.rename
 
-.PHONY: all convert
-all: .unpacked
+.PHONY: all
+all: .unpacked2
 ## merging and normalising lang-dirs is not a good idea! 
 ## this overwrites some language variants and script variants!
 #	${MAKE} merge-subdirs
 #	${MAKE} normalise-and-merge-langcodes
 	${MAKE} normalise-langcodes
+	${MAKE} rename
+	${MAKE} filtertrash
 	${MAKE} convert
-	${MAKE} cleanup
 
 LANGDIRS = $(shell find . -maxdepth 1 -mindepth 1 -type d -printf '%f\n')
-XMLDIRS  = ${patsubst %,${CORPUSXML}/%,${LANGDIRS}}
-RAWDIRS  = ${patsubst %,${CORPUSRAW}/%,${LANGDIRS}}
+LANGDONE = $(patsubst %,%.done,${LANGDIRS})
 
 LANGDIR  = ${firstword ${LANGDIRS}}
 TXTFILES = ${wildcard ${LANGDIR}/*.txt}
-XMLFILES = ${patsubst %.txt,${CORPUSXML}/%.xml.gz,${TXTFILES}}
 RAWFILES = ${patsubst %.txt,${CORPUSRAW}/%.xml.gz,${TXTFILES}}
 
 
-.PHONY: convert convert-to-xml convert-to-raw
-convert: ${RAWDIRS} ${XMLDIRS}
-convert-to-xml: ${XMLFILES}
+.PHONY: convert convert-to-raw
+convert: ${LANGDONE}
 convert-to-raw: ${RAWFILES}
 
-${XMLDIRS}: ${CORPUSXML}/%: %
-	${MAKE} LANGDIR=$< convert-to-xml
+${LANGDONE}: .unpacked2
+	${MAKE} LANGDIR=${@:.done=} convert-to-raw
+	rm -fr ${@:.done=}
+	touch $@
 
 ${RAWDIRS}: ${CORPUSRAW}/%: %
 	${MAKE} LANGDIR=$< convert-to-raw
 
-## TODO: is this too dangerous?
-.PHONY: cleanup
-cleanup:
-	find . -maxdepth 1 -mindepth 1 -type d |\
-	xargs rm -fr
 
 .unpacked: articles.tar.gz
 	tar -xzf articles.tar.gz \
 	--transform='s#^.*/\([^/]*\)\_\([^/]*\).txt#\1/\2.txt#'
 	touch $@
 
-
-
-
-## make sure that the raw files are produced before the tokenized ones
-${CORPUSXML}/%.xml.gz: %.txt
-	@mkdir -p ${dir $@}
-	@echo '<?xml version="1.0" encoding="utf-8"?>' > ${@:.gz=}
-	@echo '<text>' >> ${@:.gz=}
-	@cat -n $< | \
-	sed 's/\&/\&amp;/g;s/>/\&gt;/g;s/</\&lt;/g;' |\
-	./white-space-tokenizer.pl >> ${@:.gz=}
-	@echo '</text>' >> ${@:.gz=}
-	${GZIP} -f ${@:.gz=}
-
-#	sed 's/^ *\([0-9][0-9]*\)\s*/<s id="\1">/;s#\s*$$#</s>#' >> ${@:.gz=}
+.unpacked2: output.tar.gz
+	tar -xzf output.tar.gz --strip-components=1
+	touch $@
 
 
 ${CORPUSRAW}/%.xml.gz: %.txt
@@ -66,13 +50,31 @@ ${CORPUSRAW}/%.xml.gz: %.txt
 	@echo '<?xml version="1.0" encoding="utf-8"?>' > ${@:.gz=}
 	@echo '<text>' >> ${@:.gz=}
 	@cat -n $< | \
-	./detokenizer.perl -l $(subst /,,${dir $<}) -q |\
 	sed 's/\&/\&amp;/g;s/>/\&gt;/g;s/</\&lt;/g;' |\
 	sed 's/^ *\([0-9][0-9]*\)\s*/<s id="\1">/;s#\s*$$#</s>#' >> ${@:.gz=}
 	@echo '</text>' >> ${@:.gz=}
 	${GZIP} -f ${@:.gz=}
 
+#	./detokenizer.perl -l $(subst /,,${dir $<}) -q |\
 
+
+
+.PHONY: normalise-langcodes
+normalise-langcodes:
+	for d in `ls .`; do \
+	  if [ -d $$d ]; then \
+	    n=`echo $$d | tr '-' '_' | sed s/cyrl/Cyrl/`; \
+	    if [ ! "$$n" = "$$d" ]; then \
+	      echo "move $$d to $$n"; \
+	      mv $$d $$n; \
+	    fi \
+	  fi \
+	done
+
+
+
+## OLD: merge sub-dirs with different language variants
+## --> not such a good idea ....
 
 .PHONY: merge-subdirs
 merge-subdirs:
@@ -110,15 +112,3 @@ normalise-and-merge-langcodes:
 	  fi \
 	done
 
-
-.PHONY: normalise-langcodes
-normalise-langcodes:
-	for d in `ls .`; do \
-	  if [ -d $$d ]; then \
-	    n=`echo $$d | tr '-' '_' | sed s/cyrl/Cyrl/`; \
-	    if [ ! "$$n" = "$$d" ]; then \
-	      echo "move $$d to $$n"; \
-	      mv $$d $$n; \
-	    fi \
-	  fi \
-	done
