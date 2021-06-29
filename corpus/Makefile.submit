@@ -42,6 +42,7 @@ ifdef HPC_DISK
 	echo '#SBATCH --gres=nvme:${HPC_DISK}' >> $@
 endif
 	echo '#SBATCH --account=${CSC_PROJECT}' >> $@
+	echo '#SBATCH --exclude=r18c47' >> $@
 endif
 ifeq (${shell hostname --domain},mahti.csc.fi)
 	echo '#SBATCH --account=${CSC_PROJECT}' >> $@

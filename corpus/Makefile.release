@@ -167,6 +167,7 @@ html-local:
 	-rm -fr ${TMPDIR}/OPUS/public_html/${CORPUS}*
 
 release packages: ${PACKAGES}
+	echo '${VERSION}	${shell date}' > ${OPUSRELEASE}/${CORPUS}/releases.txt
 
 refresh-html:
 	rm -f ${OPUSPUB}/${CORPUS}.php
@@ -633,6 +634,10 @@ srctmx-jobs:
 	done
 
 
+ifndef SKIP_TMX_UNIQ
+   TMX_UNIQ = | nl | ${SORT} -k 2 | uniq -f 1 | ${SORT} -n | cut -f2,3
+endif
+
 # $(TMX) $(TMX_STRICT): 
 ${CORPUSRELEASE}/tmx/%.tmx.gz: ${CORPUSRELEASE}/moses/%.txt.zip
 	@${MKDIR} ${dir $@}
@@ -644,15 +649,14 @@ ${CORPUSRELEASE}/tmx/%.tmx.gz: ${CORPUSRELEASE}/moses/%.txt.zip
 	   BASE=${CORPUS}.$(patsubst %.txt.zip,%,$(notdir $<));\
 	   SEXT=$$S; TEXT=$$T; \
 	   if [ "$$SEXT" == "$$TEXT" ]; then SEXT=$${SEXT}1;TEXT=$${TEXT}2; fi; \
-	   paste $$BASE.$$SEXT $$BASE.$$TEXT |\
-	   nl | ${SORT} -k 2 | uniq -f 1 | ${SORT} -n |\
-	   cut -f2,3 |\
+	   paste $$BASE.$$SEXT $$BASE.$$TEXT ${TMX_UNIQ} |\
 	   $(TAB2TMX) -s $$S -t $$T |\
 	   ${GZIP} -c > $@; \
 	   rm -f $$BASE.$$SEXT $$BASE.$$TEXT $$BASE.ids $$BASE.xml; )
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
+
 
 ## old:
 #	  sed = - | sed 'N;s/\n/\t/' | sort -k 2 | uniq -f 1 | sort -n |\
@@ -675,7 +679,7 @@ ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSXML}/%.xml.gz
 	  if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
 	  mkdir -p ${LOCALTMP}; \
 	  ${GZCAT} $< |\
-	  $(OPUS2MOSES) -r -d ${CORPUSRAW} \
+	  $(OPUS2MOSES) -v -r -d ${CORPUSRAW} \
 		-e ${LOCALTMP}/$$BASE.$$S \
 		-f ${LOCALTMP}/$$BASE.$$T \
 		-b ${LOCALTMP}/$$BASE.xml; \
@@ -725,7 +729,7 @@ ${CORPUSRELEASE}/moses/%.strict.txt.zip: ${CORPUSXML}/%.xml.gz
 	  BASE=${CORPUS}.$(patsubst %.xml.gz,%,$(notdir $<));\
 	  if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
 	  cat $(<:gz=11) |\
-	  $(OPUS2MOSES) -r -d ${CORPUSRAW} \
+	  $(OPUS2MOSES) -v -r -d ${CORPUSRAW} \
 		-e $$BASE.$$S \
 		-f $$BASE.$$T \
 		-b $$BASE.xml; \

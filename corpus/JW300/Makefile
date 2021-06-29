@@ -47,7 +47,7 @@ annotate-job:
 
 align-jobs:
 	${MAKE} xml/Makefile
-	${MAKE} -C xml EMAIL= HPC_CORES=8 sentalign-source-jobs
+	${MAKE} -C xml EMAIL= HPC_CORES=8 HPC_TIME=3-00 sentalign-source-jobs
 
 publish-job:
 	${MAKE} -C xml cleanup

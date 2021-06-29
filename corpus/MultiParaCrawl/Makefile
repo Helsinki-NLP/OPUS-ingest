@@ -17,10 +17,10 @@ all:
 	mkdir -p english/raw
 	mv ${CORPUSRAW}/*en* english/raw/
 	${MAKE} annotate
-	${MAKE} moses
-	${MAKE} copy-tmx-files
-	${MAKE} sample-files
 	${MAKE} publish
+
+#	${MAKE} moses tmx
+#	${MAKE} sample-files
 
 
 ALLXMLFILES = ${patsubst ${CORPUSRAW}/%,${CORPUSXML}/%,${wildcard ${CORPUSRAW}/*/*.xml.gz}}
@@ -38,22 +38,6 @@ SAMPLEFILES = $(patsubst ${CORPUSRELEASE}/tmx/%.tmx.gz,${CORPUSPUB}/%_sample.htm
 		$(wildcard ${CORPUSRELEASE}/tmx/*.tmx.gz))
 
 sample-files: $(SAMPLEFILES)
-
-copy-tmx-files:
-	mkdir -p ${CORPUSRELEASE}/tmx
-	for s in ${LANGUAGES}; do \
-	  for t in ${LANGUAGES}; do \
-	    if [[ "$$s" < "$$t" ]]; then \
-	      if [ -e "src/$$s-$$t.${FILTER}.tmx.gz" ]; then \
-		rsync src/$$s-$$t.${FILTER}.tmx.gz ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
-		touch ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
-	      elif [ -e "src/$$t-$$s.${FILTER}.tmx.gz" ]; then \
-		rsync src/$$t-$$s.${FILTER}.tmx.gz ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
-		touch ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
-	      fi \
-	    fi \
-	  done \
-	done
 
 ## submit a job for fetching and processing all data
 all-job:
@@ -87,17 +71,19 @@ tokenize-jobs:
 tokenize-job:
 	${MAKE} annotate_files
 	if [ `ls log/.*tok* | wc -l` == ${words $(filter-out en,${LANGUAGES})} ]; then \
-	  ${MAKE} HPC_CORES=4 HPC_MEM=128g HPC_TIME=72:00 publish-job.submit; \
+	  ${MAKE} HPC_CORES=4 HPC_MEM=128g HPC_TIME=72:00 publish.submit; \
 	fi
 
-publish-job:
-	${MAKE} moses
-	${MAKE} copy-tmx-files
-	${MAKE} sample-files
-	${MAKE} publish
-	${MAKE} wordalign/Makefile
-	${MAKE} -C wordalign submit-all
-#	${MAKE} HPC_CORES=2 HPC_MEM=8g HPC_TIME=72:00 udparse.submit
+
+# publish-job:
+# 	${MAKE} moses tmx
+# 	${MAKE} sample-files
+# 	${MAKE} publish
+# #	${MAKE} wordalign/Makefile
+# #	${MAKE} -C wordalign submit-all
+# #	${MAKE} HPC_CORES=2 HPC_MEM=8g HPC_TIME=72:00 udparse.submit
+
+
 
 ## standard procedures are specified in the following makefiles
 ##
@@ -130,22 +116,37 @@ include ../Makefile.tokenize-fast
 # include ../Makefile.annotate
 
 
-## use a different tool
-OPUS2MOSES = opus2bitext
 
-$(SAMPLEFILES): ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
-	echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"' >$@
-	echo '"http://www.w3.org/TR/REC-html40/loose.dtd">' >> $@
-	echo '<html>' >> $@
-	echo '<head>' >> $@
-	echo '<title>Untitled Document</title>' >> $@
-	echo '<meta http-equiv="Content-Type" content="text/html;charset=utf-8">' >> $@
-	echo '</head>' >> $@
-	echo '<body>' >> $@
-	echo '<p>' >> $@
-	zgrep '</tuv>' $< |\
-	sed 's/^.*<seg>//;s#</seg></tuv>#<br/>#' |\
-	head -100 |\
-	sed ': loop; n; a <hr/>' >> $@
-	echo '</body></html/>' >> $@
-	chmod 644 $@
+
+
+
+## 
+## this should work now without specifying
+##
+
+## use a different tool
+# OPUS2MOSES = opus2bitext
+
+# $(SAMPLEFILES): ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
+# 	echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"' >$@
+# 	echo '"http://www.w3.org/TR/REC-html40/loose.dtd">' >> $@
+# 	echo '<html>' >> $@
+# 	echo '<head>' >> $@
+# 	echo '<title>Untitled Document</title>' >> $@
+# 	echo '<meta http-equiv="Content-Type" content="text/html;charset=utf-8">' >> $@
+# 	echo '</head>' >> $@
+# 	echo '<body>' >> $@
+# 	echo '<p>' >> $@
+# 	zgrep '</tuv>' $< |\
+# 	sed 's/^.*<seg>//;s#</seg></tuv>#<br/>#' |\
+# 	head -100 |\
+# 	sed ': loop; n; a <hr/>' >> $@
+# 	echo '</body></html/>' >> $@
+# 	chmod 644 $@
+
+
+FIND_ALGFILE = find ${CORPUSXML} -maxdepth 1 -type f -name '*.xml.gz'
+SMALL_CES    = ${shell ${FIND_ALGFILE} -size -50M}
+SMALL_INFO   = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/info/%.info,${SMALL_CES})
+
+small-infofiles: ${SMALL_INFO}
