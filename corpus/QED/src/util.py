@@ -36,10 +36,10 @@ def srt_reader(fn: str, max_chunk: int = 50) -> Iterator[List[str]]:
                 elif counter > max_chunk:
                     doyield = True
 
-                    if doyield:
-                        yield lines
-                        counter = 0
-                        lines = []
+                if doyield:
+                    yield lines
+                    counter = 0
+                    lines = []
 
         if lines:
             yield lines
