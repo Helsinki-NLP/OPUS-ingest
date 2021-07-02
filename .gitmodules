@@ -1,0 +1,3 @@
+[submodule "tools/public/uplug"]
+	path = tools/public/uplug
+	url = https://bitbucket.org/tiedemann/uplug.git
