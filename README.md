@@ -30,6 +30,11 @@
 * moses-tokenizer
 * pandas
 
+### Sub-modules
+* uplug
+
+``git submodule update --init``
+
 ## Documentation
 
 
