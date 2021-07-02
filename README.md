@@ -17,12 +17,18 @@
 
 ## Pre-requisites
 
+### General
 * OpusTools
 * OpusTools-perl
 * Moses
 * recode
 * tidy
 
+### Python modules
+* ijson
+* tqdm
+* moses-tokenizer
+* pandas
 
 ## Documentation
 
