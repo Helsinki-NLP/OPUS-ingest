@@ -16,9 +16,14 @@ all: .langdirs .rename
 .PHONY: convert
 convert: ${XMLFILES}
 
+.PHONY: resplit
 resplit: .rename
 	@mkdir -p ../txt
 	python3 resplit2.py -i . -o ../txt
+
+.resplit:
+	${MAKE} resplit
+	touch $@	
 
 .PHONY: cleanup
 cleanup:
@@ -27,6 +32,7 @@ cleanup:
 	find . -type f -name '*.srt' | xargs rm
 	-rmdir `cut -f3 -d'.' QED_v2.0a_srts_list.txt | sort | uniq`
 	rm -f .langdirs
+	rm -f .resplit
 
 ## extract srt files
 AllSrt_Dec2016a:
@@ -47,9 +53,11 @@ AllSrt_Dec2016a:
 	touch $@
 
 ## convert to plain text
-${RAWTXT}: ../txt/%.txt: %.srt
-	@mkdir -p ${dir $@}
-	python3 resplit.py -i $< 2>/dev/null > $@
+${RAWTXT}: .resplit
+
+#${RAWTXT}: ../txt/%.txt: %.srt
+#	@mkdir -p ${dir $@}
+#	python3 resplit.py -i $< 2>/dev/null > $@
 
 ${XMLFILES}: ../xml/%.xml.gz: ../txt/%.txt
 	@mkdir -p ${dir $@}
