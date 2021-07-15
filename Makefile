@@ -2,8 +2,18 @@
 
 PIP = pip
 
+UBUNTU_PACKAGES = libicu-dev \
+		liblingua-sentence-perl \
+		libxml-parser-perl \
+		libxml-writer-perl \
+		recode \
+		parallel \
+		pigz \
+		python3-pip \
+		tidy
+
 install: requirememts.txt
-	sudo apt install libicu-dev
+	sudo apt install ${UBUNTU_PACKAGES}
 	sudo pip install -r requirememts.txt
 	git clone https://github.com/Helsinki-NLP/OpusTools-perl.git
 	${MAKE} install-opustools-perl
