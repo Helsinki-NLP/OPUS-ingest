@@ -217,9 +217,12 @@ ifndef DOWNLOADINFO
 endif
 
 ifndef OTHERVERSIONS
-  OTHERVERSIONS=<h3>Release history:</h3><p><ul>${shell find ${OPUSPUB} -name '${CORPUS}-v*.php' -printf "%f\n" | sort | sed 's/${CORPUS}-\(v.*\).php/<li><a href=\"${CORPUS}-\1.php\">${CORPUS} \1<\/a><\/li>/'}</ul></p>
+  OTHERVERSIONS=<h3>Release history:</h3><p><ul>${shell find ${OPUSPUB}/ -name '${CORPUS}-v*.php' -printf "%f\n" | sort | sed 's/${CORPUS}-\(v.*\).php/<li><a href=\"${CORPUS}-\1.php\">${CORPUS} \1<\/a><\/li>/'}</ul></p>
 endif
 
+print-release-history:
+	@echo '${OTHERVERSIONS}'
+	find ${OPUSPUB}/ -name '${CORPUS}-v*.php' -printf "%f\n"
 
 ${OPUSPUB}/${CORPUS}-${VERSION}.php: ${PACKAGES} ${CORPUS_SAMPLES} ${ALG_SAMPLES} ${INFOFILES}
 	${MKDIR} $(dir $@)
@@ -400,7 +403,7 @@ ${CORPUSRELEASE}/xml/%.zip: # ${CORPUSXML}/%
 	fi
 	find ${TMPDIR}/$@/${CORPUS}/xml -type l | xargs rm -f
 	find ${TMPDIR}/$@/${CORPUS}/xml -name '*.${XMLEXT}' |\
-	xargs -P 8 gunzip -f
+	xargs -P ${THREADS} gunzip -f
 	${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README
 	${MAKE} ${TMPDIR}/$@/LICENSE
 	echo "${CORPUS}/xml/${patsubst %.zip,%,${notdir $@}}" > ${TMPDIR}/$@/INFO
@@ -429,7 +432,7 @@ ${CORPUSRELEASE}/raw/%.zip: # ${CORPUSRAW}/%
 	fi
 	find ${TMPDIR}/$@/${CORPUS}/raw -type l | xargs rm -f
 	find ${TMPDIR}/$@/${CORPUS}/raw -name '*.${XMLEXT}' |\
-	xargs -P 8 gunzip -f
+	xargs -P ${THREADS} gunzip -f
 	${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README
 	${MAKE} ${TMPDIR}/$@/LICENSE
 	echo "${CORPUS}/raw/${patsubst %.zip,%,${notdir $@}}" > ${TMPDIR}/$@/INFO
@@ -457,7 +460,7 @@ ${LANG_UD}: ${CORPUSRELEASE}/parsed/%.zip: ${CORPUSPARSED}/%
 	${MKDIR} ${TMPDIR}/$</${CORPUS}/parsed
 	rsync -a $< ${TMPDIR}/$</${CORPUS}/parsed/
 	find ${TMPDIR}/$</${CORPUS}/parsed -name '*.${XMLEXT}' |\
-	xargs -P 8 gunzip -f
+	xargs -P ${THREADS} gunzip -f
 	${MAKE} PACKAGE=${patsubst ${OPUSCORPORA}/%,%,$<} ${TMPDIR}/$</README
 	${MAKE} ${TMPDIR}/$</LICENSE
 	echo "${patsubst ${OPUSCORPORA}/%,%,$<}" > ${TMPDIR}/$</INFO
@@ -882,30 +885,31 @@ ces_info_file: ${CORPUSRELEASE}/info/${LANGPAIR}.info
 ces_src_info:
 	@echo ${CES_SRC_INFO}
 
-# ## TODO: this is not correct if only a part of the linked files
-# ##       are actually aligned (see, e.g. MultiParaCrawl etc)
-# ${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/xml/%.xml.gz
-# 	${MKDIR} ${dir $@}
-# 	zgrep 'fromDoc' $< | wc -l > $@
-# 	zgrep 'xtargets' $< | wc -l >> $@
-# 	( cd ${CORPUSXML}; \
-# 	  zgrep 'fromDoc' $< | \
-# 	  tr ' ' "\n" | grep 'fromDoc' | cut -f2 -d '"' |\
-# 	  xargs ${GZCAT} | \
-# 	  grep '</w>' | wc -l >> $@ )
-# 	( cd ${CORPUSXML}; \
-# 	  zgrep 'toDoc' $< | \
-# 	  tr ' ' "\n" | grep 'toDoc' | cut -f2 -d '"' |\
-# 	  xargs ${GZCAT} | \
-# 	  grep '</w>' | wc -l >> $@ )
-# 	chmod 644 $@
-
-## NEW: use opus2bitext to get those counts
-${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/xml/%.xml.gz
+## NEW: use opus-bitextsize to get those counts
+## NEW: create word count files to make it more efficient
+${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/xml/%.xml.gz log/.bitext-word-counts
 	mkdir -p ${dir $@}
 	${GZCAT} $< |\
-	${OPUS2MOSES} -d ${CORPUSXML} -I -E -v > $@
+	opus-bitextsize -d ${CORPUSXML} > $@
 	chmod 644 $@
+
+## make word count files for each corpus file
+## if we don't have too many (>=10000) of them
+log/.bitext-word-counts:
+	if [ `find ${CORPUSXML} -mindepth 2 -name '*.xml.gz' | head -10000 | wc -l` -lt 10000 ]; then \
+	  find ${CORPUSXML} -mindepth 2 -name '*.xml.gz' | \
+	  sed 's/\.xml\.gz$$/.counts.gz/' | \
+	  xargs -P ${THREADS} ${MAKE}; \
+	fi
+	touch $@
+
+## safe word counts to support making info files above
+${CORPUSXML}/%.counts.gz: ${CORPUSXML}/%.xml.gz
+	@mkdir -p ${dir $@}
+	${GZIP} -cd < $< | opus-countwords | grep . | gzip -c > $@
+
+
+
 
 txt_info: ${TXT_INFO}
 

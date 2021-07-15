@@ -17,7 +17,7 @@ COPYRIGHT =
 # EXTRAHTML is code which will be put just after the 'Download' header
 # CITENOTE if you want to change the default reference to be cited
 
-SRCHTML=<p>JW300 is a parallel corpus of over 300 languages with around 100 thousand parallel sentences per language pair on average. The corpus has been compiled by Željko Agić and Ivan Vulić.</p> Version 1c provides properly raw untokenized texts and als fixes some additional problems with language codes. \
+SRCHTML=<p>JW300 is a parallel corpus of over 300 languages with around 100 thousand parallel sentences per language pair on average. The corpus has been compiled by Željko Agić and Ivan Vulić.</p> Version 1c provides proper raw untokenized texts and also fixes some additional problems with language codes. \
 <h3>License</h3><p>For all practical purpose, the license is CC-BY-NC-SA.</p><p>Still, <a href="https://www.jw.org/en/terms-of-use/">jw.org maintains custom terms of use</a>; in doubt, make sure to observe their license!</p>
 EXTRAHTML=
 
@@ -26,7 +26,7 @@ CITENOTE=<p>Please, cite the following paper: <a href="https://www.aclweb.org/an
 DOWNLOADINFO=<p>Below you can download data files for all language pairs in the <a href="http://opus.nlpl.eu/trac/wiki/DataFormats">OPUS-specific XML format</a>. For each bitext you can find the standoff sentence alignment file in XCES Align format that links sentences from documents in source and target language. JW300 includes a large number of languages and, therefore, we do not provide pre-compiled plain text bitexts in Moses and TMX format. We recommend to use <a href="https://pypi.org/project/opustools-pkg/">opus-tools</a> instead to convert the data into the format you like to use. <code>opus_read</code> from that package provides a convenient tool for reading the native aligned XML files and to convert them to plain text (moses) and TMX format. The tool can also be used to fetch relevant files from OPUS on the fly and to filter the data if necssary. <a href="https://pypi.org/project/opustools-pkg/">Read the documentation</a> for more details. Here is a simple example for using <code>opus_read</code> to download the Afrikaans-Bulgarian bitext from JW300 and to convert it to plain text (Moses) format (see the -wm flag):\
 <blockquote>\
 <code>\
-pip install opustools-pkg</br>\
+pip install opustools</br>\
 opus_read -d JW300 -s af -t bg -wm moses -w jw300.af jw300.bg\
 </code>\
 </blockquote>\

@@ -74,6 +74,35 @@ new-sentalign-source-jobs:
 
 
 
+
+## copy even uplug and other local apps to tmpdir
+## to avoid IO latency problems with large corpora with many files
+## (JW300 for example - don't know if this helps ....)
+
+UPLUG_ORIGHOME  = ${patsubst %/bin/uplug,%,${shell which uplug}}
+UPLUG_LOCALHOME = $(TMPDIR)/local
+
+sentalign-source-localuplug-jobs:
+	mkdir -p ${CORPUSHOME}/log
+	${MAKE} ${TMPLANGTAR}
+	for s in ${LANGUAGES}; do \
+	  ${MAKE} SRC=$$s HPC_DISK=500 sentalign-source-localuplug.submit; \
+	  mv sentalign-source-localuplug.submit ${CORPUSHOME}/log/sentalign-source-$$s.submit; \
+	done
+
+sentalign-source-localuplug: 
+	mkdir -p ${UPLUG_LOCALHOME}
+	-rsync -za ${UPLUG_ORIGHOME}/bin ${UPLUG_LOCALHOME}/
+	-rsync -za ${UPLUG_ORIGHOME}/lib ${UPLUG_LOCALHOME}/
+	-rsync -za ${UPLUG_ORIGHOME}/share ${UPLUG_LOCALHOME}/
+	-rsync -za ${UPLUG_ORIGHOME}/include ${UPLUG_LOCALHOME}/
+	${MAKE} UPLUG=${UPLUG_LOCALHOME}/bin/uplug \
+		PERL5LIB=${UPLUG_LOCALHOME}/lib:${PERL5LIB} \
+		PATH=${UPLUG_LOCALHOME}/bin:${PATH} \
+	sentalign-source
+
+
+
 # make sentalign-all: make sentence alignment files
 #                     for all language pairs
 #
@@ -81,9 +110,22 @@ new-sentalign-source-jobs:
 
 .PHONY: sentalign-all align-all all-align
 sentalign-all align-all all-align:
-	${MAKE} ${TMPLANGTAR}
-	${MAKE} ${SENTALIGNFILES}
+	${MAKE} sentalign-all-tmplang
+	${MAKE} sentalign-all-files
 	${MAKE} cleanup
+
+.PHONY: sentalign-all-tmplang sentalign-all-files
+sentalign-all-tmplang: ${TMPLANGTAR}
+sentalign-all-files: ${SENTALIGNFILES}
+
+sentalign-print:
+	echo ${SENTALIGNFILES}
+
+srcsentalign-print:
+	echo ${SRCSENTALIGNFILES}
+
+
+
 
 sentalign-print:
 	echo ${SENTALIGNFILES}

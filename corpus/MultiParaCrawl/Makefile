@@ -150,3 +150,24 @@ SMALL_CES    = ${shell ${FIND_ALGFILE} -size -50M}
 SMALL_INFO   = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/info/%.info,${SMALL_CES})
 
 small-infofiles: ${SMALL_INFO}
+
+CESNEW_INFO  = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/info-new/%.info,${CES})
+CORPUSCOUNTS = ${patsubst %.xml.gz,%.counts.gz,\
+		${shell find ${CORPUSXML} -mindepth 2 -type f -name '*.xml.gz'}}
+
+create-ces-info:
+	${MAKE} corpuscounts
+	${MAKE} new-ces-info
+
+new-ces-info: ${CESNEW_INFO}
+corpuscounts: ${CORPUSCOUNTS}
+
+%.counts.gz: %.xml.gz
+	@mkdir -p ${dir $@}
+	${GZIP} -cd < $< | opus-countwords | grep . | gzip -c > $@
+
+${CORPUSRELEASE}/info-new/%.info: ${CORPUSRELEASE}/xml/%.xml.gz
+	mkdir -p ${dir $@}
+	${GZCAT} $< |\
+	opus-bitextsize -d ${CORPUSXML} > $@
+	chmod 644 $@

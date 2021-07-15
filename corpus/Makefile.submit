@@ -94,7 +94,7 @@ endif
 
 # run a recipe on a local copy in TMPDIR
 # NOTE: may overwrite existing files
-#       when copying back and force!!!
+#       when copying back!!!
 
 %-runlocal:
 	mkdir -p ${TMPDIR}/OPUS/corpus

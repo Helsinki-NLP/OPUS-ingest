@@ -7,6 +7,8 @@
 #--------------------------------------------------------------------
 
 
+# SHELL              := bash
+
 ## CSC specific information
 
 CSC_WORK_PROJECT    ?= project_2003093
@@ -29,6 +31,8 @@ RELEASE_CONTAINER_BASENAME = OPUS
 ifneq (${wildcard /scratch/project_2001569/tmp},)
   TMPDIR := /scratch/project_2001569/tmp
 endif
+
+TMPDIR   ?= /tmp
 
 ifdef LOCAL_SCRATCH
   TMPDIR := ${LOCAL_SCRATCH}
