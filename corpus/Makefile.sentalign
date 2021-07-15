@@ -169,6 +169,17 @@ ${SENTALIGNFILES}: %.xml.gz: 	$$(firstword $$(subst -, ,$(notdir %))).tar \
 	rsync -a Makefile* ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/xml/
 	tar -C ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/xml -xf $(firstword $^)
 	tar -C ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/xml -xf $(lastword $^)
+	if [ -e $@ ]; then \
+	  cd ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/xml; \
+	  zcat ${PWD}/$@ | opus-split-align; \
+	  find ${@:.xml.gz=} -name '*.xml.gz' | \
+	  xargs zgrep '<linkGrp .*</linkGrp>' | \
+	  cut -f1 -d':' | sort -u | xargs rm -f; \
+	  mkdir -p ${CORPUSHOME}/xml-backup; \
+	  mv -f ${PWD}/$@ ${CORPUSHOME}/xml-backup/; \
+	  touch ${patsubst %.tar,%,$(firstword $^)}; \
+	  touch ${patsubst %.tar,%,$(lastword $^)}; \
+	fi
 	-ln -s ${OPUSHOME}/*    ${LOCALTMP}/$@/OPUS/
 	-ln -s ${OPUSCORPORA}/* ${LOCALTMP}/$@/OPUS/corpus/
 	-ln -s ${CORPUSHOME}/*  ${LOCALTMP}/$@/OPUS/corpus/${CORPUS}/
