@@ -483,7 +483,7 @@ ${CORPUSRELEASE}/mono/%.tok.gz: ${CORPUSXML}/%
 	if [ -d $< ]; then \
 	  find $</ -name '*.${CORPUS_EXT}.gz' -type f | \
 	  xargs ${GZCAT} | \
-	  ${PARALLEL} perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g;chomp;s/<\/s>/<\/s>\n/' |\
+	  perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g;chomp;s/<\/s>/<\/s>\n/' |\
 	  ${PARALLEL} opus2text | \
 	  ${GZIP} -c > $@; \
 	fi
@@ -497,7 +497,7 @@ ${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRAW}/%
 	if [ -d $< ]; then \
 	  find $</ -name '*.${CORPUS_EXT}.gz' -type f | \
 	  xargs ${GZCAT} | \
-	  ${PARALLEL} perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g;chomp;s/<\/s>/<\/s>\n/' |\
+	  perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g;chomp;s/<\/s>/<\/s>\n/' |\
 	  ${PARALLEL} opus2text | \
 	  ${GZIP} -c > $@; \
 	fi
@@ -516,13 +516,16 @@ freq_counts: ${FREQ_COUNTS}
 ${CORPUSRELEASE}/freq/%.freq.gz: ${CORPUSRELEASE}/mono/%.tok.gz
 	@${MKDIR} ${dir $@}
 	${GZCAT} $< | \
-	${PARALLEL} sed 's/[[:upper:]]/\L/g' |\
-	${PARALLEL} tr ' ' "\n" | \
+	sed 's/[[:upper:]]/\L/g' |\
+	tr ' ' "\n" | \
 	${SORT} | uniq -c | ${SORT} -nr | \
 	${GZIP} -c > $@
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
+
+#	${PARALLEL} sed 's/[[:upper:]]/\L/g' |\
+#	${PARALLEL} tr ' ' "\n" | 
 
 
 ## not good enough for unicode:
@@ -853,9 +856,9 @@ ${LANG_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/raw/%.zip ${CORPUSR
 	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSXML}/%,$@}/ -name '*.${XMLEXT}' -type f | \
 	wc -l > $@
 	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSXML}/%,$@}/ -name '*.${XMLEXT}' -type f | \
-	xargs ${GZCAT} | ${PARALLEL} grep '</s>' | wc -l >> $@
+	xargs ${GZCAT} | grep '</s>' | wc -l >> $@
 	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSXML}/%,$@}/ -name '*.${XMLEXT}' -type f | \
-	xargs ${GZCAT} | ${PARALLEL} grep '</w>' | wc -l >> $@
+	xargs ${GZCAT} | grep '</w>' | wc -l >> $@
 	chmod 644 $@
 
 # ${LANG_INFO}: ${CORPUSXML}/%.info: ${CORPUSXML}/%
@@ -868,22 +871,30 @@ ${LANG_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/raw/%.zip ${CORPUSR
 
 ces_info: ${CES_INFO}
 
-${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/xml/%.xml.gz
-	${MKDIR} ${dir $@}
-	zgrep 'fromDoc' $< | wc -l > $@
-	zgrep 'xtargets' $< | wc -l >> $@
-	( cd ${CORPUSXML}; \
-	  zgrep 'fromDoc' $< | \
-	  tr ' ' "\n" | grep 'fromDoc' | cut -f2 -d '"' |\
-	  xargs ${GZCAT} | \
-	  ${PARALLEL} grep '</w>' | wc -l >> $@ )
-	( cd ${CORPUSXML}; \
-	  zgrep 'toDoc' $< | \
-	  tr ' ' "\n" | grep 'toDoc' | cut -f2 -d '"' |\
-	  xargs ${GZCAT} | \
-	  ${PARALLEL} grep '</w>' | wc -l >> $@ )
-	chmod 644 $@
+# ## TODO: this is not correct if only a part of the linked files
+# ##       are actually aligned (see, e.g. MultiParaCrawl etc)
+# ${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/xml/%.xml.gz
+# 	${MKDIR} ${dir $@}
+# 	zgrep 'fromDoc' $< | wc -l > $@
+# 	zgrep 'xtargets' $< | wc -l >> $@
+# 	( cd ${CORPUSXML}; \
+# 	  zgrep 'fromDoc' $< | \
+# 	  tr ' ' "\n" | grep 'fromDoc' | cut -f2 -d '"' |\
+# 	  xargs ${GZCAT} | \
+# 	  grep '</w>' | wc -l >> $@ )
+# 	( cd ${CORPUSXML}; \
+# 	  zgrep 'toDoc' $< | \
+# 	  tr ' ' "\n" | grep 'toDoc' | cut -f2 -d '"' |\
+# 	  xargs ${GZCAT} | \
+# 	  grep '</w>' | wc -l >> $@ )
+# 	chmod 644 $@
 
+## NEW: use opus2bitext to get those counts
+${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/xml/%.xml.gz
+	mkdir -p ${dir $@}
+	${GZCAT} $< |\
+	${OPUS2MOSES} -d ${CORPUSXML} -I -E -v > $@
+	chmod 644 $@
 
 txt_info: ${TXT_INFO}
 
@@ -917,10 +928,10 @@ ${TMX_INFO}: ${CORPUSRELEASE}/info/%.tmx.info: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	 zgrep '</tu>' $< | wc -l > $@; \
 	 zgrep "xml:lang=\"$$S\"" $< | \
-	  	${PARALLEL} sed 's|^.*<seg>||;s|</seg>.*$$||;' | \
+	  	sed 's|^.*<seg>||;s|</seg>.*$$||;' | \
 	  	wc -w >> $@; \
 	 zgrep "xml:lang=\"$$T\"" $< | \
-	  	${PARALLEL} sed 's|^.*<seg>||;s|</seg>.*$$||;' | \
+	  	sed 's|^.*<seg>||;s|</seg>.*$$||;' | \
 	  	wc -w >> $@; )
 	chmod 644 $@
 
