@@ -166,8 +166,13 @@ html-local:
 	-rm -fr ${TMPDIR}/OPUS/corpus/${CORPUS}
 	-rm -fr ${TMPDIR}/OPUS/public_html/${CORPUS}*
 
-release packages: ${PACKAGES}
-	echo '${VERSION}	${shell date}' > ${OPUSRELEASE}/${CORPUS}/releases.txt
+release packages: ${PACKAGES} ${CORPUSRELEASE}.info ${OPUSRELEASE}/${CORPUS}/info.txt
+	echo '${VERSION}	${shell date}' >> ${OPUSRELEASE}/${CORPUS}/releases.txt
+	rsync ${OPUSRELEASE}/${CORPUS}/releases.txt ${CORPUSHOME}/releases.txt
+	rsync ${OPUSRELEASE}/${CORPUS}/info.txt ${CORPUSHOME}/info.txt
+	rsync -zav ${OPUSRELEASE}/${CORPUS}/*.info ${CORPUSHOME}/
+	-rsync -zav ${OPUSRELEASE}/${CORPUS}/index*.txt ${CORPUSHOME}/
+	-git add ${CORPUSHOME}/info.txt ${CORPUSHOME}/releases.txt ${CORPUSHOME}/*.info ${CORPUSHOME}/index*.txt
 
 refresh-html:
 	rm -f ${OPUSPUB}/${CORPUS}.php
@@ -230,10 +235,10 @@ ${OPUSPUB}/${CORPUS}-${VERSION}.php: ${PACKAGES} ${CORPUS_SAMPLES} ${ALG_SAMPLES
 	chmod 755 ${OPUSPUB}/${CORPUS}
 	${MAKEHTML} -h ${OPUSPUB} -o ${OPUSHOME} -d ${OPUSRELEASE} \
 		${CORPUS} ${VERSION} |\
-	sed -e 's#<h3>Download</h3>#<h3>Download</h3>${DOWNLOADINFO}${EXTRAHTML}${OTHERVERSIONS}#' \
-	    -e 's#<h3>Download</h3>#${CITENOTE}<h3>Download</h3>#' \
-	    -e 's#<h1>${CORPUS}${VERSION}</h1>#<h1>${CORPUS} ${VERSION}</h1>${SRCHTML}#' \
-	    -e 's#<h1>${CORPUS}</h1>#<h1>${CORPUS} ${VERSION}</h1>${SRCHTML}#' > $@
+	sed -e 's|<h3>Download</h3>|<h3>Download</h3>${DOWNLOADINFO}${EXTRAHTML}${OTHERVERSIONS}|' \
+	    -e 's|<h3>Download</h3>|${CITENOTE}<h3>Download</h3>|' \
+	    -e 's|<h1>${CORPUS}${VERSION}</h1>|<h1>${CORPUS} ${VERSION}</h1>${SRCHTML}|' \
+	    -e 's|<h1>${CORPUS}</h1>|<h1>${CORPUS} ${VERSION}</h1>${SRCHTML}|' > $@
 	chmod 644 $@
 #	chmod go+r $@
 
@@ -909,8 +914,6 @@ ${CORPUSXML}/%.counts.gz: ${CORPUSXML}/%.xml.gz
 	${GZIP} -cd < $< | opus-countwords | grep . | gzip -c > $@
 
 
-
-
 txt_info: ${TXT_INFO}
 
 ${TXT_INFO}: ${CORPUSRELEASE}/info/%.txt.info: ${CORPUSRELEASE}/moses/%.txt.zip
@@ -949,6 +952,14 @@ ${TMX_INFO}: ${CORPUSRELEASE}/info/%.tmx.info: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	  	sed 's|^.*<seg>||;s|</seg>.*$$||;' | \
 	  	wc -w >> $@; )
 	chmod 644 $@
+
+${OPUSRELEASE}/%.info:
+	cd ${OPUSRELEASE}; \
+	find ${patsubst ${OPUSRELEASE}/%.info,%/info,$@} -name '*.info' | sort |\
+	xargs grep . > $@
+
+${OPUSRELEASE}/${CORPUS}/info.txt: $(wildcard ${OPUSRELEASE}/${CORPUS}/*.info)
+	cat ${OPUSRELEASE}/${CORPUS}/*.info > $@
 
 
 

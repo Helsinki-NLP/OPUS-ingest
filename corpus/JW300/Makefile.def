@@ -9,7 +9,7 @@ CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\
 ## current version
 VERSION = v1c
 
-LICENSE = CC-BY-NC-SA
+LICENSE = CLARIN ACA end-user license +NC 1.0
 COPYRIGHT = 
 
 # with SRCHTML you can define some extra HTML code that will be placed just
@@ -18,7 +18,7 @@ COPYRIGHT =
 # CITENOTE if you want to change the default reference to be cited
 
 SRCHTML=<p>JW300 is a parallel corpus of over 300 languages with around 100 thousand parallel sentences per language pair on average. The corpus has been compiled by Željko Agić and Ivan Vulić.</p> Version 1c provides proper raw untokenized texts and also fixes some additional problems with language codes. \
-<h3>License</h3><p>For all practical purpose, the license is CC-BY-NC-SA.</p><p>Still, <a href="https://www.jw.org/en/terms-of-use/">jw.org maintains custom terms of use</a>; in doubt, make sure to observe their license!</p>
+<h3>License</h3><p>CLARIN ACA end-user license +NC 1.0</p>
 EXTRAHTML=
 
 CITENOTE=<p>Please, cite the following paper: <a href="https://www.aclweb.org/anthology/papers/P/P19/P19-1310/">Željko Agić, Ivan Vulić: <i>"JW300: A Wide-Coverage Parallel Corpus for Low-Resource Languages"</i></a>, In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics (ACL), 2019. Acknowledge also OPUS by <a href="http://opus.lingfil.uu.se/LREC2012.txt">citing the following article</a>:<br/> J. Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)<br/></p>

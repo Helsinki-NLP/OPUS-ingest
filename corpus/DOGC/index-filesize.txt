@@ -1,0 +1,22 @@
+      559 index-filesize.txt
+     1189 index-long.txt
+      280 index.txt
+      518 info.txt
+       32 releases.txt
+      374 v2/info-files.tar.gz
+ 81765565 v2/xml/ca-es.xml.gz
+873847666 v2/xml/ca.zip
+1555033088 v2/xml/es.zip
+      800 v2/moses/README
+480636298 v2/moses/ca-es.txt.zip
+254904289 v2/raw/ca.zip
+255834077 v2/raw/es.zip
+  3980906 v2/freq/ca.freq.gz
+  4250632 v2/freq/es.freq.gz
+ 50660548 v2/smt/ca-es.alg.zip
+      798 v2/tmx/README
+331724078 v2/tmx/ca-es.tmx.gz
+214190646 v2/mono/ca.tok.gz
+211927684 v2/mono/ca.txt.gz
+213762574 v2/mono/es.tok.gz
+213066818 v2/mono/es.txt.gz
