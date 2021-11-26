@@ -26,8 +26,8 @@ include ../Makefile.def
 
 # LANGUAGES = $(sort $(subst .,,$(suffix $(subst .gz,,${wildcard src/*.??}))))
 # FILES     = $(sort $(basename $(subst .gz,,${wildcard src/*.??})))
-LANGUAGES = $(sort $(subst .,,$(suffix $(subst .gz,,${wildcard src/liv4ever-train/*.??}))))
-FILES     = $(sort $(basename $(subst .gz,,${wildcard src/liv4ever-train/*.??})))
+LANGUAGES = $(sort $(subst .,,$(suffix $(subst .gz,,${wildcard src/liv4ever-train/*.??} ${wildcard src/liv4ever-train/*.???}))))
+FILES     = $(sort $(basename $(subst .gz,,${wildcard src/liv4ever-train/*.??} ${wildcard src/liv4ever-train/*.???})))
 CONVERTED = ${patsubst %,%_done,${FILES}}
 
 ## make all:
@@ -78,6 +78,12 @@ include ../Makefile.tokenize-moses
 
 ## change this if moses2opus is not in your PATH
 MOSES2OPUS = moses2opus
+
+RENAMED = $(patsubst %.li,%.liv,${wildcard src/*/*.li})
+.PHONY: rename
+rename: ${RENAMED}
+${RENAMED}: %.liv: %.li
+	mv $< $@
 
 
 ## convert

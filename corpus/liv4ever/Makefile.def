@@ -39,7 +39,7 @@ the following sources, with sentence counts per language pair:<br></p> \
 <li><b>Songs</b> - material crawled off <a href="http://lyricstranslate.com" target="_blank">lyricstranslate.com</a>;<br>liv-en: 54, liv-lv: 54, liv-fr: 31<br></li> \
 </ul> \
  \
-<p>A small part of the corpus is held out in order to be used as a <b>translation benchmark (TODO link to tarball). </b>Its material was manually translated in order to have each sentence translated in all four languages (Livonian-English-Latvian-Estonian). The material sources and resulting sentence counts:<br></p> \
+<p>A small part of the corpus is held out in order to be used as a <b>translation benchmark (dev and test set, see below for download). </b>Its material was manually translated in order to have each sentence translated in all four languages (Livonian-English-Latvian-Estonian). The material sources and resulting sentence counts:<br></p> \
  \
 <ul> \
 <li><b>Livones.net</b> - web crawl of the Livonian culture, language and history <a href="http://www.livones.net/en" target="_blank">web portal</a>;<br>163 sentences<br></li> \
@@ -50,8 +50,6 @@ the following sources, with sentence counts per language pair:<br></p> \
 <li><b>Trilium</b> - 172 sentences</li> \
 <li><b>JEFUL</b> - 120 sentences<br></li> \
 </ul> \
- \
-<p>License: <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA</a> - Creative Commons Attribution-ShareAlike</p></div></div>
 
 EXTRAHTML=<p><h3>Other Download Packages</h3> \
 <ul>\

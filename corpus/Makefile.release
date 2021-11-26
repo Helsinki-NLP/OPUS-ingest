@@ -953,7 +953,7 @@ ${TMX_INFO}: ${CORPUSRELEASE}/info/%.tmx.info: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	  	wc -w >> $@; )
 	chmod 644 $@
 
-${OPUSRELEASE}/%.info:
+${OPUSRELEASE}/%.info: info
 	cd ${OPUSRELEASE}; \
 	find ${patsubst ${OPUSRELEASE}/%.info,%/info,$@} -name '*.info' | sort |\
 	xargs grep . > $@
