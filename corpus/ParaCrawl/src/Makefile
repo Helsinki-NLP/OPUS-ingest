@@ -29,6 +29,7 @@ BONUS7_URL     = https://s3.amazonaws.com/web-language-models/paracrawl/bonus
 RELEASEURL     = https://s3.amazonaws.com/web-language-models/paracrawl/release${RELEASE}
 
 
+## release 8
 RELEASE8_TMX_URLS = $(shell wget -q -O - https://www.paracrawl.eu/ | \
 			grep 'tmx\.gz' | grep -v deferred | grep -v roam |\
 			sed "s/^.*href='\([^']*\)'.*$$/\1/" |\
@@ -42,10 +43,16 @@ RELEASE8_TMX_URLS_ORG = $(shell wget -q -O - https://www.paracrawl.eu/ | \
 RELEASE8_TMX = ${patsubst %,release8/%,${notdir ${RELEASE8_TMX_URLS}}}
 
 
-RELEASED_TMX      = ${RELEASE8_TMX}
+## release 9
+RELEASE_TMX_URLS = $(shell wget -q -O - https://www.paracrawl.eu/ | \
+			grep 'tmx\.gz' | grep -v deferred | grep -v roam |\
+			sed "s/^.*href='\([^']*\)'.*$$/\1/")
+
+RELEASE_TMX_URLS += http://web-language-models.s3-website-us-east-1.amazonaws.com/paracrawl/bonus/en-uk-v1.tmx.gz
+
+RELEASED_TMX      = ${notdir ${RELEASE_TMX_URLS}} paracrawl-koehn.en-uk.tmx.gz
 CONVERTED_BITEXTS = ${patsubst %.tmx.gz,%.done,${RELEASED_TMX}}
 MAXSIZE = 50000
-
 
 
 
@@ -59,6 +66,12 @@ all: ${CONVERTED_BITEXTS}
 .PHONY: fetch
 fetch: fetch${RELEASE}
 
+
+fetch${RELEASE}:
+	@for f in ${RELEASE_TMX_URLS}; do echo "wget $$f";wget -q $$f; done
+	@touch $@
+
+
 fetch8:
 	mkdir -p release8
 	-for t in ${RELEASE8_TMX_URLS}; do \
@@ -69,7 +82,6 @@ fetch8:
 	  fi \
 	done
 	touch $@
-
 
 
 .PHONY: fetch7
@@ -111,7 +123,11 @@ ${CONVERTED_BITEXTS}: %.done: %.tmx.gz
 	  tmx2opus -p ${MAXSIZE} -o $(notdir $(@:.done=.xml.gz)) )
 	touch $@
 
+%.tmx.gz: fetch${RELEASE}
 
+
+
+## OLD?
 
 convert-new: ../newraw
 

@@ -495,13 +495,18 @@ ${CORPUSRELEASE}/mono/%.tok.gz: ${CORPUSXML}/%
 	if [ -d $< ]; then \
 	  find $</ -name '*.${CORPUS_EXT}.gz' -type f | \
 	  xargs ${GZCAT} | \
-	  perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g;chomp;s/<\/s>/<\/s>\n/' |\
-	  ${PARALLEL} opus2text | \
+	  perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g;' |\
+	  opus2text | \
 	  ${GZIP} -c > $@; \
 	fi
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
+
+
+## attempt to do it with GNU parallel but it produces some problems with the XML parser
+#	  perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g;chomp;s/<\/s>/<\/s>\n/' |\
+#	  ${PARALLEL} opus2text |
 
 
 ${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRAW}/%
@@ -509,13 +514,17 @@ ${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRAW}/%
 	if [ -d $< ]; then \
 	  find $</ -name '*.${CORPUS_EXT}.gz' -type f | \
 	  xargs ${GZCAT} | \
-	  perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g;chomp;s/<\/s>/<\/s>\n/' |\
-	  ${PARALLEL} opus2text | \
+	  perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g;' |\
+	  opus2text | \
 	  ${GZIP} -c > $@; \
 	fi
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
+
+## attempt to do it with GNU parallel but it produces some problems with the XML parser
+#	  perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g;chomp;s/<\/s>/<\/s>\n/' |\
+#	  ${PARALLEL} opus2text | \
 
 
 #----------------------------------------------------------------------------
@@ -528,7 +537,7 @@ freq_counts: ${FREQ_COUNTS}
 ${CORPUSRELEASE}/freq/%.freq.gz: ${CORPUSRELEASE}/mono/%.tok.gz
 	@${MKDIR} ${dir $@}
 	${GZCAT} $< | \
-	sed 's/[[:upper:]]/\L/g' |\
+	sed "s/\(.*\)/\L\1/" |\
 	tr ' ' "\n" | \
 	${SORT} | uniq -c | ${SORT} -nr | \
 	${GZIP} -c > $@
@@ -536,7 +545,7 @@ ${CORPUSRELEASE}/freq/%.freq.gz: ${CORPUSRELEASE}/mono/%.tok.gz
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
 
-#	${PARALLEL} sed 's/[[:upper:]]/\L/g' |\
+#	${PARALLEL} sed "s/\(.*\)/\L\1/" |\
 #	${PARALLEL} tr ' ' "\n" | 
 
 
@@ -576,8 +585,8 @@ ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	echo '</head>' >> $@
 	echo '<body>' >> $@
 	echo '<p>' >> $@
-	zgrep '</tuv>' $< |\
-	sed 's/^.*<seg>//;s#</seg></tuv>#<br/>#' |\
+	zcat $< | perl -pe 's/(<\/seg>.*)\n/$$1/s' | grep '</tuv>' |\
+	sed 's/^.*<seg>//;s#</seg> *</tuv>#<br/>#' |\
 	head -100 |\
 	sed ': loop; n; a <hr/>' >> $@
 	echo '</body></html/>' >> $@
@@ -953,15 +962,22 @@ ${TMX_INFO}: ${CORPUSRELEASE}/info/%.tmx.info: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	  	wc -w >> $@; )
 	chmod 644 $@
 
-${OPUSRELEASE}/%.info: info
-	cd ${OPUSRELEASE}; \
-	find ${patsubst ${OPUSRELEASE}/%.info,%/info,$@} -name '*.info' | sort |\
-	xargs grep . > $@
+## TODO: is it enough to check whether the info dir exists?
+${OPUSRELEASE}/%.info:
+	if [ -e $@ ]; then cp $@ $@.$(shell date +%F); fi
+	${MAKE} info
+	if [ -d ${OPUSRELEASE}/%.info,%/info,$@} ]; then \
+	  cd ${OPUSRELEASE}; \
+	  find ${patsubst ${OPUSRELEASE}/%.info,%/info,$@} -name '*.info' | sort |\
+	  xargs grep . > $@; \
+	fi
 
+## TODO: do we need to download the old info file first?
 ${OPUSRELEASE}/${CORPUS}/info.txt: $(wildcard ${OPUSRELEASE}/${CORPUS}/*.info)
-	cat ${OPUSRELEASE}/${CORPUS}/*.info > $@
-
-
+	cat ${OPUSRELEASE}/${CORPUS}/*.info > $@.new
+	cat $@ $@.new | sort > $@.merged
+	mv $@.merged $@
+	rm -f $@.new
 
 
 delete-empty-bitexts:

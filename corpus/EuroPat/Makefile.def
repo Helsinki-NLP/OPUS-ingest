@@ -3,7 +3,7 @@
 # name & version of the corpus
 
 CORPUS  = EuroPat
-RELEASE = 2
+RELEASE = 3
 VERSION = v${RELEASE}
 
 ## current release to work with

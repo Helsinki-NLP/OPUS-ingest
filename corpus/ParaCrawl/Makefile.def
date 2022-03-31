@@ -6,7 +6,7 @@ CORPUS  = ParaCrawl
 # FILTER  = zipporah
 FILTER  = bicleaner07
 
-RELEASE = 8
+RELEASE = 9
 VERSION = v${RELEASE}
 
 # with SRCHTML you can define some extra HTML code that will be placed just

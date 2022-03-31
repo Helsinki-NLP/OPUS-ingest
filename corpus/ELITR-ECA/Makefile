@@ -21,12 +21,6 @@ include Makefile.def
 include ../Makefile.def
 
 
-## LANGUAGES = unique file extensions of files in src (.gz will be removed)
-## FILES = file basenames
-
-LANGUAGES = $(sort $(subst .,,$(suffix $(subst .gz,,${wildcard src/*.??}))))
-FILES     = $(sort $(basename $(subst .gz,,${wildcard src/*.??})))
-CONVERTED = ${patsubst %,%_done,${FILES}}
 
 ## make all:
 ## - convert (see below)
@@ -37,12 +31,18 @@ CONVERTED = ${patsubst %,%_done,${FILES}}
 
 .PHONY: all
 all:
-	${MAKE} convert
+	${MAKE} -C src all
+	${MAKE} xml/Makefile
+	${MAKE} -C xml create-align-files
 	${MAKE} annotate
-	${MAKE} udparse
-	${MAKE} wordalign
 	${MAKE} cwb-index
 	${MAKE} publish
+
+.PHONY: extra
+extra:
+	${MAKE} udparse
+	${MAKE} wordalign
+
 
 ## standard procedures are specified in the following makefiles
 ##
@@ -66,52 +66,7 @@ include ../Makefile.udparse
 ##   Makefile.annotate ..... all annotation in Uplug
 
 
-include ../Makefile.tokenize-moses
-# include ../Makefile.tokenize
+include ../Makefile.tokenize-fast
 # include ../Makefile.tag
 # include ../Makefile.annotate
-
-
-## change this if moses2opus is not in your PATH
-MOSES2OPUS = moses2opus
-
-
-## convert
-.PHONY: convert
-convert: ${CONVERTED} xml/Makefile
-	${MAKE} -C xml create-align-files
-
-${CONVERTED}:
-	mkdir -p raw xml log
-	for s in $(sort $(subst .,,$(suffix $(subst .gz,,${wildcard $(@:_done=)*})))); do \
-	  for t in $(sort $(subst .,,$(suffix $(subst .gz,,${wildcard $(@:_done=)*})))); do \
-	    if [ "$$s" != "$$t" ]; then \
-	      if [ ! -e "xml/$$t-$$s/$(notdir $(@:_done=)).xml.gz" ]; then \
-		if [ -e "$(@:_done=).$$s.gz" ]; then \
-		  src="$(@:_done=).$$s.gz"; \
-		else \
-		  src="$(@:_done=).$$s"; \
-		fi; \
-		if [ -e "$(@:_done=).$$t.gz" ]; then \
-		  trg="$(@:_done=).$$t.gz"; \
-		else \
-		  trg="$(@:_done=).$$t"; \
-		fi; \
-		mkdir -p xml/$$s-$$t; \
-		if [ -e $$src ]; then \
-		  if [ -e $$trg ]; then \
-		    cd raw; \
-		    ${MOSES2OPUS} -z \
-			-s $$s -t $$t \
-			-b $(notdir $(@:_done=)) \
-			../$$src ../$$trg |\
-		    gzip -c > ../xml/$$s-$$t/$(notdir $(@:_done=)).xml.gz; \
-		    cd ..; \
-	          fi \
-	        fi \
-	      fi \
-	    fi \
-	  done \
-	done
-	touch $@
 

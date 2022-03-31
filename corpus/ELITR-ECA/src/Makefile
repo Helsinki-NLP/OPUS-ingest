@@ -7,6 +7,8 @@ include ../../Makefile.submit
 
 MONOTEXTS := ${wildcard elitr-eca-v1.0/monolingual/??/*.txt}
 MONOXML   := ${patsubst elitr-eca-v1.0/monolingual/%.txt,../raw/%.xml.gz,${MONOTEXTS}}
+TIDYRAW   := ${MONOXML:.xml.gz=.tidy.xml.gz}
+TIDYXML   := ${patsubst ../raw/%,../xml/%,${TIDYRAW}}
 
 LANGPAIRS := $(notdir ${wildcard elitr-eca-v1.0/parallel/??2??})
 LANGPAIR  = ${firstword ${LANGPAIRS}}
@@ -23,7 +25,6 @@ BITEXTS   = ${patsubst elitr-eca-v1.0/parallel/${LANGPAIR}/%.tsv,\
 
 CLEANUP_SCRIPTS = dos2unix | perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;'
 
-
 ## option to reverse language direction from tsv file
 
 ifneq (${SRC}2${TRG},${LANGPAIR})
@@ -31,14 +32,17 @@ ifneq (${SRC}2${TRG},${LANGPAIR})
 endif
 
 
+.PHONY: all
 all: elitr-eca-v1.0
 	${MAKE} monolingual
 	${MAKE} langpairs
 
+.PHONY: langpairs
 langpairs: ${LANGPAIRS}
 ${LANGPAIRS}:
 	make LANGPAIR=$@ bitexts
 
+.PHONY: bitexts
 bitexts: ${BITEXTS}
 ${BITEXTS}: ../xml/${SRC}-${TRG}/%.xml.gz: elitr-eca-v1.0/parallel/${LANGPAIR}/%.tsv
 	${MAKE} ${patsubst ../xml/${SRC}-${TRG}/%,../raw/${SRC}/%,$@} \
@@ -56,6 +60,7 @@ elitr-eca-v1.0:
 	tar -xzf elitr-eca-v1.0.tar.gz
 	rm -f elitr-eca-v1.0.tar.gz
 
+.PHONY: monolingual
 monolingual: ${MONOXML}
 
 ${MONOXML}: ../raw/%.xml.gz: elitr-eca-v1.0/monolingual/%.txt
@@ -64,3 +69,8 @@ ${MONOXML}: ../raw/%.xml.gz: elitr-eca-v1.0/monolingual/%.txt
 	../scripts/mono2opus.pl |\
 	gzip -c > $@
 
+
+tidy: ${TIDYRAW} ${TIDYXML}
+
+%.tidy.xml.gz: %.xml.gz
+	zcat $< | tidy -xml -utf8 -i -wrap 0 | gzip -c > $@

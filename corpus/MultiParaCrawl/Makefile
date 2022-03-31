@@ -41,7 +41,7 @@ sample-files: $(SAMPLEFILES)
 
 ## submit a job for fetching and processing all data
 all-job:
-	${MAKE} HPC_CORES=1 HPC_DISK=1000 HPC_MEM=16g HPC_TIME=14-00:00 HPC_QUEUE=longrun convert-job.submit
+	${MAKE} HPC_CORES=1 HPC_DISK=2000 HPC_MEM=16g HPC_TIME=14-00:00 HPC_QUEUE=longrun convert-job.submit
 
 ## a job for fetching and converting all files
 ## that will submit tokenization jobs when ready
@@ -51,6 +51,14 @@ convert-job:
 
 pivoting-job:
 	${MAKE} tokenize-jobs
+	${MAKE} -C src pivoting
+	mkdir -p english/raw english/xml
+	-mv ${CORPUSRAW}/*en* english/raw/
+	-mv ${CORPUSXML}/en-* english/xml/
+	-mv ${CORPUSXML}/*-en english/xml/
+	-mv ${CORPUSXML}/*-en.* english/xml/
+
+only-pivoting-job:
 	${MAKE} -C src pivoting
 	mkdir -p english/raw english/xml
 	-mv ${CORPUSRAW}/*en* english/raw/

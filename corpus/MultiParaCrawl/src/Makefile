@@ -47,7 +47,6 @@ endif
 
 .PHONY: all
 all: ${CORPUSRAW}
-	${MAKE} -C .. xml/Makefile
 	${MAKE} pivoting
 
 PIVOT = en
@@ -55,6 +54,7 @@ PIVOT = en
 pivoting:
 	mkdir -p ${CORPUSXML}
 	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/ 
+	${MAKE} -C .. xml/Makefile
 	${MAKE} -C ${CORPUSXML} create-align-files
 	for s in $(filter-out ${PIVOT},${LANGUAGES}); do \
 	  for t in $(filter-out ${PIVOT},${LANGUAGES}); do \
