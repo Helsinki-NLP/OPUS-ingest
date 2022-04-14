@@ -585,13 +585,19 @@ ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	echo '</head>' >> $@
 	echo '<body>' >> $@
 	echo '<p>' >> $@
-	zcat $< | perl -pe 's/(<\/seg>.*)\n/$$1/s' | grep '</tuv>' |\
+	zgrep '</tuv>' $< | \
 	sed 's/^.*<seg>//;s#</seg> *</tuv>#<br/>#' |\
 	head -100 |\
 	sed ': loop; n; a <hr/>' >> $@
 	echo '</body></html/>' >> $@
 	chmod 644 $@
 endif
+
+#	zcat $< | perl -pe 's/(<\/seg>.*)\n/$$1/s' | grep '</tuv>' |\
+#	sed 's/^.*<seg>//;s#</seg> *</tuv>#<br/>#' |\
+#	head -100 |\
+#	sed ': loop; n; a <hr/>' >> $@
+
 
 
 ## NEW: could use zip archives
@@ -966,7 +972,7 @@ ${TMX_INFO}: ${CORPUSRELEASE}/info/%.tmx.info: ${CORPUSRELEASE}/tmx/%.tmx.gz
 ${OPUSRELEASE}/%.info:
 	if [ -e $@ ]; then cp $@ $@.$(shell date +%F); fi
 	${MAKE} info
-	if [ -d ${OPUSRELEASE}/%.info,%/info,$@} ]; then \
+	if [ -d $(@:.info=/info) ]; then \
 	  cd ${OPUSRELEASE}; \
 	  find ${patsubst ${OPUSRELEASE}/%.info,%/info,$@} -name '*.info' | sort |\
 	  xargs grep . > $@; \
