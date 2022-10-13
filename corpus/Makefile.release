@@ -991,7 +991,7 @@ delete-empty-bitexts:
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
 	    if [ -e ${CORPUSXML}/$$s-$$t.xml.gz ]; then \
-	      if [ `zgrep xtargets ${CORPUSXML}/$$s-$$t.xml.gz | wc -l` == "0" ]; then \
+	      if [ `zgrep xtargets ${CORPUSXML}/$$s-$$t.xml.gz | head -10 | wc -l` == "0" ]; then \
 		echo "empty bitext: $$s-$$t"; \
 		mv -f ${CORPUSXML}/$$s-$$t.xml.gz ${CORPUSHOME}/DELETE/xml/; \
 		rm -f ${CORPUSRELEASE}/xml/$$s-$$t.xml.gz; \
@@ -1015,7 +1015,7 @@ delete-empty-bitexts:
 	      fi; \
 	    done; \
 	    if [ -e ${CORPUSRELEASE}/xml/$$s-$$t.xml.gz ]; then \
-	      if [ `zgrep xtargets ${CORPUSRELEASE}/xml/$$s-$$t.xml.gz | wc -l` == "0" ]; then \
+	      if [ `zgrep xtargets ${CORPUSRELEASE}/xml/$$s-$$t.xml.gz | head -10 | wc -l` == "0" ]; then \
 		echo "empty bitext: $$s-$$t"; \
 		rm -f ${CORPUSRELEASE}/xml/$$s-$$t.xml.gz; \
 		rm -f ${CORPUSRELEASE}/moses/$$s-$$t.txt.zip; \

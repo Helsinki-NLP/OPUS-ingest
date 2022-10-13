@@ -10,7 +10,7 @@ UNSORTED_SENTALIGN := 1
 SKIP_TMX_UNIQ      := 1
 
 
-RELEASE = 9
+RELEASE = 9b
 VERSION = v${RELEASE}
 
 
@@ -30,6 +30,6 @@ PARACRAWL_BONUS      = bonus/en-ha.tmx.gz bonus/en-ig.tmx.gz
 # after the name of the sub-corpus
 # EXTRAHTML is code which will be put just after the 'Download' header
 
-SRCHTML = Parallel corpora from Web Crawls collected in the <a href="http://paracrawl.eu/download.html">ParaCrawl project</a> and further processed for making it a multi-parallel corpus by pivoting via English. Here we only provide the additional language pairs that came out of pivoting. The bitexts for English are available from the <a href="http://opus.nlpl.eu/ParaCrawl-${VERSION}.php">ParaCrawl release</a>.
-EXTRAHTML = The data is released under the <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">Creative Commons CC0 license</a> ("no rights reserved"), see <a href="http://paracrawl.eu/download.html">http://paracrawl.eu/download.html</a> for more details
+SRCHTML = Parallel corpora from Web Crawls collected in the <a href="http://paracrawl.eu">ParaCrawl project</a> and further processed for making it a multi-parallel corpus by pivoting via English. Here we only provide the additional language pairs that came out of pivoting. The bitexts for English are available from the <a href="http://opus.nlpl.eu/ParaCrawl-${VERSION}.php">ParaCrawl release</a>.
+EXTRAHTML = The data is released under the <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">Creative Commons CC0 license</a> ("no rights reserved"), see <a href="http://paracrawl.eu">http://paracrawl.eu</a> for more details
 CITENOTE = Please, acknowledge the ParaCrawl project at <a href="http://paracrawl.eu">http://paracrawl.eu</a>. This version is derived from the original release at their website adjusted for redistribution via the OPUS corpus collection. Please, acknowledge OPUS as well for this service.

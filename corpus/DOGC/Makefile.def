@@ -3,8 +3,9 @@
 # name & version of the corpus
 
 CORPUS  = DOGC
-VERSION = v2
-
+VERSION = v3
+LICENSE = CC-0
+COPYRIGHT = see <a href="http://www.gencat.cat/web/cat/avis_legal.htm">Legal notice</a>
 
 # with SRCHTML you can define some extra HTML code that will be placed just
 # after the name of the sub-corpus

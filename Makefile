@@ -12,33 +12,40 @@ UBUNTU_PACKAGES = libicu-dev \
 		python3-pip \
 		tidy
 
-install: requirememts.txt
-	sudo apt install ${UBUNTU_PACKAGES}
-	sudo pip install -r requirememts.txt
-	git clone https://github.com/Helsinki-NLP/OpusTools-perl.git
+.PHONY: install
+install: requirements.txt
+	apt install ${UBUNTU_PACKAGES}
+	pip install -r requirements.txt
 	${MAKE} install-opustools-perl
 	${MAKE} install-subalign
 	${MAKE} install-uplug
 
-install-opustools-perl:
+OpusTools-perl Uplug subalign:
+	git clone https://github.com/Helsinki-NLP/$@.git
+
+.PHONY: install-opustools-perl
+install-opustools-perl: OpusTools-perl
+	git clone https://github.com/Helsinki-NLP/OpusTools-perl.git
 	cd OpusTools-perl && perl Makefile.PL
 	${MAKE} -C OpusTools-perl all
-	sudo ${MAKE} -C OpusTools-perl install
+	${MAKE} -C OpusTools-perl install
 
-install-uplug:
+.PHONY: install-uplug
+install-uplug: Uplug
 	git clone https://github.com/Helsinki-NLP/Uplug.git
 	cd Uplug/uplug-main && perl Makefile.PL
 	${MAKE} -C Uplug/uplug-main all
-	sudo ${MAKE} -C Uplug/uplug-main install
+	${MAKE} -C Uplug/uplug-main install
 	cd Uplug/uplug-hunalign-dics && perl Makefile.PL
 	${MAKE} -C Uplug/uplug-hunalign-dics all
-	sudo ${MAKE} -C Uplug/uplug-hunalign-dics install
+	${MAKE} -C Uplug/uplug-hunalign-dics install
 	cd Uplug/uplug-treetagger && perl Makefile.PL
 	${MAKE} -C Uplug/uplug-treetagger all
-	sudo ${MAKE} -C Uplug/uplug-treetagger install
+	${MAKE} -C Uplug/uplug-treetagger install
 
-install-subalign:
-	https://github.com/Helsinki-NLP/subalign.git
+.PHONY: install-subalign
+install-subalign: subalign
+	git clone https://github.com/Helsinki-NLP/subalign.git
 	cd subalign && perl Makefile.PL
 	${MAKE} -C subalign all
-	sudo ${MAKE} -C subalign install
+	${MAKE} -C subalign install

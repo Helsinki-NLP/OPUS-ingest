@@ -4,7 +4,7 @@
 #
 #
 
-OPUSTOKENIZER ?= ${OPUSTOOLS}/opus-tokenize.py
+OPUSTOKENIZER ?= ${OPUSTOOLS}/opus-polyglot-tokenize.py 
 
 ifndef LANGUAGE
   LANGUAGE=$(firstword ${LANGUAGES})

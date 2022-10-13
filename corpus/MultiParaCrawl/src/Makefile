@@ -53,6 +53,7 @@ PIVOT = en
 
 
 
+
 ## link files sorted by pivot language sentence IDs
 
 PIVOT_LINKFILES = ${patsubst %,%.alg,${wildcard ${CORPUSXML}/*${PIVOT}*.xml.gz}}
@@ -69,11 +70,12 @@ PIVOTED_BITEXTS = ${shell for s in $(filter-out ${PIVOT},${LANGUAGES}); do \
 
 
 pivoting: ${PIVOTED_BITEXTS}
+	${MAKE} delete-empty-bitexts
 
 .INTERMEDIATE: ${PIVOT_LINKFILES}
 
 ${PIVOT_LINKFILES}: %.alg: %
-	gzip -cd $< | ../scripts/extract-links.pl -l ${<:.xml.gz=} -c ${PIVOT} | sort -k2,2 -k1,1nr > $@
+	gzip -cd $< | ../scripts/extract-links.pl -l $(notdir ${<:.xml.gz=}) -c ${PIVOT} | sort -k2,2 -k1,1nr > $@
 
 ${PIVOTED_BITEXTS}: ${PIVOT_LINKFILES}
 	( s=$(firstword $(subst -, ,${notdir $(@:.xml.gz=)})); \
