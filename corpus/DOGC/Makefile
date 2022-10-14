@@ -18,22 +18,15 @@ include ../Makefile.def
 
 .PHONY: all
 all:
-	${MAKE} corpus
-	${MAKE} web-corpus
-	rm -fr data
-
-.PHONY: corpus
-corpus:
 	${MAKE} -C src all
 	${MAKE} annotate
-	rm -fr data
 	${MAKE} -C xml corpus
-
-.PHONY: web-corpus
-web-corpus:
-	${MAKE} -C xml web-corpus
-	${MAKE} html cwb-index
+	${MAKE} udparse
+	${MAKE} wordalign
+	rm -fr data
 	${MAKE} cwb-index
+	${MAKE} publish
+
 
 .PHONY: real-clean
 real-clean:
@@ -47,8 +40,9 @@ real-clean:
 # include ../Makefile.annotate
 # include ../Makefile.tag
 include ../Makefile.tokenize-fast
-include ../Makefile.cwb
-# include ../Makefile.html
-include ../Makefile.release
-include ../Makefile.submit
 
+include ../Makefile.submit
+include ../Makefile.process
+include ../Makefile.release
+include ../Makefile.cwb
+include ../Makefile.udparse
