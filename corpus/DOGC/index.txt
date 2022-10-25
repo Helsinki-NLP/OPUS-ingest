@@ -1,0 +1,16 @@
+v2/freq/ca.freq.gz
+v2/freq/es.freq.gz
+v2/mono/ca.tok.gz
+v2/mono/ca.txt.gz
+v2/mono/es.tok.gz
+v2/mono/es.txt.gz
+v2/moses/README
+v2/moses/ca-es.txt.zip
+v2/raw/ca.zip
+v2/raw/es.zip
+v2/smt/ca-es.alg.zip
+v2/tmx/README
+v2/tmx/ca-es.tmx.gz
+v2/xml/ca-es.xml.gz
+v2/xml/ca.zip
+v2/xml/es.zip

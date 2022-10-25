@@ -7,6 +7,8 @@
 #--------------------------------------------------------------------
 
 
+# SHELL              := bash
+
 ## CSC specific information
 
 CSC_WORK_PROJECT    ?= project_2003093
@@ -26,9 +28,11 @@ RELEASE_CONTAINER_BASENAME = OPUS
 ## scratch/work space
 ## TODO: remove hard-coded scratch space location
 
-ifneq (${wildcard /scratch/project_2001569/tmp},)
-  TMPDIR := /scratch/project_2001569/tmp
+ifneq (${wildcard /scratch/project_2000661/tmp},)
+  TMPDIR := /scratch/project_2000661/tmp
 endif
+
+TMPDIR   ?= /tmp
 
 ifdef LOCAL_SCRATCH
   TMPDIR := ${LOCAL_SCRATCH}

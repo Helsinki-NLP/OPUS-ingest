@@ -179,3 +179,14 @@ ${ALLRAW_LANGID}:
 
 
 
+add-index-files:
+	for c in ${sort ${notdir ${shell find ${OPUSRELEASE} -mindepth 1 -maxdepth 1 -type d }}}; do \
+	  rsync ${OPUSRELEASE}/$$c/releases.txt ${OPUSCORPORA}/$$c/releases.txt;\
+	  rsync ${OPUSRELEASE}/$$c/info.txt ${OPUSCORPORA}/$$c/info.txt;\
+	  rsync -zav ${OPUSRELEASE}/$$c/*.info ${OPUSCORPORA}/$$c/;\
+	  rsync -zav ${OPUSRELEASE}/$$c/index*.txt ${OPUSCORPORA}/$$c/;\
+	done
+	git add ${OPUSCORPORA}/*/info.txt \
+		${OPUSCORPORA}/*/releases.txt \
+		${OPUSCORPORA}/*/*.info \
+		${OPUSCORPORA}/*/index*.txt

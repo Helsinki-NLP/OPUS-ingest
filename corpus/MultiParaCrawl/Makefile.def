@@ -6,7 +6,11 @@ CORPUS  = MultiParaCrawl
 # FILTER  = zipporah
 FILTER  = bicleaner07
 
-RELEASE = 8
+UNSORTED_SENTALIGN := 1
+SKIP_TMX_UNIQ      := 1
+
+
+RELEASE = 9
 VERSION = v${RELEASE}
 
 

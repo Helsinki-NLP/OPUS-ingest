@@ -15,6 +15,8 @@
 include Makefile.def
 include ../Makefile.def
 
+OPUSTOKENIZER = perl -CSD -pe "s/\N{U+200B}//gu" | ${PWD}/scripts/opus-tokenize.py
+
 ## make all:
 ##
 ## - prepare, align, annotate corpus (see ../Makefile.process)
@@ -22,17 +24,31 @@ include ../Makefile.def
 
 all:
 	${MAKE} -C src all
+	${MAKE} annotate
 	${MAKE} align
 	${MAKE} publish
 #	${MAKE} udparse
 
 
+create-corpus-files:
+	${MAKE} annotate
+	${MAKE} align
+
+all-job:
+	${MAKE} HPC_CORES=16 HPC_MEM=16g HPC_DISK=500 convert-job.submit
+
 convert-job:
-	${MAKE} -C src HPC_DISK=500 all-runlocal.submit
+	${MAKE} -C src all-runlocal
+	${MAKE} HPC_CORES=16 HPC_MEM=16g HPC_DISK=1500 annotate-job.submit
+
+annotate-job:
+	${MAKE} annotate-runlocal
+	${MAKE} align-jobs
 
 align-jobs:
 	${MAKE} xml/Makefile
-	${MAKE} -C xml EMAIL= HPC_CORES=8 sentalign-source-jobs
+	${MAKE} -C xml EMAIL= HPC_CORES=8 HPC_TIME=3-00 sentalign-source-localuplug-jobs
+#	${MAKE} -C xml EMAIL= HPC_CORES=8 HPC_TIME=3-00 sentalign-source-jobs
 
 publish-job:
 	${MAKE} -C xml cleanup
@@ -62,6 +78,7 @@ include ../Makefile.udparse
 ##   Makefile.annotate ..... all annotation in Uplug
 
 
+include ../Makefile.tokenize-fast
 # include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate

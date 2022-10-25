@@ -6,8 +6,8 @@ include ../../Makefile.sentalign
 
 all: sentalign-all
 jobs: 
-	${MAKE} EMAIL= HPC_CORES=8 sentalign-source-jobs
-
+	${MAKE} EMAIL= HPC_CORES=8 HPC_TIME=3-00 sentalign-source-localuplug-jobs
+#	${MAKE} EMAIL= HPC_CORES=8 sentalign-source-jobs
 
 
 .PHONY: normalise-langcodes

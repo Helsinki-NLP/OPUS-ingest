@@ -9,10 +9,8 @@ The data is organized as follows:
 
 ## License
 
-For all practical purpose, the license is CC-BY-NC-SA.
-
-Still, jw.org maintains custom terms of use; in doubt, make sure to observe their license!
-https://www.jw.org/en/terms-of-use/
+* Agreement with the Language Bank of Finland: https://www.kielipankki.fi/lic/jw/?lang=en
+* Original terms of usehttps://www.jw.org/en/terms-of-use/
 
 ## Reference
 

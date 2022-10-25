@@ -20,6 +20,8 @@ all:
 	${MAKE} publish
 
 
+WALLTIME = 48
+# WALLTIME = 72
 
 
 copy-tmx-files:
@@ -51,7 +53,7 @@ convert-job:
 tokenize-jobs:
 	for l in $(LANGUAGES); do \
 	  ${MAKE} MAKEARGS="LANGUAGE=$$l" LANGUAGE=$$l \
-		HPC_CORES=1 HPC_MEM=4g HPC_TIME=72:00 \
+		HPC_CORES=1 HPC_MEM=4g HPC_TIME=${WALLTIME}:00 \
 	  tokenize-job.submit; \
 	  rm -f tokenize-job.submit;\
 	done
@@ -60,7 +62,7 @@ tokenize-jobs:
 tokenize-job:
 	${MAKE} annotate_files
 	if [ `ls log/.*tok* | wc -l` == ${words ${LANGUAGES}} ]; then \
-	  ${MAKE} HPC_CORES=2 HPC_MEM=64g HPC_TIME=72:00 publish-job.submit; \
+	  ${MAKE} HPC_CORES=2 HPC_MEM=96g HPC_TIME=${WALLTIME}:00 publish-job.submit; \
 	fi
 
 publish-job-no-english:
@@ -69,11 +71,12 @@ publish-job-no-english:
 publish-job:
 	${MAKE} moses
 	${MAKE} copy-tmx-files
-	${MAKE} sample-files
 	${MAKE} publish
 	${MAKE} wordalign/Makefile
 	${MAKE} -C wordalign submit-all
-	${MAKE} HPC_CORES=2 HPC_MEM=8g HPC_TIME=72:00 udparse.submit
+	${MAKE} HPC_CORES=2 HPC_MEM=8g HPC_TIME=${WALLTIME}:00 udparse.submit
+
+#	${MAKE} sample-files
 
 ## standard procedures are specified in the following makefiles
 ##

@@ -33,6 +33,9 @@ all: ${CORPUSRAW}
 
 PIVOT = en
 
+info:
+	@echo "${EUROPAT_TMX}"
+
 pivoting:
 	${MAKE} -C ${CORPUSXML} create-align-files
 	for s in $(filter-out ${PIVOT},${LANGUAGES}); do \
@@ -60,6 +63,7 @@ convert: ${CORPUSRAW}
 ${EUROPAT_TMX}:
 	mkdir -p ${dir $@}
 	wget -q -O $@ ${EUROPAT_URL}/$@
+	touch $@
 
 
 ${CORPUSRAW}: ${EUROPAT_TMX}

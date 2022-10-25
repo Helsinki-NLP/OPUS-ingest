@@ -30,13 +30,15 @@ copy-tmx-files:
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
 	    if [[ "$$s" < "$$t" ]]; then \
-	      f=`ls src/*/$$s-$$t.*tmx.gz 2>/dev/null`; \
+	      f=`ls src/$$s-$$t.*tmx.gz src/*/$$s-$$t.*tmx.gz 2>/dev/null | tail -1`; \
 	      if [ "$$f" == "" ]; then \
-	        f=`ls src/*/$$t-$$s.*tmx.gz 2>/dev/null`; \
+	        f=`ls src/$$t-$$s.*tmx.gz src/*/$$t-$$s.*tmx.gz 2>/dev/null | tail -1`; \
 	      fi; \
 	      if [ "$$f" != "" ]; then \
-		rsync $$f ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
-		touch ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
+		if [ ! -e ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz ]; then \
+		  rsync $$f ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
+		  touch ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
+		fi \
               fi; \
 	    fi \
 	  done \
@@ -70,7 +72,7 @@ tokenize-jobs:
 tokenize-job:
 	${MAKE} annotate_files
 	if [ `ls log/.*tok* | wc -l` == ${words ${LANGUAGES}} ]; then \
-	  ${MAKE} HPC_CORES=8 HPC_MEM=16g HPC_DISK=2000 HPC_TIME=72:00 publish-job.submit; \
+	  ${MAKE} HPC_CORES=8 HPC_MEM=32g HPC_DISK=2000 HPC_TIME=72:00 publish-job.submit; \
 	fi
 
 publish-job:

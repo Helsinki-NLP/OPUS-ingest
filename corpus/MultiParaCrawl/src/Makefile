@@ -47,32 +47,91 @@ endif
 
 .PHONY: all
 all: ${CORPUSRAW}
-	${MAKE} -C .. xml/Makefile
-	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/ 
 	${MAKE} pivoting
 
 PIVOT = en
 
-pivoting:
-	${MAKE} -C ${CORPUSXML} create-align-files
-	for s in $(filter-out ${PIVOT},${LANGUAGES}); do \
-	  for t in $(filter-out ${PIVOT},${LANGUAGES}); do \
-	    if [[ "$$t" > "$$s" ]]; then \
-	      mkdir -p ${CORPUSXML}/$$s-$$t; \
-	      echo "processing ..."; \
-	      ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'; \
-	      ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'; \
-	      ${OPUS_PIVOTING} `ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'` \
-	                    	`ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'` \
-	      | gzip -c > ${CORPUSXML}/$$s-$$t/paracrawl-pivoted-${VERSION}.xml.gz; \
-	      if [ -e ${CORPUSXML}/$$s-$$t.xml.gz ]; then \
-	        mkdir -p backup; \
-		mv -f ${CORPUSXML}/$$s-$$t.xml.gz backup/ ; \
-	      fi; \
-	    fi \
-	  done \
-	done
-	${MAKE} -C ${CORPUSXML} create-align-files
+
+
+## link files sorted by pivot language sentence IDs
+
+PIVOT_LINKFILES = ${patsubst %,%.alg,${wildcard ${CORPUSXML}/*${PIVOT}*.xml.gz}}
+
+## all new language combinations
+
+PIVOTED_BITEXTS = ${shell for s in $(filter-out ${PIVOT},${LANGUAGES}); do \
+			    for t in $(filter-out ${PIVOT},${LANGUAGES}); do \
+			      if [[ "$$t" > "$$s" ]]; then \
+			         echo "../xml/$$s-$$t.xml.gz"; \
+			      fi \
+			    done \
+	                  done }
+
+
+pivoting: ${PIVOTED_BITEXTS}
+
+.INTERMEDIATE: ${PIVOT_LINKFILES}
+
+${PIVOT_LINKFILES}: %.alg: %
+	gzip -cd $< | ../scripts/extract-links.pl -l ${<:.xml.gz=} -c ${PIVOT} | sort -k2,2 -k1,1nr > $@
+
+${PIVOTED_BITEXTS}: ${PIVOT_LINKFILES}
+	( s=$(firstword $(subst -, ,${notdir $(@:.xml.gz=)})); \
+	  t=$(lastword $(subst -, ,${notdir $(@:.xml.gz=)})); \
+	  mkdir -p ${CORPUSXML}/$$s-$$t; \
+	  ../scripts/pivot-links.pl -a \
+		`ls ${CORPUSXML}/*$$s*.xml.gz.alg | grep '${PIVOT}'` \
+		`ls ${CORPUSXML}/*$$t*.xml.gz.alg | grep '${PIVOT}'` \
+		$$s/paracrawl${RELEASE}.xml.gz \
+		$$t/paracrawl${RELEASE}.xml.gz \
+	  | gzip -c > ${CORPUSXML}/$$s-$$t/paracrawl-pivoted-${VERSION}.xml.gz; \
+	  ${MAKE} -C ${CORPUSXML} SRC=$$s TRG=$$t create-align-file; )
+
+
+
+
+
+# ${PIVOTED_BITEXTS}:
+# 	( s=$(firstword $(subst -, ,${notdir $(@:.xml.gz=)})); \
+# 	  t=$(lastword $(subst -, ,${notdir $(@:.xml.gz=)})); \
+# 	  mkdir -p ${CORPUSXML}/$$s-$$t; \
+# 	  ${OPUS_PIVOTING} -a `ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'` \
+# 	                      `ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'` \
+# 	      | gzip -c > ${CORPUSXML}/$$s-$$t/paracrawl-pivoted-${VERSION}.xml.gz; \
+# 	  ${MAKE} -C ${CORPUSXML} SRC=$$s TRG=$$t create-align-file; )
+
+
+
+## OLD: loop over languages
+## NEW: define targets as above (can do this in parallel)
+
+# pivoting:
+# 	mkdir -p ${CORPUSXML}
+# 	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/ 
+# 	${MAKE} -C .. xml/Makefile
+# 	${MAKE} -C ${CORPUSXML} create-align-files
+# 	for s in $(filter-out ${PIVOT},${LANGUAGES}); do \
+# 	  for t in $(filter-out ${PIVOT},${LANGUAGES}); do \
+# 	    if [[ "$$t" > "$$s" ]]; then \
+# 	      mkdir -p ${CORPUSXML}/$$s-$$t; \
+# 	      echo "processing ..."; \
+# 	      ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'; \
+# 	      ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'; \
+# 	      ${OPUS_PIVOTING} `ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'` \
+# 	                    	`ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'` \
+# 	      | gzip -c > ${CORPUSXML}/$$s-$$t/paracrawl-pivoted-${VERSION}.xml.gz; \
+# 	    fi \
+# 	  done \
+# 	done
+# 	${MAKE} -C ${CORPUSXML} create-align-files
+
+## don't move previous link files away anymore
+## --> this removes some non-English language pairs
+##
+#	      if [ -e ${CORPUSXML}/$$s-$$t.xml.gz ]; then \
+#	        mkdir -p backup; \
+#		mv -f ${CORPUSXML}/$$s-$$t.xml.gz backup/ ; \
+#	      fi;
 
 
 .PHONY: fetch
@@ -108,6 +167,8 @@ ${CORPUSRAW}: # ${PARACRAWL_TMX}
 	  xargs zcat |\
 	  perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' |\
 	  ${TMX2OPUS} -u -d -t ${TMPDIR} -o paracrawl${RELEASE}.xml.gz )
+	mkdir -p ${CORPUSXML}
+	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/ 
 	touch ${CORPUSRAW}
 
 

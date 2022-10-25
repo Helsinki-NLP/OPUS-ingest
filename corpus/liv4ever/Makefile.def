@@ -1,0 +1,63 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = CC BY-SA
+COPYRIGHT = 
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML=<p>This is the Livonian 4-lingual parallel corpus. Livonian is a Uralic / Finnic language \
+with just about 20 fluent speakers and no native speakers (as of 2021). The texts and \
+translations in this corpus were collected from all the digital text resources that could \
+be found by the authors; scanned and printed materials are left for future work.<br></p> \
+\
+<p>The corpus includes parallel data for Livonian-Latvian, Livonian-Estonian and Livonian-English; \
+the data has been collected in 2021. After retrieval it was normalized in terms of different \
+orthographies of Livonian and manually sentence-aligned where needed. It was collected from \
+the following sources, with sentence counts per language pair:<br></p> \
+ \
+<ul> \
+<li><b>Dictionary</b> - example sentences from the Livonian-Latvian-Estonian <a href="http://www.livones.net/lili/en/vardnica/" target="_blank">dictionary</a>;<br>liv-lv: 10\&\#39;388, liv-et: 10\&\#39;378</li> \
+<li><b>Stalte</b> - the alphabet <a href="https://www.worldcat.org/title/jelzi-sona-abed-ja-rgandoks-lugdobrontoz/oclc/930808935" target="_blank">book</a> by Kōrli Stalte, translated into Estonian and Latvian;<br>liv-lv: 842, liv-et: 685</li> \
+<li><b>Poetry</b> - the poetry collection <a href="https://artiklid.elnet.ee/record=b2493630~S1*est" target="_blank">book</a> \&quot;Ma võtan su õnge, tursk / Ma akūb sīnda vizzõ, tūrska\&quot;, with Estonian translations;<br>liv-et: 770</li> \
+<li><b>Vääri</b> - the <a href="https://www.digar.ee/arhiiv/nlib-digar:286389" target="_blank">book</a> by Eduard Vääri about Livonian language and culture;<br>liv-et: 592</li> \
+<li><b>Satversme</b> - translations of the <a href="https://m.likumi.lv/saistitie.php?id=57980\&saistitie_id=9" target="_blank">Latvian Constitution</a> into Livonian, Estonian and English;<br>liv-en: 380, liv-lv: 414, liv-et: 413</li> \
+<li><b>Facebook</b> - social media posts by the <a href="https://www.facebook.com/livodinstitut/" target="_blank">Livonian Institute</a> and <a href="https://www.facebook.com/livudiena" target="_blank">Livonian Days</a> with original translations;<br>liv-en: 123, liv-lv: 124, liv-et: 7<br></li> \
+<li><b>JEFUL</b> - article abstracts from the <a href="https://jeful.ut.ee" target="_blank">Journal</a> of Estonian and Finno-Ugric Linguistics, special issues dedicated to Livonian studies, translated into Estonian and English;<br>liv-en: 36, liv-et: 49<br></li> \
+<li><b>Trilium</b> - the <a href="http://www.livones.net/lv/norises/2018/trillium-an-anthology-of-the-work-of-three-livonian-poets" target="_blank">book</a> with a collection of Livonian poetry, foreword and afterword translated into Estonian and Latvian;<br>liv-lv: 51, liv-et: 53<br></li> \
+<li><b>Songs</b> - material crawled off <a href="http://lyricstranslate.com" target="_blank">lyricstranslate.com</a>;<br>liv-en: 54, liv-lv: 54, liv-fr: 31<br></li> \
+</ul> \
+ \
+<p>A small part of the corpus is held out in order to be used as a <b>translation benchmark (dev and test set, see below for download). </b>Its material was manually translated in order to have each sentence translated in all four languages (Livonian-English-Latvian-Estonian). The material sources and resulting sentence counts:<br></p> \
+ \
+<ul> \
+<li><b>Livones.net</b> - web crawl of the Livonian culture, language and history <a href="http://www.livones.net/en" target="_blank">web portal</a>;<br>163 sentences<br></li> \
+<li><b>Stalte</b> - 310 sentences</li> \
+<li><b>Dictionary</b> - 298 sentences</li> \
+<li><b>Facebook</b> - 189 sentences</li> \
+<li><b>Satversme</b> - 188 sentences</li> \
+<li><b>Trilium</b> - 172 sentences</li> \
+<li><b>JEFUL</b> - 120 sentences<br></li> \
+</ul> \
+
+EXTRAHTML=<p><h3>Other Download Packages</h3> \
+<ul>\
+<li>Independent development set: <a href="https://object.pouta.csc.fi/OPUS-liv4ever/v1/src/liv4ever-dev.tgz">liv4ever-dev.tgz</a></li> \
+<li>Independent test set: <a href="https://object.pouta.csc.fi/OPUS-liv4ever/v1/src/liv4ever-test.tgz">liv4ever-test.tgz</a></li> \
+<li>Original training set: <a href="https://object.pouta.csc.fi/OPUS-liv4ever/v1/src/liv4ever-train.tgz">liv4ever-train.tgz</a></li> \
+</ul>
+
+
+
+# CITENOTE=

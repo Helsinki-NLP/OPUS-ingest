@@ -1,0 +1,24 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>
+COPYRIGHT = © European Union, 1995-2021 (see <a href="https://www.eca.europa.eu/en/Pages/Disclaimer.aspx">original disclaimer</a>)
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML=This is the ELITR ECA multilingual corpus. It is derived from documents published by the European Court of Auditors (<a href="https://www.eca.europa.eu/">https://www.eca.europa.eu/</a>). For a description of the methodology used to produce the corpus, see <a href="https://arxiv.org/abs/2109.07351">https://arxiv.org/abs/2109.07351</a>.
+
+EXTRAHTML=<h3>Acknowledgements</h3>This work has received funding from the European Union’s Horizon 2020 Research and Innovation Programme under Grant Agreement No 825460 (ELITR).
+
+CITENOTE=Please, cite the paper <a href="https://arxiv.org/abs/2109.07351">"The ELITR ECA Corpus"</a> by Philip Williams and Barry Haddow and acknowledge the ELITR and OPUS projects for providing the data.
