@@ -7,7 +7,7 @@
 #--------------------------------------------------------------------
 
 
-# SHELL              := bash
+SHELL              := bash
 
 ## CSC specific information
 
@@ -40,7 +40,7 @@ endif
 
 
 WORKDIR         ?= ${TMPDIR}
-OPUSHOME        ?= $(shell pwd | sed 's|\(.*\)OPUS/.*|\1OPUS|')
+OPUSHOME        ?= $(shell pwd | sed 's!\(.*\)\(OPUS\|OPUS-ingest\)/.*!\1\2!')
 LOCAL_OPUSHOME  ?= ${WORKDIR}/OPUS
 CORPUS          ?= RF
 
@@ -211,7 +211,7 @@ ATOOLS          = atools
 ## word alignment priors
 
 ifneq (${wildcard ${NLPLHOME}/data/translation/eflomal},)
-  EFLOMAL_PRIORS = ${NLPLHOME}/data/translation/eflomal}
+  EFLOMAL_PRIORS = ${NLPLHOME}/data/translation/eflomal
 endif
 
 EFLOMAL_PRIORS ?= $(OPUSHOME)/eflomal

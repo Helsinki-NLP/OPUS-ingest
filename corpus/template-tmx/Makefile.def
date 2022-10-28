@@ -4,7 +4,7 @@
 
 
 ## CORPUSNAME = subdir under OPUS/corpus/
-CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
 
 ## current version
 VERSION = v1

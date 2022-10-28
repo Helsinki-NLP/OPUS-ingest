@@ -27,8 +27,9 @@ HPC_QUEUE   = small
 # HPC_MODULES = nlpl-opus python-env/3.4.1 
 # HPC_MODULES = parallel python-env nlpl-efmaral nlpl-opus nlpl-moses 
 # HPC_MODULES = parallel python-env nlpl-efmaral nlpl-moses
-HPC_MODULES = parallel nlpl-efmaral nlpl-moses nlpl-opus
-HPC_EXTRA   = 
+HPC_MODULES = parallel nlpl-cwb nlpl-opus nlpl-moses nlpl-efmaral 
+HPC_EXTRA   =
+
 
 
 %.submit:
@@ -42,7 +43,6 @@ ifdef HPC_DISK
 	echo '#SBATCH --gres=nvme:${HPC_DISK}' >> $@
 endif
 	echo '#SBATCH --account=${CSC_PROJECT}' >> $@
-	echo '#SBATCH --exclude=r18c47' >> $@
 endif
 ifeq (${shell hostname --domain},mahti.csc.fi)
 	echo '#SBATCH --account=${CSC_PROJECT}' >> $@

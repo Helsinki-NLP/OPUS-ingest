@@ -721,6 +721,7 @@ ifneq ("$(wildcard $(EFLOMAL_PRIORS)/${SRC}-${TRG}.priors)","")
   EFLOMAL_PRIORS_ARGS = -p $(EFLOMAL_PRIORS)/${SRC}-${TRG}.priors
 endif
 
+
 show-eflomal-priors:
 	@echo ${EFLOMAL_PRIORS}
 	@echo $(EFLOMAL_PRIORS)/${SRCEXT}-${TRGEXT}.priors
