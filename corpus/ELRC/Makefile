@@ -8,6 +8,7 @@ ELRC_MTDATA  = elrc_share.tsv
 ELRC_CORPORA     := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | cut -f3 | sort -u}
 ELRC_CORPUS      ?= ${firstword ${ELRC_CORPORA}}
 ELRC_NAME        := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f4 | head -1}
+ELRC_NAME_CLEAN  := ${shell echo ${ELRC_NAME} | tr -cd '0-9a-zA-Z_.-' | cut -f1-3 -d_ | sed -r 's/^(.{20}).*$$/\1/'}
 ELRC_DESCRIPTION := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f5 | head -1}
 ELRC_BROWSE_URL  := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f6 | head -1}
 ELRC_URL         := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f7 | head -1}
@@ -26,7 +27,7 @@ TEMPLATEDIR := ${OPUSHOME}/templates/tmx
 
 
 CORPUSNAME  = ELRC-${ELRC_CORPUS}-${ELRC_NAME}
-CORPUSDIR   = ${CORPUSHOME}/ELRC-${ELRC_CORPUS}-${ELRC_NAME}
+CORPUSDIR   = ${CORPUSHOME}/ELRC-${ELRC_CORPUS}-${ELRC_NAME_CLEAN}
 
 
 
@@ -45,6 +46,7 @@ print-corpus-info-all:
 print-corpus-info:
 	@echo "${ELRC_CORPUS}"
 	@echo "${ELRC_NAME}"
+	@echo "${ELRC_NAME_CLEAN}"
 	@echo "$(subst ",'',${ELRC_DESCRIPTION})"   ## replace "
 	@echo "${ELRC_BROWSE_URL}"
 	@echo "${ELRC_URL}"
@@ -70,9 +72,8 @@ ${CORPUSDIR}:
 	mkdir -p $@/src
 	wget -O $@/src/data.zip ${ELRC_URL}
 	unzip -d $@/src $@/src/data.zip
-	-for f in `find $@/src -name '*.tmx'`; do \
-	  cp "$$f" "$@/src/`basename $${f//[^a-zA-Z0-9\-\/\.]/_}`"; \
-	done
+	find $@/src -name '*.tmx' |\
+	perl -e 'use File::Copy;while(<>){chomp;$$i++;move($$_,"$@/src/$$i.tmx");}'
 	gzip -f $@/src/*.tmx
 	sed 	-e 's#LICENSE = #LICENSE = ${ELRC_LICENSE}#' \
 		-e 's#COPYRIGHT = #COPYRIGHT = Check details at <a href="https://www.elrc-share.eu">ELRC share</a>#' \

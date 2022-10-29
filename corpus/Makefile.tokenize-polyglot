@@ -4,7 +4,12 @@
 #
 #
 
-OPUSTOKENIZER ?= ${OPUSTOOLS}/opus-polyglot-tokenize.py 
+OPUSTOKENIZER ?= ${OPUSTOOLS}/opus-polyglot-tokenize.py
+
+ifeq (${HPC_HOST},puhti)
+  LOAD_ENV ?= module load python-data/3.8 &&
+endif
+
 
 ifndef LANGUAGE
   LANGUAGE=$(firstword ${LANGUAGES})
@@ -42,7 +47,7 @@ tokenize_files annotate_files: ${XMLFILES}
 
 xml/${LANGUAGE}/%: raw/${LANGUAGE}/%
 	mkdir -p $(shell dirname $@)
-	zcat $< |\
+	${LOAD_ENV} zcat $< |\
 	${OPUSTOKENIZER} -l $(LANGUAGE) |\
 	gzip -c > $@
 

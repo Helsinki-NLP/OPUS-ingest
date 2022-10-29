@@ -66,7 +66,8 @@ include ../Makefile.udparse
 ##   Makefile.annotate ..... all annotation in Uplug
 
 
-include ../Makefile.tokenize-fast
+include ../Makefile.tokenize-polyglot
+# include ../Makefile.tokenize-fast
 # include ../Makefile.tokenize-moses
 # include ../Makefile.tokenize
 # include ../Makefile.tag

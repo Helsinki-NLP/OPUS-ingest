@@ -9,6 +9,12 @@
 
 SHELL              := bash
 
+
+ifeq (${shell hostname --domain 2>/dev/null},bullx)
+  HPC_HOST = puhti
+endif
+
+
 ## CSC specific information
 
 CSC_WORK_PROJECT    ?= project_2003093
@@ -204,9 +210,14 @@ SALMHOME        := ${OPUSTOOLS}/SALM
 ## Word alignment tools 
 ## TODO: adjust to NLPL!
 
-EFLOMAL         = align_eflomal.py
-EFMARAL         = align.py
+EFLOMAL         = align.py
 ATOOLS          = atools
+
+ifeq (${HPC_HOST},puhti)
+  EFLOMAL       = module use -a /projappl/nlpl/software/modules/etc && module load nlpl-efmaral && align_eflomal.py
+  EFMARAL       = module use -a /projappl/nlpl/software/modules/etc && module load nlpl-efmaral && align.py
+endif
+
 
 ## word alignment priors
 
