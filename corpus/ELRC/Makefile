@@ -75,6 +75,18 @@ ${CORPUSDIR}:
 	find $@/src -name '*.tmx' |\
 	perl -e 'use File::Copy;while(<>){chomp;$$i++;move($$_,"$@/src/$$i.tmx");}'
 	gzip -f $@/src/*.tmx
+	if [ `find $@/src -iname '*licen*.pdf' | wc -l` -ne 0 ]; then \
+	  find $@/src -iname '*licen*.pdf' -exec mv -f "{}" $@/LICENSE.pdf \; ;\
+	fi
+	if [ `find $@/src -iname '*licen*.txt' | wc -l` -ne 0 ]; then \
+	  find $@/src -iname '*licen*.txt' -exec mv -f "{}" $@/LICENSE \; ;\
+	fi
+	if [ `find $@/src -iname '*valrep*.pdf' | wc -l` -ne 0 ]; then \
+	  find $@/src -iname '*valrep*.pdf' -exec mv -f "{}" $@/VALREP.pdf \; ;\
+	fi
+	if [ `find $@/src -iname '*meta*.txt' | wc -l` -ne 0 ]; then \
+	  find $@/src -iname '*meta*.txt' -exec mv -f "{}" $@/METADATA.txt \; ;\
+	fi
 	sed 	-e 's#LICENSE = #LICENSE = ${ELRC_LICENSE}#' \
 		-e 's#COPYRIGHT = #COPYRIGHT = Check details at <a href="https://www.elrc-share.eu">ELRC share</a>#' \
 		-e 's#SRCHTML=.*$$#SRCHTML=${SRCHTML}#' \
