@@ -3,7 +3,7 @@
 # name & version of the corpus
 
 
-## CORPUSNAME = subdir under OPUS/corpus/
+## CORPUSNAME = subdir under /corpus/
 CORPUS  = sardware
 
 ## current version

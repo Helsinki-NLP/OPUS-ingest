@@ -3,8 +3,8 @@
 # name & version of the corpus
 
 
-## CORPUSNAME = subdir under OPUS/corpus/
-CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
+## CORPUSNAME = subdir under /corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
 
 ## current version
 VERSION = v2.0a

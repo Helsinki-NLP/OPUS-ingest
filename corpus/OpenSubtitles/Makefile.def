@@ -30,4 +30,4 @@ EXTRAHTML=<p>We also provide <b>sentence alignments between alternative subtitle
 ABEL         = abel.uio.no
 ABEL_USER    = joerg
 ABEL_TARDIR  = /projects/researchers/researchers01/plison/data/opensubs2018
-ABEL_WORKDIR = /work/users/joerg/OPUS/corpus/OpenSubtitles2018
+ABEL_WORKDIR = /work/users/joerg//corpus/OpenSubtitles2018

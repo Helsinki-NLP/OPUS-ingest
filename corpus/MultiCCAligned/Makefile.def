@@ -2,7 +2,7 @@
 #
 # name & version of the corpus
 
-CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*OPUS/corpus/\(.*\)$$|\1|')}}
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
 VERSION = v1.1
 
 SOURCE_URL = http://www.statmt.org/cc-aligned
