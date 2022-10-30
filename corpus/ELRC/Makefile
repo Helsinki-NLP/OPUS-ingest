@@ -62,7 +62,7 @@ corpus: ${CORPUSDIR}
 
 
 
-SRCHTML = $(subst ",'',${ELRC_DESCRIPTION})   # replace "
+SRCHTML = $(subst ',&apos;,$(subst ",&quot;,${ELRC_DESCRIPTION}))   # replace " and '
 EXTRAHTML = ELRC-${ELRC_CORPUS}-${ELRC_NAME} is a public data set distributed by the <a href="https://www.elrc-share.eu">https://www.elrc-share.eu</a>
 
 
@@ -98,23 +98,23 @@ ${CORPUSDIR}:
 
 
 move-failed:
-	mkdir -p ../../corpus-failed-${shell date "+%Y-%m-%d"}
-	for d in ${DATASET_IDS}; do \
-	  if [ ! -d ../../corpus/$$d/xml ]; then \
-	    echo $$d; \
-	    mv -f ../../corpus/$$d ../../corpus-failed-${shell date "+%Y-%m-%d"}/ ; \
-	  fi \
+	@for c in ${ELRC_CORPORA}; do \
+	  ${MAKE} -s ELRC_CORPUS=$$c move-if-failed; \
 	done
 
+move-if-failed:
+	mkdir -p ../../corpus-failed-${shell date "+%Y-%m-%d"}
+	if [ ! -d ${CORPUSDIR}/xml ]; then \
+	  echo "${ELRC_CORPUS} import failed (see ${CORPUSDIR})"; \
+	  mv -f ${CORPUSDIR} ../../corpus-failed-${shell date "+%Y-%m-%d"}/ ; \
+	fi
 
-${DATASET_IDS}:
-	${MAKE} ID=$@ corpus
-	touch $@
 
 
-elrc-website: ${RELEASEHOME}/ELRC.php
+elrc-website: ${RELEASEHOME}/ELRC_SHARE.php
 
-${RELEASEHOME}/ELRC.php:
+${RELEASEHOME}/ELRC_SHARE.php:
+	${MAKE} ${ELRC_MTDATA}
 	@echo '<?php include("count.php"); ?>' > $@
 	@echo '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">' >> $@
 	@echo '<html><head><title>ELRC</title>' >> $@
@@ -127,25 +127,30 @@ ${RELEASEHOME}/ELRC.php:
 	@echo '    <?php include("header.php"); ?>' >> $@
 	@echo '  </div><h1>ELRC public data sets</h1>' >> $@
 	@echo '  <table>' >> $@
-	@for i in `seq ${words ${DATASET_IDS}}`; do \
-	  if [ -e ${RELEASEHOME}/`echo "${DATASET_IDS}" | cut -f$$i -d ' ' | tr "\n" ' ' | sed "s/ $$//"`.php ]; then \
-	  echo '    <tr>' >> $@; \
-	  echo "      <td>$$i</td>" >> $@; \
-	  echo -n '      <td><a href="' >> $@; \
-	  echo -n "${DATASET_IDS}" | cut -f$$i -d ' ' | tr "\n" ' ' | sed "s/ $$//" >> $@; \
-	  echo -n '.php">' | tr "\n" ' ' | sed "s/ $$//" >> $@; \
-	  echo -n "${DATASET_IDS}" | cut -f$$i -d ' ' | tr "\n" ' ' | sed "s/ $$//" >> $@; \
-	  echo '</a></td>' >> $@; \
-	  echo -n '      <td>' >> $@; \
-	  echo -n "${DATASET_DIRS}" | cut -f$$i -d ' ' | tr "\n\?" '  ' | sed "s/ $$//" >> $@; \
-	  echo '</td>' >> $@; \
-	  echo -n '      <td>' >> $@; \
-	  echo -n "${DATASET_LICENSES}" | cut -f$$i -d ' ' | tr "\n" ' ' | sed "s/ $$//" >> $@; \
-	  echo '</td>' >> $@; \
-	  echo '    </tr>' >> $@; \
+	@for c in ${ELRC_CORPORA}; do \
+	  name=`grep "	$$c	" ${ELRC_MTDATA} | cut -f4 | head -1`; \
+	  clean_name=`echo $${name} | tr -cd '0-9a-zA-Z_.-' | cut -f1-3 -d_ | sed -r 's/^(.{20}).*$$/\1/'`; \
+	  description=`grep "	$$c	" ${ELRC_MTDATA} | cut -f5 | head -1 | sed 's/"/&quot;/g'`; \
+	  license=`grep "	$$c	" ${ELRC_MTDATA} | cut -f8 | head -1`; \
+	  corpus="ELRC-$$c-$${clean_name}"; \
+	  echo "$${corpus}.php"; \
+	  if [ -d ${RELEASEHOME}/$${corpus} ]; then \
+	    echo '    <tr>'                            >> $@; \
+	    echo -n '      <td><a href="'              >> $@; \
+	    echo -n "$${corpus}.php\">"                >> $@; \
+	    echo -n "$${corpus}"                       >> $@; \
+	    echo '</a></td>'                           >> $@; \
+	    echo -n '      <td>'                       >> $@; \
+	    echo -n "$${description}"                  >> $@; \
+	    echo '</td>'                               >> $@; \
+	    echo -n '      <td>'                       >> $@; \
+	    echo -n "$${license}"                      >> $@; \
+	    echo '</td>' >> $@; \
+	    echo '    </tr>'                           >> $@; \
 	  fi \
 	done
 	@echo '  </table>' >> $@
 	@echo '</body>' >> $@
 	@echo '</html>' >> $@
 	@chmod 644 $@
+	rm -f ${ELRC_MTDATA}
