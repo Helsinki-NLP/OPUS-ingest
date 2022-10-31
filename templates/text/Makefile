@@ -20,6 +20,7 @@ include ../Makefile.def
 ## - prepare, align, annotate corpus (see ../Makefile.process)
 ## - index, package and publish corpus (see ../Makefile.process)
 
+.PHONY: all
 all:
 	${MAKE} corpus
 	${MAKE} publish

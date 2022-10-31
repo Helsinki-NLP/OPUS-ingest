@@ -33,15 +33,23 @@ TMXGZDONE  = ${TMXGZFILES:.tmx.gz=_done}
 
 .PHONY: all
 all:
+	${MAKE} import
+#	${MAKE} extra
+	${MAKE} publish
+
+
+.PHONY: import
+import:
 	${MAKE} convert
-	${MAKE} xml/Makefile
-	-mv -f raw/*-* xml/ 
 	${MAKE} -C xml create-align-files
 	${MAKE} annotate
+
+.PHONY: extra
+extra:
 	${MAKE} udparse
 	${MAKE} wordalign
 	${MAKE} cwb-index
-	${MAKE} publish
+
 
 ## standard procedures are specified in the following makefiles
 ##
@@ -83,6 +91,8 @@ BASIC_FILTERS = | perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFF
 
 .PHONY: convert
 convert: ${TMXDONE} ${TMXGZDONE}
+	${MAKE} xml/Makefile
+	-mv -f raw/*-* xml/ 
 
 ${TMXDONE}: %_done: %.tmx
 	mkdir -p raw

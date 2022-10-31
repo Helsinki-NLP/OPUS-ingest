@@ -60,6 +60,20 @@ ${ELRC_MTDATA}:
 
 corpus: ${CORPUSDIR}
 
+retry-failed:
+	@for c in ${ELRC_CORPORA}; do \
+	  ${MAKE} -s ELRC_CORPUS=$$c restart-import; \
+	done
+
+restart-import:
+	if [ -d ${CORPUSDIR} ]; then \
+	  if [ ! -d ${CORPUSDIR}/xml ]; then \
+	    echo "${ELRC_CORPUS} import failed (try to restart in ${CORPUSDIR})"; \
+	    ${MAKE} -C ${CORPUSDIR} all; \
+	  elif [ ! -e ${RELEASEHOME}/${CORPUSNAME}.php ]; then \
+	    ${MAKE} -C ${CORPUSDIR} publish; \
+	  fi \
+	fi
 
 
 SRCHTML = $(subst ',&apos;,$(subst ",&quot;,${ELRC_DESCRIPTION}))   # replace " and '
@@ -104,9 +118,11 @@ move-failed:
 
 move-if-failed:
 	mkdir -p ../../corpus-failed-${shell date "+%Y-%m-%d"}
-	if [ ! -d ${CORPUSDIR}/xml ]; then \
-	  echo "${ELRC_CORPUS} import failed (see ${CORPUSDIR})"; \
-	  mv -f ${CORPUSDIR} ../../corpus-failed-${shell date "+%Y-%m-%d"}/ ; \
+	if [ -d ${CORPUSDIR} ]; then \
+	  if [ ! -d ${CORPUSDIR}/xml ]; then \
+	    echo "${ELRC_CORPUS} import failed (see ${CORPUSDIR})"; \
+	    mv -f ${CORPUSDIR} ../../corpus-failed-${shell date "+%Y-%m-%d"}/ ; \
+	  fi \
 	fi
 
 

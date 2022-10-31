@@ -4,28 +4,34 @@
 
 ## Structure of the repository
 
-* `admin/`: administration stuff
 * `corpus`: corpus data corpus build scripts/makefiles
-* `cwb`: Corpus Workbench index files and registeries
 * `doc`: (rudimentary) documentation
-* `eflomal`: word alignment models (eflomal priors)
-* `img`: project images
-* `incoming`: incoming data sets
-* `public_html`: websites and data sample files
-* `tools`: scripts and tools
+* `eflomal`: recipes for creating eflomal priors
+* `incoming`: notes about incoming data sets
+* `tools`: some additional scripts and tools (mostly obsolete)
+
+
+## Submodules and generated files
+
+* `admin`: administration stuff (submodule OPUS-admin)
+* `public_html`: websites and data sample files (submodule OPUS-website)
+* `cwb`: Corpus Workbench index files and registeries (generated)
+
 
 
 ## Pre-requisites
 
-* OpusTools
-* OpusTools-perl
-* Moses
-* recode
-* tidy
+* python packages: opustools, polyglot, fast-mosestokenizer
+* Perl modules: OpusTools, Uplug and dependencies
+* subalign (for subtitle conversion and alignment)
+* recode, tidy, pigz, GNU parallel and other common GNU/Unix tools
+* Moses and eflomal (optional for word alignment and phrase table extraction)
+
 
 
 ## Documentation
 
+NOTE: requires updates!
 
 * [Creating a new corpus](doc/create-corpus.md)
 * [Updating corpora](doc/update-corpus.md)
@@ -34,7 +40,6 @@
 
 ## TODO
 
-* clearly define pre-requisites
 * make build scripts more readable
 * consistent language codes
 * get rid of hard-coded paths to tools and make the repo more general and less depending on specific environments (like the one on puhti/CSC)
@@ -44,3 +49,4 @@
 * more frequent corpus updates (Tatoeba, wikimedia and other frequently changing corpora)
 * streamline corpus creation, processing and maintenance procedures
 * improve integration/updates of OPUS-API and website updates
+* ...

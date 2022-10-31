@@ -109,9 +109,15 @@ UDCWBREG     = ${UDCWB}/reg
 
 ifndef LANGUAGES
   LANGUAGES = $(sort $(notdir $(wildcard ${CORPUSSRC}/??)) \
-                      $(notdir $(wildcard ${CORPUSSRC}/???)) \
                       $(notdir $(wildcard ${CORPUSSRC}/??_??)) \
-                      $(notdir ${shell find ${CORPUSRAW} -mindepth 1 -maxdepth 1 -type d -printf "%f "}))
+                      $(notdir $(wildcard ${CORPUSSRC}/??_????)) \
+                      $(notdir $(wildcard ${CORPUSSRC}/??_????_??)) \
+                      $(notdir $(wildcard ${CORPUSSRC}/???)) \
+                      $(notdir $(wildcard ${CORPUSSRC}/???_??)) \
+                      $(notdir $(wildcard ${CORPUSSRC}/???_????)) \
+                      $(notdir $(wildcard ${CORPUSSRC}/???_????_??)) \
+                      $(notdir ${shell if [ -e ${CORPUSRAW} ]; then \
+			find ${CORPUSRAW} -mindepth 1 -maxdepth 1 -type d -printf "%f "; fi}))
 endif
 
 
