@@ -16,6 +16,29 @@
 #
 #----------------------------------------------
 
+
+.PHONY: release
+release:
+	${MAKE} upload
+	${MAKE} upload-website
+	${MAKE} upload-cwb
+
+.PHONY: upload
+upload: ${PACKAGES}
+	which a-get   ## to make sure that allas connections are set up
+	${MAKE} -C ${OPUSHOME}/admin CORPUS=${CORPUS} VERSION=${VERSION} upload
+
+.PHONY: upload-website
+upload-website: ${SAMPLE_FILES} ${OPUSPUB}/${CORPUS}-${VERSION}.php ${OPUSPUB}/${CORPUS}.php
+	${MAKE} -C ${OPUSHOME}/admin CORPUS=${CORPUS} VERSION=${VERSION} sync-html
+
+.PHONY: upload-cwb
+upload-cwb:
+	if [ -d ${CWBREG}/${CORPUS}-${VERSION} ]; then \
+	  ${MAKE} -C ${OPUSHOME}/admin CORPUS=${CORPUS} VERSION=${VERSION} sync-cwb; \
+	fi
+
+
 ifndef PARSED_LANGUAGES
   PARSED_LANGUAGES := $(sort $(notdir $(wildcard ${CORPUSPARSED}/??)) \
                             $(notdir $(wildcard ${CORPUSPARSED}/???)) \
@@ -66,6 +89,8 @@ FREQ_COUNTS    = $(patsubst %,${CORPUSRELEASE}/freq/%.freq.gz, ${LANGUAGES})
 # sample files in HTML
 ALG_SAMPLES    = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSPUB}/%_sample.html, ${CES})
 CORPUS_SAMPLES = $(patsubst %,${CORPUSPUB}/%_sample.html, ${LANGUAGES})
+SAMPLE_FILES   = ${ALG_SAMPLES} ${CORPUS_SAMPLES}
+
 
 # info files with statistics (NEW: store that in release dir!)
 CES_INFO  = $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/info/%.info,${CES})
@@ -166,7 +191,7 @@ html-local:
 	-rm -fr ${TMPDIR}/OPUS/corpus/${CORPUS}
 	-rm -fr ${TMPDIR}/OPUS/public_html/${CORPUS}*
 
-release packages: ${PACKAGES}
+packages: ${PACKAGES}
 	${MAKE} ${CORPUSRELEASE}.info
 	${MAKE} ${OPUSRELEASE}/${CORPUS}/info.txt
 	echo '${VERSION}	${shell date}' >> ${OPUSRELEASE}/${CORPUS}/releases.txt
@@ -209,7 +234,7 @@ ${CORPUSRELEASE}:
 #  CITENOTE=Please <a href="http://opus.lingfil.uu.se/RANLP_V.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J\&ouml;rg Tiedemann, 2009, <a href="http://stp.lingfil.uu.se/~joerg/published/ranlp-V.pdf">News from OPUS - A Collection of Multilingual Parallel Corpora with Tools and Interfaces</a>. In N. Nicolov and K. Bontcheva and G. Angelova and R. Mitkov (eds.) Recent Advances in Natural Language Processing (vol V), pages 237-248, John Benjamins, Amsterdam/Philadelphia<br/>
 
 ifndef CITENOTE
-  CITENOTE=Please <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use any part of the corpus in your own work:<br/> J. Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)<br/>
+  CITENOTE=Please <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use the OPUS packages and downloads in your own work:<br/> J. Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)<br/>
 endif
 
 ## additional information about the downloads
@@ -230,6 +255,24 @@ ifndef OTHERVERSIONS
   OTHERVERSIONS=<h3>Release history:</h3><p><ul>${shell find ${OPUSPUB}/ -name '${CORPUS}-v*.php' -printf "%f\n" | sort | sed 's/${CORPUS}-\(v.*\).php/<li><a href=\"${CORPUS}-\1.php\">${CORPUS} \1<\/a><\/li>/'}</ul></p>
 endif
 
+ifndef DISCLAIMER
+  DISCLAIMER = <h3>Disclaimer</h3> \
+<ul> \
+<li>We do not own any of the text from which the data has been extracted.</li> \
+<li>We only offer files that we believe we are free to redistribute. If any doubt occurs about the legality of any of our file downloads we will take them off right away after contacting us.</li> \
+</ul> \
+<h3>Notice and take down policy</h3> \
+Notice: Should you consider that our data contains material that is owned by you and should therefore not be reproduced here, please: \
+<ul> \
+    <li>Clearly identify yourself, with detailed contact data such as an address, telephone number or email address at which you can be contacted.</li> \
+    <li>Clearly identify the copyrighted work claimed to be infringed.</li> \
+    <li>Clearly identify the material that is claimed to be infringing and information reasonably sufficient to allow us to locate the material.</li> \
+    <li>And contact Joerg Tiedemann at the following email address: jorg.tiedemann at helsinki.fi.</li>\
+</ul> \
+Take down: We will comply to legitimate requests by removing the affected sources from the next release of the corpus.
+endif
+
+
 print-release-history:
 	@echo '${OTHERVERSIONS}'
 	find ${OPUSPUB}/ -name '${CORPUS}-v*.php' -printf "%f\n"
@@ -243,7 +286,8 @@ ${OPUSPUB}/${CORPUS}-${VERSION}.php: ${PACKAGES} ${CORPUS_SAMPLES} ${ALG_SAMPLES
 	sed -e 's|<h3>Download</h3>|<h3>Download</h3>${DOWNLOADINFO}${EXTRAHTML}${OTHERVERSIONS}|' \
 	    -e 's|<h3>Download</h3>|${CITENOTE}<h3>Download</h3>|' \
 	    -e 's|<h1>${CORPUS}${VERSION}</h1>|<h1>${CORPUS} ${VERSION}</h1>${SRCHTML}|' \
-	    -e 's|<h1>${CORPUS}</h1>|<h1>${CORPUS} ${VERSION}</h1>${SRCHTML}|' > $@
+	    -e 's|<h1>${CORPUS}</h1>|<h1>${CORPUS} ${VERSION}</h1>${SRCHTML}|' \
+	    -e 's|<div class="footer">|${DISCLAIMER}<div class="footer">|'          > $@
 	chmod 644 $@
 #	chmod go+r $@
 
@@ -321,13 +365,14 @@ ifneq (${LICENSE},)
 	echo "     License: ${LICENSE}" >>$@
 endif
 ifneq (${COPYRIGHT},)
-	echo "   Copyright: ${LICENSE}" >>$@
+	echo "   Copyright: ${COPYRIGHT}" >>$@
 endif
 	echo "" >>$@
 	echo "This corpus is part of OPUS - the open collection of parallel corpora" >> $@
 	echo "OPUS Website: http://opus.nlpl.eu" >> $@
 	echo "" >>$@
-	echo "${CITENOTE}" | sed 's/<[^>]*>//g' >> $@
+#	echo "${CITENOTE}" | sed 's/<[^>]*>//g' >> $@
+	echo "${CITENOTE}" >> $@
 	echo "" >>$@
 	echo "${SRCHTML}" | sed 's/<[^>]*>//g' >> $@
 	echo "${EXTRAHTML}" | sed 's/<[^>]*>//g' >> $@

@@ -2,39 +2,90 @@
 include ../Makefile.def
 include ../Makefile.submit
 
-MTDATA_INDEX = https://raw.githubusercontent.com/thammegowda/mtdata/master/mtdata/index
-ELRC_MTDATA  = elrc_share.tsv
-
-ELRC_CORPORA     := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | cut -f3 | sort -u}
-ELRC_CORPUS      ?= ${firstword ${ELRC_CORPORA}}
-ELRC_NAME        := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f4 | head -1}
-ELRC_NAME_CLEAN  := ${shell echo ${ELRC_NAME} | tr -cd '0-9a-zA-Z_.-' | cut -f1-3 -d_ | sed -r 's/^(.{20}).*$$/\1/'}
-ELRC_DESCRIPTION := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f5 | head -1}
-ELRC_BROWSE_URL  := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f6 | head -1}
-ELRC_URL         := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f7 | head -1}
-ELRC_LICENSE     := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f8 | head -1}
-
-LOAD_MODS = module use -a /projappl/nlpl/software/modules/etc/; \
-		module load nlpl-opus nlpl-efmaral nlpl-moses;
-
-
-PWD         := ${shell pwd}
-OPUSHOME    := ${PWD}/../..
-CORPUSHOME  := ${PWD}/..
-RELEASEHOME := ${PWD}/../../public_html
 # TEMPLATEDIR := ${OPUSHOME}/templates/multi-tmx
 TEMPLATEDIR := ${OPUSHOME}/templates/tmx
 
+MTDATA_INDEX := https://raw.githubusercontent.com/thammegowda/mtdata/master/mtdata/index
+ELRC_MTDATA  := elrc_share.tsv
 
-CORPUSNAME  = ELRC-${ELRC_CORPUS}-${ELRC_NAME}
-CORPUSDIR   = ${CORPUSHOME}/ELRC-${ELRC_CORPUS}-${ELRC_NAME_CLEAN}
+ifneq ($(wildcard ${ELRC_MTDATA}),)
+  ELRC_CORPORA     := ${shell cut -f3 ${ELRC_MTDATA} | sort -u}
+  ELRC_CORPUS      ?= ${firstword ${ELRC_CORPORA}}
+  ELRC_NAME        := ${shell grep '	${ELRC_CORPUS}	' ${ELRC_MTDATA} | cut -f4 | head -1}
+  ELRC_DESCRIPTION := ${shell grep '	${ELRC_CORPUS}	' ${ELRC_MTDATA} | cut -f5 | head -1}
+  ELRC_BROWSE_URL  := ${shell grep '	${ELRC_CORPUS}	' ${ELRC_MTDATA} | cut -f6 | head -1}
+  ELRC_URL         := ${shell grep '	${ELRC_CORPUS}	' ${ELRC_MTDATA} | cut -f7 | head -1}
+  ELRC_LICENSE     := ${shell grep '	${ELRC_CORPUS}	' ${ELRC_MTDATA} | cut -f8 | head -1}
+else
+  ELRC_CORPORA     := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | cut -f3 | sort -u}
+  ELRC_CORPUS      ?= ${firstword ${ELRC_CORPORA}}
+  ELRC_NAME        := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f4 | head -1}
+  ELRC_DESCRIPTION := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f5 | head -1}
+  ELRC_BROWSE_URL  := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f6 | head -1}
+  ELRC_URL         := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f7 | head -1}
+  ELRC_LICENSE     := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f8 | head -1}
+endif
 
 
+ELRC_NAME_CLEAN  := ${shell echo ${ELRC_NAME} | tr -cd '0-9a-zA-Z_.-' | cut -f1-3 -d_ | sed -r 's/^(.{20}).*$$/\1/'}
+CORPUSNAME       := ELRC-${ELRC_CORPUS}-${ELRC_NAME_CLEAN}
+CORPUSDIR        := ${OPUSCORPORA}/ELRC-${ELRC_CORPUS}-${ELRC_NAME_CLEAN}
 
-all:
+
+## convert all ELRC corpora
+all: ${ELRC_MTDATA}
 	@for c in ${ELRC_CORPORA}; do \
+	  echo "import ELRC $$c"; \
 	  ${MAKE} -s ELRC_CORPUS=$$c corpus; \
 	done
+
+corpus: ${CORPUSDIR}
+
+## release all imported data sets
+release-all: ${ELRC_MTDATA}
+	@for c in ${ELRC_CORPORA}; do \
+	  ${MAKE} -s ELRC_CORPUS=$$c release; \
+	done
+
+## make public releases on allas and the OPUS website
+release:
+	if [ -e ${OPUSPUB}/${CORPUSNAME} ]; then \
+	  echo "release ${CORPUSNAME}"; \
+	  ${MAKE} redo-makefile; \
+	  ${MAKE} redo-website; \
+	  ${MAKE} -C ${CORPUSDIR} release; \
+	else \
+	  echo "nothing to release yet for ${CORPUSNAME}"; \
+	fi
+
+
+
+## same as all but create individual import jobs
+all-jobs: ${ELRC_MTDATA}
+	@for c in ${ELRC_CORPORA}; do \
+	  ${MAKE} -s ELRC_CORPUS=$$c import-job; \
+	done
+
+## submit a job to import a corpus
+import-job:
+	if [ ! -d ${CORPUSDIR} ]; then \
+	  echo "create import job for ${CORPUSNAME}"; \
+	  ${MAKE} EMAIL= HPC_MEM=16g HPC_TIME=12:00 HPC_CORES=2 corpus.submit; \
+	else \
+	  echo "${CORPUSNAME} import already done?"; \
+	fi
+
+wordalign-job:
+	if [ ! -d ${CORPUSDIR}/wordalign ]; then \
+	  echo "create wordalign job for ${CORPUSNAME}"; \
+	  ${MAKE} -C ${CORPUSDIR} EMAIL= HPC_MEM=16g HPC_TIME=8:00 HPC_CORES=2 wordalign.submit; \
+	else \
+	  echo "${CORPUSNAME} wordalign already done?"; \
+	fi
+
+
+
+
 
 
 print-corpus-info-all:
@@ -53,12 +104,11 @@ print-corpus-info:
 	@echo "${ELRC_LICENSE}"
 	@echo "import to ${CORPUSDIR}"
 
+elrc-mtdata: ${ELRC_MTDATA}
 
 ${ELRC_MTDATA}:
 	wget -O $@ ${MTDATA_INDEX}/$@
 
-
-corpus: ${CORPUSDIR}
 
 retry-failed:
 	@for c in ${ELRC_CORPORA}; do \
@@ -70,15 +120,16 @@ restart-import:
 	  if [ ! -d ${CORPUSDIR}/xml ]; then \
 	    echo "${ELRC_CORPUS} import failed (try to restart in ${CORPUSDIR})"; \
 	    ${MAKE} -C ${CORPUSDIR} all; \
-	  elif [ ! -e ${RELEASEHOME}/${CORPUSNAME}.php ]; then \
+	  elif [ ! -e ${OPUSPUB}/${CORPUSNAME}.php ]; then \
 	    ${MAKE} -C ${CORPUSDIR} publish; \
 	  fi \
 	fi
 
 
 SRCHTML = $(subst ',&apos;,$(subst ",&quot;,${ELRC_DESCRIPTION}))   # replace " and '
-EXTRAHTML = ELRC-${ELRC_CORPUS}-${ELRC_NAME} is a public data set distributed by the <a href="https://www.elrc-share.eu">https://www.elrc-share.eu</a>
+EXTRAHTML = ELRC-${ELRC_CORPUS}-${ELRC_NAME} is a public data set distributed by the <a href="${ELRC_BROWSE_URL}">https://www.elrc-share.eu</a>
 
+CITENOTE = Please acknowledge the <a href="${ELRC_BROWSE_URL}">original sources and providers</a> of the data and also <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use the OPUS packages and downloads in your own work:<br/> J. Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)
 
 
 ${CORPUSDIR}:
@@ -102,17 +153,30 @@ ${CORPUSDIR}:
 	  find $@/src -iname '*meta*.txt' -exec mv -f "{}" $@/METADATA.txt \; ;\
 	fi
 	sed 	-e 's#LICENSE = #LICENSE = ${ELRC_LICENSE}#' \
-		-e 's#COPYRIGHT = #COPYRIGHT = Check details at <a href="https://www.elrc-share.eu">ELRC share</a>#' \
+		-e 's#COPYRIGHT = #COPYRIGHT = Check details at <a href="${ELRC_BROWSE_URL}">ELRC share</a>#' \
 		-e 's#SRCHTML=.*$$#SRCHTML=${SRCHTML}#' \
 		-e 's#EXTRAHTML=.*$$#EXTRAHTML=${EXTRAHTML}#' \
 	< ${TEMPLATEDIR}/Makefile.def > $@/Makefile.def
+	echo 'CITENOTE = ${CITENOTE}' >> $@/Makefile.def
 	${MAKE} -C $@ all
 
 
+redo-makefile:
+	sed 	-e 's#LICENSE = #LICENSE = ${ELRC_LICENSE}#' \
+		-e 's#COPYRIGHT = #COPYRIGHT = Check details at <a href="${ELRC_BROWSE_URL}">ELRC share</a>#' \
+		-e 's#SRCHTML=.*$$#SRCHTML=${SRCHTML}#' \
+		-e 's#EXTRAHTML=.*$$#EXTRAHTML=${EXTRAHTML}#' \
+	< ${TEMPLATEDIR}/Makefile.def > ${CORPUSDIR}/Makefile.def
+	echo 'CITENOTE = ${CITENOTE}' >> ${CORPUSDIR}/Makefile.def
+
+redo-website:
+	rm -f ${OPUSPUB}/${CORPUSNAME}.php ${OPUSPUB}/${CORPUSNAME}-v1.php
+	${MAKE} -C ${CORPUSDIR} website
 
 
 move-failed:
 	@for c in ${ELRC_CORPORA}; do \
+	  echo "check ELRC-$$c"; \
 	  ${MAKE} -s ELRC_CORPUS=$$c move-if-failed; \
 	done
 
@@ -127,9 +191,9 @@ move-if-failed:
 
 
 
-elrc-website: ${RELEASEHOME}/ELRC_SHARE.php
+elrc-website: ${OPUSPUB}/ELRC_SHARE.php
 
-${RELEASEHOME}/ELRC_SHARE.php:
+${OPUSPUB}/ELRC_SHARE.php:
 	${MAKE} ${ELRC_MTDATA}
 	@echo '<?php include("count.php"); ?>' > $@
 	@echo '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">' >> $@
@@ -150,7 +214,7 @@ ${RELEASEHOME}/ELRC_SHARE.php:
 	  license=`grep "	$$c	" ${ELRC_MTDATA} | cut -f8 | head -1`; \
 	  corpus="ELRC-$$c-$${clean_name}"; \
 	  echo "$${corpus}.php"; \
-	  if [ -d ${RELEASEHOME}/$${corpus} ]; then \
+	  if [ -d ${OPUSPUB}/$${corpus} ]; then \
 	    echo '    <tr>'                            >> $@; \
 	    echo -n '      <td><a href="'              >> $@; \
 	    echo -n "$${corpus}.php\">"                >> $@; \

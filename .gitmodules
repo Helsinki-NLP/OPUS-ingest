@@ -1,0 +1,3 @@
+[submodule "OPUS-admin"]
+	path = OPUS-admin
+	url = ../OPUS-admin

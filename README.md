@@ -8,6 +8,7 @@
 * `doc`: (rudimentary) documentation
 * `eflomal`: recipes for creating eflomal priors
 * `incoming`: notes about incoming data sets
+* `templates`: template recipes for importing additional data sets
 * `tools`: some additional scripts and tools (mostly obsolete)
 
 
@@ -26,12 +27,12 @@
 * subalign (for subtitle conversion and alignment)
 * recode, tidy, pigz, GNU parallel and other common GNU/Unix tools
 * Moses and eflomal (optional for word alignment and phrase table extraction)
-
+* the corpus work bench (CWB) and cwb Perl modules (optional for cwb index generation)
 
 
 ## Documentation
 
-NOTE: requires updates!
+NOTE: The documentation belowe requires serious updates!
 
 * [Creating a new corpus](doc/create-corpus.md)
 * [Updating corpora](doc/update-corpus.md)

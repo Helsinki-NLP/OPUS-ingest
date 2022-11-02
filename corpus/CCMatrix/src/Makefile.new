@@ -1,0 +1,83 @@
+#-*-makefile-*-
+
+include ../../Makefile.def
+include ../Makefile.def
+
+PWD           := ${shell pwd}
+TSV_DATA_HOME := http://data.statmt.org/cc-matrix/
+TSV_BITEXTS   := $(shell wget -qq -O - ${TSV_DATA_HOME} | grep -o '[a-z]*-[a-z]*.bitextf.tsv.gz' | sort -u)
+LANGUAGES     := $(sort $(subst -, ,${patsubst %.bitextf.tsv.gz,%,${TSV_BITEXTS}}))
+TSV_CONVERTED := ${patsubst %.tsv.gz,%.done,${TSV_BITEXTS}}
+TSV2OPUS      := ${PWD}/../scripts/tsv2opus
+
+## use the fast local-scratch partition if available
+TMPDIR ?= /media/ccmatrix/tmp
+ifdef LOCAL_SCRATCH
+  TMPDIR = ${LOCAL_SCRATCH}
+endif
+
+SENTDBS       := ${patsubst %,${TMPDIR}/$(CORPUS).%.db,${LANGUAGES}}
+
+
+
+.PHONY: all
+all: ${CORPUSRAW}
+	${MAKE} -C .. xml/Makefile
+	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/ 
+	${MAKE} -C ${CORPUSXML} create-align-files
+
+
+## ideas for running this in parallel
+## - use specific sentence DBs
+## - lock databases when processing a specific tsv file
+## - mark if tsv file is done and unlock the DB
+## - start conversion in parallel but wait if corresponding DB is locked
+## problems:
+## - racing issues when locking
+## - deadlock if a certain conversion takes long time or crashes
+
+# ${SENTDBS}:
+#  
+# tttt:
+#	echo ${TSV_CONVERTED}
+
+
+${TSV_CONVERTED}: %.bitextf.done: %.bitextf.tsv.gz
+	( s=${firstword $(subst -, ,${patsubst %.bitextf.done,%,$@})}; \
+	  t=${lastword $(subst -, ,${patsubst %.bitextf.done,%,$@})}; \
+	  S=${TMPDIR}/$(CORPUS).$$s.db; \
+	  T=${TMPDIR}/$(CORPUS).$$t.db; \
+	  while [ -e $$S.lock ] || [ -e $$T.lock ]; do \
+	    echo "waiting for $$S and $$T"; \
+	    sleep 1; \
+	  done; \
+	  touch $$S.lock $$T.lock; \
+	  zcat $< |\
+	  perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' |\
+	  ${TSV2OPUS} -D ${TMPDIR}/$(CORPUS) -r -u -d -t ${TMPDIR} -o ccmatrix-${VERSION}.xml.gz; \
+	  rm -f $$S.lock $$T.lock; )
+
+
+
+${TSV_BITEXTS}:
+	wget -qq -O - ${TSV_DATA_HOME}/$@ |\
+	gzip -cd |\
+	sed 's/$$/\t$(firstword $(subst -, ,$(notdir $(@:.bitextf.tsv.gz=))))\t$(lastword $(subst -, ,$(notdir $(@:.bitextf.tsv.gz=))))/' |\
+	gzip -c > $@
+
+
+${CORPUSRAW}: ${TSV_BITEXTS}
+	mkdir -p ${CORPUSRAW}
+	( cd ${CORPUSRAW} && \
+	  find -L ${PWD} -name '*.tsv.gz' |\
+	  xargs zcat |\
+	  perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' |\
+	  ${TSV2OPUS} -r -u -d -t ${TMPDIR} -o ccmatrix-${VERSION}.xml.gz )
+	touch ${CORPUSRAW}
+
+
+download-size:
+	wget -qq -O - ${TSV_DATA_HOME} |\
+	grep -o '> *[0-9\.]*[GMK]<' | tr '<>' '  ' |\
+	perl -e 'while (<>){/^ *([0-9\.]*)([GKM]?)/;$$a=$$1;$$b=$$2;if ($$b eq "G"){$$a*=1000000000} elsif ($$b eq "M"){$$a*=1000000} elsif ($$b eq "K"){$$a*=1000} $$c+=$$a;} printf "total size: %7.2fG\n",$$c/1000000000;'
+
