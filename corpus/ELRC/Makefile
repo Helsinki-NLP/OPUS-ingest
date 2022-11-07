@@ -2,11 +2,13 @@
 include ../Makefile.def
 include ../Makefile.submit
 
-# TEMPLATEDIR := ${OPUSHOME}/templates/multi-tmx
-TEMPLATEDIR := ${OPUSHOME}/templates/tmx
+# TMX_TEMPLATEDIR := ${OPUSHOME}/templates/multi-tmx
+TMX_TEMPLATEDIR := ${OPUSHOME}/templates/tmx
+TXT_TEMPLATEDIR := ${OPUSHOME}/templates/moses
 
-MTDATA_INDEX := https://raw.githubusercontent.com/thammegowda/mtdata/master/mtdata/index
-ELRC_MTDATA  := elrc_share.tsv
+MTDATA_INDEX    := https://raw.githubusercontent.com/thammegowda/mtdata/master/mtdata/index
+ELRC_MTDATA     := elrc_share.tsv
+ELRC_MTDATA_URL := ${MTDATA_INDEX}/${ELRC_MTDATA}
 
 ifneq ($(wildcard ${ELRC_MTDATA}),)
   ELRC_CORPORA     := ${shell cut -f3 ${ELRC_MTDATA} | sort -u}
@@ -17,13 +19,13 @@ ifneq ($(wildcard ${ELRC_MTDATA}),)
   ELRC_URL         := ${shell grep '	${ELRC_CORPUS}	' ${ELRC_MTDATA} | cut -f7 | head -1}
   ELRC_LICENSE     := ${shell grep '	${ELRC_CORPUS}	' ${ELRC_MTDATA} | cut -f8 | head -1}
 else
-  ELRC_CORPORA     := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | cut -f3 | sort -u}
+  ELRC_CORPORA     := ${shell wget -O - -qq ${ELRC_MTDATA_URL} | cut -f3 | sort -u}
   ELRC_CORPUS      ?= ${firstword ${ELRC_CORPORA}}
-  ELRC_NAME        := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f4 | head -1}
-  ELRC_DESCRIPTION := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f5 | head -1}
-  ELRC_BROWSE_URL  := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f6 | head -1}
-  ELRC_URL         := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f7 | head -1}
-  ELRC_LICENSE     := ${shell wget -O - -qq ${MTDATA_INDEX}/${ELRC_MTDATA} | grep '	${ELRC_CORPUS}	' | cut -f8 | head -1}
+  ELRC_NAME        := ${shell wget -O - -qq ${ELRC_MTDATA_URL} | grep '	${ELRC_CORPUS}	' | cut -f4 | head -1}
+  ELRC_DESCRIPTION := ${shell wget -O - -qq ${ELRC_MTDATA_URL} | grep '	${ELRC_CORPUS}	' | cut -f5 | head -1}
+  ELRC_BROWSE_URL  := ${shell wget -O - -qq ${ELRC_MTDATA_URL} | grep '	${ELRC_CORPUS}	' | cut -f6 | head -1}
+  ELRC_URL         := ${shell wget -O - -qq ${ELRC_MTDATA_URL} | grep '	${ELRC_CORPUS}	' | cut -f7 | head -1}
+  ELRC_LICENSE     := ${shell wget -O - -qq ${ELRC_MTDATA_URL} | grep '	${ELRC_CORPUS}	' | cut -f8 | head -1}
 endif
 
 
@@ -36,23 +38,22 @@ CORPUSDIR        := ${OPUSCORPORA}/ELRC-${ELRC_CORPUS}-${ELRC_NAME_CLEAN}
 all: ${ELRC_MTDATA}
 	@for c in ${ELRC_CORPORA}; do \
 	  echo "import ELRC $$c"; \
-	  ${MAKE} -s ELRC_CORPUS=$$c corpus; \
+	  ${MAKE} ELRC_CORPUS=$$c corpus; \
 	done
 
 corpus: ${CORPUSDIR}
 
+
 ## release all imported data sets
 release-all: ${ELRC_MTDATA}
 	@for c in ${ELRC_CORPORA}; do \
-	  ${MAKE} -s ELRC_CORPUS=$$c release; \
+	  ${MAKE} ELRC_CORPUS=$$c release; \
 	done
 
 ## make public releases on allas and the OPUS website
 release:
-	if [ -e ${OPUSPUB}/${CORPUSNAME} ]; then \
+	@if [ -e ${OPUSPUB}/${CORPUSNAME} ]; then \
 	  echo "release ${CORPUSNAME}"; \
-	  ${MAKE} redo-makefile; \
-	  ${MAKE} redo-website; \
 	  ${MAKE} -C ${CORPUSDIR} release; \
 	else \
 	  echo "nothing to release yet for ${CORPUSNAME}"; \
@@ -63,12 +64,12 @@ release:
 ## same as all but create individual import jobs
 all-jobs: ${ELRC_MTDATA}
 	@for c in ${ELRC_CORPORA}; do \
-	  ${MAKE} -s ELRC_CORPUS=$$c import-job; \
+	  ${MAKE} ELRC_CORPUS=$$c import-job; \
 	done
 
 ## submit a job to import a corpus
 import-job:
-	if [ ! -d ${CORPUSDIR} ]; then \
+	@if [ ! -d ${CORPUSDIR} ]; then \
 	  echo "create import job for ${CORPUSNAME}"; \
 	  ${MAKE} EMAIL= HPC_MEM=16g HPC_TIME=12:00 HPC_CORES=2 corpus.submit; \
 	else \
@@ -76,7 +77,7 @@ import-job:
 	fi
 
 wordalign-job:
-	if [ ! -d ${CORPUSDIR}/wordalign ]; then \
+	@if [ ! -d ${CORPUSDIR}/wordalign ]; then \
 	  echo "create wordalign job for ${CORPUSNAME}"; \
 	  ${MAKE} -C ${CORPUSDIR} EMAIL= HPC_MEM=16g HPC_TIME=8:00 HPC_CORES=2 wordalign.submit; \
 	else \
@@ -112,7 +113,7 @@ ${ELRC_MTDATA}:
 
 retry-failed:
 	@for c in ${ELRC_CORPORA}; do \
-	  ${MAKE} -s ELRC_CORPUS=$$c restart-import; \
+	  ${MAKE} ELRC_CORPUS=$$c restart-import; \
 	done
 
 restart-import:
@@ -133,13 +134,18 @@ CITENOTE = Please acknowledge the <a href="${ELRC_BROWSE_URL}">original sources 
 
 
 ${CORPUSDIR}:
-	cp -R ${TEMPLATEDIR} $@
 	mkdir -p $@/src
 	wget -O $@/src/data.zip ${ELRC_URL}
 	unzip -d $@/src $@/src/data.zip
-	find $@/src -name '*.tmx' |\
-	perl -e 'use File::Copy;while(<>){chomp;$$i++;move($$_,"$@/src/$$i.tmx");}'
-	gzip -f $@/src/*.tmx
+	rm -f $@/src/data.zip
+	find $@/src -type f |\
+	  perl -e 'use File::Copy;while(<>){chomp;$$f=~s/[^a-zA-Z0-9\.\_\-]/\_/g;move($$_,$$f);}'
+	find $@/src -type f -exec mv {} $@/src/ \;
+	if [ `find $@/src -name '*.tmx' | wc -l` -gt 0 ]; then \
+	  cp -R ${TMX_TEMPLATEDIR}/* $@/; \
+	else \
+	  cp -R ${TXT_TEMPLATEDIR}/* $@/; \
+	fi
 	if [ `find $@/src -iname '*licen*.pdf' | wc -l` -ne 0 ]; then \
 	  find $@/src -iname '*licen*.pdf' -exec mv -f "{}" $@/LICENSE.pdf \; ;\
 	fi
@@ -152,13 +158,18 @@ ${CORPUSDIR}:
 	if [ `find $@/src -iname '*meta*.txt' | wc -l` -ne 0 ]; then \
 	  find $@/src -iname '*meta*.txt' -exec mv -f "{}" $@/METADATA.txt \; ;\
 	fi
+	if [ `find $@/src -iname '*readme*' | wc -l` -ne 0 ]; then \
+	  find $@/src -iname '*readme*' -exec mv -f "{}" $@/INFO \; ;\
+	fi
 	sed 	-e 's#LICENSE = #LICENSE = ${ELRC_LICENSE}#' \
 		-e 's#COPYRIGHT = #COPYRIGHT = Check details at <a href="${ELRC_BROWSE_URL}">ELRC share</a>#' \
 		-e 's#SRCHTML=.*$$#SRCHTML=${SRCHTML}#' \
 		-e 's#EXTRAHTML=.*$$#EXTRAHTML=${EXTRAHTML}#' \
-	< ${TEMPLATEDIR}/Makefile.def > $@/Makefile.def
-	echo 'CITENOTE = ${CITENOTE}' >> $@/Makefile.def
+	< $@/Makefile.def > $@/Makefile.new
+	echo 'CITENOTE = ${CITENOTE}' >> $@/Makefile.new
+	mv -f $@/Makefile.new $@/Makefile.def
 	${MAKE} -C $@ all
+
 
 
 redo-makefile:
@@ -166,8 +177,9 @@ redo-makefile:
 		-e 's#COPYRIGHT = #COPYRIGHT = Check details at <a href="${ELRC_BROWSE_URL}">ELRC share</a>#' \
 		-e 's#SRCHTML=.*$$#SRCHTML=${SRCHTML}#' \
 		-e 's#EXTRAHTML=.*$$#EXTRAHTML=${EXTRAHTML}#' \
-	< ${TEMPLATEDIR}/Makefile.def > ${CORPUSDIR}/Makefile.def
-	echo 'CITENOTE = ${CITENOTE}' >> ${CORPUSDIR}/Makefile.def
+	< ${CORPUSDIR}/Makefile.def | grep -v 'CITENOTE' > ${CORPUSDIR}/Makefile.new
+	echo 'CITENOTE = ${CITENOTE}' >> ${CORPUSDIR}/Makefile.new
+	mv -f ${CORPUSDIR}/Makefile.new ${CORPUSDIR}/Makefile.def
 
 redo-website:
 	rm -f ${OPUSPUB}/${CORPUSNAME}.php ${OPUSPUB}/${CORPUSNAME}-v1.php
@@ -190,10 +202,11 @@ move-if-failed:
 	fi
 
 
+ELRC_WEBSITES := ${wildcard ${OPUSPUB}/ELRC-*.php}
 
 elrc-website: ${OPUSPUB}/ELRC_SHARE.php
 
-${OPUSPUB}/ELRC_SHARE.php:
+${OPUSPUB}/ELRC_SHARE.php: ${ELRC_WEBSITES}
 	${MAKE} ${ELRC_MTDATA}
 	@echo '<?php include("count.php"); ?>' > $@
 	@echo '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">' >> $@

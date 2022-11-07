@@ -17,7 +17,8 @@ include ../Makefile.def
 
 ## all TMX files in the src/ directory
 
-TMXGZFILES = ${wildcard src/*.tmx.gz}
+# TMXGZFILES = ${wildcard src/*.tmx.gz}
+TMXGZFILES = ${shell find src -name '*.tmx.gz'}
 
 
 ## make all:
@@ -27,17 +28,25 @@ TMXGZFILES = ${wildcard src/*.tmx.gz}
 ## - publish (various packages, cwb index, website etc)
 ## - wordalign
 
+
 .PHONY: all
 all:
+	${MAKE} import
+#	${MAKE} extra
+	${MAKE} publish
+
+.PHONY: import
+import:
 	${MAKE} convert
-	${MAKE} xml/Makefile
-	-mv -f raw/*-* xml/ 
 	${MAKE} -C xml create-align-files
 	${MAKE} annotate
+
+.PHONY: extra
+extra:
 	${MAKE} udparse
 	${MAKE} wordalign
 	${MAKE} cwb-index
-	${MAKE} publish
+
 
 ## standard procedures are specified in the following makefiles
 ##
@@ -83,8 +92,8 @@ ${CORPUSRAW}: ${TMXGZFILES}
 	  xargs zcat |\
 	  perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' |\
 	  ${TMX2OPUS} -u -d -t ${TMPDIR} -o ${CORPUS}.xml.gz )
+	${MAKE} xml/Makefile
 	mkdir -p ${CORPUSXML}
-	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/ 
+	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/
 	touch ${CORPUSRAW}
-
 

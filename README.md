@@ -25,9 +25,11 @@
 * python packages: opustools, polyglot, fast-mosestokenizer
 * Perl modules: OpusTools, Uplug and dependencies
 * subalign (for subtitle conversion and alignment)
-* recode, tidy, pigz, GNU parallel and other common GNU/Unix tools
+* pdftotext, recode, tidy, pigz, GNU parallel and other common GNU/Unix tools
 * Moses and eflomal (optional for word alignment and phrase table extraction)
 * the corpus work bench (CWB) and cwb Perl modules (optional for cwb index generation)
+* optional: yasa (our fork from https://github.com/Helsinki-NLP/yasa)
+
 
 
 ## Documentation

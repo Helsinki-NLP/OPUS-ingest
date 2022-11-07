@@ -37,12 +37,21 @@ CONVERTED = ${patsubst %,%_done,${FILES}}
 
 .PHONY: all
 all:
+	${MAKE} import
+#	${MAKE} extra
+	${MAKE} publish
+
+.PHONY: import
+import:
 	${MAKE} convert
 	${MAKE} annotate
+
+.PHONY: extra
+extra:
 	${MAKE} udparse
 	${MAKE} wordalign
 	${MAKE} cwb-index
-	${MAKE} publish
+
 
 ## standard procedures are specified in the following makefiles
 ##

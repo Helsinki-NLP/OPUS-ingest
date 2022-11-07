@@ -2,7 +2,8 @@
 
 PIP = pip
 
-UBUNTU_PACKAGES = libicu-dev \
+UBUNTU_PACKAGES = libboost-all-dev \
+		libicu-dev \
 		liblingua-sentence-perl \
 		libxml-parser-perl \
 		libxml-writer-perl \
@@ -19,6 +20,12 @@ install: requirements.txt
 	${MAKE} install-opustools-perl
 	${MAKE} install-subalign
 	${MAKE} install-uplug
+	${MAKE} install-yasa
+
+install-yasa:
+	git clone https://github.com/Helsinki-NLP/yasa.git
+	cd yasa && ./configure
+	${MAKE} -C yasa install
 
 OpusTools-perl Uplug subalign:
 	git clone https://github.com/Helsinki-NLP/$@.git

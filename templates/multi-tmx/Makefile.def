@@ -12,6 +12,11 @@ VERSION = v1
 LICENSE = 
 COPYRIGHT = 
 
+## get sample files from TMX instead from opus-read
+## --> more efficient as sentence IDs are not sorted in alignment files
+
+UNSORTED_SENTALIGN := 1
+
 # with SRCHTML you can define some extra HTML code that will be placed just
 # after the name of the sub-corpus
 # EXTRAHTML is code which will be put just after the 'Download' header

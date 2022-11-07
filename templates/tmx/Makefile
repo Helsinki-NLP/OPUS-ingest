@@ -94,16 +94,40 @@ convert: ${TMXDONE} ${TMXGZDONE}
 	${MAKE} xml/Makefile
 	-mv -f raw/*-* xml/ 
 
+
+## - do some basic tidying up to avoid problems
+## - use tidy only if the file is not too big
+##   tidy limit: 1GB compressed file size
+## - then convert to OPUS XML
+
 ${TMXDONE}: %_done: %.tmx
 	mkdir -p raw
-	cat $< ${BASIC_FILTERS} | tidy -xml -utf8 > $<.tmp
-	cd raw && ${TMX2OPUS} -r -o ${notdir $(<:.tmx=.xml.gz)} ../$<.tmp
+	-if [ `stat -c%s $<` -ge 1073741824 ]; then \
+	  cat $< ${BASIC_FILTERS} > $<.tmp; \
+	else \
+	  cat $< ${BASIC_FILTERS} | tidy -xml -utf8 -q > $<.tmp; \
+	fi
+	if [ -s $<.tmp ]; then \
+	  cd raw && ${TMX2OPUS} -r -o ${notdir $(<:.tmx=.xml.gz)} ../$<.tmp; \
+	else \
+	  cd raw && ${TMX2OPUS} -r -o ${notdir $(<:.tmx=.xml.gz)} ../$<; \
+	fi
 	rm -f $<.tmp
 	touch $@
 
+## tidy limit: 250MB compressed file size
+
 ${TMXGZDONE}: %_done: %.tmx.gz
 	mkdir -p raw
-	gzip -cd $< ${BASIC_FILTERS} | tidy -xml -utf8 > $<.tmp
-	cd raw && ${TMX2OPUS} -r -o ${notdir $(<:.tmx.gz=.xml.gz)} ../$<.tmp
+	-if [ `stat -c%s $<` -ge 268435456 ]; then \
+	  gzip -cd $< ${BASIC_FILTERS} > $<.tmp; \
+	else \
+	  gzip -cd $< ${BASIC_FILTERS} | tidy -xml -utf8 -q > $<.tmp; \
+	fi
+	if [ -s $<.tmp ]; then \
+	  cd raw && ${TMX2OPUS} -r -o ${notdir $(<:.tmx.gz=.xml.gz)} ../$<.tmp; \
+	else \
+	  cd raw && gzip -cd ../$< | ${TMX2OPUS} -r -o ${notdir $(<:.tmx=.xml.gz)}; \
+	fi
 	rm -f $<.tmp
 	touch $@
