@@ -1,0 +1,21 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = CC-BY-SA-4.0CC-BY-SA-4.0
+COPYRIGHT = Check details at <a href="https://elrc-share.eu/repository/browse/bilingual-collection-of-reports-of-the-greek-public-power-corporation-processed/2a86ec90ca5411e8b7d400155d0267066fe5cd7571e9446cbb4dbd00cbf82f48/">ELRC share</a>Check details at <a href="https://www.elrc-share.eu">ELRC share</a>
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=Bilingual collection of reports of the Greek Public Power Corporation (Processed)   
+EXTRAHTML=ELRC-843-collection_reports_Greek_Power_Corporation is a public data set distributed by the <a href="https://elrc-share.eu/repository/browse/bilingual-collection-of-reports-of-the-greek-public-power-corporation-processed/2a86ec90ca5411e8b7d400155d0267066fe5cd7571e9446cbb4dbd00cbf82f48/">https://www.elrc-share.eu</a>
+CITENOTE = Please acknowledge the <a href="https://elrc-share.eu/repository/browse/bilingual-collection-of-reports-of-the-greek-public-power-corporation-processed/2a86ec90ca5411e8b7d400155d0267066fe5cd7571e9446cbb4dbd00cbf82f48/">original sources and providers</a> of the data and also <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use the OPUS packages and downloads in your own work:<br/> J. Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)

@@ -1,0 +1,21 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = openUnder-PSIopenUnder-PSI
+COPYRIGHT = Check details at <a href="https://elrc-share.eu/repository/browse/bilingual-english-lithuanian-parallel-corpus-from-the-ministry-of-national-defence-republic-of-lithuania-website/8cca4ddae72811e7b7d400155d0267061153ddf2329940e483e9343811edaf87/">ELRC share</a>Check details at <a href="https://www.elrc-share.eu">ELRC share</a>
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=Bilingual English-Lithuanian parallel corpus from the Ministry of National Defence Republic of Lithuania website   
+EXTRAHTML=ELRC-592-kam.lt is a public data set distributed by the <a href="https://elrc-share.eu/repository/browse/bilingual-english-lithuanian-parallel-corpus-from-the-ministry-of-national-defence-republic-of-lithuania-website/8cca4ddae72811e7b7d400155d0267061153ddf2329940e483e9343811edaf87/">https://www.elrc-share.eu</a>
+CITENOTE = Please acknowledge the <a href="https://elrc-share.eu/repository/browse/bilingual-english-lithuanian-parallel-corpus-from-the-ministry-of-national-defence-republic-of-lithuania-website/8cca4ddae72811e7b7d400155d0267061153ddf2329940e483e9343811edaf87/">original sources and providers</a> of the data and also <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use the OPUS packages and downloads in your own work:<br/> J. Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)

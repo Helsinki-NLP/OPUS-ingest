@@ -1,0 +1,21 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = openUnder-PSIopenUnder-PSI
+COPYRIGHT = Check details at <a href="https://elrc-share.eu/repository/browse/parallel-corpus-polish-english-from-the-website-of-the-polish-investment-and-trade-agency-processed/2d7596b0326811e8b7d400155d026706d4ac6d92ea07430dad4f1b99f7cc5631/">ELRC share</a>Check details at <a href="https://www.elrc-share.eu">ELRC share</a>
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=Parallel corpus (Polish - English) from the website of the Polish Investment and Trade Agency (Processed)   
+EXTRAHTML=ELRC-674-Polish_Investment_Trade is a public data set distributed by the <a href="https://elrc-share.eu/repository/browse/parallel-corpus-polish-english-from-the-website-of-the-polish-investment-and-trade-agency-processed/2d7596b0326811e8b7d400155d026706d4ac6d92ea07430dad4f1b99f7cc5631/">https://www.elrc-share.eu</a>
+CITENOTE = Please acknowledge the <a href="https://elrc-share.eu/repository/browse/parallel-corpus-polish-english-from-the-website-of-the-polish-investment-and-trade-agency-processed/2d7596b0326811e8b7d400155d026706d4ac6d92ea07430dad4f1b99f7cc5631/">original sources and providers</a> of the data and also <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use the OPUS packages and downloads in your own work:<br/> J. Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)

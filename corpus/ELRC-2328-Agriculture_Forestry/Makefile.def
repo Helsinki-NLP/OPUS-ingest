@@ -1,0 +1,23 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = openUnder-PSI
+COPYRIGHT = Check details at <a href="https://elrc-share.eu/repository/browse/documents-from-the-ministry-of-agriculture-forestry-and-food-of-the-republic-of-slovenia-en-sl-processed/93b3846061c811e9a7e100155d026706e9eecb84bf204518b470eb1cba9a8839/">ELRC share</a>
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML=Documents from the Ministry of Agriculture, Forestry and Food of the Republic of Slovenia (EN-SL) (Processed)   
+EXTRAHTML=ELRC-2328-Agriculture_Forestry_Food_Slovenia is a public data set distributed by the <a href="https://elrc-share.eu/repository/browse/documents-from-the-ministry-of-agriculture-forestry-and-food-of-the-republic-of-slovenia-en-sl-processed/93b3846061c811e9a7e100155d026706e9eecb84bf204518b470eb1cba9a8839/">https://www.elrc-share.eu</a>
+# CITENOTE=
+CITENOTE = Please acknowledge the <a href="https://elrc-share.eu/repository/browse/documents-from-the-ministry-of-agriculture-forestry-and-food-of-the-republic-of-slovenia-en-sl-processed/93b3846061c811e9a7e100155d026706e9eecb84bf204518b470eb1cba9a8839/">original sources and providers</a> of the data and also <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use the OPUS packages and downloads in your own work:<br/> J. Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)

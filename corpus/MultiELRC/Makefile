@@ -81,3 +81,7 @@ ${CORPUSDIR}:
 	done
 	find $@/src -name '*.tmx' -exec gzip -f {} \;
 	${MAKE} -C $@ all
+
+
+
+

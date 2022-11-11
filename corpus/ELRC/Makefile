@@ -202,11 +202,16 @@ move-if-failed:
 	fi
 
 
-ELRC_WEBSITES := ${wildcard ${OPUSPUB}/ELRC-*.php}
+ELRC_WEBSITES       := ${wildcard ${OPUSPUB}/ELRC-[0-9]*-*.php}
+ELRC_EXTRA_WEBSITES := $(filter-out ${ELRC_WEBSITES},$(wildcard ${OPUSPUB}/ELRC-*.php))
+ELRC_EXTRA_CORPORA  := $(filter-out ${ELRC_WEBSITES},$(shell find ${OPUSPUB}/ -type l -name 'ELRC-*.php'))
+
+ttt:
+	echo ${ELRC_EXTRA_CORPORA}
 
 elrc-website: ${OPUSPUB}/ELRC_SHARE.php
 
-${OPUSPUB}/ELRC_SHARE.php: ${ELRC_WEBSITES}
+${OPUSPUB}/ELRC_SHARE.php: ${ELRC_WEBSITES} ${ELRC_EXTRA_WEBSITES}
 	${MAKE} ${ELRC_MTDATA}
 	@echo '<?php include("count.php"); ?>' > $@
 	@echo '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">' >> $@
@@ -243,6 +248,18 @@ ${OPUSPUB}/ELRC_SHARE.php: ${ELRC_WEBSITES}
 	  fi \
 	done
 	@echo '  </table>' >> $@
+	@echo '<h2>Combined data sets and pivot-based data augmentation</h2>' >> $@
+	@echo '  <table>' >> $@
+	@for c in $(sort $(patsubst %.php,%,$(notdir ${ELRC_EXTRA_CORPORA}))); do \
+	  if [ -d ${OPUSPUB}/$$c ]; then \
+	    echo "extra: $$c"; \
+	    echo '    <tr>'                            >> $@; \
+	    echo -n '      <td><a href="'              >> $@; \
+	    echo -n "$$c.php\">$$c"                    >> $@; \
+	    echo '</a></td>'                           >> $@; \
+	    echo '    </tr>'                           >> $@; \
+	  fi \
+	done
 	@echo '</body>' >> $@
 	@echo '</html>' >> $@
 	@chmod 644 $@

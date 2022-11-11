@@ -1,0 +1,21 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = publicDomainpublicDomain
+COPYRIGHT = Check details at <a href="https://elrc-share.eu/repository/browse/ejtn-handbook-processed/609026ea6d1b11e7b7d400155d0267067b05eafd0bf14d648b111329e7c00577/">ELRC share</a>Check details at <a href="https://elrc-share.eu/repository/browse/ejtn-handbook-processed/609026ea6d1b11e7b7d400155d0267067b05eafd0bf14d648b111329e7c00577/">ELRC share</a>
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=EJTN Handbook (Processed)   
+EXTRAHTML=ELRC-412-EJTN_Handbook is a public data set distributed by the <a href="https://elrc-share.eu/repository/browse/ejtn-handbook-processed/609026ea6d1b11e7b7d400155d0267067b05eafd0bf14d648b111329e7c00577/">https://www.elrc-share.eu</a>
+CITENOTE = Please acknowledge the <a href="https://elrc-share.eu/repository/browse/ejtn-handbook-processed/609026ea6d1b11e7b7d400155d0267067b05eafd0bf14d648b111329e7c00577/">original sources and providers</a> of the data and also <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use the OPUS packages and downloads in your own work:<br/> J. Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)

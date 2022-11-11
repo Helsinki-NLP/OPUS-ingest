@@ -1,0 +1,21 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = CC-BY-SA-4.0CC-BY-SA-4.0
+COPYRIGHT = Check details at <a href="https://elrc-share.eu/repository/browse/compilation-of-modern-greek-1453-croatian-parallel-corpora-resources-used-for-training-of-nteu-machine-translation-engines/383d4c32b40111eb9c1a00155d02670604d1f059e54b4ee58d4e30c1493f380e/">ELRC share</a>Check details at <a href="https://elrc-share.eu/repository/browse/compilation-of-modern-greek-1453-croatian-parallel-corpora-resources-used-for-training-of-nteu-machine-translation-engines/383d4c32b40111eb9c1a00155d02670604d1f059e54b4ee58d4e30c1493f380e/">ELRC share</a>
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=Compilation of Modern Greek (1453-)-Croatian parallel corpora resources used for training of NTEU Machine Translation engines.   
+EXTRAHTML=ELRC-4193-NTEU_TierA is a public data set distributed by the <a href="https://elrc-share.eu/repository/browse/compilation-of-modern-greek-1453-croatian-parallel-corpora-resources-used-for-training-of-nteu-machine-translation-engines/383d4c32b40111eb9c1a00155d02670604d1f059e54b4ee58d4e30c1493f380e/">https://www.elrc-share.eu</a>
+CITENOTE = Please acknowledge the <a href="https://elrc-share.eu/repository/browse/compilation-of-modern-greek-1453-croatian-parallel-corpora-resources-used-for-training-of-nteu-machine-translation-engines/383d4c32b40111eb9c1a00155d02670604d1f059e54b4ee58d4e30c1493f380e/">original sources and providers</a> of the data and also <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use the OPUS packages and downloads in your own work:<br/> J. Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)

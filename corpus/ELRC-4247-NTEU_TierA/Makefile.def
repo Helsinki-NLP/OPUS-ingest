@@ -1,0 +1,21 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = CC-BY-4.0CC-BY-4.0
+COPYRIGHT = Check details at <a href="https://elrc-share.eu/repository/browse/compilation-of-slovenian-swedish-parallel-corpora-resources-used-for-training-of-nteu-machine-translation-engines/2829c23cb40911eb9c1a00155d026706a02629e3fd694a9a8debb05811838f8a/">ELRC share</a>Check details at <a href="https://elrc-share.eu/repository/browse/compilation-of-slovenian-swedish-parallel-corpora-resources-used-for-training-of-nteu-machine-translation-engines/2829c23cb40911eb9c1a00155d026706a02629e3fd694a9a8debb05811838f8a/">ELRC share</a>
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=Compilation of Slovenian-Swedish parallel corpora resources used for training of NTEU Machine Translation engines.   
+EXTRAHTML=ELRC-4247-NTEU_TierA is a public data set distributed by the <a href="https://elrc-share.eu/repository/browse/compilation-of-slovenian-swedish-parallel-corpora-resources-used-for-training-of-nteu-machine-translation-engines/2829c23cb40911eb9c1a00155d026706a02629e3fd694a9a8debb05811838f8a/">https://www.elrc-share.eu</a>
+CITENOTE = Please acknowledge the <a href="https://elrc-share.eu/repository/browse/compilation-of-slovenian-swedish-parallel-corpora-resources-used-for-training-of-nteu-machine-translation-engines/2829c23cb40911eb9c1a00155d026706a02629e3fd694a9a8debb05811838f8a/">original sources and providers</a> of the data and also <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use the OPUS packages and downloads in your own work:<br/> J. Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)

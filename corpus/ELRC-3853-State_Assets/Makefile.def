@@ -1,0 +1,23 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = CC-BY-4.0
+COPYRIGHT = Check details at <a href="https://elrc-share.eu/repository/browse/ministry-of-state-assets-dataset-processed/9d743052566411eb9d5900155d0267062aacf084297d4b01a9f86f9a3e16e6dc/">ELRC share</a>
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML=Ministry of State Assets Dataset (Processed)   
+EXTRAHTML=ELRC-3853-State_Assets is a public data set distributed by the <a href="https://elrc-share.eu/repository/browse/ministry-of-state-assets-dataset-processed/9d743052566411eb9d5900155d0267062aacf084297d4b01a9f86f9a3e16e6dc/">https://www.elrc-share.eu</a>
+# CITENOTE=
+CITENOTE = Please acknowledge the <a href="https://elrc-share.eu/repository/browse/ministry-of-state-assets-dataset-processed/9d743052566411eb9d5900155d0267062aacf084297d4b01a9f86f9a3e16e6dc/">original sources and providers</a> of the data and also <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use the OPUS packages and downloads in your own work:<br/> J. Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)

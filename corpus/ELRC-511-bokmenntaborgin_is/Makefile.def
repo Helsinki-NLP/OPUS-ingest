@@ -1,0 +1,21 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = openUnder-PSIopenUnder-PSI
+COPYRIGHT = Check details at <a href="https://elrc-share.eu/repository/browse/bilingual-is-en-parallel-corpus-from-the-literature-web-website/b5a7f5fee4d511e7b7d400155d026706cfd7be18e5bd497fb00355ba4d23741d/">ELRC share</a>Check details at <a href="https://www.elrc-share.eu">ELRC share</a>
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=Bilingual is-en parallel corpus from THE LITERATURE WEB website   
+EXTRAHTML=ELRC-511-bokmenntaborgin_is is a public data set distributed by the <a href="https://elrc-share.eu/repository/browse/bilingual-is-en-parallel-corpus-from-the-literature-web-website/b5a7f5fee4d511e7b7d400155d026706cfd7be18e5bd497fb00355ba4d23741d/">https://www.elrc-share.eu</a>
+CITENOTE = Please acknowledge the <a href="https://elrc-share.eu/repository/browse/bilingual-is-en-parallel-corpus-from-the-literature-web-website/b5a7f5fee4d511e7b7d400155d026706cfd7be18e5bd497fb00355ba4d23741d/">original sources and providers</a> of the data and also <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use the OPUS packages and downloads in your own work:<br/> J. Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)

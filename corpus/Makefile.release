@@ -276,17 +276,29 @@ print-release-history:
 	@echo '${OTHERVERSIONS}'
 	find ${OPUSPUB}/ -name '${CORPUS}-v*.php' -printf "%f\n"
 
+
+# TODO: need to make those substituitons failsafe somehow
+# now only replaces single quotes and escapes & to make sed happy
+
+DOWNLOADINFO_SAFE = $(subst &,\&,$(subst ',&apos;,${DOWNLOADINFO}))
+SRCHTML_SAFE      = $(subst &,\&,$(subst ',&apos;,${SRCHTML}))
+EXTRAHTML_SAFE    = $(subst &,\&,$(subst ',&apos;,${EXTRAHTML}))
+CITENOTE_SAFE     = $(subst &,\&,$(subst ',&apos;,${CITENOTE}))
+DISCLAIMER_SAFE   = $(subst &,\&,$(subst ',&apos;,${DISCLAIMER}))
+# '
+
+
 ${OPUSPUB}/${CORPUS}-${VERSION}.php: ${PACKAGES} ${CORPUS_SAMPLES} ${ALG_SAMPLES} ${INFOFILES}
 	${MKDIR} $(dir $@)
 	chmod 755 ${dir $@}
 	chmod 755 ${OPUSPUB}/${CORPUS}
 	${MAKEHTML} -h ${OPUSPUB} -o ${OPUSHOME} -d ${OPUSRELEASE} \
 		${CORPUS} ${VERSION} |\
-	sed -e 's|<h3>Download</h3>|<h3>Download</h3>${DOWNLOADINFO}${EXTRAHTML}${OTHERVERSIONS}|' \
-	    -e 's|<h3>Download</h3>|${CITENOTE}<h3>Download</h3>|' \
-	    -e 's|<h1>${CORPUS}${VERSION}</h1>|<h1>${CORPUS} ${VERSION}</h1>${SRCHTML}|' \
-	    -e 's|<h1>${CORPUS}</h1>|<h1>${CORPUS} ${VERSION}</h1>${SRCHTML}|' \
-	    -e 's|<div class="footer">|${DISCLAIMER}<div class="footer">|'          > $@
+	sed -e 's|<h3>Download</h3>|<h3>Download</h3>${DOWNLOADINFO_SAFE}${EXTRAHTML_SAFE}${OTHERVERSIONS}|' \
+	    -e 's|<h3>Download</h3>|${CITENOTE_SAFE}<h3>Download</h3>|' \
+	    -e 's|<h1>${CORPUS}${VERSION}</h1>|<h1>${CORPUS} ${VERSION}</h1>${SRCHTML_SAFE}|' \
+	    -e 's|<h1>${CORPUS}</h1>|<h1>${CORPUS} ${VERSION}</h1>${SRCHTML_SAFE}|' \
+	    -e 's|<div class="footer">|${DISCLAIMER_SAFE}<div class="footer">|'          > $@
 	chmod 644 $@
 #	chmod go+r $@
 
@@ -359,24 +371,37 @@ ifneq (${PACKAGE},)
 endif
 	echo "     Website: http://opus.nlpl.eu/${CORPUS}-${VERSION}.php" >> $@
 	echo "     Release: ${VERSION}" >>$@
+ifneq (${RELEASE_DATE},)
+	echo "Release date: ${RELEASE_DATE}" >> $@
+	echo "   OPUS date: ${shell date}" >> $@
+else
 	echo "Release date: ${shell date}" >> $@
+endif
 ifneq (${LICENSE},)
 	echo "     License: ${LICENSE}" >>$@
 endif
 ifneq (${COPYRIGHT},)
 	echo "   Copyright: ${COPYRIGHT}" >>$@
 endif
+ifneq (${CONTACT},)
+	echo "     Contact: ${CONTACT}" >>$@
+endif
 	echo "" >>$@
-	echo "This corpus is part of OPUS - the open collection of parallel corpora" >> $@
+	echo "This package is part of OPUS - the open collection of parallel corpora" >> $@
 	echo "OPUS Website: http://opus.nlpl.eu" >> $@
 	echo "" >>$@
 #	echo "${CITENOTE}" | sed 's/<[^>]*>//g' >> $@
 	echo "${CITENOTE}" >> $@
 	echo "" >>$@
-	echo "${SRCHTML}" | sed 's/<[^>]*>//g' >> $@
+	echo "${SRCHTML}"   | sed 's/<[^>]*>//g' >> $@
 	echo "${EXTRAHTML}" | sed 's/<[^>]*>//g' >> $@
+	if [ -e ${CORPUSHOME}/INFO ]; then \
+	  echo ""                        >> ${TMPDIR}/$@/README; \
+	  echo "Additional information:" >> ${TMPDIR}/$@/README; \
+	  echo ""                        >> ${TMPDIR}/$@/README; \
+	  cat ${CORPUSHOME}/INFO         >> ${TMPDIR}/$@/README; \
+	fi
 	chmod 644 $@
-#	chmod go+r $@
 
 %/LICENSE:
 	if [ -e ${CORPUSHOME}/LICENSE ]; then \
@@ -385,14 +410,15 @@ endif
 	  pdftotext -layout ${CORPUSHOME}/LICENSE.pdf; \
 	  cp ${CORPUSHOME}/LICENSE.txt $@; \
 	else \
-	  echo "The data set comes with the same license" > $@; \
-	  echo "as the original sources." >> $@; \
-	  echo "Please, check the information about the source" >> $@; \
-	  echo "that is given on" >> $@; \
-	  echo "http://opus.nlpl.eu/${CORPUS}-${VERSION}.php" >> $@; \
+	  echo "We do not own any of the text from which the data has been extracted." > $@; \
+	  echo "We only offer files that we believe we are free to redistribute."     >> $@; \
+	  echo "If any doubt occurs about the legality of any of our file downloads " >> $@; \
+	  echo "we will take them off right away after contacting us."                >> $@; \
+	  echo ""                                                                     >> $@; \
+	  echo "For more information, please check the information"                   >> $@; \
+	  echo "given on the corpus website: http://opus.nlpl.eu/${CORPUS}-${VERSION}.php" >> $@; \
 	fi
 	chmod 644 $@
-#	chmod go+r $@
 
 
 ## make an archive with all xml-files!
@@ -415,7 +441,6 @@ ${OPUSRELEASE}/${CORPUS}.tar.gz: $(CES)
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
-#	chmod go+r $@
 
 ## copy sentence alignment files
 
@@ -426,7 +451,6 @@ ${ALG}: ${CORPUSRELEASE}/%: ${CORPUSHOME}/%
 	@${MKDIR} ${dir $@}
 	rsync $< $@
 	chmod 644 $@
-#	chmod go+r $@
 
 #----------------------------------------------------------------------------
 # pack all language files in tar-archives
@@ -461,8 +485,8 @@ ${CORPUSRELEASE}/xml/%.zip: # ${CORPUSXML}/%
 	${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README
 	${MAKE} ${TMPDIR}/$@/LICENSE
 	echo "${CORPUS}/xml/${patsubst %.zip,%,${notdir $@}}" > ${TMPDIR}/$@/INFO
-	echo "${CORPUS}" >> ${TMPDIR}/$@/INFO
-	echo "${VERSION}" >> ${TMPDIR}/$@/INFO
+	echo "${CORPUS}"                                     >> ${TMPDIR}/$@/INFO
+	echo "${VERSION}"                                    >> ${TMPDIR}/$@/INFO
 	( cd ${TMPDIR}/$@; zip -r $@ INFO README LICENSE ${CORPUS}; cd ${PWD} )
 	rm -fr ${TMPDIR}/$@
 	${MKDIR} ${dir ${PACKAGES}}
@@ -490,8 +514,8 @@ ${CORPUSRELEASE}/raw/%.zip: # ${CORPUSRAW}/%
 	${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README
 	${MAKE} ${TMPDIR}/$@/LICENSE
 	echo "${CORPUS}/raw/${patsubst %.zip,%,${notdir $@}}" > ${TMPDIR}/$@/INFO
-	echo "${CORPUS}" >> ${TMPDIR}/$@/INFO
-	echo "${VERSION}" >> ${TMPDIR}/$@/INFO
+	echo "${CORPUS}"                                     >> ${TMPDIR}/$@/INFO
+	echo "${VERSION}"                                    >> ${TMPDIR}/$@/INFO
 	( cd ${TMPDIR}/$@; zip -r $@ INFO README LICENSE ${CORPUS}; cd ${PWD} )
 	rm -fr ${TMPDIR}/$@
 	${MKDIR} ${dir ${PACKAGES}}

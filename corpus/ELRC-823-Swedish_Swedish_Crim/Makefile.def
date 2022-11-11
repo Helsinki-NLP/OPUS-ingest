@@ -1,0 +1,21 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = openUnder-PSIopenUnder-PSI
+COPYRIGHT = Check details at <a href="https://elrc-share.eu/repository/browse/english-swedish-parallel-corpus-from-texts-of-the-swedish-crime-victim-compensation-and-support-authority-brottsoffermyndigheten-web-site-processed/ffb7a73cc70311e8b7d400155d02670611ebe1e9699b4e6a8509a796f5c7673e/">ELRC share</a>Check details at <a href="https://www.elrc-share.eu">ELRC share</a>
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=English - Swedish parallel corpus from texts of the Swedish Crime Victim Compensation and Support Authority (Brottsoffermyndigheten) web site (Processed)   
+EXTRAHTML=ELRC-823-Swedish_Swedish_Crime_Victim_Compensation_Support_Authority is a public data set distributed by the <a href="https://elrc-share.eu/repository/browse/english-swedish-parallel-corpus-from-texts-of-the-swedish-crime-victim-compensation-and-support-authority-brottsoffermyndigheten-web-site-processed/ffb7a73cc70311e8b7d400155d02670611ebe1e9699b4e6a8509a796f5c7673e/">https://www.elrc-share.eu</a>
+CITENOTE = Please acknowledge the <a href="https://elrc-share.eu/repository/browse/english-swedish-parallel-corpus-from-texts-of-the-swedish-crime-victim-compensation-and-support-authority-brottsoffermyndigheten-web-site-processed/ffb7a73cc70311e8b7d400155d02670611ebe1e9699b4e6a8509a796f5c7673e/">original sources and providers</a> of the data and also <a href="http://opus.lingfil.uu.se/LREC2012.txt">cite the following article</a> if you use the OPUS packages and downloads in your own work:<br/> J. Tiedemann, 2012, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf"><i>Parallel Data, Tools and Interfaces in OPUS.</i></a> In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)
