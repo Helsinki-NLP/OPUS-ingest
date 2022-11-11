@@ -42,7 +42,7 @@ all: ${ALL_OVERLAP_FILES}
 ## submit jobs on puhti@csc
 .PHONY: job-puhti job-puhti-db-from-raw
 job-puhti:
-	${MAKE} HPC_MEM=64g HPC_CORES=16 CORES=4 THREADS=4 HPC_DISK=1000 all.submit
+	${MAKE} HPC_MEM=128g HPC_CORES=16 CORES=4 THREADS=4 HPC_DISK=1000 all.submit
 
 ## print the files we want to create
 .PHONY: info

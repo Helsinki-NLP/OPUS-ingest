@@ -4,3 +4,6 @@
 [submodule "OPUS"]
 	path = OPUS
 	url = ../OPUS
+[submodule "OPUS-website"]
+	path = OPUS-website
+	url = ../OPUS-website

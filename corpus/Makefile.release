@@ -386,6 +386,9 @@ endif
 ifneq (${CONTACT},)
 	echo "     Contact: ${CONTACT}" >>$@
 endif
+ifneq (${SOURCE_URL},)
+	echo "      Source: ${SOURCE_URL}" >>$@
+endif
 	echo "" >>$@
 	echo "This package is part of OPUS - the open collection of parallel corpora" >> $@
 	echo "OPUS Website: http://opus.nlpl.eu" >> $@
@@ -396,10 +399,10 @@ endif
 	echo "${SRCHTML}"   | sed 's/<[^>]*>//g' >> $@
 	echo "${EXTRAHTML}" | sed 's/<[^>]*>//g' >> $@
 	if [ -e ${CORPUSHOME}/INFO ]; then \
-	  echo ""                        >> ${TMPDIR}/$@/README; \
-	  echo "Additional information:" >> ${TMPDIR}/$@/README; \
-	  echo ""                        >> ${TMPDIR}/$@/README; \
-	  cat ${CORPUSHOME}/INFO         >> ${TMPDIR}/$@/README; \
+	  echo ""                        >> $@; \
+	  echo "Additional information:" >> $@; \
+	  echo ""                        >> $@; \
+	  cat ${CORPUSHOME}/INFO         >> $@; \
 	fi
 	chmod 644 $@
 

@@ -1,0 +1,31 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+SOURCE_URL = https://github.com/joshua-decoder/indian-parallel-corpora/archive/a2cd1a99.tar.gz
+
+## current version
+VERSION = v1
+
+LICENSE = CC-BY 3.0
+COPYRIGHT = This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0</a> Unported License. More information can be found in the attached LICENSE file.
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML = This directory contains data sets for Bengali, Hindi, Malayalam, Tamil, Telugu, and Urdu. \
+Each data set was created by taking around 100 Indian-language Wikipedia pages and obtaining four independent translations of each of the sentences in those documents.
+
+EXTRAHTML = Original source: <a href="${SOURCE_URL}">${SOURCE_URL}</a>
+
+CITENOTE = The procedure used to create them, along with descriptions of initial experiments, is described in: \
+<a href="http://www.aclweb.org/anthology/W12-3152">Constructing Parallel Corpora for Six Indian Languages via Crowdsourcing</a>. 2012. \
+Matt Post, Chris Callison-Burch, and Miles Osborne. \
+Proceedings of the NAACL Workshop for Statistical Machine Translation (WMT).

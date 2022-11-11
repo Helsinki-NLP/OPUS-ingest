@@ -15,6 +15,7 @@ binmode(STDOUT);
 
 my %db = ();
 my $mcdb = MCDB_File->TIEHASH($file);
+$mcdb->madvise(MCDB_File::MADV_RANDOM);
 while (<>){
     $count++;
     if ($mcdb->EXISTS($_)) {
