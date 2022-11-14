@@ -50,6 +50,17 @@ release-all: ${ELRC_MTDATA}
 	  ${MAKE} ELRC_CORPUS=$$c release; \
 	done
 
+
+## do in reverse order
+reverse = $(if $(wordlist 2,2,$(1)),$(call reverse,$(wordlist 2,$(words $(1)),$(1))) $(firstword $(1)),$(1))
+
+release-all-reverse: ${ELRC_MTDATA}
+	@for c in $(call reverse,${ELRC_CORPORA}); do \
+	  ${MAKE} ELRC_CORPUS=$$c release; \
+	done
+
+
+
 ## make public releases on allas and the OPUS website
 release:
 	@if [ -e ${OPUSPUB}/${CORPUSNAME} ]; then \
@@ -58,6 +69,22 @@ release:
 	else \
 	  echo "nothing to release yet for ${CORPUSNAME}"; \
 	fi
+
+release-info:
+	if [ ! -e ${CORPUSDIR}/releases.txt ]; then \
+	  echo "create release info file for ${CORPUSNAME}"; \
+	  ${MAKE} -C ${CORPUSDIR} release-info; \
+	fi
+
+release-uniq:
+	${MAKE} -C ${CORPUSDIR} release-uniq
+
+
+release-info-all:
+	@for c in ${ELRC_CORPORA}; do \
+	  echo "check info file for $$c"; \
+	  ${MAKE} -s ELRC_CORPUS=$$c release-info; \
+	done
 
 
 
@@ -141,6 +168,7 @@ ${CORPUSDIR}:
 	find $@/src -type f |\
 	  perl -e 'use File::Copy;while(<>){chomp;$$f=~s/[^a-zA-Z0-9\.\_\-]/\_/g;move($$_,$$f);}'
 	find $@/src -type f -exec mv {} $@/src/ \;
+	-find $@/src -type d -delete
 	if [ `find $@/src -name '*.tmx' | wc -l` -gt 0 ]; then \
 	  cp -R ${TMX_TEMPLATEDIR}/* $@/; \
 	else \

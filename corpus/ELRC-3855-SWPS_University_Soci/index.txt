@@ -1,0 +1,17 @@
+v1/dic
+v1/freq
+v1/info-files.tar.gz
+v1/mono
+v1/moses/README
+v1/raw/en.zip
+v1/raw/pl.zip
+v1/raw/ru.zip
+v1/smt
+v1/tmx/README
+v1/xml/README
+v1/xml/en-pl.xml.gz
+v1/xml/en-ru.xml.gz
+v1/xml/en.zip
+v1/xml/pl.zip
+v1/xml/ru.zip
+v1/xml/tmx.zip

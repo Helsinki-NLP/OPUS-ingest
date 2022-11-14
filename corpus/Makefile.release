@@ -193,9 +193,8 @@ html-local:
 packages: ${PACKAGES}
 	${MAKE} ${CORPUSRELEASE}.info
 	${MAKE} ${OPUSRELEASE}/${CORPUS}/info.txt
-	echo '${VERSION}	${shell date}' >> ${OPUSRELEASE}/${CORPUS}/releases.txt
-	rsync ${OPUSRELEASE}/${CORPUS}/releases.txt ${CORPUSHOME}/releases.txt
-	rsync ${OPUSRELEASE}/${CORPUS}/info.txt ${CORPUSHOME}/info.txt
+	${MAKE} ${OPUSRELEASE}/${CORPUS}/releases.txt
+	${MAKE} ${CORPUSHOME}/releases.txt ${CORPUSHOME}/info.txt
 	rsync -zav ${OPUSRELEASE}/${CORPUS}/*.info ${CORPUSHOME}/
 	git add ${CORPUSHOME}/info.txt ${CORPUSHOME}/releases.txt ${CORPUSHOME}/*.info
 	if [ `find ${OPUSRELEASE}/${CORPUS}/ -name 'index*.txt' | wc -l` -ne 0 ]; then \
@@ -203,14 +202,34 @@ packages: ${PACKAGES}
 	  git add ${CORPUSHOME}/index*.txt; \
 	fi
 
+.PHONY: release-info
+release-info: ${OPUSRELEASE}/${CORPUS}/releases.txt ${CORPUSHOME}/releases.txt
+
+${OPUSRELEASE}/${CORPUS}/releases.txt: ${OPUSRELEASE}/${CORPUS}/info.txt
+	echo '${VERSION}	${shell date}' >> $@
+	rev $@ | tr ' ' '~' | uniq -f 1 | rev | tr '~' ' ' > $@.uniq
+	mv -f $@.uniq $@
+
+${CORPUSHOME}/releases.txt ${CORPUSHOME}/info.txt: ${CORPUSHOME}/%.txt: ${OPUSRELEASE}/${CORPUS}/%.txt
+	rsync $< $@
+
+release-uniq:
+	rev ${OPUSRELEASE}/${CORPUS}/releases.txt | tr ' ' '~' | \
+	uniq -f 1 | rev | tr '~' ' ' > ${OPUSRELEASE}/${CORPUS}/releases.uniq
+	mv -f ${OPUSRELEASE}/${CORPUS}/releases.uniq ${OPUSRELEASE}/${CORPUS}/releases.txt
+
+
+.PHONY: refresh-html
 refresh-html:
 	rm -f ${OPUSPUB}/${CORPUS}.php
 	rm -f ${CORPUSPUB}/*sample.html
 	touch $(CES)
 	make html
 
+.PHONY: download-dirs
 download-dirs: ${CORPUSRELEASE}
 
+.PHONY: webpage website
 webpage website: ${OPUSPUB}/${CORPUS}.php
 
 

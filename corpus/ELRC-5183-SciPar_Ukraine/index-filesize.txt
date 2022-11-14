@@ -1,0 +1,17 @@
+        0 v1/dic
+        0 v1/freq
+       45 v1/info-files.tar.gz
+        0 v1/mono
+      748 v1/moses/README
+ 22176672 v1/raw/en.zip
+ 16827714 v1/raw/ru.zip
+        0 v1/smt
+      746 v1/tmx/README
+      746 v1/xml/README
+   957196 v1/xml/en-ru.xml.gz
+  2385967 v1/xml/en-uk.xml.gz
+ 61047354 v1/xml/en.zip
+   967486 v1/xml/ru-uk.xml.gz
+ 34737834 v1/xml/ru.zip
+     1416 v1/xml/tmx.zip
+ 60645000 v1/xml/uk.zip

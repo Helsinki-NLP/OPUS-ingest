@@ -1,45 +1,42 @@
 #---------------------------------------------------------------------
 # compute overlaps between corpora
 #---------------------------------------------------------------------
-#
-# TOOD:
-#   - remove spaces (and other kind of normalisation?)
-#   - make it possible to update counts when new corpora appear
-#
-# TODO: use GNU parallel for some things, e.g. removing spaces in pipe, something like
-#    gzip -cd file | parallel --pipe --keep-order -q -L10000 --max-procs 25% sed 's/ *//g' > output
-#    (how much speedup do we gain if any?)
-#
 
 include ../Makefile.def
 include ../Makefile.submit
 
-## name of all corpora and their released versions
+## names of all corpora and their released versions
+
 CORPORA  := ${sort ${notdir ${shell find ${OPUSRELEASE} -mindepth 1 -maxdepth 1 -type d }}}
 CORPUS   ?= ${firstword ${CORPORA}}
 VERSIONS ?= $(sort ${notdir ${shell find ${OPUSRELEASE}/${CORPUS} -maxdepth 1 -mindepth 1 -type d}})
 VERSION  ?= ${lastword ${VERSIONS}}
 
 
+PARALLEL_ARGS := --pipe --keep-order -q -L10000 --max-procs 25%
+PARALLEL := ${shell if [ `which parallel 2>/dev/null | wc -l` -gt 0 ]; then echo 'parallel ${PARALLEL_ARGS}'; fi }
 
 
-DATE := ${shell date '+%F'}
+## monolingual texts
 
 LANGUAGE ?= en
 
-ALL_MONO              := $(filter-out %/latest/mono/${LANGUAGE}.txt.gz,${wildcard ${OPUSRELEASE}/*/*/mono/${LANGUAGE}.txt.gz})
-ALL_MONO_DEDUP        := $(patsubst ${OPUSRELEASE}/%.txt.gz,${TMPDIR}/%.dedup.gz,${ALL_MONO})
-ALL_MONO_DEDUP_COUNTS := $(patsubst %.dedup.gz,%.dedup.nrlines,${ALL_MONO_DEDUP})
-ALL_OVERLAP_FILES     := $(patsubst ${OPUSRELEASE}/%/mono/${LANGUAGE}.txt.gz,${LANGUAGE}/%.txt,${ALL_MONO})
+ALL_MONO               := $(filter-out %/latest/mono/${LANGUAGE}.txt.gz,${wildcard ${OPUSRELEASE}/*/*/mono/${LANGUAGE}.txt.gz})
+ALL_MONO_DEDUP         := $(patsubst ${OPUSRELEASE}/%.txt.gz,${TMPDIR}/%.dedup.gz,${ALL_MONO})
+ALL_MONO_DEDUP_COUNTS  := $(patsubst %.dedup.gz,%.dedup.nrlines,${ALL_MONO_DEDUP})
+ALL_MONO_DEDUP_MCDBS   := $(patsubst ${OPUSRELEASE}/%.txt.gz,${TMPDIR}/%.dedup.mcdb,${ALL_MONO})
+ALL_MONO_OVERLAP_FILES := $(patsubst ${OPUSRELEASE}/%/mono/${LANGUAGE}.txt.gz,${LANGUAGE}/%.txt,${ALL_MONO})
+OPUS_MONO_OVERLAPS     := $(patsubst ${LANGUAGE}/%.txt,../../OPUS/corpus/%/overlaps/${LANGUAGE}.tsv,${ALL_MONO_OVERLAP_FILES})
 
 
-# sentence index DBs
+.PHONY: all-mono
+all-mono:
+	@${MAKE} ${ALL_MONO_DEDUP} ${ALL_MONO_DEDUP_COUNTS} ${ALL_MONO_DEDUP_MCDBS}
+	@${MAKE} ${ALL_MONO_OVERLAP_FILES}
 
-ALL_MONO_CDBS        := $(patsubst ${OPUSRELEASE}/%.txt.gz,${TMPDIR}/%.cdb.1,${ALL_MONO})
-ALL_MONO_MCDBS       := $(patsubst ${OPUSRELEASE}/%.txt.gz,${TMPDIR}/%.mcdb,${ALL_MONO})
+.PHONY: mono-overlaps
+mono-overlaps: ${LANGUAGE}/${CORPUS}/${VERSION}.txt
 
-ALL_MONO_DEDUP_CDBS  := $(patsubst ${OPUSRELEASE}/%.txt.gz,${TMPDIR}/%.dedup.cdb.1,${ALL_MONO})
-ALL_MONO_DEDUP_MCDBS := $(patsubst ${OPUSRELEASE}/%.txt.gz,${TMPDIR}/%.dedup.mcdb,${ALL_MONO})
 
 
 
@@ -49,65 +46,60 @@ LANGPAIR ?= de-en
 SRCLANG := $(firstword $(subst -, ,${LANGPAIR}))
 TRGLANG := $(lastword $(subst -, ,${LANGPAIR}))
 
-ALL_PARA               := $(filter-out %/latest/moses/${LANGPAIR}.txt.gz,${wildcard ${OPUSRELEASE}/*/*/moses/${LANGPAIR}.txt.zip})
+ALL_PARA               := $(filter-out %/latest/moses/${LANGPAIR}.txt.zip,${wildcard ${OPUSRELEASE}/*/*/moses/${LANGPAIR}.txt.zip})
 ALL_PARA_DEDUP         := $(patsubst ${OPUSRELEASE}/%.txt.zip,${TMPDIR}/%.dedup.gz,${ALL_PARA})
 ALL_PARA_DEDUP_COUNTS  := $(patsubst %.dedup.gz,%.dedup.nrlines,${ALL_PARA_DEDUP})
-ALL_PARA_OVERLAP_FILES := $(patsubst ${OPUSRELEASE}/%/moses/${LANGPAIR}.txt.zip,${LANGPAIR}/%.txt,${ALL_PARA})
 ALL_PARA_DEDUP_MCDBS   := $(patsubst ${OPUSRELEASE}/%.txt.zip,${TMPDIR}/%.dedup.mcdb,${ALL_PARA})
+ALL_PARA_OVERLAP_FILES := $(patsubst ${OPUSRELEASE}/%/moses/${LANGPAIR}.txt.zip,${LANGPAIR}/%.txt,${ALL_PARA})
+OPUS_PARA_OVERLAPS     := $(patsubst ${LANGPAIR}/%.txt,../../OPUS/corpus/%/overlaps/${LANGPAIR}.tsv,${ALL_PARA_OVERLAP_FILES})
 
-
-
-.PHONY: all
-all: ${ALL_OVERLAP_FILES}
 
 .PHONY: all-bitexts
-all-bitexts: ${ALL_PARA_OVERLAP_FILES}
+all-bitexts:
+	@${MAKE} ${ALL_PARA_DEDUP} ${ALL_PARA_DEDUP_COUNTS} ${ALL_PARA_DEDUP_MCDBS}
+	@${MAKE} ${ALL_PARA_OVERLAP_FILES}
 
-## submit jobs on puhti@csc
+.PHONY: para-overlaps
+para-overlaps: ${LANGPAIR}/${CORPUS}/${VERSION}.txt
+
+
+
+
+##----------------------------------
+## submit specific jobs on puhti@csc
+##----------------------------------
+
 .PHONY: job-puhti
-job-puhti:
-	${MAKE} HPC_MEM=128g HPC_CORES=16 CORES=4 THREADS=4 HPC_DISK=1000 all.submit
+job-mono-puhti:
+	${MAKE} HPC_MEM=128g HPC_CORES=8 CORES=4 THREADS=4 HPC_DISK=1000 all-mono.submit
+
+.PHONY: biglang-job-puhti
+biglang-job-puhti:
+	for l in en fr es it de zh ja ru; do \
+	  ${MAKE} LANGUAGE=$$l job-mono-puhti; \
+	done
 
 .PHONY: job-bitext-puhti
 job-bitext-puhti:
-	${MAKE} HPC_MEM=64g HPC_CORES=16 CORES=4 THREADS=4 HPC_DISK=500 all-bitexts.submit
+	${MAKE} HPC_MEM=128g HPC_CORES=16 CORES=4 THREADS=4 HPC_DISK=500 all-bitexts.submit
 
 
-## print the files we want to create
-.PHONY: info
-info:
-	@echo ${ALL_OVERLAP_FILES} | tr ' ' "\n"
 
+## intermediate files (deduplicated texts, MCDB-based sentence index, sentence counts)
 
-## intermediate files (deduplicated texts, CDB-based and MCDB-based sentence index)
-.PHONY: cdb mcdb dedup dedup-cdb dedup-mcdb counts
-cdb: ${ALL_MONO_CDBS}
-mcdb: ${ALL_MONO_MCDBS}
+.PHONY: dedup index counts overlaps
 dedup: ${ALL_MONO_DEDUP}
-dedup-cdb: ${ALL_MONO_DEDUP_CDBS}
-dedup-mcdb: ${ALL_MONO_DEDUP_MCDBS}
+index: ${ALL_MONO_DEDUP_MCDBS}
 counts: ${ALL_MONO_DEDUP_COUNTS}
 
 
-.PHONY: overlaps
-overlaps: ${LANGUAGE}/${CORPUS}/${VERSION}.txt
+
+
+
+
 
 #------------------------------------------------
-# variant 1: creating the index from raw monolingual text
-#------------------------------------------------
-
-## create CDB index databases
-${TMPDIR}/%.cdb.1: ${OPUSRELEASE}/%.txt.gz
-	mkdir -p ${dir $@}
-	${GZIP} -cd $< | ./add2cdb.pl ${@:1=}
-
-## create MCDB index databases
-${TMPDIR}/%.mcdb: ${OPUSRELEASE}/%.txt.gz
-	mkdir -p ${dir $@}
-	${GZIP} -cd $< | ./add2mcdb.pl $@
-
-#------------------------------------------------
-# variant 2: dedup first before creating the index
+# dedup first before creating the sentence index
 #------------------------------------------------
 
 ## create deduplicated monolingual corpus files
@@ -115,32 +107,39 @@ ${TMPDIR}/%.dedup.gz: ${OPUSRELEASE}/%.txt.gz
 	mkdir -p ${dir $@}
 	${GZIP} -cd $< | ${SORT} -u | ${GZIP} -c > $@
 
-## create CDB index databases
-${TMPDIR}/%.dedup.cdb.1: ${TMPDIR}/%.dedup.gz
-	${GZIP} -cd $< | ./add2cdb.pl ${@:1=}
+## create deduplicated bitexts
+## NOTE: spaces removed for bitexts!
+${TMPDIR}/%/${LANGPAIR}.dedup.gz: ${OPUSRELEASE}/%/${LANGPAIR}.txt.zip
+	mkdir -p ${dir $@}tmp
+	unzip -d ${dir $@}tmp $<
+	paste ${dir $@}tmp/*.${SRCLANG} ${dir $@}tmp/*.${TRGLANG} | \
+	${PARALLEL} sed 's/ *//g' | ${SORT} -u | ${GZIP} -c > $@
+	rm -f ${dir $@}tmp/*
+	rmdir ${dir $@}tmp
 
 ## create MCDB index databases
 ${TMPDIR}/%.dedup.mcdb: ${TMPDIR}/%.dedup.gz
 	${GZIP} -cd $< | ./add2mcdb.pl $@
 
-
-
-# count lines
+# count lines (sentences)
 %.dedup.nrlines: %.dedup.gz
 	${GZIP} -cd $< | wc -l > $@
 
 
 
-## create deduplicated bitexts
-## NOTE: spaces removed because sometimes a final space is added etc
-${TMPDIR}/%/${LANGPAIR}.dedup.gz: ${OPUSRELEASE}/%/${LANGPAIR}.txt.zip
-	mkdir -p ${dir $@}tmp
-	unzip -d ${dir $@}tmp $<
-	paste ${dir $@}tmp/*.${SRCLANG} ${dir $@}tmp/*.${TRGLANG} | \
-	sed 's/ *//g' | ${SORT} -u | ${GZIP} -c > $@
-	rm -f ${dir $@}tmp/*
-	rmdir ${dir $@}tmp
 
+
+#-----------------------------------------------------------------
+# overlap count files we can release
+#-----------------------------------------------------------------
+
+../../OPUS/corpus/%/overlaps/${LANGUAGE}.tsv: ${LANGUAGE}/%.txt
+	mkdir -p $(dir $@)
+	sort -k5,5nr -k4,4nr $< > $@
+
+../../OPUS/corpus/%/overlaps/${LANGPAIR}.tsv: ${LANGPAIR}/%.txt
+	mkdir -p $(dir $@)
+	sort -k5,5nr -k4,4nr $< > $@
 
 
 
@@ -149,41 +148,42 @@ ${TMPDIR}/%/${LANGPAIR}.dedup.gz: ${OPUSRELEASE}/%/${LANGPAIR}.txt.zip
 # (index based on deduplicated corpora)
 #------------------------------------------------
 
-${LANGUAGE}/%.txt: ${ALL_MONO_DEDUP} ${ALL_MONO_DEDUP_COUNTS} ${ALL_MONO_DEDUP_MCDBS}
+${LANGUAGE}/%.txt: ${ALL_MONO}
 	mkdir -p ${dir $@}
+	if [ -e $(@:.txt=.tar.gz) ]; then tar -xzf $(@:.txt=.tar.gz); fi
 	@for c in ${CORPORA}; do \
 	  s=`cat $(patsubst ${LANGUAGE}/%.txt,${TMPDIR}/%/mono/${LANGUAGE}.dedup.nrlines,$@)`; \
 	  for v in `find ${OPUSRELEASE}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
 	    if [ "$(patsubst ${LANGUAGE}/%.txt,%,$@)" != "$$c/$$v" ]; then \
 	      if [ -e ${TMPDIR}/$$c/$$v/mono/${LANGUAGE}.dedup.gz ]; then \
-	        t=`cat ${TMPDIR}/$$c/$$v/mono/${LANGUAGE}.dedup.nrlines`; \
-	        echo "count overlap with $$c $$v"; \
-	        echo -n "$$c	$$v	$$t	" >> $@; \
-	        if [ $$t -lt $$s ]; then \
-	          ${GZIP} -cd ${TMPDIR}/$$c/$$v/mono/${LANGUAGE}.dedup.gz |\
-	          ./find_in_mcdb.pl $(patsubst ${LANGUAGE}/%.txt,${TMPDIR}/%/mono/${LANGUAGE}.dedup.mcdb,$@) >> $@; \
-	        else \
-	          ${GZIP} -cd $(patsubst ${LANGUAGE}/%.txt,${TMPDIR}/%/mono/${LANGUAGE}.dedup.gz,$@) |\
-	          ./find_in_mcdb.pl ${TMPDIR}/$$c/$$v/mono/${LANGUAGE}.dedup.mcdb >> $@; \
-	        fi; \
-	        echo "/$$s" >> $@; \
+	        ${MAKE} CORPUS1=$(patsubst ${LANGUAGE}/%/,%,$(dir $@)) VERSION1=${notdir ${@:.txt=}} \
+			CORPUS2=$$c VERSION2=$$v count-mono; \
 	      fi \
 	    fi \
 	  done \
 	done
-	cut -f4 $@ | sed 's/^/scale=2;100*/' | bc > $@.percentage
-	paste $@ $@.percentage > $@.new
-	mv $@.new $@
-	rm -f $@.percentage $@.new
+	find counts/${LANGUAGE} -name '$(subst /,_,$(patsubst ${LANGUAGE}/%.txt,%,$@))-*.txt' | \
+	sort | xargs cat > $@
+	${MAKE} $(@:.txt=.tar.gz)
+
+
+
+## tar-ball to pack all individual count files
+## and cleanup
+
+${LANGUAGE}/%.tar.gz: counts/${LANGUAGE}
+	mkdir -p $(dir $@)
+	tar -czf $@ $</$(patsubst ${LANGUAGE}/%/,%,$(dir $@))_${notdir ${@:.tar.gz=}}-*.txt
+	rm -f $</$(patsubst ${LANGUAGE}/%/,%,$(dir $@))_${notdir ${@:.tar.gz=}}-*.txt
 
 
 ## individual count files (good for incrementally updating scores ...)
 
-test-count:
-	make CORPUS1=TED2013 VERSION1=v1.1 CORPUS2=TED2020 VERSION2=v1 count-file
+test-count-mono:
+	make CORPUS1=TED2013 VERSION1=v1.1 CORPUS2=TED2020 VERSION2=v1 count-mono
 
-.PHONY: count-file
-count-file: counts/${LANGUAGE}/${CORPUS1}_${VERSION1}-${CORPUS2}_${VERSION2}.txt
+.PHONY: count-mono
+count-mono: counts/${LANGUAGE}/${CORPUS1}_${VERSION1}-${CORPUS2}_${VERSION2}.txt
 
 counts/${LANGUAGE}/${CORPUS1}_${VERSION1}-${CORPUS2}_${VERSION2}.txt: \
 		${TMPDIR}/${CORPUS1}/${VERSION1}/mono/${LANGUAGE}.dedup.gz \
@@ -209,11 +209,13 @@ counts/${LANGUAGE}/${CORPUS1}_${VERSION1}-${CORPUS2}_${VERSION2}.txt: \
 
 
 #----------------------------------------------------------------------
+# overlaps in bitexts
+#----------------------------------------------------------------------
 
-
-${LANGPAIR}/%.txt: ${ALL_PARA_DEDUP} ${ALL_PARA_DEDUP_COUNTS} ${ALL_PARA_DEDUP_MCDBS}
+${LANGPAIR}/%.txt: ${ALL_PARA}
 	mkdir -p ${dir $@}
-	for c in ${CORPORA}; do \
+	if [ -e $(@:.txt=.tar.gz) ]; then tar -xzf $(@:.txt=.tar.gz); fi
+	@for c in ${CORPORA}; do \
 	  for v in `find ${OPUSRELEASE}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
 	    if [ "$(patsubst ${LANGPAIR}/%.txt,%,$@)" != "$$c/$$v" ]; then \
 	      if [ -e ${TMPDIR}/$$c/$$v/moses/${LANGPAIR}.dedup.gz ]; then \
@@ -222,7 +224,19 @@ ${LANGPAIR}/%.txt: ${ALL_PARA_DEDUP} ${ALL_PARA_DEDUP_COUNTS} ${ALL_PARA_DEDUP_M
 	    fi \
 	  done \
 	done
-	find ${LANGPAIR} -type f | sort | xargs cat > $@
+	find counts/${LANGPAIR} -name '$(subst /,_,$(patsubst ${LANGPAIR}/%.txt,%,$@))-*.txt' | \
+	sort | xargs cat > $@
+	${MAKE} $(@:.txt=.tar.gz)
+
+
+## tar-ball to pack all individual count files
+## and cleanup
+
+${LANGPAIR}/%.tar.gz: counts/${LANGPAIR}
+	mkdir -p $(dir $@)
+	tar -czf $@ $</$(patsubst ${LANGPAIR}/%/,%,$(dir $@))_${notdir ${@:.tar.gz=}}-*.txt
+	rm -f $</$(patsubst ${LANGPAIR}/%/,%,$(dir $@))_${notdir ${@:.tar.gz=}}-*.txt
+
 
 test-count-bitext:
 	make CORPUS1=TED2013 VERSION1=v1.1 CORPUS2=TED2020 VERSION2=v1 count-bitext
@@ -252,6 +266,71 @@ counts/${LANGPAIR}/${CORPUS1}_${VERSION1}-${CORPUS2}_${VERSION2}.txt: \
 	mv $@.new $@
 	rm -f $@.percentage $@.new
 
+
+
+
+
+
+
+
+###################################################################################################
+## other ways of counting and sorting stuff (don't needed anymore?!)
+###################################################################################################
+
+# markdown pages (not necessary anymore)
+
+OPUS_OVERLAP_MDFILES  := $(patsubst ${LANGUAGE}/%.txt,../../OPUS/corpus/%/overlaps/${LANGUAGE}.md,${ALL_MONO_OVERLAP_FILES})
+
+## in case we want to have markdown files
+## but GitHub understands tsv-files and displays them well!
+## --> can skip markdown copies!
+
+%.md: %.tsv
+	echo "# Overlap with other corpora"                               > $@
+	echo ""                                                          >> $@
+	echo "Estimation of the overlap with other OPUS corpora"         >> $@
+	echo "based on the number of matching sentences in language '$(notdir $(<:.txt=))'." >> $@
+	echo "(de-duplicated, exact matches)"                                 >> $@
+	echo ""                                                               >> $@
+	echo "| corpus | version | size | matching sentences | percentage |"  >> $@
+	echo "|--------|:-------:|-----:|-------------------:|-----------:|"  >> $@
+	sed 's/	/ | /g;s/^/| /;s/$$/ |/' < $<                                 >> $@
+	echo ""                                                               >> $@
+
+
+
+
+ALL_MONO_CDBS        := $(patsubst ${OPUSRELEASE}/%.txt.gz,${TMPDIR}/%.cdb.1,${ALL_MONO})
+ALL_MONO_MCDBS       := $(patsubst ${OPUSRELEASE}/%.txt.gz,${TMPDIR}/%.mcdb,${ALL_MONO})
+ALL_MONO_DEDUP_CDBS  := $(patsubst ${OPUSRELEASE}/%.txt.gz,${TMPDIR}/%.dedup.cdb.1,${ALL_MONO})
+
+.PHONY: cdb mcdb dedup-cdb
+cdb: ${ALL_MONO_CDBS}
+mcdb: ${ALL_MONO_MCDBS}
+dedup-cdb: ${ALL_MONO_DEDUP_CDBS}
+
+#------------------------------------------------
+# variant 1: creating the index from raw monolingual text
+#------------------------------------------------
+
+## create CDB index databases
+${TMPDIR}/%.cdb.1: ${OPUSRELEASE}/%.txt.gz
+	mkdir -p ${dir $@}
+	${GZIP} -cd $< | ./add2cdb.pl ${@:1=}
+
+## create MCDB index databases
+${TMPDIR}/%.mcdb: ${OPUSRELEASE}/%.txt.gz
+	mkdir -p ${dir $@}
+	${GZIP} -cd $< | ./add2mcdb.pl $@
+
+
+#------------------------------------------------
+# variant 2: creating cdb index from de-duplicated texts
+#------------------------------------------------
+
+## create CDB index databases
+${TMPDIR}/%.dedup.cdb.1: ${TMPDIR}/%.dedup.gz
+	${GZIP} -cd $< | ./add2cdb.pl ${@:1=}
 
 
 
@@ -316,7 +395,7 @@ sortbased/${LANGUAGE}/%.txt: ${ALL_MONO_DEDUP}
 	rm -f $@.percentage $@.new
 
 
-ALL_OVERLAP_FIXED = $(patsubst %.txt,%.fixed,${ALL_OVERLAP_FILES})
+ALL_OVERLAP_FIXED = $(patsubst %.txt,%.fixed,${ALL_MONO_OVERLAP_FILES})
 
 fix: ${ALL_OVERLAP_FIXED}
 
