@@ -29,13 +29,18 @@ ALL_MONO_OVERLAP_FILES := $(patsubst ${OPUSRELEASE}/%/mono/${LANGUAGE}.txt.gz,${
 OPUS_MONO_OVERLAPS     := $(patsubst ${LANGUAGE}/%.txt,../../OPUS/corpus/%/overlaps/${LANGUAGE}.tsv,${ALL_MONO_OVERLAP_FILES})
 
 
+.NOTINTERMEDIATE: ${ALL_MONO_OVERLAP_FILES}
+
 .PHONY: all-mono
 all-mono:
 	@${MAKE} ${ALL_MONO_DEDUP} ${ALL_MONO_DEDUP_COUNTS} ${ALL_MONO_DEDUP_MCDBS}
-	@${MAKE} ${ALL_MONO_OVERLAP_FILES}
+	@${MAKE} ${OPUS_MONO_OVERLAPS}
+
+.PHONY: all-mono-overlaps
+all-mono-overlaps: ${OPUS_MONO_OVERLAPS}
 
 .PHONY: mono-overlaps
-mono-overlaps: ${LANGUAGE}/${CORPUS}/${VERSION}.txt
+mono-overlaps: ../../OPUS/corpus/${CORPUS}/${VERSION}/overlaps/${LANGUAGE}.tsv
 
 
 
@@ -54,13 +59,18 @@ ALL_PARA_OVERLAP_FILES := $(patsubst ${OPUSRELEASE}/%/moses/${LANGPAIR}.txt.zip,
 OPUS_PARA_OVERLAPS     := $(patsubst ${LANGPAIR}/%.txt,../../OPUS/corpus/%/overlaps/${LANGPAIR}.tsv,${ALL_PARA_OVERLAP_FILES})
 
 
-.PHONY: all-bitexts
-all-bitexts:
+.NOTINTERMEDIATE: ${ALL_PARA_OVERLAP_FILES}
+
+.PHONY: all-para
+all-para:
 	@${MAKE} ${ALL_PARA_DEDUP} ${ALL_PARA_DEDUP_COUNTS} ${ALL_PARA_DEDUP_MCDBS}
-	@${MAKE} ${ALL_PARA_OVERLAP_FILES}
+	@${MAKE} ${OPUS_PARA_OVERLAPS}
+
+.PHONY: all-para-overlaps
+all-para-overlaps: ${OPUS_PARA_OVERLAPS}
 
 .PHONY: para-overlaps
-para-overlaps: ${LANGPAIR}/${CORPUS}/${VERSION}.txt
+para-overlaps: ../../OPUS/corpus/${CORPUS}/${VERSION}/overlaps/${LANGPAIR}.tsv
 
 
 
@@ -81,7 +91,7 @@ biglang-job-puhti:
 
 .PHONY: job-bitext-puhti
 job-bitext-puhti:
-	${MAKE} HPC_MEM=128g HPC_CORES=16 CORES=4 THREADS=4 HPC_DISK=500 all-bitexts.submit
+	${MAKE} HPC_MEM=128g HPC_CORES=16 CORES=4 THREADS=4 HPC_DISK=500 all-para.submit
 
 
 
@@ -96,6 +106,17 @@ counts: ${ALL_MONO_DEDUP_COUNTS}
 
 
 
+#-----------------------------------------------------------------
+# overlap count files we can release
+#-----------------------------------------------------------------
+
+../../OPUS/corpus/%/overlaps/${LANGUAGE}.tsv: ${LANGUAGE}/%.txt
+	mkdir -p $(dir $@)
+	sort -k5,5nr -k4,4nr $< > $@
+
+../../OPUS/corpus/%/overlaps/${LANGPAIR}.tsv: ${LANGPAIR}/%.txt
+	mkdir -p $(dir $@)
+	sort -k5,5nr -k4,4nr $< > $@
 
 
 #------------------------------------------------
@@ -124,22 +145,6 @@ ${TMPDIR}/%.dedup.mcdb: ${TMPDIR}/%.dedup.gz
 # count lines (sentences)
 %.dedup.nrlines: %.dedup.gz
 	${GZIP} -cd $< | wc -l > $@
-
-
-
-
-
-#-----------------------------------------------------------------
-# overlap count files we can release
-#-----------------------------------------------------------------
-
-../../OPUS/corpus/%/overlaps/${LANGUAGE}.tsv: ${LANGUAGE}/%.txt
-	mkdir -p $(dir $@)
-	sort -k5,5nr -k4,4nr $< > $@
-
-../../OPUS/corpus/%/overlaps/${LANGPAIR}.tsv: ${LANGPAIR}/%.txt
-	mkdir -p $(dir $@)
-	sort -k5,5nr -k4,4nr $< > $@
 
 
 
