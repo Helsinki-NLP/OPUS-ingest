@@ -1,15 +1,71 @@
 # -*-makefile-*-
 #
 #
+# set CORPUS to specify the corpus to operate on
+# data will be taken from OPUSHOME/corpus/CORPUS
+# and released in OPUSRELEASE/CORPUS
+#
+#----------------------------------------------
+# creating release packages
 #----------------------------------------------
 #
-#  make website ........ make website
+#  make packages ....... make all release packages
+#
+#
+# individual packages:
+#
+#  make alg_files ...... XCES alignment files (just copy)
+#  make lang_raw ....... language-specific data files in XML (untokenized)
+#  make lang_xml ....... language-specific data files in XML (tokenized)
+#  make lang_parsed .... language-specific data files in XML (parsed)
+#
+#  make tmx ............ bitexts in TMX
+#  make moses .......... bitexts in aligned plain text (Moses format)
+#
+#  make mono_raw ....... monolingual plain text files (untokenized)
+#  make mono_tok ....... monolingual plain text files (tokenized)
+#  make freq_counts .... token frequency counts per language
+#
+#  make smt ............ SMT phrase tables and related filed
+#  make wordalg ........ statistical word alignment files
+#  make dic-release .... bilingual dictionaries from word alignment
+#
+#----------------------------------------------
+# releasing data
+#----------------------------------------------
+#
+#  make release .......... release a corpus (all uploads etc.)
+#
+#
+# individual steps:
+#
+#  make upload ........... upload data to allas
+#  make upload-website ... upload website and data sample files to OPUS server
+#  make upload-cwb ....... upload CWB corpus index to OPUS server (if it exists)
+#  make release-nlpl ..... copy data to NLPL space
+#
+#
+# website related things:
+#
+#  make website ........ make corpus website
+#  make alg_samples .... bitext sample files
+#  make corpus_samples . corpus sample files
 #  make html ........... make website and counts
 #  make refresh-html ... remove old html and make new
-#  make packages ....... make download packages
 #
 #
+# statistics and info files
+#
+#  make info ........... info files and statistics (individual steps below)
+#  make lang_info
+#  make ces_info
+#  make txt_info
+#  make tmx_info
+#
+#
+#----------------------------------------------
 # NEW (ATTENTION - this is potentially very dangerous!)
+#----------------------------------------------
 #
 #  make delete-empty-bitexts
 #  make delete-empty-corpora
@@ -22,6 +78,17 @@ release:
 	${MAKE} upload
 	${MAKE} upload-website
 	${MAKE} upload-cwb
+	${MAKE} release-nlpl
+
+
+# release data in NLPL partition
+.PHONY: release-nlpl
+release-nlpl:
+	if [ -d ${OPUSNLPL} ]; then
+	  if [ ${OPUSNLPL} != ${OPUSRELEASE} ]; then \
+	    rsync -av ${OPUSRELEASE}/${CORPUS} ${OPUSNLPL}; \
+	    rsync -av ${OPUSRELEASE}/index.txt ${OPUSNLPL}/; \
+	fi
 
 .PHONY: upload
 upload: ${PACKAGES}
@@ -213,6 +280,7 @@ ${OPUSRELEASE}/${CORPUS}/releases.txt: ${OPUSRELEASE}/${CORPUS}/info.txt
 ${CORPUSHOME}/releases.txt ${CORPUSHOME}/info.txt: ${CORPUSHOME}/%.txt: ${OPUSRELEASE}/${CORPUS}/%.txt
 	rsync $< $@
 
+.PHONY: release-uniq
 release-uniq:
 	rev ${OPUSRELEASE}/${CORPUS}/releases.txt | tr ' ' '~' | \
 	uniq -f 1 | rev | tr '~' ' ' > ${OPUSRELEASE}/${CORPUS}/releases.uniq

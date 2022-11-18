@@ -1,0 +1,108 @@
+# -*-makefile-*-
+#--------------------------------------------------------------------
+# Joerg Tiedemann			2017-06-07
+# tiedeman@gmail.com
+#
+# generic target to submit a job via sbatch
+# works on CSC only so far
+#--------------------------------------------------------------------
+
+
+# enable e-mail notification by setting EMAIL
+
+WHOAMI = $(shell whoami)
+ifeq ("$(WHOAMI)","tiedeman")
+  EMAIL = jorg.tiedemann@helsinki.fi
+endif
+
+
+# job-specific settings (overwrite if necessary)
+# HPC_EXTRA: additional SBATCH commands
+
+HPC_MEM     = 4g
+HPC_TIME    = 48:00
+HPC_NODES   = 1
+HPC_CORES   = 1
+HPC_QUEUE   = small
+# HPC_MODULES = nlpl-opus python-env/3.4.1 
+# HPC_MODULES = parallel python-env nlpl-efmaral nlpl-opus nlpl-moses 
+# HPC_MODULES = parallel python-env nlpl-efmaral nlpl-moses
+HPC_MODULES = parallel git nlpl-cwb nlpl-opus nlpl-moses
+HPC_EXTRA   =
+
+
+
+%.submit:
+	echo '#!/bin/bash -l' > $@
+	echo '#SBATCH -J "${@:.submit=}"' >>$@
+	echo '#SBATCH -o ${@:.submit=}.out.%j' >> $@
+	echo '#SBATCH -e ${@:.submit=}.err.%j' >> $@
+	echo '#SBATCH --mem=${HPC_MEM}' >> $@
+ifeq (${shell hostname --domain},bullx)
+ifdef HPC_DISK
+	echo '#SBATCH --gres=nvme:${HPC_DISK}' >> $@
+endif
+	echo '#SBATCH --account=${CSC_PROJECT}' >> $@
+endif
+ifeq (${shell hostname --domain},mahti.csc.fi)
+	echo '#SBATCH --account=${CSC_PROJECT}' >> $@
+endif
+ifdef EMAIL
+	echo '#SBATCH --mail-type=END' >> $@
+	echo '#SBATCH --mail-user=${EMAIL}' >> $@
+endif
+	echo '#SBATCH -n ${HPC_CORES}' >> $@
+	echo '#SBATCH -N ${HPC_NODES}' >> $@
+	echo '#SBATCH -p ${HPC_QUEUE}' >> $@
+	echo '#SBATCH -t ${HPC_TIME}:00' >> $@
+	echo '${HPC_EXTRA}' >> $@
+	echo 'module use -a /proj/nlpl/modules' >> $@
+	echo 'module use -a /projappl/nlpl/software/modules/etc' >> $@
+	for m in ${HPC_MODULES}; do \
+	  echo "module load $$m" >> $@; \
+	done
+	echo 'module list' >> $@
+	echo 'cd $${SLURM_SUBMIT_DIR:-.}' >> $@
+	echo 'pwd' >> $@
+	echo 'echo "Starting at `date`"' >> $@
+	echo '${MAKE} -j ${HPC_CORES} ${MAKEARGS} ${@:.submit=}' >> $@
+	echo 'echo "Finishing at `date`"' >> $@
+	sbatch $@
+	mv $@ $@-${shell date "+%Y-%m-%d"}
+
+#	echo 'module purge' >> $@
+
+
+## run in a local tmp dir instead
+## --> reduce I/O! but requires massive copying ...
+## --> requires enough space in TMPDIR!
+## TODO: should we use --ignore-errors in make call?
+%-local:
+	mkdir -p ${TMPDIR}/OPUS/corpus/${CORPUS}
+	-rsync ${OPUSCORPORA}/Makefile* ${TMPDIR}/OPUS/corpus/
+	-ln -s ${OPUSTOOLS} ${TMPDIR}/OPUS/tools
+	-rsync -av ${CORPUSHOME} ${TMPDIR}/OPUS/corpus/
+	-${MAKE} -C $(patsubst ${OPUSHOME}%,${TMPDIR}/OPUS%,${PWD}) \
+		--keep-going \
+		OPUSHOME=${TMPDIR}/OPUS ${@:-local=}
+	-rsync -zav ${TMPDIR}/OPUS/corpus/${CORPUS} ${OPUSHOME}/corpus/
+	-rsync -zav ${TMPDIR}/OPUS/web/${CORPUS} ${OPUSHOME}/web/
+	-rsync -zav ${TMPDIR}/OPUS/web/${CORPUS}*php ${OPUSHOME}/web/
+	-rm -fr ${TMPDIR}/OPUS/corpus/${CORPUS}
+	-rm -fr ${TMPDIR}/OPUS/web/${CORPUS}*
+
+
+
+# run a recipe on a local copy in TMPDIR
+# NOTE: may overwrite existing files
+#       when copying back!!!
+
+%-runlocal:
+	mkdir -p ${TMPDIR}/OPUS/corpus
+	rsync -a ${CORPUSHOME} ${TMPDIR}/OPUS/corpus/
+	-ln -s ${OPUSHOME}/* ${TMPDIR}/OPUS/
+	-ln -s ${OPUSCORPORA}/* ${TMPDIR}/OPUS/corpus/
+	${MAKE} -C ${patsubst ${OPUSHOME}/%,${TMPDIR}/OPUS/%,${shell pwd}} \
+		OPUSHOME=${TMPDIR}/OPUS ${@:-runlocal=}
+	rsync -a ${TMPDIR}/OPUS/corpus/${CORPUS} ${OPUSCORPORA}/
+

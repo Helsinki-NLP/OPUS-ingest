@@ -5,11 +5,18 @@
 include ../Makefile.def
 include ../Makefile.submit
 
+
+# place where to find OPUS data sets
+# TODO: don't require local files
+
+# OPUSDATASETS = ${OPUSRELEASE}
+OPUSDATASETS = ${OPUSNLPL}
+
 ## names of all corpora and their released versions
 
-CORPORA  := ${sort ${notdir ${shell find ${OPUSRELEASE} -mindepth 1 -maxdepth 1 -type d }}}
+CORPORA  := ${sort ${notdir ${shell find ${OPUSDATASETS} -mindepth 1 -maxdepth 1 -type d }}}
 CORPUS   ?= ${firstword ${CORPORA}}
-VERSIONS ?= $(sort ${notdir ${shell find ${OPUSRELEASE}/${CORPUS} -maxdepth 1 -mindepth 1 -type d}})
+VERSIONS ?= $(sort ${notdir ${shell find ${OPUSDATASETS}/${CORPUS} -maxdepth 1 -mindepth 1 -type d}})
 VERSION  ?= ${lastword ${VERSIONS}}
 
 
@@ -21,11 +28,11 @@ PARALLEL := ${shell if [ `which parallel 2>/dev/null | wc -l` -gt 0 ]; then echo
 
 LANGUAGE ?= en
 
-ALL_MONO               := $(filter-out %/latest/mono/${LANGUAGE}.txt.gz,${wildcard ${OPUSRELEASE}/*/*/mono/${LANGUAGE}.txt.gz})
-ALL_MONO_DEDUP         := $(patsubst ${OPUSRELEASE}/%.txt.gz,${TMPDIR}/%.dedup.gz,${ALL_MONO})
+ALL_MONO               := $(filter-out %/latest/mono/${LANGUAGE}.txt.gz,${wildcard ${OPUSDATASETS}/*/*/mono/${LANGUAGE}.txt.gz})
+ALL_MONO_DEDUP         := $(patsubst ${OPUSDATASETS}/%.txt.gz,${TMPDIR}/%.dedup.gz,${ALL_MONO})
 ALL_MONO_DEDUP_COUNTS  := $(patsubst %.dedup.gz,%.dedup.nrlines,${ALL_MONO_DEDUP})
-ALL_MONO_DEDUP_MCDBS   := $(patsubst ${OPUSRELEASE}/%.txt.gz,${TMPDIR}/%.dedup.mcdb,${ALL_MONO})
-ALL_MONO_OVERLAP_FILES := $(patsubst ${OPUSRELEASE}/%/mono/${LANGUAGE}.txt.gz,${LANGUAGE}/%.txt,${ALL_MONO})
+ALL_MONO_DEDUP_MCDBS   := $(patsubst ${OPUSDATASETS}/%.txt.gz,${TMPDIR}/%.dedup.mcdb,${ALL_MONO})
+ALL_MONO_OVERLAP_FILES := $(patsubst ${OPUSDATASETS}/%/mono/${LANGUAGE}.txt.gz,${LANGUAGE}/%.txt,${ALL_MONO})
 OPUS_MONO_OVERLAPS     := $(patsubst ${LANGUAGE}/%.txt,../../OPUS/corpus/%/overlaps/${LANGUAGE}.tsv,${ALL_MONO_OVERLAP_FILES})
 
 
@@ -50,11 +57,11 @@ LANGPAIR ?= de-en
 SRCLANG := $(firstword $(subst -, ,${LANGPAIR}))
 TRGLANG := $(lastword $(subst -, ,${LANGPAIR}))
 
-ALL_PARA               := $(filter-out %/latest/moses/${LANGPAIR}.txt.zip,${wildcard ${OPUSRELEASE}/*/*/moses/${LANGPAIR}.txt.zip})
-ALL_PARA_DEDUP         := $(patsubst ${OPUSRELEASE}/%.txt.zip,${TMPDIR}/%.dedup.gz,${ALL_PARA})
+ALL_PARA               := $(filter-out %/latest/moses/${LANGPAIR}.txt.zip,${wildcard ${OPUSDATASETS}/*/*/moses/${LANGPAIR}.txt.zip})
+ALL_PARA_DEDUP         := $(patsubst ${OPUSDATASETS}/%.txt.zip,${TMPDIR}/%.dedup.gz,${ALL_PARA})
 ALL_PARA_DEDUP_COUNTS  := $(patsubst %.dedup.gz,%.dedup.nrlines,${ALL_PARA_DEDUP})
-ALL_PARA_DEDUP_MCDBS   := $(patsubst ${OPUSRELEASE}/%.txt.zip,${TMPDIR}/%.dedup.mcdb,${ALL_PARA})
-ALL_PARA_OVERLAP_FILES := $(patsubst ${OPUSRELEASE}/%/moses/${LANGPAIR}.txt.zip,${LANGPAIR}/%.txt,${ALL_PARA})
+ALL_PARA_DEDUP_MCDBS   := $(patsubst ${OPUSDATASETS}/%.txt.zip,${TMPDIR}/%.dedup.mcdb,${ALL_PARA})
+ALL_PARA_OVERLAP_FILES := $(patsubst ${OPUSDATASETS}/%/moses/${LANGPAIR}.txt.zip,${LANGPAIR}/%.txt,${ALL_PARA})
 OPUS_PARA_OVERLAPS     := $(patsubst ${LANGPAIR}/%.txt,../../OPUS/corpus/%/overlaps/${LANGPAIR}.tsv,${ALL_PARA_OVERLAP_FILES})
 
 
@@ -122,13 +129,13 @@ counts: ${ALL_MONO_DEDUP_COUNTS}
 #------------------------------------------------
 
 ## create deduplicated monolingual corpus files
-${TMPDIR}/%.dedup.gz: ${OPUSRELEASE}/%.txt.gz
+${TMPDIR}/%.dedup.gz: ${OPUSDATASETS}/%.txt.gz
 	mkdir -p ${dir $@}
 	${GZIP} -cd $< | ${SORT} -u | ${GZIP} -c > $@
 
 ## create deduplicated bitexts
 ## NOTE: spaces removed for bitexts!
-${TMPDIR}/%/${LANGPAIR}.dedup.gz: ${OPUSRELEASE}/%/${LANGPAIR}.txt.zip
+${TMPDIR}/%/${LANGPAIR}.dedup.gz: ${OPUSDATASETS}/%/${LANGPAIR}.txt.zip
 	mkdir -p ${dir $@}tmp
 	unzip -d ${dir $@}tmp $<
 	paste ${dir $@}tmp/*.${SRCLANG} ${dir $@}tmp/*.${TRGLANG} | \
@@ -156,7 +163,7 @@ ${LANGUAGE}/%.txt: ${ALL_MONO}
 	if [ -e $(@:.txt=.tar.gz) ]; then tar -xzf $(@:.txt=.tar.gz); fi
 	@for c in ${CORPORA}; do \
 	  s=`cat $(patsubst ${LANGUAGE}/%.txt,${TMPDIR}/%/mono/${LANGUAGE}.dedup.nrlines,$@)`; \
-	  for v in `find ${OPUSRELEASE}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
+	  for v in `find ${OPUSDATASETS}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
 	    if [ "$(patsubst ${LANGUAGE}/%.txt,%,$@)" != "$$c/$$v" ]; then \
 	      if [ -e ${TMPDIR}/$$c/$$v/mono/${LANGUAGE}.dedup.gz ]; then \
 	        ${MAKE} CORPUS1=$(patsubst ${LANGUAGE}/%/,%,$(dir $@)) VERSION1=${notdir ${@:.txt=}} \
@@ -182,7 +189,7 @@ ${LANGUAGE}/%.tar.gz: counts/${LANGUAGE}
 ## pack individual count files if the cumulative count file exist
 tar-mono-counts:
 	@for c in ${CORPORA}; do \
-	  for v in `find ${OPUSRELEASE}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
+	  for v in `find ${OPUSDATASETS}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
 	    if [ -e ${LANGUAGE}/$$c/$$v.txt ]; then \
 	      if [ ! -e ${LANGUAGE}/$$c/$$v.tar.gz ]; then \
 	        make ${LANGUAGE}/$$c/$$v.tar.gz; \
@@ -231,7 +238,7 @@ ${LANGPAIR}/%.txt: ${ALL_PARA}
 	mkdir -p ${dir $@}
 	if [ -e $(@:.txt=.tar.gz) ]; then tar -xzf $(@:.txt=.tar.gz); fi
 	@for c in ${CORPORA}; do \
-	  for v in `find ${OPUSRELEASE}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
+	  for v in `find ${OPUSDATASETS}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
 	    if [ "$(patsubst ${LANGPAIR}/%.txt,%,$@)" != "$$c/$$v" ]; then \
 	      if [ -e ${TMPDIR}/$$c/$$v/moses/${LANGPAIR}.dedup.gz ]; then \
 	        make CORPUS1=$(patsubst ${LANGPAIR}/%/,%,$(dir $@)) VERSION1=${notdir ${@:.txt=}} CORPUS2=$$c VERSION2=$$v count-bitext; \
@@ -255,7 +262,7 @@ ${LANGPAIR}/%.tar.gz: counts/${LANGPAIR}
 ## pack individual count files if the cumulative count file exist
 tar-para-counts:
 	@for c in ${CORPORA}; do \
-	  for v in `find ${OPUSRELEASE}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
+	  for v in `find ${OPUSDATASETS}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
 	    if [ -e ${LANGPAIR}/$$c/$$v.txt ]; then \
 	      if [ ! -e ${LANGPAIR}/$$c/$$v.tar.gz ]; then \
 	        make ${LANGPAIR}/$$c/$$v.tar.gz; \
@@ -327,9 +334,9 @@ OPUS_OVERLAP_MDFILES  := $(patsubst ${LANGUAGE}/%.txt,../../OPUS/corpus/%/overla
 
 
 
-ALL_MONO_CDBS        := $(patsubst ${OPUSRELEASE}/%.txt.gz,${TMPDIR}/%.cdb.1,${ALL_MONO})
-ALL_MONO_MCDBS       := $(patsubst ${OPUSRELEASE}/%.txt.gz,${TMPDIR}/%.mcdb,${ALL_MONO})
-ALL_MONO_DEDUP_CDBS  := $(patsubst ${OPUSRELEASE}/%.txt.gz,${TMPDIR}/%.dedup.cdb.1,${ALL_MONO})
+ALL_MONO_CDBS        := $(patsubst ${OPUSDATASETS}/%.txt.gz,${TMPDIR}/%.cdb.1,${ALL_MONO})
+ALL_MONO_MCDBS       := $(patsubst ${OPUSDATASETS}/%.txt.gz,${TMPDIR}/%.mcdb,${ALL_MONO})
+ALL_MONO_DEDUP_CDBS  := $(patsubst ${OPUSDATASETS}/%.txt.gz,${TMPDIR}/%.dedup.cdb.1,${ALL_MONO})
 
 .PHONY: cdb mcdb dedup-cdb
 cdb: ${ALL_MONO_CDBS}
@@ -341,12 +348,12 @@ dedup-cdb: ${ALL_MONO_DEDUP_CDBS}
 #------------------------------------------------
 
 ## create CDB index databases
-${TMPDIR}/%.cdb.1: ${OPUSRELEASE}/%.txt.gz
+${TMPDIR}/%.cdb.1: ${OPUSDATASETS}/%.txt.gz
 	mkdir -p ${dir $@}
 	${GZIP} -cd $< | ./add2cdb.pl ${@:1=}
 
 ## create MCDB index databases
-${TMPDIR}/%.mcdb: ${OPUSRELEASE}/%.txt.gz
+${TMPDIR}/%.mcdb: ${OPUSDATASETS}/%.txt.gz
 	mkdir -p ${dir $@}
 	${GZIP} -cd $< | ./add2mcdb.pl $@
 
@@ -370,13 +377,13 @@ ${TMPDIR}/%.dedup.cdb.1: ${TMPDIR}/%.dedup.gz
 raw/${LANGUAGE}/%.txt: ${ALL_MONO_MCDBS}
 	mkdir -p ${dir $@}
 	@for c in ${CORPORA}; do \
-	  s=`${GZIP} -cd $(patsubst ${LANGUAGE}/%.txt,${OPUSRELEASE}/%/mono/${LANGUAGE}.txt.gz,$@) | wc -l`; \
-	  for v in `find ${OPUSRELEASE}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
+	  s=`${GZIP} -cd $(patsubst ${LANGUAGE}/%.txt,${OPUSDATASETS}/%/mono/${LANGUAGE}.txt.gz,$@) | wc -l`; \
+	  for v in `find ${OPUSDATASETS}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
 	    if [ "$(patsubst ${LANGUAGE}/%.txt,%,$@)" != "$$c/$$v" ]; then \
-	      if [ -e ${OPUSRELEASE}/$$c/$$v/mono/${LANGUAGE}.txt.gz ]; then \
+	      if [ -e ${OPUSDATASETS}/$$c/$$v/mono/${LANGUAGE}.txt.gz ]; then \
 	        echo "count overlap with $$c $$v"; \
 	        echo -n "$$c	$$v	" >> $@; \
-	        ${GZIP} -cd $(patsubst ${LANGUAGE}/%.txt,${OPUSRELEASE}/%/mono/${LANGUAGE}.txt.gz,$@) |\
+	        ${GZIP} -cd $(patsubst ${LANGUAGE}/%.txt,${OPUSDATASETS}/%/mono/${LANGUAGE}.txt.gz,$@) |\
 	        ./find_in_mcdb.pl ${TMPDIR}/$$c/$$v/mono/${LANGUAGE}.mcdb >> $@; \
 	        echo "/$$s" >> $@; \
 	      fi \
@@ -400,9 +407,9 @@ sortbased/${LANGUAGE}/%.txt: ${ALL_MONO_DEDUP}
 	mkdir -p ${dir $@}
 	@for c in ${CORPORA}; do \
 	  s=`${GZIP} -cd $(patsubst ${LANGUAGE}/%.txt,${TMPDIR}/%/mono/${LANGUAGE}.dedup.gz,$@) | wc -l`; \
-	  for v in `find ${OPUSRELEASE}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
+	  for v in `find ${OPUSDATASETS}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
 	    if [ "$(patsubst ${LANGUAGE}/%.txt,%,$@)" != "$$c/$$v" ]; then \
-	      if [ -e ${OPUSRELEASE}/$$c/$$v/mono/${LANGUAGE}.txt.gz ]; then \
+	      if [ -e ${OPUSDATASETS}/$$c/$$v/mono/${LANGUAGE}.txt.gz ]; then \
 	        echo "count overlap with $$c $$v"; \
 	        echo -n "$$c	$$v	" >> $@; \
 	        ${MAKE} -s ${TMPDIR}/$$c/$$v/mono/${LANGUAGE}.dedup.gz; \
