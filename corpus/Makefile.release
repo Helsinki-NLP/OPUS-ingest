@@ -84,10 +84,11 @@ release:
 # release data in NLPL partition
 .PHONY: release-nlpl
 release-nlpl:
-	if [ -d ${OPUSNLPL} ]; then
+	if [ -d ${OPUSNLPL} ]; then \
 	  if [ ${OPUSNLPL} != ${OPUSRELEASE} ]; then \
 	    rsync -av ${OPUSRELEASE}/${CORPUS} ${OPUSNLPL}; \
 	    rsync -av ${OPUSRELEASE}/index.txt ${OPUSNLPL}/; \
+	  fi \
 	fi
 
 .PHONY: upload
