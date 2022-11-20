@@ -8,7 +8,7 @@ use strict;
 use File::Copy;
 use File::Basename;
 use Getopt::Std;
-use YAML qw(Dump);
+use YAML qw(DumpFile);
 
 
 our($opt_o, $opt_b);
@@ -51,15 +51,11 @@ foreach my $v (keys %info){
     }
     if ((! -e $InfoFile) || $opt_o){
 	print "print corpus info to $InfoFile\n";
-	open F,">$InfoFile" || die "cannot write to $InfoFile\n";
-	print F Dump($info{$v});
-	close F;
+	DumpFile($InfoFile,$info{$v}) || die "cannot write to $InfoFile\n";
     }
     if ((!-e $StatsFile) || $opt_o){
 	print "print corpus statistics to $StatsFile\n";
-	open F,">$StatsFile" || die "cannot write to $StatsFile\n";
-	print F Dump($statistics{$v});
-	close F;
+	DumpFile($StatsFile,$statistics{$v}) || die "cannot write to $StatsFile\n";
     }
 }
 
@@ -85,7 +81,7 @@ sub read_readme_file{
     my %counts = ();
     while (<F>){
 	chomp;
-	if (/^\s*(Website|Release date|Licene|Copyright|Source|Reference|Original source|Contact):\s+(.*)$/){
+	if (/^\s*(Website|Release date|License|Copyright|Source|Reference|Original source|Contact):\s+(.*)$/){
 	    $info{$version}{lc($1)} = $2;
 	}
     }
@@ -223,7 +219,7 @@ sub read_info_file{
 	if ($type eq 'tmx'){
 	    push(@{$counts{$corpus}{$version}{bitexts}{$langstr}{tmx}},$value);
 	}
-	if ($type eq 'txt'){
+	elsif ($type eq 'txt'){
 	    push(@{$counts{$corpus}{$version}{bitexts}{$langstr}{text}},$value);
 	}
 	else{
