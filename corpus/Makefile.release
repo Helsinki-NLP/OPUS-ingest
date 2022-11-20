@@ -76,10 +76,16 @@
 .PHONY: release
 release:
 	${MAKE} upload
+	${MAKE} info-yaml
 	${MAKE} upload-website
 	${MAKE} upload-cwb
 	${MAKE} release-nlpl
 
+.PHONY: info-yaml
+info-yaml: ${OPUSRELEASE}/${CORPUS}/${VERSOPM}/info.yaml
+
+${OPUSRELEASE}/${CORPUS}/${VERSOPM}/info.yaml:
+	${OPUSTOOLS}/info2yaml.pl ${OPUSRELEASE}/${CORPUS}
 
 # release data in NLPL partition
 .PHONY: release-nlpl
@@ -380,15 +386,14 @@ ${OPUSPUB}/${CORPUS}-${VERSION}.php: ${PACKAGES} ${CORPUS_SAMPLES} ${ALG_SAMPLES
 	${MKDIR} $(dir $@)
 	chmod 755 ${dir $@}
 	chmod 755 ${OPUSPUB}/${CORPUS}
-	${MAKEHTML} -h ${OPUSPUB} -o ${OPUSHOME} -d ${OPUSRELEASE} \
-		${CORPUS} ${VERSION} |\
+	chmod 755 ${OPUSPUB}/${CORPUS}/${VERSION}
+	${MAKEHTML} -h ${OPUSPUB} -o ${OPUSHOME} -d ${OPUSRELEASE} ${CORPUS} ${VERSION} |\
 	sed -e 's|<h3>Download</h3>|<h3>Download</h3>${DOWNLOADINFO_SAFE}${EXTRAHTML_SAFE}${OTHERVERSIONS}|' \
 	    -e 's|<h3>Download</h3>|${CITENOTE_SAFE}<h3>Download</h3>|' \
 	    -e 's|<h1>${CORPUS}${VERSION}</h1>|<h1>${CORPUS} ${VERSION}</h1>${SRCHTML_SAFE}|' \
 	    -e 's|<h1>${CORPUS}</h1>|<h1>${CORPUS} ${VERSION}</h1>${SRCHTML_SAFE}|' \
 	    -e 's|<div class="footer">|${DISCLAIMER_SAFE}<div class="footer">|'          > $@
 	chmod 644 $@
-#	chmod go+r $@
 
 
 ${OPUSPUB}/${CORPUS}.php: ${OPUSPUB}/${CORPUS}-${VERSION}.php

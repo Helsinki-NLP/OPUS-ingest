@@ -24,8 +24,8 @@ include ../Makefile.def
 ## LANGUAGES = unique file extensions of files in src (.gz will be removed)
 ## FILES = file basenames
 
-LANGUAGES = ca en
-FILES     = $(sort $(basename $(subst .gz,,${wildcard src/gene*.??})))
+LANGUAGES = $(sort $(subst .,,$(suffix $(subst .gz,,${wildcard src/*.??}))))
+FILES     = $(sort $(basename $(subst .gz,,${wildcard src/*.??})))
 CONVERTED = ${patsubst %,%_done,${FILES}}
 
 ## make all:
@@ -51,6 +51,24 @@ extra:
 	${MAKE} udparse
 	${MAKE} wordalign
 	${MAKE} cwb-index
+
+
+CLEANUP_DATA =  | perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' \
+		| perl -CS -pe 's/\&\s*\#\s*160\s*\;/ /g' \
+		| perl -pe 's/[\p{C}-[\n\t]]/ /g;' \
+		| recode -f utf8..utf16 | recode -f utf16..utf8
+
+fetch:
+	mkdir -p src
+	wget -O src/parallel.tgz http://www.cfilt.iitb.ac.in/~moses/iitb_en_hi_parallel/iitb_corpus_download/parallel.tgz
+	tar -C src -xzf src/parallel.tgz
+	mv src/parallel/* src/
+	rmdir src/parallel
+	rm -f src/parallel.tgz
+	cat src/IITB.en-hi.en ${CLEANUP} > src/IITB.en-hi.clean.en
+	cat src/IITB.en-hi.hi ${CLEANUP} > src/IITB.en-hi.clean.hi
+	mv src/IITB.en-hi.clean.en src/IITB.en-hi.en
+	mv src/IITB.en-hi.clean.hi src/IITB.en-hi.hi
 
 
 ## standard procedures are specified in the following makefiles

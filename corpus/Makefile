@@ -177,10 +177,11 @@ ${ALLRAW_LANGID}:
 	mkdir -p $(dir $@)
 	TMPDIR=${OPUSRELEASE}/tmp opus_langid -f ${subst /raw-langid/,/raw/,$@} -t $@
 
-
+add-yaml-files:
+	find ${OPUSRELEASE}/ -mindepth 1 -maxdepth 1 -type d -exec ${OPUSTOOLS}/info2yaml.pl {} \;
 
 add-index-files:
-	for c in ${sort ${notdir ${shell find ${OPUSRELEASE} -mindepth 1 -maxdepth 1 -type d }}}; do \
+	for c in ${sort ${notdir ${shell find ${OPUSRELEASE}/ -mindepth 1 -maxdepth 1 -type d }}}; do \
 	  rsync ${OPUSRELEASE}/$$c/releases.txt ${OPUSCORPORA}/$$c/releases.txt;\
 	  rsync ${OPUSRELEASE}/$$c/info.txt ${OPUSCORPORA}/$$c/info.txt;\
 	  rsync -zav ${OPUSRELEASE}/$$c/*.info ${OPUSCORPORA}/$$c/;\

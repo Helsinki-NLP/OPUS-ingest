@@ -1,0 +1,26 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v2.0
+
+LICENSE = CC BY-NC 4.0
+COPYRIGHT = This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License. The corpora we compiled from other sources are available under their respective licenses. More information is available from <a href="https://www.cfilt.iitb.ac.in/~moses/iitb_en_hi_parallel/">https://www.cfilt.iitb.ac.in/~moses/iitb_en_hi_parallel/</a>
+
+CONTACT = Anoop Kunchukuttan (anoop.kunchukuttan@gmail.com), Pratik Mehta (pratikmehta1494@gmail.com), Pushpak Bhattacharyya (pb@cse.iitb.ac.in <pb@cse.iitb.ac.in)
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML = The IIT Bombay English-Hindi corpus contains parallel corpus for English-Hindi as well as monolingual Hindi corpus collected from a variety of existing sources and corpora developed at the Center for Indian Language Technology, IIT Bombay over the years. This page describes the corpus. This corpus has been used at the <a href="http://lotus.kuee.kyoto-u.ac.jp/WAT/index.html">Workshop on Asian Language Translation Shared Task</a> in 2016 and 2017 for the Hindi-to-English and English-to-Hindi languages pairs and as a pivot language pair for the Hindi-to-Japanese and Japanese-to-Hindi language pairs. 
+
+EXTRAHTML = 
+CITENOTE = If you use this corpus or its derivate resources for your research, kindly cite it as follows: \
+Anoop Kunchukuttan, Pratik Mehta, Pushpak Bhattacharyya. <a href="https://www.cfilt.iitb.ac.in/~moses/iitb_en_hi_parallel/lrec2018_iitbparallel.pdf">The IIT Bombay English-Hindi Parallel Corpus</a>. Language Resources and Evaluation Conference. 2018. 
