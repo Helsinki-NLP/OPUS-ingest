@@ -59,6 +59,8 @@ ELRC-4992-Customer_Support_MT	v1	1350	1/56	1.78
 ELRC-5067-SciPar	v1	354460	1/56	1.78
 ELRC-5190-Cyber_MT_Test	v1	1004	1/56	1.78
 ELRC-637-SIP	v1	514	1/56	1.78
+ELRC-844-PAeSI__Administratio	v1	298	1/56	1.78
+ELRC-863-government_websites_	v1	20968	1/56	1.78
 ELRC-antibiotic	v1	936	1/56	1.78
 ELRC-Arquitectura_2007	v1	114	1/56	1.78
 ELRC-Artigos_visitportuga	v1	1228	1/56	1.78

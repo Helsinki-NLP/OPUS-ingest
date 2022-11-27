@@ -2,6 +2,8 @@
 # compute overlaps between corpora
 #---------------------------------------------------------------------
 
+SHELL := bash
+
 include ../Makefile.def
 include ../Makefile.submit
 
@@ -24,6 +26,10 @@ PARALLEL_ARGS := --pipe --keep-order -q -L10000 --max-procs 25%
 PARALLEL := ${shell if [ `which parallel 2>/dev/null | wc -l` -gt 0 ]; then echo 'parallel ${PARALLEL_ARGS}'; fi }
 
 
+# FIND_IN_MCDB := ./find_in_mcdb.pl -t
+FIND_IN_MCDB := ./find_in_mcdb.pl
+
+
 ## monolingual texts
 
 LANGUAGE ?= en
@@ -34,6 +40,8 @@ ALL_MONO_DEDUP_COUNTS  := $(patsubst %.dedup.gz,%.dedup.nrlines,${ALL_MONO_DEDUP
 ALL_MONO_DEDUP_MCDBS   := $(patsubst ${OPUSDATASETS}/%.txt.gz,${TMPDIR}/%.dedup.mcdb,${ALL_MONO})
 ALL_MONO_OVERLAP_FILES := $(patsubst ${OPUSDATASETS}/%/mono/${LANGUAGE}.txt.gz,${LANGUAGE}/%.txt,${ALL_MONO})
 OPUS_MONO_OVERLAPS     := $(patsubst ${LANGUAGE}/%.txt,${OPUSRELEASE}/%/overlaps/${LANGUAGE}.tsv,${ALL_MONO_OVERLAP_FILES})
+
+OPUS_NEWMONO_OVERLAPS  := $(patsubst ${LANGUAGE}/%.txt,${OPUSRELEASE}/%/overlaps/${LANGUAGE}.new.tsv,${ALL_MONO_OVERLAP_FILES})
 
 
 .NOTINTERMEDIATE: ${ALL_MONO_OVERLAP_FILES}
@@ -49,6 +57,19 @@ all-mono-overlaps: ${OPUS_MONO_OVERLAPS}
 mono-overlaps: ${OPUSRELEASE}/${CORPUS}/${VERSION}/overlaps/${LANGUAGE}.tsv
 
 
+job-opensubs-puhti:
+	${MAKE} HPC_MEM=128g HPC_CORES=16 CORES=4 THREADS=4 HPC_DISK=500 opensubs.submit
+
+opensubs:
+	for l in pl pt_br pt ro ru si sk sl sq sr sv ta te th tl tr uk ur vi ze_en ze_zh zh_cn zh_tw; do \
+	  make LANGPAIR=en-$$l all-para; \
+	  find ${TMPDIR} -name '*.dedup.*' -delete; \
+	done
+
+fixmono:
+	for l in es fr fi ga ru de en; do \
+	  make LANGUAGE=$$l all-mono-overlaps; \
+	done
 
 
 ## bitexts
@@ -63,6 +84,7 @@ ALL_PARA_DEDUP_COUNTS  := $(patsubst %.dedup.gz,%.dedup.nrlines,${ALL_PARA_DEDUP
 ALL_PARA_DEDUP_MCDBS   := $(patsubst ${OPUSDATASETS}/%.txt.zip,${TMPDIR}/%.dedup.mcdb,${ALL_PARA})
 ALL_PARA_OVERLAP_FILES := $(patsubst ${OPUSDATASETS}/%/moses/${LANGPAIR}.txt.zip,${LANGPAIR}/%.txt,${ALL_PARA})
 OPUS_PARA_OVERLAPS     := $(patsubst ${LANGPAIR}/%.txt,${OPUSRELEASE}/%/overlaps/${LANGPAIR}.tsv,${ALL_PARA_OVERLAP_FILES})
+
 
 
 .NOTINTERMEDIATE: ${ALL_PARA_OVERLAP_FILES}
@@ -84,9 +106,16 @@ para-overlaps: ${OPUSRELEASE}/${CORPUS}/${VERSION}/overlaps/${LANGPAIR}.tsv
 ## submit specific jobs on puhti@csc
 ##----------------------------------
 
+## TODO: there is some kind of memory leak
+##       mcdb requires a lot of memory and for English it still crashes with 128GB RAM
+
 .PHONY: job-puhti
 job-mono-puhti:
 	${MAKE} HPC_MEM=128g HPC_CORES=8 CORES=4 THREADS=4 HPC_DISK=1000 all-mono.submit
+
+.PHONY: job-english-puhti
+job-english-puhti:
+	${MAKE} HPC_MEM=256g HPC_CORES=8 CORES=4 THREADS=4 HPC_DISK=1000 LANGUAGE=en all-mono.submit
 
 .PHONY: biglang-job-puhti
 biglang-job-puhti:
@@ -116,10 +145,47 @@ counts: ${ALL_MONO_DEDUP_COUNTS}
 #-----------------------------------------------------------------
 
 ${OPUSRELEASE}/%/overlaps/${LANGUAGE}.tsv: ${LANGUAGE}/%.txt
+	@mkdir -p $(dir $@)
+	@grep -v '	0	' $< > $@.0
+	@cut -f1,2 $@.0 > $@.12
+	@cut -f3 $@.0 > $@.3
+	@cut -f4 $@.0 | cut -f1 -d '/' > $@.4a
+	@cut -f4 $@.0 | cut -f2 -d '/' > $@.4b
+	@cut -f5 $@.0 > $@.5
+	@paste $@.4a $@.3 -d '/' | sed 's/^/scale=2;100*/' | bc > $@.6
+	@paste $@.12 $@.4b $@.3 $@.4a $@.5 $@.6 |\
+	sort -k6,6nr -k4,4nr |\
+	sed 's/^/$(word 2,$(subst /, ,$<))	$(word 3,$(subst /, ,$(<:.txt=)))	/' > $@.sorted
+	@echo "corpus A	release A	corpus B	release B	size A	size B	A∩B	A∩B/A	A∩B/B" > $@
+	@cat $@.sorted >> $@
+	@rm -f $@.0 $@.12 $@.3 $@.4a $@.4b $@.5 $@.6 $@.sorted
+	@echo "$@ done"
+
+${OPUSRELEASE}/%/overlaps/${LANGPAIR}.tsv: ${LANGPAIR}/%.txt
+	@mkdir -p $(dir $@)
+	@grep -v '	0	' $< > $@.0
+	@cut -f1,2 $@.0 > $@.12
+	@cut -f3 $@.0 > $@.3
+	@cut -f4 $@.0 | cut -f1 -d '/' > $@.4a
+	@cut -f4 $@.0 | cut -f2 -d '/' > $@.4b
+	@cut -f5 $@.0 > $@.5
+	@paste $@.4a $@.3 -d '/' | sed 's/^/scale=2;100*/' | bc > $@.6
+	@paste $@.12 $@.4b $@.3 $@.4a $@.5 $@.6 |\
+	sort -k6,6nr -k4,4nr |\
+	sed 's/^/$(word 2,$(subst /, ,$<))	$(word 3,$(subst /, ,$(<:.txt=)))	/' > $@.sorted
+	@echo "corpus A	release A	corpus B	release B	size A	size B	A∩B	A∩B/A	A∩B/B" > $@
+	@cat $@.sorted >> $@
+	@rm -f $@.0 $@.12 $@.3 $@.4a $@.4b $@.5 $@.6 $@.sorted
+	@echo "$@ done"
+
+## old version: just keep the same as in the text file for the release
+## new version above: cleaner structure and more complete stats
+
+${OPUSRELEASE}/%/overlaps/${LANGUAGE}.old.tsv: ${LANGUAGE}/%.txt
 	mkdir -p $(dir $@)
 	sort -k5,5nr -k4,4nr $< > $@
 
-${OPUSRELEASE}/%/overlaps/${LANGPAIR}.tsv: ${LANGPAIR}/%.txt
+${OPUSRELEASE}/%/overlaps/${LANGPAIR}.old.tsv: ${LANGPAIR}/%.txt
 	mkdir -p $(dir $@)
 	sort -k5,5nr -k4,4nr $< > $@
 
@@ -218,9 +284,9 @@ counts/${LANGUAGE}/${CORPUS1}_${VERSION1}-${CORPUS2}_${VERSION2}.txt: \
 	echo -n "${CORPUS2}	${VERSION2}	"                    > $@
 	cat $(word 4,$^) | tr "\n" "\t"                             >> $@
 	if [ `cat $(word 3,$^)` -lt `cat $(word 4,$^)` ]; then \
-	  ${GZIP} -cd $(word 1,$^) | ./find_in_mcdb.pl $(word 6,$^) >> $@; \
+	  ${GZIP} -cd $(word 1,$^) | ${FIND_IN_MCDB} $(word 6,$^) >> $@; \
 	else \
-	  ${GZIP} -cd $(word 2,$^) | ./find_in_mcdb.pl $(word 5,$^) >> $@; \
+	  ${GZIP} -cd $(word 2,$^) | ${FIND_IN_MCDB} $(word 5,$^) >> $@; \
 	fi
 	echo -n '/'                                                 >> $@
 	cat $(word 3,$^)                                            >> $@
@@ -289,9 +355,9 @@ counts/${LANGPAIR}/${CORPUS1}_${VERSION1}-${CORPUS2}_${VERSION2}.txt: \
 	echo -n "${CORPUS2}	${VERSION2}	"                    > $@
 	cat $(word 4,$^) | tr "\n" "\t"                             >> $@
 	if [ `cat $(word 3,$^)` -lt `cat $(word 4,$^)` ]; then \
-	  ${GZIP} -cd $(word 1,$^) | ./find_in_mcdb.pl $(word 6,$^) >> $@; \
+	  ${GZIP} -cd $(word 1,$^) | ${FIND_IN_MCDB} $(word 6,$^) >> $@; \
 	else \
-	  ${GZIP} -cd $(word 2,$^) | ./find_in_mcdb.pl $(word 5,$^) >> $@; \
+	  ${GZIP} -cd $(word 2,$^) | ${FIND_IN_MCDB} $(word 5,$^) >> $@; \
 	fi
 	echo -n '/'                                                 >> $@
 	cat $(word 3,$^)                                            >> $@
@@ -384,7 +450,7 @@ raw/${LANGUAGE}/%.txt: ${ALL_MONO_MCDBS}
 	        echo "count overlap with $$c $$v"; \
 	        echo -n "$$c	$$v	" >> $@; \
 	        ${GZIP} -cd $(patsubst ${LANGUAGE}/%.txt,${OPUSDATASETS}/%/mono/${LANGUAGE}.txt.gz,$@) |\
-	        ./find_in_mcdb.pl ${TMPDIR}/$$c/$$v/mono/${LANGUAGE}.mcdb >> $@; \
+	        ${FIND_IN_MCDB} ${TMPDIR}/$$c/$$v/mono/${LANGUAGE}.mcdb >> $@; \
 	        echo "/$$s" >> $@; \
 	      fi \
 	    fi \

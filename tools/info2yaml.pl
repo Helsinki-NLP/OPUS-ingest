@@ -17,6 +17,7 @@ getopts('ob');
 my $corpusdir   = shift(@ARGV);
 my %statistics  = ();
 my %info        = ();
+my %GeneralInfo = ();
 my $storagehome = 'https://object.pouta.csc.fi/OPUS-';
 
 
@@ -59,6 +60,14 @@ foreach my $v (keys %info){
     }
 }
 
+my $GeneralInfoFile = "$corpusdir/info.yaml";
+if ($opt_b){
+    move($GeneralInfoFile,$GeneralInfoFile.".".time()) if (-e $GeneralInfoFile);
+}
+if ((! -e $GeneralInfoFile) || $opt_o){
+    DumpFile($GeneralInfoFile,\%GeneralInfo) || die "cannot write to $GeneralInfoFile\n";
+}
+
 
 
 
@@ -69,6 +78,8 @@ sub read_releases_file{
 	chomp;
 	my ($version,$date) = split(/\t/);
 	$info{$version}{'release date'} = $date;
+	$GeneralInfo{releases}{$version} = $date;
+	$GeneralInfo{'latest release'} = $version;
     }
     close F;
 }
@@ -83,8 +94,11 @@ sub read_readme_file{
 	chomp;
 	if (/^\s*(Website|Release date|License|Copyright|Source|Reference|Original source|Contact):\s+(.*)$/){
 	    $info{$version}{lc($1)} = $2;
+	    $GeneralInfo{lc($1)} = $2;
 	}
     }
+    $GeneralInfo{website}=~s/\-.*?.php/.php/ if (exists $GeneralInfo{website});
+    delete $GeneralInfo{'release date'};
     close F;
 }
 
@@ -237,6 +251,7 @@ sub read_info_file{
 	foreach my $v (keys %{$counts{$c}}){
 	    $info{$v}{name} = $c;
 	    $info{$v}{release} = $v;
+	    $GeneralInfo{name} = $c;
 	    foreach my $l (keys %{$counts{$c}{$v}{monolingual}}){
 		push(@{$info{$v}{languages}},$l);
 		my @values = sort {$a <=> $b} @{$counts{$c}{$v}{monolingual}{$l}{xml}};

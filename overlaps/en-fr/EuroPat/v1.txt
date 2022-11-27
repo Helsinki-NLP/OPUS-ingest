@@ -57,8 +57,10 @@ ELRC-638-Luxembourg.lu	v1	36226	0/9213466	0
 ELRC-646-International_Judici	v1	222	0/9213466	0
 ELRC-648-Letter_rights_person	v1	87	0/9213466	0
 ELRC-745-Convention_against_T	v1	189	0/9213466	0
+ELRC-816-ANR_containing_major	v1	10821	0/9213466	0
 ELRC-832-CHARTER_VALUES_CITIZ	v1	53	0/9213466	0
 ELRC-837-Legal	v1	985	0/9213466	0
+ELRC-844-PAeSI__Administratio	v1	313	0/9213466	0
 ELRC-antibiotic	v1	1070	1/9213466	0
 ELRC-Arquitectura_2007	v1	111	0/9213466	0
 ELRC-Artigos_visitportuga	v1	1231	0/9213466	0

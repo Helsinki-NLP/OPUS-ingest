@@ -1,8 +1,87 @@
+     3074 index-filesize.txt
+     6374 index-long.txt
+     1974 index.txt
+        0 info.txt
         0 v1/dic
         0 v1/freq
-       45 v1/info-files.tar.gz
+      841 v1/freq/bg.freq.gz
+      795 v1/freq/de.freq.gz
+      915 v1/freq/el.freq.gz
+      621 v1/freq/en.freq.gz
+      692 v1/freq/fr.freq.gz
+      720 v1/freq/it.freq.gz
+      798 v1/freq/lv.freq.gz
+      683 v1/freq/nl.freq.gz
+      775 v1/freq/pl.freq.gz
+      790 v1/freq/ro.freq.gz
+     2971 v1/info-files.tar.gz
         0 v1/mono
+     1622 v1/mono/bg.tok.gz
+     1604 v1/mono/bg.txt.gz
+     1530 v1/mono/de.tok.gz
+     1523 v1/mono/de.txt.gz
+     1573 v1/mono/el.tok.gz
+     1569 v1/mono/el.txt.gz
+     1269 v1/mono/en.tok.gz
+     1264 v1/mono/en.txt.gz
+     1356 v1/mono/fr.tok.gz
+     1347 v1/mono/fr.txt.gz
+     1327 v1/mono/it.tok.gz
+     1320 v1/mono/it.txt.gz
+     1342 v1/mono/lv.tok.gz
+     1338 v1/mono/lv.txt.gz
+     1375 v1/mono/nl.tok.gz
+     1370 v1/mono/nl.txt.gz
+     1362 v1/mono/pl.tok.gz
+     1355 v1/mono/pl.txt.gz
+     1451 v1/mono/ro.tok.gz
+     1442 v1/mono/ro.txt.gz
       812 v1/moses/README
+     4202 v1/moses/bg-de.txt.zip
+     4146 v1/moses/bg-el.txt.zip
+     3956 v1/moses/bg-en.txt.zip
+     4043 v1/moses/bg-fr.txt.zip
+     4016 v1/moses/bg-it.txt.zip
+     3978 v1/moses/bg-lv.txt.zip
+     4022 v1/moses/bg-nl.txt.zip
+     4090 v1/moses/bg-pl.txt.zip
+     4117 v1/moses/bg-ro.txt.zip
+     4144 v1/moses/de-el.txt.zip
+     3979 v1/moses/de-en.txt.zip
+     4057 v1/moses/de-fr.txt.zip
+     4050 v1/moses/de-it.txt.zip
+     4002 v1/moses/de-lv.txt.zip
+     4069 v1/moses/de-nl.txt.zip
+     4095 v1/moses/de-pl.txt.zip
+     4135 v1/moses/de-ro.txt.zip
+     3903 v1/moses/el-en.txt.zip
+     3981 v1/moses/el-fr.txt.zip
+     3950 v1/moses/el-it.txt.zip
+     3880 v1/moses/el-lv.txt.zip
+     3970 v1/moses/el-nl.txt.zip
+     3997 v1/moses/el-pl.txt.zip
+     4036 v1/moses/el-ro.txt.zip
+     3847 v1/moses/en-fr.txt.zip
+     3820 v1/moses/en-it.txt.zip
+     3670 v1/moses/en-lv.txt.zip
+     3850 v1/moses/en-nl.txt.zip
+     3870 v1/moses/en-pl.txt.zip
+     3913 v1/moses/en-ro.txt.zip
+     3900 v1/moses/fr-it.txt.zip
+     3809 v1/moses/fr-lv.txt.zip
+     3929 v1/moses/fr-nl.txt.zip
+     3956 v1/moses/fr-pl.txt.zip
+     3992 v1/moses/fr-ro.txt.zip
+     3834 v1/moses/it-lv.txt.zip
+     3905 v1/moses/it-nl.txt.zip
+     3936 v1/moses/it-pl.txt.zip
+     3978 v1/moses/it-ro.txt.zip
+     3869 v1/moses/lv-nl.txt.zip
+     3892 v1/moses/lv-pl.txt.zip
+     3929 v1/moses/lv-ro.txt.zip
+     3959 v1/moses/nl-pl.txt.zip
+     3996 v1/moses/nl-ro.txt.zip
+     4033 v1/moses/pl-ro.txt.zip
     14156 v1/raw/bg.zip
     14056 v1/raw/de.zip
     14290 v1/raw/el.zip
@@ -15,6 +94,51 @@
     13401 v1/raw/ro.zip
         0 v1/smt
       810 v1/tmx/README
+     2481 v1/tmx/bg-de.tmx.gz
+     2410 v1/tmx/bg-el.tmx.gz
+     2227 v1/tmx/bg-en.tmx.gz
+     2307 v1/tmx/bg-fr.tmx.gz
+     2290 v1/tmx/bg-it.tmx.gz
+     2236 v1/tmx/bg-lv.tmx.gz
+     2302 v1/tmx/bg-nl.tmx.gz
+     2371 v1/tmx/bg-pl.tmx.gz
+     2394 v1/tmx/bg-ro.tmx.gz
+     2421 v1/tmx/de-el.tmx.gz
+     2107 v1/tmx/de-en.tmx.gz
+     2194 v1/tmx/de-fr.tmx.gz
+     2180 v1/tmx/de-it.tmx.gz
+     2162 v1/tmx/de-lv.tmx.gz
+     2178 v1/tmx/de-nl.tmx.gz
+     2269 v1/tmx/de-pl.tmx.gz
+     2287 v1/tmx/de-ro.tmx.gz
+     2175 v1/tmx/el-en.tmx.gz
+     2253 v1/tmx/el-fr.tmx.gz
+     2217 v1/tmx/el-it.tmx.gz
+     2148 v1/tmx/el-lv.tmx.gz
+     2251 v1/tmx/el-nl.tmx.gz
+     2274 v1/tmx/el-pl.tmx.gz
+     2306 v1/tmx/el-ro.tmx.gz
+     1904 v1/tmx/en-fr.tmx.gz
+     1877 v1/tmx/en-it.tmx.gz
+     1820 v1/tmx/en-lv.tmx.gz
+     1929 v1/tmx/en-nl.tmx.gz
+     2022 v1/tmx/en-pl.tmx.gz
+     2006 v1/tmx/en-ro.tmx.gz
+     1913 v1/tmx/fr-it.tmx.gz
+     1941 v1/tmx/fr-lv.tmx.gz
+     2039 v1/tmx/fr-nl.tmx.gz
+     2099 v1/tmx/fr-pl.tmx.gz
+     2062 v1/tmx/fr-ro.tmx.gz
+     1973 v1/tmx/it-lv.tmx.gz
+     2003 v1/tmx/it-nl.tmx.gz
+     2070 v1/tmx/it-pl.tmx.gz
+     2027 v1/tmx/it-ro.tmx.gz
+     2003 v1/tmx/lv-nl.tmx.gz
+     2049 v1/tmx/lv-pl.tmx.gz
+     2070 v1/tmx/lv-ro.tmx.gz
+     2107 v1/tmx/nl-pl.tmx.gz
+     2112 v1/tmx/nl-ro.tmx.gz
+     2185 v1/tmx/pl-ro.tmx.gz
      1450 v1/xml/10_done.zip
      1449 v1/xml/11_done.zip
      1449 v1/xml/12_done.zip

@@ -16,4 +16,4 @@ COPYRIGHT = see <a href="https://tatoeba.org/eng/terms_of_use">https://tatoeba.o
 # EXTRAHTML is code which will be put just after the 'Download' header
 
 SRCHTML=This is a collection of translated sentences from <a href="http://tatoeba.org/">Tatoeba</a>
-EXTRAHTML=<p>License: <a href="https://creativecommons.org/licenses/by/2.0/fr/">CC–BY 2.0 FR</a></p>
+EXTRAHTML=<p>License: <a href="https://creativecommons.org/licenses/by/2.0/fr/">CC-BY 2.0 FR</a></p>

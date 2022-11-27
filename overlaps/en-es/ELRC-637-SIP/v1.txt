@@ -59,6 +59,8 @@ ELRC-4992-Customer_Support_MT	v1	1350	1/514	.19
 ELRC-5067-SciPar	v1	354460	1/514	.19
 ELRC-5190-Cyber_MT_Test	v1	1004	1/514	.19
 ELRC-832-CHARTER_VALUES_CITIZ	v1	56	1/514	.19
+ELRC-844-PAeSI__Administratio	v1	298	1/514	.19
+ELRC-863-government_websites_	v1	20968	4/514	.77
 ELRC-antibiotic	v1	936	1/514	.19
 ELRC-Arquitectura_2007	v1	114	1/514	.19
 ELRC-Artigos_visitportuga	v1	1228	1/514	.19

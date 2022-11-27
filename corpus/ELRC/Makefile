@@ -11,7 +11,7 @@ ELRC_MTDATA     := elrc_share.tsv
 ELRC_MTDATA_URL := ${MTDATA_INDEX}/${ELRC_MTDATA}
 
 ifneq ($(wildcard ${ELRC_MTDATA}),)
-  ELRC_CORPORA     := ${shell cut -f3 ${ELRC_MTDATA} | sort -u}
+  ELRC_CORPORA     := ${shell cut -f3 ${ELRC_MTDATA} | sort -u -n}
   ELRC_CORPUS      ?= ${firstword ${ELRC_CORPORA}}
   ELRC_NAME        := ${shell grep '	${ELRC_CORPUS}	' ${ELRC_MTDATA} | cut -f4 | head -1}
   ELRC_DESCRIPTION := ${shell grep '	${ELRC_CORPUS}	' ${ELRC_MTDATA} | cut -f5 | head -1}
@@ -19,7 +19,7 @@ ifneq ($(wildcard ${ELRC_MTDATA}),)
   ELRC_URL         := ${shell grep '	${ELRC_CORPUS}	' ${ELRC_MTDATA} | cut -f7 | head -1}
   ELRC_LICENSE     := ${shell grep '	${ELRC_CORPUS}	' ${ELRC_MTDATA} | cut -f8 | head -1}
 else
-  ELRC_CORPORA     := ${shell wget -O - -qq ${ELRC_MTDATA_URL} | cut -f3 | sort -u}
+  ELRC_CORPORA     := ${shell wget -O - -qq ${ELRC_MTDATA_URL} | cut -f3 | sort -u -n}
   ELRC_CORPUS      ?= ${firstword ${ELRC_CORPORA}}
   ELRC_NAME        := ${shell wget -O - -qq ${ELRC_MTDATA_URL} | grep '	${ELRC_CORPUS}	' | cut -f4 | head -1}
   ELRC_DESCRIPTION := ${shell wget -O - -qq ${ELRC_MTDATA_URL} | grep '	${ELRC_CORPUS}	' | cut -f5 | head -1}
@@ -51,15 +51,40 @@ release-all: ${ELRC_MTDATA}
 	done
 
 
-## do in reverse order
-reverse = $(if $(wordlist 2,2,$(1)),$(call reverse,$(wordlist 2,$(words $(1)),$(1))) $(firstword $(1)),$(1))
-
-release-all-reverse: ${ELRC_MTDATA}
-	@for c in $(call reverse,${ELRC_CORPORA}); do \
-	  ${MAKE} ELRC_CORPUS=$$c release; \
+## release all imported data sets
+publish-all: ${ELRC_MTDATA}
+	@for c in ${ELRC_CORPORA}; do \
+	  ${MAKE} ELRC_CORPUS=$$c publish; \
 	done
 
 
+# ## do in reverse order
+# reverse = $(if $(wordlist 2,2,$(1)),$(call reverse,$(wordlist 2,$(words $(1)),$(1))) $(firstword $(1)),$(1))
+
+# release-all-reverse: ${ELRC_MTDATA}
+# 	@for c in $(call reverse,${ELRC_CORPORA}); do \
+# 	  ${MAKE} ELRC_CORPUS=$$c release; \
+# 	done
+
+
+## make public releases on allas and the OPUS website
+publish-and-release:
+	@if [ -e ${OPUSPUB}/${CORPUSNAME} ]; then \
+	  echo "publish and release ${CORPUSNAME}"; \
+	  ${MAKE} -C ${CORPUSDIR} publish; \
+	  ${MAKE} -C ${CORPUSDIR} release; \
+	else \
+	  echo "nothing to release yet for ${CORPUSNAME}"; \
+	fi
+
+## make public releases on allas and the OPUS website
+publish:
+	@if [ -e ${OPUSPUB}/${CORPUSNAME} ]; then \
+	  echo "publish ${CORPUSNAME}"; \
+	  ${MAKE} -C ${CORPUSDIR} publish; \
+	else \
+	  echo "nothing to publish for ${CORPUSNAME}"; \
+	fi
 
 ## make public releases on allas and the OPUS website
 release:

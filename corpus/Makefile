@@ -180,6 +180,22 @@ ${ALLRAW_LANGID}:
 add-yaml-files:
 	find ${OPUSRELEASE}/ -mindepth 1 -maxdepth 1 -type d -exec ${OPUSTOOLS}/info2yaml.pl {} \;
 
+redo-yaml-files:
+	find ${OPUSRELEASE}/ -mindepth 1 -maxdepth 1 -type d -exec ${OPUSTOOLS}/info2yaml.pl -b {} \;
+
+
+fix-readme-encoding:
+	find ${OPUSRELEASE}/ -name 'README' -exec ${OPUSTOOLS}/remove-unicode-chars.sh {} \;
+
+
+.PHONY: index
+index:
+	rm -f index-info.txt
+	${MAKE} index-info.txt
+
+index-info.txt:
+	find ${OPUSRELEASE}/ -name 'info.yaml' | sed 's#^${OPUSRELEASE}/##' | sort > $@
+
 add-index-files:
 	for c in ${sort ${notdir ${shell find ${OPUSRELEASE}/ -mindepth 1 -maxdepth 1 -type d }}}; do \
 	  rsync ${OPUSRELEASE}/$$c/releases.txt ${OPUSCORPORA}/$$c/releases.txt;\

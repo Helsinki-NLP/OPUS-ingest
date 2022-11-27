@@ -99,32 +99,20 @@ UDCWBREG     = ${UDCWB}/reg
 
 
 
-
-
-
-# LANGUAGES ....... sorted list of languages (2/3-letter codes possibly
-#                   with region extension); need to be subdirectories of
-#                   the source text directory! --> might have to run 
-#                   'make' in source text directory first!
+# LANGUAGES ....... sub-directories in CORPUSRAW
+#                   alternatively, sub-directories in CORPUSSRC
 #
-## TODO: not a perfect solution! 
-##       - What happens with non-standard codes?
-##       - What happens with accidentally matching files and sub-dir's?
+# TODO: check that this really corresponds to valid lang-IDs!
 
 ifndef LANGUAGES
-  LANGUAGES = $(sort $(notdir $(wildcard ${CORPUSSRC}/??)) \
-                      $(notdir $(wildcard ${CORPUSSRC}/??_??)) \
-                      $(notdir $(wildcard ${CORPUSSRC}/???)) \
-                      $(notdir ${shell if [ -e ${CORPUSRAW} ]; then \
-			find ${CORPUSRAW} -mindepth 1 -maxdepth 1 -type d -printf "%f "; fi}))
+  LANGUAGES = $(sort $(notdir ${shell if [ -e ${CORPUSRAW} ]; then \
+		find ${CORPUSRAW} -mindepth 1 -maxdepth 1 -type d -printf "%f "; fi}))
 endif
 
-#                      $(notdir $(wildcard ${CORPUSSRC}/??_????)) \
-#                      $(notdir $(wildcard ${CORPUSSRC}/??_????_??)) \
-#                      $(notdir $(wildcard ${CORPUSSRC}/???)) \
-#                      $(notdir $(wildcard ${CORPUSSRC}/???_??)) \
-#                      $(notdir $(wildcard ${CORPUSSRC}/???_????)) \
-#                      $(notdir $(wildcard ${CORPUSSRC}/???_????_??)) \
+ifeq (${LANGUAGES},)
+  LANGUAGES = $(sort $(notdir ${shell if [ -e ${CORPUSSRC} ]; then \
+		find ${CORPUSRAW} -mindepth 1 -maxdepth 1 -type d -printf "%f "; fi}))
+endif
 
 
 
@@ -196,6 +184,12 @@ PARALLEL_ARGS := --max-procs 25% \
 PARALLEL := ${shell if [ `which parallel 2>/dev/null | wc -l` -gt 0 ]; then echo 'parallel ${PARALLEL_ARGS}'; fi }
 
 
+## convenient function to reverse a list
+reverse = $(if $(wordlist 2,2,$(1)),$(call reverse,$(wordlist 2,$(words $(1)),$(1))) $(firstword $(1)),$(1))
+
+
+
+
 TOOLS       = ${OPUSHOME}/tools
 OPUSTOOLS   = ${TOOLS}
 CORPUSTOOLS = ${OPUSTOOLS}/${CORPUS}
@@ -222,13 +216,13 @@ MOSESSCRIPTS    := ${MOSESHOME}/scripts
 SCRIPTS_ROOTDIR := ${MOSESSCRIPTS}
 
 
-## TODO: local compiled version of SALM!
+## TODO: locally compiled version of SALM!
+##       this will not work everywhere
 
 SALMHOME        := ${OPUSTOOLS}/SALM
 
 
-## Word alignment tools 
-## TODO: adjust to NLPL!
+## Word alignment tools (eflomal and atools from fast-align)
 
 EFLOMAL         = align.py
 ATOOLS          = atools

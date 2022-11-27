@@ -59,6 +59,8 @@ ELRC-5067-SciPar	v1	354460	1/660	.15
 ELRC-5190-Cyber_MT_Test	v1	1004	1/660	.15
 ELRC-637-SIP	v1	514	1/660	.15
 ELRC-832-CHARTER_VALUES_CITIZ	v1	56	1/660	.15
+ELRC-844-PAeSI__Administratio	v1	298	1/660	.15
+ELRC-863-government_websites_	v1	20968	1/660	.15
 ELRC-antibiotic	v1	936	1/660	.15
 ELRC-Arquitectura_2007	v1	114	1/660	.15
 ELRC-Artigos_visitportuga	v1	1228	1/660	.15

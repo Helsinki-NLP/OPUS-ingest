@@ -1055,6 +1055,10 @@ ${SMTFIX}: ${CORPUSRELEASE}/smt/%.fix: ${CORPUSWORDALIGN}/%
 
 .PHONY: info lang_info ces_info txt_info tmx_info
 info: lang_info ces_info txt_info tmx_info
+	${MAKE} ${CORPUSRELEASE}.info
+	${MAKE} ${OPUSRELEASE}/${CORPUS}/info.txt
+
+info-files: lang_info ces_info txt_info tmx_info
 
 lang_info: ${LANG_INFO}
 
@@ -1146,9 +1150,9 @@ ${TMX_INFO}: ${CORPUSRELEASE}/info/%.tmx.info: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	chmod 644 $@
 
 ## TODO: is it enough to check whether the info dir exists?
-${OPUSRELEASE}/%.info:
+${OPUSRELEASE}/%.info: ${OPUSRELEASE}/%
 	if [ -e $@ ]; then cp $@ $@.$(shell date +%F); fi
-	${MAKE} info
+	${MAKE} info-files
 	if [ -d $(@:.info=/info) ]; then \
 	  cd ${OPUSRELEASE}; \
 	  find ${patsubst ${OPUSRELEASE}/%.info,%/info,$@} -name '*.info' | sort |\
@@ -1158,7 +1162,7 @@ ${OPUSRELEASE}/%.info:
 ## TODO: do we need to download the old info file first?
 ${OPUSRELEASE}/${CORPUS}/info.txt: $(wildcard ${OPUSRELEASE}/${CORPUS}/*.info)
 	cat ${OPUSRELEASE}/${CORPUS}/*.info > $@.new
-	cat $@ $@.new | sort > $@.merged
+	cat $@ $@.new | sort -k1,1 -k2,2n -t: -u > $@.merged
 	mv $@.merged $@
 	rm -f $@.new
 
