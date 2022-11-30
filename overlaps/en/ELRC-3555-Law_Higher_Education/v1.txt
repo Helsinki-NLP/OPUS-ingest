@@ -243,6 +243,7 @@ ELRC-2024-EUIPO_2017	v1	17249	1/2976	.03
 ELRC-2025-EUIPO_2017	v1	17119	1/2976	.03
 ELRC-2026-EUIPO_2017	v1	16951	1/2976	.03
 ELRC-2032-www.turku.fi	v1	17326	0/2976	0
+ELRC-2033-www.turku.fi	v1	9565	0/2976	0
 ELRC-2036-www.vero.fi	v1	21302	5/2976	.16
 ELRC-2037-www.vero.fi	v1	22339	7/2976	.23
 ELRC-2328-Agriculture_Forestry	v1	1539	0/2976	0
@@ -656,6 +657,7 @@ ELRC-5124-Government_Ireland_P	v1	613	8/2976	.26
 ELRC-5125-IRC_Conditions_award	v1	456	8/2976	.26
 ELRC-5126-IRC_Early_Career	v1	552	8/2976	.26
 ELRC-5128-Celebrating_Our_Livi	v1	18	0/2976	0
+ELRC-5129-GEnCaTA_a	v1	38135	0/2976	0
 ELRC-5135-Preasritis__Choliste	v1	182	5/2976	.16
 ELRC-5136-Tuarasclacha_Bliantl	v1	1307	6/2976	.20
 ELRC-5137-Preasritis__Choliste	v1	111	0/2976	0
@@ -760,6 +762,7 @@ ELRC-730-www.norden.org	v1	36524	7/2976	.23
 ELRC-734-www.norden.org	v1	37799	7/2976	.23
 ELRC-735-www.norden.org	v1	42816	7/2976	.23
 ELRC-744-Finnish_Information_	v1	6873	0/2976	0
+ELRC-745-Convention_against_T	v1	205	7/2976	.23
 ELRC-768-corpora_State_Admini	v1	49864	8/2976	.26
 ELRC-770-National_Security_De	v1	864	0/2976	0
 ELRC-774-Presidency	v1	16365	0/2976	0
@@ -782,7 +785,8 @@ ELRC-813-Polish_Foreign_Affai	v1	3564	5/2976	.16
 ELRC-816-ANR_containing_major	v1	10302	4/2976	.13
 ELRC-817-Swedish_Audit_Riksre	v1	28527	5/2976	.16
 ELRC-823-Swedish_Swedish_Crim	v1	1503	0/2976	0
-ELRC-825-Croatian_Swedish_Cri	v1	906	ELRC-829-Swedish_Migration_Bo	v1	8092	7/2976	.23
+ELRC-825-Croatian_Swedish_Cri	v1	906	0/2976	0
+ELRC-829-Swedish_Migration_Bo	v1	8092	7/2976	.23
 ELRC-830-Swedish_Economic_Reg	v1	902	0/2976	0
 ELRC-832-CHARTER_VALUES_CITIZ	v1	90	0/2976	0
 ELRC-837-Legal	v1	1291	8/2976	.26
@@ -948,6 +952,7 @@ GlobalVoices	v2018q4	1154583	11/2976	.36
 GNOME	v1	5352	0/2976	0
 GoURMET	v1	1541708	12/2976	.40
 hrenWaC	v1	96103	8/2976	.26
+IITB	v2.0	1105433	17/2976	.57
 infopankki	v1	21778	3/2976	.10
 Joshua-IPC	v1	198174	14/2976	.47
 JRC-Acquis	v3.0	1923776	36/2976	1.20

@@ -657,6 +657,7 @@ ELRC-5124-Government_Ireland_P	v1	613	1/16875	0
 ELRC-5125-IRC_Conditions_award	v1	456	2/16875	.01
 ELRC-5126-IRC_Early_Career	v1	552	3/16875	.01
 ELRC-5128-Celebrating_Our_Livi	v1	18	0/16875	0
+ELRC-5129-GEnCaTA_a	v1	38135	17/16875	.10
 ELRC-5135-Preasritis__Choliste	v1	182	0/16875	0
 ELRC-5136-Tuarasclacha_Bliantl	v1	1307	0/16875	0
 ELRC-5137-Preasritis__Choliste	v1	111	0/16875	0
@@ -762,6 +763,7 @@ ELRC-734-www.norden.org	v1	37799	10/16875	.05
 ELRC-735-www.norden.org	v1	42816	9/16875	.05
 ELRC-744-Finnish_Information_	v1	6873	0/16875	0
 ELRC-745-Convention_against_T	v1	205	0/16875	0
+ELRC-768-corpora_State_Admini	v1	49864	1/16875	0
 ELRC-770-National_Security_De	v1	864	2/16875	.01
 ELRC-774-Presidency	v1	16365	14/16875	.08
 ELRC-775-by_Presidency_Counci	v1	4536	0/16875	0
@@ -950,6 +952,7 @@ GlobalVoices	v2018q4	1154583	46/16875	.27
 GNOME	v1	5352	23/16875	.13
 GoURMET	v1	1541708	11/16875	.06
 hrenWaC	v1	96103	0/16875	0
+IITB	v2.0	1105433	176/16875	1.04
 infopankki	v1	21778	10/16875	.05
 Joshua-IPC	v1	198174	73/16875	.43
 JRC-Acquis	v3.0	1923776	255/16875	1.51

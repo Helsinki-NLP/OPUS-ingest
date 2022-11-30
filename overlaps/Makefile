@@ -1,6 +1,9 @@
 #---------------------------------------------------------------------
 # compute overlaps between corpora
 #---------------------------------------------------------------------
+#
+# TODO: better recipes for updating counts with new incoming corpora
+#
 
 SHELL := bash
 
@@ -57,19 +60,29 @@ all-mono-overlaps: ${OPUS_MONO_OVERLAPS}
 mono-overlaps: ${OPUSRELEASE}/${CORPUS}/${VERSION}/overlaps/${LANGUAGE}.tsv
 
 
-job-opensubs-puhti:
-	${MAKE} HPC_MEM=128g HPC_CORES=16 CORES=4 THREADS=4 HPC_DISK=500 opensubs.submit
 
-opensubs:
-	for l in pl pt_br pt ro ru si sk sl sq sr sv ta te th tl tr uk ur vi ze_en ze_zh zh_cn zh_tw; do \
-	  make LANGPAIR=en-$$l all-para; \
-	  find ${TMPDIR} -name '*.dedup.*' -delete; \
+## all bitexts with English in either source or target language
+## (only if the directory does not exist yet)
+## --> enable updating with new counts for new corpora
+
+job-en-bitexts-puhti:
+	${MAKE} HPC_MEM=128g HPC_CORES=16 CORES=4 THREADS=4 HPC_DISK=500 en-bitexts.submit
+
+en-bitexts:
+	for l in `find ${OPUSDATASETS} -name '*-en.tmx.gz' -printf "%f\n" | sed 's/\-en\.tmx.gz//' | grep -v '\.' | sort -u`; do \
+	  if [ ! -e $$l-en ]; then \
+	    make LANGPAIR=$$l-en all-para; \
+	    find ${TMPDIR} -name '*.dedup.*' -delete; \
+	  fi \
+	done
+	for l in `find ${OPUSDATASETS} -name 'en-*.tmx.gz' -printf "%f\n" | sed 's/\.tmx.gz//;s/^en-//;' | grep -v '\.' | sort -u`; do \
+	  if [ ! -e en-$$l ]; then \
+	    make LANGPAIR=en-$$l all-para; \
+	    find ${TMPDIR} -name '*.dedup.*' -delete; \
+	  fi \
 	done
 
-fixmono:
-	for l in es fr fi ga ru de en; do \
-	  make LANGUAGE=$$l all-mono-overlaps; \
-	done
+
 
 
 ## bitexts

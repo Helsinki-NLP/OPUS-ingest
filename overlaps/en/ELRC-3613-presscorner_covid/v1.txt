@@ -618,7 +618,7 @@ ELRC-474-Natolin_Centre	v1	2024	1/7029	.01
 ELRC-475-Polish_Food	v1	3026	0/7029	0
 ELRC-477-Health_Fund	v1	5656	1/7029	.01
 ELRC-478-Polish_Food_4	v1	4442	1/7029	.01
-ELRC-479-Polish_Food_2	v1	2961	0/7029	0
+ELRC-479-Polish_Food_2	v1	2961	1/7029	.01
 ELRC-480-Polish_Food_3	v1	2809	2/7029	.02
 ELRC-481-Polish_Foreign_Affai	v1	3651	1/7029	.01
 ELRC-482-Polish_Foreign_Affai	v1	2406	3/7029	.04
@@ -634,7 +634,8 @@ ELRC-491-Romanian_literature	v1	5525	1/7029	.01
 ELRC-492-Romanian_Wikipedia	v1	133966	0/7029	0
 ELRC-493-Romanian_news	v1	98101	0/7029	0
 ELRC-494-forbrukereuropa.no	v1	14185	1/7029	.01
-ELRC-496-Convention_transfer_	v1	116	ELRC-4992-Customer_Support_MT	v1	1371	2/7029	.02
+ELRC-496-Convention_transfer_	v1	116	1/7029	.01
+ELRC-4992-Customer_Support_MT	v1	1371	2/7029	.02
 ELRC-4993-Basque_Wikinews_MT	v1	1784	0/7029	0
 ELRC-4994-Latvian_Financial_MT	v1	1999	1/7029	.01
 ELRC-4995-Finnish_Financial_MT	v1	1001	0/7029	0
@@ -656,6 +657,7 @@ ELRC-5124-Government_Ireland_P	v1	613	2/7029	.02
 ELRC-5125-IRC_Conditions_award	v1	456	1/7029	.01
 ELRC-5126-IRC_Early_Career	v1	552	1/7029	.01
 ELRC-5128-Celebrating_Our_Livi	v1	18	0/7029	0
+ELRC-5129-GEnCaTA_a	v1	38135	2/7029	.02
 ELRC-5135-Preasritis__Choliste	v1	182	1/7029	.01
 ELRC-5136-Tuarasclacha_Bliantl	v1	1307	0/7029	0
 ELRC-5137-Preasritis__Choliste	v1	111	0/7029	0
@@ -775,6 +777,7 @@ ELRC-793-POLISH_PHRASE_BOOK	v1	1727	0/7029	0
 ELRC-798-Financial_Stability_	v1	2141	1/7029	.01
 ELRC-799-Financial_Stability_	v1	3603	1/7029	.01
 ELRC-801-Coimisineir_Teanga_R	v1	1989	1/7029	.01
+ELRC-802-Swedish_Competition_	v1	9252	1/7029	.01
 ELRC-804-UCD_Bord_na	v1	229	0/7029	0
 ELRC-805-Udras_na_Gaeltachta	v1	1374	1/7029	.01
 ELRC-807-Malta_Government_Gaz	v1	3426	1/7029	.01
@@ -949,6 +952,7 @@ GlobalVoices	v2018q4	1154583	8/7029	.11
 GNOME	v1	5352	0/7029	0
 GoURMET	v1	1541708	13/7029	.18
 hrenWaC	v1	96103	1/7029	.01
+IITB	v2.0	1105433	7/7029	.09
 infopankki	v1	21778	1/7029	.01
 Joshua-IPC	v1	198174	3/7029	.04
 JRC-Acquis	v3.0	1923776	7/7029	.09

@@ -58,13 +58,13 @@ publish-all: ${ELRC_MTDATA}
 	done
 
 
-# ## do in reverse order
-# reverse = $(if $(wordlist 2,2,$(1)),$(call reverse,$(wordlist 2,$(words $(1)),$(1))) $(firstword $(1)),$(1))
+## do in reverse order
+reverse = $(if $(wordlist 2,2,$(1)),$(call reverse,$(wordlist 2,$(words $(1)),$(1))) $(firstword $(1)),$(1))
 
-# release-all-reverse: ${ELRC_MTDATA}
-# 	@for c in $(call reverse,${ELRC_CORPORA}); do \
-# 	  ${MAKE} ELRC_CORPUS=$$c release; \
-# 	done
+release-all-reverse: ${ELRC_MTDATA}
+	@for c in $(call reverse,${ELRC_CORPORA}); do \
+	  ${MAKE} ELRC_CORPUS=$$c release; \
+	done
 
 
 ## make public releases on allas and the OPUS website

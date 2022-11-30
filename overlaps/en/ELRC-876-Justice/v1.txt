@@ -632,7 +632,8 @@ ELRC-488-Justice_Slovak	v1	2719	0/231	0
 ELRC-489-Secretariat_General_	v1	55912	4/231	1.73
 ELRC-490-Secretariat_General_	v1	61046	4/231	1.73
 ELRC-491-Romanian_literature	v1	5525	0/231	0
-ELRC-492-Romanian_Wikipedia	v1	ELRC-493-Romanian_news	v1	98101	0/231	0
+ELRC-492-Romanian_Wikipedia	v1	133966	0/231	0
+ELRC-493-Romanian_news	v1	98101	0/231	0
 ELRC-494-forbrukereuropa.no	v1	14185	4/231	1.73
 ELRC-496-Convention_transfer_	v1	116	4/231	1.73
 ELRC-4992-Customer_Support_MT	v1	1371	4/231	1.73
@@ -657,6 +658,7 @@ ELRC-5124-Government_Ireland_P	v1	613	4/231	1.73
 ELRC-5125-IRC_Conditions_award	v1	456	4/231	1.73
 ELRC-5126-IRC_Early_Career	v1	552	4/231	1.73
 ELRC-5128-Celebrating_Our_Livi	v1	18	0/231	0
+ELRC-5129-GEnCaTA_a	v1	38135	0/231	0
 ELRC-5135-Preasritis__Choliste	v1	182	4/231	1.73
 ELRC-5136-Tuarasclacha_Bliantl	v1	1307	3/231	1.29
 ELRC-5137-Preasritis__Choliste	v1	111	0/231	0
@@ -858,6 +860,7 @@ ELRC-947-Polish_Aid	v1	4581	4/231	1.73
 ELRC-949-Polish_Tourism_Organ	v1	4354	4/231	1.73
 ELRC-951-US_EMBASSY_CONSULATE	v1	3276	4/231	1.73
 ELRC-953-Centre_Nuclear_Resea	v1	2720	2/231	.86
+ELRC-956-Central_Statistical	v1	2649	4/231	1.73
 ELRC-958-Centre_Research_Deve	v1	1775	1/231	.43
 ELRC-960-Commissioner_Human_R	v1	1396	4/231	1.73
 ELRC-962-Regional_Development	v1	1354	4/231	1.73
@@ -891,6 +894,7 @@ ELRC-Danish_Higher	v1	10784	4/231	1.73
 ELRC-EC_EUROPA	v1	3849	0/231	0
 ELRC-EMEA	v1	806234	4/231	1.73
 ELRC-EUIPO_2017	v1	31587	4/231	1.73
+ELRC-EUIPO_law	v1	485617	4/231	1.73
 ELRC-EUIPO_list	v1	48709	0/231	0
 ELRC-EU_publications	v1	13908	4/231	1.73
 ELRC-EUR_LEX	v1	24126	1/231	.43
@@ -948,6 +952,7 @@ GlobalVoices	v2018q4	1154583	4/231	1.73
 GNOME	v1	5352	0/231	0
 GoURMET	v1	1541708	5/231	2.16
 hrenWaC	v1	96103	4/231	1.73
+IITB	v2.0	1105433	4/231	1.73
 infopankki	v1	21778	2/231	.86
 Joshua-IPC	v1	198174	4/231	1.73
 JRC-Acquis	v3.0	1923776	4/231	1.73

@@ -657,6 +657,7 @@ ELRC-5124-Government_Ireland_P	v1	613	6/2360	.25
 ELRC-5125-IRC_Conditions_award	v1	456	7/2360	.29
 ELRC-5126-IRC_Early_Career	v1	552	7/2360	.29
 ELRC-5128-Celebrating_Our_Livi	v1	18	0/2360	0
+ELRC-5129-GEnCaTA_a	v1	38135	7/2360	.29
 ELRC-5135-Preasritis__Choliste	v1	182	5/2360	.21
 ELRC-5136-Tuarasclacha_Bliantl	v1	1307	5/2360	.21
 ELRC-5137-Preasritis__Choliste	v1	111	0/2360	0
@@ -788,6 +789,7 @@ ELRC-825-Croatian_Swedish_Cri	v1	906	0/2360	0
 ELRC-829-Swedish_Migration_Bo	v1	8092	6/2360	.25
 ELRC-830-Swedish_Economic_Reg	v1	902	1/2360	.04
 ELRC-832-CHARTER_VALUES_CITIZ	v1	90	0/2360	0
+ELRC-837-Legal	v1	1291	7/2360	.29
 ELRC-841-Employment_Poland_20	v1	2712	7/2360	.29
 ELRC-842-Quarterly_Reports_Pa	v1	12537	7/2360	.29
 ELRC-843-collection_reports_G	v1	14622	6/2360	.25
@@ -950,6 +952,7 @@ GlobalVoices	v2018q4	1154583	15/2360	.63
 GNOME	v1	5352	3/2360	.12
 GoURMET	v1	1541708	10/2360	.42
 hrenWaC	v1	96103	8/2360	.33
+IITB	v2.0	1105433	41/2360	1.73
 infopankki	v1	21778	5/2360	.21
 Joshua-IPC	v1	198174	14/2360	.59
 JRC-Acquis	v3.0	1923776	44/2360	1.86

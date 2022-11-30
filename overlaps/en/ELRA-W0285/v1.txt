@@ -574,7 +574,8 @@ ELRC-397-Danish_Higher_Educat	v1	3241	1/641	.15
 ELRC-399-International_Agreem	v1	40932	1/641	.15
 ELRC-401-Swedish_Labour_Part2	v1	1572	0/641	0
 ELRC-402-MFA_Latvia	v1	7204	0/641	0
-ELRC-403-Rights_Arrested	v1	ELRC-405-President_Lithuania	v1	9174	0/641	0
+ELRC-403-Rights_Arrested	v1	23	0/641	0
+ELRC-405-President_Lithuania	v1	9174	0/641	0
 ELRC-406-Swedish_Labour_Part1	v1	1100	0/641	0
 ELRC-408-transport	v1	3230	0/641	0
 ELRC-40-Information_Portal_C	v1	1836	0/641	0
@@ -656,6 +657,7 @@ ELRC-5124-Government_Ireland_P	v1	613	0/641	0
 ELRC-5125-IRC_Conditions_award	v1	456	0/641	0
 ELRC-5126-IRC_Early_Career	v1	552	0/641	0
 ELRC-5128-Celebrating_Our_Livi	v1	18	0/641	0
+ELRC-5129-GEnCaTA_a	v1	38135	0/641	0
 ELRC-5135-Preasritis__Choliste	v1	182	0/641	0
 ELRC-5136-Tuarasclacha_Bliantl	v1	1307	0/641	0
 ELRC-5137-Preasritis__Choliste	v1	111	0/641	0
@@ -801,6 +803,7 @@ ELRC-84-Dutch_Government	v1	6506	0/641	0
 ELRC-850-www.dst.dk	v1	22760	0/641	0
 ELRC-851-www.vikingeskibsmuse	v1	12106	0/641	0
 ELRC-852-www.dma.dk	v1	2986	0/641	0
+ELRC-853-Portuguese_Constitut	v1	1502	0/641	0
 ELRC-854-www.geus.dk	v1	1656	0/641	0
 ELRC-856-naturstyrelsen.dk	v1	3146	0/641	0
 ELRC-857-www.trm.dk	v1	3011	0/641	0
@@ -830,6 +833,7 @@ ELRC-895-Royal_Danish_Library	v1	1540	0/641	0
 ELRC-897-Denmark_Space_Instit	v1	1944	0/641	0
 ELRC-898-Science_Centre	v1	2265	0/641	0
 ELRC-899-Danish_FSA	v1	2008	1/641	.15
+ELRC-900-Danish_Working_Envir	v1	1160	0/641	0
 ELRC-901-Denmark_Prosecution_	v1	1122	1/641	.15
 ELRC-904-uk.fm.dk	v1	6700	0/641	0
 ELRC-905-spillemyndigheden.dk	v1	3341	2/641	.31
@@ -948,6 +952,7 @@ GlobalVoices	v2018q4	1154583	0/641	0
 GNOME	v1	5352	0/641	0
 GoURMET	v1	1541708	1/641	.15
 hrenWaC	v1	96103	0/641	0
+IITB	v2.0	1105433	3/641	.46
 infopankki	v1	21778	1/641	.15
 Joshua-IPC	v1	198174	1/641	.15
 JRC-Acquis	v3.0	1923776	5/641	.78

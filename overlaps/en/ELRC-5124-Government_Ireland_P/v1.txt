@@ -227,6 +227,7 @@ ELRC-1981-EQF_Referencing_Repo	v1	2088	15/613	2.44
 ELRC-1984-Hellenic_Gaming_Comm	v1	3603	14/613	2.28
 ELRC-1986-Constitution_Greece	v1	1030	9/613	1.46
 ELRC-1992-Rural_Development_Pr	v1	4274	15/613	2.44
+ELRC-2012-EUIPO_2017	v1	15922	0/613	0
 ELRC-2013-EUIPO_2017	v1	17260	1/613	.16
 ELRC-2014-EUIPO_2017	v1	17046	1/613	.16
 ELRC-2015-EUIPO_2017	v1	16447	1/613	.16
@@ -249,7 +250,8 @@ ELRC-2328-Agriculture_Forestry	v1	1539	0/613	0
 ELRC-2404-Czech_Supreme_Audit	v1	413	7/613	1.14
 ELRC-2405-Czech_Supreme_Audit	v1	2914	12/613	1.95
 ELRC-2406-Czech_Supreme_Audit	v1	4781	3/613	.48
-ELRC-2407-Czech_Supreme_Audit	v1	233	ELRC-2410-Portal_oficial_turis	v1	185841	22/613	3.58
+ELRC-2407-Czech_Supreme_Audit	v1	233	0/613	0
+ELRC-2410-Portal_oficial_turis	v1	185841	22/613	3.58
 ELRC-2414-Tuarasclaca_Bliantla	v1	3120	5/613	.81
 ELRC-2420-Press_Releases_Depar	v1	420	0/613	0
 ELRC-2423-Preasritis_Ollscoil_	v1	87	0/613	0
@@ -655,6 +657,7 @@ ELRC-5123-2020_Annual_Report	v1	894	4/613	.65
 ELRC-5125-IRC_Conditions_award	v1	456	53/613	8.64
 ELRC-5126-IRC_Early_Career	v1	552	56/613	9.13
 ELRC-5128-Celebrating_Our_Livi	v1	18	0/613	0
+ELRC-5129-GEnCaTA_a	v1	38135	0/613	0
 ELRC-5135-Preasritis__Choliste	v1	182	5/613	.81
 ELRC-5136-Tuarasclacha_Bliantl	v1	1307	11/613	1.79
 ELRC-5137-Preasritis__Choliste	v1	111	0/613	0
@@ -949,6 +952,7 @@ GlobalVoices	v2018q4	1154583	22/613	3.58
 GNOME	v1	5352	2/613	.32
 GoURMET	v1	1541708	51/613	8.31
 hrenWaC	v1	96103	15/613	2.44
+IITB	v2.0	1105433	29/613	4.73
 infopankki	v1	21778	3/613	.48
 Joshua-IPC	v1	198174	18/613	2.93
 JRC-Acquis	v3.0	1923776	107/613	17.45

@@ -310,7 +310,8 @@ ELRC-2612-Artigos_visitportuga	v1	1619	0/9513	0
 ELRC-2614-Localidades_2007	v1	1825	0/9513	0
 ELRC-2616-Museus_2007	v1	1175	7/9513	.07
 ELRC-2617-Museus_2007_Part2	v1	6	0/9513	0
-ELRC-2622-Arquitectura_2007	v1	ELRC-2623-Patrimnio_Aores_2006	v1	65	0/9513	0
+ELRC-2622-Arquitectura_2007	v1	153	0/9513	0
+ELRC-2623-Patrimnio_Aores_2006	v1	65	0/9513	0
 ELRC-2638-monumentos_2007	v1	3025	0/9513	0
 ELRC-2639-Parques_e_reservas	v1	289	0/9513	0
 ELRC-2641-Praias_2007	v1	734	0/9513	0
@@ -539,6 +540,7 @@ ELRC-3577-EUR_LEX_covid	v1	22601	8/9513	.08
 ELRC-3578-EUR_LEX_covid	v1	22011	8/9513	.08
 ELRC-3597-presscorner_covid	v1	6578	1/9513	.01
 ELRC-3598-presscorner_covid	v1	15	0/9513	0
+ELRC-3599-presscorner_covid	v1	6709	0/9513	0
 ELRC-3600-presscorner_covid	v1	6711	1/9513	.01
 ELRC-3601-presscorner_covid	v1	1673	0/9513	0
 ELRC-3602-presscorner_covid	v1	6638	1/9513	.01
@@ -568,6 +570,7 @@ ELRC-386-Statens_Vegvesen	v1	1637	37/9513	.38
 ELRC-391-Bulgarian_strategic_	v1	2139	21/9513	.22
 ELRC-393-Estonian_Cabinet_Min	v1	11121	13/9513	.13
 ELRC-394-Danish_Higher_Educat	v1	3049	10/9513	.10
+ELRC-396-Foreign_Affairs_Norw	v1	669717	330/9513	3.46
 ELRC-397-Danish_Higher_Educat	v1	3241	26/9513	.27
 ELRC-399-International_Agreem	v1	40932	32/9513	.33
 ELRC-401-Swedish_Labour_Part2	v1	1572	4/9513	.04
@@ -654,6 +657,7 @@ ELRC-5124-Government_Ireland_P	v1	613	42/9513	.44
 ELRC-5125-IRC_Conditions_award	v1	456	43/9513	.45
 ELRC-5126-IRC_Early_Career	v1	552	42/9513	.44
 ELRC-5128-Celebrating_Our_Livi	v1	18	0/9513	0
+ELRC-5129-GEnCaTA_a	v1	38135	17/9513	.17
 ELRC-5135-Preasritis__Choliste	v1	182	5/9513	.05
 ELRC-5136-Tuarasclacha_Bliantl	v1	1307	28/9513	.29
 ELRC-5137-Preasritis__Choliste	v1	111	0/9513	0
@@ -948,6 +952,7 @@ GlobalVoices	v2018q4	1154583	91/9513	.95
 GNOME	v1	5352	26/9513	.27
 GoURMET	v1	1541708	87/9513	.91
 hrenWaC	v1	96103	18/9513	.18
+IITB	v2.0	1105433	362/9513	3.80
 infopankki	v1	21778	16/9513	.16
 Joshua-IPC	v1	198174	103/9513	1.08
 JRC-Acquis	v3.0	1923776	525/9513	5.51
@@ -989,6 +994,7 @@ Tatoeba	v2	407821	7/9513	.07
 TED2013	v1.1	192310	225/9513	2.36
 TED2020	v1	436417	11/9513	.11
 TedTalks	v1	81979	4/9513	.04
+TEP	v1	521471	6/9513	.06
 tico-19	v2020-10-28	3344	0/9513	0
 TildeMODEL	v2018	5686357	664/9513	6.97
 Ubuntu	v14.10	3	0/9513	0
