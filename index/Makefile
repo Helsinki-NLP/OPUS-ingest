@@ -35,14 +35,41 @@ ALL_MONO_DONE   := $(patsubst ${INDEX_TMPDIR}/%.dedup,done/%.done,${ALL_MONO_DED
 .PHONY: all
 all: ${LANGUAGE}.sent2id.db
 
+.PHONY: dedup
+dedup: ${LANGUAGE}.dedup.gz
+
+
+.PHONY: upload
+upload:
+	which a-get
+	swift upload --changed --skip-identical --use-slo --segment-size 5G \
+		OPUS-index ${LANGUAGE}.dedup.gz ${LANGUAGE}.*.db
+	swift list OPUS-index | grep '\.dedup.gz$$' | sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' > index.txt
+	swift list OPUS-index | grep '\.db$$'       | sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' >> index.txt
+	find done -name '${LANGUAGE}.done' | xargs git add
+
+.PHONY: upload-all
+upload-all:
+	which a-get
+	swift upload --changed --skip-identical --use-slo --segment-size 5G \
+		OPUS-index *.dedup.gz *.db
+	swift list OPUS-index | grep '\.dedup.gz$$' | sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' > index.txt
+	swift list OPUS-index | grep '\.db$$'       | sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' >> index.txt
+	find done -name '*.done' | xargs git add
+
+
 .PHONY: job-puhti
 job-puhti:
 	${MAKE} HPC_MEM=16g HPC_CORES=8 CORES=4 THREADS=4 HPC_DISK=1000 all.submit
 
+.PHONY: job-puhti
+dedup-job-puhti:
+	${MAKE} HPC_MEM=16g HPC_CORES=8 CORES=4 THREADS=4 HPC_DISK=1000 dedup.submit
 
 
-.PHONY: dedup
-dedup: ${ALL_MONO_DEDUP}
+
+
+
 
 ## merge all deduplicated files
 ${LANGUAGE}.dedup.gz: ${ALL_MONO_DONE}
@@ -59,6 +86,9 @@ ${LANGUAGE}.dedup.gz: ${ALL_MONO_DONE}
 ## create MCDB index databases
 %.sent2id.db: %.dedup.gz
 	${GZIP} -cd $< | ./add2mcdb.pl $@
+
+%.id2sent.db: %.dedup.gz
+	${GZIP} -cd $< | ./add2index.pl $@
 
 ## download monolingual corpus and de-duplicate
 ${INDEX_TMPDIR}/%.dedup:

@@ -1,0 +1,14 @@
+https://object.pouta.csc.fi/OPUS-index/aa.dedup.gz
+https://object.pouta.csc.fi/OPUS-index/fi.dedup.gz
+https://object.pouta.csc.fi/OPUS-index/ga.dedup.gz
+https://object.pouta.csc.fi/OPUS-index/nds.dedup.gz
+https://object.pouta.csc.fi/OPUS-index/sv.dedup.gz
+https://object.pouta.csc.fi/OPUS-index/aa.id2sent.db
+https://object.pouta.csc.fi/OPUS-index/aa.sent2id.db
+https://object.pouta.csc.fi/OPUS-index/fi.id2sent.db
+https://object.pouta.csc.fi/OPUS-index/fi.sent2id.db
+https://object.pouta.csc.fi/OPUS-index/ga.id2sent.db
+https://object.pouta.csc.fi/OPUS-index/ga.sent2id.db
+https://object.pouta.csc.fi/OPUS-index/nds.id2sent.db
+https://object.pouta.csc.fi/OPUS-index/nds.sent2id.db
+https://object.pouta.csc.fi/OPUS-index/sv.sent2id.db

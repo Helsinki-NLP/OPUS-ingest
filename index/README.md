@@ -26,6 +26,21 @@ To run this on puhti as a SLURM job:
 make LANGUAGE=de job-puhti
 ```
 
+There is also a script to create DB files for looking up sentences in a selected language (e.g. German) by their index. You can create them by running
+
+```
+make de.id2sent.db
+```
+
+testing the lookup function is possible by running the `test_index.pl` script:
+
+```
+./test_index.pl de.id2sent.db 10000 5
+```
+
+This will print 5 sentences starting with index 10000. The index arguments are optional and default is starting at index 100 and printing 10 sentences.
+
+Ready-made index files and de-duplicated data sets are available from allas. Download links are listed in [index.txt](index.txt).
 
 
 ## Implementation
