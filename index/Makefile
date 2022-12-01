@@ -42,8 +42,7 @@ dedup: ${LANGUAGE}.dedup.gz
 .PHONY: upload
 upload:
 	which a-get
-	swift upload --changed --skip-identical --use-slo --segment-size 5G \
-		OPUS-index ${LANGUAGE}.dedup.gz ${LANGUAGE}.*.db
+	swift upload --use-slo --segment-size 5G OPUS-index ${LANGUAGE}.dedup.gz ${LANGUAGE}.*.db
 	swift list OPUS-index | grep '\.dedup.gz$$' | sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' > index.txt
 	swift list OPUS-index | grep '\.db$$'       | sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' >> index.txt
 	find done -name '${LANGUAGE}.done' | xargs git add
@@ -51,8 +50,7 @@ upload:
 .PHONY: upload-all
 upload-all:
 	which a-get
-	swift upload --changed --skip-identical --use-slo --segment-size 5G \
-		OPUS-index *.dedup.gz *.db
+	-swift upload --use-slo --segment-size 5G OPUS-index *.dedup.gz *.db
 	swift list OPUS-index | grep '\.dedup.gz$$' | sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' > index.txt
 	swift list OPUS-index | grep '\.db$$'       | sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' >> index.txt
 	find done -name '*.done' | xargs git add
