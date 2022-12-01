@@ -1,0 +1,5 @@
+GNOME	v1	39	0/35	0
+TED2020	v1	102	28/35	80.00
+Ubuntu	v14.10	589	0/35	0
+wikimedia	v20190628	8	0/35	0
+wikimedia	v20210402	18	0/35	0

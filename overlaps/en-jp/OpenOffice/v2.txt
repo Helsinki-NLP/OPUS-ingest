@@ -1,0 +1,3 @@
+GlobalVoices	v2015	46523	15/24112	.06
+GlobalVoices	v2017q3	55271	18/24112	.07
+GlobalVoices	v2018q4	8594	3/24112	.01

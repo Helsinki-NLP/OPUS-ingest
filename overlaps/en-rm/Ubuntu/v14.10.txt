@@ -1,0 +1,8 @@
+QED	v2.0a	1303	0/16	0
+Tatoeba	v20190709	16	0/16	0
+Tatoeba	v2020-05-31	16	0/16	0
+Tatoeba	v2020-11-09	17	0/16	0
+Tatoeba	v2021-03-10	17	0/16	0
+Tatoeba	v2021-07-22	17	0/16	0
+Tatoeba	v2022-03-03	17	0/16	0
+Tatoeba	v2	11	0/16	0

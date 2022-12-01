@@ -1,0 +1,11 @@
+GNOME	v1	32	0/69	0
+QED	v2.0a	102	0/69	0
+Tatoeba	v20190709	181	0/69	0
+Tatoeba	v2020-05-31	190	0/69	0
+Tatoeba	v2020-11-09	221	0/69	0
+Tatoeba	v2021-03-10	222	0/69	0
+Tatoeba	v2021-07-22	222	0/69	0
+Tatoeba	v2022-03-03	222	0/69	0
+Tatoeba	v2	81	0/69	0
+Ubuntu	v14.10	68	0/69	0
+wikimedia	v20210402	106	14/69	20.28

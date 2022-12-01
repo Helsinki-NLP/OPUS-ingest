@@ -1,0 +1,10 @@
+GNOME	v1	1911	0/22	0
+Tatoeba	v20190709	149	0/22	0
+Tatoeba	v2020-05-31	189	0/22	0
+Tatoeba	v2020-11-09	194	0/22	0
+Tatoeba	v2021-03-10	198	0/22	0
+Tatoeba	v2021-07-22	198	0/22	0
+Tatoeba	v2022-03-03	199	0/22	0
+Tatoeba	v2	130	0/22	0
+Ubuntu	v14.10	1222	0/22	0
+wikimedia	v20210402	52	2/22	9.09

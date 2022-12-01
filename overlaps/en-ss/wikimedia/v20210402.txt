@@ -1,0 +1,5 @@
+bible-uedin	v1	15655	0/412	0
+CCAligned	v1	22889	1/412	.24
+wikimedia	v20190628	174	60/412	14.56
+XLEnt	v1.1	2339	1/412	.24
+XLEnt	v1	2339	1/412	.24

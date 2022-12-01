@@ -1,0 +1,2 @@
+GlobalVoices	v2015	7722	6300/8710	72.33
+GlobalVoices	v2018q4	8887	8341/8710	95.76

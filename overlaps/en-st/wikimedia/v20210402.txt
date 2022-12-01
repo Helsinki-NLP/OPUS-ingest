@@ -1,0 +1,4 @@
+CCAligned	v1	905	1/166	.60
+GNOME	v1	21	0/166	0
+Ubuntu	v14.10	64	0/166	0
+wikimedia	v20190628	18	3/166	1.80

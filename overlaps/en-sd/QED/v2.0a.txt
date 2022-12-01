@@ -1,0 +1,13 @@
+CCMatrix	v1	1707303	0/1	0
+Tanzil	v1	92227	0/1	0
+Tatoeba	v20190709	4	0/1	0
+Tatoeba	v2020-05-31	4	0/1	0
+Tatoeba	v2020-11-09	5	0/1	0
+Tatoeba	v2021-03-10	5	0/1	0
+Tatoeba	v2021-07-22	5	0/1	0
+Tatoeba	v2022-03-03	5	0/1	0
+Ubuntu	v14.10	5646	0/1	0
+wikimedia	v20190628	734	0/1	0
+wikimedia	v20210402	1382	0/1	0
+XLEnt	v1.1	147436	0/1	0
+XLEnt	v1	147436	0/1	0

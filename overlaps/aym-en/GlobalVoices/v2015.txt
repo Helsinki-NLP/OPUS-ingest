@@ -1,0 +1,2 @@
+GlobalVoices	v2017q3	8710	6300/7722	81.58
+GlobalVoices	v2018q4	8887	6209/7722	80.40

@@ -1,0 +1,10 @@
+Tatoeba	v20190709	92	0/17	0
+Tatoeba	v2020-05-31	93	0/17	0
+Tatoeba	v2020-11-09	106	0/17	0
+Tatoeba	v2021-03-10	107	0/17	0
+Tatoeba	v2021-07-22	109	0/17	0
+Tatoeba	v2022-03-03	111	0/17	0
+WikiMatrix	v1	16991	0/17	0
+wikimedia	v20210402	808	8/17	47.05
+XLEnt	v1.1	24459	0/17	0
+XLEnt	v1	24459	0/17	0

@@ -1,0 +1,13 @@
+bible-uedin	v1	61626	0/235	0
+CCAligned	v1	132092	1/235	.42
+GNOME	v1	2311	0/235	0
+QED	v2.0a	184	0/235	0
+Tatoeba	v20190709	363	0/235	0
+Tatoeba	v2020-05-31	363	0/235	0
+Tatoeba	v2020-11-09	367	1/235	.42
+Tatoeba	v2021-03-10	367	1/235	.42
+Tatoeba	v2021-07-22	370	1/235	.42
+Tatoeba	v2022-03-03	370	1/235	.42
+Tatoeba	v2	19	0/235	0
+Ubuntu	v14.10	1788	0/235	0
+wikimedia	v20190628	6	1/235	.42

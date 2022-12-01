@@ -1,0 +1,10 @@
+QED	v2.0a	4	0/29	0
+Tatoeba	v20190709	15	0/29	0
+Tatoeba	v2020-05-31	26	0/29	0
+Tatoeba	v2020-11-09	27	0/29	0
+Tatoeba	v2021-03-10	27	0/29	0
+Tatoeba	v2021-07-22	27	0/29	0
+Tatoeba	v2022-03-03	27	0/29	0
+Tatoeba	v2	6	0/29	0
+Ubuntu	v14.10	50	0/29	0
+wikimedia	v20210402	62	7/29	24.13

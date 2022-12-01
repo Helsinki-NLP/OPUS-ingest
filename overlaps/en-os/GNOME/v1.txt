@@ -1,0 +1,10 @@
+Tatoeba	v20190709	57	0/61	0
+Tatoeba	v2020-05-31	57	0/61	0
+Tatoeba	v2020-11-09	58	0/61	0
+Tatoeba	v2021-03-10	58	0/61	0
+Tatoeba	v2021-07-22	58	0/61	0
+Tatoeba	v2022-03-03	58	0/61	0
+Tatoeba	v2	41	0/61	0
+Ubuntu	v14.10	972	1/61	1.63
+wikimedia	v20190628	29	0/61	0
+wikimedia	v20210402	210	0/61	0
