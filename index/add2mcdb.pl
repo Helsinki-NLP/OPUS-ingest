@@ -12,9 +12,10 @@ binmode(STDIN);
 binmode(STDOUT);
 
 my $id = 0;
-while (my $key = <>){
+while (<>){
+    chomp;
+    $dbh->insert($_, $id);
     $id++;
-    $dbh->insert($key, $id);
     print STDERR '.' if (! ($id % 50000));
     print STDERR " $id\n" if (! ($id % 2500000));
 }

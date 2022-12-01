@@ -32,7 +32,7 @@ There is also a script to create DB files for looking up sentences in a selected
 make de.id2sent.db
 ```
 
-testing the lookup function is possible by running the `test_index.pl` script:
+Testing the lookup function is possible by running the `test_index.pl` script:
 
 ```
 ./test_index.pl de.id2sent.db 10000 5
@@ -42,16 +42,25 @@ This will print 5 sentences starting with index 10000. The index arguments are o
 
 Ready-made index files and de-duplicated data sets are available from allas. Download links are listed in [index.txt](index.txt).
 
+The plain text files with de-duplicated sentences can also directly be used by the Berkeley RECNO database. For testing this, you need to unpack the `*.dedup.gz` of your choice and run `test_recno_index.pl` in the same way as the other test script.
+
+```
+gunzip de.dedup.gz
+./test_recno_index.pl de.id2sent.db 10000 5
+```
+
+
 
 ## Implementation
 
 * based on https://github.com/gstrauss/mcdb
 * Perl interface: https://metacpan.org/pod/MCDB_File
-* python interface for mcdb: https://github.com/gstrauss/mcdb (https://github.com/gstrauss/mcdb/blob/master/contrib/python-mcdb/sample.py)
+* python interface for mcdb: https://github.com/gstrauss/mcdb/blob/master/contrib/python-mcdb
 
 
-alterantive: cdb (but there is a 4gb file limit - so, doesn't work for big corpora)
+alternative: cdb (but there is a 4gb file limit - so, doesn't work for big corpora)
 
+* https://metacpan.org/pod/CDB_File
 * https://pypi.org/project/python-cdb/
 * https://pypi.org/project/pycdb/
 * https://pypi.org/project/cdbx/ (http://opensource.perlig.de/cdbx/)
