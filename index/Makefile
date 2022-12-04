@@ -33,7 +33,10 @@ ALL_MONO_DONE   := $(patsubst ${INDEX_TMPDIR}/%.dedup,done/%.done,${ALL_MONO_DED
 
 
 .PHONY: all
-all: ${LANGUAGE}.sent2id.db
+all: ${LANGUAGE}.counts ${LANGUAGE}.dedup.gz ${LANGUAGE}.sent2id.db
+
+.PHONY: counts
+counts: ${LANGUAGE}.counts
 
 .PHONY: dedup
 dedup: ${LANGUAGE}.dedup.gz
@@ -45,17 +48,38 @@ SWIFT_PARAMS = --use-slo --segment-size 5G --changed --skip-identical
 upload:
 	which a-get
 	swift upload OPUS-index ${SWIFT_PARAMS} ${LANGUAGE}.dedup.gz ${LANGUAGE}.*.db
-	swift list OPUS-index | grep '\.dedup.gz$$' | sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' > index.txt
-	swift list OPUS-index | grep '\.db$$'       | sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' >> index.txt
+	swift list OPUS-index | grep '\.dedup.gz$$' | \
+		sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' > index.txt
+	swift list OPUS-index | grep '\.db$$'       | \
+		sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' >> index.txt
 	find done -name '${LANGUAGE}.done' | xargs git add
+	git add ${LANGUAGE}.counts index.txt
+
 
 .PHONY: upload-all
 upload-all:
 	which a-get
-	-swift upload OPUS-index ${SWIFT_PARAMS} *.dedup.gz *.db
-	swift list OPUS-index | grep '\.dedup.gz$$' | sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' > index.txt
-	swift list OPUS-index | grep '\.db$$'       | sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' >> index.txt
+	swift upload OPUS-index ${SWIFT_PARAMS} *.dedup.gz *.db
+	swift list OPUS-index | grep '\.dedup.gz$$' | \
+		sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' > index.txt
+	swift list OPUS-index | grep '\.db$$'       | \
+		sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' >> index.txt
 	find done -name '*.done' | xargs git add
+	git add *.counts index.txt
+
+
+index.txt:
+	which a-get
+	swift list OPUS-index | grep '\.dedup.gz$$' | \
+		sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' > $@
+	swift list OPUS-index | grep '\.db$$'       | \
+		sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' >> $@
+
+index-filesize.txt:
+	which a-get
+	rclone ls allas:OPUS-index | grep  '\.dedup.gz$$'  > $@
+	rclone ls allas:OPUS-index | grep  '\.db$$'       >> $@
+
 
 
 .PHONY: job-puhti
@@ -68,19 +92,43 @@ dedup-job-puhti:
 
 
 
+## line (=sentence) count and word count
+${LANGUAGE}.counts: ${ALL_MONO_DONE}
+	${MAKE} ${LANGUAGE}.dedup.gz
+	${GZIP} -cd ${LANGUAGE}.dedup.gz | wc -lw |\
+	sed 's/^ *//;s/  */	/g' > $@
 
+
+counts-from-storage:
+	for l in aa ca cs de en es et eu fi fr ga nb nds nn no se sk sv; do \
+	  wget -qq -O - ${STORAGE_BASE}index/$$l.dedup.gz |\
+	  ${GZIP} -cd | wc -lw | sed 's/^ *//;s/  */	/g' > $$l.counts; \
+	done
 
 
 ## merge all deduplicated files
+## download the old dedup file in case it exists
+## and no local file exists
 ${LANGUAGE}.dedup.gz: ${ALL_MONO_DONE}
-	if [ -e $@ ]; then \
-	  find ${INDEX_TMPDIR} -name '*.dedup' |\
-	  xargs ${SORT} -m -u <(${GZIP} -cd $@) | ${GZIP} -c > ${INDEX_TMPDIR}/$@; \
-	else \
-	  find ${INDEX_TMPDIR} -name '*.dedup' |\
-	  xargs ${SORT} -m -u | ${GZIP} -c > ${INDEX_TMPDIR}/$@; \
+	if [ ! -e $@ ]; then \
+	  if [ `grep '${LANGUAGE}\.dedup\.gz' index.txt | wc -l` -gt 0 ]; then \
+	    echo "download ${LANGUAGE}.dedup.gz"; \
+	    wget -qq ${STORAGE_BASE}index/${LANGUAGE}.dedup.gz; \
+	  fi \
 	fi
-	mv -f ${INDEX_TMPDIR}/$@ $@
+	if [ `find ${INDEX_TMPDIR} -name '*.dedup' | wc -l` -gt 0 ]; then \
+	  if [ -e $@ ]; then \
+	    echo "merge all corpora with ${LANGUAGE}.dedup.gz"; \
+	    find ${INDEX_TMPDIR} -name '*.dedup' |\
+	    xargs ${SORT} -m -u <(${GZIP} -cd $@) | ${GZIP} -c > ${INDEX_TMPDIR}/$@; \
+	    mv -f ${INDEX_TMPDIR}/$@ $@; \
+	  else \
+	    echo "merge all corpora into ${LANGUAGE}.dedup.gz"; \
+	    find ${INDEX_TMPDIR} -name '*.dedup' |\
+	    xargs ${SORT} -m -u | ${GZIP} -c > ${INDEX_TMPDIR}/$@; \
+	    mv -f ${INDEX_TMPDIR}/$@ $@; \
+	  fi \
+	fi
 
 
 ## create MCDB index databases

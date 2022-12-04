@@ -1,6 +1,12 @@
+# Monolingual sentence indeces
+
+Get all sentences for a given language, de-duplicate and then create an index over all sorted sentences.
+
+* [De-duplicated lists of sorted sentences](index.txt) are available from the OPUS storage
+* Sentence and word counts are in the files ending on `*.counts`
 
 
-# Create sentence indexes
+## De-duplicate and index
 
 
 install pre-requisites (on puhti):
