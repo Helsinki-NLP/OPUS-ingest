@@ -188,6 +188,7 @@ fix-readme-encoding:
 	find ${OPUSRELEASE}/ -name 'README' -exec ${OPUSTOOLS}/remove-unicode-chars.sh {} \;
 
 
+
 .PHONY: index
 index:
 	rm -f index-info.txt
@@ -207,3 +208,27 @@ add-index-files:
 		${OPUSCORPORA}/*/releases.txt \
 		${OPUSCORPORA}/*/*.info \
 		${OPUSCORPORA}/*/index*.txt
+
+
+
+delete_extra_done_files_on_allas:
+	which a-get
+	for s in `find ${OPUSRELEASE}/ -name 'statistics.yaml'  | xargs grep 'done' | cut -f1 -d: | sort -u`; do \
+	  for w in `grep 'url: .*_done\.zip' $$s | sed 's#^.*https://object.pouta.csc.fi/##'`; do \
+	    c=`echo $$w | cut -f1 -d/`; \
+	    f=`echo $$w | cut -f2- -d/`; \
+	    if [ "$$f" != "" ]; then \
+	      echo "swift delete $$c $$f"; \
+	      swift delete $$c $$f; \
+	    fi \
+	  done; \
+	  c=`echo $$s | sed 's#^${OPUSRELEASE}/##' | cut -f1 -d/`; \
+	  echo "redo index files in ${OPUSRELEASE}/$$c"; \
+	  swift list OPUS-$$c > ${OPUSRELEASE}/$$c/index.txt; \
+	  rclone ls allas:OPUS-$$c --max-depth 5 > ${OPUSRELEASE}/$$c/index-filesize.txt; \
+	  ${OPUSTOOLS}/info2yaml.pl -b ${OPUSRELEASE}/$$c; \
+	done
+
+
+
+

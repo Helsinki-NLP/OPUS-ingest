@@ -96,6 +96,10 @@ sub read_readme_file{
 	    $info{$version}{lc($1)} = $2;
 	    $GeneralInfo{lc($1)} = $2;
 	}
+	if (/^\s*Corpus Name:\s+(.*)$/){
+	    $info{$version}{name} = $1;
+	    $GeneralInfo{name} = $1;
+	}
     }
     $GeneralInfo{website}=~s/\-.*?.php/.php/ if (exists $GeneralInfo{website});
     delete $GeneralInfo{'release date'};
