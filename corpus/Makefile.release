@@ -82,10 +82,11 @@ release:
 	${MAKE} release-nlpl
 
 .PHONY: info-yaml
-info-yaml: ${OPUSRELEASE}/${CORPUS}/${VERSOPM}/info.yaml
+info-yaml: ${OPUSRELEASE}/${CORPUS}/${VERSION}/info.yaml
 
-${OPUSRELEASE}/${CORPUS}/${VERSOPM}/info.yaml:
+${OPUSRELEASE}/${CORPUS}/${VERSION}/info.yaml:
 	${OPUSTOOLS}/info2yaml.pl ${OPUSRELEASE}/${CORPUS}
+	cd ${OPUSRELEASE}/${CORPUS} && git add info.yaml ${VERSION}/*.yaml
 
 # release data in NLPL partition
 .PHONY: release-nlpl
@@ -307,7 +308,6 @@ download-dirs: ${CORPUSRELEASE}
 .PHONY: webpage website
 webpage website: ${OPUSPUB}/${CORPUS}.php
 
-
 ## create the release dir and
 ${CORPUSRELEASE}:
 	${MKDIR} $@
@@ -394,11 +394,14 @@ ${OPUSPUB}/${CORPUS}-${VERSION}.php: ${PACKAGES} ${CORPUS_SAMPLES} ${ALG_SAMPLES
 	    -e 's|<h1>${CORPUS}</h1>|<h1>${CORPUS} ${VERSION}</h1>${SRCHTML_SAFE}|' \
 	    -e 's|<div class="footer">|${DISCLAIMER_SAFE}<div class="footer">|'          > $@
 	chmod 644 $@
+	cd ${OPUSPUB} && git add $(notdir $@)
+	cd ${OPUSPUB} && git add ${CORPUS}/${VERSION}
 
 
 ${OPUSPUB}/${CORPUS}.php: ${OPUSPUB}/${CORPUS}-${VERSION}.php
 	rm -f $@
 	( cd ${OPUSPUB}; ln -s $(notdir $<) $(notdir $@) )
+	cd ${OPUSPUB} && git add $(notdir $@)
 
 
 ${PACKAGES}:	${CORPUSRELEASE} \

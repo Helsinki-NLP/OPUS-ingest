@@ -60,14 +60,12 @@ foreach my $v (keys %info){
     }
 }
 
-my $GeneralInfoFile = "$corpusdir/info.yaml";
-if ($opt_b){
-    move($GeneralInfoFile,$GeneralInfoFile.".".time()) if (-e $GeneralInfoFile);
-}
-if ((! -e $GeneralInfoFile) || $opt_o){
-    DumpFile($GeneralInfoFile,\%GeneralInfo) || die "cannot write to $GeneralInfoFile\n";
-}
 
+## always write the general info file! (need to update release info)
+
+my $GeneralInfoFile = "$corpusdir/info.yaml";
+move($GeneralInfoFile,$GeneralInfoFile.".".time()) if (-e $GeneralInfoFile);
+DumpFile($GeneralInfoFile,\%GeneralInfo) || die "cannot write to $GeneralInfoFile\n";
 
 
 
