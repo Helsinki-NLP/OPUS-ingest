@@ -7,4 +7,7 @@ morfessor>=2.0.2a1
 numpy>=1.6.1
 polyglot
 fast-mosestokenizer
+mecab-ko
+mecab-python3
+unidic-lite
 opustools

@@ -81,9 +81,20 @@ ${NEWALGFILES}: ${PIVOTALGFILES}
 	mkdir -p ${@:.xml.gz=}
 	( s=${firstword ${subst -, ,${notdir ${@:.xml.gz=}}}}; \
 	  t=${lastword ${subst -, ,${notdir ${@:.xml.gz=}}}}; \
-	  ${OPUS_PIVOTING} `ls ${CORPUSXML}/*$$s*.xml.gz | grep '${PIVOT}'` \
-	                `ls ${CORPUSXML}/*$$t*.xml.gz | grep '${PIVOT}'` \
-	      | gzip -c > ${CORPUSXML}/$$s-$$t/xlent-pivoted-${VERSION}.xml.gz; \
+	  S=${CORPUSXML}/$$s-en.xml.gz; \
+	  T=${CORPUSXML}/$$t-en.xml.gz; \
+	  if [ -e ${CORPUSXML}/en-$$s.xml.gz ]; then \
+	    S=${CORPUSXML}/en-$$s.xml.gz; \
+	  fi; \
+	  if [ -e ${CORPUSXML}/en-$$t.xml.gz ]; then \
+	    T=${CORPUSXML}/en-$$t.xml.gz; \
+	  fi; \
+	  if [ -e $$S ]; then \
+	    if [ -e $$T ]; then \
+	      ${OPUS_PIVOTING} $$S $$T | \
+	      gzip -c > ${CORPUSXML}/$$s-$$t/xlent-pivoted-${VERSION}.xml.gz; \
+	    fi \
+	  fi; \
 	  if [ -e $@ ]; then \
 	    mv -f $@ ${CORPUSXML}/$$s-$$t/; \
 	  fi; \

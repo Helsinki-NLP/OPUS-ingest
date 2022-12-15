@@ -35,7 +35,7 @@ all-job:
 ## a job for fetching and converting all files
 ## that will submit tokenization jobs when ready
 convert-job:
-	${MAKE} -C src convert
+	${MAKE} -C src all
 	${MAKE} HPC_CORES=8 HPC_MEM=32g pivoting-job.submit
 #	${MAKE} HPC_CORES=8 HPC_MEM=128g pivoting-job.submit
 
@@ -45,7 +45,7 @@ pivoting-job:
 
 tokenize-jobs:
 	for l in $(sort $(notdir $(wildcard ${CORPUSRAW}/??) \
-				 $(wildcard ${CORPUSRAW}/??_??))); do \
+				 $(wildcard ${CORPUSRAW}/???))); do \
 	  ${MAKE} MAKEARGS="LANGUAGE=$$l" LANGUAGE=$$l \
 		HPC_CORES=8 HPC_MEM=4g HPC_TIME=72:00 \
 	  tokenize-job.submit; \

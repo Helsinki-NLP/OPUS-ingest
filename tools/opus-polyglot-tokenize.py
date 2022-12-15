@@ -21,9 +21,10 @@ parser = xml.parsers.expat.ParserCreate()
 writer = XMLGenerator(sys.stdout, 'utf-8')
 
 polyglot = False
+language = args.language
 
-if args.language in supportedLangs:
-    tokenizer = MosesTokenizer(args.language)
+if language in supportedLangs:
+    tokenizer = MosesTokenizer(language)
 else:
     print('Unsupported language - fall back to polyglot!', file=sys.stderr)
     polyglot = True
@@ -64,7 +65,7 @@ def end_element(name):
     if inSent:
         if sentStr:
             if polyglot:
-                tokenize_polyglot(sentStr)
+                tokenize_polyglot(sentStr,language)
             else:
                 tokenize_text(sentStr)
             sentStr = ''
@@ -92,11 +93,12 @@ def tokenize_text(text):
         writer.endElement('w')
         writer.characters("\n")
 
-def tokenize_polyglot(text):
+def tokenize_polyglot(text,lang):
     global sentID
     global wordID
     writer.characters("\n")
-    textobj = Text(text)
+    # textobj = Text(text)
+    textobj = Text(text, hint_language_code=lang)
     for t in textobj.words:
         wordID+=1
         writer.characters("    ")
