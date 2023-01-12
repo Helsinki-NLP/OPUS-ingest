@@ -14,9 +14,10 @@
 
 ## Submodules and generated files
 
-* `admin`: administration stuff (submodule OPUS-admin)
+* `releases`: released data files (submodule OPUS)
 * `public_html`: websites and data sample files (submodule OPUS-website)
-* `cwb`: Corpus Workbench index files and registeries (generated)
+* `admin`: administration stuff (submodule OPUS-admin)
+* `cwb`: Corpus Workbench index files and registers (generated)
 
 
 

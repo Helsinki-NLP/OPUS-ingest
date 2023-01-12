@@ -100,9 +100,45 @@ that is activated or necessary for the corpus. The second step
 includes the conversion to all release formats and creates proper
 packages that can be placed into the release directory. This includes
 aligned plain text files (Moses format), TMX files and
-language-specific packages. Publishing also contains the generation of
+language-specific packages. The release is places in `releases` with
+the following structure:
+
+~~~
+releases/corpusname/version ........... corpus release with version <version>
+releases/corpusname/version/raw ....... untokenized XML files
+releases/corpusname/version/xml ....... tokenized XML files (possibly more annotation)
+releases/corpusname/version/moses ..... plain text files for each bitext (Moses format)
+releases/corpusname/version/tmx ....... translation memory exchange format for each bitext
+releases/corpusname/version/parsed .... parsed corpora in XML (not all data sets are parsed)
+releases/corpusname/version/mono ...... monolingual plain text files for each language
+releases/corpusname/version/freq ...... token frequency lists
+releases/corpusname/version/smt ....... word alignments and extracted phrase translation tables
+releases/corpusname/version/dic ....... a rough dictionary extracted from word alignment
+~~~
+
+
+Publishing also includes the generation of
 websites and sample files to be placed on the OPUS web
-server. Statistics about all bitexts will also bre produced.
+server. Those files are located in `public_html/`.
+
+~~~
+public_html/corpusname.php
+public_html/corpusname-version.php
+public_html/corpusname/version/*.html
+~~~
+
+
+
+
+Statistics about all bitexts will also be produced and stored together with info files
+in the release directory:
+
+~~~
+releases/corpusname/info.yaml
+releases/corpusname/version/info.yaml
+releases/corpusname/version/statistics.yaml
+~~~
+
 
 
 ## Step 4: Release the corpus

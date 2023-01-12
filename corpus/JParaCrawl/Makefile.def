@@ -9,8 +9,8 @@ CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')
 ## current version
 VERSION = v3.0
 
-LICENSE = <a href="LICENSE">Terms of use</a>
-COPYRIGHT = JParaCrawl and the trained models are distributed under the following <a href="LICENSE">license</a>. For commercial use, please contact <a href="http://www.kecl.ntt.co.jp/icl/lirg/jparacrawl/#contact">NTT Communication Science Laboratories</a>.
+LICENSE = <a href="http://www.kecl.ntt.co.jp/icl/lirg/jparacrawl/">Terms of use</a>
+COPYRIGHT = JParaCrawl and the trained models are distributed under the <a href="http://www.kecl.ntt.co.jp/icl/lirg/jparacrawl/">license  linked from the original source of the data set</a>. For commercial use, please contact <a href="http://www.kecl.ntt.co.jp/icl/lirg/jparacrawl/\#contact">NTT Communication Science Laboratories</a>.
 
 # with SRCHTML you can define some extra HTML code that will be placed just
 # after the name of the sub-corpus
@@ -19,10 +19,10 @@ COPYRIGHT = JParaCrawl and the trained models are distributed under the followin
 
 SRCHTML = JParaCrawl is the largest publicly available English-Japanese parallel corpus created by NTT. \
 It was created by largely crawling the web and automatically aligning parallel sentences. \
-For more details, see <a href="http://www.kecl.ntt.co.jp/icl/lirg/jparacrawl/#citation">our paper</a>.
+For more details, see <a href="http://www.kecl.ntt.co.jp/icl/lirg/jparacrawl/\#citation">our paper</a>.
 
 
 EXTRAHTML = 
-CITENOTE = We have used Bitextor created by the ParaCrawl project. We gratefully acknowledge the ParaCrawl project for releasing the software and fruitful discussions. We also would like to thank Hisashi Itoh and Takumi Asai for their technical support. Please, cite <a href="http://www.kecl.ntt.co.jp/icl/lirg/jparacrawl/#citation">our paper</a> and also acknowledge the OPUS project for providing the data.
+CITENOTE = We have used Bitextor created by the ParaCrawl project. We gratefully acknowledge the ParaCrawl project for releasing the software and fruitful discussions. We also would like to thank Hisashi Itoh and Takumi Asai for their technical support. Please, cite <a href="http://www.kecl.ntt.co.jp/icl/lirg/jparacrawl/\#citation">our paper</a> and also acknowledge the OPUS project for providing the data.
 
 CONTACT = NTT Communication Science Laboratories, Makoto Morishita [jparacrawl-ml -a- hco.ntt.co.jp]

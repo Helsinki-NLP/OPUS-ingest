@@ -77,9 +77,22 @@
 release:
 	${MAKE} upload
 	${MAKE} info-yaml
+	${MAKE} index-info
 	${MAKE} upload-website
 	${MAKE} upload-cwb
+	${MAKE} update-git
 	${MAKE} release-nlpl
+
+
+.PHONY: update-git
+update-git:
+	cd ${OPUSRELEASE} && git add ${CORPUS}/*.txt
+	cd ${OPUSRELEASE} && git add ${CORPUS}/.uploaded*
+	if [ -e ${CORPUSRELEASE}/README ]; then cd ${OPUSRELEASE} && git add ${CORPUS}/${VERSION}/README; fi
+	if [ -e ${CORPUSRELEASE}/LICENSE ]; then cd ${OPUSRELEASE} && git add ${CORPUS}/${VERSION}/LICENSE; fi
+	if [ -e ${CORPUSRELEASE}/INFO ]; then cd ${OPUSRELEASE} && git add ${CORPUS}/${VERSION}/INFO; fi
+	cd ${OPUSRELEASE} && git commit -am '${CORPUS} release ${VERSION} added'
+	cd ${OPUSRELEASE} && git push
 
 .PHONY: info-yaml
 info-yaml: ${OPUSRELEASE}/${CORPUS}/${VERSION}/info.yaml
@@ -88,6 +101,14 @@ ${OPUSRELEASE}/${CORPUS}/${VERSION}/info.yaml:
 	${OPUSTOOLS}/info2yaml.pl ${OPUSRELEASE}/${CORPUS}
 	cd ${OPUSRELEASE}/${CORPUS} && git add info.yaml ${VERSION}/*.yaml
 
+.PHONY: index-info
+index-info:
+	rm -f ${OPUSRELEASE}/index-info.txt
+	${MAKE} ${OPUSRELEASE}/index-info.txt
+
+${OPUSRELEASE}/index-info.txt:
+	find ${OPUSRELEASE}/ -name 'info.yaml' | sed 's#^${OPUSRELEASE}/##' | sort > $@
+
 # release data in NLPL partition
 .PHONY: release-nlpl
 release-nlpl:
@@ -95,6 +116,8 @@ release-nlpl:
 	  if [ ${OPUSNLPL} != ${OPUSRELEASE} ]; then \
 	    rsync -av ${OPUSRELEASE}/${CORPUS} ${OPUSNLPL}; \
 	    rsync -av ${OPUSRELEASE}/index.txt ${OPUSNLPL}/; \
+	    rm -f ${OPUSNLPL}/${CORPUS}/latest; \
+	    cd ${OPUSNLPL}/${CORPUS} && ln -s ${VERSION} latest; \
 	  fi \
 	fi
 
@@ -317,8 +340,6 @@ ${CORPUSRELEASE}:
 	${MAKE} PACKAGE="${CORPUS} in XML format" $@/xml/README
 	${MAKE} PACKAGE="${CORPUS} in Moses format" $@/moses/README
 	${MAKE} PACKAGE="${CORPUS} in TMX format" $@/tmx/README
-	rm -f ${dir $@}/latest
-	cd ${dir $@} && ln -s ${notdir $@} latest
 
 
 
@@ -477,10 +498,10 @@ ifneq (${LICENSE},)
 	echo "     License: ${LICENSE}" >>$@
 endif
 ifneq (${COPYRIGHT},)
-	echo "   Copyright: ${COPYRIGHT}" >>$@
+	echo "   Copyright: $(subst ",\",${COPYRIGHT})" >>$@          # escape "
 endif
 ifneq (${CONTACT},)
-	echo "     Contact: ${CONTACT}" >>$@
+	echo "     Contact: $(subst ",\",${CONTACT})" >>$@            # escape "
 endif
 ifneq (${SOURCE_URL},)
 	echo "      Source: ${SOURCE_URL}" >>$@
@@ -490,10 +511,10 @@ endif
 	echo "OPUS Website: http://opus.nlpl.eu" >> $@
 	echo "" >>$@
 #	echo "${CITENOTE}" | sed 's/<[^>]*>//g' >> $@
-	echo "${CITENOTE}" >> $@
+	echo "$(subst ",\",${CITENOTE})" >> $@                        # escape "
 	echo "" >>$@
-	echo "${SRCHTML}"   | sed 's/<[^>]*>//g' >> $@
-	echo "${EXTRAHTML}" | sed 's/<[^>]*>//g' >> $@
+	echo "$(subst ",\",${SRCHTML})"   | sed 's/<[^>]*>//g' >> $@  # escape " and remove HTML
+	echo "$(subst ",\",${EXTRAHTML})" | sed 's/<[^>]*>//g' >> $@  # escape " and remove HTML
 	if [ -e ${CORPUSHOME}/INFO ]; then \
 	  echo ""                        >> $@; \
 	  echo "Additional information:" >> $@; \

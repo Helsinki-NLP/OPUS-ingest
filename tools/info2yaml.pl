@@ -99,7 +99,7 @@ sub read_readme_file{
 	    $GeneralInfo{name} = $1;
 	}
     }
-    $GeneralInfo{website}=~s/\-.*?.php/.php/ if (exists $GeneralInfo{website});
+    $GeneralInfo{website}=~s/\-[^\-]*?\.php/.php/ if (exists $GeneralInfo{website});
     delete $GeneralInfo{'release date'};
     close F;
 }

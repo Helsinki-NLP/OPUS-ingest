@@ -192,7 +192,10 @@ fix-readme-encoding:
 .PHONY: index
 index:
 	rm -f index-info.txt
-	${MAKE} index-info.txt
+	${MAKE} ${OPUSRELEASE}/index-info.txt
+
+${OPUSRELEASE}/index-info.txt: index-info.txt
+	cp $< $@
 
 index-info.txt:
 	find ${OPUSRELEASE}/ -name 'info.yaml' | sed 's#^${OPUSRELEASE}/##' | sort > $@

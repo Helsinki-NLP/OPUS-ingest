@@ -1,0 +1,41 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v0.2
+
+LICENSE = CC0
+COPYRIGHT = Samanantar is released under this licensing scheme: \
+    <ul><li>We do not own any of the text from which this data has been extracted.</li>\
+    <li>We license the actual packaging of this data under the Creative Commons CC0 license (“no rights reserved”).</li>\
+    <li>To the extent possible under law, AI4Bharat has waived all copyright and related or neighboring rights to Samanantar</li>\
+    <li>This work is published from: India.</li></ul>
+
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML = Samanantar is the largest publicly available parallel corpora collection for Indic languages: Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Oriya, Punjabi, Tamil, Telugu. The corpus has 49.6M sentence pairs between English to Indian Languages. The data is distributed by <a href="https://ai4bharat.iitm.ac.in/samanantar">AI4BHARAT</a>
+
+EXTRAHTML = 
+
+CITENOTE = If you are using any of the resources, please cite the following article:\
+<blockquote><pre>\
+@misc{ramesh2021samanantar,<br/>\
+      title={Samanantar: The Largest Publicly Available Parallel Corpora Collection for 11 Indic Languages}, <br/>\
+      author={Gowtham Ramesh and Sumanth Doddapaneni and Aravinth Bheemaraj and Mayank Jobanputra and Raghavan AK and Ajitesh Sharma and Sujit Sahoo and Harshita Diddee and Mahalakshmi J and Divyanshu Kakwani and Navneet Kumar and Aswin Pradeep and Srihari Nagaraj and Kumar Deepak and Vivek Raghavan and Anoop Kunchukuttan and Pratyush Kumar and Mitesh Shantadevi Khapra},<br/>\
+      year={2021},<br/>\
+      eprint={2104.05596},<br/>\
+      archivePrefix={arXiv},<br/>\
+      primaryClass={cs.CL}<br/>\
+}<br/>\
+</pre></blockquote>
+
