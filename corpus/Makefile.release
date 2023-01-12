@@ -86,11 +86,17 @@ release:
 
 .PHONY: update-git
 update-git:
-	cd ${OPUSRELEASE} && git add ${CORPUS}/*.txt
-	cd ${OPUSRELEASE} && git add ${CORPUS}/.uploaded*
-	if [ -e ${CORPUSRELEASE}/README ]; then cd ${OPUSRELEASE} && git add ${CORPUS}/${VERSION}/README; fi
-	if [ -e ${CORPUSRELEASE}/LICENSE ]; then cd ${OPUSRELEASE} && git add ${CORPUS}/${VERSION}/LICENSE; fi
-	if [ -e ${CORPUSRELEASE}/INFO ]; then cd ${OPUSRELEASE} && git add ${CORPUS}/${VERSION}/INFO; fi
+	cd ${CORPUSRELEASE} && find . -name 'README' -exec git add {} \;
+	cd ${CORPUSRELEASE} && find . -name 'LICENSE' -exec git add {} \;
+	cd ${CORPUSRELEASE} && find . -name 'INFO' -exec git add {} \;
+	cd ${CORPUSRELEASE} && find . -name 'CONTACT*' -exec git add {} \;
+	cd ${CORPUSRELEASE} && find . -name 'CITATION*' -exec git git add {} \;
+	cd ${CORPUSRELEASE} && find . -name '*.yaml' -exec git add {} \;
+	cd ${CORPUSRELEASE} && find . -name '*.txt' -exec git add {} \;
+	cd ${CORPUSRELEASE} && find . -name '*.info' -exec git add {} \;
+	cd ${CORPUSRELEASE} && find . -name '*.tsv' -exec git add {} \;
+	-cd ${OPUSRELEASE} && git add ${CORPUS}/.uploaded-${VERSION}
+	-cd ${OPUSRELEASE} && git add ${CORPUS}/.released-${VERSION}
 	cd ${OPUSRELEASE} && git commit -am '${CORPUS} release ${VERSION} added'
 	cd ${OPUSRELEASE} && git push
 
