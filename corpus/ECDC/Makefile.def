@@ -1,0 +1,27 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v2016-03-16
+
+LICENSE = custom license
+COPYRIGHT = By downloading or using the data you agree to the <a href="http://optima.jrc.it/Resources/ECDC-TM/2012_10_Terms-of-Use_ECDC-TM.pdf">terms of use</a> (attached as LICENSE)
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML = ECDC Translation Memory from the European Centre for Disease Prevention and Control, available at <a href="https://joint-research-centre.ec.europa.eu/language-technology-resources/ecdc-translation-memory_en">https://joint-research-centre.ec.europa.eu/language-technology-resources/ecdc-translation-memory_en</a>
+
+EXTRAHTML = ECDC Translation Memory: The translation memory was built on the basis of the website of the European Centre for Disease Prevention and Control (ECDC). The major part of the documents talks about health-related topics (anthrax, botulism, cholera, dengue fever, hepatitis, etc.), but some of the web pages also describe the organisation ECDC (e.g. its organisation, job opportunities) and its activities (e.g. epidemic intelligence, surveillance). A translation memory (TM), i.e. a collection of sentences and their professionally produced translations, in twenty-five languages.All documents and sentences were thus originally written in English. They were then translated into the other languages by professional translators from the Translation Centre CdT in Luxembourg.
+
+# CITENOTE=
+
+CONTACT = Ralf Steinberger, European Commission - Joint Research Centre (JRC)
+

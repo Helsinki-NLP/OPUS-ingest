@@ -1,0 +1,25 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v2
+
+LICENSE = CC-BY-NC-SA-4.0
+COPYRIGHT = 
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML = FFR Dataset is an ongoing project to collect, clean and store corpora of Fon and French sentences for machine translation from Fon-French. Fon (also called Fongbe) is an African-indigenous language spoken mostly in Benin, by about 1.7 million people. As training data is crucial to the high performance of a machine learning model, the aim of this project is to compile the largest set of training corpora for the research and design of translation and NLP models involving Fon.
+
+EXTRAHTML = The FFR project is hosted at <a href="https://github.com/bonaventuredossou/ffr-v1">GitHUb</a>
+# CITENOTE=
+
+CONTACT = Bonaventure DOSSOU, Chris EMEZUE

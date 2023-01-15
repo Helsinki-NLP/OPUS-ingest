@@ -1,0 +1,24 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v2014
+
+LICENSE = CC-BY-SA
+COPYRIGHT = 
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML = The Wikipedia Parallel Titles Corpora consist of bilingual titles of Wikipedia articles, extended with the redirects and textlinks. The compiled corpus is available from <a href="https://linguatools.org/tools/corpora/wikipedia-parallel-titles-corpora/"></a>
+# EXTRAHTML=Simple example corpus
+# CITENOTE=
+
+CONTACT = <a href="https://linguatools.org/impressum/">Peter Kolb & Prochazkova GbR</a>
