@@ -86,6 +86,7 @@ release:
 
 .PHONY: update-git
 update-git:
+	${MAKE} -C ${OPUSGITHOME} info
 	cd ${CORPUSRELEASE} && find . -name 'README' -exec git add {} \;
 	cd ${CORPUSRELEASE} && find . -name 'LICENSE' -exec git add {} \;
 	cd ${CORPUSRELEASE} && find . -name 'INFO' -exec git add {} \;
@@ -97,8 +98,8 @@ update-git:
 	cd ${CORPUSRELEASE} && find . -name '*.tsv' -exec git add {} \;
 	-cd ${OPUSRELEASE} && git add ${CORPUS}/.uploaded-${VERSION}
 	-cd ${OPUSRELEASE} && git add ${CORPUS}/.released-${VERSION}
-	cd ${OPUSRELEASE} && git commit -am '${CORPUS} release ${VERSION} added'
-	cd ${OPUSRELEASE} && git push
+	cd ${OPUSGITHOME} && git commit -am '${CORPUS} release ${VERSION} added'
+	cd ${OPUSGITHOME} && git push
 
 .PHONY: info-yaml
 info-yaml: ${OPUSRELEASE}/${CORPUS}/${VERSION}/info.yaml

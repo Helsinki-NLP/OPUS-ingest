@@ -47,6 +47,43 @@ OPUS_MONO_OVERLAPS     := $(patsubst ${LANGUAGE}/%.txt,${OPUSRELEASE}/%/overlaps
 OPUS_NEWMONO_OVERLAPS  := $(patsubst ${LANGUAGE}/%.txt,${OPUSRELEASE}/%/overlaps/${LANGUAGE}.new.tsv,${ALL_MONO_OVERLAP_FILES})
 
 
+
+##------------------------------------------------------------------------------------
+## submit specific jobs on puhti@csc
+##------------------------------------------------------------------------------------
+
+## TODO: there is some kind of memory leak
+##       mcdb requires a lot of memory and for English it still crashes with 128GB RAM
+
+.PHONY: job-puhti
+job-mono-puhti:
+	${MAKE} HPC_MEM=256g HPC_CORES=8 CORES=4 THREADS=4 HPC_DISK=1000 all-mono.submit
+#	${MAKE} HPC_MEM=128g HPC_CORES=8 CORES=4 THREADS=4 HPC_DISK=1000 all-mono.submit
+
+.PHONY: job-english-puhti
+job-english-puhti:
+	${MAKE} HPC_MEM=256g HPC_CORES=8 CORES=4 THREADS=4 HPC_DISK=1000 LANGUAGE=en all-mono.submit
+
+.PHONY: job-BIGLANG-puhti
+job-biglang-puhti:
+	for l in en fr es it de zh ja ru; do \
+	  ${MAKE} LANGUAGE=$$l job-mono-puhti; \
+	done
+
+.PHONY: job-english-bitexts-puhti
+job-english-bitexts-puhti:
+	${MAKE} HPC_MEM=128g HPC_CORES=16 CORES=4 THREADS=4 HPC_DISK=500 en-bitexts.submit
+
+.PHONY: job-bitext-puhti
+job-bitext-puhti:
+	${MAKE} HPC_MEM=128g HPC_CORES=16 CORES=4 THREADS=4 HPC_DISK=500 all-para.submit
+
+
+##------------------------------------------------------------------------------------
+#
+# TODO: avoid creating all dedup's and mcdb's if not needed
+# (that's only the case if there is no update in the corpus with LANGUAGE involved)
+
 .NOTINTERMEDIATE: ${ALL_MONO_OVERLAP_FILES}
 
 .PHONY: all-mono
@@ -59,28 +96,6 @@ all-mono-overlaps: ${OPUS_MONO_OVERLAPS}
 .PHONY: mono-overlaps
 mono-overlaps: ${OPUSRELEASE}/${CORPUS}/${VERSION}/overlaps/${LANGUAGE}.tsv
 
-
-
-## all bitexts with English in either source or target language
-## (only if the directory does not exist yet)
-## --> enable updating with new counts for new corpora
-
-job-en-bitexts-puhti:
-	${MAKE} HPC_MEM=128g HPC_CORES=16 CORES=4 THREADS=4 HPC_DISK=500 en-bitexts.submit
-
-en-bitexts:
-	for l in `find ${OPUSDATASETS} -name '*-en.tmx.gz' -printf "%f\n" | sed 's/\-en\.tmx.gz//' | grep -v '\.' | sort -u`; do \
-	  if [ ! -e $$l-en ]; then \
-	    make LANGPAIR=$$l-en all-para; \
-	    find ${TMPDIR} -name '*.dedup.*' -delete; \
-	  fi \
-	done
-	for l in `find ${OPUSDATASETS} -name 'en-*.tmx.gz' -printf "%f\n" | sed 's/\.tmx.gz//;s/^en-//;' | grep -v '\.' | sort -u`; do \
-	  if [ ! -e en-$$l ]; then \
-	    make LANGPAIR=en-$$l all-para; \
-	    find ${TMPDIR} -name '*.dedup.*' -delete; \
-	  fi \
-	done
 
 
 
@@ -99,6 +114,10 @@ ALL_PARA_OVERLAP_FILES := $(patsubst ${OPUSDATASETS}/%/moses/${LANGPAIR}.txt.zip
 OPUS_PARA_OVERLAPS     := $(patsubst ${LANGPAIR}/%.txt,${OPUSRELEASE}/%/overlaps/${LANGPAIR}.tsv,${ALL_PARA_OVERLAP_FILES})
 
 
+##------------------------------------------------------------------------------------
+#
+# TODO: avoid creating all dedup's and mcdb's if not needed for the LANGPAIR
+# (no updates in the corpus for the current LANGPAIR)
 
 .NOTINTERMEDIATE: ${ALL_PARA_OVERLAP_FILES}
 
@@ -113,32 +132,46 @@ all-para-overlaps: ${OPUS_PARA_OVERLAPS}
 para-overlaps: ${OPUSRELEASE}/${CORPUS}/${VERSION}/overlaps/${LANGPAIR}.tsv
 
 
-
-
-##----------------------------------
-## submit specific jobs on puhti@csc
-##----------------------------------
-
-## TODO: there is some kind of memory leak
-##       mcdb requires a lot of memory and for English it still crashes with 128GB RAM
-
-.PHONY: job-puhti
-job-mono-puhti:
-	${MAKE} HPC_MEM=128g HPC_CORES=8 CORES=4 THREADS=4 HPC_DISK=1000 all-mono.submit
-
-.PHONY: job-english-puhti
-job-english-puhti:
-	${MAKE} HPC_MEM=256g HPC_CORES=8 CORES=4 THREADS=4 HPC_DISK=1000 LANGUAGE=en all-mono.submit
-
-.PHONY: biglang-job-puhti
-biglang-job-puhti:
-	for l in en fr es it de zh ja ru; do \
-	  ${MAKE} LANGUAGE=$$l job-mono-puhti; \
+## print some stats about the overlap scores we have
+## compare with what we exoect to see
+## print a list of corpora for which a score seems to be missing
+.PHONY: check-para-completeness
+check-para-completeness:
+	@echo "nr of existing parallel datatsets for ${LANGPAIR}: $(words ${ALL_PARA})"
+	@echo -n "nr of ${LANGPAIR} bitexts with overlap scores: "
+	@find ${LANGPAIR} -name '*.txt' | wc -l
+	@echo -n "nr of ${LANGPAIR} bitexts listed in overlap scores: "
+	@find ${LANGPAIR} -name '*.txt' | xargs cat | cut -f1,2 | sort | uniq -c | wc -l
+	@echo -n "nr of ${LANGPAIR} bitexts with $(words ${ALL_PARA}) overlap scores: " 
+	@find ${LANGPAIR} -name '*.txt' | xargs cat | cut -f1,2 | sort | uniq -c | \
+	grep '$(words ${ALL_PARA}) ' | wc -l
+	@for c in $(firstword $(subst /, ,$(patsubst ${OPUSDATASETS}/%,%,${ALL_PARA}))); do \
+	  if [ `find ${LANGPAIR} -name '*.txt' | xargs cat | grep '$$c' | wc -l` -eq 0 ]; then \
+	    echo "not found in counts: $$c"; \
+	  fi \
 	done
+	@for c in $(patsubst ${OPUSDATASETS}/%/moses/${LANGPAIR}.txt.zip,%,${ALL_PARA}); do \
+	  if [ ! -e ${LANGPAIR}/$$c.txt ]; then \
+	    echo "no counts for: $$c"; \
+	  fi \
+	done
+#	@echo "overlap scores not available for all bitexts:"
+#	@find ${LANGPAIR} -name '*.txt' | xargs cat | cut -f1,2 | sort | uniq -c | \
+#	grep -v '$(words ${ALL_PARA}) '
 
-.PHONY: job-bitext-puhti
-job-bitext-puhti:
-	${MAKE} HPC_MEM=128g HPC_CORES=16 CORES=4 THREADS=4 HPC_DISK=500 all-para.submit
+
+## update overlap scores only for language pairs where there is a bitext
+## for which no overlap scores exist yet
+.PHONY: update-para
+update-para:
+	@echo "nr of existing parallel datatsets for ${LANGPAIR}: $(words ${ALL_PARA})"
+	@echo -n "nr of ${LANGPAIR} bitexts with overlap scores: "
+	@find ${LANGPAIR} -name '*.txt' | wc -l
+	@if [ `find ${LANGPAIR} -name '*.txt' | wc -l` -lt $(words ${ALL_PARA}) ]; then \
+	  echo "make all-para (for ${LANGPAIR})"; \
+	  ${MAKE} all-para; \
+	fi
+
 
 
 
@@ -191,17 +224,6 @@ ${OPUSRELEASE}/%/overlaps/${LANGPAIR}.tsv: ${LANGPAIR}/%.txt
 	@rm -f $@.0 $@.12 $@.3 $@.4a $@.4b $@.5 $@.6 $@.sorted
 	@echo "$@ done"
 
-## old version: just keep the same as in the text file for the release
-## new version above: cleaner structure and more complete stats
-
-${OPUSRELEASE}/%/overlaps/${LANGUAGE}.old.tsv: ${LANGUAGE}/%.txt
-	mkdir -p $(dir $@)
-	sort -k5,5nr -k4,4nr $< > $@
-
-${OPUSRELEASE}/%/overlaps/${LANGPAIR}.old.tsv: ${LANGPAIR}/%.txt
-	mkdir -p $(dir $@)
-	sort -k5,5nr -k4,4nr $< > $@
-
 
 #------------------------------------------------
 # dedup first before creating the sentence index
@@ -240,17 +262,20 @@ ${TMPDIR}/%.dedup.mcdb: ${TMPDIR}/%.dedup.gz
 ${LANGUAGE}/%.txt: ${ALL_MONO}
 	mkdir -p ${dir $@}
 	if [ -e $(@:.txt=.tar.gz) ]; then tar -xzf $(@:.txt=.tar.gz); fi
-	@for c in ${CORPORA}; do \
-	  s=`cat $(patsubst ${LANGUAGE}/%.txt,${TMPDIR}/%/mono/${LANGUAGE}.dedup.nrlines,$@)`; \
-	  for v in `find ${OPUSDATASETS}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
-	    if [ "$(patsubst ${LANGUAGE}/%.txt,%,$@)" != "$$c/$$v" ]; then \
-	      if [ -e ${TMPDIR}/$$c/$$v/mono/${LANGUAGE}.dedup.gz ]; then \
-	        ${MAKE} CORPUS1=$(patsubst ${LANGUAGE}/%/,%,$(dir $@)) VERSION1=${notdir ${@:.txt=}} \
-			CORPUS2=$$c VERSION2=$$v count-mono; \
-	      fi \
-	    fi \
-	  done \
-	done
+	@( c1=$(patsubst ${LANGUAGE}/%/,%,$(dir $@)) \
+	   v1==${notdir ${@:.txt=}} \
+	   for c in ${CORPORA}; do \
+	     s=`cat $(patsubst ${LANGUAGE}/%.txt,${TMPDIR}/%/mono/${LANGUAGE}.dedup.nrlines,$@)`; \
+	     for v in `find ${OPUSDATASETS}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
+	       if [ "$${c1}/$$v1" != "$$c/$$v" ]; then \
+	         if [ ! -e counts/${LANGUAGE}/$${c1}_$${v1}-$c_$v.txt ]; then \
+	           if [ -e ${TMPDIR}/$$c/$$v/mono/${LANGUAGE}.dedup.gz ]; then \
+	              ${MAKE} CORPUS1=$${c1} VERSION1=$${v1} CORPUS2=$$c VERSION2=$$v count-mono; \
+	           fi \
+	         fi \
+	       fi \
+	     done \
+	   done )
 	find counts/${LANGUAGE} -name '$(subst /,_,$(patsubst ${LANGUAGE}/%.txt,%,$@))-*.txt' | \
 	sort | xargs cat > $@
 	${MAKE} $(@:.txt=.tar.gz)
@@ -286,48 +311,97 @@ test-count-mono:
 .PHONY: count-mono
 count-mono: counts/${LANGUAGE}/${CORPUS1}_${VERSION1}-${CORPUS2}_${VERSION2}.txt
 
-counts/${LANGUAGE}/${CORPUS1}_${VERSION1}-${CORPUS2}_${VERSION2}.txt: \
-		${TMPDIR}/${CORPUS1}/${VERSION1}/mono/${LANGUAGE}.dedup.gz \
+# counts/${LANGUAGE}/${CORPUS1}_${VERSION1}-${CORPUS2}_${VERSION2}.txt: \
+# 		${TMPDIR}/${CORPUS1}/${VERSION1}/mono/${LANGUAGE}.dedup.gz \
+# 		${TMPDIR}/${CORPUS2}/${VERSION2}/mono/${LANGUAGE}.dedup.gz \
+# 		${TMPDIR}/${CORPUS1}/${VERSION1}/mono/${LANGUAGE}.dedup.nrlines \
+# 		${TMPDIR}/${CORPUS2}/${VERSION2}/mono/${LANGUAGE}.dedup.nrlines \
+# 		${TMPDIR}/${CORPUS1}/${VERSION1}/mono/${LANGUAGE}.dedup.mcdb \
+# 		${TMPDIR}/${CORPUS2}/${VERSION2}/mono/${LANGUAGE}.dedup.mcdb
+# 	mkdir -p $(dir $@)
+# 	echo -n "${CORPUS2}	${VERSION2}	"                    > $@
+# 	cat $(word 4,$^) | tr "\n" "\t"                             >> $@
+# 	if [ `cat $(word 3,$^)` -lt `cat $(word 4,$^)` ]; then \
+# 	  ${GZIP} -cd $(word 1,$^) | ${FIND_IN_MCDB} $(word 6,$^) >> $@; \
+# 	else \
+# 	  ${GZIP} -cd $(word 2,$^) | ${FIND_IN_MCDB} $(word 5,$^) >> $@; \
+# 	fi
+# 	echo -n '/'                                                 >> $@
+# 	cat $(word 3,$^)                                            >> $@
+# 	cut -f4 $@ | sed 's/^/scale=2;100*/' | bc > $@.percentage
+# 	paste $@ $@.percentage > $@.new
+# 	mv $@.new $@
+# 	rm -f $@.percentage $@.new
+
+
+
+counts/${LANGUAGE}/${CORPUS1}_${VERSION1}-${CORPUS2}_${VERSION2}.txt:
+	@${MAKE} ${TMPDIR}/${CORPUS1}/${VERSION1}/mono/${LANGUAGE}.dedup.gz \
 		${TMPDIR}/${CORPUS2}/${VERSION2}/mono/${LANGUAGE}.dedup.gz \
 		${TMPDIR}/${CORPUS1}/${VERSION1}/mono/${LANGUAGE}.dedup.nrlines \
 		${TMPDIR}/${CORPUS2}/${VERSION2}/mono/${LANGUAGE}.dedup.nrlines \
 		${TMPDIR}/${CORPUS1}/${VERSION1}/mono/${LANGUAGE}.dedup.mcdb \
 		${TMPDIR}/${CORPUS2}/${VERSION2}/mono/${LANGUAGE}.dedup.mcdb
-	mkdir -p $(dir $@)
-	echo -n "${CORPUS2}	${VERSION2}	"                    > $@
-	cat $(word 4,$^) | tr "\n" "\t"                             >> $@
-	if [ `cat $(word 3,$^)` -lt `cat $(word 4,$^)` ]; then \
-	  ${GZIP} -cd $(word 1,$^) | ${FIND_IN_MCDB} $(word 6,$^) >> $@; \
+	@mkdir -p $(dir $@)
+	@echo "create $@"
+	@echo -n "${CORPUS2}	${VERSION2}	"  > $@
+	@cat ${TMPDIR}/${CORPUS2}/${VERSION2}/mono/${LANGUAGE}.dedup.nrlines | tr "\n" "\t" >> $@
+	@if [ `cat ${TMPDIR}/${CORPUS1}/${VERSION1}/mono/${LANGUAGE}.dedup.nrlines` -lt \
+	     `cat ${TMPDIR}/${CORPUS2}/${VERSION2}/mono/${LANGUAGE}.dedup.nrlines` ]; then \
+	  echo "... find sentences from ${CORPUS1}/${VERSION1} in index of ${CORPUS2}/${VERSION2}"; \
+	  ${GZIP} -cd ${TMPDIR}/${CORPUS1}/${VERSION1}/mono/${LANGUAGE}.dedup.gz | \
+		${FIND_IN_MCDB} ${TMPDIR}/${CORPUS2}/${VERSION2}/mono/${LANGUAGE}.dedup.mcdb >> $@; \
 	else \
-	  ${GZIP} -cd $(word 2,$^) | ${FIND_IN_MCDB} $(word 5,$^) >> $@; \
+	  echo "... find sentences from ${CORPUS2}/${VERSION2} in index of ${CORPUS1}/${VERSION1}"; \
+	  ${GZIP} -cd ${TMPDIR}/${CORPUS2}/${VERSION2}/mono/${LANGUAGE}.dedup.gz | \
+		${FIND_IN_MCDB} ${TMPDIR}/${CORPUS1}/${VERSION1}/mono/${LANGUAGE}.dedup.mcdb >> $@; \
 	fi
-	echo -n '/'                                                 >> $@
-	cat $(word 3,$^)                                            >> $@
-	cut -f4 $@ | sed 's/^/scale=2;100*/' | bc > $@.percentage
-	paste $@ $@.percentage > $@.new
-	mv $@.new $@
-	rm -f $@.percentage $@.new
+	@echo -n '/'                                                          >> $@
+	@cat ${TMPDIR}/${CORPUS1}/${VERSION1}/mono/${LANGUAGE}.dedup.nrlines  >> $@
+	@cut -f4 $@ | sed 's/^/scale=2;100*/' | bc > $@.percentage
+	@paste $@ $@.percentage > $@.new
+	@mv $@.new $@
+	@rm -f $@.percentage $@.new
 
 
 #----------------------------------------------------------------------
 # overlaps in bitexts
 #----------------------------------------------------------------------
 
+## all bitexts with English in either source or target language
+
+en-bitexts:
+	-for l in `find ${OPUSDATASETS} -name '*-en.tmx.gz' -printf "%f\n" | sed 's/\-en\.tmx.gz//' | grep -v '\.' | sort -u`; do \
+	    echo "make LANGPAIR=$$l-en all-para"; \
+	    make LANGPAIR=$$l-en update-para; \
+	done
+	-for l in `find ${OPUSDATASETS} -name 'en-*.tmx.gz' -printf "%f\n" | sed 's/\.tmx.gz//;s/^en-//;' | grep -v '\.' | sort -u`; do \
+	    echo "make LANGPAIR=en-$$l all-para"; \
+	    make LANGPAIR=en-$$l update-para; \
+	done
+	find ${TMPDIR} -name '*.dedup.*' -delete
+
 ${LANGPAIR}/%.txt: ${ALL_PARA}
 	mkdir -p ${dir $@}
 	if [ -e $(@:.txt=.tar.gz) ]; then tar -xzf $(@:.txt=.tar.gz); fi
-	@for c in ${CORPORA}; do \
-	  for v in `find ${OPUSDATASETS}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
-	    if [ "$(patsubst ${LANGPAIR}/%.txt,%,$@)" != "$$c/$$v" ]; then \
-	      if [ -e ${TMPDIR}/$$c/$$v/moses/${LANGPAIR}.dedup.gz ]; then \
-	        make CORPUS1=$(patsubst ${LANGPAIR}/%/,%,$(dir $@)) VERSION1=${notdir ${@:.txt=}} CORPUS2=$$c VERSION2=$$v count-bitext; \
-	      fi \
-	    fi \
-	  done \
-	done
+	@( c1=$(patsubst ${LANGPAIR}/%/,%,$(dir $@)); \
+	   v1=${notdir ${@:.txt=}}; \
+	   for c in ${CORPORA}; do \
+	     for v in `find ${OPUSDATASETS}/$$c -mindepth 1 -maxdepth 1 -type d -printf "%f " | sort`; do \
+	       if [ "$${c1}/$${v1}" != "$$c/$$v" ]; then \
+	         if [ ! -e counts/${LANGPAIR}/$${c1}_$${v1}-$${c}_$${v}.txt ]; then \
+	           if [ -e ${TMPDIR}/$$c/$$v/moses/${LANGPAIR}.dedup.gz ]; then \
+	             echo ".... need to make counts/${LANGPAIR}/$${c1}_$${v1}-$${c}_$${v}.txt"; \
+	             make CORPUS1=$${c1} VERSION1=$${v1} CORPUS2=$$c VERSION2=$$v count-bitext; \
+	           fi \
+	         fi \
+	       fi \
+	     done \
+	   done )
 	find counts/${LANGPAIR} -name '$(subst /,_,$(patsubst ${LANGPAIR}/%.txt,%,$@))-*.txt' | \
 	sort | xargs cat > $@
 	${MAKE} $(@:.txt=.tar.gz)
+
 
 
 ## tar-ball to pack all individual count files
@@ -357,27 +431,55 @@ test-count-bitext:
 .PHONY: count-bitext
 count-bitext: counts/${LANGPAIR}/${CORPUS1}_${VERSION1}-${CORPUS2}_${VERSION2}.txt
 
-counts/${LANGPAIR}/${CORPUS1}_${VERSION1}-${CORPUS2}_${VERSION2}.txt: \
-		${TMPDIR}/${CORPUS1}/${VERSION1}/moses/${LANGPAIR}.dedup.gz \
+# counts/${LANGPAIR}/${CORPUS1}_${VERSION1}-${CORPUS2}_${VERSION2}.txt: \
+# 		${TMPDIR}/${CORPUS1}/${VERSION1}/moses/${LANGPAIR}.dedup.gz \
+# 		${TMPDIR}/${CORPUS2}/${VERSION2}/moses/${LANGPAIR}.dedup.gz \
+# 		${TMPDIR}/${CORPUS1}/${VERSION1}/moses/${LANGPAIR}.dedup.nrlines \
+# 		${TMPDIR}/${CORPUS2}/${VERSION2}/moses/${LANGPAIR}.dedup.nrlines \
+# 		${TMPDIR}/${CORPUS1}/${VERSION1}/moses/${LANGPAIR}.dedup.mcdb \
+# 		${TMPDIR}/${CORPUS2}/${VERSION2}/moses/${LANGPAIR}.dedup.mcdb
+# 	mkdir -p $(dir $@)
+# 	echo -n "${CORPUS2}	${VERSION2}	"                    > $@
+# 	cat $(word 4,$^) | tr "\n" "\t"                             >> $@
+# 	if [ `cat $(word 3,$^)` -lt `cat $(word 4,$^)` ]; then \
+# 	  ${GZIP} -cd $(word 1,$^) | ${FIND_IN_MCDB} $(word 6,$^) >> $@; \
+# 	else \
+# 	  ${GZIP} -cd $(word 2,$^) | ${FIND_IN_MCDB} $(word 5,$^) >> $@; \
+# 	fi
+# 	echo -n '/'                                                 >> $@
+# 	cat $(word 3,$^)                                            >> $@
+# 	cut -f4 $@ | sed 's/^/scale=2;100*/' | bc > $@.percentage
+# 	paste $@ $@.percentage > $@.new
+# 	mv $@.new $@
+# 	rm -f $@.percentage $@.new
+
+
+counts/${LANGPAIR}/${CORPUS1}_${VERSION1}-${CORPUS2}_${VERSION2}.txt:
+	@${MAKE} ${TMPDIR}/${CORPUS1}/${VERSION1}/moses/${LANGPAIR}.dedup.gz \
 		${TMPDIR}/${CORPUS2}/${VERSION2}/moses/${LANGPAIR}.dedup.gz \
 		${TMPDIR}/${CORPUS1}/${VERSION1}/moses/${LANGPAIR}.dedup.nrlines \
 		${TMPDIR}/${CORPUS2}/${VERSION2}/moses/${LANGPAIR}.dedup.nrlines \
 		${TMPDIR}/${CORPUS1}/${VERSION1}/moses/${LANGPAIR}.dedup.mcdb \
 		${TMPDIR}/${CORPUS2}/${VERSION2}/moses/${LANGPAIR}.dedup.mcdb
-	mkdir -p $(dir $@)
-	echo -n "${CORPUS2}	${VERSION2}	"                    > $@
-	cat $(word 4,$^) | tr "\n" "\t"                             >> $@
-	if [ `cat $(word 3,$^)` -lt `cat $(word 4,$^)` ]; then \
-	  ${GZIP} -cd $(word 1,$^) | ${FIND_IN_MCDB} $(word 6,$^) >> $@; \
+	@mkdir -p $(dir $@)
+	@echo -n "${CORPUS2}	${VERSION2}	" > $@
+	@cat ${TMPDIR}/${CORPUS2}/${VERSION2}/moses/${LANGPAIR}.dedup.nrlines | tr "\n" "\t" >> $@
+	@if [ `cat ${TMPDIR}/${CORPUS1}/${VERSION1}/moses/${LANGPAIR}.dedup.nrlines` -lt \
+	     `cat ${TMPDIR}/${CORPUS2}/${VERSION2}/moses/${LANGPAIR}.dedup.nrlines` ]; then \
+	  echo "... find sentences from ${CORPUS1}/${VERSION1} in index of ${CORPUS2}/${VERSION2}"; \
+	  ${GZIP} -cd ${TMPDIR}/${CORPUS1}/${VERSION1}/moses/${LANGPAIR}.dedup.gz | \
+		${FIND_IN_MCDB} ${TMPDIR}/${CORPUS2}/${VERSION2}/moses/${LANGPAIR}.dedup.mcdb >> $@; \
 	else \
-	  ${GZIP} -cd $(word 2,$^) | ${FIND_IN_MCDB} $(word 5,$^) >> $@; \
+	  echo "... find sentences from ${CORPUS2}/${VERSION2} in index of ${CORPUS1}/${VERSION1}"; \
+	  ${GZIP} -cd ${TMPDIR}/${CORPUS2}/${VERSION2}/moses/${LANGPAIR}.dedup.gz | \
+		${FIND_IN_MCDB} ${TMPDIR}/${CORPUS1}/${VERSION1}/moses/${LANGPAIR}.dedup.mcdb >> $@; \
 	fi
-	echo -n '/'                                                 >> $@
-	cat $(word 3,$^)                                            >> $@
-	cut -f4 $@ | sed 's/^/scale=2;100*/' | bc > $@.percentage
-	paste $@ $@.percentage > $@.new
-	mv $@.new $@
-	rm -f $@.percentage $@.new
+	@echo -n '/'                                                 >> $@
+	@cat ${TMPDIR}/${CORPUS1}/${VERSION1}/moses/${LANGPAIR}.dedup.nrlines  >> $@
+	@cut -f4 $@ | sed 's/^/scale=2;100*/' | bc > $@.percentage
+	@paste $@ $@.percentage > $@.new
+	@mv $@.new $@
+	@rm -f $@.percentage $@.new
 
 
 

@@ -5,7 +5,9 @@ ELRC-3056-wikipedia_health	v1	145	0/62027	0
 ELRC-wikipedia_health	v1	145	0/62027	0
 EUbookshop	v2	0	0/62027	0
 infopankki	v1	8866	2/62027	0
+LinguaTools-WikiTitles	v2014	6398548	99/62027	.15
 MultiUN	v1	8022150	15771/62027	25.42
+NeuLab-TedTalks	v1	7878	0/62027	0
 News-Commentary	v11	69020	0/62027	0
 News-Commentary	v14	116000	0/62027	0
 News-Commentary	v16	116000	0/62027	0
@@ -27,4 +29,5 @@ wikimedia	v20210402	165894	14/62027	.02
 WikiTitles	v3	889888	30/62027	.04
 WMT-News	v2019	11960	0/62027	0
 XLEnt	v1.1	5979316	110/62027	.17
+XLEnt	v1.2	5979316	110/62027	.17
 XLEnt	v1	5979316	110/62027	.17

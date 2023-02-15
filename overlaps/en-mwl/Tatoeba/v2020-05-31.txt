@@ -5,4 +5,5 @@ Tatoeba	v2021-07-22	5	4/4	100.00
 Tatoeba	v2022-03-03	5	4/4	100.00
 WikiMatrix	v1	10444	0/4	0
 XLEnt	v1.1	14194	0/4	0
+XLEnt	v1.2	14194	0/4	0
 XLEnt	v1	14194	0/4	0

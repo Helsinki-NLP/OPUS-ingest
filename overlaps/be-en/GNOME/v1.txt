@@ -5,6 +5,7 @@ ELRC-3046-wikipedia_health	v1	203	0/149	0
 ELRC-wikipedia_health	v1	203	0/149	0
 EUbookshop	v2	5	0/149	0
 KDE4	v2	74958	22/149	14.76
+NeuLab-TedTalks	v1	5085	0/149	0
 QED	v2.0a	21072	0/149	0
 Tatoeba	v20190709	6673	0/149	0
 Tatoeba	v2020-05-31	6751	0/149	0
@@ -18,4 +19,5 @@ Ubuntu	v14.10	2431	0/149	0
 WikiMatrix	v1	33928	0/149	0
 wikimedia	v20210402	9785	1/149	.67
 XLEnt	v1.1	566786	3/149	2.01
+XLEnt	v1.2	566786	3/149	2.01
 XLEnt	v1	566786	3/149	2.01

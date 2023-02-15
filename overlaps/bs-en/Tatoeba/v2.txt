@@ -4,6 +4,7 @@ ELRC-3047-wikipedia_health	v1	205	0/284	0
 ELRC-wikipedia_health	v1	205	0/284	0
 EUbookshop	v2	557	0/284	0
 GNOME	v1	30123	0/284	0
+NeuLab-TedTalks	v1	6008	0/284	0
 OpenSubtitles	v2018	11750487	56/284	19.71
 QED	v2.0a	12115	1/284	.35
 SETIMES	v2	138052	0/284	0
@@ -19,4 +20,5 @@ Ubuntu	v14.10	10604	0/284	0
 WikiMatrix	v1	210679	0/284	0
 wikimedia	v20210402	10915	0/284	0
 XLEnt	v1.1	259341	0/284	0
+XLEnt	v1.2	259341	0/284	0
 XLEnt	v1	259341	0/284	0

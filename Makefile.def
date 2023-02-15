@@ -61,6 +61,7 @@ CORPUS          ?= RF
 
 OPUSCORPORA   = ${OPUSHOME}/corpus
 OPUSPUB       = ${OPUSHOME}/public_html
+OPUSGITHOME   = ${OPUSHOME}/OPUS
 OPUSRELEASE   = ${OPUSHOME}/releases
 # OPUSRELEASE   = ${OPUSNLPL}
 

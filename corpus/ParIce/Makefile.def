@@ -1,0 +1,23 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = CC-BY-4.0
+COPYRIGHT = 
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML = ParIce is an English-Icelandic parallel corpus for training MT systems. It consists of various subcorpora, some compiled from scratch and some collected from the internet and realigned and filtered as described in <a href="https://www.aclweb.org/anthology/W19-6115/">Barkarson and Steingrímsson, 2019. Compiling and Filtering ParIce: An English-Icelandic Parallel Corpus</a>. The data set is available from <a href="http://parice.arnastofnun.is/">http://parice.arnastofnun.is/</a>
+
+EXTRAHTML = 
+CITENOTE = Please, cite <a href="https://www.aclweb.org/anthology/W19-6115/">Barkarson and Steingrímsson, 2019. Compiling and Filtering ParIce: An English-Icelandic Parallel Corpus</a> and also acknowledge OPUS for the distribution of the package

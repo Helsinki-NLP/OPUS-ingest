@@ -26,7 +26,7 @@ language = args.language
 if language in supportedLangs:
     tokenizer = MosesTokenizer(language)
 else:
-    print('Unsupported language - fall back to polyglot!', file=sys.stderr)
+    print(f"Unsupported language {language} in MosesTokenizer - fall back to polyglot!", file=sys.stderr)
     polyglot = True
     tokenizer = MosesTokenizer('en')
 

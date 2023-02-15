@@ -12,4 +12,5 @@ wikimedia	v20190628	1251	0/21	0
 wikimedia	v20210402	11291	0/21	0
 WikiTitles	v3	1946	0/21	0
 XLEnt	v1.1	67804	0/21	0
+XLEnt	v1.2	67804	0/21	0
 XLEnt	v1	67804	0/21	0

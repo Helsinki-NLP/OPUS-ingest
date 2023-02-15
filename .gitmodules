@@ -7,3 +7,6 @@
 [submodule "OPUS-website"]
 	path = OPUS-website
 	url = ../OPUS-website
+[submodule "tools/moses-scripts"]
+	path = tools/moses-scripts
+	url = https://github.com/marian-nmt/moses-scripts.git

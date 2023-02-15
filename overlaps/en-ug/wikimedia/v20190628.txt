@@ -13,4 +13,5 @@ Ubuntu	v14.10	5420	0/7	0
 WikiMatrix	v1	10699	0/7	0
 wikimedia	v20210402	20	4/7	57.14
 XLEnt	v1.1	5255	0/7	0
+XLEnt	v1.2	5255	0/7	0
 XLEnt	v1	5255	0/7	0

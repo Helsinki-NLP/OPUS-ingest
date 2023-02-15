@@ -11,4 +11,5 @@ WikiMatrix	v1	32318	0/294	0
 wikimedia	v20190628	10	0/294	0
 wikimedia	v20210402	36	0/294	0
 XLEnt	v1.1	34815	0/294	0
+XLEnt	v1.2	34815	0/294	0
 XLEnt	v1	34815	0/294	0

@@ -4,7 +4,9 @@ ELRC_2922	v1	144	139/145	95.86
 ELRC-wikipedia_health	v1	145	145/145	100.00
 EUbookshop	v2	0	0/145	0
 infopankki	v1	8866	0/145	0
+LinguaTools-WikiTitles	v2014	6398548	1/145	.68
 MultiUN	v1	8022150	0/145	0
+NeuLab-TedTalks	v1	7878	1/145	.68
 News-Commentary	v11	69020	0/145	0
 News-Commentary	v14	116000	1/145	.68
 News-Commentary	v16	116000	1/145	.68
@@ -27,4 +29,5 @@ wikimedia	v20210402	165894	1/145	.68
 WikiTitles	v3	889888	1/145	.68
 WMT-News	v2019	11960	0/145	0
 XLEnt	v1.1	5979316	1/145	.68
+XLEnt	v1.2	5979316	1/145	.68
 XLEnt	v1	5979316	1/145	.68

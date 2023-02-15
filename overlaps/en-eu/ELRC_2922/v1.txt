@@ -8,6 +8,7 @@ ELRC-Artigos_visitportuga	v1	2	0/316	0
 ELRC-wikipedia_health	v1	317	314/316	99.36
 GNOME	v1	139307	0/316	0
 KDE4	v2	91626	0/316	0
+NeuLab-TedTalks	v1	5608	0/316	0
 OpenSubtitles	v2018	718368	0/316	0
 QED	v2.0a	16016	0/316	0
 Tatoeba	v20190709	2059	0/316	0
@@ -22,4 +23,5 @@ Ubuntu	v14.10	70867	0/316	0
 WikiMatrix	v1	119480	16/316	5.06
 wikimedia	v20210402	18160	0/316	0
 XLEnt	v1.1	786283	0/316	0
+XLEnt	v1.2	786283	0/316	0
 XLEnt	v1	786283	0/316	0

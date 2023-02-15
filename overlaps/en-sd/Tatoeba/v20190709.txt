@@ -10,4 +10,5 @@ Ubuntu	v14.10	5646	0/4	0
 wikimedia	v20190628	734	0/4	0
 wikimedia	v20210402	1382	0/4	0
 XLEnt	v1.1	147436	0/4	0
+XLEnt	v1.2	147436	0/4	0
 XLEnt	v1	147436	0/4	0

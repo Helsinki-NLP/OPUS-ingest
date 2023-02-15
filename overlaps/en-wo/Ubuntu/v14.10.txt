@@ -8,4 +8,5 @@ Tatoeba	v2021-07-22	8	0/221	0
 Tatoeba	v2022-03-03	8	0/221	0
 wikimedia	v20210402	13	0/221	0
 XLEnt	v1.1	7865	0/221	0
+XLEnt	v1.2	7865	0/221	0
 XLEnt	v1	7865	0/221	0

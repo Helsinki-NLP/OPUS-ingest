@@ -8,4 +8,5 @@ Tatoeba	v2022-03-03	8	7/7	100.00
 Ubuntu	v14.10	221	0/7	0
 wikimedia	v20210402	13	0/7	0
 XLEnt	v1.1	7865	0/7	0
+XLEnt	v1.2	7865	0/7	0
 XLEnt	v1	7865	0/7	0

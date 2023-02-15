@@ -1,3 +1,4 @@
+Anuvaad	v1	1563069	0/47	0
 bible-uedin	v1	61752	0/47	0
 CCAligned	v1	579735	0/47	0
 ELRC_2922	v1	143	0/47	0
@@ -9,6 +10,7 @@ KDE4	v2	14214	0/47	0
 OpenSubtitles	v2018	22639	0/47	0
 pmindia	v1	40254	0/47	0
 QED	v2.0a	6045	0/47	0
+Samanantar	v0.2	4911406	25/47	53.19
 Tatoeba	v20190709	261	29/47	61.70
 Tatoeba	v2020-05-31	261	29/47	61.70
 Tatoeba	v2020-11-09	262	29/47	61.70
@@ -20,4 +22,5 @@ Ubuntu	v14.10	4213	0/47	0
 WikiMatrix	v1	91911	0/47	0
 wikimedia	v20210402	30406	0/47	0
 XLEnt	v1.1	141795	0/47	0
+XLEnt	v1.2	141795	0/47	0
 XLEnt	v1	141795	0/47	0

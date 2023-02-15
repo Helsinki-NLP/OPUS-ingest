@@ -7,4 +7,5 @@ WikiMatrix	v1	10435	0/17	0
 wikimedia	v20190628	117	0/17	0
 wikimedia	v20210402	107	0/17	0
 XLEnt	v1.1	19423	0/17	0
+XLEnt	v1.2	19423	0/17	0
 XLEnt	v1	19423	0/17	0

@@ -2,6 +2,7 @@ CCAligned	v1	687353	2/397	.50
 ELRC-5042-Kazakh_Legal_MT	v1	1000	0/397	0
 GNOME	v1	3431	0/397	0
 KDE4	v2	64497	0/397	0
+NeuLab-TedTalks	v1	3612	1/397	.25
 News-Commentary	v14	9573	1/397	.25
 News-Commentary	v16	9573	1/397	.25
 OpenSubtitles	v2018	3528	6/397	1.51
@@ -19,4 +20,5 @@ wikimedia	v20190628	1198	0/397	0
 wikimedia	v20210402	8813	1/397	.25
 WMT-News	v2019	4063	1/397	.25
 XLEnt	v1.1	157242	0/397	0
+XLEnt	v1.2	157242	0/397	0
 XLEnt	v1	157242	0/397	0

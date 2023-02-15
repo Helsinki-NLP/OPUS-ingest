@@ -1,3 +1,4 @@
+Anuvaad	v1	92267	0/148	0
 CCAligned	v1	5512	0/148	0
 CCMatrix	v1	96137	0/148	0
 GlobalVoices	v2015	326	0/148	0
@@ -6,6 +7,7 @@ GlobalVoices	v2018q4	327	0/148	0
 KDE4	v2	7816	4/148	2.70
 pmindia	v1	38345	1/148	.67
 QED	v2.0a	6	0/148	0
+Samanantar	v0.2	976811	42/148	28.37
 Tatoeba	v20190709	21	0/148	0
 Tatoeba	v2020-05-31	33	0/148	0
 Tatoeba	v2020-11-09	35	0/148	0
@@ -15,4 +17,5 @@ Tatoeba	v2022-03-03	35	0/148	0
 Ubuntu	v14.10	8794	20/148	13.51
 wikimedia	v20210402	13648	1/148	.67
 XLEnt	v1.1	22946	0/148	0
+XLEnt	v1.2	22946	0/148	0
 XLEnt	v1	22946	0/148	0
