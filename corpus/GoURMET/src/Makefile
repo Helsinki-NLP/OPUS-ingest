@@ -12,6 +12,9 @@ RELEASED_BITEXTS = $(patsubst ${DOWNLOAD_URL}/%.zip,%, \
 .PHONY: all
 all: ${RELEASED_BITEXTS}
 
+print-released:
+	echo "${RELEASED_BITEXTS}"
+
 fetch-bg-en: bg-en.20190625.tgz
 
 bg-en.20190625.tgz:

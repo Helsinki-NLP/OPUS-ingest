@@ -24,7 +24,7 @@ include ../Makefile.def
 ## LANGUAGES = unique file extensions of files in src (.gz will be removed)
 ## FILES = file basenames
 
-LANGUAGES  = am hbs en ky ru sr sw tr
+LANGUAGES  = am ha hbs ig en ky mk my ps ru sr sw tr yo
 FILES      = $(sort $(basename $(subst .gz,,${wildcard src/*/*.*.gz} ${wildcard src/*.*.gz})))
 CONVERTED  = ${patsubst %,%_done,${FILES}}
 
@@ -67,7 +67,8 @@ include ../Makefile.cwb
 ##   Makefile.annotate ..... all annotation in Uplug
 
 
-include ../Makefile.tokenize-fast
+include ../Makefile.tokenize-polyglot
+# include ../Makefile.tokenize-fast
 # include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate

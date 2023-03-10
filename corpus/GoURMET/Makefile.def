@@ -7,7 +7,7 @@
 CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
 
 ## current version
-VERSION = v1
+VERSION = v2
 
 LICENSE = <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">Creative Commons CC0 license</a>
 COPYRIGHT = All content is made publicly available through a Creative Commons CC0 license.
