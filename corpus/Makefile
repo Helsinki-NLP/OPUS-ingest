@@ -1,6 +1,6 @@
 # -*-makefile-*-
 #
-# prepare connection to allas:
+# prepare connection to allas (project_2003093):
 #
 #   module load allas
 #   allas-conf
@@ -26,7 +26,7 @@
 #   make CORPUSNAME/xml.allas
 #   ...
 #
-# fetch individual dub-directories from allas:
+# fetch individual sub-directories from allas:
 #
 #  make CORPUSNAME/src.fetch
 #  make CORPUSNAME/xml.fetch
@@ -64,6 +64,7 @@ fetch fetch-corpus retrieve-corpus: ${CORPUS}.fetched
 
 
 ${OPUS_CORPORA_FETCHED}:
+	@which a-get
 	@if [ -d ${@:.fetched=} ]; then \
 	  mv ${@:.fetched=} ${@:.fetched=}-$(shell date +%F); \
 	fi

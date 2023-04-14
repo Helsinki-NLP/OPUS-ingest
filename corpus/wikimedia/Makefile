@@ -42,6 +42,10 @@ all:
 #	${MAKE} wordalign
 
 
+print-released-tmx:
+	echo "${RELEASEDTMX}"
+	echo "${${DOWNLOADINDEX}}"
+
 
 ## submit a job for fetching and processing all data
 all-job:

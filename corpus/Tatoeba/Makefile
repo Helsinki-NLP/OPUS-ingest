@@ -12,6 +12,7 @@ LANGUAGES   = $(sort $(notdir $(wildcard ${CORPUSRAW}/??)) \
 # VERSION = $(shell date +%F)
 
 all:
+	${MAKE} -C .. CORPUS=Tatoeba fetch
 	${MAKE} -C src all
 	${MAKE} convert
 	${MAKE} -C src archive
@@ -20,19 +21,16 @@ all:
 	${MAKE} -C xml create-align-files
 	rm -f log/.tok* log/.*.done
 	${MAKE} annotate
+	${MAKE} more
+
+all-job:
+	${MAKE} -C .. CORPUS=Tatoeba fetch
+	${MAKE} HPC_CORES=8 HPC_MEM=16g HPC_TIME=72:00 all.submit
+
+more:
 	${MAKE} moses tmx
 	${MAKE} sample-files
 	${MAKE} publish
-
-update:
-	${MAKE} -C src all
-	${MAKE} convert
-	${MAKE} -C src archive
-	${MAKE} xml/Makefile
-	mv -f raw/*-* xml/
-	${MAKE} -C xml create-align-files
-	rm -f log/.tok* log/.*.done
-	${MAKE} annotate
 
 
 ## BEFORE MOVING TO NEW opus2moses:
@@ -42,11 +40,6 @@ update:
 #	${MAKE} udparse
 #	${MAKE} wordalign
 
-
-more:
-	${MAKE} moses tmx
-	${MAKE} sample-files
-	${MAKE} publish
 
 
 # move alignment files for aligning the same language 

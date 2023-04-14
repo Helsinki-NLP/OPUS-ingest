@@ -87,17 +87,18 @@ release:
 .PHONY: update-git
 update-git:
 	${MAKE} -C ${OPUSGITHOME} info
-	cd ${CORPUSRELEASE} && find . -name 'README' -exec git add {} \;
-	cd ${CORPUSRELEASE} && find . -name 'LICENSE' -exec git add {} \;
-	cd ${CORPUSRELEASE} && find . -name 'INFO' -exec git add {} \;
-	cd ${CORPUSRELEASE} && find . -name 'CONTACT*' -exec git add {} \;
-	cd ${CORPUSRELEASE} && find . -name 'CITATION*' -exec git git add {} \;
-	cd ${CORPUSRELEASE} && find . -name '*.yaml' -exec git add {} \;
-	cd ${CORPUSRELEASE} && find . -name '*.txt' -exec git add {} \;
-	cd ${CORPUSRELEASE} && find . -name '*.info' -exec git add {} \;
+	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'README' -exec git add {} \;
+	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'LICENSE' -exec git add {} \;
+	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'INFO' -exec git add {} \;
+	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'CONTACT*' -exec git add {} \;
+	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'CITATION*' -exec git git add {} \;
+	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name '*.yaml' -exec git add {} \;
+	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name '*.txt' -exec git add {} \;
+	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name '*.info' -exec git add {} \;
 	cd ${CORPUSRELEASE} && find . -name '*.tsv' -exec git add {} \;
 	-cd ${OPUSRELEASE} && git add ${CORPUS}/.uploaded-${VERSION}
 	-cd ${OPUSRELEASE} && git add ${CORPUS}/.released-${VERSION}
+	-cd ${OPUSRELEASE} && git add ${CORPUS}/*.info ${CORPUS}/*.txt ${CORPUS}/*.txt
 	cd ${OPUSGITHOME} && git commit -am '${CORPUS} release ${VERSION} added'
 	cd ${OPUSGITHOME} && git push
 
@@ -121,7 +122,7 @@ ${OPUSRELEASE}/index-info.txt:
 release-nlpl:
 	if [ -d ${OPUSNLPL} ]; then \
 	  if [ ${OPUSNLPL} != ${OPUSRELEASE} ]; then \
-	    rsync -av ${OPUSRELEASE}/${CORPUS} ${OPUSNLPL}; \
+	    rsync -av --exclude='*'.tsv --exclude='info/*'.info ${OPUSRELEASE}/${CORPUS} ${OPUSNLPL}; \
 	    rsync -av ${OPUSRELEASE}/index.txt ${OPUSNLPL}/; \
 	    rm -f ${OPUSNLPL}/${CORPUS}/latest; \
 	    cd ${OPUSNLPL}/${CORPUS} && ln -s ${VERSION} latest; \
