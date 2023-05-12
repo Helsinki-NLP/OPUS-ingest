@@ -21,6 +21,7 @@ install: requirements.txt
 	${MAKE} install-subalign
 	${MAKE} install-uplug
 	${MAKE} install-yasa
+	${MAKE} OPUS-admin
 
 install-yasa:
 	git clone https://github.com/Helsinki-NLP/yasa.git
@@ -56,3 +57,6 @@ install-subalign: subalign
 	cd subalign && perl Makefile.PL
 	${MAKE} -C subalign all
 	${MAKE} -C subalign install
+
+OPUS-admin:
+	git clone git@github.com:Helsinki-NLP/OPUS-admin.git
