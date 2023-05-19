@@ -1,0 +1,16 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = tldr-pages
+VERSION = v2023-08-29
+
+LICENSE = CC-BY-4.0
+COPYRIGHT = tldr-pages team and contributors
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML=<p>A parallel corpus of tldr-pages. Source: <a href="https://github.com/tldr-pages/tldr">https://github.com/tldr-pages/tldr</a></p>
+CONTACT = seth@falco.fun
