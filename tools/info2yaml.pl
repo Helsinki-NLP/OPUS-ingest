@@ -238,12 +238,20 @@ sub read_info_file{
 	elsif ($type eq 'txt'){
 	    push(@{$counts{$corpus}{$version}{bitexts}{$langstr}{text}},$value);
 	}
-	else{
+	elsif ($type eq 'info'){
 	    if ($#langs){
 		push(@{$counts{$corpus}{$version}{bitexts}{$langstr}{xml}},$value);
 	    }
 	    else{
 		push(@{$counts{$corpus}{$version}{monolingual}{$langstr}{xml}},$value);
+	    }
+	}
+	else{
+	    if ($#langs){
+		push(@{$counts{$corpus}{$version}{bitexts}{$langstr}{$type}},$value);
+	    }
+	    else{
+		push(@{$counts{$corpus}{$version}{monolingual}{$langstr}{$type}},$value);
 	    }
 	}
     }
@@ -257,30 +265,53 @@ sub read_info_file{
 	    foreach my $l (keys %{$counts{$c}{$v}{monolingual}}){
 		push(@{$info{$v}{languages}},$l);
 		my @values = sort {$a <=> $b} @{$counts{$c}{$v}{monolingual}{$l}{xml}};
-		$statistics{$v}{monolingual}{$l}{files} = $values[0];
-		$statistics{$v}{monolingual}{$l}{sentences} = $values[1];
-		$statistics{$v}{monolingual}{$l}{tokens} = $values[2];
+		if ($#values == 2){
+		    $statistics{$v}{monolingual}{$l}{files} = $values[0];
+		    $statistics{$v}{monolingual}{$l}{sentences} = $values[1];
+		    $statistics{$v}{monolingual}{$l}{tokens} = $values[2];
+		}
+		else{
+		    print STDERR "unexpected number of counts for monotexts in $c/$v/$l/xml\n";
+		}
 	    };
 	    foreach my $l (keys %{$counts{$c}{$v}{bitexts}}){
 		push(@{$info{$v}{'language pairs'}},$l);
 		if (exists $counts{$c}{$v}{bitexts}{$l}{xml}){
-		    my @values = sort {$a <=> $b} @{$counts{$c}{$v}{bitexts}{$l}{xml}};
-		    $statistics{$v}{bitexts}{$l}{files} = $values[0];
-		    $statistics{$v}{bitexts}{$l}{alignments} = $values[1];
-		    $statistics{$v}{bitexts}{$l}{'source language tokens'} = $values[2];
-		    $statistics{$v}{bitexts}{$l}{'target language tokens'} = $values[3];
+		    # my @values = sort {$a <=> $b} @{$counts{$c}{$v}{bitexts}{$l}{xml}};
+		    my @values = @{$counts{$c}{$v}{bitexts}{$l}{xml}};
+		    if ($#values == 3){
+			$statistics{$v}{bitexts}{$l}{files} = $values[0];
+			$statistics{$v}{bitexts}{$l}{alignments} = $values[1];
+			$statistics{$v}{bitexts}{$l}{'source language tokens'} = $values[2];
+			$statistics{$v}{bitexts}{$l}{'target language tokens'} = $values[3];
+		    }
+		    else{
+			print STDERR "unexpected number of counts for bitexts in $c/$v/$l/xml\n";
+		    }
 		}
 		if (exists $counts{$c}{$v}{bitexts}{$l}{text}){
-		    my @values = sort {$a <=> $b} @{$counts{$c}{$v}{bitexts}{$l}{text}};
-		    $statistics{$v}{moses}{$l}{alignments} = $values[0];
-		    $statistics{$v}{moses}{$l}{'source language tokens'} = $values[1];
-		    $statistics{$v}{moses}{$l}{'target language tokens'} = $values[2];
+		    # my @values = sort {$a <=> $b} @{$counts{$c}{$v}{bitexts}{$l}{text}};
+		    my @values = @{$counts{$c}{$v}{bitexts}{$l}{text}};
+		    if ($#values == 2){
+			$statistics{$v}{moses}{$l}{alignments} = $values[0];
+			$statistics{$v}{moses}{$l}{'source language tokens'} = $values[1];
+			$statistics{$v}{moses}{$l}{'target language tokens'} = $values[2];
+		    }
+		    else{
+			print STDERR "unexpected number of counts for bitexts in $c/$v/$l/txt\n";
+		    }
 		}
 		if (exists $counts{$c}{$v}{bitexts}{$l}{tmx}){
-		    my @values = sort {$a <=> $b} @{$counts{$c}{$v}{bitexts}{$l}{tmx}};
-		    $statistics{$v}{tmx}{$l}{'translation units'} = $values[0];
-		    $statistics{$v}{tmx}{$l}{'source language tokens'} = $values[1];
-		    $statistics{$v}{tmx}{$l}{'target language tokens'} = $values[2];
+		   #  my @values = sort {$a <=> $b} @{$counts{$c}{$v}{bitexts}{$l}{tmx}};
+		    my @values = @{$counts{$c}{$v}{bitexts}{$l}{tmx}};
+		    if ($#values == 2){
+			$statistics{$v}{tmx}{$l}{'translation units'} = $values[0];
+			$statistics{$v}{tmx}{$l}{'source language tokens'} = $values[1];
+			$statistics{$v}{tmx}{$l}{'target language tokens'} = $values[2];
+		    }
+		    else{
+			print STDERR "unexpected number of counts for bitexts in $c/$v/$l/tmx\n";
+		    }
 		}
 	    }
 	}

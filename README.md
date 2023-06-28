@@ -16,7 +16,7 @@
 
 * `releases`: released data files (submodule OPUS)
 * `public_html`: websites and data sample files (submodule OPUS-website)
-* `admin`: administration stuff (submodule OPUS-admin)
+* `admin`: administration stuff (non-public git repository OPUS-admin)
 * `cwb`: Corpus Workbench index files and registers (generated)
 
 
@@ -31,6 +31,17 @@
 * the corpus work bench (CWB) and cwb Perl modules (optional for cwb index generation)
 * optional: yasa (our fork from https://github.com/Helsinki-NLP/yasa)
 
+
+## Installation and setup
+
+```
+git clone git@github.com:Helsinki-NLP/OPUS-ingest.git
+cd OPUS-ingest
+git submodule update --init --recursive --remote
+make install
+```
+
+The last step will most likely fail. Check error messages and the Makefile for details.
 
 
 ## Documentation
