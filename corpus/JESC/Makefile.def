@@ -1,0 +1,29 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v2019-12-05
+
+LICENSE = CC-BY-SA-4.0
+COPYRIGHT = 
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML = The Japanese-English Subtitle Corpus (JESC) is distributed from <a href="https://nlp.stanford.edu/projects/jesc/">https://nlp.stanford.edu/projects/jesc/</a>. JESC aims to support the research and development of machine translation systems, information extraction, and other language processing techniques.
+
+
+
+
+EXTRAHTML = JESC is the product of a collaboration between Stanford University, Google Brain, and Rakuten Institute of Technology. It was created by crawling the internet for movie and tv subtitles and aligining their captions. It is one of the largest freely available EN-JA corpus, and covers the poorly represented domain of colloquial language.
+
+CITENOTE = Please, acknowledge the source and cite the paper <a href="https://aclanthology.org/L18-1182/">JESC: Japanese-English Subtitle Corpus, LREC 2018</a> as specified on <a href="https://nlp.stanford.edu/projects/jesc/">https://nlp.stanford.edu/projects/jesc/</a> and also acknowledge the distribution of the package via OPUS.
+
+# CONTACT = 
