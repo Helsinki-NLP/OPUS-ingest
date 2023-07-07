@@ -1,5 +1,3 @@
-
-
 PIP = pip
 
 UBUNTU_PACKAGES = libboost-all-dev \
@@ -33,14 +31,12 @@ OpusTools-perl Uplug subalign:
 
 .PHONY: install-opustools-perl
 install-opustools-perl: OpusTools-perl
-	git clone https://github.com/Helsinki-NLP/OpusTools-perl.git
 	cd OpusTools-perl && perl Makefile.PL
 	${MAKE} -C OpusTools-perl all
 	${MAKE} -C OpusTools-perl install
 
 .PHONY: install-uplug
 install-uplug: Uplug
-	git clone https://github.com/Helsinki-NLP/Uplug.git
 	cd Uplug/uplug-main && perl Makefile.PL
 	${MAKE} -C Uplug/uplug-main all
 	${MAKE} -C Uplug/uplug-main install
@@ -53,7 +49,6 @@ install-uplug: Uplug
 
 .PHONY: install-subalign
 install-subalign: subalign
-	git clone https://github.com/Helsinki-NLP/subalign.git
 	cd subalign && perl Makefile.PL
 	${MAKE} -C subalign all
 	${MAKE} -C subalign install

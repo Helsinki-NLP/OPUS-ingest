@@ -1,15 +1,13 @@
-
 # Create a new corpus
 
 There are a few templates for creating a new corpus to cover the most
 common cases, for example, to create a data set from given parallel
 text files or data sets from a collection of TMX files. Templates are
-given in sub-directories of `OPUS-ingest/template/`.
-
+given in sub-directories of `templates/`.
 
 ## Step 0: Clone OPUS-ingest
 
-Retrieve the latest OPUS-ingest repository from github in some
+Retrieve the latest OPUS-ingest repository from GitHub in some
 dedicated work directory (if not done already):
 
 ```
@@ -17,58 +15,52 @@ git clone git@github.com:Helsinki-NLP/OPUS-ingest.git
 git submodule update --init --recursive --remote
 ```
 
-Install pre-requisites tools and libaries. On Ubuntu, it may work to
-just run inside `OPUS-ingest`
+Install prerequisites tools and libraries. On Ubuntu, it may work to
+just run the following command in the root of the repository:
 
 ```
 make install
 ```
 
-
 ## Step 1: Prepare the new corpus
 
 Make a copy of the appropriate template directory, for example, the
-TMX template. Give the OPUS a unciye, short and desriptive name. In
+TMX template. Give the OPUS a unique, short, and descriptive name. In
 this example we simply call the new corpus `MyCorpus`
 
 ```
-cd OPUS-ingest/corpus
-cp -R ../template/tmx MyCorpus
+cp -R templates/tmx corpus/MyCorpus
 ```
 
-Edit the information in the `MyCorpus/Makefile.def` in that new corpus
+Edit the information in the `corpus/MyCorpus/Makefile.def` in that new corpus
 directory. Specify the license, copyrights and any kind of information
 that should appear on the corpus website (including acknowledgements,
 links etc). Make sure that the file still stays a valid GNU Makefile
 and that information can be inserted in the website templates using
 some simple sed commands (no single quotes and other special
-characters that may break it - this is a bit unpredicatable - check
-`OPUS/corpus/Makefile.release` for more details).
+characters that may break it - this is a bit unpredictable - check
+`corpus/Makefile.release` for more details).
 
 Also add the necessary license to the directory (plain text file with the name `LICENSE`).
 
-
 ## Step 2: Add data
 
-Put all the source files (TMX files in the example case) in the `OPUS/corpus/MyCorpus/src` directory.
+Put all the source files (TMX files in the example case) in the `corpus/MyCorpus/src` directory.
 
 ```
 cp *.tmx *.tmx.gz MyCorpus/src/
 ```
 
-
 ## Step 3: Compile the new corpus
 
-
-Make sure that all pre-requisites are installed and available from the
-makefiles. This is not yet very well documented and often very CSC
+Make sure that all prerequisites are installed and available from the
+Makefiles. This is not yet very well documented and often very CSC
 specific. On `puhti` it may be sufficient to load the NLPL modules:
 
 ```
 module use -a /projappl/nlpl/software/modules/etc
 module load parallel git nlpl-cwb nlpl-opus nlpl-moses
 ```
-
 After that compile and publish the corpus. (Note that you need
 permissions to the release directory, see `OPUSRELEASE` in
 [corpus/Makefile.def](https://github.com/Helsinki-NLP/OPUS-ingest/blob/master/corpus/Makefile.def).
@@ -116,7 +108,6 @@ releases/corpusname/version/smt ....... word alignments and extracted phrase tra
 releases/corpusname/version/dic ....... a rough dictionary extracted from word alignment
 ~~~
 
-
 Publishing also includes the generation of
 websites and sample files to be placed on the OPUS web
 server. Those files are located in `public_html/`.
@@ -127,9 +118,6 @@ public_html/corpusname-version.php
 public_html/corpusname/version/*.html
 ~~~
 
-
-
-
 Statistics about all bitexts will also be produced and stored together with info files
 in the release directory:
 
@@ -138,8 +126,6 @@ releases/corpusname/info.yaml
 releases/corpusname/version/info.yaml
 releases/corpusname/version/statistics.yaml
 ~~~
-
-
 
 ## Step 4: Release the corpus
 
@@ -164,31 +150,28 @@ copy the website and corpus sample files to the public OPUS web
 server. It also copies the CWB index files if they have been created
 (for on-line corpus search).
 
-
-
 # Template-specific information
 
-
-## template/text
-
-todo
-
-## template/moses
+## templates/moses
 
 todo
 
-## template/tmx
+## templates/opusrr
 
 todo
 
-## template/multi-tmx
+## templates/text
 
 todo
 
-## template/pivot-tmx
+## templates/tmx
 
 todo
 
-## template/opusrr
+## templates/multi-tmx
+
+todo
+
+## templates/pivot-tmx
 
 todo

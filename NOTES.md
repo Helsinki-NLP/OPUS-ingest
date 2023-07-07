@@ -1,10 +1,7 @@
-
-
 # Sentence splitter
 
 * https://pypi.org/project/icu-tokenizer/
 * https://pypi.org/project/mosestokenizer/
-
 
 # Alternative tokenizer
 

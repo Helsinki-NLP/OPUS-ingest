@@ -1,6 +1,4 @@
-
 # OPUS - a collection of parallel corpora and tools
-
 
 ## Structure of the repository
 
@@ -11,15 +9,12 @@
 * `templates`: template recipes for importing additional data sets
 * `tools`: some additional scripts and tools (mostly obsolete)
 
-
 ## Submodules and generated files
 
 * `releases`: released data files (submodule OPUS)
 * `public_html`: websites and data sample files (submodule OPUS-website)
 * `admin`: administration stuff (non-public git repository OPUS-admin)
 * `cwb`: Corpus Workbench index files and registers (generated)
-
-
 
 ## Pre-requisites
 
@@ -30,7 +25,6 @@
 * Moses and eflomal (optional for word alignment and phrase table extraction)
 * the corpus work bench (CWB) and cwb Perl modules (optional for cwb index generation)
 * optional: yasa (our fork from https://github.com/Helsinki-NLP/yasa)
-
 
 ## Installation and setup
 
@@ -43,7 +37,6 @@ make install
 
 The last step will most likely fail. Check error messages and the Makefile for details.
 
-
 ## Documentation
 
 NOTE: The documentation belowe requires serious updates!
@@ -51,7 +44,6 @@ NOTE: The documentation belowe requires serious updates!
 * [Creating a new corpus](doc/create-corpus.md)
 * [Updating corpora](doc/update-corpus.md)
 * [Word alignment](doc/wordalign.md)
-
 
 ## TODO
 
@@ -64,4 +56,4 @@ NOTE: The documentation belowe requires serious updates!
 * more frequent corpus updates (Tatoeba, wikimedia and other frequently changing corpora)
 * streamline corpus creation, processing and maintenance procedures
 * improve integration/updates of OPUS-API and website updates
-* ...
+* …

@@ -1,12 +1,8 @@
-
 URL          = http://launchpadlibrarian.net/181516986/ubuntu-utopic-translations.tar.gz
 DISTRIBUTION = rosetta-utopic
 
-
 .PHONY: all
 all: ${DISTRIBUTION}
-
-
 
 ${DISTRIBUTION}:
 	wget $(URL)

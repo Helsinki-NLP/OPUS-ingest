@@ -1,7 +1,5 @@
-
 include ../Makefile.def
 include Makefile.def
-
 
 ## dummy dir (log) to avoid expensive find each time make is called
 ##
@@ -17,13 +15,10 @@ ALIGNPO = ${TOOLS}/align-po
 SRC=de
 TRG=fi
 
-
 ALGFILES = $(patsubst %.po,xml/$(SRC)-$(TRGXX)/%.xml.gz,\
 	   $(shell find $(SRCDIR)/$(SRC) $(SRCDIR)/$(TRGXX) -name '*.po' -exec basename {} \; | sort | uniq -c | grep '^ *2 ' | sed 's/^ *2 //'))
 
 ENGFILES = $(patsubst ${SRCDIR}/fr/%,${SRCDIR}/en/%,$(shell find ${SRCDIR}/fr -name '*.po'))
-
-
 
 .PHONY: corpus
 corpus:
@@ -33,18 +28,14 @@ corpus:
 	${MAKE} annotate
 	rm -fr data
 
-
 .PHONY: all
 all: corpus
 	${MAKE} web-corpus
-
 
 .PHONY: web-corpus
 web-corpus: html-local
 # web-corpus: tmx moses alg_samples html
 #	${MAKE} cwb-index
-
-
 
 .PHONY: all-align
 all-align: english
@@ -56,12 +47,10 @@ all-align: english
 	  done; \
 	done
 
-
-
 ## dummy files for English (taken from the French localization files)
 
 .PHONY: english convert-english
-english: 
+english:
 	${MAKE} SRCDIR=src/rosetta-utopic convert-english
 
 convert-english: ${ENGFILES}
@@ -69,10 +58,8 @@ convert-english: ${ENGFILES}
 ${ENGFILES}: ${SRCDIR}/en/%: ${SRCDIR}/fr/%
 	${PO2EN} $< $@
 
-
 .PHONY: align
 align: ${ALGFILES}
-
 
 ${ALGFILES}: xml/$(SRC)-$(TRG)/%.xml.gz: $(SRCDIR)/$(SRC)/LC_MESSAGES/%.po $(SRCDIR)/$(TRG)/LC_MESSAGES/%.po
 	mkdir -p $(dir $@)
@@ -80,15 +67,13 @@ ${ALGFILES}: xml/$(SRC)-$(TRG)/%.xml.gz: $(SRCDIR)/$(SRC)/LC_MESSAGES/%.po $(SRC
 	mkdir -p $(dir $(patsubst xml/$(SRC)-$(TRG)/%,raw/$(TRG)/%,$@))
 	${PO2XCES} $^ $(@:.gz=) \
 	  	$(patsubst xml/$(SRC)-$(TRG)/%.xml.gz,raw/$(SRC)/%.xml,$@) \
-	  	$(patsubst xml/$(SRC)-$(TRG)/%.xml.gz,raw/$(TRG)/%.xml,$@) 
+	  	$(patsubst xml/$(SRC)-$(TRG)/%.xml.gz,raw/$(TRG)/%.xml,$@)
 	if [ -s $(@:.gz=) ]; then \
 	  sed 's#raw/##g' < $(@:.gz=) | gzip -c > $@; \
 	fi
 	rm -f $(@:.gz=)
 	-gzip -f $(patsubst xml/$(SRC)-$(TRG)/%.xml.gz,raw/$(SRC)/%.xml,$@)
 	-gzip -f $(patsubst xml/$(SRC)-$(TRG)/%.xml.gz,raw/$(TRG)/%.xml,$@)
-
-
 
 # include some standard OPUS targets for processing/annotating data
 
