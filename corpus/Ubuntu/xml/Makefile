@@ -1,6 +1,4 @@
 # -*-makefile-*-
-#
-
 
 include ../Makefile.def
 

@@ -1,6 +1,6 @@
 # -*-makefile-*-
 #
-# template for converting aligned parallel corpora 
+# template for converting aligned parallel corpora
 # in TMX format (sentence aligned plain text) to OPUS
 #
 # - assumes that opus-tools are installed (moses2opus in PATH)
@@ -10,7 +10,6 @@
 # - change the include of preprocessing Makefiles if necessary
 #   (Makefile.tag for PoS tagging or Makefile.annotate)
 #
-
 
 include Makefile.def
 include ../Makefile.def
@@ -37,7 +36,6 @@ all:
 #	${MAKE} extra
 	${MAKE} publish
 
-
 .PHONY: import
 import:
 	${MAKE} convert
@@ -49,7 +47,6 @@ extra:
 	${MAKE} udparse
 	${MAKE} wordalign
 	${MAKE} cwb-index
-
 
 ## standard procedures are specified in the following makefiles
 ##
@@ -92,7 +89,7 @@ BASIC_FILTERS = | perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFF
 .PHONY: convert
 convert: ${TMXDONE} ${TMXGZDONE}
 	${MAKE} xml/Makefile
-	-mv -f raw/*-* xml/ 
+	-mv -f raw/*-* xml/
 
 
 ## - do some basic tidying up to avoid problems

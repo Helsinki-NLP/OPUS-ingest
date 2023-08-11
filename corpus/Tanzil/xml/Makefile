@@ -1,7 +1,6 @@
 # -*-makefile-*-
 #
 
-
 include ../Makefile.def
 include ../../Makefile.def
 
@@ -17,5 +16,3 @@ include ../../Makefile.html
 corpus: create-align-files
 
 web-corpus: moses tmx
-
-

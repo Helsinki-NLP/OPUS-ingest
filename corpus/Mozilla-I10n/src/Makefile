@@ -10,7 +10,6 @@ PWD := ${shell pwd}
 
 TMX2OPUS = ${HOME}/perl5/bin/tmx2opus
 
-
 TMXFILES = ${shell find . -name '*.tmx'}
 
 ## use the fast local-scratch partition if available
@@ -20,15 +19,14 @@ endif
 
 
 .PHONY: all
-all: 
+all:
 	${MAKE} fetch
 	${MAKE} convert
 	${MAKE} -C .. xml/Makefile
-	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/ 
+	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/
 	${MAKE} pivoting
 	${MAKE} deduplicate
-	-mv -f *-*.xml.gz ${CORPUSXML}/ 
-
+	-mv -f *-*.xml.gz ${CORPUSXML}/
 
 .PHONY: fetch
 fetch: mt-training-data
@@ -36,13 +34,9 @@ fetch: mt-training-data
 mt-training-data:
 	git clone https://github.com/mozilla-l10n/mt-training-data.git
 
-
 .PHONY: convert
 convert: ${CORPUSRAW}
 	echo "done!"
-
-
-
 
 # PIVOT = en_us
 PIVOT = en
@@ -113,4 +107,3 @@ ${CORPUSRAW}: ${TMXFILES}
 	  perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' |\
 	  ${TMX2OPUS} -u -d -t ${TMPDIR} -o mozilla-i10n-${VERSION}.xml.gz )
 	touch ${CORPUSRAW}
-

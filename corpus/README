@@ -1,11 +1,8 @@
-
-
 ===============================================
 This is the home directory of the OPUS corpora
 ===============================================
 
-
-EMEA .......... European Medicinces Agency corpus
+EMEA .......... European Medicines Agency corpus
 EUconst ....... the (dismissed) Constitution of the EU
 Europarl3 ..... Europarl (version 3)
 KDE4 .......... KDE4 system messages (localization data)
@@ -20,12 +17,8 @@ TEP ........... Teheran English-Persian Parallel Corpus
 
 example ....... small example corpus
 
-
-
-
 How to add a new corpus
 -----------------------
-
 
 1) make a copy of the <template> directory for your new corpus
 
@@ -39,9 +32,9 @@ How to add a new corpus
 
    You can specify how to fetch data from the web or how to convert data files
    from other formats in MyCorpus/src/Makefile. Important is that all files
-   need to be in gzipped plain text format and Unicode UTF8. They also need 
-   to be in language-specific sub-directories and parallel documents need 
-   to have the same name and path (except for the language directory). 
+   need to be in gzipped plain text format and Unicode UTF8. They also need
+   to be in language-specific sub-directories and parallel documents need
+   to have the same name and path (except for the language directory).
    For example,
 
    MyCorpus/src/en/path/to/document1.txt.gz
@@ -58,7 +51,7 @@ How to add a new corpus
 
    Please, use ISO639 2-letter-codes for the language directories.
    You may also use other formats for the source documents but then you need
-   to change the make procedures for converting, see 
+   to change the make procedures for converting, see
       MyCorpus/Makefile
       Makefile.preprocess
       Makefile.def
@@ -84,7 +77,7 @@ Troubleshooting
   - make sure you have all the tools necessary for the languages you work with
   - make sure that all these tools work in isolation (maybe you need to
     re-compile some of them?)
-  - make sure you have all the necessary permissions for accessing 
+  - make sure you have all the necessary permissions for accessing
     data, directories and tools
   - check if your source files exist and have the correct character encoding
 
@@ -95,7 +88,7 @@ Troubleshooting
   - make sure that parallel documents have identical names (and paths)
 
 
-* Make sure to run on 64-bit machines 
+* Make sure to run on 64-bit machines
   (some tools are compiled for 64bit architectures only!)
 
 
@@ -108,10 +101,10 @@ Making a new corpus in another directory (your own working directory)
 
    mkdir OPUS
 
-   IMPORTANT! Use exactly this name because some path operations will 
-   depend on it! 
+   IMPORTANT! Use exactly this name because some path operations will
+   depend on it!
 
-2) link the 'tools' and 'lang' directory to your OPUS home 
+2) link the 'tools' and 'lang' directory to your OPUS home
 
    cd OPUS
    ln -s /path/to/original/OPUS/tools .
@@ -125,5 +118,3 @@ Making a new corpus in another directory (your own working directory)
    cp -R /path/to/original/OPUS/corpus/example MyCorpus
 
 4) do the steps from above ("How to add a new corpus") starting with step (2)
-
-

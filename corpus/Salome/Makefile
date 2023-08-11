@@ -1,6 +1,6 @@
 # -*-makefile-*-
 #
-# template for converting aligned parallel corpora 
+# template for converting aligned parallel corpora
 # in MOSES format (sentence aligned plain text) to OPUS
 #
 # - assumes that there are plain text files in src/
@@ -34,8 +34,6 @@ CONVERTED = ${patsubst %,%_done,${FILES}}
 ## - udparse (parse with UDPipe)
 ## - publish (various packages, cwb index, website etc)
 ## - wordalign
-
-
 
 .PHONY: all
 all:
@@ -134,4 +132,3 @@ ${CONVERTED}:
 	  done \
 	done
 	touch $@
-

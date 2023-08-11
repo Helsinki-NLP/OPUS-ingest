@@ -38,7 +38,7 @@ if args.polyglot:
     polyglot = True
 # elif language in supportedLangs:
 elif language in mosesLangs:
-    print('Use mosestokenizer!', file=sys.stderr)    
+    print('Use mosestokenizer!', file=sys.stderr)
     tokenizer = MosesTokenizer(language)
 elif language == 'ko':
     print('Use MeCab-ko!', file=sys.stderr)
@@ -60,10 +60,9 @@ def start_element(name, attrs):
     global sentCount
     global sentID
     global wordID
-    if inSent:
-        if sentStr:
-            tokenize_text(sentStr)
-            sentStr = ''
+    if inSent and sentStr:
+        tokenize_text(sentStr)
+        sentStr = ''
     if name == 's':
         inSent = True
         sentCount += 1
@@ -84,16 +83,15 @@ def end_element(name):
     global inSent
     global sentStr
     global sentID
-    global wordID    
-    if inSent:
-        if sentStr:
-            if polyglot:
-                tokenize_polyglot(sentStr,language)
-            elif mecab:
-                tokenize_mecab(sentStr)
-            else:
-                tokenize_text(sentStr)
-            sentStr = ''
+    global wordID
+    if inSent and sentStr:
+        if polyglot:
+            tokenize_polyglot(sentStr,language)
+        elif mecab:
+            tokenize_mecab(sentStr)
+        else:
+            tokenize_text(sentStr)
+        sentStr = ''
     if name == 's':
         inSent = False
     writer.endElement(name)
@@ -122,7 +120,6 @@ def tokenize_polyglot(text,lang):
     global sentID
     global wordID
     writer.characters("\n")
-    # textobj = Text(text)
     textobj = Text(text, hint_language_code=lang)
     for t in textobj.words:
         wordID+=1
@@ -147,8 +144,8 @@ def tokenize_mecab(text):
 
 inSent    = False
 sentStr   = ''
-sentID    = '';
-sentCount = 0;
+sentID    = ''
+sentCount = 0
 wordID    = 0
 
 parser.StartElementHandler = start_element

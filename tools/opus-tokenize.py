@@ -31,10 +31,9 @@ def start_element(name, attrs):
     global sentCount
     global sentID
     global wordID
-    if inSent:
-        if sentStr:
-            tokenize_text(sentStr)
-            sentStr = ''
+    if inSent and sentStr:
+        tokenize_text(sentStr)
+        sentStr = ''
     if name == 's':
         inSent = True
         sentCount += 1
@@ -55,11 +54,10 @@ def end_element(name):
     global inSent
     global sentStr
     global sentID
-    global wordID    
-    if inSent:
-        if sentStr:
-            tokenize_text(sentStr)
-            sentStr = ''
+    global wordID
+    if inSent and sentStr:
+        tokenize_text(sentStr)
+        sentStr = ''
     if name == 's':
         inSent = False
     writer.endElement(name)
@@ -87,8 +85,8 @@ def tokenize_text(text):
 
 inSent    = False
 sentStr   = ''
-sentID    = '';
-sentCount = 0;
+sentID    = ''
+sentCount = 0
 wordID    = 0
 
 parser.StartElementHandler = start_element

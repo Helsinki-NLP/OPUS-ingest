@@ -4,14 +4,13 @@ import argparse
 import xml.parsers.expat
 from mosestokenizer import MosesTokenizer
 from xml.sax.saxutils import XMLGenerator
-from xml.sax.xmlreader import AttributesNSImpl
 import sys
 
 import polyglot
-from polyglot.text import Text, Word
+from polyglot.text import Text
 
 
-supportedLangs = ["as","bn","ca","cs","de","el","en","es","et","fi","fr","ga","gu","hi","hu","is","it","kn","lt","lv","ml","ni","mr","nl","or","pa","pl","pt","ro","ru","sk","sl","sv","ta","te","ue","zh"]
+supportedLangs = ["as", "bn", "ca", "cs", "de", "el", "en", "es", "et", "fi", "fr", "ga", "gu", "hi" ,"hu", "is", "it", "kn", "lt", "lv", "ml", "ni", "mr", "nl", "or", "pa", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "ta", "te", "ue", "zh"]
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-l", "--language", type=str, default="en", help="Language to be tokenized (ISO-639-1 landuage code)")
@@ -37,10 +36,9 @@ def start_element(name, attrs):
     global sentCount
     global sentID
     global wordID
-    if inSent:
-        if sentStr:
-            tokenize_text(sentStr)
-            sentStr = ''
+    if inSent and sentStr:
+        tokenize_text(sentStr)
+        sentStr = ''
     if name == 's':
         inSent = True
         sentCount += 1
@@ -61,14 +59,13 @@ def end_element(name):
     global inSent
     global sentStr
     global sentID
-    global wordID    
-    if inSent:
-        if sentStr:
-            if polyglot:
-                tokenize_polyglot(sentStr,language)
-            else:
-                tokenize_text(sentStr)
-            sentStr = ''
+    global wordID
+    if inSent and sentStr:
+        if polyglot:
+            tokenize_polyglot(sentStr, language)
+        else:
+            tokenize_text(sentStr)
+        sentStr = ''
     if name == 's':
         inSent = False
     writer.endElement(name)
@@ -97,7 +94,6 @@ def tokenize_polyglot(text,lang):
     global sentID
     global wordID
     writer.characters("\n")
-    # textobj = Text(text)
     textobj = Text(text, hint_language_code=lang)
     for t in textobj.words:
         wordID+=1
@@ -110,8 +106,8 @@ def tokenize_polyglot(text,lang):
 
 inSent    = False
 sentStr   = ''
-sentID    = '';
-sentCount = 0;
+sentID    = ''
+sentCount = 0
 wordID    = 0
 
 parser.StartElementHandler = start_element
