@@ -1,0 +1,29 @@
+# -*-makefile-*-
+#
+
+
+SHELL              := bash
+
+# name & version of the corpus
+
+CORPUS             := NLLB
+VERSION            := v1
+SOURCE_URL         := https://huggingface.co/datasets/allenai/nllb
+UNSORTED_SENTALIGN := 1
+SKIP_TMX_UNIQ      := 1
+
+LICENSE = <a href="https://opendatacommons.org/licenses/by/1-0/">ODC-By</a>
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML = <p>This dataset was created based on <a href="https://github.com/facebookresearch/fairseq/tree/nllb">metadata</a> for mined bitext released by Meta AI.  It contains bitext for 148 English-centric and 1465 non-English-centric language pairs using the stopes mining library and the LASER3 encoders (Heffernan et al., 2022). The complete dataset is ~450GB.</p><p>This release is based on the data package released at <a href="https://huggingface.co/datasets/allenai/nllb">huggingface</a> through AllenAI. More information about instances for each language pair in the original data can be found in the <a href="https://huggingface.co/datasets/allenai/nllb/blob/main/dataset_infos.json">dataset_infos.json</a> file. Data was filtered based on language identification, emoji based filtering, and for some high-resource languages using a language model. For more details on data filtering please refer to Section 5.2 (NLLB Team et al., 2022). This release also includes <a href="CCMatrix.php">data from CCMatrix</a> for language pairs that are not updated in NLLB.</p>
+
+EXTRAHTML = <p>Mappings between the original NLLB language IDs and OPUS language IDs can be found in <a href="${CORPUS}/${VERSION}/nllb-langid-mapping.txt">this table</a>. The sentence alignments include LASER3 scores (see XCES align files), language ID scores, source information and URLs from where the data has been extracted (see language XML files).</p>
+
+
+CITENOTE = Please, cite the following papers: \
+<ul><li>Holger Schwenk, Guillaume Wenzek, Sergey Edunov, Edouard Grave, Armand Joulin and Angela Fan, <a href="https://arxiv.org/abs/1911.04944">CCMatrix: Mining Billions of High-Quality Parallel Sentences on the WEB</a></li>\
+<li>Angela Fan, Shruti Bhosale, Holger Schwenk, Zhiyi Ma, Ahmed El-Kishky, Siddharth Goyal, Mandeep Baines, Onur Celebi, Guillaume Wenzek, Vishrav Chaudhary, Naman Goyal, Tom Birch, Vitaliy Liptchinsky, Sergey Edunov, Edouard Grave, Michael Auli, and Armand Joulin. <a href="https://arxiv.org/abs/2010.11125">Beyond English-Centric Multilingual Machine Translation</a></li><li>NLLB Team et al., <a href="https://arxiv.org/abs/2207.04672, 2022">No Language Left Behind: Scaling Human-Centered Machine Translation</a>, <a href="https://arxiv.org/abs/2207.04672, 2022">Arxiv https://arxiv.org/abs/2207.04672, 2022</a>.</li></ul> \
+and also acknowledge OPUS for the service provided here by citing <a href="https://www.aclweb.org/anthology/L12-1246/">Jörg Tiedemann, <it>Parallel Data, Tools and Interfaces in OPUS</it></a> (<a href="https://www.aclweb.org/anthology/L12-1246.bib">bib</a>, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf">pdf</a>)

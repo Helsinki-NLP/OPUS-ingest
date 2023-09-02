@@ -236,6 +236,25 @@ else
   INFOFILES         = ${STANDARD_INFOFILES}
 endif
 
+
+## skip all XML and derived files (basically just leaving moses and TMX)
+
+ifdef SKIP_XML_FILES
+  SELECTED_PACKAGES = $(MOSES) $(TMX)
+  INFOFILES = ${TXT_INFO} ${TMX_INFO}
+endif
+
+
+## skip tokenized files
+## TODO: reduced packages for corpora with many languages!
+## TODO: ces_info and lang_info are not correct
+##       check that opus-bitextsize works as it should also with untokenized files
+
+ifdef SKIP_TOKENIZATION
+  SELECTED_PACKAGES = ${ALG} ${LANG_RAW} ${MONO_RAW} $(MOSES) $(TMX)
+endif
+
+
 show-nrof-packages:
 	echo "nr of packages in release: $(words ${SELECTED_PACKAGES})"
 
@@ -746,7 +765,6 @@ freq_counts: ${FREQ_COUNTS}
 ${CORPUSRELEASE}/freq/%.freq.gz: ${CORPUSRELEASE}/mono/%.tok.gz
 	@${MKDIR} ${dir $@}
 	${GZCAT} $< | \
-	sed "s/\(.*\)/\L\1/" |\
 	tr ' ' "\n" | \
 	${SORT} | uniq -c | ${SORT} -nr | \
 	${GZIP} -c > $@
@@ -754,12 +772,23 @@ ${CORPUSRELEASE}/freq/%.freq.gz: ${CORPUSRELEASE}/mono/%.tok.gz
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
 
-#	${PARALLEL} sed "s/\(.*\)/\L\1/" |\
+## Do we want to lower case all text?
+## (counts before Aug 26, 2023 lower-cased everything before counting)
+## --> but that can lead to some strange results
+
+## lower-case only first character
+##
+#	sed "s/^\(.\)/\L\1/" |\
+
+## use parallel to speed up (does this work?
+##
+#	${PARALLEL} sed "s/^\(.*\)$$/\L\1/" |\
 #	${PARALLEL} tr ' ' "\n" | 
 
-
 ## not good enough for unicode:
-##	tr '[:upper:]' '[:lower:]'
+#
+#	tr '[:upper:]' '[:lower:]'
+
 
 #----------------------------------------------------------------------------
 # alignment sample files
@@ -1094,22 +1123,34 @@ info-files: lang_info ces_info txt_info tmx_info
 
 lang_info: ${LANG_INFO}
 
+
+## if we skip tokenisation, then do a very simple word count
+
+ifdef SKIP_TOKENIZATION
+
+${LANG_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/raw/%.zip
+	${MKDIR} ${dir $@}
+	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSRAW}/%,$@}/ -name '*.${XMLEXT}' -type f | \
+	wc -l > $@
+	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSRAW}/%,$@}/ -name '*.${XMLEXT}' -type f | \
+	xargs ${GZCAT} | grep '</s>' | wc -l >> $@
+	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSRAW}/%,$@}/ -name '*.${XMLEXT}' -type f | \
+	xargs ${GZCAT} | sed 's/<[^>]*>//g' | wc -w >> $@
+	chmod 644 $@
+
+else
+
 ${LANG_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/raw/%.zip ${CORPUSRELEASE}/xml/%.zip
 	${MKDIR} ${dir $@}
-	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSXML}/%,$@}/ -name '*.${XMLEXT}' -type f | \
+	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSRAW}/%,$@}/ -name '*.${XMLEXT}' -type f | \
 	wc -l > $@
-	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSXML}/%,$@}/ -name '*.${XMLEXT}' -type f | \
+	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSRAW}/%,$@}/ -name '*.${XMLEXT}' -type f | \
 	xargs ${GZCAT} | grep '</s>' | wc -l >> $@
 	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSXML}/%,$@}/ -name '*.${XMLEXT}' -type f | \
 	xargs ${GZCAT} | grep '</w>' | wc -l >> $@
 	chmod 644 $@
 
-# ${LANG_INFO}: ${CORPUSXML}/%.info: ${CORPUSXML}/%
-# 	find $</ -name '*.xml.gz' -type f | wc -l > $@
-# 	find $</ -name '*.xml.gz' -type f | \
-# 	xargs ${GZCAT} | grep '</s>' | wc -l >> $@
-# 	find $</ -name '*.xml.gz' -type f | \
-# 	xargs ${GZCAT} | grep '</w>' | wc -l >> $@
+endif
 
 
 ces_info: ${CES_INFO}
@@ -1118,6 +1159,16 @@ ces_info_file: ${CORPUSRELEASE}/info/${LANGPAIR}.info
 ces_src_info:
 	@echo ${CES_SRC_INFO}
 
+
+ifdef SKIP_TOKENIZATION
+
+${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/raw/%.xml.gz
+	mkdir -p ${dir $@}
+	${GZCAT} $< | opus-bitextsize -d ${CORPUSRAW} > $@
+	chmod 644 $@
+
+else
+
 ## NEW: use opus-bitextsize to get those counts
 ## NEW: create word count files to make it more efficient
 ${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/xml/%.xml.gz log/.bitext-word-counts
@@ -1125,6 +1176,8 @@ ${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/xml/%.xml.gz log/.bi
 	${GZCAT} $< |\
 	opus-bitextsize -d ${CORPUSXML} > $@
 	chmod 644 $@
+
+endif
 
 ## make word count files for each corpus file
 ## if we don't have too many (>=10000) of them
@@ -1136,10 +1189,21 @@ log/.bitext-word-counts:
 	fi
 	touch $@
 
+
 ## safe word counts to support making info files above
 ${CORPUSXML}/%.counts.gz: ${CORPUSXML}/%.xml.gz
 	@mkdir -p ${dir $@}
 	${GZIP} -cd < $< | opus-countwords | grep . | gzip -c > $@
+
+
+log/.bitext-word-count-dbs:
+	  find ${CORPUSXML} -mindepth 2 -name '*.counts.gz' | \
+	  sed 's/\.counts\.gz$$/.cdb/' | \
+	  xargs -P ${THREADS} ${MAKE}; \
+
+${CORPUSXML}/%.cdb: ${CORPUSXML}/%.counts.gz
+	${GZCAT} $< |\
+	perl ~/research/OpusTools-perl/scripts/admin/opus-tsv2cdb $@
 
 
 txt_info: ${TXT_INFO}

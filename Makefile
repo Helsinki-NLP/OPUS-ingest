@@ -55,3 +55,19 @@ install-subalign: subalign
 
 OPUS-admin:
 	git clone git@github.com:Helsinki-NLP/OPUS-admin.git
+
+
+
+YEAR ?= $(shell date +%Y)
+
+doc/released-${YEAR}.txt:
+	find OPUS/corpus -name info.yaml | sort | \
+	xargs egrep -H 'release date:.* ${YEAR}$$' -A10 |\
+	egrep '(release date:|sentences:|tokens:|translation units:|\-\-)' |\
+	sed 's#OPUS/corpus/##' | sed 's#/info.yaml.#	#' | tr '/' "\t" > $@
+
+doc/released-fall-2022.txt:
+	find OPUS/corpus -name info.yaml | sort | \
+	xargs egrep -H 'release date:.* (Sep|Oct|Nov|Dec).*2022$$' -A10 |\
+	egrep '(release date:|sentences:|tokens:|translation units:|\-\-)' |\
+	sed 's#OPUS/corpus/##' | sed 's#/info.yaml.#	#' | tr '/' "\t" > $@

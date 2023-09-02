@@ -1,0 +1,69 @@
+ALT	v2019	release date: Thu Feb 16 08:55:49 EET 2023
+ALT	v2019	sentences: 36292
+ALT	v2019	tokens: 1276576
+ALT	v2019	translation units: 18086
+--
+Anuvaad	v1	release date: Fri Jan 13 13:18:50 EET 2023
+Anuvaad	v1	sentences: 37015993
+Anuvaad	v1	tokens: 1074343894
+Anuvaad	v1	translation units: 16037705
+--
+ECDC	v2016-03-16	release date: Fri Jan 13 11:37:59 EET 2023
+ECDC	v2016-03-16	sentences: 65844
+ECDC	v2016-03-16	tokens: 1087269
+ECDC	v2016-03-16	translation units: 665432
+--
+FFR	v2	release date: Fri Jan 13 14:36:38 EET 2023
+FFR	v2	sentences: 164268
+FFR	v2	tokens: 1122181
+FFR	v2	translation units: 77978
+--
+GoURMET	v2	release date: Fri Mar 10 00:50:54 EET 2023
+GoURMET	v2	sentences: 5227445
+GoURMET	v2	tokens: 159930532
+GoURMET	v2	translation units: 1818561
+--
+JESC	v2019-12-05	release date: Thu Jan 19 10:48:49 EET 2023
+JESC	v2019-12-05	sentences: 5598453
+JESC	v2019-12-05	tokens: 48166553
+JESC	v2019-12-05	translation units: 0
+--
+KFTT	v1.0	release date: Thu Jan 19 09:39:09 EET 2023
+KFTT	v1.0	sentences: 888331
+KFTT	v1.0	tokens: 22601165
+KFTT	v1.0	translation units: 428915
+--
+LinguaTools-WikiTitles	v2014	release date: Fri Jan 13 16:30:19 EET 2023
+LinguaTools-WikiTitles	v2014	sentences: 978553420
+LinguaTools-WikiTitles	v2014	tokens: 2438993530
+LinguaTools-WikiTitles	v2014	translation units: 474682581
+--
+NeuLab-TedTalks	v1	release date: Wed Jan 18 12:13:54 EET 2023
+NeuLab-TedTalks	v1	sentences: 6448186
+NeuLab-TedTalks	v1	tokens: 108233564
+NeuLab-TedTalks	v1	translation units: 72354431
+--
+Nunavut_Hansard	v3.0.1	release date: Fri Jan 13 15:51:25 EET 2023
+Nunavut_Hansard	v3.0.1	sentences: 2739661
+Nunavut_Hansard	v3.0.1	tokens: 31883159
+Nunavut_Hansard	v3.0.1	translation units: 771115
+--
+ParIce	v1	release date: Wed Jan 18 13:55:42 EET 2023
+ParIce	v1	sentences: 4340994
+ParIce	v1	tokens: 73643639
+ParIce	v1	translation units: 1496644
+--
+StanfordNLP-NMT	v1.0	release date: Thu Jan 19 13:55:20 EET 2023
+StanfordNLP-NMT	v1.0	sentences: 42375047
+StanfordNLP-NMT	v1.0	tokens: 724860176
+StanfordNLP-NMT	v1.0	translation units: 11207362
+--
+Tatoeba	v2023-04-12	release date: Thu Apr 13 00:14:25 EEST 2023
+Tatoeba	v2023-04-12	sentences: 11561057
+Tatoeba	v2023-04-12	tokens: 86505851
+Tatoeba	v2023-04-12	translation units: 8513233
+--
+wikimedia	v20230407	release date: Thu Apr 13 05:45:13 EEST 2023
+wikimedia	v20230407	sentences: 53034210
+wikimedia	v20230407	tokens: 1482496900
+wikimedia	v20230407	translation units: 21385243
