@@ -77,7 +77,7 @@ sub read_releases_file{
 	my ($version,$date) = split(/\t/);
 	$info{$version}{'release date'} = $date;
 	$GeneralInfo{releases}{$version} = $date;
-	$GeneralInfo{'latest release'} = $version;
+	$GeneralInfo{'latest_release'} = $version;
     }
     close F;
 }
@@ -97,6 +97,21 @@ sub read_readme_file{
 	if (/^\s*Corpus Name:\s+(.*)$/){
 	    $info{$version}{name} = $1;
 	    $GeneralInfo{name} = $1;
+	}
+	
+	## the following is very ad-hoc and may break in the future
+	if (/^OPUS Website:/){
+	    <F>;
+	    $_ = <F>;
+	    if (/\s+cite\s+/){
+		$GeneralInfo{cite} = $_;
+		<F>;
+		$_ = <F>;
+	    }
+	    $GeneralInfo{description} = $_;
+	    if ($_ = <F>){
+		$GeneralInfo{description} .= $_;
+	    }
 	}
     }
     $GeneralInfo{website}=~s/\-[^\-]*?\.php/.php/ if (exists $GeneralInfo{website});
