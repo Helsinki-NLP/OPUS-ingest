@@ -137,11 +137,6 @@ cleanup:
 TXT2XML = ../scripts/txt2xml_with_metadata.pl
 
 
-## remove control characters, leading and trailing spaces and some other stuff
-
-UNICODE_CLEANUP = perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;s/\&\s*\#\s*160\s*\;/ /g;s/^\s*//;s/\t\s*//g;s/\s*\t//g;s/\s*$$//g;'
-
-
 ## a simple pipeline to convert XML corpus data to tsv files with IDs and sentences
 
 XML_TO_TXT_AND_ID = grep -a '</s>' | cut -f2 -d'<' | sed 's/^s id=\"\([0-9]*\)\".*\">/\1>/' | \
@@ -159,7 +154,7 @@ ${XML_BITEXTS}: ../xml/%.xml.gz: %.bitextf.tsv.gz # ${XML_CORPORA}
 	  ${GZIP} -cd ../raw/$(firstword $(subst -, ,$(<:.bitextf.tsv.gz=)))/${CORPUS}.xml.gz |\
 	  ${XML_TO_TXT_AND_ID} | ${GZIP} -c > $@.mono.gz; \
 	fi
-	zcat $< | cut -f1,2,3 | ${UNICODE_CLEANUP} | ${SORT} -k2,2 -t'	' | ${GZIP} -c > $@.biling.gz
+	${GZCAT} $< | cut -f1,2,3 | ${UNICODE_CLEANUP} | ${SORT} -k2,2 -t'	' | ${GZIP} -c > $@.biling.gz
 	${JOIN} -t'	' -1 2 -2 2 -o 2.1 2.2 2.3 1.1 <(${GZIP} -cd $@.mono.gz) <(${GZIP} -cd $@.biling.gz) |\
 	${GZIP} -c > $@.srcids.gz
 	rm -f $@.mono.gz $@.biling.gz
@@ -169,7 +164,7 @@ ${XML_BITEXTS}: ../xml/%.xml.gz: %.bitextf.tsv.gz # ${XML_CORPORA}
 	  ${GZIP} -cd ../raw/$(lastword $(subst -, ,$(<:.bitextf.tsv.gz=)))/${CORPUS}.xml.gz |\
 	  ${XML_TO_TXT_AND_ID} | ${GZIP} -c > $@.mono.gz; \
 	fi
-	zcat $@.srcids.gz | ${SORT} -k3,3 -t'	' | ${GZIP} -c > $@.biling.gz
+	${GZCAT} $@.srcids.gz | ${SORT} -k3,3 -t'	' | ${GZIP} -c > $@.biling.gz
 	rm -f $@.srcids.gz
 	${JOIN} -t'	' -1 2 -2 3 -o 2.1 2.4 1.1 <(${GZIP} -cd $@.mono.gz) <(${GZIP} -cd $@.biling.gz) |\
 	${SORT} -k1nr | \

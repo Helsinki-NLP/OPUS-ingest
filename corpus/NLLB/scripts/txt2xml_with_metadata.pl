@@ -21,8 +21,8 @@ while (<>){
     encode_entities($key,'<>&');
     encode_entities($source,'<>&"');
     encode_entities($url,'<>&"');
-    $key=~s/^\s*//;
-    $key=~s/\s*$//;
+#    $key=~s/^\s*//;
+#    $key=~s/\s*$//;
 #    print "<s id=\"$id\">$key</s>\n";
     print "<s id=\"$id\" langidscore=\"$langid\" source=\"$source\" url=\"$url\">$key</s>\n";
     print STDERR '.' if (! ($id % 50000));

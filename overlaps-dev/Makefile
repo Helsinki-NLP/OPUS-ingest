@@ -1,6 +1,10 @@
 #---------------------------------------------------------------------
 # compute overlaps between corpora
 #---------------------------------------------------------------------
+#
+# TODO: use some kind LSH for detection duplicates?
+#       https://github.com/ZJaume/gaoya
+#
 
 SHELL := bash
 

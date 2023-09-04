@@ -178,6 +178,10 @@ include ../Makefile.tokenize-polyglot
 # 	echo '</body></html/>' >> $@
 # 	chmod 644 $@
 
+
+
+
+
 # overwrite recipe for creating moses packages
 # --> don't read XML files but use the provided TSV files
 $(MOSES):
@@ -187,7 +191,7 @@ $(MOSES):
 	  BASE=${CORPUS}.$(patsubst %.txt.zip,%,$(notdir $@));\
 	  if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
 	  mkdir -p ${LOCALTMP}; \
-	  zcat src/$(patsubst %.txt.zip,%.bitextf.tsv.gz,$(notdir $@)) | \
+	  ${GZCAT} src/$(patsubst %.txt.zip,%.bitextf.tsv.gz,$(notdir $@)) | ${UNICODE_CLEANUP} |\
 	  tee >(cut -f2 > ${LOCALTMP}/$$BASE.$$S) >(cut -f3 > ${LOCALTMP}/$$BASE.$$T) |\
 	  cut -f1 > ${LOCALTMP}/$$BASE.scores; \
 	  rm -f $@; \
@@ -206,25 +210,25 @@ $(MOSES):
 	chmod 644 $@
 
 
-test-tmx: $(firstword $(TMX))
+# test-tmx: $(firstword $(TMX))
 
-## custom recipe for converting into TMX format: 
-##    don't sort/uniq (already done in plain text format)!
-$(TMX): ${CORPUSRELEASE}/tmx/%.tmx.gz: ${CORPUSRELEASE}/moses/%.txt.zip
-	@${MKDIR} ${dir $@}
-	-( mkdir -p ${LOCALTMP}/tmx; \
-	   cd ${LOCALTMP}/tmx; \
-	   unzip $< -x README INFO LICENSE; \
-	   S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
-	   T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
-	   BASE=${CORPUS}.$(patsubst %.txt.zip,%,$(notdir $<));\
-	   SEXT=$$S; TEXT=$$T; \
-	   if [ "$$SEXT" == "$$TEXT" ]; then SEXT=$${SEXT}1;TEXT=$${TEXT}2; fi; \
-	   paste $$BASE.$$SEXT $$BASE.$$TEXT |\
-	   $(TAB2TMX) -s $$S -t $$T |\
-	   ${GZIP} -c > $@; \
-	   rm -f $$BASE.$$SEXT $$BASE.$$TEXT $$BASE.ids $$BASE.xml; )
-	${MKDIR} ${dir ${PACKAGES}}
-	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
-	chmod 644 $@
+# ## custom recipe for converting into TMX format: 
+# ##    don't sort/uniq (already done in plain text format)!
+# $(TMX): ${CORPUSRELEASE}/tmx/%.tmx.gz: ${CORPUSRELEASE}/moses/%.txt.zip
+# 	@${MKDIR} ${dir $@}
+# 	-( mkdir -p ${LOCALTMP}/tmx; \
+# 	   cd ${LOCALTMP}/tmx; \
+# 	   unzip $< -x README INFO LICENSE; \
+# 	   S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+# 	   T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+# 	   BASE=${CORPUS}.$(patsubst %.txt.zip,%,$(notdir $<));\
+# 	   SEXT=$$S; TEXT=$$T; \
+# 	   if [ "$$SEXT" == "$$TEXT" ]; then SEXT=$${SEXT}1;TEXT=$${TEXT}2; fi; \
+# 	   paste $$BASE.$$SEXT $$BASE.$$TEXT | ${UNICODE_CLEANUP} |\
+# 	   $(TAB2TMX) -s $$S -t $$T |\
+# 	   ${GZIP} -c > $@; \
+# 	   rm -f $$BASE.$$SEXT $$BASE.$$TEXT $$BASE.ids $$BASE.xml; )
+# 	${MKDIR} ${dir ${PACKAGES}}
+# 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+# 	chmod 644 $@
 

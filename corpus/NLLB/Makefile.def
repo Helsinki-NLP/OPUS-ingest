@@ -12,6 +12,7 @@ SOURCE_URL         := https://huggingface.co/datasets/allenai/nllb
 UNSORTED_SENTALIGN := 1
 SKIP_TMX_UNIQ      := 1
 
+
 LICENSE = <a href="https://opendatacommons.org/licenses/by/1-0/">ODC-By</a>
 
 # with SRCHTML you can define some extra HTML code that will be placed just
@@ -27,3 +28,8 @@ CITENOTE = Please, cite the following papers: \
 <ul><li>Holger Schwenk, Guillaume Wenzek, Sergey Edunov, Edouard Grave, Armand Joulin and Angela Fan, <a href="https://arxiv.org/abs/1911.04944">CCMatrix: Mining Billions of High-Quality Parallel Sentences on the WEB</a></li>\
 <li>Angela Fan, Shruti Bhosale, Holger Schwenk, Zhiyi Ma, Ahmed El-Kishky, Siddharth Goyal, Mandeep Baines, Onur Celebi, Guillaume Wenzek, Vishrav Chaudhary, Naman Goyal, Tom Birch, Vitaliy Liptchinsky, Sergey Edunov, Edouard Grave, Michael Auli, and Armand Joulin. <a href="https://arxiv.org/abs/2010.11125">Beyond English-Centric Multilingual Machine Translation</a></li><li>NLLB Team et al., <a href="https://arxiv.org/abs/2207.04672, 2022">No Language Left Behind: Scaling Human-Centered Machine Translation</a>, <a href="https://arxiv.org/abs/2207.04672, 2022">Arxiv https://arxiv.org/abs/2207.04672, 2022</a>.</li></ul> \
 and also acknowledge OPUS for the service provided here by citing <a href="https://www.aclweb.org/anthology/L12-1246/">Jörg Tiedemann, <it>Parallel Data, Tools and Interfaces in OPUS</it></a> (<a href="https://www.aclweb.org/anthology/L12-1246.bib">bib</a>, <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/463_Paper.pdf">pdf</a>)
+
+
+## remove control characters
+
+UNICODE_CLEANUP := perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;s/\&\s*\#\s*160\s*\;/ /g;'

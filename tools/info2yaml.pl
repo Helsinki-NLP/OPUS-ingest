@@ -86,6 +86,7 @@ sub read_readme_file{
     my $file = shift;
     my $version = shift;
     open(F,"<$file") || die "cannot read from $file";
+    binmode(F,":utf8");
 
     my %counts = ();
     while (<F>){
