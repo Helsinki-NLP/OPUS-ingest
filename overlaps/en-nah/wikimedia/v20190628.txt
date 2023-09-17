@@ -4,4 +4,6 @@ Tatoeba	v2020-11-09	70	0/3	0
 Tatoeba	v2021-03-10	70	0/3	0
 Tatoeba	v2021-07-22	70	0/3	0
 Tatoeba	v2022-03-03	70	0/3	0
+Tatoeba	v2023-04-12	70	0/3	0
 wikimedia	v20210402	5	2/3	66.66
+wikimedia	v20230407	80	2/3	66.66

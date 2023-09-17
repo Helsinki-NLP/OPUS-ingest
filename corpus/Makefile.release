@@ -109,6 +109,27 @@ ${OPUSRELEASE}/${CORPUS}/${VERSION}/info.yaml:
 	${OPUSTOOLS}/info2yaml.pl ${OPUSRELEASE}/${CORPUS}
 	cd ${OPUSRELEASE}/${CORPUS} && git add info.yaml ${VERSION}/*.yaml
 
+
+
+LANGMAPPING_FILES = $(patsubst %/statistics.yaml,%/language_mappings.tsv,\
+			$(wildcard ../releases/*/*/statistics.yaml))
+
+lang-mappings: ${LANGMAPPING_FILES}
+
+## create a file for language ID mappings
+%/language_mappings.tsv: %/statistics.yaml
+	@echo "make $@"
+	@rm -f $@
+	@for l in `grep 'mono/.*\.txt.gz' $< | sed 's|^.*/||' | cut -f1 -d. | sort -u`; do \
+	  echo -n "$$l "; \
+	  url=`grep "mono/$$l\.txt.gz" $< | sed 's/^.*url: //'`; \
+	  script=`wget -qq -Q20k -O - $${url} | gzip -cd | head -20 | tr "\n" ' ' | langscript -l $$l -R -3`; \
+	  code=`wget -qq -Q20k -O - $${url} | gzip -cd | head -20 | tr "\n" ' ' | langscript -l $$l -D -r -3`; \
+	  echo "$$l	$${script}	$${code}" >> $@; \
+	done
+	@echo "done!"
+
+
 .PHONY: index-info
 index-info:
 	rm -f ${OPUSRELEASE}/index-info.txt

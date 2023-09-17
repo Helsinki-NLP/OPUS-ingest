@@ -1,0 +1,12 @@
+bible-uedin	v1	15840	0/170	0
+QED	v2.0a	280	0/170	0
+Tatoeba	v20190709	6	0/170	0
+Tatoeba	v2020-05-31	6	0/170	0
+Tatoeba	v2020-11-09	7	1/170	.58
+Tatoeba	v2021-03-10	7	1/170	.58
+Tatoeba	v2021-07-22	7	1/170	.58
+Tatoeba	v2022-03-03	7	1/170	.58
+Tatoeba	v2023-04-12	7	1/170	.58
+Tatoeba	v2	1	0/170	0
+wikimedia	v20190628	70	8/170	4.70
+wikimedia	v20210402	160	160/170	94.11

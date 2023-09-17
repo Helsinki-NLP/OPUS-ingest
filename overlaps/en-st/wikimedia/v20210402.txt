@@ -1,4 +1,7 @@
 CCAligned	v1	905	1/166	.60
 GNOME	v1	21	0/166	0
+MultiCCAligned	v1	905	1/166	.60
+NLLB	v1	1376175	0/166	0
 Ubuntu	v14.10	64	0/166	0
 wikimedia	v20190628	18	3/166	1.80
+wikimedia	v20230407	361	163/166	98.19

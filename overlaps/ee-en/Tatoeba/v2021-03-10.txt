@@ -5,6 +5,8 @@ Tatoeba	v2020-05-31	6	6/7	85.71
 Tatoeba	v2020-11-09	7	7/7	100.00
 Tatoeba	v2021-07-22	7	7/7	100.00
 Tatoeba	v2022-03-03	7	7/7	100.00
+Tatoeba	v2023-04-12	7	7/7	100.00
 Tatoeba	v2	1	0/7	0
 wikimedia	v20190628	70	0/7	0
 wikimedia	v20210402	160	1/7	14.28
+wikimedia	v20230407	170	1/7	14.28

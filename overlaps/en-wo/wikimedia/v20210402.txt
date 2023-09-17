@@ -1,12 +1,16 @@
 bible-uedin	v1	15781	0/13	0
 CCAligned	v1	87941	1/13	7.69
+MultiCCAligned	v1	87942	1/13	7.69
+NLLB	v1	1453358	0/13	0
 Tatoeba	v20190709	4	0/13	0
 Tatoeba	v2020-05-31	7	0/13	0
 Tatoeba	v2020-11-09	8	1/13	7.69
 Tatoeba	v2021-03-10	8	1/13	7.69
 Tatoeba	v2021-07-22	8	1/13	7.69
 Tatoeba	v2022-03-03	8	1/13	7.69
+Tatoeba	v2023-04-12	9	1/13	7.69
 Ubuntu	v14.10	221	0/13	0
+wikimedia	v20230407	21	11/13	84.61
 XLEnt	v1.1	7865	1/13	7.69
 XLEnt	v1.2	7865	1/13	7.69
 XLEnt	v1	7865	1/13	7.69

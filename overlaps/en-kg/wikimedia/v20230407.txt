@@ -1,0 +1,5 @@
+CCAligned	v1	75	1/22	4.54
+GNOME	v1	1712	0/22	0
+MultiCCAligned	v1	75	1/22	4.54
+NLLB	v1	2202147	0/22	0
+Ubuntu	v14.10	427	0/22	0

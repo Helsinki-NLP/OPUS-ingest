@@ -1,0 +1,6 @@
+CCAligned	v1	476	1/94	1.06
+MultiCCAligned	v1	476	1/94	1.06
+NLLB	v1	1241577	3/94	3.19
+QED	v2.0a	2495	0/94	0
+wikimedia	v20190628	141	55/94	58.51
+wikimedia	v20210402	88	87/94	92.55

@@ -6,4 +6,6 @@ Tatoeba	v2020-11-09	228	0/24	0
 Tatoeba	v2021-03-10	228	0/24	0
 Tatoeba	v2021-07-22	228	0/24	0
 Tatoeba	v2022-03-03	228	0/24	0
+Tatoeba	v2023-04-12	228	0/24	0
 Tatoeba	v2	27	0/24	0
+wikimedia	v20210402	1	0/24	0

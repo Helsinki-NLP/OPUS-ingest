@@ -1,4 +1,7 @@
 CCAligned	v1	905	0/21	0
+MultiCCAligned	v1	905	0/21	0
+NLLB	v1	1376175	0/21	0
 Ubuntu	v14.10	64	0/21	0
 wikimedia	v20190628	18	0/21	0
 wikimedia	v20210402	166	0/21	0
+wikimedia	v20230407	361	0/21	0

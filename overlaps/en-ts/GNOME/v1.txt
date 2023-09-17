@@ -1,4 +1,6 @@
 CCAligned	v1	1967	0/360	0
+MultiCCAligned	v1	1967	0/360	0
+NLLB	v1	684225	0/360	0
 QED	v2.0a	572	0/360	0
 Tatoeba	v20190709	3	0/360	0
 Tatoeba	v2020-05-31	3	0/360	0
@@ -6,6 +8,8 @@ Tatoeba	v2020-11-09	4	0/360	0
 Tatoeba	v2021-03-10	4	0/360	0
 Tatoeba	v2021-07-22	4	0/360	0
 Tatoeba	v2022-03-03	4	0/360	0
+Tatoeba	v2023-04-12	4	0/360	0
 Ubuntu	v14.10	451	304/360	84.44
 wikimedia	v20190628	1031	0/360	0
 wikimedia	v20210402	2186	0/360	0
+wikimedia	v20230407	2264	0/360	0

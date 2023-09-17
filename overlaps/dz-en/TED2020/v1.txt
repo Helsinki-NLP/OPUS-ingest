@@ -1,5 +1,7 @@
 GNOME	v1	71	0/151	0
+NLLB	v1	56409	0/151	0
 QED	v2.0a	40	0/151	0
 Ubuntu	v14.10	552	0/151	0
 wikimedia	v20190628	4	0/151	0
 wikimedia	v20210402	5	1/151	.66
+wikimedia	v20230407	5	1/151	.66

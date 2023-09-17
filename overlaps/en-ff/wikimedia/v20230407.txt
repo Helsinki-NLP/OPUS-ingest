@@ -1,0 +1,10 @@
+CCAligned	v1	72450	1/3	33.33
+MultiCCAligned	v1	72451	1/3	33.33
+NLLB	v1	1501644	0/3	0
+QED	v2.0a	53	0/3	0
+Ubuntu	v14.10	105	0/3	0
+wikimedia	v20190628	2	1/3	33.33
+wikimedia	v20210402	2	2/3	66.66
+XLEnt	v1.1	7076	1/3	33.33
+XLEnt	v1.2	7076	1/3	33.33
+XLEnt	v1	7076	1/3	33.33

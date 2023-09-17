@@ -5,4 +5,5 @@ Tatoeba	v2020-11-09	17	0/16	0
 Tatoeba	v2021-03-10	17	0/16	0
 Tatoeba	v2021-07-22	17	0/16	0
 Tatoeba	v2022-03-03	17	0/16	0
+Tatoeba	v2023-04-12	17	0/16	0
 Tatoeba	v2	11	0/16	0

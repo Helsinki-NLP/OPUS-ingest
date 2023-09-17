@@ -1,5 +1,7 @@
 GNOME	v1	71	0/4	0
+NLLB	v1	56409	0/4	0
 QED	v2.0a	40	0/4	0
 TED2020	v1	151	0/4	0
 Ubuntu	v14.10	552	0/4	0
 wikimedia	v20210402	5	2/4	50.00
+wikimedia	v20230407	5	2/4	50.00

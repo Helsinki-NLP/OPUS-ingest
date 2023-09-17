@@ -1,11 +1,15 @@
 CCAligned	v1	1967	0/3	0
 GNOME	v1	360	0/3	0
+MultiCCAligned	v1	1967	0/3	0
+NLLB	v1	684225	0/3	0
 QED	v2.0a	572	0/3	0
 Tatoeba	v20190709	3	3/3	100.00
 Tatoeba	v2020-11-09	4	3/3	100.00
 Tatoeba	v2021-03-10	4	3/3	100.00
 Tatoeba	v2021-07-22	4	3/3	100.00
 Tatoeba	v2022-03-03	4	3/3	100.00
+Tatoeba	v2023-04-12	4	3/3	100.00
 Ubuntu	v14.10	451	0/3	0
 wikimedia	v20190628	1031	0/3	0
 wikimedia	v20210402	2186	0/3	0
+wikimedia	v20230407	2264	0/3	0

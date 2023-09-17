@@ -1,0 +1,11 @@
+GNOME	v1	53	0/5	0
+QED	v2.0a	1049	0/5	0
+Tanzil	v1	92059	0/5	0
+Tatoeba	v2020-11-09	4	4/5	80.00
+Tatoeba	v2021-03-10	4	4/5	80.00
+Tatoeba	v2021-07-22	5	5/5	100.00
+Tatoeba	v2022-03-03	5	5/5	100.00
+Ubuntu	v14.10	5690	0/5	0
+wikimedia	v20190628	30	0/5	0
+wikimedia	v20210402	54	1/5	20.00
+wikimedia	v20230407	145	1/5	20.00

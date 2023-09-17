@@ -1,0 +1,8 @@
+bible-uedin	v1	7967	0/7	0
+GNOME	v1	3982	0/7	0
+Tatoeba	v2020-05-31	5	5/7	71.42
+Tatoeba	v2020-11-09	6	6/7	85.71
+Tatoeba	v2021-03-10	6	6/7	85.71
+Tatoeba	v2021-07-22	6	6/7	85.71
+Tatoeba	v2022-03-03	6	6/7	85.71
+Ubuntu	v14.10	2559	0/7	0

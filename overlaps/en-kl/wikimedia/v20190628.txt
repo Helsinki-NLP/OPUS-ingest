@@ -5,5 +5,7 @@ Tatoeba	v2020-11-09	37	0/2	0
 Tatoeba	v2021-03-10	37	0/2	0
 Tatoeba	v2021-07-22	37	0/2	0
 Tatoeba	v2022-03-03	37	0/2	0
+Tatoeba	v2023-04-12	39	0/2	0
 Ubuntu	v14.10	287	0/2	0
 wikimedia	v20210402	2	1/2	50.00
+wikimedia	v20230407	2	1/2	50.00

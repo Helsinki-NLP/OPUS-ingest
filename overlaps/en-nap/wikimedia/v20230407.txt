@@ -1,0 +1,4 @@
+Tatoeba	v2023-04-12	2	1/8	12.50
+Ubuntu	v14.10	48	0/8	0
+wikimedia	v20190628	15	0/8	0
+wikimedia	v20210402	3	3/8	37.50

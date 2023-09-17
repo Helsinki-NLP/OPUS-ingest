@@ -3,6 +3,7 @@ Books	v1	38507	0/4	0
 CCAligned	v1	13043190	1/4	25.00
 CCMatrix	v1	106106500	0/4	0
 DGT	v2019	3543639	0/4	0
+DGT	v4	1945115	0/4	0
 ECB	v1	126344	0/4	0
 ECDC	v2016-03-16	2424	1/4	25.00
 ELITR-ECA	v1	249246	1/4	25.00
@@ -39,6 +40,8 @@ ELRC-wikipedia_health	v1	932	1/4	25.00
 EMEA	v3	352016	0/4	0
 EUbookshop	v2	5367397	0/4	0
 EUconst	v1	6732	0/4	0
+Europarl	v3	1291768	0/4	0
+Europarl	v7	1985837	0/4	0
 Europarl	v8	1986220	0/4	0
 GlobalVoices	v2015	31866	0/4	0
 GlobalVoices	v2017q3	37839	0/4	0
@@ -47,14 +50,23 @@ GNOME	v1	60856	0/4	0
 JRC-Acquis	v3.0	502276	0/4	0
 KDE4	v2	161655	0/4	0
 LinguaTools-WikiTitles	v2014	6757629	1/4	25.00
+MultiCCAligned	v1	36001309	1/4	25.00
+MultiParaCrawl	v7.1	31295016	1/4	25.00
 NeuLab-TedTalks	v1	200570	1/4	25.00
 News-Commentary	v11	19392	0/4	0
 News-Commentary	v14	57085	1/4	25.00
 News-Commentary	v16	57086	1/4	25.00
 News-Commentary	v9.0	1808	0/4	0
 News-Commentary	v9.1	1808	0/4	0
+NLLB	v1	106104992	0/4	0
 OpenSubtitles	v1	275351	0/4	0
+OpenSubtitles	v2016	24279928	0/4	0
 OpenSubtitles	v2018	30779675	0/4	0
+ParaCrawl	v1	2552000	0/4	0
+ParaCrawl	v4	5630021	0/4	0
+ParaCrawl	v5	10509072	0/4	0
+ParaCrawl	v7.1	31295015	0/4	0
+ParaCrawl	v8	98473905	1/4	25.00
 ParaCrawl	v9	89135870	1/4	25.00
 PHP	v1	4410	0/4	0
 QED	v2.0a	385191	0/4	0
@@ -65,6 +77,7 @@ Tatoeba	v2020-11-09	72370	1/4	25.00
 Tatoeba	v2021-03-10	74031	1/4	25.00
 Tatoeba	v2021-07-22	75072	1/4	25.00
 Tatoeba	v2022-03-03	75815	1/4	25.00
+Tatoeba	v2023-04-12	79518	1/4	25.00
 Tatoeba	v2	17993	0/4	0
 TED2013	v1.1	144900	0/4	0
 TED2020	v1	312281	1/4	25.00
@@ -72,6 +85,7 @@ TildeMODEL	v2018	3481744	0/4	0
 Ubuntu	v14.10	110108	0/4	0
 WikiMatrix	v1	796508	1/4	25.00
 wikimedia	v20210402	68829	1/4	25.00
+wikimedia	v20230407	106677	1/4	25.00
 Wikipedia	v1.0	791459	0/4	0
 XLEnt	v1.1	5789605	1/4	25.00
 XLEnt	v1.2	5789605	1/4	25.00

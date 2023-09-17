@@ -1,2 +1,5 @@
 GNOME	v1	1712	0/75	0
+MultiCCAligned	v1	75	75/75	100.00
+NLLB	v1	2202147	0/75	0
 Ubuntu	v14.10	427	0/75	0
+wikimedia	v20230407	22	1/75	1.33
