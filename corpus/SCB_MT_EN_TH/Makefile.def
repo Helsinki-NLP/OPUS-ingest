@@ -1,0 +1,25 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1.0
+RELEASE_DATE = 23 June 2020
+
+LICENSE = <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>
+COPYRIGHT = Information about the sources is available <a href="https://github.com/vistec-AI/dataset-releases/releases/tag/scb-mt-en-th-2020_v1.0">here</a>
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML = The AI Research Institute of Thailand (AIResearch), with the collaboration between Vidyasirimedhi Institute of Science and Technology (VISTEC) and Digital Economy Promotion Agency (depa), published this <a href="https://github.com/vistec-AI/dataset-releases/releases/tag/scb-mt-en-th-2020_v1.0">open English-Thai machine translation dataset</a>, with the sponsorship from Siam Commercial Bank (SCB), namely scb-mt-en-th-2020. The dataset contains parallel sentences from various sources such as task-based conversation, organization websites, Wikipedia articles, and government documents. To obtain parallel sentences, they hired professional and crowdsourced translators and build a module to automatically align parallel sentence pairs from documents, articles, and web pages.
+
+
+EXTRAHTML = Simple example corpus
+# CITENOTE=

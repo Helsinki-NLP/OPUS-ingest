@@ -77,7 +77,7 @@
 release:
 	${MAKE} upload
 	${MAKE} info-yaml
-	${MAKE} lang-mappings
+	${MAKE} langid-mappings
 	${MAKE} index-info
 	${MAKE} upload-website
 	${MAKE} upload-cwb
