@@ -9,6 +9,7 @@ UBUNTU_PACKAGES = libboost-all-dev \
 		parallel \
 		pigz \
 		python3-pip \
+		pybind11-dev \
 		tidy
 
 .PHONY: install
