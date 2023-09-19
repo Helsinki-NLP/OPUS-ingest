@@ -77,6 +77,7 @@
 release:
 	${MAKE} upload
 	${MAKE} info-yaml
+	${MAKE} lang-mappings
 	${MAKE} index-info
 	${MAKE} upload-website
 	${MAKE} upload-cwb
@@ -109,12 +110,15 @@ ${OPUSRELEASE}/${CORPUS}/${VERSION}/info.yaml:
 	${OPUSTOOLS}/info2yaml.pl ${OPUSRELEASE}/${CORPUS}
 	cd ${OPUSRELEASE}/${CORPUS} && git add info.yaml ${VERSION}/*.yaml
 
+.PHONY: lang-mappings
+langid-mappings: ${OPUSRELEASE}/${CORPUS}/${VERSION}/language_mappings.tsv
 
-
-LANGMAPPING_FILES = $(patsubst %/statistics.yaml,%/language_mappings.tsv,\
+ifdef ALL_LANGID_MAPPINGS
+  LANGMAPPING_FILES = $(patsubst %/statistics.yaml,%/language_mappings.tsv,\
 			$(wildcard ../releases/*/*/statistics.yaml))
 
-lang-mappings: ${LANGMAPPING_FILES}
+  all-langid-mappings: ${LANGMAPPING_FILES}
+endif
 
 ## create a file for language ID mappings
 %/language_mappings.tsv: %/statistics.yaml
