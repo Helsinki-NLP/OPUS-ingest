@@ -17,21 +17,57 @@ ifndef RAWFILES
 endif
 endif
 
+
+
+.PHONY: preprocess
 preprocess:
 	for l in ${LANGUAGES}; do \
 		${MAKE} LANGUAGE=$$l preprocess_files; \
 	done
 
+.PHONY: preprocess_files
 preprocess_files: ${RAWFILES}
+
+.PHONY: preprocess_file_test
+preprocess_file_test: $(firstword ${RAWFILES})
+
+
+## different kind of pre-processing depending on the raw input format
+##  - xml input --> just add sentence boundaries
+##  - txt input --> entire pre-processing pipeline
+
+ifeq (${RAW_FILE_FORMAT},${XMLEXT})
+
+
+raw/${LANGUAGE}/%.${XMLEXT}: src/${LANGUAGE}/%.${XMLEXT}
+	mkdir -p $(shell dirname $@)
+ifeq (${XMLEXT},xml.gz)
+	${GZCAT} $< | ${SENT} | ${GZIP} -c > $@
+else
+	${SENT} < $< > $@
+endif
+
+
+else
+
 
 raw/${LANGUAGE}/%.${XMLEXT}: src/${LANGUAGE}/%.${TXTEXT}
 	mkdir -p $(shell dirname $@)
-	${PRE} -in $< -out $@
+ifeq (${XMLEXT},xml.gz)
+	${GZCAT} $< | ${PRE} | ${GZIP} -c > $@
+else
+	${PRE} < $< > $@
+endif
+
+endif
 
 
+
+.PHONY: clean-raw
 clean-raw:
 	for l in ${LANGUAGES}; do \
 	    if [ -d "raw/$$l" ]; then \
 		rm -fr raw/$$l; \
 	    fi \
 	done
+

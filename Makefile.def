@@ -259,13 +259,23 @@ MAX_EFLOMAL_CORPUS_SIZE = 5000000
 # PRE_SENT ... make only par & sent (no tokenization)
 #--------------------------------------------------------------------
 
-PAR        = ${UPLUG} pre/markup
-SENT       = ${UPLUG} pre/sent -l ${LANGUAGE}
-TOKSIMPLE  = ${UPLUG} pre/tok-simple
-TOKMOSES   = ${UPLUG} pre/tok -l ${LANGUAGE}
-TOK        = ${UPLUG} pre/tok -l ${LANGUAGE}
-PRE_ALL    = ${UPLUG} pre/basic
-PRE        = ${UPLUG} pre/par-sent
+POLYGLOT_SENT = ${OPUSTOOLS}/opus-polyglot-sentence-splitter.py -l ${LANGUAGE}
+POLYGLOT_TOK  = ${OPUSTOOLS}/opus-polyglot-tokenize.py -l ${LANGUAGE}
+
+UPLUG_PAR     = ${UPLUG} pre/markup
+UPLUG_SENT    = ${UPLUG} pre/sent -l ${LANGUAGE}
+UPLUG_TOK     = ${UPLUG} pre/tok -l ${LANGUAGE}
+UPLUG_PRE     = ${UPLUG} pre/par-sent
+UPLUG_PRE_ALL = ${UPLUG} pre/basic
+
+TOKSIMPLE     = ${UPLUG} pre/tok-simple
+TOKMOSES      = ${UPLUG} pre/tok -l ${LANGUAGE}
+
+PAR     = ${UPLUG_PAR}
+SENT    = ${POLYGLOT_SENT}
+TOK     = ${POLYGLOT_TOK}
+PRE     = ${UPLUG_PRE}
+PRE_ALL = ${UPLUG_PRE_ALL}
 
 # language specific tools if they exist
 

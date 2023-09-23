@@ -12,11 +12,13 @@ ifndef LANGUAGE
 	LANGUAGE=$(firstword ${LANGUAGES})
 endif
 
+RAW_FILE_FORMAT ?= TXTEXT
+
 SRCDIR = src/${LANGUAGE}
 ifneq ("$(wildcard $(SRCDIR))","")
 ifndef RAWFILES
-  RAWFILES := $(patsubst src/%.${TXTEXT},raw/%.${XMLEXT}, \
-		$(shell find ${SRCDIR} -name '*.${TXTEXT}'))
+  RAWFILES := $(patsubst src/%.${RAW_FILE_FORMAT},raw/%.${XMLEXT}, \
+		$(shell find ${SRCDIR} -name '*.${RAW_FILE_FORMAT}'))
 endif
 endif
 
@@ -26,6 +28,19 @@ corpus:
 	${MAKE} preprocess
 	${MAKE} annotate
 	${MAKE} align
+	${MAKE} udparse
+	${MAKE} wordalign
+	${MAKE} cwb-index
+
+
+.PHONY: corpus-basic
+corpus-basic:
+	${MAKE} preprocess
+	${MAKE} annotate
+	${MAKE} align
+
+.PHONY: corpus-extra
+corpus-extra:
 	${MAKE} udparse
 	${MAKE} wordalign
 	${MAKE} cwb-index
@@ -113,9 +128,40 @@ lexicon/Makefile:
 .PHONY: preprocess_files
 preprocess_files: ${RAWFILES}
 
+.PHONY: preprocess_file_test
+preprocess_file_test: $(firstword ${RAWFILES})
+
+
+## different kind of pre-processing depending on the raw input format
+##  - xml input --> just add sentence boundaries
+##  - txt input --> entire pre-processing pipeline
+
+ifeq (${RAW_FILE_FORMAT},${XMLEXT})
+
+
+raw/${LANGUAGE}/%.${XMLEXT}: src/${LANGUAGE}/%.${XMLEXT}
+	mkdir -p $(shell dirname $@)
+ifeq (${XMLEXT},xml.gz)
+	${GZCAT} $< | ${SENT} | ${GZIP} -c > $@
+else
+	${SENT} < $< > $@
+endif
+
+
+else
+
+
 raw/${LANGUAGE}/%.${XMLEXT}: src/${LANGUAGE}/%.${TXTEXT}
 	mkdir -p $(shell dirname $@)
-	${PRE} -in $< -out $@
+ifeq (${XMLEXT},xml.gz)
+	${GZCAT} $< | ${PRE} | ${GZIP} -c > $@
+else
+	${PRE} < $< > $@
+endif
+
+endif
+
+
 
 .PHONY: clean-raw
 clean-raw:

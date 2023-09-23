@@ -1,0 +1,25 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+RAW_FILE_FORMAT = xml.gz
+LANGUAGES = $(sort $(notdir $(wildcard src/?? src/??_??)))
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v$(shell date +%F)
+
+LICENSE = <a href="https://creativecommons.org/licenses/by-sa/2.5/">CC-BY-SA 2.5</a>
+COPYRIGHT = All prose content is available under (CC-BY-SA 2.5). For more information, see <a href="https://github.com/mdn/translated-content">https://github.com/mdn/translated-content</a>
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML = <a href="https://github.com/mdn">MDN Web Docs</a> is an open-source, collaborative project that documents web platform technologies, including CSS, HTML, JavaScript, and Web APIs. We also provide extensive learning resources for beginning developers and students.
+# EXTRAHTML=Simple example corpus
+# CITENOTE=
