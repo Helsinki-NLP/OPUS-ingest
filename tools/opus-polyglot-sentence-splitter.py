@@ -10,7 +10,8 @@ import sys
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-l", "--language", type=str, default="en", help="Language to be split (ISO-639-1 landuage code)")
+parser.add_argument("-l", "--language", type=str, default="en",
+                    help="Language to be split (ISO-639-1 landuage code)")
 args = parser.parse_args()
 language = args.language
 
@@ -18,7 +19,10 @@ parser = xml.parsers.expat.ParserCreate()
 writer = XMLGenerator(sys.stdout, 'utf-8')
 
 
-## TODO: what kind of acceptable HTML tags are missing here?
+## list of XML/HTML tags we consider to delimit content
+## we want to segment into sentences
+##
+## TODO: what kind of relevant tags are missing here?
 
 contentTags = {'p': 1,
                'li': 1,
@@ -31,18 +35,26 @@ contentTags = {'p': 1,
                'th': 1}
 
 
+## string for marking XML tags to be inserted back
+## into the string after sentence splitting
 
+tagMarker = '__tag__'
+
+
+## XML parser handles
 
 def start_element(name, attrs):
     global textStr
     global contentTags
     global tagList
+    global tagMarker
+    
     if name in contentTags:
         if textStr:
             split_text(textStr)
         writer.startElement(name, attrs)
     else:
-        textStr = textStr + '__TAG__'
+        textStr = textStr + tagMarker
         tag = {'name': name, 'attrs': attrs}
         tagList.insert(0,tag)
 
@@ -50,12 +62,14 @@ def end_element(name):
     global textStr
     global contentTags
     global tagList
+    global tagMarker
+    
     if name in contentTags:
         if textStr:
             split_text(textStr)
         writer.endElement(name)
     else:
-        textStr = textStr + '__TAG__'
+        textStr = textStr + tagMarker
         tag = {'name': name}
         tagList.insert(0,tag)
 
@@ -63,39 +77,71 @@ def char_data(data):
     global textStr
     textStr = textStr + data
 
+
+
+    
 def split_text(text):
     global sentID
     global textStr
     global language
     global tagList
+    global tagMarker
+
+    openTags = list()
+    
     writer.characters("\n")
     text = Text(textStr, hint_language_code=language)
     for s in text.sentences:
-        sentID += 1
-        segments = s.split('__TAG__')
-        
-        sent = ' '.join(segments)
-        if not sent.isspace():
-            writer.startElement('s', { 'id': str(sentID) })
 
-        i = 0
-        while i < len(segments)-1:
+        ## split into segments that are divided by XML tags
+        ## merge into a sentence string without XML tags to make
+        ## it possible to check whether it is more than just whitespaces
+        
+        segments = s.split(tagMarker)
+        sent = ' '.join(segments)
+
+        ## start a new sentence (unless it's all whitespace characters)
+        ## re-open XML tags that are spilling over from the previous sentence        
+
+        if not sent.isspace():
+            sentID += 1
+            writer.startElement('s', { 'id': str(sentID) })
+            for i in range(len(openTags)):
+                writer.startElement(openTags[i]['name'], openTags[i]['attrs'])
+
+        
+        ## run through all segments and insert XML tags we saved in tagList
+        ## the final segment comes after the last XML tag we have inserted
+                
+        for i in range(len(segments)-1):
             writer.characters(segments[i])
             if (len(tagList) > 0):
                 tag = tagList.pop()
                 if 'attrs' in tag:
                     writer.startElement(tag['name'], tag['attrs'])
+                    openTags.append(tag)
                 else:
-                    writer.endElement(tag['name'])
-            i += 1
+                    if (len(openTags)):
+                        writer.endElement(tag['name'])
+                        openTags.pop()
+                    else:
+                        print(f"try to close tag {tag['name']}, which is not open", file=sys.stderr)
         writer.characters(segments[-1])
 
+        
+        ## close the sentence unless it was not opened (just whitespaces)
+        ## close all XML tags that are still open to ensure well-formedness
+        ## those will be re-opened in the next sentence again to ensure consistency
+        
         if not sent.isspace():
+            for i in reversed(range(len(openTags))):
+                writer.endElement(openTags[i]['name'])
             writer.endElement('s')
         writer.characters("\n")
 
     textStr = ''
         
+
 
 
 textStr   = ''

@@ -6,9 +6,9 @@
 
 OPUSTOKENIZER ?= ${OPUSTOOLS}/opus-polyglot-tokenize.py
 
-ifeq (${HPC_HOST},puhti)
-  LOAD_ENV ?= module load python-data/3.8 &&
-endif
+# ifeq (${HPC_HOST},puhti)
+#  LOAD_ENV ?= module load python-data/3.8 &&
+# endif
 
 
 ifndef LANGUAGE
