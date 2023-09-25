@@ -121,11 +121,10 @@ def split_text(text):
                     writer.startElement(tag['name'], tag['attrs'])
                     openTags.append(tag)
                 else:
+                    writer.endElement(tag['name'])
                     if (len(openTags)):
-                        writer.endElement(tag['name'])
                         openTags.pop()
-                    else:
-                        print(f"try to close tag {tag['name']}, which is not open", file=sys.stderr)
+        
         writer.characters(segments[-1])
 
         

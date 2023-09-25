@@ -24,11 +24,25 @@ include ../Makefile.def
 all:
 	${MAKE} -C src all
 	${MAKE} corpus-basic
+	${MAKE} remove-unlikely-alignments
 	${MAKE} publish
 
-continue:
-	${MAKE} corpus-basic
-	${MAKE} publish
+.PHONY: job-all
+job-all:
+	${MAKE} HPC_MEM=8g HPC_CORES=8 HPC_DISK=100 THREADS=8 all.submit
+
+
+## remove sentence alignments with zero score
+## (empty alignments or results of broken sentence alignment runs)
+## TODO: need to fix the generic calls to a sentence aligner!
+
+FIXED_ALIGN_FILES = $(patsubst xml/%.xml.gz,log/%.fixed.xml.gz,$(wildcard xml/*.xml.gz))
+remove-unlikely-alignments: ${FIXED_ALIGN_FILES}
+
+${FIXED_ALIGN_FILES}: log/%.fixed.xml.gz: xml/%.xml.gz
+	mv $< $@
+	${ZCAT} $@ | sed -e 's/>/>\n/' | grep -v 'certainty="0"' | grep . | ${GZIP} -c > $<
+	touch $@
 
 
 ## standard procedures are specified in the following makefiles
