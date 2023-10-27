@@ -9,13 +9,12 @@ include ../Makefile.def
 include ../Makefile.submit
 
 
-# place where to find OPUS data sets
-# TODO: don't require local files
-
-# OPUSDATASETS = ${OPUSRELEASE}
-OPUSDATASETS = ${OPUSNLPL}
-
 STORAGE_BASE = https://object.pouta.csc.fi/OPUS-
+
+CSC_PROJECT      := project_2000661
+HPC_MODULES      += allas parallel
+LOAD_STORAGE_ENV := module load allas && allas-conf -k ${CSC_PROJECT}
+
 
 ## monolingual texts
 
@@ -28,12 +27,16 @@ ALL_MONO_URLS   := $(patsubst %,https:%,$(shell find ${OPUSRELEASE}/ -name stati
 ALL_MONO_DEDUP  := $(patsubst ${STORAGE_BASE}%.txt.gz,${INDEX_TMPDIR}/%.dedup,${ALL_MONO_URLS})
 ALL_MONO_DONE   := $(patsubst ${INDEX_TMPDIR}/%.dedup,done/%.done,${ALL_MONO_DEDUP})
 
-
 .INTERMEDIATE: ${ALL_MONO_DEDUP}
+
+# FIX_UNICODE := 	perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;'
+FIX_UNICODE := 	${PARALLEL} ftfy
 
 
 .PHONY: all
-all: ${LANGUAGE}.counts ${LANGUAGE}.dedup.gz ${LANGUAGE}.sent2id.db
+all: ${LANGUAGE}.counts
+	${MAKE} ${LANGUAGE}.dedup.gz ${LANGUAGE}.db # ${LANGUAGE}.sent2id.db
+
 
 .PHONY: counts
 counts: ${LANGUAGE}.counts
@@ -47,10 +50,10 @@ SWIFT_PARAMS = --use-slo --segment-size 5G --changed --skip-identical
 .PHONY: upload
 upload:
 	which a-get
-	swift upload OPUS-index ${SWIFT_PARAMS} ${LANGUAGE}.dedup.gz ${LANGUAGE}.*.db
-	swift list OPUS-index | grep '\.dedup.gz$$' | \
+	${LOAD_STORAGE_ENV} && swift upload OPUS-index ${SWIFT_PARAMS} ${LANGUAGE}.dedup.gz ${LANGUAGE}.*.db
+	${LOAD_STORAGE_ENV} && swift list OPUS-index | grep '\.dedup.gz$$' | \
 		sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' > index.txt
-	swift list OPUS-index | grep '\.db$$'       | \
+	${LOAD_STORAGE_ENV} && swift list OPUS-index | grep '\.db$$'       | \
 		sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' >> index.txt
 	find done -name '${LANGUAGE}.done' | xargs git add
 	git add ${LANGUAGE}.counts index.txt
@@ -59,10 +62,10 @@ upload:
 .PHONY: upload-all
 upload-all:
 	which a-get
-	swift upload OPUS-index ${SWIFT_PARAMS} *.dedup.gz *.db
-	swift list OPUS-index | grep '\.dedup.gz$$' | \
+	${LOAD_STORAGE_ENV} && swift upload OPUS-index ${SWIFT_PARAMS} *.dedup.gz *.db
+	${LOAD_STORAGE_ENV} && swift list OPUS-index | grep '\.dedup.gz$$' | \
 		sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' > index.txt
-	swift list OPUS-index | grep '\.db$$'       | \
+	${LOAD_STORAGE_ENV} && swift list OPUS-index | grep '\.db$$'       | \
 		sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' >> index.txt
 	find done -name '*.done' | xargs git add
 	git add *.counts index.txt
@@ -70,15 +73,15 @@ upload-all:
 
 index.txt:
 	which a-get
-	swift list OPUS-index | grep '\.dedup.gz$$' | \
+	${LOAD_STORAGE_ENV} && swift list OPUS-index | grep '\.dedup.gz$$' | \
 		sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' > $@
-	swift list OPUS-index | grep '\.db$$'       | \
+	${LOAD_STORAGE_ENV} && swift list OPUS-index | grep '\.db$$'       | \
 		sed 's#^#https://object.pouta.csc.fi/OPUS-index/#' >> $@
 
 index-filesize.txt:
 	which a-get
-	rclone ls allas:OPUS-index | grep  '\.dedup.gz$$'  > $@
-	rclone ls allas:OPUS-index | grep  '\.db$$'       >> $@
+	${LOAD_STORAGE_ENV} && rclone ls allas:OPUS-index | grep  '\.dedup.gz$$'  > $@
+	${LOAD_STORAGE_ENV} && rclone ls allas:OPUS-index | grep  '\.db$$'       >> $@
 
 
 
@@ -120,12 +123,12 @@ ${LANGUAGE}.dedup.gz: ${ALL_MONO_DONE}
 	  if [ -e $@ ]; then \
 	    echo "merge all corpora with ${LANGUAGE}.dedup.gz"; \
 	    find ${INDEX_TMPDIR} -name '*.dedup' |\
-	    xargs ${SORT} -m -u <(${GZIP} -cd $@) | ${GZIP} -c > ${INDEX_TMPDIR}/$@; \
+	    xargs ${MERGE} <(${GZIP} -cd $@) | ${GZIP} -c > ${INDEX_TMPDIR}/$@; \
 	    mv -f ${INDEX_TMPDIR}/$@ $@; \
 	  else \
 	    echo "merge all corpora into ${LANGUAGE}.dedup.gz"; \
 	    find ${INDEX_TMPDIR} -name '*.dedup' |\
-	    xargs ${SORT} -m -u | ${GZIP} -c > ${INDEX_TMPDIR}/$@; \
+	    xargs ${MERGE} | ${GZIP} -c > ${INDEX_TMPDIR}/$@; \
 	    mv -f ${INDEX_TMPDIR}/$@ $@; \
 	  fi \
 	fi
@@ -138,11 +141,23 @@ ${LANGUAGE}.dedup.gz: ${ALL_MONO_DONE}
 %.id2sent.db: %.dedup.gz
 	${GZIP} -cd $< | ./add2index.pl $@
 
+%.db: %.dedup.gz
+	${GZIP} -cd < $< | ./sent2sqlite.py $@
+
+
+en.dedup.new.gz:
+	gzip -cd en.dedup.gz | parallel --pipe --keep-order -q ${FIX_UNICODE} | gzip -c > $@
+
 ## download monolingual corpus and de-duplicate
 ${INDEX_TMPDIR}/%.dedup:
 	mkdir -p ${dir $@}
 	wget -O - -qq $(patsubst ${INDEX_TMPDIR}/%.dedup,${STORAGE_BASE}%.txt.gz,$@) |\
-	${GZIP} -cd | ${SORT} -u > $@
+	${GZIP} -cd | ${FIX_UNICODE} | ${SORT} -u  > $@
+	if [ -e $(notdir $(@:.dedup=.db)) ]; then \
+	  if [ -s $@ ]; then \
+	    cat $@ | ./sent2sqlite.py $@; \
+	  fi \
+	fi
 
 done/%.done: ${INDEX_TMPDIR}/%.dedup
 	mkdir -p $(dir $@)

@@ -108,7 +108,7 @@ convert: ${TMXFILES}
 	( cd ${CORPUSRAW} && \
 	  find ${PWD} -name '*.tmx.gz' |\
 	  xargs zcat |\
-	  perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' |\
+	  ${UNICODE_CLEANUP} |\
 	  ${TMX2OPUS} -a -e -I -u -d -t ${TMPDIR} -o wikimedia-${VERSION}.xml.gz; )
 
 ## OLD: without alignment and keeping empty strings:

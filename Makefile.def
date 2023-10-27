@@ -162,9 +162,18 @@ THREADS  ?= $(shell if [ `hostname | grep login | wc -l` -gt 0 ]; then echo 4; e
 GZIP     := ${shell which pigz 2>/dev/null || echo gzip}
 GZCAT    := ${GZIP} -cd
 ZCAT     := gzip -cd
+
+SORT     := sort -T ${TMPDIR} -S1G --parallel=${THREADS}
 # SORT   := sort -T ${TMPDIR} --parallel=${THREADS} -S1G --compress-program=${GZIP}
-SORT     := sort -T ${TMPDIR} --parallel=${THREADS} -S1G
+# SORT   := sort -T ${TMPDIR} --parallel=${THREADS} -S1G
+
 UNIQ     := ${SORT} -u
+MERGE    := ${SORT} -m -u
+
+ifneq (${shell which parsort 2>/dev/null},)
+  SORT   := parsort -T ${TMPDIR} -S1G
+endif
+
 
 ## seems to be necessary to run with threads on HPC nodes
 ## (nproc is not reliable?)
@@ -172,6 +181,8 @@ ifneq (${GZIP},gzip)
   GZIP += -p ${THREADS}
 endif
 
+# UNICODE_CLEANUP := perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;'
+UNICODE_CLEANUP := ftfy
 
 ## use GNU parallel if available
 ## TODO: should we reduce number of threads?

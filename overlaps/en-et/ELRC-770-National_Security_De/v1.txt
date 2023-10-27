@@ -56,11 +56,13 @@ ELRC-vaccination	v1	464	1/865	.11
 ELRC-wikipedia_health	v1	278	1/865	.11
 ELRC-www.visitestonia.com	v1	13904	1/865	.11
 EMEA	v3	329076	1/865	.11
+EOPC	v2022	448528	5/865	.57
 EUbookshop	v2	365564	5/865	.57
 EUconst	v1	6669	0/865	0
 Europarl	v7	631699	0/865	0
 Europarl	v8	632077	0/865	0
 GNOME	v1	6342	0/865	0
+HPLT	v1	6089792	1/865	.11
 infopankki	v1	16764	0/865	0
 JRC-Acquis	v3.0	484378	3/865	.34
 KDE4	v2	191995	1/865	.11

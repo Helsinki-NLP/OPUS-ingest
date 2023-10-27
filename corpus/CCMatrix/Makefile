@@ -9,8 +9,10 @@ include Makefile.def
 include ../Makefile.def
 
 
-OPUSTOKENIZER = perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' | \
-		${OPUSTOOLS}/opus-tokenize.py
+# OPUSTOKENIZER = perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' | \
+# 		${OPUSTOOLS}/opus-tokenize.py
+
+OPUSTOKENIZER := ${UNICODE_CLEANUP} | ${OPUSTOOLS}/opus-tokenize.py
 
 ## make all:
 ##

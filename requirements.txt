@@ -11,3 +11,4 @@ mecab-ko
 mecab-python3
 unidic-lite
 opustools
+ftfy

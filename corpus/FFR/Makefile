@@ -97,10 +97,12 @@ TSV2OPUS = tsv2opus
 
 GITHUB_URL = https://raw.githubusercontent.com/bonaventuredossou/ffr-v1/master
 
-BASIC_FILTERS = | perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' \
-		| perl -CS -pe 's/\&\s*\#\s*160\s*\;/ /g' \
-		| perl -pe 's/[\p{C}-[\n\t]]/ /g;' \
-		| recode -f utf8..utf16 | recode -f utf16..utf8
+# BASIC_FILTERS = | perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' \
+#		| perl -CS -pe 's/\&\s*\#\s*160\s*\;/ /g' \
+#		| perl -pe 's/[\p{C}-[\n\t]]/ /g;' \
+#		| recode -f utf8..utf16 | recode -f utf16..utf8
+
+BASIC_FILTERS := | ${UNICODE_CLEANUP}
 
 fetch:
 	mkdir -p src

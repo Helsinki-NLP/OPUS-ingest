@@ -56,10 +56,10 @@ xml: raw
 raw: src
 	mkdir -p $@
 	cd $@ && cat ../$</zh-ja/zh-ja.bicleaner05.txt |\
-	perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' |\
+	${UNICODE_CLEANUP} |\
 	${TSV2OPUS} -z -b jparacrawl.zh-ja -s zh -t ja -S 2 -T 3 -O 0 -P 1
 	cd raw && cat ../$</en-ja/en-ja.bicleaner05.txt |\
-	perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' |\
+	${UNICODE_CLEANUP} |\
 	${TSV2OPUS} -z -b jparacrawl.en-ja -s en -t ja -S 3 -T 4 -O 1 -P 2
 
 

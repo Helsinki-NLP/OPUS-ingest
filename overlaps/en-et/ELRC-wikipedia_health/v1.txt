@@ -56,11 +56,13 @@ ELRC-presscorner_covid	v1	7084	1/278	.35
 ELRC-vaccination	v1	464	1/278	.35
 ELRC-www.visitestonia.com	v1	13904	1/278	.35
 EMEA	v3	329076	0/278	0
+EOPC	v2022	448528	1/278	.35
 EUbookshop	v2	365564	0/278	0
 EUconst	v1	6669	0/278	0
 Europarl	v7	631699	0/278	0
 Europarl	v8	632077	0/278	0
 GNOME	v1	6342	0/278	0
+HPLT	v1	6089792	1/278	.35
 infopankki	v1	16764	0/278	0
 JRC-Acquis	v3.0	484378	0/278	0
 KDE4	v2	191995	0/278	0

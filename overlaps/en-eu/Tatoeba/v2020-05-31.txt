@@ -8,6 +8,7 @@ ELRC-4993-Basque_Wikinews_MT	v1	1780	0/2060	0
 ELRC-Artigos_visitportuga	v1	2	0/2060	0
 ELRC-wikipedia_health	v1	317	0/2060	0
 GNOME	v1	139307	2/2060	.09
+HPLT	v1	610688	10/2060	.48
 KDE4	v2	91626	0/2060	0
 NeuLab-TedTalks	v1	5608	0/2060	0
 OpenSubtitles	v2016	155405	27/2060	1.31

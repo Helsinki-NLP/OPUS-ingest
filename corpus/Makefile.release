@@ -83,6 +83,20 @@ release:
 	${MAKE} upload-cwb
 	${MAKE} update-git
 	${MAKE} release-nlpl
+	${MAKE} upload-ida
+
+
+## upload the release without adding the info to git yet
+
+.PHONY: upload-release
+upload-release:
+	${MAKE} upload
+	${MAKE} info-yaml
+	${MAKE} langid-mappings
+	${MAKE} index-info
+	${MAKE} upload-website
+	${MAKE} upload-cwb
+#	${MAKE} release-nlpl
 
 
 .PHONY: update-git
@@ -97,17 +111,21 @@ update-git:
 	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name '*.txt' -exec git add {} \;
 	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name '*.info' -exec git add {} \;
 	cd ${CORPUSRELEASE} && find . -name '*.tsv' -exec git add {} \;
-	-cd ${OPUSRELEASE} && git add ${CORPUS}/.uploaded-${VERSION}
-	-cd ${OPUSRELEASE} && git add ${CORPUS}/.released-${VERSION}
-	-cd ${OPUSRELEASE} && git add ${CORPUS}/*.info ${CORPUS}/*.txt ${CORPUS}/*.txt
-	cd ${OPUSGITHOME} && git commit -am '${CORPUS} release ${VERSION} added'
-	cd ${OPUSGITHOME} && git push
+	-cd ${OPUSRELEASE}  && git add ${CORPUS}/.uploaded-${VERSION}
+	-cd ${OPUSRELEASE}  && git add ${CORPUS}/.released-${VERSION}
+	-cd ${OPUSRELEASE}  && git add ${CORPUS}/*.info ${CORPUS}/*.txt ${CORPUS}/*.txt
+	cd ${OPUSPUB}       && git add ${CORPUS}-${VERSION}
+	cd ${OPUSPUB}       && git add ${CORPUS}-${VERSION}.php ${CORPUS}.php
+	cd ${OPUSGITHOME}   && git commit -am '${CORPUS} release ${VERSION} added'
+	cd ${OPUSPUB}       && git commit -am '${CORPUS} release ${VERSION} added'
+	cd ${OPUSGITHOME}   && git push
+	cd ${OPUSPUB}       && git push
 
 .PHONY: info-yaml
 info-yaml: ${OPUSRELEASE}/${CORPUS}/${VERSION}/info.yaml
 
-${OPUSRELEASE}/${CORPUS}/${VERSION}/info.yaml:
-	${OPUSTOOLS}/info2yaml.pl ${OPUSRELEASE}/${CORPUS}
+${OPUSRELEASE}/${CORPUS}/${VERSION}/info.yaml: ${OPUSRELEASE}/${CORPUS}/${VERSION}.info
+	${OPUSTOOLS}/info2yaml.pl -b ${OPUSRELEASE}/${CORPUS}
 	cd ${OPUSRELEASE}/${CORPUS} && git add info.yaml ${VERSION}/*.yaml
 
 .PHONY: lang-mappings
@@ -168,6 +186,11 @@ upload-cwb:
 	if [ -d ${CWBREG}/${CORPUS}-${VERSION} ]; then \
 	  ${MAKE} -C ${OPUSHOME}/admin CORPUS=${CORPUS} VERSION=${VERSION} sync-cwb; \
 	fi
+
+.PHONY: upload-ida
+upload-ida: ${PACKAGES}
+	${MAKE} -C ${OPUSHOME}/admin CORPUS=${CORPUS} VERSION=${VERSION} upload-ida
+
 
 
 ifndef PARSED_LANGUAGES
@@ -477,10 +500,9 @@ ${OPUSPUB}/${CORPUS}.php: ${OPUSPUB}/${CORPUS}-${VERSION}.php
 	cd ${OPUSPUB} && git add $(notdir $@)
 
 
-${PACKAGES}:	${CORPUSRELEASE} \
-		${CORPUSRELEASE}/LICENSE \
-		${CORPUSRELEASE}/README \
-		${SELECTED_PACKAGES}
+${PACKAGES}: ${CORPUSRELEASE} ${SELECTED_PACKAGES}
+	rm -f ${CORPUSRELEASE}/README
+	${MAKE} ${CORPUSRELEASE}/LICENSE ${CORPUSRELEASE}/README
 	${MKDIR} ${dir $@}
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
@@ -753,6 +775,7 @@ ${CORPUSRELEASE}/mono/%.tok.gz: ${CORPUSRELEASE}/xml/%.zip
 #	  perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g;chomp;s/<\/s>/<\/s>\n/' |\
 #	  ${PARALLEL} opus2text |
 
+# TODO: should we use ftfy here instead of the regex?
 
 ${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRELEASE}/raw/%.zip
 	@${MKDIR} ${dir $@}
@@ -1281,13 +1304,15 @@ ${OPUSRELEASE}/%.info: ${OPUSRELEASE}/%
 	  xargs grep . > $@; \
 	fi
 
+
 ## TODO: do we need to download the old info file first?
 ${OPUSRELEASE}/${CORPUS}/info.txt: $(wildcard ${OPUSRELEASE}/${CORPUS}/*.info)
-	cat ${OPUSRELEASE}/${CORPUS}/*.info > $@.new
-	cat $@ $@.new | sort -k1,1 -k2,2n -t: -u > $@.merged
-	mv $@.merged $@
-	rm -f $@.new
+	cat $^ > $@
 
+#	cat ${OPUSRELEASE}/${CORPUS}/*.info > $@.new
+#	cat $@ $@.new | sort -k1,1 -k2,2n -t: -u > $@.merged
+#	mv $@.merged $@
+#	rm -f $@.new
 
 delete-empty-bitexts:
 	mkdir -p ${CORPUSHOME}/DELETE/xml

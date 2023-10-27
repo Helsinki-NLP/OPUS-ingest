@@ -5,6 +5,7 @@ ELRC-614-Norwegian_Industrial	v1	1259	9/90925	0
 ELRC-Courts_Norway	v1	1375	0/90925	0
 ELRC-Norwegian_Directorat	v1	676	6/90925	0
 GNOME	v1	94063	2913/90925	3.20
+HPLT	v1	132539	2/90925	0
 MultiParaCrawl	v7.1	323520	8/90925	0
 ParaCrawl	v7.1	323519	8/90925	0
 ParaCrawl	v9	294471	4/90925	0

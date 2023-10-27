@@ -97,7 +97,7 @@ ${CONVERTED}: %_done: %
 	@mkdir -p raw xml log
 	cd raw && \
 	cat ../$< |\
-	perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' |\
+	${UNICODE_CLEANUP} |\
 	${TSV2OPUS} -z \
 		-s $(firstword $(subst -, ,$(word 2,$(subst /, ,$<)))) \
 		-t $(lastword $(subst -, ,$(word 2,$(subst /, ,$<)))) \

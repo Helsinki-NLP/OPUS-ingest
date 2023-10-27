@@ -59,10 +59,12 @@ OPUS_NEWMONO_OVERLAPS  := $(patsubst ${LANGUAGE}/%.txt,${OPUSRELEASE}/%/overlaps
 ##       mcdb requires a lot of memory and for English/French/Spanish it still crashes with 128GB RAM
 
 HPC_BIG_MEM = 128g
+HPC_BIG_CORES = 8
+HPC_BIG_DISK = 1000
 
 .PHONY: job-puhti
 job-mono-puhti:
-	${MAKE} HPC_MEM=${HPC_BIG_MEM} HPC_CORES=8 CORES=4 THREADS=4 HPC_DISK=1000 HPC_TIME=72:00 all-mono.submit
+	${MAKE} HPC_MEM=${HPC_BIG_MEM} HPC_CORES=${HPC_BIG_CORES} CORES=4 THREADS=4 HPC_DISK=${HPC_BIG_DISK} HPC_TIME=72:00 all-mono.submit
 
 .PHONY: job-biglang-puhti
 job-biglang-puhti:
@@ -75,6 +77,9 @@ job-hugelang-puhti:
 	for l in en es fr; do \
 	  ${MAKE} LANGUAGE=$$l HPC_BIG_MEM=256g job-mono-puhti; \
 	done
+
+job-english-puhti:
+	${MAKE} LANGUAGE=en HPC_BIG_MEM=256g HPC_BIG_DISK=2000 job-mono-puhti
 
 
 ## compute bitext overlaps
@@ -98,6 +103,19 @@ job-english-bitexts-puhti:
 .PHONY: job-bitext-puhti
 job-bitext-puhti:
 	${MAKE} HPC_MEM=128g HPC_CORES=16 CORES=4 THREADS=4 HPC_DISK=500 HPC_TIME=72:00 all-para.submit
+
+
+## only some selected languages
+.PHONY: hplt-english-bitext-jobs
+hplt-english-bitext-jobs:
+	make 	FIND_LANGUAGES_ALIGNED_TO_ENGLISH='echo "ar bs ca"' \
+		FIND_LANGUAGES_ALIGNED_FROM_ENGLISH='echo "et eu fi ga gl hi hr is mk mt nn sq sr sw zh_hant"' \
+	en-bitext-jobs
+
+hplt-mono-jobs:
+	for l in ar bs ca et eu fi ga gl hi hr is mk mt nn sq sr sw; do \
+	  ${MAKE} LANGUAGE=$$l HPC_BIG_MEM=64g HPC_BIG_CORES=4 HPC_BIG_DISK=500 job-mono-puhti; \
+	done
 
 
 #----------------------------------------------------------------------

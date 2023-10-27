@@ -89,8 +89,7 @@ ${CORPUSRAW}: ${TMXGZFILES}
 	mkdir -p ${CORPUSRAW}
 	( cd ${CORPUSRAW} && \
 	  find -L ../src -name '*.tmx.gz' |\
-	  xargs zcat |\
-	  perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;' |\
+	  xargs zcat | ${UNICODE_CLEANUP} |\
 	  ${TMX2OPUS} -u -d -t ${TMPDIR} -o ${CORPUS}.xml.gz )
 	${MAKE} xml/Makefile
 	mkdir -p ${CORPUSXML}

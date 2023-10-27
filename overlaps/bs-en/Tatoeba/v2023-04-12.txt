@@ -4,6 +4,7 @@ ELRC-3047-wikipedia_health	v1	205	1/509	.19
 ELRC-wikipedia_health	v1	205	1/509	.19
 EUbookshop	v2	557	0/509	0
 GNOME	v1	30123	0/509	0
+HPLT	v1	240013	2/509	.39
 MultiCCAligned	v1	191706	1/509	.19
 NeuLab-TedTalks	v1	6008	1/509	.19
 NLLB	v1	78968180	10/509	1.96
@@ -20,6 +21,7 @@ Tatoeba	v2021-07-22	502	502/509	98.62
 Tatoeba	v2022-03-03	502	502/509	98.62
 Tatoeba	v2	284	278/509	54.61
 TED2020	v1	11378	1/509	.19
+tldr-pages	v2023-08-29	282	1/509	.19
 Ubuntu	v14.10	10604	0/509	0
 WikiMatrix	v1	210679	2/509	.39
 wikimedia	v20210402	10915	1/509	.19

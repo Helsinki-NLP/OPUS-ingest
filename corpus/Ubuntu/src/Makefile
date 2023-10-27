@@ -1,5 +1,13 @@
+
+
+## see https://translations.launchpad.net/ubuntu/lunar/+language-packs
+
+
 URL          = http://launchpadlibrarian.net/181516986/ubuntu-utopic-translations.tar.gz
 DISTRIBUTION = rosetta-utopic
+
+# URL          = https://launchpadlibrarian.net/661168893/ubuntu-lunar-translations.tar.gz
+# DISTRIBUTION = rosetta-lunar
 
 .PHONY: all
 all: ${DISTRIBUTION}

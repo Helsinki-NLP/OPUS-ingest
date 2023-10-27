@@ -27,7 +27,8 @@ HPC_QUEUE   = small
 # HPC_MODULES = nlpl-opus python-env/3.4.1 
 # HPC_MODULES = parallel python-env nlpl-efmaral nlpl-opus nlpl-moses 
 # HPC_MODULES = parallel python-env nlpl-efmaral nlpl-moses
-HPC_MODULES = parallel git nlpl-cwb nlpl-opus nlpl-moses
+# HPC_MODULES = parallel git nlpl-cwb nlpl-opus nlpl-moses
+HPC_MODULES = parallel git nlpl-cwb nlpl-moses
 HPC_EXTRA   =
 
 
@@ -67,7 +68,7 @@ endif
 	echo 'echo "Starting at `date`"' >> $@
 	echo '${MAKE} -j ${HPC_CORES} ${MAKEARGS} ${@:.submit=}' >> $@
 	echo 'echo "Finishing at `date`"' >> $@
-	sbatch $@
+	sbatch ${SBATCH_ARGS} $@
 	mv $@ $@-${shell date "+%Y-%m-%d"}
 
 #	echo 'module purge' >> $@

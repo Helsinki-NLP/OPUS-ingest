@@ -15,7 +15,9 @@
 include Makefile.def
 include ../Makefile.def
 
-OPUSTOKENIZER = perl -CSD -pe "s/\N{U+200B}//gu" | ${PWD}/scripts/opus-tokenize.py
+# OPUSTOKENIZER = perl -CSD -pe "s/\N{U+200B}//gu" | ${PWD}/scripts/opus-tokenize.py
+OPUSTOKENIZER = ${UNICODE_CLEANUP} | ${PWD}/scripts/opus-tokenize.py
+
 
 ## make all:
 ##

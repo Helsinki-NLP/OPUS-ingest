@@ -1,0 +1,22 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = MultiHPLT
+
+UNSORTED_SENTALIGN := 1
+SKIP_TMX_UNIQ      := 1
+
+
+RELEASE = 1
+VERSION = v${RELEASE}
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+
+SRCHTML = Parallel corpora from Web Crawls collected in the <a href="https://hplt-project.org">HPLT project</a> and further processed for making it a multi-parallel corpus by pivoting via English. Here we provide the additional language pairs that came out of pivoting. The bitexts for English are the same as the ones in the <a href="http://opus.nlpl.eu/HPLT-${VERSION}.php">original HPLT release</a>.
+EXTRAHTML = The data is released under the <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">Creative Commons CC0 license</a> ("no rights reserved"), see <a href="https://hplt-project.org">https://hplt-project.org</a> for more details
+CITENOTE = Please, acknowledge the HPLT project at <a href="https://hplt-project.org">https://hplt-project.org</a>. This version is derived from the original release at their website adjusted for redistribution via the OPUS corpus collection. Please, acknowledge OPUS as well for this service.

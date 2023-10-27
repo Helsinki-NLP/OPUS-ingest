@@ -1,0 +1,16 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = MaCoCu
+
+RELEASE = 2
+VERSION = v${RELEASE}
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+SRCHTML = The <a href="https://macocu.eu">MaCoCu project</a> collected monolingual and parallel data from the Internet, especially for under-resourced languages and DSI-specific data. Parallel texts have been extracted using the bitextor toolbox.
+EXTRAHTML = The data packaging is licensed under the <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">Creative Commons CC0 license</a> ("no rights reserved"), see <a href="https://macocu.eu">https://macocu.eu</a> for more details
+CITENOTE = Please, acknowledge the MaCoCu project at <a href="https://macocu.eu">https://macocu.eu</a>. This version is derived from the original release at their website adjusted for redistribution via the OPUS corpus collection. Please, acknowledge OPUS as well for this service.

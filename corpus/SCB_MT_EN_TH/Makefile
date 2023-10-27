@@ -99,7 +99,7 @@ fetch:
 	rm -f scb-mt-en-th-2020.tar.gz
 
 TSVFILES = $(patsubst %.csv,%.tsv,$(wildcard scb*/*.csv))
-UNICODE_CLEANUP := perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;s/\&\s*\#\s*160\s*\;/ /g;'
+# UNICODE_CLEANUP := perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;s/\&\s*\#\s*160\s*\;/ /g;'
 
 csv2tsv: ${TSVFILES}
 

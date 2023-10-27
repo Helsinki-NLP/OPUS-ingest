@@ -28,6 +28,7 @@ ELRC-www.norden.org	v1	41073	1/2866	.03
 ELRC-www.nordisketax.net	v1	1065	1/2866	.03
 EUbookshop	v2	9221	0/2866	0
 GNOME	v1	5424	0/2866	0
+HPLT	v1	2148855	1/2866	.03
 KDE4	v2	87445	0/2866	0
 MultiCCAligned	v1	1186757	1/2866	.03
 MultiParaCrawl	v7.1	2392423	1/2866	.03
