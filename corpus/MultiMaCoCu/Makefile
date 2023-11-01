@@ -38,8 +38,12 @@ pivoting-job:
 	${MAKE} -C src pivoting
 	${MAKE} delete-empty-bitexts
 	if [ `ls log/.*tok* | wc -l` == ${words ${LANGUAGES}} ]; then \
-	  ${MAKE} HPC_CORES=8 THREADS=4 HPC_MEM=128g HPC_TIME=72:00 HPC_DISK=500 publish.submit; \
+	  ${MAKE} HPC_CORES=8 THREADS=4 HPC_MEM=128g HPC_TIME=72:00 HPC_DISK=500 publish-job.submit; \
 	fi
+
+publish-job:
+	${MAKE} publish
+	${MAKE} release
 
 
 finish-import:
@@ -66,7 +70,7 @@ only-pivoting-job:
 
 tokenize-jobs:
 	mkdir -p log
-	for l in $(filter-out en,$(sort $(notdir $(wildcard ${CORPUSRAW}/?? ${CORPUSRAW}/??_*)))); do \
+	for l in $(sort $(notdir $(wildcard ${CORPUSRAW}/?? ${CORPUSRAW}/??_*))); do \
 	  ${MAKE} MAKEARGS="LANGUAGE=$$l" LANGUAGE=$$l HPC_CORES=1 HPC_MEM=4g HPC_TIME=72:00 \
 	  tokenize-job.submit; \
 	  rm -f tokenize-job.submit;\

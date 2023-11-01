@@ -11,7 +11,7 @@ my $nr = shift(@ARGV) || 10;
 
 binmode(STDOUT);
 
-my $mcdb = MCDB_File->TIEHASH($file) or die "cannot tie $file\n";
+my $mcdb = MCDB_File->TIEHASH($file) or die "cannot tie $file ($!)\n";
 
 if ($nr){
     for ($start..$start+$nr-1){

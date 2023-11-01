@@ -9,7 +9,7 @@ CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')
 ## current version
 VERSION = v20230407
 
-LICENSE = <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC–BY-SA 4.0</a></p>
+LICENSE = <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
 COPYRIGHT = 
 
 # with SRCHTML you can define some extra HTML code that will be placed just

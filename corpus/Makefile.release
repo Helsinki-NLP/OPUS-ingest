@@ -114,7 +114,7 @@ update-git:
 	-cd ${OPUSRELEASE}  && git add ${CORPUS}/.uploaded-${VERSION}
 	-cd ${OPUSRELEASE}  && git add ${CORPUS}/.released-${VERSION}
 	-cd ${OPUSRELEASE}  && git add ${CORPUS}/*.info ${CORPUS}/*.txt ${CORPUS}/*.txt
-	cd ${OPUSPUB}       && git add ${CORPUS}-${VERSION}
+	cd ${OPUSPUB}       && git add ${CORPUS}/${VERSION}
 	cd ${OPUSPUB}       && git add ${CORPUS}-${VERSION}.php ${CORPUS}.php
 	cd ${OPUSGITHOME}   && git commit -am '${CORPUS} release ${VERSION} added'
 	cd ${OPUSPUB}       && git commit -am '${CORPUS} release ${VERSION} added'
@@ -456,7 +456,7 @@ Notice: Should you consider that our data contains material that is owned by you
     <li>Clearly identify yourself, with detailed contact data such as an address, telephone number or email address at which you can be contacted.</li> \
     <li>Clearly identify the copyrighted work claimed to be infringed.</li> \
     <li>Clearly identify the material that is claimed to be infringing and information reasonably sufficient to allow us to locate the material.</li> \
-    <li>And contact Joerg Tiedemann at the following email address: jorg.tiedemann at helsinki.fi.</li>\
+    <li>And contact the OPUS project at the following email address: opus-project at helsinki.fi.</li>\
 </ul> \
 Take down: We will comply to legitimate requests by removing the affected sources from the next release of the corpus.
 endif

@@ -145,8 +145,32 @@ ${LANGUAGE}.dedup.gz: ${ALL_MONO_DONE}
 	${GZIP} -cd < $< | ./sent2sqlite.py $@
 
 
-en.dedup.new.gz:
-	gzip -cd en.dedup.gz | parallel --pipe --keep-order -q ${FIX_UNICODE} | gzip -c > $@
+
+
+de.CCMatrix-v1.idx: de.sent2id.db
+	${GZIP} -cd < de.dedup.gz \
+	| perl opus_sentid_index.pl -c CCMatrix -r v1 -l de -d $< > $@
+
+fi.OpenSubtitles-v2018.idx: fi.sent2id.db
+	${GZIP} -cd < fi.dedup.gz \
+	| perl opus_sentid_index.pl -c OpenSubtitles -r v2018 -l fi -d $< > $@
+
+sv.OpenSubtitles-v2018.idx: sv.sent2id.db
+	${GZIP} -cd < sv.dedup.gz \
+	| perl opus_sentid_index.pl -c OpenSubtitles -r v2018 -l sv -d $< > $@
+
+de.OpenSubtitles-v2018.idx: de.sent2id.db
+	${GZIP} -cd < de.dedup.gz \
+	| perl opus_sentid_index.pl -c OpenSubtitles -r v2018 -l de -d $< > $@
+
+fi.Europarl-v8.idx: fi.sent2id.db
+	${GZIP} -cd < fi.dedup.gz \
+	| perl opus_sentid_index.pl -c Europarl -r v8 -l fi -d $< > $@
+
+
+
+# en.dedup.new.gz:
+# 	gzip -cd en.dedup.gz | parallel --pipe --keep-order -q ${FIX_UNICODE} | gzip -c > $@
 
 ## download monolingual corpus and de-duplicate
 ${INDEX_TMPDIR}/%.dedup:

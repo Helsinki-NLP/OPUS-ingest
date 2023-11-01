@@ -30,14 +30,6 @@ all-job:
 # 	${MAKE} HPC_CORES=1 HPC_MEM=4g HPC_TIME=72:00 fetch-job.submit
 
 
-new-sr:
-	${MAKE} -C src all
-	${MAKE} LANGUAGE=sr annotate_files
-	${MAKE} LANGUAGE=en annotate_files
-	${MAKE} moses
-	${MAKE} copy-tmx-files
-	${MAKE} publish
-
 
 fetch-job:
 	${MAKE} -C src fetch
@@ -68,6 +60,7 @@ publish-job:
 	${MAKE} moses
 	${MAKE} copy-tmx-files
 	${MAKE} publish
+	${MAKE} release
 #	${MAKE} wordalign/Makefile
 #	${MAKE} -C wordalign submit-all
 #	${MAKE} HPC_CORES=8 HPC_MEM=8g HPC_TIME=72:00 udparse.submit

@@ -68,12 +68,13 @@ copy-tmx-files:
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
 	    if [[ "$$s" < "$$t" ]]; then \
-	      f=`ls src/$$s-$$t.*tmx.gz src/*/$$s-$$t.*tmx.gz 2>/dev/null | tail -1`; \
+	      f=`ls src/*-$$s-$$t.*tmx.gz 2>/dev/null | tail -1`; \
 	      if [ "$$f" == "" ]; then \
-	        f=`ls src/$$t-$$s.*tmx.gz src/*/$$t-$$s.*tmx.gz 2>/dev/null | tail -1`; \
+	        f=`ls src/*-$$t-$$s.*tmx.gz 2>/dev/null | tail -1`; \
 	      fi; \
 	      if [ "$$f" != "" ]; then \
 		if [ ! -e ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz ]; then \
+		  echo "rsync $$f ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz"; \
 		  rsync $$f ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
 		  touch ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
 		fi \
@@ -81,6 +82,13 @@ copy-tmx-files:
 	    fi \
 	  done \
 	done
+	rsync src/MaCoCu-bs-en.cyrillic.tmx.gz ${CORPUSRELEASE}/tmx/bs_Cyrl-en.tmx.gz
+	rsync src/MaCoCu-bs-en.latin.tmx.gz ${CORPUSRELEASE}/tmx/bs_Latn-en.tmx.gz
+	rsync src/MaCoCu-cnr-en.cyrillic.tmx.gz ${CORPUSRELEASE}/tmx/en-me_Cyrl.tmx.gz
+	rsync src/MaCoCu-cnr-en.latin.tmx.gz ${CORPUSRELEASE}/tmx/en-me_Latn.tmx.gz
+	rsync src/MaCoCu-sr-en.cyrillic.tmx.gz ${CORPUSRELEASE}/tmx/en-me_Cyrl.tmx.gz
+	rsync src/MaCoCu-sr-en.cyrillic.tmx.gz ${CORPUSRELEASE}/tmx/en-sr_Cyrl.tmx.gz
+	rsync src/MaCoCu-sr-en.latin.tmx.gz ${CORPUSRELEASE}/tmx/en-sr_Latn.tmx.gz
 
 
 

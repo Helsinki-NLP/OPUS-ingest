@@ -4,7 +4,7 @@
 
 CORPUS  = HPLT
 
-RELEASE = 1
+RELEASE = 1.1
 VERSION = v${RELEASE}
 
 # with SRCHTML you can define some extra HTML code that will be placed just
@@ -12,5 +12,5 @@ VERSION = v${RELEASE}
 # EXTRAHTML is code which will be put just after the 'Download' header
 
 SRCHTML = Parallel corpora from Web Crawls collected in the <a href="https://hplt-project.org/">HPLT project</a>
-EXTRAHTML = The data is released under the <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">Creative Commons CC0 license</a> ("no rights reserved"), see <a href="http://paracrawl.eu/download.html">http://paracrawl.eu/download.html</a> for more details
+EXTRAHTML = The data packaging is released under the <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">Creative Commons CC0 license</a> ("no rights reserved"), see <a href="https://hplt-project.org/">https://hplt-project.org/</a> for more details
 CITENOTE = Please, acknowledge the HPLT project at <a href="https://hplt-project.org/">https://hplt-project.org/</a>. This version is derived from the original release at their website adjusted for redistribution via the OPUS corpus collection. Please, acknowledge OPUS as well for this service.

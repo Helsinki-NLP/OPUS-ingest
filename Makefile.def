@@ -164,15 +164,18 @@ GZCAT    := ${GZIP} -cd
 ZCAT     := gzip -cd
 
 SORT     := sort -T ${TMPDIR} -S1G --parallel=${THREADS}
-# SORT   := sort -T ${TMPDIR} --parallel=${THREADS} -S1G --compress-program=${GZIP}
-# SORT   := sort -T ${TMPDIR} --parallel=${THREADS} -S1G
+# SORT   := sort -T ${TMPDIR} -S1G --parallel=${THREADS} --compress-program=${GZIP}
 
 UNIQ     := ${SORT} -u
 MERGE    := ${SORT} -m -u
 
-ifneq (${shell which parsort 2>/dev/null},)
-  SORT   := parsort -T ${TMPDIR} -S1G
-endif
+
+## I don't really trust parsort ...
+
+# ifneq (${shell which parsort 2>/dev/null},)
+#   SORT   := parsort -T ${TMPDIR} -S1G
+# endif
+
 
 
 ## seems to be necessary to run with threads on HPC nodes

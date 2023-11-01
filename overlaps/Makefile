@@ -66,20 +66,14 @@ HPC_BIG_DISK = 1000
 job-mono-puhti:
 	${MAKE} HPC_MEM=${HPC_BIG_MEM} HPC_CORES=${HPC_BIG_CORES} CORES=4 THREADS=4 HPC_DISK=${HPC_BIG_DISK} HPC_TIME=72:00 all-mono.submit
 
-.PHONY: job-biglang-puhti
-job-biglang-puhti:
-	for l in it de zh ja ru; do \
-	  ${MAKE} LANGUAGE=$$l job-mono-puhti; \
-	done
-
 .PHONY: job-hugelang-puhti
-job-hugelang-puhti:
-	for l in en es fr; do \
+job-biglang-puhti:
+	for l in de es fr pt ru zh; do \
 	  ${MAKE} LANGUAGE=$$l HPC_BIG_MEM=256g job-mono-puhti; \
 	done
 
 job-english-puhti:
-	${MAKE} LANGUAGE=en HPC_BIG_MEM=256g HPC_BIG_DISK=2000 job-mono-puhti
+	${MAKE} LANGUAGE=en HPC_BIG_MEM=256g HPC_BIG_DISK=3000 job-mono-puhti
 
 
 ## compute bitext overlaps
@@ -302,6 +296,11 @@ update-para-job:
 	  ${MAKE} HPC_MEM=128g HPC_CORES=2 CORES=2 THREADS=2 HPC_DISK=500 HPC_TIME=24:00 all-para.submit; \
 	fi
 
+## print bitext for which we miss overlap scores
+.PHONY: missing-para
+missing-para:
+	@echo $(filter-out $(patsubst ${LANGPAIR}/%.txt,%,$(sort $(shell find ${LANGPAIR} -name '*.txt'))),\
+			$(patsubst ${OPUSRELEASE}/%/moses/${LANGPAIR}.txt.zip,%,${ALL_PARA}))
 
 
 
@@ -363,8 +362,13 @@ ${OPUSRELEASE}/%/overlaps/${LANGPAIR}.tsv: ${LANGPAIR}/%.txt
 ## create deduplicated monolingual corpus files
 ${TMPDIR}/%.dedup.gz:
 	mkdir -p ${dir $@}
-	wget -qq -O - ${OPUS_STORAGE_URL}/OPUS-$(patsubst ${TMPDIR}/%.dedup.gz,%.txt.gz,$@) |\
-	${GZIP} -cd | ${SORT} -u | ${GZIP} -c > $@
+	wget -qq -O $@.txt.gz ${OPUS_STORAGE_URL}/OPUS-$(patsubst ${TMPDIR}/%.dedup.gz,%.txt.gz,$@)
+	${GZIP} -cd < $@.txt.gz | ${PARALLEL} sed 's/ *//g' | ${SORT} -u | ${GZIP} -c > $@
+	rm -f $@.txt.gz
+
+#	wget -qq -O - ${OPUS_STORAGE_URL}/OPUS-$(patsubst ${TMPDIR}/%.dedup.gz,%.txt.gz,$@) |\
+#	${GZIP} -cd | ${PARALLEL} sed 's/ *//g' | ${SORT} -u | ${GZIP} -c > $@
+
 
 ## create deduplicated bitexts
 ## NOTE: spaces removed for bitexts!
