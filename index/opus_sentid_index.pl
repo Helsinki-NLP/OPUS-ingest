@@ -41,6 +41,12 @@ my $parser = new XML::Parser(Handlers => {Start => \&start_element,
 
 my ($count, $inSent, $sentStr, $sentID, $sentCount, $parCount, $parID, $document);
 
+my %parBoundaryTags = ('p' => 1,
+		       'h1' => 1,
+		       'h2' => 1,
+		       'h3' => 1,
+		       'div' => 1);
+
 while (my $member=$lzip->next){
     my $filename = $member->name();
     if ($filename=~/\.xml$/){
@@ -72,18 +78,8 @@ print STDERR "A total of $count sentences found\n";
 
 sub start_element{
     my ($p, $name, %attr) = @_;
-    
-    if ($name eq 'p'){
-	$parCount++;
-        if (exists $attr{'id'}){
-            $parID = $attr{'id'};
-	}
-        else{
-            $parID = $parCount;
-	}
-    }
 
-    elsif ($name eq 's'){
+    if ($name eq 's'){
         $inSent = 1;
         $sentCount++;
         $sentStr = '';
@@ -100,6 +96,16 @@ sub start_element{
 	    }
 	}
     }
+    elsif ($parBoundaryTags{lc($name)}){
+	$parCount++;
+        if (exists $attr{'id'}){
+            $parID = $attr{'id'};
+	}
+        else{
+            $parID = $parCount;
+	}
+    }
+
 }
 
 
@@ -121,7 +127,7 @@ sub end_element{
         $sentStr = '';
         $inSent = 0;
     }
-    elsif ($name eq 'p'){
+    elsif ($parBoundaryTags{lc($name)}){
 	$parID = 0;
     }
 

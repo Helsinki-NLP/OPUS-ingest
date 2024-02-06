@@ -73,7 +73,7 @@ job-biglang-puhti:
 	done
 
 job-english-puhti:
-	${MAKE} LANGUAGE=en HPC_BIG_MEM=256g HPC_BIG_DISK=3000 job-mono-puhti
+	${MAKE} LANGUAGE=en HPC_BIG_MEM=373g HPC_BIG_DISK=3000 job-mono-puhti
 
 
 ## compute bitext overlaps

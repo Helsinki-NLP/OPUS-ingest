@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 import argparse
 import xml.parsers.expat
 import zipfile
@@ -17,17 +18,21 @@ storage_url_base = 'https://object.pouta.csc.fi/OPUS-'
 parser = argparse.ArgumentParser(prog='opus_sentid_index',
     description='Read OPUS documents and extract sentence IDs and row numbers from an index DB')
 
-parser.add_argument('-d', '--database', help='Database',required=True)
-parser.add_argument('-c', '--corpus', help='Corpus name',required=True)
-parser.add_argument('-r', '--release', help='Release version',required=True)
+parser.add_argument('-d', '--database', help='Database', required=True)
+parser.add_argument('-c', '--corpus', help='Corpus name', required=True)
+parser.add_argument('-r', '--release', help='Release version', required=True)
 parser.add_argument('-l', '--language', help='Language', required=True)
 parser.add_argument('-f', '--file_name',help='File name (if not given, prints all files)')
+parser.add_argument('-v', '--verbose', help='verbose output', action='store_true', default=False)
 
 args = parser.parse_args()
 
+verbose = args.verbose;
+
 corpus    = args.corpus
-data_url  = storage_url_base + corpus + '/' + args.release + '/raw/' + args.language + '.zip'
-data_file = corpus + '_' + args.release + '_raw_' + args.language + '.zip'
+release   = args.release
+data_url  = storage_url_base + corpus + '/' + release + '/raw/' + args.language + '.zip'
+data_file = corpus + '_' + release + '_raw_' + args.language + '.zip'
 
 
 
@@ -41,14 +46,7 @@ lzip = zipfile.ZipFile(data_file)
 def start_element(name, attrs):
     global inSent, sentStr, sentCount, sentID
     global parCount, parID
-    
-    if name == 'p':
-        parCount += 1
-        if 'id' in attrs:
-            parID = attrs['id']
-        else:
-            parID = str(sentCount)
-                
+              
     if name == 's':
         inSent = True
         sentCount += 1
@@ -63,30 +61,42 @@ def start_element(name, attrs):
                 sys.stderr.write(f" {sentCount}\n")
             sys.stderr.flush()
 
+    elif name == 'p' or name == 'P':
+        parCount += 1
+        if 'id' in attrs:
+            parID = attrs['id']
+        else:
+            parID = str(sentCount)
+
+
             
 def end_element(name):
     global inSent, sentStr, sentID
     global parStr, parID
-    global corpus, document
-    global cur,con
+    global corpus, release, document
+    global cur, con, verbose
         
     if name == 's':
         sentStr = sentStr.lstrip().rstrip()
         res = cur.execute("""SELECT ROWID FROM sentences WHERE sentence = ?""", [sentStr])
         record = res.fetchone()
         if record:
-            print("\t".join([str(record[0]),corpus,document,parID,sentID,str(len(sentStr))]))
+            print("\t".join([str(record[0]),corpus,release,document,str(parID),str(sentID),str(len(sentStr))]))
         else:
-            ## TODO: insert a new sentence!
-            sys.stderr.write('NEW SENTENCES - ' + sentID + ': ' + sentStr + "\n")
+            ## insert a new sentence!
+            if verbose:
+                sys.stderr.write('NEW SENTENCES - ' + sentID + ': ' + sentStr + "\n")
             cur.execute("""INSERT OR IGNORE INTO sentences VALUES(?)""", [sentStr])
-            con.commit()
+            con.commit()                
             res = cur.execute("""SELECT ROWID FROM sentences WHERE sentence = ?""", [sentStr])
             record = res.fetchone()
             if record:
-                print("\t".join([str(record[0]),document,sentID,str(len(sentStr))]))
+                print("\t".join([str(record[0]),corpus,release,document,str(parID),str(sentID),str(len(sentStr))]))
             else:
                 sys.stderr.write('FAILED TO INSERT - ' + sentID + ': ' + sentStr + "\n")
+
+    elif name == 'p' or name == 'P':
+        parID = 0
 
         sentStr = ''
         inSent = False
@@ -99,12 +109,13 @@ def char_data(data):
         sentStr = sentStr + data
 
 
-
-con = sqlite3.connect(args.database)
+## wait for max 2 hours
+# con = sqlite3.connect(args.database, timeout=7200, isolation_level='EXCLUSIVE')
+con = sqlite3.connect(args.database, timeout=7200)
+con.execute("PRAGMA journal_mode=WAL")
 cur = con.cursor()
 
 cur.execute("CREATE TABLE IF NOT EXISTS sentences ( sentence TEXT UNIQUE PRIMARY KEY NOT NULL )")
-
 
 count = 0
 
@@ -121,19 +132,29 @@ for filename in lzip.namelist():
         sentID    = ''
         sentCount = 0
         parCount  = 0
-        parID     = ''
+        parID     = 0
+
+        errorCount = 0
         
         document  = '/'.join(filename.split('/')[2:])
 
-        sys.stderr.write(f"process {filename} ({count} sentences done)\n")
+        if verbose:
+            sys.stderr.write(f"process {filename} ({count} sentences done)\n")
         with lzip.open(filename, 'r') as f:
             for line in f:
-                parser.Parse(line)
+                try:
+                    parser.Parse(line)
+                except:
+                    errorCount += 1
+                    if verbose:
+                        sys.stderr.write(f"error parsing {line}\n")
 
         count += sentCount
+        if errorCount > 0:
+            sys.stderr.write(f"XML parsing errors for {filename}: {errorCount} lines\n")
 
 
 sys.stderr.write(f"A total of {count} sentences found\n")
-
+os.unlink(data_file)
 
 
