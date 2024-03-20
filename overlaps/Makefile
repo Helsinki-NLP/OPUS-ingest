@@ -435,8 +435,8 @@ ${LANGUAGE}/%.tar.gz: counts/${LANGUAGE}
 
 ## pack individual count files if the cumulative count file exist
 tar-mono-counts:
-	@for c in ${CORPORA}; do \
-	  for v in `grep '^$$c	' ${RELEASE_INFO} | cut -f2 | sort -u`; do \
+	for c in ${CORPORA}; do \
+	  for v in `grep "^$$c	" ${RELEASE_INFO} | cut -f2 | sort -u`; do \
 	    if [ -e ${LANGUAGE}/$$c/$$v.txt ]; then \
 	      if [ ! -e ${LANGUAGE}/$$c/$$v.tar.gz ]; then \
 	        make ${LANGUAGE}/$$c/$$v.tar.gz; \
