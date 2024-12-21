@@ -20,7 +20,7 @@ endif
 # HPC_EXTRA: additional SBATCH commands
 
 HPC_MEM     = 4g
-HPC_TIME    = 48:00
+HPC_TIME    = 72:00
 HPC_NODES   = 1
 HPC_CORES   = 1
 HPC_QUEUE   = small

@@ -1,0 +1,12 @@
+I used this query to dump db:
+SELECT a.MovieID, IDSubtitleFile, SubLanguageID, IDSubtitle, SubActualCD, SubSumCD, SubFormat, MovieName, MovieYear, MovieImdbID, UserRank, SubDownloadsCnt, SeriesIMDBParent, SeriesSeason, SeriesEpisode, SubHearingImpaired, SubFormat
+FROM subs_search_cache a
+LEFT JOIN subs_subtitle_file b ON IDSubtitle = SubtitleID
+WHERE 1 = 1
+AND SubEnabled = 1
+LIMIT 1
+INTO OUTFILE '/backup/db1/export.csv'
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+FIELDS ESCAPED BY '\'
+LINES TERMINATED BY '\n';

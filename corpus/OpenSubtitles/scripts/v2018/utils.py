@@ -1,15 +1,7 @@
-# -*- coding: utf-8 -*-
-
-
+# -*- coding: utf-8 -*- 
 
 import os, json, io, collections, re, unicodedata, sys, errno, math
 from subprocess import Popen, PIPE
-from mosestokenizer import MosesTokenizer
-import polyglot
-from polyglot.text import Text
-
-supportedTokeniserLangs = ["as", "bn", "ca", "cs", "de", "el", "en", "es", "et", "fi", "fr", "ga", "gu", "hi" ,"hu", "is", "it", "kn", "lt", "lv", "ml", "ni", "mr", "nl", "or", "pa", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "ta", "te", "ue", "zh"]
-
 
 # Path to tokenisation script
 # TOKENISER_PATH = "/proj/nlpl/software/moses/4.0-65c75ff/moses/scripts/tokenizer/tokenizer.perl"
@@ -116,9 +108,7 @@ languages = {'alb': 'sq', 'scc': 'sr', 'ita': 'it', 'per': 'fa', 'gl': {'codes':
 'iso-8859-1']}, 'is': {'codes': ['ice', 'is'], 'name': 'Icelandic', 'scripts':
 ['latin'], 'encodings': ['utf-8', 'iso-8859-4']}, 'it': {'scripts': ['latin'],
 'codes': ['ita', 'it'], 'name': 'Italian', 'encodings':
-['utf-8', 'windows-1252', 'iso-8859-1']}, 'zt': {'codes': ['zht', 'zt', 'zh','zh_tw'], 'name':
-'Chinese (traditional)', 'scripts': ['chinese'], 'encodings': ['utf-8', 'big5',
-'gb2312', 'gb18030','hz-gb-2312']}, 'zh_tw': {'codes': ['zht', 'zt', 'zh','zh_tw'], 'name':
+['utf-8', 'windows-1252', 'iso-8859-1']}, 'zt': {'codes': ['zht', 'zt', 'zh'], 'name':
 'Chinese (traditional)', 'scripts': ['chinese'], 'encodings': ['utf-8', 'big5',
 'gb2312', 'gb18030','hz-gb-2312']}, 'ar': {'codes': ['ara', 'ar'], 'name': 'Arabic', 'scripts':
 ['arabic'], 'encodings': ['utf-8', 'windows-1256', 'iso-8859-6']}, 'khm': 'km',
@@ -167,56 +157,27 @@ class Tokeniser():
         
         """
         
-        self.language = language
-        self.tokprocess = None
-        
-        lcode = language.codes[0]
-        lcode = lcode if lcode.lower()!="pt_br" else "pt"
-        
+        if isinstance(language, Language):
+            self.language = language
+        elif isinstance(language,str):
+            self.language = getLanguage(language)
+        else:
+            sys.stderr.write("Using English as default tokenisation language\n")
+            self.language = getLanguage("en")
+            
         if "Japanese" in self.language.name:
             self.cmd = KYTEA_PATH + "/bin/kytea -notags -model " + KYTEA_JAPANESE
-            self.tokprocess = Popen(self.cmd, 1, shell=True, stdin=PIPE, stdout=PIPE) if self.cmd else None
-            self.tool = 'kytea'
-        elif lcode in supportedTokeniserLangs:
-            self.MosesTokenizer = MosesTokenizer(lcode)
-            self.tool = 'moses'
+        elif "Chinese" in self.language.name:
+            self.cmd = None
         else:
-            self.MosesTokenizer = MosesTokenizer('en')
-            self.polyglot = lcode
-            self.tool = 'polyglot'
-
-        self.rules = tokenisation_rules.get(self.language.codes[0], {})
-        
-        # if isinstance(language, Language):
-        #     self.language = language
-        # elif isinstance(language,str):
-        #     self.language = getLanguage(language)
-        # else:
-        #     sys.stderr.write("Using English as default tokenisation language\n")
-        #     self.language = getLanguage("en")
-            
-        # if "Japanese" in self.language.name:
-        #     self.cmd = KYTEA_PATH + "/bin/kytea -notags -model " + KYTEA_JAPANESE
-        # elif "Chinese" in self.language.name:
-        #     self.cmd = None
-
-        # elif:
-        #     lcode = self.language.codes[0]
-        #     lcode = lcode if lcode!="pt_br" else "pt"
-        #     if lcode in supportedTokeniserLangs:
-        #         self.MosesTokenizer = MosesTokenizer(lcode)
-        # else:
-        #     self.MosesTokenizer = MosesTokenizer('en')
-        #     self.polyglot = True
-        # # else:
-        # #     self.cmd = TOKENISER_PATH + " -no-escape -q -b "
-        # #     lcode = self.language.codes[0]
-        # #     lcode = lcode if lcode!="pt_br" else "pt"
-        # #     self.cmd += "-l %s" %lcode
+            self.cmd = TOKENISER_PATH + " -no-escape -q -b "
+            lcode = self.language.codes[0]
+            lcode = lcode if lcode!="pt_br" else "pt"
+            self.cmd += "-l %s" %lcode
              
         # Starts a process with the tokeniser tool
-        # self.tokprocess = Popen(self.cmd, 1, shell=True, stdin=PIPE, stdout=PIPE) if self.cmd else None
-        # self.rules = tokenisation_rules.get(self.language.codes[0], {})
+        self.tokprocess = Popen(self.cmd, 1, shell=True, stdin=PIPE, stdout=PIPE) if self.cmd else None
+        self.rules = tokenisation_rules.get(self.language.codes[0], {})
         
  
   
@@ -228,13 +189,6 @@ class Tokeniser():
         if self.language.name.startswith("Chinese"):
             import jieba
             tokens = jieba.cut(sentence, cut_all=False)
-            sentence2 = " ".join(tokens)
-        elif self.tool == 'moses':
-            tokens = self.MosesTokenizer.tokenize(sentence)
-            sentence2 = " ".join(tokens)
-        elif self.tool == 'polyglot':
-            textobj = Text(sentence, hint_language_code=self.polyglot)
-            tokens = textobj.words
             sentence2 = " ".join(tokens)
         else:
             sentence2 = self._feedprocess(sentence)
@@ -471,43 +425,13 @@ class SpellChecker():
 from langid.langid import LanguageIdentifier, model
 identifier = LanguageIdentifier.from_modelstring(model, norm_probs=True)
 
-
 def getProbDist(text):
-    return getProbDistLangid(text)
-    # return getProbDistOpenLID(text)
-
-
-def getProbDistLangid(text):
     result = identifier.rank(text)
     result2 = {}
     for r in result:
         if r[1]>0.01:
             result2[r[0]]=r[1]
     return result2
-
-
-# import fasttext
-# from openlid import clean_text
-# from huggingface_hub import hf_hub_download
-# # from iso639 import languages
-
-# OpenLidModelPath = hf_hub_download(repo_id="laurievb/OpenLID-v2", filename="openlid_v2.bin")
-# OpenLidModel = fasttext.load_model(OpenLidModelPath)
-
-# def getProbDistOpenLID(text):
-#     input_text = clean_text(text)
-#     result = OpenLidModel.predict(text[:1024].replace("\n", ""), k=5)
-#     probs = result[1]
-#     result2 = {}
-#     for i,r in enumerate(result[0]):
-#         p=probs[i]
-#         # l=r[len('__label___'):]
-#         l=r[10:13]
-#         result2[l]=p
-#         # iso = languages.get(part3=l)
-#         # result2[iso.part1]=p
-#     return result2
-
 
 
 class Language:
@@ -624,8 +548,8 @@ def getLanguage(langcode):
     with the provided code, raises a RuntimeError".
     
     """
-    if langcode.lower() in languages.keys():
-        content = languages[langcode.lower()]
+    if langcode in languages.keys():
+        content = languages[langcode]
         if isinstance(content, dict):
             lang = Language(content["name"], content["scripts"])
             lang.encodings = content["encodings"]

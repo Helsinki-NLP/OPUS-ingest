@@ -1,0 +1,9 @@
+chared>=1.2.2
+MosesTokenizer
+polyglot
+PyICU>=2.14
+fasttext
+langid
+jieba
+huggingface_hub
+kenlm

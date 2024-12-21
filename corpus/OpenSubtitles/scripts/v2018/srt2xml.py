@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*- 
 
 ## TODO: fix negated contractions in English -- isn 't ---> is n't
@@ -9,7 +8,7 @@ simple tokenization and sentence splitting procedure.
 
 """
 
-import sys, os, io,json,re,time,gzip
+import sys, os, io,json,re,time
 import xml.etree.cElementTree as et
 import utils
 from utils import Tokeniser,SpellChecker
@@ -80,12 +79,9 @@ class SubtitleConverter:
                     
         self.encodings = [encoding] if encoding else []
         self.encodings += (self.lang.encodings if self.lang else [])
-        # if not self.lang or self.lang.codes[0] in difficult_langs:
-        #     detected = detectEncoding(self.inputs[0], self.encodings, self.lang)
-        #     self.encodings = [detected] + self.encodings
-
-        detected = detectEncoding(self.inputs[0], self.encodings, self.lang)
-        self.encodings = [detected] + self.encodings
+        if not self.lang or self.lang.codes[0] in difficult_langs:
+            detected = detectEncoding(self.inputs[0], self.encodings)
+            self.encodings = [detected] + self.encodings
 
         if self.lang and self.lang.direction=="rtl":
             self.flipPunctuation = detectFlippedPunctuation(self.inputs[0], self.encodings)
@@ -544,15 +540,15 @@ class SubtitleConverter:
         self._flushSentence()
         meta = self._extractMetadata()
         metaBuilder = et.TreeBuilder()
-        metaBuilder.start("meta",{})
+        metaBuilder.start("meta")
         
         for part in meta:
             metaBuilder.data("\n    ")
-            metaBuilder.start(part,{})
+            metaBuilder.start(part)
             if isinstance(meta[part],dict):
                 for key in meta[part]:
                     metaBuilder.data("\n      ")
-                    metaBuilder.start(key,{})
+                    metaBuilder.start(key)
                     metaBuilder.data(meta[part][key])
                     metaBuilder.end(key)
             metaBuilder.data("\n    ")
@@ -875,13 +871,9 @@ def convertSubtitle(srtFile=None, xmlFile=None, langcode=None,encoding=None,
             
     """
     if srtFile:
-        if srtFile.endswith('.gz'):
-            input = gzip.open(srtFile,'rb')
-        else:
-            input = io.open(srtFile,mode='rb') 
+        input = io.open(srtFile,mode='rb') 
     else:
-        input = io.TextIOWrapper(sys.stdin.buffer.raw)
-        # input = io.TextIOWrapper(sys.stdin.buffer,mode='rb')        
+        input = io.TextIOWrapper(sys.stdin.buffer,mode='rb')        
         
     output = io.open(xmlFile,'wb') if xmlFile else sys.stdout.buffer
     rawOutput = io.open(rawOutput,'wb') if rawOutput else None
@@ -904,7 +896,7 @@ def convertSubtitle(srtFile=None, xmlFile=None, langcode=None,encoding=None,
         
      
      
-def detectEncoding(input, alternatives, language):
+def detectEncoding(input, alternatives):
     """Tries to detected the encoding using chardet.  The detection
     is performed incrementally.
     
@@ -913,38 +905,8 @@ def detectEncoding(input, alternatives, language):
         - alternatives(list): list of alternative encodings
             
     """
-
     if not input or not hasattr(input,"fileno"):
         return "utf-8"
-    try:
-        from chared.detector import list_models, get_model_path, EncodingDetector
-        # from iso639 import languages
-    except RuntimeError:
-        sys.stderr.write("Cannot find chared and/or iso639\n")
-        return "utf-8"
-
-    model_name = language.name.lower()
-    if model_name == 'chinese (traditional)':
-        model_name = 'chinese_traditional'
-    if model_name == 'chinese (simplified)':
-        model_name = 'chinese_simplified'
-    if model_name == 'norwegian':
-        model_name = 'norwegian_bokmal'
-
-    model_file = get_model_path(model_name)
-    try:
-        encoding_detector = EncodingDetector.load(model_file)
-        document = input.read(1024)
-        enc = encoding_detector.classify(document)
-        input.seek(0)
-        if enc:
-            encoding = "utf-8" if enc[0]=="utf_8" else enc[0]
-            # sys.stderr.write(f"Encoding detected for {model_name}: {encoding}.\n")
-            return encoding
-    except:
-        sys.stderr.write(f"Unable to find char encoding with chared {model_file}.\n")
-
-    
     try:
         from chardet.universaldetector import UniversalDetector
     except RuntimeError:

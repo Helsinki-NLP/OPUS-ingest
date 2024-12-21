@@ -63,6 +63,19 @@ foreach my $v (keys %info){
 
 ## always write the general info file! (need to update release info)
 
+if (exists $GeneralInfo{'latest_release'}){
+    my $latest = $GeneralInfo{'latest_release'};
+    $GeneralInfo{'number_of_languages'} = $info{$latest}{'number of languages'};
+    $GeneralInfo{'bitext'} = $info{$latest}{'number of language pairs'};
+    $GeneralInfo{'number_of_files'} = $statistics{$latest}{'files'};
+    ## if we want commas for thousands: uncomment next line
+    # while($GeneralInfo{'number_of_files'} =~ s/(\d+)(\d\d\d)/$1\,$2/){};
+    $GeneralInfo{'total_number_of_tokens'} = `numfmt --to=iec $info{$latest}{'tokens'}`;
+    $GeneralInfo{'total_sentence_fragments'} = `numfmt --to=iec $info{$latest}{'sentences'}`;
+    chomp($GeneralInfo{'total_number_of_tokens'});
+    chomp($GeneralInfo{'total_sentence_fragments'});
+}
+
 my $GeneralInfoFile = "$corpusdir/info.yaml";
 move($GeneralInfoFile,$GeneralInfoFile.".".time()) if (-e $GeneralInfoFile);
 DumpFile($GeneralInfoFile,\%GeneralInfo) || die "cannot write to $GeneralInfoFile\n";
@@ -285,6 +298,7 @@ sub read_info_file{
 		    $statistics{$v}{monolingual}{$l}{files} = $values[0];
 		    $statistics{$v}{monolingual}{$l}{sentences} = $values[1];
 		    $statistics{$v}{monolingual}{$l}{tokens} = $values[2];
+		    $statistics{$v}{files} += $values[0];
 		}
 		else{
 		    print STDERR "unexpected number of counts for monotexts in $c/$v/$l/xml\n";

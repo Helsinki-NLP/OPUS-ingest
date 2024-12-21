@@ -81,9 +81,9 @@ release:
 	${MAKE} index-info
 	${MAKE} upload-website
 	${MAKE} upload-cwb
+	${MAKE} upload-ida
 	${MAKE} update-git
 	${MAKE} release-nlpl
-	${MAKE} upload-ida
 
 
 ## upload the release without adding the info to git yet
@@ -102,6 +102,8 @@ upload-release:
 .PHONY: update-git
 update-git:
 	${MAKE} -C ${OPUSGITHOME} info
+	cd ${OPUSGITHOME}   && git pull
+	cd ${OPUSPUB}       && git pull
 	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'README' -exec git add {} \;
 	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'LICENSE' -exec git add {} \;
 	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'INFO' -exec git add {} \;
