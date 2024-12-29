@@ -1,13 +1,20 @@
 #!/usr/bin/env perl
+#
+# move srt-files into individual language sub-dirs'
+# with correct path for the OPUS collection
+#
+# the script can also be used to re-organize the files from the v2018 release
+# (move XML files into new sub-directories with compatible names for the new release)
+
 
 use strict;
 use File::Basename;
 use ISO::639::3 qw/:all/;
 
 
-
 my %subPath=();
 my %subFormat=();
+my %fileIDs=();
 
 
 ## read all metadata files
@@ -23,16 +30,25 @@ foreach (@ARGV){
 while (<>){
     chomp;
     my $basename = basename($_);
-    $basename=~s/\.gz$//;
-    if (exists($subPath{$basename})){
-	my $format = $subFormat{$basename};
-	my $path = join('/',$format,$subPath{$basename});
-
+    $basename=~s/\.(gz|xml)$//;
+    my $ext = $1;
+    my $subID = $ext eq 'gz' ? $basename : $fileIDs{$basename};
+    if (exists($subPath{$subID})){
+	my $format = $ext == 'gz' ? $subFormat{$subID} : $ext;
+	my $path = join('/',$format,$subPath{$subID});
+	if ($ext eq 'xml'){
+	    my @parts = split(/\//,$path);
+	    $parts[0] = 'xml';
+	    $path = join('/',@parts);
+	}
 	if (! -d $path){
 	    system("mkdir -p $path");
 	}
-	print("mv $_ $path/$basename.gz\n");
-	system("mv $_ $path/$basename.gz\n");
+	print("mv $_ $path/$subID.$ext\n");
+	system("mv $_ $path/$subID.$ext\n");
+    }
+    else{
+	print("don't know how to handle $_\n");
     }
 }
 
@@ -48,15 +64,19 @@ sub read_info{
     
     while (<F>){
 	chomp;
-	my @parts = /^\"/ ? split(/\",\"/) : split(/\t/);;
+	my @parts = /^\"/ ? split(/\",\"/) : split(/\t/);
 	next if ($#parts < 15);
 	next unless ($parts[1]=~/[0-9]/);
 
 	my $movieID = $parts[0];
-	my $subID = $parts[1];
+	my $fileID = $parts[1];
+	my $subID = $parts[3];
 	my $lang = convert_iso639('iso639-1',$parts[2],1);
 	$lang = 'pt_BR' if ($lang eq 'pob');
 	$lang = 'ze' if ($lang eq 'zhe');
+	$lang = 'zh_CN' if ($lang eq 'zhc');
+	$lang = 'zh_TW' if ($lang eq 'zht');
+	$lang = 'sr' if ($lang eq 'scc');
 	my $format = $parts[6];
 	my $year = $parts[8];
 	my $ImdbID = $parts[9];
@@ -71,29 +91,30 @@ sub read_info{
 	}
 	else{
 	    $year = 'unknown';
-	    push(@UnknownYear,$subID);
+	    push(@UnknownYear,$fileID);
 	}
 
 	$year = 'unknown' unless ($year=~/\S/);
 	$ImdbID = 'unknown' unless ($ImdbID=~/\S/);
 
 	my $path = join('/',$lang,$year,$ImdbID);
-	$subPath{$subID} = $path;
-	$subFormat{$subID} = $format;
+	$subPath{$fileID} = $path;
+	$subFormat{$fileID} = $format;
+	$fileIDs{$subID} = $fileID;
     }
     close F;
 
-    foreach my $subID (@UnknownYear){
-	my ($lang,$year,$id) = split(/\//,$subPath{$subID});
+    foreach my $fileID (@UnknownYear){
+	my ($lang,$year,$id) = split(/\//,$subPath{$fileID});
 	if (exists $ImdbYear{$id}){
 	    $year = $ImdbYear{$id};
 	    my $path = join('/',$lang,$year,$id);
-	    $subPath{$subID} = $path;
+	    $subPath{$fileID} = $path;
 	}
 	elsif (exists $MovieYear{$id}){
 	    $year = $ImdbYear{$id};
 	    my $path = join('/',$lang,$year,$id);
-	    $subPath{$subID} = $path;
+	    $subPath{$fileID} = $path;
 	}
     }
 }

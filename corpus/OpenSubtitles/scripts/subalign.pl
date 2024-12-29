@@ -101,11 +101,11 @@ $SIG{ABRT} = \&cleanup;
 # grep all sub-files in source and target language dir
 
 opendir(my $dh, $srcdir) || die "can't opendir $srcdir: $!";
-my @SrcSubs = grep { /\.xml.gz$/ && -f "$srcdir/$_" } readdir($dh);
+my @SrcSubs = grep { /\.xml(.gz)?$/ && -f "$srcdir/$_" } readdir($dh);
 closedir $dh;
 
 opendir(my $dh, $trgdir) || die "can't opendir $trgdir: $!";
-my @TrgSubs = grep { /\.xml.gz$/ && -f "$trgdir/$_" } readdir($dh);
+my @TrgSubs = grep { /\.xml(.gz)?$/ && -f "$trgdir/$_" } readdir($dh);
 closedir $dh;
 
 
@@ -457,7 +457,7 @@ sub align{
     my $cmd = "$SrtAlign $para $src $trg | gzip -c > $out";
     my $pid = open3(gensym, ">&NULL", \*ERR, $cmd);
 
-    # print STDERR "$cmd\n";
+    print STDERR "$cmd\n";
     my @stderr = <ERR>;
     waitpid($pid, 0);
 

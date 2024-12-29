@@ -28,12 +28,15 @@ HPC_QUEUE   = small
 # HPC_MODULES = parallel python-env nlpl-efmaral nlpl-opus nlpl-moses 
 # HPC_MODULES = parallel python-env nlpl-efmaral nlpl-moses
 # HPC_MODULES = parallel git nlpl-cwb nlpl-opus nlpl-moses
-HPC_MODULES = parallel git nlpl-cwb nlpl-moses
+HPC_MODULES = perl parallel git nlpl-cwb nlpl-moses
 HPC_EXTRA   =
 
 
+SLURM_MAX_NR_JOBS := 200
+
 
 %.submit:
+	while [ `squeue -u ${WHOAMI}` -lt ${SLURM_MAX_NR_JOBS} ]; do echo "waiting for space in the queue";sleep 1; done
 	echo '#!/bin/bash -l' > $@
 	echo '#SBATCH -J "${@:.submit=}"' >>$@
 	echo '#SBATCH -o ${@:.submit=}.out.%j' >> $@
