@@ -220,7 +220,8 @@ class SubtitleConverter:
         while self.curLine.strip():
             block.addLine(self.curLine, self.flipPunctuation)
             self._readline()          
-        while self.curLine and not numberRegex.match(self.curLine):
+        # while self.curLine and not numberRegex.match(self.curLine):
+        while self.curLine and not numberRegex.match(self.curLine) and not timingRegex.match(self.curLine):
             block.addLine(self.curLine, self.flipPunctuation)
             self._readline()
 
@@ -651,7 +652,7 @@ class BilingualConverter(SubtitleConverter):
         SubtitleConverter.__init__(self, input, output, rawOutput, language, 
                                    meta, encoding, alwaysSplit)
         self.encodings += language2.encodings
-        detected = detectEncoding(self.inputs[0], self.encodings)
+        detected = detectEncoding(self.inputs[0], self.encodings, language)
         self.encodings = [detected] + self.encodings
             
         self.lang2 = language2
@@ -800,7 +801,8 @@ class SubtitleBlock:
             line2 = endpunct2 + core + startpunct2
     #        sys.stderr.write("Flipping from " + line + " to " + line2 + "\n")
             line = line2
-               
+
+        # print(f"line: {line}")
         self.lines.append(line)
         
    
@@ -882,21 +884,21 @@ def convertSubtitle(srtFile=None, xmlFile=None, langcode=None,encoding=None,
     else:
         input = io.TextIOWrapper(sys.stdin.buffer.raw)
         # input = io.TextIOWrapper(sys.stdin.buffer,mode='rb')        
-        
+
     output = io.open(xmlFile,'wb') if xmlFile else sys.stdout.buffer
-    rawOutput = io.open(rawOutput,'wb') if rawOutput else None
+    rawout = io.open(rawOutput,'wb') if rawOutput else None
     
     if langcode=="ze":
         incrementPath = lambda p : re.sub("(\w+)(?=\.|$)", "\g<1>2", p, 1)
         output2 = io.open(incrementPath(xmlFile),'wb') if xmlFile else sys.stdout.buffer
-        rawOutput2 = io.open(incrementPath(rawOutput),'wb') if rawOutput else None
+        rawout2 = io.open(incrementPath(rawOutput),'wb') if rawOutput else None
         lang = utils.getLanguage("zt")
         lang2 = utils.getLanguage("en")      
-        converter = BilingualConverter([input], output,output2,rawOutput,rawOutput2,
+        converter = BilingualConverter([input], output,output2,rawout,rawout2,
                                        lang,lang2, meta, encoding, alwaysSplit) 
     else:    
         lang = utils.getLanguage(langcode) if langcode else None
-        converter = SubtitleConverter([input],output,rawOutput,lang,
+        converter = SubtitleConverter([input],output,rawout,lang,
                                   meta, encoding,alwaysSplit, aggressive)
     converter.doConversion()
     converter.closeOutputs()

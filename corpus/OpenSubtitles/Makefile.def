@@ -5,6 +5,7 @@
 CORPUS  = OpenSubtitles
 VERSION = v2018
 
+DEVTEST_YEAR = 2024
 
 # CITENOTE sets the text to be used for citing the corpus
 # with SRCHTML you can define some extra HTML code that will be placed just
@@ -25,9 +26,3 @@ EXTRAHTML=<p>We also provide <b>sentence alignments between alternative subtitle
 <p>For more information, please look at <br/> J. Tiedemann, 2016, <a href="http://stp.lingfil.uu.se/~joerg/paper/lrec2016.pdf"><i>Finding Alternative Translations in a Large Corpus of Movie Subtitles.</i></a><br/> In Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016)<br/>(and, please, cite the paper as well).</p>
 
 
-## directory on abel with the converted subtitle files.
-
-ABEL         = abel.uio.no
-ABEL_USER    = joerg
-ABEL_TARDIR  = /projects/researchers/researchers01/plison/data/opensubs2018
-ABEL_WORKDIR = /work/users/joerg//corpus/OpenSubtitles2018

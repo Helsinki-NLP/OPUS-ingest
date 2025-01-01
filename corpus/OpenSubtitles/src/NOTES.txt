@@ -10,3 +10,16 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 FIELDS ESCAPED BY '\'
 LINES TERMINATED BY '\n';
+
+
+# language codes
+
+
+Try to use BCP-47 (https://www.rfc-editor.org/info/bcp47)
+
+* zhe = bilingual English/Chinese subtitles --> ze
+* zhc = Contonese Chinese (?)	  	    --> yue
+* zht = Traditional Chinese (?)		    --> zh_TW
+* spl = Latin American Spanish (?)	    --> es_149
+* mne = Montenegrin (?)	       		    --> me
+* ext

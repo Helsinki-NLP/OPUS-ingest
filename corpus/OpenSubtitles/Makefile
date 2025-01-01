@@ -5,7 +5,7 @@ include ../Makefile.def
 
 
 SRC = xx
-TRG = xx
+TRG = yy
 
 all:
 
@@ -13,8 +13,10 @@ convert:
 	${MAKE} -C src all
 
 convert-job:
-	${MAKE} HPC_DISK=200 HPC_MEM=16g HPC_CORES=16 HPC_MODULES= convert.submit
+	${MAKE} HPC_DISK=500 HPC_MEM=40g HPC_CORES=40 HPC_MODULES= convert.submit
 
+
+## OLD?
 intraling-website: ${OPUSPUB}/${CORPUS}-alt-${VERSION}.php
 
 ${OPUSPUB}/${CORPUS}-alt-${VERSION}.php:

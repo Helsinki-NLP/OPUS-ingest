@@ -7,72 +7,135 @@ include ../../Makefile.def
 ## subtitle tarball with all files to be extracted
 ## metadata provides information about those files from the opensubs DB
 
-SUBTITLE_TARBALL  := ${PWD}/export-2024.tar
-SUBTITLE_METADATA := ${PWD}/export-2024.tsv.gz
+SUBTITLE_TARBALL  := ${CURDIR}/export-2024.tar
+SUBTITLE_METADATA := ${CURDIR}/export-2024.tsv.gz
 
 ## work directory with fast I/O
 ## and script for sorting subtitle files by language
 
 WORKDIR           := ${TMPDIR}/OPUS/${CORPUS}/src
-SUBTITLE_LANGSORT := ${PWD}/../scripts/sort_by_language.pl
+SUBTITLE_LANGSORT := ${CURDIR}/../scripts/sort_by_language.pl
 
 
-LANGUAGE ?= en
+## subtitle files to be converted (srt-files)
+## for a specific selected language
+
+LANGUAGE      ?= en
+SRTFILES      := $(shell if [ -e ${WORKDIR}/srt/${LANGUAGE} ]; then find ${WORKDIR}/srt/${LANGUAGE} -type f; fi)
+SRT2XML_FILES := $(patsubst ${WORKDIR}/srt/%.gz,${WORKDIR}/${CORPUS}/xml/%.xml,${SRTFILES})
 
 
-## subtitle files to be converted
-## in srt format and possibly also in sub format
+## subtitle files in sub-format
+## to be converted into srt format
 
-SUBFILES     := $(shell if [ -e ${WORKDIR}/sub ]; then find ${WORKDIR}/sub -type f; fi)
-SUB2SRTFILES := $(patsubst sub/%,${WORKDIR}/srt/%,${SUBFILES})
-
-
-## srt-files for a specific languages
-
-SRTFILES     := $(shell if [ -e ${WORKDIR}/srt/${LANGUAGE} ]; then find ${WORKDIR}/srt/${LANGUAGE} -type f; fi)
-SRT2XMLFILES := $(patsubst ${WORKDIR}/srt/%.gz,${WORKDIR}/${CORPUS}/xml/%.xml,${SRTFILES})
+SUBFILES      := $(shell if [ -e ${WORKDIR}/sub ]; then find ${WORKDIR}/sub -type f; fi)
+SUB2SRT_FILES := $(patsubst sub/%,${WORKDIR}/srt/%,${SUBFILES})
 
 
-## all languages that have been extracted and zipfiles of srt-files converted to XML
-## (tokenized and raw)
+## all languages that have been extracted
 
-LANGUAGES    := $(shell if [ -e ${WORKDIR}/srt ]; then ls ${WORKDIR}/srt/; fi)
-LANGZIPXML   := $(patsubst %,../xml/new/%.zip,${LANGUAGES})
-LANGZIPRAW   := $(patsubst %,../raw/new/%.zip,${LANGUAGES})
+ifneq ($(wildcard subtitles.done),)
+  LANGUAGES := $(patsubst %.tar,%,$(notdir $(wildcard subtitles/*.tar)))
+else ifneq ($(wildcard ${WORKDIR}/srt),)
+  LANGUAGES := $(notdir $(wildcard ${WORKDIR}/srt/*))
+endif
 
 
+## zipfiles of srt-files converted to XML
+## (tokenized (xml) and untokenized (raw))
+## NOTE: ze needs to be handled separately!
+
+LANG_TAR_SRT := $(patsubst %,srt/%.tar,${LANGUAGES})
+LANG_ZIP_XML := $(patsubst %,${CORPUSXML}/new/%.zip,$(filter-out ze,${LANGUAGES}))
+ZE_ZIP_XML   := ${CORPUSXML}/new/zh_ze.zip
+
+
+##--------------------
+## top-level targets
+##--------------------
+
+.PHONY: all
 all:
 	${MAKE} extract
-	${MAKE} sort
 	${MAKE} convert
 	${MAKE} cleanup
 
-
-
 .PHONY: extract
-extract: ${WORKDIR}/srt
-	if [ -e ${WORKDIR}/sub ]; then \
-	  ${MAKE} convert-sub2srt; \
-	fi
+extract: subtitles.done
 
-.PHONY: sort
-sort: ${WORKDIR}/srt
-	for l in `find $< -mindepth 1 -maxdepth 1 -type d -printf "%f "`; do \
-	  tar -cf $$l.tar -C $< $$l; \
-	done
+## convert srt files into XML
+## - convert all languages
+## - convert a specific language (e.g. `make en-convert`)
+## - special treatment for bilingual subtitles (ze)
 
 .PHONY: convert
-convert: ${LANGZIPXML} ${LANGZIPRAW}
+convert: ${LANG_ZIP_XML} ${ZE_ZIP_XML}
+
+.PHONY: %-convert
+%-convert:
+	${MAKE} ${CORPUSXML}/new/$(@:-convert=.zip)
+
+.PHONY: ze-convert
+ze-convert:
+	${MAKE} ${CORPUSXML}/new/zh_ze.zip
 
 .PHONY: cleanup
 cleanup:
-	find ${WORKDIR} -delete
+	if [ -d ${WORKDIR} ]; then find ${WORKDIR} -delete; fi
+
+.PHONY: print-langs
+print-langs:
+	@echo ${LANGUAGES}
+
+##--------------------
+## submit SLURM jobs
+##--------------------
+
+.PHONY: all-jobs
+all-jobs:
+	${MAKE} extract-job
+	while [ ! -e subtitles.done ]; do \
+	  echo "waiting for subtitle extraction job"; \
+	  sleep 10; \
+	done
+	${MAKE} convert-jobs
+
+.PHONY: extract-job
+extract-job:
+	${MAKE} HPC_DISK=100 HPC_MEM=4g HPC_CORES=1 HPC_MODULES= extract.submit
+
+CONVERT_JOBS = $(patsubst %,%-job,${LANGUAGES})
+
+.PHONY: convert-jobs
+convert-jobs: ${CONVERT_JOBS}
+
+.PHONY: ${CONVERT_JOBS}
+${CONVERT_JOBS}: subtitles.done
+	@mkdir -p ${CORPUSXML}/new
+	${MAKE} HPC_DISK=100 HPC_MEM=32g HPC_CORES=16 HPC_MODULES= EMAIL= $(@:-job=)-convert.submit
+
+
+
+##-----------------------------------
+## extraction and conversion targets
+##-----------------------------------
+
+subtitles.done:
+	${MAKE} ${WORKDIR}/srt
+	if [ -e ${WORKDIR}/sub ]; then \
+	  ${MAKE} convert-sub2srt; \
+	fi
+	mkdir -p subtitles
+	for l in `find ${WORKDIR}/srt -mindepth 1 -maxdepth 1 -type d -printf "%f "`; do \
+	  tar -cf subtitles/$$l.tar -C ${WORKDIR}/srt $$l; \
+	done
+	touch $@
 
 .PHONY: convert-srt2xml
-convert-srt2xml: ${SRT2XMLFILES}
+convert-srt2xml: ${SRT2XML_FILES}
 
 .PHONY: convert-sub2srt
-convert-sub2srt: ${SUB2SRTFILES}
+convert-sub2srt: ${SUB2SRT_FILES}
 
 
 
@@ -92,7 +155,7 @@ ${WORKDIR}/srt: ${WORKDIR}/files
 
 ## convert from sub to srt format
 
-${SUB2SRTFILES}: ${WORKDIR}/srt/%: ${WORKDIR}/sub/%
+${SUB2SRT_FILES}: ${WORKDIR}/srt/%: ${WORKDIR}/sub/%
 	mkdir -p $(dir $@)
 	gzip -cd $< > $@.sub
 	../scripts/sub2srt/sub2srt $@.sub | gzip -c > $@
@@ -102,35 +165,71 @@ ${SUB2SRTFILES}: ${WORKDIR}/srt/%: ${WORKDIR}/sub/%
 ## convert srt-files into XML and pack them up into a zip-file
 ## the conversion includes creating untokenized (raw) files
 
-${LANGZIPXML}:
-	if [ -e $(notdir $(@:.zip=)).tar ]; then \
-	  mkdir -p ${WORKDIR}/srt; \
-	  tar -xf $(notdir $(@:.zip=)).tar -C ${WORKDIR}/srt; \
-	fi
+# ${LANG_ZIP_XML}:
+${CORPUSXML}/new/%.zip: subtitles/%.tar
+	mkdir -p ${WORKDIR}/srt
+	tar -xf $< -C ${WORKDIR}/srt
 	-${MAKE} LANGUAGE=$(notdir $(@:.zip=)) convert-srt2xml
-	mkdir -p $(dir $@)
 	find ${WORKDIR}/${CORPUS}/xml/$(notdir $(@:.zip=)) -empty -delete
-	cd ${WORKDIR} && zip -rq ${CORPUS}/xml/$(notdir $(@:.zip=)) ${PWD}/$@
-
-
-## pack untokenized (raw) files into language-specific zip-files
-
-${LANGZIPRAW}: ../raw/%: ../xml/%
-	mkdir -p $(dir $@)
 	find ${WORKDIR}/${CORPUS}/raw/$(notdir $(@:.zip=)) -empty -delete
-	cd ${WORKDIR} && zip -rq ${CORPUS}/raw/$(notdir $(@:.zip=)) ${PWD}/$@
+	mkdir -p ${CORPUSXML}/new ${CORPUSRAW}/new
+	if [ `find ${WORKDIR}/${CORPUS}/xml/$(notdir $(@:.zip=)) -type f | wc -l` -gt 0 ]; then \
+	  cd ${WORKDIR} && zip -rq $@ ${CORPUS}/xml/$(notdir $(@:.zip=)); \
+	fi
+	if [ `find ${WORKDIR}/${CORPUS}/raw/$(notdir $(@:.zip=)) -type f | wc -l` -gt 0 ]; then \
+	  cd ${WORKDIR} && zip -rq ${CORPUSRAW}/new/$(notdir $@) ${CORPUS}/raw/$(notdir $(@:.zip=)); \
+	fi
 
 
+${CORPUSXML}/new/zh_ze.zip: subtitles/ze.tar
+	mkdir -p ${WORKDIR}/srt
+	tar -xf $< -C ${WORKDIR}/srt
+	-${MAKE} LANGUAGE=ze convert-srt2xml
+	find ${WORKDIR}/${CORPUS}/xml/ze -empty -delete
+	find ${WORKDIR}/${CORPUS}/raw/ze -empty -delete
+	find ${WORKDIR}/${CORPUS}/xml2/ze -empty -delete
+	find ${WORKDIR}/${CORPUS}/raw2/ze -empty -delete
+	mv ${WORKDIR}/${CORPUS}/xml/ze ${WORKDIR}/${CORPUS}/xml/zh_ze
+	mv ${WORKDIR}/${CORPUS}/raw/ze ${WORKDIR}/${CORPUS}/raw/zh_ze
+	mv ${WORKDIR}/${CORPUS}/xml2/ze ${WORKDIR}/${CORPUS}/xml/en_ze
+	mv ${WORKDIR}/${CORPUS}/raw2/ze ${WORKDIR}/${CORPUS}/raw/en_ze
+	mkdir -p ${CORPUSXML}/new ${CORPUSRAW}/new
+	if [ `find ${WORKDIR}/${CORPUS}/xml/zh_ze -type f | wc -l` -gt 0 ]; then \
+	  cd ${WORKDIR} && zip -rq $@ ${CORPUS}/xml/zh_ze; \
+	fi
+	if [ `find ${WORKDIR}/${CORPUS}/raw/zh_ze -type f | wc -l` -gt 0 ]; then \
+	  cd ${WORKDIR} && zip -rq ${CORPUSRAW}/new/zh_ze.zip ${CORPUS}/raw/zh_ze; \
+	fi
+	if [ `find ${WORKDIR}/${CORPUS}/xml/en_ze -type f | wc -l` -gt 0 ]; then \
+	  cd ${WORKDIR} && zip -rq ${CORPUSXML}/new/en_ze.zip ${CORPUS}/xml/en_ze; \
+	fi
+	if [ `find ${WORKDIR}/${CORPUS}/raw/en_ze -type f | wc -l` -gt 0 ]; then \
+	  cd ${WORKDIR} && zip -rq ${CORPUSRAW}/new/en_ze.zip ${CORPUS}/raw/en_ze; \
+	fi
+
+
+
+subtitles/%.tar: subtitles.done
 
 
 SRT2XML = ../scripts/srt2xml.py
 
-${SRT2XMLFILES}: ${WORKDIR}/${CORPUS}/xml/%.xml: ${WORKDIR}/srt/%.gz
+${SRT2XML_FILES}: ${WORKDIR}/${CORPUS}/xml/%.xml: ${WORKDIR}/srt/%.gz
 	mkdir -p $(dir $@) $(dir $<)
-	mkdir -p $(dir $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/raw/%,$<))
+	mkdir -p $(dir $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/raw/%,$@))
 	if ${SRT2XML} -l $(firstword $(subst /, ,$(patsubst ${WORKDIR}/srt/%,%,$<))) -r $<.raw $< $<.xml; then \
 	  tidy -xml -utf8 -i < $<.xml > $@ 2>/dev/null; \
-	  mv $<.raw > $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/raw/%,$<); \
+	  mv $<.raw $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/raw/%,$@); \
 	fi
 	rm -f $<.raw $<.xml
 
+## special treatment for bilingual subtitles (ze)
+
+	if [ $(firstword $(subst /, ,$(patsubst ${WORKDIR}/srt/%,%,$<))) == 'ze' ]; then \
+	  mkdir -p $(dir $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/xml2/%,$@)); \
+	  mkdir -p $(dir $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/raw2/%,$@)); \
+	  tidy -xml -utf8 -i \
+		< $(<:.gz=2.gz).xml \
+		> $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/xml2/%,$@) 2>/dev/null; \
+	  mv $(<:.gz=2.gz).raw $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/raw2/%,$@); \
+	fi

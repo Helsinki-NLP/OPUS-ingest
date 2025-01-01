@@ -307,6 +307,10 @@ sub best_align{
 	# skip subtitles that differ significantly in length
 	next if ($$metascore{"$p:durationdiff"} < $MinDurationSim);
 
+	# don't align the same file
+	next if ("$srcdir/$src" eq "$trgdir/$trg");
+	# print("$srcdir/$src eq $trgdir/$trg ...............");
+
 	my ($SrcPart)=split(/\./,$src);
 	my ($TrgPart)=split(/\./,$trg);
 	my $algfile = $SrcPart.'-'.$TrgPart;
@@ -411,6 +415,10 @@ sub greedy_align{
 	next if (exists $doneSrc{$src});
 	next if (exists $doneTrg{$trg});
 
+	# don't align the same file
+	next if ("$srcdir/$src" eq "$trgdir/$trg");
+	# print("$srcdir/$src eq $trgdir/$trg ...............");
+
 	# min score threshold
 	last if $$scores{$p}<$threshold;
 
@@ -426,6 +434,8 @@ sub greedy_align{
 	my $score = align("$srcdir/$src","$trgdir/$trg",
 			  "$outdir/$algfile.xml.gz",$align_para);
 	$outfiles{"$outdir/$algfile.xml.gz"} = 1;
+	# system("gzip -cd $outdir/$algfile.xml.gz | sed 's/\<linkGrp/\<linkGrp score=\"$score\"/' | gzip -c > $outdir/$algfile.new.xml.gz");
+	# system("mv -f $outdir/$algfile.new.xml.gz $outdir/$algfile.xml.gz");
 
 	if ($score > $MinAlignScore){
 	    print "srtalign:\t$outdir/$algfile.xml.gz\t$$scores{$p}\t$score\n";
@@ -436,6 +446,8 @@ sub greedy_align{
 		$score = align("$srcdir/$src","$trgdir/$trg",
 			       "$outdir/$algfile.xml.gz",$realign_para);
 		print "srtalign:\t$outdir/$algfile.xml.gz\t$$scores{$p}\t$score\n";
+		# system("gzip -cd $outdir/$algfile.xml.gz | sed 's/\<linkGrp/\<linkGrp score=\"$score\"/' | gzip -c > $outdir/$algfile.new.xml.gz");
+		# system("mv -f $outdir/$algfile.new.xml.gz $outdir/$algfile.xml.gz");
 	    }
 	    $algcount++;
 	    # stop here if only one of this type should be aligned
@@ -470,6 +482,9 @@ sub align{
     if (@stderr && (@stderr[-2]=~/overlap\s*=\s*(.*)$/)){
 	$overlap = $1;
     }
+
+    system("gzip -cd $out | sed 's/\<linkGrp/\<linkGrp score=\"$score\"/' | gzip -c > $out.new");
+    system("mv -f $out.new $out");
 
     return wantarray ? ($score,$overlap) : $score;
 }

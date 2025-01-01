@@ -14,14 +14,13 @@ SRC ?= $(firstword ${LANGUAGES} fi)
 TRG ?= $(lastword sv ${LANGUAGES})
 
 
-PREV_RELEASE := /projappl/nlpl/data/OPUS/OpenSubtitles/v2018
+PREV_RELEASE  := /projappl/nlpl/data/OPUS/OpenSubtitles/v2018
 
 NEW_ZIPFILES  := $(notdir $(wildcard new/*.zip))
 PREV_ZIPFILES := $(notdir $(wildcard ${PREV_RELEASE}/xml/*.zip))
 
 NEW_ZIPFILES_LOWCASE := $(shell echo "${NEW_ZIPFILES}" | tr 'A-Z' 'a-z')
 OLD_ZIPFILES := $(filter-out ${NEW_ZIPFILES} ${NEW_ZIPFILES_LOWCASE},${PREV_ZIPFILES})
-
 
 LANGPAIRS := ${shell \
 	for s in ${LANGUAGES}; do \
@@ -33,7 +32,6 @@ LANGPAIRS := ${shell \
 	done  }
 
 BITEXT_ALGFILES := $(patsubst %,%.xml.gz,${LANGPAIRS})
-MAX_SLURM_JOBS  := 200
 
 .PRECIOUS: ${BITEXT_ALGFILES}
 
@@ -41,9 +39,7 @@ WORKHOME   := ${TMPDIR}/OPUS/${CORPUS}/xml
 WORKDIR    := ${WORKHOME}/${SRC}-${TRG}
 DIC_HOME   := ${WORKHOME}/dic
 DICTIONARY := ${DIC_HOME}/${SRC}-${TRG}.dic.gz
-PREV_DICS  := /projappl/nlpl/data/OPUS/OpenSubtitles/v2018/dic/
-
-
+PREV_DICS  := ${PREV_RELEASE}/dic
 
 
 # subalign.pl: find best candidate pair with most time overlap
@@ -56,11 +52,45 @@ SENTALIGN  = ../scripts/subalign.pl -A -t 0.5 -a 0.5 -d 0.75 \
 		-r '-b -i 5 -m 10 -d ${DICTIONARY}' -m 10
 
 
+## find movies that exist for both, source and target language
+##
+##   SRC_MOVIES    = all movie IDs in the source language
+##   TRG_MOVIES    = all movie IDs in the target language
+##   COMMON_MOVIES = movie IDs that exist in both lists
+##   ALGFILES      = alignment directory for each common movie
+
 SRC_MOVIES    := $(patsubst ${WORKDIR}/${SRC}/%,%,$(wildcard ${WORKDIR}/${SRC}/*/*))
 TRG_MOVIES    := $(patsubst ${WORKDIR}/${TRG}/%,%,$(wildcard ${WORKDIR}/${TRG}/*/*))
 COMMON_MOVIES := $(filter ${TRG_MOVIES},$(SRC_MOVIES))
 ALGFILES      := $(addprefix ${WORKDIR}/$(SRC)-$(TRG)/,${COMMON_MOVIES})
 
+
+
+
+##------------------------
+## top-level targets
+##------------------------
+
+
+.PHONY: all
+all:
+	${MAKE} merge-all
+	${MAKE} align-all
+
+
+NR_ZIP_FILES := $(words ${NEW_ZIPFILES} ${OLD_ZIPFILES})
+
+.PHONY: all-jobs
+all-jobs:
+	${MAKE} merge-jobs
+	while [ ! `ls *.zip | wc -l` -eq ${NR_ZIP_FILES} ]; do \
+	  echo "waiting for merge jobs"; \
+	  sleep 10; \
+	done
+	${MAKE} align-jobs
+
+
+.PHONY: print_common_movies
 print_common_movies: ${WORKDIR}/${SRC} ${WORKDIR}/${TRG}
 	@echo "nr of source movies: $(words ${SRC_MOVIES})"
 	@echo "nr of target movies: $(words ${TRG_MOVIES})"
@@ -70,14 +100,10 @@ print_common_movies: ${WORKDIR}/${SRC} ${WORKDIR}/${TRG}
 
 
 
-
-.PHONY: all
-
-all: ${BITEXT_ALGFILES}
-
-
-
-## merge old and new data
+##--------------------------
+## high-level targets for
+## merging old and new data
+##--------------------------
 
 .PHONY: merge-all merge-jobs
 
@@ -88,17 +114,30 @@ merge-all: ${NEW_ZIPFILES}
 	  fi \
 	done
 
+.PHONY: print-only-in-previous-release
+print-only-in-previous-release:
+	@echo "${OLD_ZIPFILES}"
 
-MERGE_NEW_JOBS := $(patsubst %,%-job,${NEW_ZIPFILES})
+
+MERGE_NEW_JOBS := $(patsubst %.zip,%-job,${NEW_ZIPFILES})
 
 merge-jobs: ${MERGE_NEW_JOBS}
 
+.PHONY: ${MERGE_NEW_JOBS}
 ${MERGE_NEW_JOBS}:
-	${MAKE} HPC_CORES=1 HPC_DISK=500 HPC_MEM=4g $(@:-job=.zip).submit
+	if [ ! -e $(@:-job=.zip) ]; then \
+	  ${MAKE} HPC_CORES=1 HPC_DISK=500 HPC_MEM=4g $(@:-job=.zip).submit; \
+	fi
 
 
+##-----------------------------------------------------------------------------
+## high-level alignment tasks
+##  - make align ...... make alignments for a selected language pair (SRC-TRG)
+##  - make align-all .. align all language pairs
+##  - make align-job .. submit alignment job for a selected langpair (SRC-TRG)
+##  - make align-jobs . submit alignment jobs for all language pairs
+##-----------------------------------------------------------------------------
 
-## alignment tasks
 
 .PHONY: align align-all align-job align-jobs
 
@@ -113,66 +152,20 @@ BITEXT_ALIGN_JOBS := $(patsubst %,%-job,${LANGPAIRS})
 
 align-jobs: ${BITEXT_ALIGN_JOBS}
 
+.PHONY: ${BITEXT_ALIGN_JOBS}
 ${BITEXT_ALIGN_JOBS}:
-	${MAKE} HPC_CORES=16 HPC_DISK=500 HPC_MEM=16g $(@:-job=.xml.gz).submit
-
-
-
-
-##----------------------------------------------------------------
-## temporary target to move files to new/
-
-NEW_XML_FILES = $(patsubst %,new/%.zip,${LANGUAGES})
-
-move-to-new: ${NEW_XML_FILES}
-
-new/%.zip:
-	mkdir -p ${WORKDIR}/$(dir $@) $(dir $@)
-	rsync $(notdir $@) ${WORKDIR}/$@
-	unzip -q -d ${WORKDIR} ${WORKDIR}/$@
-	rm -f ${WORKDIR}/$@
-	mkdir -p ${WORKDIR}/${CORPUS}/xml
-	mv ${WORKDIR}/${CORPUS}/$(notdir $(@:.zip=)) ${WORKDIR}/${CORPUS}/xml/
-	find ${WORKDIR}/${CORPUS}/xml/$(notdir $(@:.zip=)) -name '*.xml.gz' \
-	| xargs -P 8 gunzip -f
-	cd ${WORKDIR} && zip -q -r $@ ${CORPUS}/xml/$(notdir $(@:.zip=))
-	mv ${WORKDIR}/$@ $@
-	rm -fr ${WORKDIR}/${CORPUS}/xml/$(notdir $(@:.zip=))
-	mkdir -p old
-	mv $(notdir $@) old/
-
-##----------------------------------------------------------------
+	if [ ! -e $(@:-job=.xml.gz) ]; then \
+	  ${MAKE} HPC_CORES=16 HPC_DISK=500 HPC_MEM=16g $(@:-job=.xml.gz).submit; \
+	fi
 
 
 
 
 
-%.xml.gz:
-	( s=$(firstword $(subst -, ,$(@:.xml.gz=))); \
-	  t=$(lastword $(subst -, ,$(@:.xml.gz=))); \
-	  d=${WORKHOME}/$$s-$$t; \
-	  ${MAKE} SRC=$$s TRG=$$t WORKDIR=$$d $$d/$@; \
-	  for f in $@ $(@:.xml.gz=.log.gz) $(@:.xml.gz=.err.gz); do \
-	    if [ -s $$d/$$f ]; then \
-	      mv -f $$d/$$f $$f; \
-	    fi \
-	  done; \
-	  mkdir -p ../alt; \
-	  if [ -s $$d/$(@:.xml.gz=.alt.xml.gz) ]; then \
-	    mv -f $$d/$(@:.xml.gz=.alt.xml.gz) ../alt/$(@:.xml.gz=.alt.xml.gz); \
-	  fi )
-
-
-$(sort ${WORKDIR}/${SRC} ${WORKDIR}/${TRG}): ${WORKDIR}/%: %.zip
-	mkdir -p $(dir $@)
-	rsync $< $@.zip
-	unzip -q -d $(dir $@) $@.zip
-	rm -f $@.zip
-	mv ${WORKDIR}/${CORPUS}/xml/$(notdir $@) ${WORKDIR}/
-	touch $@
-
-
+##---------------------------------------------------------
 ## merge previous XML files with new files
+## remove generated subtitles (done in subdir generated/)
+##---------------------------------------------------------
 
 %.zip: new/%.zip
 	mkdir -p ${WORKDIR}
@@ -186,6 +179,9 @@ $(sort ${WORKDIR}/${SRC} ${WORKDIR}/${TRG}): ${WORKDIR}/%: %.zip
 	fi
 	cd ${WORKDIR} && zip -q -r ${PWD}/$@ ${CORPUS}/xml/$(@:.zip=)
 	rm -fr ${WORKDIR}/${CORPUS}/xml/$(@:.zip=)
+	find ${WORKDIR} -delete
+	${MAKE} -C generated $@
+	${MAKE} -C ../devtest-xml $@
 
 
 ## extract and move files from previous release
@@ -207,7 +203,58 @@ ${WORKDIR}/previous/%.zip:
 	    cd ${WORKDIR}/previous/xml && zip -r -q $@ $$l; \
 	  fi )
 
+## special targets for data from bilingual ze subtitles
+## (necessary because of the name changes)
 
+${WORKDIR}/previous/zh_ze.zip:
+	mkdir -p $(dir $@)/zh
+	unzip -q -d $(dir $@)/zh ${PREVIOUS_RELEASE}/ze_zh.zip
+	cd  $(dir $@)/zh && find ${CORPUS} -type f | ${SUBTITLE_LANGSORT} ${PREVIOUS_INFO_FILE}
+	mv ${WORKDIR}/previous/zh/xml/ze ${WORKDIR}/previous/zh/xml/zh_ze
+	cd ${WORKDIR}/previous/zh/xml && zip -r -q $@ zh_ze
+
+${WORKDIR}/previous/en_ze.zip:
+	mkdir -p $(dir $@)/en
+	unzip -q -d $(dir $@)/en ${PREVIOUS_RELEASE}/ze_en.zip
+	cd  $(dir $@)/en && find ${CORPUS} -type f | ${SUBTITLE_LANGSORT} ${PREVIOUS_INFO_FILE}
+	mv ${WORKDIR}/previous/en/xml/ze ${WORKDIR}/previous/en/xml/en_ze
+	cd ${WORKDIR}/previous/en/xml && zip -r -q $@ en_ze
+
+
+
+##-------------------------------
+## alignment-related targets
+##-------------------------------
+
+%.xml.gz:
+	( s=$(firstword $(subst -, ,$(@:.xml.gz=))); \
+	  t=$(lastword $(subst -, ,$(@:.xml.gz=))); \
+	  d=${WORKHOME}/$$s-$$t; \
+	  ${MAKE} SRC=$$s TRG=$$t WORKDIR=$$d $$d/$@; \
+	  for f in $@ $(@:.xml.gz=.out.gz) $(@:.xml.gz=.err.gz); do \
+	    if [ -s $$d/$$f ]; then \
+	      mv -f $$d/$$f $$f; \
+	    fi \
+	  done; \
+	  mkdir -p ../alt; \
+	  if [ -s $$d/$(@:.xml.gz=.alt.xml.gz) ]; then \
+	    mv -f $$d/$(@:.xml.gz=.alt.xml.gz) ../alt/$(@:.xml.gz=.alt.xml.gz); \
+	  fi )
+	mkdir -p done
+	touch done/$@
+
+
+## work copies of source and target language subtitles
+
+$(sort ${WORKDIR}/${SRC} ${WORKDIR}/${TRG}): ${WORKDIR}/%: %.zip
+	mkdir -p $(dir $@)
+	rsync $< $@.zip
+	unzip -q -d $(dir $@) $@.zip
+	rm -f $@.zip
+	mv ${WORKDIR}/${CORPUS}/xml/$(notdir $@) ${WORKDIR}/
+	touch $@
+
+## bilingual dictionary from previous release (used in alignment)
 
 ${DICTIONARY}:
 	mkdir -p $(dir $@)
@@ -219,18 +266,19 @@ ${DICTIONARY}:
 	  echo '' | gzip -c > $@; \
 	fi
 
+## sentence alignment file in work directory
 
-.PRECIOUS: ${WORKDIR}/${SRC}-${TRG}.xml.gz
-
-${WORKDIR}/${SRC}-${TRG}.xml.gz: ${WORKDIR}/${SRC} ${WORKDIR}/${TRG} ${DICTIONARY}
+${WORKDIR}/${SRC}-${TRG}.xml.gz: $(sort ${WORKDIR}/${SRC} ${WORKDIR}/${TRG}) ${DICTIONARY}
 	${MAKE} align-files
 	find ${WORKDIR}/${SRC}-${TRG} -empty -delete
 	-( find ${WORKDIR}/${SRC}-${TRG} -type f -name '*.xml.gz' | \
 		grep -v '/alt/' | sort |\
-		xargs zgrep --no-filename 'link' | sed 's/\.xml\"/\.xml.gz\"/g' >> $@.links )
+		xargs zgrep --no-filename 'link' |\
+		sed 's|${WORKDIR}/||g;s/\.xml\"/\.xml.gz\"/g;' >> $@.links )
 	-( find ${WORKDIR}/${SRC}-${TRG} -type f -name '*.xml.gz' | \
 		grep '/alt/' | sort |\
-		xargs zgrep --no-filename 'link' | sed 's/\.xml\"/\.xml.gz\"/g' >> $@.altlinks )
+		xargs zgrep --no-filename 'link' |\
+		sed 's|${WORKDIR}/||g;s/\.xml\"/\.xml.gz\"/g;' >> $@.altlinks )
 	if [ -s $@.links ]; then \
 	  echo '<?xml version="1.0" encoding="utf-8"?>' >$@.tmp; \
 	  echo '<!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">' \
@@ -251,14 +299,14 @@ ${WORKDIR}/${SRC}-${TRG}.xml.gz: ${WORKDIR}/${SRC} ${WORKDIR}/${TRG} ${DICTIONAR
 	  gzip -f $@.tmp; \
 	  mv -f $@.tmp.gz $(@:.xml.gz=.alt.xml.gz); \
 	fi
-	-find ${WORKDIR}/${SRC}-${TRG} -name '*.out' | xargs cat | sed 's#${WORKDIR}/##' | gzip -c > $(@:.xml.gz=.log.gz)
-	-find ${WORKDIR}/${SRC}-${TRG} -name '*.err' | xargs cat | sed 's#${WORKDIR}/##' | gzip -c > $(@:.xml.gz=.err.gz)
+	-find ${WORKDIR}/${SRC}-${TRG} -name '*.out' | xargs cat | sed 's|${WORKDIR}/||g' | gzip -c > $(@:.xml.gz=.out.gz)
+	-find ${WORKDIR}/${SRC}-${TRG} -name '*.err' | xargs cat | sed 's|${WORKDIR}/||g' | gzip -c > $(@:.xml.gz=.err.gz)
 	-rm -f $@.links $@.altlinks
-	-rm -fr ${WORKDIR}/${SRC}-${TRG}
-
-
-
-
+	find ${WORKDIR}/${SRC}-${TRG} -delete
+	for l in $(sort ${SRC} ${TRG}); do \
+	  find ${WORKDIR}/$$l -delete; \
+	done
+	rm -f ${DICTIONARY}
 
 
 # sentence alignment for each movie

@@ -45,7 +45,8 @@ while (<>){
 	    system("mkdir -p $path");
 	}
 	print("mv $_ $path/$subID.$ext\n");
-	system("mv $_ $path/$subID.$ext\n");
+	# system("mv $_ $path/$subID.$ext");
+	rename $_,"$path/$subID.$ext";
     }
     else{
 	print("don't know how to handle $_\n");
@@ -74,9 +75,12 @@ sub read_info{
 	my $lang = convert_iso639('iso639-1',$parts[2],1);
 	$lang = 'pt_BR' if ($lang eq 'pob');
 	$lang = 'ze' if ($lang eq 'zhe');
-	$lang = 'zh_CN' if ($lang eq 'zhc');
+	$lang = 'yue' if ($lang eq 'zhc');
 	$lang = 'zh_TW' if ($lang eq 'zht');
 	$lang = 'sr' if ($lang eq 'scc');
+	$lang = 'es_ES' if ($lang eq 'spn');
+	$lang = 'es_149' if ($lang eq 'spl');
+	$lang = 'me' if ($lang eq 'mne');
 	my $format = $parts[6];
 	my $year = $parts[8];
 	my $ImdbID = $parts[9];
