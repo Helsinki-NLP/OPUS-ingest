@@ -19,7 +19,7 @@ WORKDIR  := ${WORKHOME}/${SRC}-${TRG}
 
 PREV_RELEASE := /projappl/nlpl/data/OPUS/OpenSubtitles/v2018
 
-NEW_ZIPFILES  := $(notdir $(wildcard new/*.zip))
+NEW_ZIPFILES  := $(sort $(notdir $(wildcard new/*.zip) $(wildcard prev/*.zip)))
 PREV_ZIPFILES := $(notdir $(wildcard ${PREV_RELEASE}/raw/*.zip))
 
 NEW_ZIPFILES_LOWCASE := $(shell echo "${NEW_ZIPFILES}" | tr 'A-Z' 'a-z')
@@ -55,19 +55,16 @@ ${MERGE_NEW_JOBS}:
 
 %.zip: new/%.zip
 	mkdir -p ${WORKDIR}
-	rsync $< ${WORKDIR}/$@
-	unzip -q -d ${WORKDIR} ${WORKDIR}/$@
-	rm -f ${WORKDIR}/$@
-	-${MAKE} ${WORKDIR}/previous/$@
-	-if [ -s ${WORKDIR}/previous/$@ ]; then \
-	  unzip -d ${WORKDIR}/${CORPUS}/raw -n ${WORKDIR}/previous/$@; \
-	  rm -f ${WORKDIR}/previous/$@; \
-	fi
+	if [ -e new/$@ ]; then unzip -q -d ${WORKDIR} new/$@; fi
+	if [ -e prev/$@ ]; then unzip -q -d ${WORKDIR} prev/$@; fi
+	${MAKE} ${WORKDIR}/previous/$@
+	unzip -d ${WORKDIR}/${CORPUS}/raw -n ${WORKDIR}/previous/$@
+	rm -f ${WORKDIR}/previous/$@
 	cd ${WORKDIR} && zip -q -r ${PWD}/$@ ${CORPUS}/raw/$(@:.zip=)
 	rm -fr ${WORKDIR}/${CORPUS}/raw/$(@:.zip=)
 	find ${WORKDIR} -delete
-	${MAKE} -C generated $@
-	${MAKE} -C ../devtest-xml $@
+	-${MAKE} -C generated $@
+	-${MAKE} -C ../devtest-xml $@
 
 ## extract and move files from previous release
 
@@ -75,29 +72,21 @@ SUBTITLE_LANGSORT  := ${PWD}/../scripts/sort_by_language.pl
 PREVIOUS_RELEASE   := /projappl/nlpl/data/OPUS/OpenSubtitles/v2018/raw
 PREVIOUS_INFO_FILE := ${PWD}/../src/export_all.csv.gz
 
+find_prev_langzip = $(shell \
+	if   [ -e ${PREVIOUS_RELEASE}/$1 ]; then echo $1; \
+	elif [ -e ${PREVIOUS_RELEASE}/`echo -n $1 | tr 'A-Z' 'a-z'` ]; then echo -n $1 | tr 'A-Z' 'a-z'; \
+	elif [ "$1" == "zh_ze.zip" ]; then echo 'ze_zh.zip'; \
+	elif [ "$1" == "en_ze.zip" ]; then echo 'ze_en.zip'; \
+	else echo $1; \
+	fi )
+
 ${WORKDIR}/previous/%.zip:
-	( l=$(notdir $(@:.zip=)); \
-	  o=${PREVIOUS_RELEASE}/$$l.zip; \
-	  if [ ! -e $$o ]; then \
-	    o=`echo $$o | tr 'A-Z' 'a-z'`; \
-	  fi; \
+	mkdir -p $@.d/xml/$(notdir $(@:.zip=))
+	( o=${PREVIOUS_RELEASE}/$(call find_prev_langzip,$(notdir $@)); \
 	  if [ -e $$o ]; then \
-	    mkdir -p $(dir $@); \
-	    unzip -q -d $(dir $@) $$o; \
-	    cd  $(dir $@) && find ${CORPUS} -type f | ${SUBTITLE_LANGSORT} ${PREVIOUS_INFO_FILE}; \
-	    cd ${WORKDIR}/previous/xml && zip -r -q $@ $$l; \
+	    unzip -q -d $@.d $$o; \
+	    cd  $@.d && find ${CORPUS} -type f | ${SUBTITLE_LANGSORT} ${PREVIOUS_INFO_FILE}; \
 	  fi )
+	cd $@.d/xml && zip -r -q $@ $(notdir $(@:.zip=))
+	find $@.d -delete
 
-${WORKDIR}/previous/zh_ze.zip:
-	mkdir -p $(dir $@)/zh
-	unzip -q -d $(dir $@)/zh ${PREVIOUS_RELEASE}/ze_zh.zip
-	cd  $(dir $@)/zh && find ${CORPUS} -type f | ${SUBTITLE_LANGSORT} ${PREVIOUS_INFO_FILE}
-	mv ${WORKDIR}/previous/zh/raw/ze ${WORKDIR}/previous/zh/raw/zh_ze
-	cd ${WORKDIR}/previous/zh/raw && zip -r -q $@ zh_ze
-
-${WORKDIR}/previous/en_ze.zip:
-	mkdir -p $(dir $@)/en
-	unzip -q -d $(dir $@)/en ${PREVIOUS_RELEASE}/ze_en.zip
-	cd  $(dir $@)/en && find ${CORPUS} -type f | ${SUBTITLE_LANGSORT} ${PREVIOUS_INFO_FILE}
-	mv ${WORKDIR}/previous/en/raw/ze ${WORKDIR}/previous/en/raw/en_ze
-	cd ${WORKDIR}/previous/en/raw && zip -r -q $@ en_ze

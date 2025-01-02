@@ -16,11 +16,11 @@ TRG ?= $(lastword sv ${LANGUAGES})
 
 PREV_RELEASE  := /projappl/nlpl/data/OPUS/OpenSubtitles/v2018
 
-NEW_ZIPFILES  := $(notdir $(wildcard new/*.zip))
+NEW_ZIPFILES  := $(sort $(notdir $(wildcard new/*.zip) $(wildcard prev/*.zip)))
 PREV_ZIPFILES := $(notdir $(wildcard ${PREV_RELEASE}/xml/*.zip))
 
 NEW_ZIPFILES_LOWCASE := $(shell echo "${NEW_ZIPFILES}" | tr 'A-Z' 'a-z')
-OLD_ZIPFILES := $(filter-out ${NEW_ZIPFILES} ${NEW_ZIPFILES_LOWCASE},${PREV_ZIPFILES})
+OLD_ZIPFILES := $(filter-out ze_zh.zip ze_en.zip ${NEW_ZIPFILES} ${NEW_ZIPFILES_LOWCASE},${PREV_ZIPFILES})
 
 LANGPAIRS := ${shell \
 	for s in ${LANGUAGES}; do \
@@ -78,26 +78,30 @@ all:
 	${MAKE} align-all
 
 
-NR_ZIP_FILES := $(words ${NEW_ZIPFILES} ${OLD_ZIPFILES})
-
 .PHONY: all-jobs
 all-jobs:
 	${MAKE} merge-jobs
-	while [ ! `ls *.zip | wc -l` -eq ${NR_ZIP_FILES} ]; do \
+	while [ ! `ls *.zip | wc -l` -eq $(words ${NEW_ZIPFILES}) ]; do \
 	  echo "waiting for merge jobs"; \
 	  sleep 10; \
+	done
+	for z in ${OLD_ZIPFILES}; do \
+	  if [ ! -e $$z ]; then \
+	    cp ${PREV_RELEASE}/xml/$$z $$z; \
+	  fi \
 	done
 	${MAKE} align-jobs
 
 
-.PHONY: print_common_movies
-print_common_movies: ${WORKDIR}/${SRC} ${WORKDIR}/${TRG}
+.PHONY: print-common-movies
+print-common-movies: ${WORKDIR}/${SRC} ${WORKDIR}/${TRG}
+	@echo "================================================"
 	@echo "nr of source movies: $(words ${SRC_MOVIES})"
 	@echo "nr of target movies: $(words ${TRG_MOVIES})"
 	@echo "nr of common movies: $(words ${COMMON_MOVIES})"
 	@echo "first in the list: $(firstword ${COMMON_MOVIES})"
 	@echo "last in the list: $(lastword ${COMMON_MOVIES})"
-
+	@echo "================================================"
 
 
 ##--------------------------
@@ -126,7 +130,7 @@ merge-jobs: ${MERGE_NEW_JOBS}
 .PHONY: ${MERGE_NEW_JOBS}
 ${MERGE_NEW_JOBS}:
 	if [ ! -e $(@:-job=.zip) ]; then \
-	  ${MAKE} HPC_CORES=1 HPC_DISK=500 HPC_MEM=4g $(@:-job=.zip).submit; \
+	  ${MAKE} HPC_CORES=1 HPC_DISK=500 HPC_MEM=4g EMAIL= $(@:-job=.zip).submit; \
 	fi
 
 
@@ -155,7 +159,7 @@ align-jobs: ${BITEXT_ALIGN_JOBS}
 .PHONY: ${BITEXT_ALIGN_JOBS}
 ${BITEXT_ALIGN_JOBS}:
 	if [ ! -e $(@:-job=.xml.gz) ]; then \
-	  ${MAKE} HPC_CORES=16 HPC_DISK=500 HPC_MEM=16g $(@:-job=.xml.gz).submit; \
+	  ${MAKE} HPC_CORES=16 HPC_DISK=500 HPC_MEM=16g EMAIL= $(@:-job=.xml.gz).submit; \
 	fi
 
 
@@ -167,21 +171,18 @@ ${BITEXT_ALIGN_JOBS}:
 ## remove generated subtitles (done in subdir generated/)
 ##---------------------------------------------------------
 
-%.zip: new/%.zip
+%.zip:
 	mkdir -p ${WORKDIR}
-	rsync $< ${WORKDIR}/$@
-	unzip -q -d ${WORKDIR} ${WORKDIR}/$@
-	rm -f ${WORKDIR}/$@
-	-${MAKE} ${WORKDIR}/previous/$@
-	-if [ -s ${WORKDIR}/previous/$@ ]; then \
-	  unzip -d ${WORKDIR}/${CORPUS}/xml -n ${WORKDIR}/previous/$@; \
-	  rm -f ${WORKDIR}/previous/$@; \
-	fi
+	if [ -e new/$@ ]; then unzip -n -q -d ${WORKDIR} new/$@; fi
+	if [ -e prev/$@ ]; then unzip -n -q -d ${WORKDIR} prev/$@; fi
+	${MAKE} ${WORKDIR}/previous/$@
+	unzip -q -d ${WORKDIR}/${CORPUS}/xml -n ${WORKDIR}/previous/$@
+	rm -f ${WORKDIR}/previous/$@
 	cd ${WORKDIR} && zip -q -r ${PWD}/$@ ${CORPUS}/xml/$(@:.zip=)
 	rm -fr ${WORKDIR}/${CORPUS}/xml/$(@:.zip=)
 	find ${WORKDIR} -delete
-	${MAKE} -C generated $@
-	${MAKE} -C ../devtest-xml $@
+	-${MAKE} -C generated $@
+	-${MAKE} -C ../devtest-xml $@
 
 
 ## extract and move files from previous release
@@ -190,37 +191,23 @@ SUBTITLE_LANGSORT  := ${PWD}/../scripts/sort_by_language.pl
 PREVIOUS_RELEASE   := /projappl/nlpl/data/OPUS/OpenSubtitles/v2018/xml
 PREVIOUS_INFO_FILE := ${PWD}/../src/export_all.csv.gz
 
+find_prev_langzip = $(shell \
+	if   [ -e ${PREVIOUS_RELEASE}/$1 ]; then echo $1; \
+	elif [ -e ${PREVIOUS_RELEASE}/`echo -n $1 | tr 'A-Z' 'a-z'` ]; then echo -n $1 | tr 'A-Z' 'a-z'; \
+	elif [ "$1" == "zh_ze.zip" ]; then echo 'ze_zh.zip'; \
+	elif [ "$1" == "en_ze.zip" ]; then echo 'ze_en.zip'; \
+	else echo $1; \
+	fi )
+
 ${WORKDIR}/previous/%.zip:
-	( l=$(notdir $(@:.zip=)); \
-	  o=${PREVIOUS_RELEASE}/$$l.zip; \
-	  if [ ! -e $$o ]; then \
-	    o=`echo $$o | tr 'A-Z' 'a-z'`; \
-	  fi; \
+	mkdir -p $@.d/xml/$(notdir $(@:.zip=))
+	( o=${PREVIOUS_RELEASE}/$(call find_prev_langzip,$(notdir $@)); \
 	  if [ -e $$o ]; then \
-	    mkdir -p $(dir $@); \
-	    unzip -q -d $(dir $@) $$o; \
-	    cd  $(dir $@) && find ${CORPUS} -type f | ${SUBTITLE_LANGSORT} ${PREVIOUS_INFO_FILE}; \
-	    cd ${WORKDIR}/previous/xml && zip -r -q $@ $$l; \
+	    unzip -q -d $@.d $$o; \
+	    cd  $@.d && find ${CORPUS} -type f | ${SUBTITLE_LANGSORT} ${PREVIOUS_INFO_FILE}; \
 	  fi )
-
-## special targets for data from bilingual ze subtitles
-## (necessary because of the name changes)
-
-${WORKDIR}/previous/zh_ze.zip:
-	mkdir -p $(dir $@)/zh
-	unzip -q -d $(dir $@)/zh ${PREVIOUS_RELEASE}/ze_zh.zip
-	cd  $(dir $@)/zh && find ${CORPUS} -type f | ${SUBTITLE_LANGSORT} ${PREVIOUS_INFO_FILE}
-	mv ${WORKDIR}/previous/zh/xml/ze ${WORKDIR}/previous/zh/xml/zh_ze
-	cd ${WORKDIR}/previous/zh/xml && zip -r -q $@ zh_ze
-
-${WORKDIR}/previous/en_ze.zip:
-	mkdir -p $(dir $@)/en
-	unzip -q -d $(dir $@)/en ${PREVIOUS_RELEASE}/ze_en.zip
-	cd  $(dir $@)/en && find ${CORPUS} -type f | ${SUBTITLE_LANGSORT} ${PREVIOUS_INFO_FILE}
-	mv ${WORKDIR}/previous/en/xml/ze ${WORKDIR}/previous/en/xml/en_ze
-	cd ${WORKDIR}/previous/en/xml && zip -r -q $@ en_ze
-
-
+	cd $@.d/xml && zip -r -q $@ $(notdir $(@:.zip=))
+	find $@.d -delete
 
 ##-------------------------------
 ## alignment-related targets
@@ -269,6 +256,7 @@ ${DICTIONARY}:
 ## sentence alignment file in work directory
 
 ${WORKDIR}/${SRC}-${TRG}.xml.gz: $(sort ${WORKDIR}/${SRC} ${WORKDIR}/${TRG}) ${DICTIONARY}
+	${MAKE} print-common-movies
 	${MAKE} align-files
 	find ${WORKDIR}/${SRC}-${TRG} -empty -delete
 	-( find ${WORKDIR}/${SRC}-${TRG} -type f -name '*.xml.gz' | \

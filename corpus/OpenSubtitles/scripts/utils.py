@@ -30,10 +30,24 @@ DICO_PATH = "/proj/nlpl/data/OPUS/tools/opus/OpenSubtitles2018/unigrams"
 LM_PATH = "/proj/nlpl/data/OPUS/tools/opus/OpenSubtitles2018/bigrams"
 
 # Language data (codes, names, encodings, scripts, dictionaries)
-languages = {'kur': 'ku', 'ku': {'codes': ['kur', 'ku', 'kmr', 'ckb', 'sdh', 'lki'], 'name': 'Kurdish', 'scripts': ['latin', 'arabic', 'cyrillic'], 'encodings': ['utf-8','windows-1252', 'windows-1256', 'iso-8859-6', 'iso-8859-1', 'koi8-r','windows-1251','maccyrillic','iso-8859-5','ibm855','ibm866']}, 'kan': 'kn', 'kn': {'codes':
+languages = {'sco': {'codes':
+['sco'], 'name': 'Scots', 'scripts': ['latin'], 'encodings': ['utf-8',
+'windows-1252', 'iso-8859-1']},'pom':'pt_MZ','pt_mz': {'scripts': ['latin'], 'codes':
+['pom', 'pt', 'pt_mz', 'por'], 'name': 'Portuguese (MZ)', 'encodings':
+['utf-8', 'windows-1252', 'iso-8859-1']},'tat':'tt','tt': {'codes': ['tat', 'tt'], 'name': 'Tatar', 'scripts': ['latin', 'arabic', 'cyrillic'], 'encodings': ['utf-8','windows-1252', 'windows-1256', 'iso-8859-6', 'iso-8859-1', 'koi8-r','windows-1251','maccyrillic','iso-8859-5','ibm855','ibm866']},'swa':'sw','sw': {'codes':
+['swa','sw','swh'], 'name': 'Swahili', 'scripts': ['latin'], 'encodings': ['utf-8',
+'windows-1252', 'iso-8859-1']},'som':'so','so': {'codes':
+['som','so'], 'name': 'Somali', 'scripts': ['latin','arabic'], 'encodings': ['utf-8',
+'windows-1252', 'iso-8859-1','windows-1256', 'iso-8859-6']},'snd':'sd','sd': {'codes': ['snd', 'sd'], 'name': 'Sindhi', 'scripts': ['devanagari','arabic'],
+'encodings': ['utf-8','windows-1256', 'iso-8859-6']},'oci':'oc','oc': {'codes':
+['oci','oc'], 'name': 'Occitan', 'scripts': ['latin'], 'encodings': ['utf-8',
+'windows-1252', 'iso-8859-1']},'kan':'kn','kn': {'codes':
+['kan','kn'], 'name': 'Kannada', 'scripts': ['kannada'], 'encodings': ['utf-8']},'abk':'ab','ab': {'codes': ['abk', 'ab'], 'name': 'Abkhazian', 'scripts': ['latin', 'georgian', 'cyrillic'], 'encodings': ['utf-8','georgian-ps','windows-1252', 'iso-8859-1', 'koi8-r','windows-1251','maccyrillic','iso-8859-5','ibm855','ibm866']},'kur': 'ku', 'ku': {'codes': ['kur', 'ku', 'kmr', 'ckb', 'sdh', 'lki'], 'name': 'Kurdish', 'scripts': ['latin', 'arabic', 'cyrillic'], 'encodings': ['utf-8','windows-1252', 'windows-1256', 'iso-8859-6', 'iso-8859-1', 'koi8-r','windows-1251','maccyrillic','iso-8859-5','ibm855','ibm866']}, 'kan': 'kn', 'kn': {'codes':
 ['kan', 'kn'], 'name': 'Kannada', 'scripts': ['knda'], 'encodings': ['utf-8']}, 'wel': 'cy', 'cym': 'cy', 'cy': {'codes':
 ['wel', 'cy', 'cym'], 'name': 'Welsh', 'scripts': ['latin'], 'encodings': ['utf-8',
 'windows-1252', 'iso-8859-1']}, 'aze': 'az', 'az': {'codes': ['aze', 'az', 'azj', 'azb'], 'name': 'Azerbaijani', 'scripts': ['latin', 'arabic', 'cyrillic'], 'encodings': ['utf-8','windows-1252', 'windows-1256', 'iso-8859-6', 'iso-8859-1', 'koi8-r','windows-1251','maccyrillic','iso-8859-5','ibm855','ibm866']}, 'arg': 'an', 'an': {'codes': ['arg', 'an'], 'name': 'Aragonese', 'scripts': ['latin'], 'encodings': ['utf-8',
+'windows-1252', 'iso-8859-1']},'lb': {'codes':
+['ltz','lb'], 'name': 'Luxembourgish', 'scripts': ['latin'], 'encodings': ['utf-8',
 'windows-1252', 'iso-8859-1']},'ast': {'codes':
 ['ast'], 'name': 'Asturian', 'scripts': ['latin'], 'encodings': ['utf-8',
 'windows-1252', 'iso-8859-1']}, 'amh': 'am', 'am': {'codes':
@@ -183,6 +197,7 @@ class Tokeniser():
         
         lcode = language.codes[0]
         lcode = lcode if lcode.lower()!="pt_br" else "pt"
+        lcode = lcode if lcode.lower()!="pt_mz" else "pt"
         
         if "Japanese" in self.language.name:
             self.cmd = KYTEA_PATH + "/bin/kytea -notags -model " + KYTEA_JAPANESE
@@ -618,8 +633,8 @@ class Language:
         ## Czech: confusion between 
         if "cs" in self.codes:
             return sum([distrib[x] for x in ["cs","cz"] if x in distrib])
-        if "pt_br" in self.codes:
-            return sum([distrib[x] for x in ["pt","pt_br"] if x in distrib])            
+        if "pt_br" in self.codes or "pt_mz" in self.codes:
+            return sum([distrib[x] for x in ["pt","pt_br","pt_mz"] if x in distrib])
         if "no" in self.codes:
             return sum([distrib[x] for x in ["nb","no"] if x in distrib])
         elif "sr" in self.codes or "hr" in self.codes or "bs" in self.codes:

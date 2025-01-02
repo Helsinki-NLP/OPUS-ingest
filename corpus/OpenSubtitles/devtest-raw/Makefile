@@ -15,7 +15,7 @@ all: ${LANG_ZIPFILES}
 %.zip:
 	mkdir -p ${CORPUS}/raw/$(@:.zip=)
 	echo "reserved devtest subtitles (release year ${DEVTEST_YEAR})" > ${CORPUS}/raw/$(@:.zip=)/README
-	-unzip ../raw/$@ '*/$(@:.zip=)/${DEVTEST_YEAR}/*'
+	unzip ../raw/$@ '*/$(@:.zip=)/${DEVTEST_YEAR}/*'
 	zip -rq $@ ${CORPUS}/raw/$(@:.zip=)
 	find ${CORPUS}/raw/$(@:.zip=) -delete
-	-zip ../raw/$@ -d '*/$(@:.zip=)/${DEVTEST_YEAR}/*'
+	zip ../raw/$@ -d '*/$(@:.zip=)/${DEVTEST_YEAR}/*'

@@ -74,6 +74,7 @@ sub read_info{
 	my $subID = $parts[3];
 	my $lang = convert_iso639('iso639-1',$parts[2],1);
 	$lang = 'pt_BR' if ($lang eq 'pob');
+	$lang = 'pt_MZ' if ($lang eq 'pom');
 	$lang = 'ze' if ($lang eq 'zhe');
 	$lang = 'yue' if ($lang eq 'zhc');
 	$lang = 'zh_TW' if ($lang eq 'zht');

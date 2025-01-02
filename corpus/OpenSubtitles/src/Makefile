@@ -73,11 +73,10 @@ convert: ${LANG_ZIP_XML} ${ZE_ZIP_XML}
 
 .PHONY: %-convert
 %-convert:
-	${MAKE} ${CORPUSXML}/new/$(@:-convert=.zip)
+	${MAKE} ${CORPUSXML}/new/$(patsubst %-convert,%.zip,$@)
 
 .PHONY: ze-convert
-ze-convert:
-	${MAKE} ${CORPUSXML}/new/zh_ze.zip
+ze-convert: ${CORPUSXML}/new/zh_ze.zip
 
 .PHONY: cleanup
 cleanup:
@@ -104,15 +103,16 @@ all-jobs:
 extract-job:
 	${MAKE} HPC_DISK=100 HPC_MEM=4g HPC_CORES=1 HPC_MODULES= extract.submit
 
-CONVERT_JOBS = $(patsubst %,%-job,${LANGUAGES})
+CONVERT_JOBS = $(patsubst %,%-convert-job,${LANGUAGES})
 
 .PHONY: convert-jobs
 convert-jobs: ${CONVERT_JOBS}
 
 .PHONY: ${CONVERT_JOBS}
 ${CONVERT_JOBS}: subtitles.done
-	@mkdir -p ${CORPUSXML}/new
-	${MAKE} HPC_DISK=100 HPC_MEM=32g HPC_CORES=16 HPC_MODULES= EMAIL= $(@:-job=)-convert.submit
+	if [ ! -e ${CORPUSXML}/new/$(@:-job=).zip ]; then \
+	  ${MAKE} HPC_DISK=100 HPC_MEM=32g HPC_CORES=16 HPC_MODULES= EMAIL= $(@:-job=).submit; \
+	fi
 
 
 
@@ -208,8 +208,84 @@ ${CORPUSXML}/new/zh_ze.zip: subtitles/ze.tar
 	fi
 
 
-
 subtitles/%.tar: subtitles.done
+
+
+##------------------------------------------------------------------
+## extract subtitle files from the previous data export
+## --> this can be used to convert srt-files that have been missed
+##     by the previous release like Occitan, for example
+## e.g. run for Occitan: `make oc-convert-prev`
+##------------------------------------------------------------------
+
+
+# MISSING_PREV_LANGS := ast az kn ku oc sw
+MISSING_PREV_LANGS := ast az be egy ext haw km kn ku lb mn me my nb nn oc pt_MZ sco sw syr
+MISSING_PREV_LANG_TARGETS := $(patsubst %,%-convert-prev,${MISSING_PREV_LANGS})
+
+subtitles-prev.done: ${MISSING_PREV_LANG_TARGETS}
+	touch $@
+
+CONVERT_PREV_JOBS = $(patsubst %,%-convert-prev-job,${MISSING_PREV_LANGS})
+
+.PHONY: convert-prev-jobs
+convert-prev-jobs: ${CONVERT_PREV_JOBS}
+
+
+.PHONY: ${CONVERT_PREV_JOBS}
+${CONVERT_PREV_JOBS}:
+	if [ ! -e ${CORPUSXML}/prev/$(@:-convert-prev-job=).zip ]; then \
+	  ${MAKE} HPC_DISK=100 HPC_MEM=32g HPC_CORES=16 HPC_MODULES= EMAIL= $(@:-job=).submit; \
+	fi
+
+.PHONY: %-convert-prev
+%-convert-prev:
+	${MAKE} ${CORPUSXML}/prev/$(patsubst %-convert-prev,%.zip,$@)
+
+lang2to3 = $(shell \
+	if   [ "$1" == "pt_MZ" ]; then echo "pom"; \
+	elif [ "$1" == "pt_BR" ]; then echo "pob"; \
+	elif [ "$1" == "me" ]; then echo "mne"; \
+	elif [ "$1" == "my" ]; then echo "bur"; \
+	elif [ "$1" == "zh" ]; then echo "chi"; \
+	elif [ "$1" == "syc" ]; then echo "syr"; \
+	else iso639 -3 -n $1; \
+	fi )
+
+subtitles-prev/%.tar: export_all_subs.files
+	mkdir -p $(dir $@)
+	zgrep '"$(call lang2to3,$(notdir $(@:.tar=)))"' export_all.csv.gz |\
+	sed 's/","/	/g' | cut -f2 | sort > $@.file-ids
+	join -1 1 -2 2 $@.file-ids $< | cut -f2 -d' ' > $@.files
+	mkdir -p ${WORKDIR}/$@.d
+	tar -C ${WORKDIR}/$@.d -xf export_all_subs.tar -T $@.files
+	cd ${WORKDIR}/$@.d && \
+	find data -type f | ${SUBTITLE_LANGSORT} $(CURDIR)/export_all.csv.gz
+	tar -cf $@ -C ${WORKDIR}/$@.d/srt $(notdir $(@:.tar=))
+
+export_all_subs.files:
+	tar -tf export_all_subs.tar |\
+	grep '\.gz' | \
+	sed 's/\/\([0-9]*\)\.gz/\/\1.gz	\1/' | \
+	sort -k2,2 > $@
+
+${CORPUSXML}/prev/%.zip: subtitles-prev/%.tar
+	mkdir -p ${WORKDIR}/srt
+	tar -xf $< -C ${WORKDIR}/srt
+	-${MAKE} LANGUAGE=$(notdir $(@:.zip=)) convert-srt2xml
+	find ${WORKDIR}/${CORPUS}/xml/$(notdir $(@:.zip=)) -empty -delete
+	find ${WORKDIR}/${CORPUS}/raw/$(notdir $(@:.zip=)) -empty -delete
+	mkdir -p ${CORPUSXML}/prev ${CORPUSRAW}/prev
+	if [ `find ${WORKDIR}/${CORPUS}/xml/$(notdir $(@:.zip=)) -type f | wc -l` -gt 0 ]; then \
+	  cd ${WORKDIR} && zip -rq $@ ${CORPUS}/xml/$(notdir $(@:.zip=)); \
+	fi
+	if [ `find ${WORKDIR}/${CORPUS}/raw/$(notdir $(@:.zip=)) -type f | wc -l` -gt 0 ]; then \
+	  cd ${WORKDIR} && zip -rq ${CORPUSRAW}/prev/$(notdir $@) ${CORPUS}/raw/$(notdir $(@:.zip=)); \
+	fi
+
+
+
+
 
 
 SRT2XML = ../scripts/srt2xml.py

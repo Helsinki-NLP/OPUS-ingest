@@ -36,7 +36,10 @@ SLURM_MAX_NR_JOBS := 200
 
 
 %.submit:
-	while [ `squeue -u ${WHOAMI}` -lt ${SLURM_MAX_NR_JOBS} ]; do echo "waiting for space in the queue";sleep 1; done
+	while [ `squeue -u ${WHOAMI} | wc -l` -gt ${SLURM_MAX_NR_JOBS} ]; do \
+	  echo "waiting for space in the queue";\
+	  sleep 1; \
+	done
 	echo '#!/bin/bash -l' > $@
 	echo '#SBATCH -J "${@:.submit=}"' >>$@
 	echo '#SBATCH -o ${@:.submit=}.out.%j' >> $@
