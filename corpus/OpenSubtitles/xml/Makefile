@@ -206,6 +206,8 @@ ${WORKDIR}/previous/%.zip:
 	    unzip -q -d $@.d $$o; \
 	    cd  $@.d && find ${CORPUS} -type f | ${SUBTITLE_LANGSORT} ${PREVIOUS_INFO_FILE}; \
 	  fi )
+	if [ $(notdir $(@:.zip=)) == zh_ze ]; then mv $@.d/xml/ze $@.d/xml/zh_ze; fi
+	if [ $(notdir $(@:.zip=)) == en_ze ]; then mv $@.d/xml/ze $@.d/xml/en_ze; fi
 	cd $@.d/xml && zip -r -q $@ $(notdir $(@:.zip=))
 	find $@.d -delete
 
