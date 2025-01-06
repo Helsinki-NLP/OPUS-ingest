@@ -4,16 +4,37 @@ include Makefile.def
 include ../Makefile.def
 
 
-SRC = xx
-TRG = yy
-
+.PHONY: all
 all:
-
-convert:
 	${MAKE} -C src all
+	${MAKE} -C xml all
+	${MAKE} -C raw all
+	${MAKE} -C devtest-xml all
+	${MAKE} -C devtest-raw all
 
-convert-job:
-	${MAKE} HPC_DISK=500 HPC_MEM=40g HPC_CORES=40 HPC_MODULES= convert.submit
+
+.PHONY: all-jobs
+all-jobs:
+	${MAKE} -C src all-jobs
+	while [ ! -e src/all.done ]; do \
+	  echo "waiting for subtitle conversion jobs"; \
+	  sleep 10; \
+	done
+	${MAKE} -C xml all-jobs
+	${MAKE} -C raw all-jobs
+	while [ ! -e xml/all.done ] &&  [ ! -e raw/all.done ]; do \
+	  echo "waiting for merging and alignment jobs"; \
+	  sleep 10; \
+	done
+	${MAKE} -C devtest-xml testsets.submit
+
+
+.PHONY: testsets
+testsets:
+	${MAKE} -C devtest-xml all
+	${MAKE} -C devtest-raw all
+
+
 
 
 ## OLD?
@@ -29,12 +50,4 @@ ${OPUSPUB}/${CORPUS}-alt-${VERSION}.php:
 include ../Makefile.process
 include ../Makefile.release
 include ../Makefile.submit
-
-
-# include ../Makefile.annotate
-# include ../Makefile.cwb
-# include ../Makefile.html
-# include ../Makefile.udparse
-# include ../Makefile.parse
-
 

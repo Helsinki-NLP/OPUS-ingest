@@ -29,7 +29,7 @@ SRT2XML_FILES := $(patsubst ${WORKDIR}/srt/%.gz,${WORKDIR}/${CORPUS}/xml/%.xml,$
 ## to be converted into srt format
 
 SUBFILES      := $(shell if [ -e ${WORKDIR}/sub ]; then find ${WORKDIR}/sub -type f; fi)
-SUB2SRT_FILES := $(patsubst sub/%,${WORKDIR}/srt/%,${SUBFILES})
+SUB2SRT_FILES := $(patsubst ${WORKDIR}/sub/%,${WORKDIR}/srt/%,${SUBFILES})
 
 
 ## all languages that have been extracted
@@ -60,8 +60,17 @@ all:
 	${MAKE} convert
 	${MAKE} cleanup
 
+SRTDIR := subtitles
+
 .PHONY: extract
-extract: subtitles.done
+extract: ${SRTDIR}.done
+
+.PHONY: extract-all
+extract-all:
+	${MAKE} SRTDIR=subtitles-all \
+		SUBTITLE_TARBALL="${CURDIR}/export_all_subs.tar ${CURDIR}/export-2024.tar" \
+		SUBTITLE_METADATA="${CURDIR}/export_all.csv.gz ${CURDIR}/export-2024.tsv.gz" \
+	extract
 
 ## convert srt files into XML
 ## - convert all languages
@@ -74,13 +83,21 @@ convert: ${LANG_ZIP_XML} ${ZE_ZIP_XML}
 .PHONY: %-convert
 %-convert:
 	${MAKE} ${CORPUSXML}/new/$(patsubst %-convert,%.zip,$@)
+	${MAKE} cleanup
 
 .PHONY: ze-convert
 ze-convert: ${CORPUSXML}/new/zh_ze.zip
+	${MAKE} cleanup
 
 .PHONY: cleanup
 cleanup:
-	if [ -d ${WORKDIR} ]; then find ${WORKDIR} -delete; fi
+	if [ $(words $(wildcard done/*.zip)) -eq $(words $(LANGUAGES)) ]; then \
+	  if [ -d ${WORKDIR} ]; then \
+	    find ${WORKDIR} -delete; \
+	  fi; \
+	  touch all.done; \
+	fi
+
 
 .PHONY: print-langs
 print-langs:
@@ -92,7 +109,7 @@ print-langs:
 
 .PHONY: all-jobs
 all-jobs:
-	${MAKE} extract-job
+	if [ ! -e subtitles.done ]; then ${MAKE} extract-job; fi
 	while [ ! -e subtitles.done ]; do \
 	  echo "waiting for subtitle extraction job"; \
 	  sleep 10; \
@@ -101,7 +118,16 @@ all-jobs:
 
 .PHONY: extract-job
 extract-job:
-	${MAKE} HPC_DISK=100 HPC_MEM=4g HPC_CORES=1 HPC_MODULES= extract.submit
+	if [ ! -e subtitles.done ]; then \
+	  ${MAKE} HPC_DISK=100 HPC_MEM=4g HPC_CORES=1 HPC_MODULES= extract.submit; \
+	fi
+
+.PHONY: extract-all-job
+extract-all-job:
+	if [ ! -e subtitles-all.done ]; then \
+	  ${MAKE} HPC_DISK=500 HPC_MEM=4g HPC_CORES=1 HPC_MODULES= extract-all.submit; \
+	fi
+
 
 CONVERT_JOBS = $(patsubst %,%-convert-job,${LANGUAGES})
 
@@ -120,14 +146,15 @@ ${CONVERT_JOBS}: subtitles.done
 ## extraction and conversion targets
 ##-----------------------------------
 
-subtitles.done:
+${SRTDIR}.done:
+	mkdir -p ${SRTDIR}
 	${MAKE} ${WORKDIR}/srt
 	if [ -e ${WORKDIR}/sub ]; then \
 	  ${MAKE} convert-sub2srt; \
+	  tar -cf ${SRTDIR}/sub.tar -C ${WORKDIR} sub; \
 	fi
-	mkdir -p subtitles
 	for l in `find ${WORKDIR}/srt -mindepth 1 -maxdepth 1 -type d -printf "%f "`; do \
-	  tar -cf subtitles/$$l.tar -C ${WORKDIR}/srt $$l; \
+	  tar -cf ${SRTDIR}/$$l.tar -C ${WORKDIR}/srt $$l; \
 	done
 	touch $@
 
@@ -142,8 +169,13 @@ convert-sub2srt: ${SUB2SRT_FILES}
 ## extract all srt-files from the OpenSubs tarball
 
 ${WORKDIR}/files: ${SUBTITLE_TARBALL}
-	mkdir -p $(dir $@)
-	-tar -C ${dir $@} -xf $<
+	mkdir -p $@
+	for f in $^; do \
+	  tar -C $@ -xf $$f; \
+	done
+
+#	mkdir -p $(dir $@)
+#	-tar -C ${dir $@} -xf $<
 
 
 ## sort srt-files into language-specific sub-dirs
@@ -179,6 +211,8 @@ ${CORPUSXML}/new/%.zip: subtitles/%.tar
 	if [ `find ${WORKDIR}/${CORPUS}/raw/$(notdir $(@:.zip=)) -type f | wc -l` -gt 0 ]; then \
 	  cd ${WORKDIR} && zip -rq ${CORPUSRAW}/new/$(notdir $@) ${CORPUS}/raw/$(notdir $(@:.zip=)); \
 	fi
+	mkdir -p done
+	touch done/$(notdir $@)
 
 
 ${CORPUSXML}/new/zh_ze.zip: subtitles/ze.tar
@@ -206,6 +240,8 @@ ${CORPUSXML}/new/zh_ze.zip: subtitles/ze.tar
 	if [ `find ${WORKDIR}/${CORPUS}/raw/en_ze -type f | wc -l` -gt 0 ]; then \
 	  cd ${WORKDIR} && zip -rq ${CORPUSRAW}/new/en_ze.zip ${CORPUS}/raw/en_ze; \
 	fi
+	mkdir -p done
+	touch done/$(notdir $@)
 
 
 subtitles/%.tar: subtitles.done

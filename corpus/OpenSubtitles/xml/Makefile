@@ -10,8 +10,8 @@ include ../../Makefile.submit
 
 LANGUAGES := $(sort $(patsubst %.zip,%,$(wildcard *.zip)))
 
-SRC ?= $(firstword ${LANGUAGES} fi)
-TRG ?= $(lastword sv ${LANGUAGES})
+SRC ?= fi
+TRG ?= sv
 
 
 PREV_RELEASE  := /projappl/nlpl/data/OPUS/OpenSubtitles/v2018
@@ -76,6 +76,7 @@ ALGFILES      := $(addprefix ${WORKDIR}/$(SRC)-$(TRG)/,${COMMON_MOVIES})
 all:
 	${MAKE} merge-all
 	${MAKE} align-all
+	${MAKE} cleanup
 
 
 .PHONY: all-jobs
@@ -85,12 +86,18 @@ all-jobs:
 	  echo "waiting for merge jobs"; \
 	  sleep 10; \
 	done
-	for z in ${OLD_ZIPFILES}; do \
-	  if [ ! -e $$z ]; then \
-	    cp ${PREV_RELEASE}/xml/$$z $$z; \
-	  fi \
-	done
+	${MAKE} copy-prev-release-files
 	${MAKE} align-jobs
+
+
+.PHONY: cleanup
+cleanup:
+	if [ $(words $(wildcard done/*.gz)) -eq $(words $(LANGPAIRS)) ]; then \
+	  if [ -d ${WORKHOME} ]; then \
+	    find ${WORKHOME} -delete; \
+	  fi; \
+	  touch all.done; \
+	fi
 
 
 .PHONY: print-common-movies
@@ -112,6 +119,10 @@ print-common-movies: ${WORKDIR}/${SRC} ${WORKDIR}/${TRG}
 .PHONY: merge-all merge-jobs
 
 merge-all: ${NEW_ZIPFILES}
+	${MAKE} copy-prev-release-files
+
+.PHONY: copy-prev-release-files
+copy-prev-release-files:
 	for z in ${OLD_ZIPFILES}; do \
 	  if [ ! -e $$z ]; then \
 	    cp ${PREV_RELEASE}/xml/$$z $$z; \
@@ -150,7 +161,7 @@ align: $(SRC)-$(TRG).xml.gz
 align-all: ${BITEXT_ALGFILES}
 
 align-job:
-	${MAKE} HPC_CORES=16 HPC_DISK=500 HPC_MEM=16g align.submit
+	${MAKE} HPC_CORES=40 HPC_DISK=500 HPC_MEM=32g align.submit
 
 BITEXT_ALIGN_JOBS := $(patsubst %,%-job,${LANGPAIRS})
 
@@ -162,7 +173,7 @@ ${BITEXT_ALIGN_JOBS}:
 	  ${MAKE} HPC_CORES=16 HPC_DISK=500 HPC_MEM=16g EMAIL= $(@:-job=.xml.gz).submit; \
 	fi
 
-
+#	if [ "$(wildcard $(@:-job=.xml.gz)*)"  == "" ]; then
 
 
 
@@ -171,6 +182,9 @@ ${BITEXT_ALIGN_JOBS}:
 ## remove generated subtitles (done in subdir generated/)
 ##---------------------------------------------------------
 
+## TODO: is there a risk for a racing situation with the INFO file
+##       between parallel jobs creating zip files?
+
 %.zip:
 	mkdir -p ${WORKDIR}
 	if [ -e new/$@ ]; then unzip -n -q -d ${WORKDIR} new/$@; fi
@@ -178,7 +192,10 @@ ${BITEXT_ALIGN_JOBS}:
 	${MAKE} ${WORKDIR}/previous/$@
 	unzip -q -d ${WORKDIR}/${CORPUS}/xml -n ${WORKDIR}/previous/$@
 	rm -f ${WORKDIR}/previous/$@
-	cd ${WORKDIR} && zip -q -r ${PWD}/$@ ${CORPUS}/xml/$(@:.zip=)
+	echo "${CORPUS}/xml/$(@:.zip=)" > ${WORKDIR}/INFO
+	echo "${CORPUS}"               >> ${WORKDIR}/INFO
+	echo "${VERSION}"              >> ${WORKDIR}/INFO
+	cd ${WORKDIR} && zip -q -r ${PWD}/$@ INFO ${CORPUS}/xml/$(@:.zip=)
 	rm -fr ${WORKDIR}/${CORPUS}/xml/$(@:.zip=)
 	find ${WORKDIR} -delete
 	-${MAKE} -C generated $@
@@ -206,6 +223,7 @@ ${WORKDIR}/previous/%.zip:
 	    unzip -q -d $@.d $$o; \
 	    cd  $@.d && find ${CORPUS} -type f | ${SUBTITLE_LANGSORT} ${PREVIOUS_INFO_FILE}; \
 	  fi )
+	if [ $(notdir $(@:.zip=)) == zh_CN ]; then mv $@.d/xml/zh $@.d/xml/zh_CN; fi
 	if [ $(notdir $(@:.zip=)) == zh_ze ]; then mv $@.d/xml/ze $@.d/xml/zh_ze; fi
 	if [ $(notdir $(@:.zip=)) == en_ze ]; then mv $@.d/xml/ze $@.d/xml/en_ze; fi
 	cd $@.d/xml && zip -r -q $@ $(notdir $(@:.zip=))
@@ -231,6 +249,7 @@ ${WORKDIR}/previous/%.zip:
 	  fi )
 	mkdir -p done
 	touch done/$@
+	${MAKE} cleanup
 
 
 ## work copies of source and target language subtitles
@@ -261,6 +280,7 @@ ${WORKDIR}/${SRC}-${TRG}.xml.gz: $(sort ${WORKDIR}/${SRC} ${WORKDIR}/${TRG}) ${D
 	${MAKE} print-common-movies
 	${MAKE} align-files
 	find ${WORKDIR}/${SRC}-${TRG} -empty -delete
+	rm -f $@.links $@.altlinks
 	-( find ${WORKDIR}/${SRC}-${TRG} -type f -name '*.xml.gz' | \
 		grep -v '/alt/' | sort |\
 		xargs zgrep --no-filename 'link' |\

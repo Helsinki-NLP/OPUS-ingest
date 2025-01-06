@@ -19,7 +19,7 @@ my %fileIDs=();
 
 ## read all metadata files
 
-foreach (@ARGV){
+while (@ARGV){
     my $file = shift(@ARGV);
     read_info($file);
 }
