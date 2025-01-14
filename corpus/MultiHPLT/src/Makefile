@@ -22,7 +22,7 @@ endif
 
 .PHONY: all
 all:
-	-ln -s ../../HPLT/src/*.cc40-wide15-wide16-wide17.tmx.gz .
+	-ln -s ../../HPLT/src/*.tmx.gz .
 	${MAKE} ${CORPUSRAW}
 	${MAKE} pivoting
 

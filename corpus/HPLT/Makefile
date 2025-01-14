@@ -22,11 +22,11 @@ all:
 
 ## submit a job for fetching and processing all data
 
-all-job:
+all-jobs:
 	${MAKE} HPC_CORES=4 HPC_MEM=8g HPC_TIME=72:00 convert-job.submit
 
 
-# all-job:
+# all-jobs:
 # 	${MAKE} HPC_CORES=1 HPC_MEM=4g HPC_TIME=72:00 fetch-job.submit
 
 
@@ -39,22 +39,39 @@ fetch-job:
 ## that will submit tokenization jobs when ready
 convert-job:
 	${MAKE} -C src all
-	${MAKE} tokenize-jobs
+	${MAKE} tokenize-jobs-and-publish
 
 tokenize-jobs:
 	for l in $(sort $(notdir $(wildcard ${CORPUSRAW}/?? ${CORPUSRAW}/??_*))); do \
-	  ${MAKE} MAKEARGS="LANGUAGE=$$l" LANGUAGE=$$l \
+	  if [ ! -e log/.$$l.tokenize.done ]; then \
+	    ${MAKE} MAKEARGS="LANGUAGE=$$l" LANGUAGE=$$l \
+			HPC_CORES=8 HPC_MEM=4g HPC_TIME=72:00 \
+	    tokenize-job.submit; \
+	    rm -f tokenize-job.submit;\
+	  fi \
+	done
+
+tokenize-job:
+	${MAKE} annotate_files
+
+
+tokenize-jobs-and-publish:
+	for l in $(sort $(notdir $(wildcard ${CORPUSRAW}/?? ${CORPUSRAW}/??_*))); do \
+	  if [ ! -e log/.$$l.tokenize.done ]; then \
+	    ${MAKE} MAKEARGS="LANGUAGE=$$l" LANGUAGE=$$l \
 		HPC_CORES=8 HPC_MEM=4g HPC_TIME=72:00 \
-	  tokenize-job.submit; \
-	  rm -f tokenize-job.submit;\
+	    tokenize-job-and-publish.submit; \
+	    rm -f tokenize-job-and-publish.submit;\
+	  fi \
 	done
 
 ## tokenize and submit wordalign jobs when all languages are done
-tokenize-job:
+tokenize-job-and-publish:
 	${MAKE} annotate_files
 	if [ `ls log/.*tok* | wc -l` == ${words ${LANGUAGES}} ]; then \
 	  ${MAKE} HPC_CORES=8 THREADS=4 HPC_MEM=32g HPC_DISK=2000 HPC_TIME=72:00 publish-job.submit; \
 	fi
+
 
 publish-job:
 	${MAKE} moses

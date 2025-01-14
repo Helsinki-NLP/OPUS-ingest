@@ -5,9 +5,9 @@ include ../Makefile.def
 PWD := ${shell pwd}
 
 
-RELEASED_TMX      = $(wildcard *.cc40-wide15-wide16-wide17.tmx.gz)
+RELEASED_TMX      = $(wildcard *.tmx.gz)
 CONVERTED_BITEXTS = ${patsubst %.tmx.gz,%.done,${RELEASED_TMX}}
-MAXSIZE = 100000
+MAXSIZE = 1000000
 
 
 .PHONY: all
@@ -19,7 +19,8 @@ all: ${CONVERTED_BITEXTS}
 
 
 # UNICODE_CLEANUP := perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;s/\&\s*\#\s*160\s*\;/ /g;'
-UNICODE_CLEANUP := perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;'
+# UNICODE_CLEANUP := perl -CS -pe 'tr[\x{9}\x{A}\x{D}\x{20}-\x{D7FF}\x{E000}-\x{FFFD}\x{10000}-\x{10FFFF}][]cd;'
+UNICODE_CLEANUP := ftfy
 
 
 ${CONVERTED_BITEXTS}: %.done: %.tmx.gz

@@ -25,7 +25,7 @@ OLD_ZIPFILES := $(filter-out ze_zh.zip ze_en.zip ${NEW_ZIPFILES} ${NEW_ZIPFILES_
 LANGPAIRS := ${shell \
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
-	    if [[ ! "$$s" > "$$t" ]]; then \
+	    if [[ "$$s" < "$$t" ]]; then \
 	      echo "$$s-$$t"; \
 	    fi \
 	  done \
@@ -82,12 +82,17 @@ all:
 .PHONY: all-jobs
 all-jobs:
 	${MAKE} merge-jobs
-	while [ ! `ls *.zip | wc -l` -eq $(words ${NEW_ZIPFILES}) ]; do \
+	while [ `ls *.zip | wc -l` -ne $(words ${NEW_ZIPFILES}) ]; do \
 	  echo "waiting for merge jobs"; \
 	  sleep 10; \
 	done
 	${MAKE} copy-prev-release-files
 	${MAKE} align-jobs
+	while [ $(words $(wildcard done/*.gz)) -ne $(words $(LANGPAIRS)) ]; do \
+	  echo "waiting for alignment jobs"; \
+	  sleep 10; \
+	fi
+	touch all.done
 
 
 .PHONY: cleanup
@@ -167,14 +172,19 @@ BITEXT_ALIGN_JOBS := $(patsubst %,%-job,${LANGPAIRS})
 
 align-jobs: ${BITEXT_ALIGN_JOBS}
 
+## big files > 1GB
+BIG_FILE = 1073741824
+
 .PHONY: ${BITEXT_ALIGN_JOBS}
 ${BITEXT_ALIGN_JOBS}:
 	if [ ! -e $(@:-job=.xml.gz) ]; then \
-	  ${MAKE} HPC_CORES=16 HPC_DISK=500 HPC_MEM=16g EMAIL= $(@:-job=.xml.gz).submit; \
+	  if [ $(shell stat -c %s $(firstword $(subst -, ,$(@:-job=))).zip) -gt ${BIG_FILE} ] && \
+	     [ $(shell stat -c %s $(lastword $(subst -, ,$(@:-job=))).zip) -gt ${BIG_FILE} ]; then \
+	    ${MAKE} HPC_CORES=32 HPC_DISK=1000 HPC_MEM=32g EMAIL= $(@:-job=.xml.gz).submit; \
+	  else \
+	    ${MAKE} HPC_CORES=16 HPC_DISK=500 HPC_MEM=16g EMAIL= $(@:-job=.xml.gz).submit; \
+	  fi \
 	fi
-
-#	if [ "$(wildcard $(@:-job=.xml.gz)*)"  == "" ]; then
-
 
 
 ##---------------------------------------------------------

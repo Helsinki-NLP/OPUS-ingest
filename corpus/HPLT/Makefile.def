@@ -4,7 +4,7 @@
 
 CORPUS  = HPLT
 
-RELEASE = 1.1
+RELEASE = 2
 VERSION = v${RELEASE}
 
 # with SRCHTML you can define some extra HTML code that will be placed just

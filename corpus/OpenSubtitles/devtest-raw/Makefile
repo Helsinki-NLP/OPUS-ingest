@@ -9,10 +9,11 @@ include ../../Makefile.submit
 
 LANG_ZIPFILES  := $(notdir $(wildcard ../raw/*.zip))
 
-.PHONY: all
-all: ${LANG_ZIPFILES}
+.PHONY: all all-jobs
+all all-jobs: ${LANG_ZIPFILES}
 	${MAKE} testsets
 	${MAKE} devsets
+	touch all.done
 
 
 %.zip:

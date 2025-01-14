@@ -7,6 +7,20 @@ include ../Makefile.def
 include ../../Makefile.submit
 
 
+LANGUAGES  := $(sort $(patsubst %.zip,%,$(notdir $(wildcard ${CORPUSRAW}/*.zip))))
+LANGPAIRS  := $(foreach L,${LANGUAGES},$L-$L)
+INTRAFILES := $(addsuffix .xml.gz,${LANGPAIRS})
+
+LANGUAGE  ?= af
+LANGPAIR  := ${LANGUAGE}-${LANGUAGE}
+WORKDIR   := ${TMPDIR}/OPUS/${CORPUS}/intra
+
+MOVIES    := $(patsubst ${WORKDIR}/${LANGUAGE}/%,%,$(wildcard ${WORKDIR}/${LANGUAGE}/*/*))
+ALGFILES  := $(addprefix ${WORKDIR}/$(LANGUAGE)-$(LANGUAGE)/,${MOVIES})
+
+
+
+
 TMXINSERT= $(patsubst %.xml.gz,${CORPUSHTML}/%.tmx.gz,$(wildcard *.insert.xml.gz))
 TMXPCT   = $(patsubst %.xml.gz,${CORPUSHTML}/%.tmx.gz,$(wildcard *.pct.xml.gz))
 TMXSPELL = $(patsubst %.xml.gz,${CORPUSHTML}/%.tmx.gz,$(wildcard *.spell.xml.gz))
@@ -28,304 +42,107 @@ ALG_SAMPLES = $(patsubst %.other.xml.gz,${CORPUSPUB}/%_sample.html, ${wildcard *
 TAB2TMX    = ${UPLUGHOME}/tools/tab2tmx
 OPUS2MOSES = $(UPLUGHOME)/tools/xces2moses
 
-## target for submitting jobs
-SUBMIT = submit-taito
-
-# subalign.pl: find best candidate pair with most time overlap
-#   -t .... time overlap score threshold
-#   -a .... align score threshold
-#   -r .... re-alignment parameters
-
-# SENTALIGN  = ${TOOLS}/opus/${CORPUS}/subalign.pl -t 0.5 -a 2
 
 
-## NEW for 2013: add -L to skip pairs of symbolic links!
-## --> at least one file has to be a new one (src or trg)
 
 SENTALIGN  = ../scripts/find_translation_alternatives.pl -m
-walltime   = 24
-MEM        = 8G
-HPC_CORES  = 8
-HPC_TIME   = ${walltime}:00
-HPC_MEM    = ${MEM}
 
 
-LANGUAGES = $(sort $(wildcard ??) $(wildcard ??_??))
-BIGLANG   = ar bg cs el en es fr he hr hu it nl pl pt pt_br ro ru sr tr
-MEDLANG   = ar bs da de et fi sv sk sl zh_cn
-SMALLLANG = af bn br ca eo eu fa gl hi hy is id ja ka kk ko lt lv mk ml ms no si sq ta te th tl uk ur vi ze_zh ze_en zh_tw
+.PHONY: all
+all: ${INTRAFILES}
+	${MAKE} cleanup
 
+ALIGN_JOBS := $(patsubst %,%-job,${LANGPAIRS})
 
-LANGUAGE = af
+.PHONY: all-jobs
+all-jobs: ${ALIGN_JOBS}
 
-
-ALGFILES = $(addsuffix .xml.gz,\
-	   $(addprefix $(LANGUAGE)-,\
-	   $(shell find $(LANGUAGE)/ -maxdepth 2 -mindepth 2 -type d)))
-
-all:
-	for l in ${LANGUAGES}; do \
-	  ${MAKE} LANGUAGE=$$l align; \
-	done
-	${MAKE} remove_empty remove_empty_align remove_empty_dir
-
-
-## publish data files
-publish: ${CES_INFO} ${CES_PUB}
-	opusinfo-refresh ${CORPUS}
-
-.PHONY: alg_samples
-alg_samples: ${ALG_SAMPLES}
-
-## create count files
-ces_info: ${CES_INFO}
-	echo ${CES_INFO}
-
-
-pack-log:
-	for l in ${LANGUAGES}; do \
-	  if [ ! -e $$l-$$l.log.tar.gz ]; then \
-	  echo "process $$l";\
-	  find $$l-$$l/ -name '*.log.gz' > $$l-$$l.files;\
-	  tar -czf $$l-$$l.log.tar.gz -T $$l-$$l.files; \
-	  rm -f $$l-$$l.files; \
-	  rm -fr $$l-$$l; \
-	  fi \
-	done
-
-
-submit-all:
-	for l in ${BIGLANG}; do \
-		make walltime=72 LANGUAGE=$$l ${SUBMIT}; \
-	done
-	for l in ${MEDLANG}; do \
-		make walltime=48 LANGUAGE=$$l ${SUBMIT}; \
-	done
-	for l in ${SMALLLANG}; do \
-		make walltime=24 LANGUAGE=$$l ${SUBMIT}; \
-	done
-
-
-# submit-new:
-# 	echo '#! /bin/bash' > ${LANGUAGE}.sh
-# 	echo 'touch ${LANGUAGE}.running' >> ${LANGUAGE}.sh
-# 	echo '. /cluster/bin/jobsetup' >> ${LANGUAGE}.sh
-# 	echo 'mkdir -p /tmp/OPUS/corpus/OpenSubtitles2016/alt' >> ${LANGUAGE}.sh
-# 	echo 'cd /tmp/OPUS' >> ${LANGUAGE}.sh
-# 	echo 'ln -s ${HOME}/OPUS/tools .' >> ${LANGUAGE}.sh
-# 	echo 'cd corpus' >> ${LANGUAGE}.sh
-# 	echo 'cp ${HOME}/OPUS/corpus/Makefile* .' >> ${LANGUAGE}.sh
-# 	echo 'cd OpenSubtitles2016' >> ${LANGUAGE}.sh
-# 	echo 'cp ${HOME}/OPUS/corpus/OpenSubtitles2016/Makefile* .' >> ${LANGUAGE}.sh
-# 	echo 'ln -s ${HOME}/OPUS/corpus/OpenSubtitles2016/scripts .' >> ${LANGUAGE}.sh
-# 	echo 'scripts/copy_files.pl `pwd` ${LANGUAGE}' >> ${LANGUAGE}.sh
-# 	echo 'cd alt' >> ${LANGUAGE}.sh
-# 	echo 'cp ${HOME}/OPUS/corpus/OpenSubtitles2016/alt/Makefile .' >> ${LANGUAGE}.sh
-# 	echo 'ln -s ../xml/${LANGUAGE} .' >> ${LANGUAGE}.sh
-# 	echo 'make LANGUAGE=${LANGUAGE} align' >> $(LANGUAGE).sh
-# 	echo 'tar -cf /tmp/$(LANGUAGE).tar $(LANGUAGE)-${LANGUAGE} $(LANGUAGE)-${LANGUAGE}*.xml.gz' >> ${LANGUAGE}.sh
-# 	echo 'mv /tmp/${LANGUAGE}.tar ${HOME}/OPUS/corpus/OpenSubtitles2016/alt/' >> ${LANGUAGE}.sh
-# 	echo 'rm ${HOME}/OPUS/corpus/OpenSubtitles2016/alt/${LANGUAGE}.running ${HOME}/OPUS/corpus/OpenSubtitles2016/alt/${LANGUAGE}.sh' >> ${LANGUAGE}.sh
-# 	sbatch  -A nn9106k -c 1 --mem-per-cpu=2G -t ${walltime}:00:00 $(LANGUAGE).sh
-
-
-
-# submit-with-scratch:
-# 	echo '#! /bin/bash' > ${LANGUAGE}.sh
-# 	echo 'touch ${LANGUAGE}.running' >> ${LANGUAGE}.sh
-# 	echo '. /cluster/bin/jobsetup' >> ${LANGUAGE}.sh
-# 	echo 'chkfile $(LANGUAGE).tar.gz' >> ${LANGUAGE}.sh
-# 	echo 'mkdir -p $$SCRATCH/OPUS/corpus/OpenSubtitles2016/alt' >> ${LANGUAGE}.sh
-# 	echo 'cd $$SCRATCH/OPUS' >> ${LANGUAGE}.sh
-# 	echo 'ln -s ${HOME}/OPUS/tools .' >> ${LANGUAGE}.sh
-# 	echo 'cd corpus' >> ${LANGUAGE}.sh
-# 	echo 'cp ${HOME}/OPUS/corpus/Makefile* .' >> ${LANGUAGE}.sh
-# 	echo 'cd OpenSubtitles2016' >> ${LANGUAGE}.sh
-# 	echo 'cp ${HOME}/OPUS/corpus/OpenSubtitles2016/Makefile* .' >> ${LANGUAGE}.sh
-# 	echo 'ln -s ${HOME}/OPUS/corpus/OpenSubtitles2016/scripts .' >> ${LANGUAGE}.sh
-# 	echo 'scripts/copy_files.pl `pwd` ${LANGUAGE}' >> ${LANGUAGE}.sh
-# 	echo 'cd alt' >> ${LANGUAGE}.sh
-# 	echo 'cp ${HOME}/OPUS/corpus/OpenSubtitles2016/alt/Makefile .' >> ${LANGUAGE}.sh
-# 	echo 'ln -s ../xml/${LANGUAGE} .' >> ${LANGUAGE}.sh
-# 	echo 'make LANGUAGE=${LANGUAGE} align' >> $(LANGUAGE).sh
-# 	echo 'tar -cf $$SCRATCH/$(LANGUAGE).tar $(LANGUAGE)-${LANGUAGE} $(LANGUAGE)-${LANGUAGE}*.xml.gz' >> ${LANGUAGE}.sh
-# 	echo 'mv $$SCRATCH/${LANGUAGE}.tar ${HOME}/OPUS/corpus/OpenSubtitles2016/alt/' >> ${LANGUAGE}.sh
-# 	echo 'rm ${HOME}/OPUS/corpus/OpenSubtitles2016/alt/${LANGUAGE}.running ${HOME}/OPUS/corpus/OpenSubtitles2016/alt/${LANGUAGE}.sh' >> ${LANGUAGE}.sh
-# 	sbatch  -A nn9106k -c 1 --mem-per-cpu=2G -t ${walltime}:00:00 $(LANGUAGE).sh
-
-
-
-
-submit: ${SUBMIT}
-
-
-submit-abel:
-	if [ -e "$(LANGUAGE)" ]; then \
-	  if [ ! -e "$(LANGUAGE)-$(LANGUAGE).xml.gz" ]; then \
-	    if [ ! -e "$(LANGUAGE)-$(LANGUAGE).scheduled" ]; then \
-	      if [ ! -e "$(LANGUAGE)-$(LANGUAGE).running" ]; then \
-	    echo '#! /bin/bash' > $(LANGUAGE).sh; \
-	    echo 'touch ${LANGUAGE}-${LANGUAGE}.running' >> $(LANGUAGE).sh; \
-	    echo 'make LANGUAGE=${LANGUAGE} align' >> $(LANGUAGE).sh; \
-	    echo 'rm -f ${LANGUAGE}-${LANGUAGE}.running' >> $(LANGUAGE).sh; \
-	    echo 'rm -f ${LANGUAGE}-${LANGUAGE}.scheduled' >> $(LANGUAGE).sh; \
-	    touch ${LANGUAGE}-${LANGUAGE}.scheduled; \
-	    sbatch  -A nn9106k -c 1 --mem-per-cpu=${MEM} \
-		-t ${walltime}:00:00 $(LANGUAGE).sh || \
-	    rm -f ${LANGUAGE}-${LANGUAGE}.scheduled; \
-	      fi \
-	    fi \
-	  fi \
-	fi
-
-
-LOCALTMP = /tmp
-
-submit-taito:
-	if [ ! -e "$(LANGUAGE)" ]; then \
-	  ln -s ../xml/${LANGUAGE} .; \
-	fi
-	if [ -e "$(LANGUAGE)" ]; then \
-	  if [ ! -e "$(LANGUAGE)-$(LANGUAGE).xml.gz" ]; then \
-	    if [ ! -e "$(LANGUAGE).scheduled" ]; then \
-	      if [ ! -e "$(LANGUAGE).running" ]; then \
-	    	echo '#! /bin/bash' > $(LANGUAGE).sh; \
-		echo '#SBATCH -J "${LANGUAGE}-${LANGUAGE}"' >> $(LANGUAGE).sh; \
-		echo '#SBATCH -o ${LANGUAGE}-${LANGUAGE}.out.%j' >> $(LANGUAGE).sh; \
-		echo '#SBATCH -e ${LANGUAGE}-${LANGUAGE}.err.%j' >> $(LANGUAGE).sh; \
-		echo '#SBATCH --mem=${HPC_MEM}' >> $(LANGUAGE).sh; \
-		echo '#SBATCH -n ${HPC_CORES}' >> $(LANGUAGE).sh; \
-		echo '#SBATCH -N ${HPC_NODES}' >> $(LANGUAGE).sh; \
-		echo '#SBATCH -p ${HPC_QUEUE}' >> $(LANGUAGE).sh; \
-		echo '#SBATCH -t ${HPC_TIME}:00' >> $(LANGUAGE).sh; \
-		echo '${HPC_EXTRA}' >> $(LANGUAGE).sh; \
-		echo 'module purge' >> $(LANGUAGE).sh; \
-		echo 'module use -a /proj/nlpl/modules' >> $(LANGUAGE).sh; \
-		for m in ${HPC_MODULES}; do \
-		  echo "module load $$m" >> $(LANGUAGE).sh; \
-		done; \
-		echo 'module list' >> $(LANGUAGE).sh; \
-		echo 'cd $${SLURM_SUBMIT_DIR:-.}' >> $(LANGUAGE).sh; \
-		echo 'pwd' >> $(LANGUAGE).sh; \
-		echo 'echo "Starting at `date`"' >> $(LANGUAGE).sh; \
-		echo 'TMPDIR=`mktemp -d -p ${LOCALTMP}`' >> ${LANGUAGE}.sh; \
-		echo 'mkdir -p $$TMPDIR/OPUS/corpus/${CORPUS}/alt' >> ${LANGUAGE}.sh; \
-		echo 'ln -s ${OPUSHOME}/tools $$TMPDIR/OPUS/tools' >> ${LANGUAGE}.sh; \
-		echo 'cp ${OPUSHOME}/corpus/Makefile* $$TMPDIR/OPUS/corpus/' >> ${LANGUAGE}.sh; \
-		echo 'cp ${CORPUSHOME}/Makefile* $$TMPDIR/OPUS/corpus/${CORPUS}/' >> ${LANGUAGE}.sh; \
-		echo 'cp -R ${CORPUSHOME}/scripts $$TMPDIR/OPUS/corpus/${CORPUS}/' >> ${LANGUAGE}.sh; \
-		echo 'cp ${CORPUSHOME}/alt/Makefile* $$TMPDIR/OPUS/corpus/${CORPUS}/alt/' >> ${LANGUAGE}.sh; \
-		echo 'touch ${LANGUAGE}.running' >> ${LANGUAGE}.sh; \
-		echo 'rm -f ${LANGUAGE}.scheduled' >> ${LANGUAGE}.sh; \
-		echo 'tar -C $$TMPDIR/OPUS/corpus/${CORPUS}/alt --strip-components 2 -xzf ${CORPUSHTML}/${LANGUAGE}.tar.gz' >> ${LANGUAGE}.sh; \
-		echo 'make -C $$TMPDIR/OPUS/corpus/${CORPUS}/alt/ -j ${HPC_CORES} LANGUAGE=${LANGUAGE} NRJOBS=${HPC_CORES} align' >> ${LANGUAGE}.sh; \
-		echo 'mv $$TMPDIR/OPUS/corpus/${CORPUS}/alt/*.xml.gz .' >> ${LANGUAGE}.sh; \
-		echo 'mv $$TMPDIR/OPUS/corpus/${CORPUS}/alt/*.log.tar.gz .' >> ${LANGUAGE}.sh; \
-		echo 'rm -fr $$TMPDIR/OPUS' >> ${LANGUAGE}.sh; \
-		echo 'rm -f ${LANGUAGE}.running ${LANGUAGE}.sh' >> ${LANGUAGE}.sh; \
-		echo 'echo "Finishing at `date`"' >> ${LANGUAGE}.sh; \
-		touch ${LANGUAGE}.scheduled; \
-		sbatch ${LANGUAGE}.sh || \
-		rm -f ${LANGUAGE}.scheduled; \
-	      fi \
-	    fi \
-	  fi \
+.PHONY: ${ALIGN_JOBS}
+${ALIGN_JOBS}:
+	if [ ! -e $(@:-job=.xml.gz) ]; then \
+	  ${MAKE} HPC_CORES=16 HPC_DISK=500 HPC_MEM=24g EMAIL= $(@:-job=.xml.gz).submit; \
 	fi
 
 
 
-align:
-	${MAKE} ${LANGUAGE}-${LANGUAGE}.xml.gz
-	${MAKE} ${LANGUAGE}-${LANGUAGE}.other.xml.gz
-	${MAKE} ${LANGUAGE}-${LANGUAGE}.pct.xml.gz
-	${MAKE} ${LANGUAGE}-${LANGUAGE}.insert.xml.gz
-	${MAKE} ${LANGUAGE}-${LANGUAGE}.spell.xml.gz
-	${MAKE} ${LANGUAGE}-${LANGUAGE}.misaligned.xml.gz
-	find ${LANGUAGE}-${LANGUAGE}/ -name '*.log.gz' > ${LANGUAGE}-${LANGUAGE}.files
-	tar -czf ${LANGUAGE}-${LANGUAGE}.log.tar.gz -T ${LANGUAGE}-${LANGUAGE}.files
-	rm -f ${LANGUAGE}-${LANGUAGE}.files
-	rm -fr ${LANGUAGE}-${LANGUAGE}
+.PHONY: align
+align: ${LANGPAIR}.xml.gz
 
 
-${LANGUAGE}-${LANGUAGE}.xml.gz: 
+.PHONY: cleanup
+cleanup:
+	if [ $(words $(wildcard done/*.gz)) -eq $(words $(LANGPAIRS)) ]; then \
+	  if [ -d ${WORKDIR} ]; then \
+	    find ${WORKDIR} -delete; \
+	  fi; \
+	  touch all.done; \
+	fi
+
+
+
+ALIGN_LOG_FILES := ${WORKDIR}/${LANGPAIR}.log.zip
+
+ALIGN_CATEGORY_FILES := ${WORKDIR}/${LANGPAIR}.all.xml.gz \
+			${WORKDIR}/${LANGPAIR}.other.xml.gz \
+			${WORKDIR}/${LANGPAIR}.pct.xml.gz \
+			${WORKDIR}/${LANGPAIR}.insert.xml.gz \
+			${WORKDIR}/${LANGPAIR}.spell.xml.gz \
+			${WORKDIR}/${LANGPAIR}.misaligned.xml.gz
+
+%.xml.gz:
+	${MAKE} LANGUAGE=$(firstword $(subst -, ,$(@:.xml.gz=))) ${WORKDIR}/$@
+	mv -f ${WORKDIR}/$(@:.xml.gz=*.xml.gz) .
+	mv -f ${WORKDIR}/$(@:.xml.gz=*.log.*) .
+	mkdir -p done
+	touch done/$@
+	${MAKE} cleanup
+
+${WORKDIR}/${LANGPAIR}.xml.gz: ${WORKDIR}/${LANGUAGE}
 	${MAKE} align-files
-	-( find ${LANGUAGE}-${LANGUAGE} -type f -name '*.all.xml.gz' | \
-		sort | xargs zgrep --no-filename 'link' >> $@.links )
-	if [ -s $@.links ]; then \
-	  echo '<?xml version="1.0" encoding="utf-8"?>' >$@.tmp; \
-	  echo '<!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">' \
-		  >>$@.tmp; \
-	  echo '<cesAlign version="1.0">' >> $@.tmp; \
-	  cat $@.links >> $@.tmp; \
-	  echo '</cesAlign>' >> $@.tmp; \
-	  gzip $@.tmp; \
-	  mv $@.tmp.gz $@; \
-	fi
-	rm -f $@.links
+	${MAKE} ${ALIGN_CATEGORY_FILES}
+	${MAKE} ${ALIGN_LOG_FILES}
+	mv -f ${WORKDIR}/${LANGPAIR}.all.xml.gz $@
+	find ${WORKDIR}/${LANGPAIR} -delete
+	find ${WORKDIR}/${LANGUAGE} -delete
 
-${LANGUAGE}-${LANGUAGE}.other.xml.gz: 
-	-( find ${LANGUAGE}-${LANGUAGE} -type f -name '*.other.xml.gz' | \
-		sort | xargs zgrep --no-filename 'link' >> $@.links )
-	if [ -s $@.links ]; then \
-	  echo '<?xml version="1.0" encoding="utf-8"?>' >$@.tmp; \
-	  echo '<!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">' \
-		  >>$@.tmp; \
-	  echo '<cesAlign version="1.0">' >> $@.tmp; \
-	  cat $@.links >> $@.tmp; \
-	  echo '</cesAlign>' >> $@.tmp; \
-	  gzip $@.tmp; \
-	  mv $@.tmp.gz $@; \
-	fi
-	rm -f $@.links
+${WORKDIR}/${LANGPAIR}.log.tar:
+	cd ${WORKDIR} && find ${LANGPAIR} -name '*.log.gz' > ${LANGPAIR}.files
+	tar -C ${WORKDIR} -cf ${WORKDIR}/${LANGPAIR}.log.tar -T ${WORKDIR}/${LANGPAIR}.files
+	rm -f ${WORKDIR}/${LANGPAIR}.files
 
-${LANGUAGE}-${LANGUAGE}.pct.xml.gz: 
-	-( find ${LANGUAGE}-${LANGUAGE} -type f -name '*.pct.xml.gz' | \
-		sort | xargs zgrep --no-filename 'link' >> $@.links )
-	if [ -s $@.links ]; then \
-	  echo '<?xml version="1.0" encoding="utf-8"?>' >$@.tmp; \
-	  echo '<!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">' \
-		  >>$@.tmp; \
-	  echo '<cesAlign version="1.0">' >> $@.tmp; \
-	  cat $@.links >> $@.tmp; \
-	  echo '</cesAlign>' >> $@.tmp; \
-	  gzip $@.tmp; \
-	  mv $@.tmp.gz $@; \
-	fi
-	rm -f $@.links
+${WORKDIR}/${LANGPAIR}.log.zip:
+	find ${WORKDIR}/${LANGPAIR} -type f -name '*.log.gz' -exec gunzip -f {} \;
+	find ${WORKDIR}/${LANGPAIR} -type f -name '*.log' -empty -delete
+	cd ${WORKDIR} && zip -rq $(notdir $@) ${LANGPAIR} -i '*.log'
 
-${LANGUAGE}-${LANGUAGE}.insert.xml.gz: 
-	-( find ${LANGUAGE}-${LANGUAGE} -type f -name '*.insert.xml.gz' | \
-		sort | xargs zgrep --no-filename 'link' >> $@.links )
-	if [ -s $@.links ]; then \
-	  echo '<?xml version="1.0" encoding="utf-8"?>' >$@.tmp; \
-	  echo '<!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">' \
-		  >>$@.tmp; \
-	  echo '<cesAlign version="1.0">' >> $@.tmp; \
-	  cat $@.links >> $@.tmp; \
-	  echo '</cesAlign>' >> $@.tmp; \
-	  gzip $@.tmp; \
-	  mv $@.tmp.gz $@; \
-	fi
-	rm -f $@.links
 
-${LANGUAGE}-${LANGUAGE}.spell.xml.gz: 
-	-( find ${LANGUAGE}-${LANGUAGE} -type f -name '*.spell.xml.gz' | \
-		sort | xargs zgrep --no-filename 'link' >> $@.links )
-	if [ -s $@.links ]; then \
-	  echo '<?xml version="1.0" encoding="utf-8"?>' >$@.tmp; \
-	  echo '<!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">' \
-		  >>$@.tmp; \
-	  echo '<cesAlign version="1.0">' >> $@.tmp; \
-	  cat $@.links >> $@.tmp; \
-	  echo '</cesAlign>' >> $@.tmp; \
-	  gzip $@.tmp; \
-	  mv $@.tmp.gz $@; \
-	fi
-	rm -f $@.links
 
-${LANGUAGE}-${LANGUAGE}.misaligned.xml.gz: 
-	-( find ${LANGUAGE}-${LANGUAGE} -type f -name '*.misaligned.xml.gz' | \
-		sort | xargs zgrep --no-filename 'link' >> $@.links )
+#-----------------------------
+# temporary target for creating zip files instead of tarballs for the logfiles
+#-----------------------------
+
+ALL_LOG_ZIP = $(patsubst %.tar,%.zip,$(wildcard *.log.tar))
+
+move-to-zip: ${ALL_LOG_ZIP}
+
+%.log.zip: %.log.tar
+	mkdir -p ${WORKDIR}/$@.d
+	tar -C ${WORKDIR}/$@.d -xf $<
+	find ${WORKDIR}/$@.d -name '*.gz' | xargs gunzip -f
+	find ${WORKDIR}/$@.d/$(@:.log.zip=) -empty -delete
+	mkdir -p ${WORKDIR}/$@.d/$(@:.log.zip=)
+	echo "# alignment logfiles" > ${WORKDIR}/$@.d/$(@:.log.zip=)/README
+	cd ${WORKDIR}/$@.d && zip -rq ${WORKDIR}/$@ $(@:.log.zip=) -i '*.log'
+	mv ${WORKDIR}/$@ $@
+	find ${WORKDIR}/$@.d -delete
+
+#-----------------------------
+
+
+${ALIGN_CATEGORY_FILES}:
+	-( find ${WORKDIR}/${LANGPAIR} -type f -name '*.$(patsubst ${LANGPAIR}.%,%,$(notdir $@))' | \
+		sort | xargs zgrep --no-filename 'link' |\
+		sed 's|${WORKDIR}/||g;s/\.xml\"/\.xml.gz\"/g;' > $@.links )
 	if [ -s $@.links ]; then \
 	  echo '<?xml version="1.0" encoding="utf-8"?>' >$@.tmp; \
 	  echo '<!DOCTYPE cesAlign PUBLIC "-//CES//DTD XML cesAlign//EN" "">' \
@@ -339,20 +156,26 @@ ${LANGUAGE}-${LANGUAGE}.misaligned.xml.gz:
 	rm -f $@.links
 
 
-
-
+.PHONY: align-files
 align-files: ${ALGFILES}
-	-find ${LANGUAGE}-${LANGUAGE} -type d -empty -exec rmdir {} \;
 
-# sentence alignment for each movie
 
-${ALGFILES}: ${LANGUAGE}-${LANGUAGE}/%.xml.gz: ${LANGUAGE}/%
+
+
+${WORKDIR}/${LANGUAGE}: ${WORKDIR}/%: ${CORPUSXML}/%.zip
 	mkdir -p $(dir $@)
-	-${SENTALIGN} $< $(@:.xml.gz=) > ${@:.xml.gz=.log}
-	if [ ! -s $(@:.xml.gz=.log) ]; then \
-	  rm -f $(@:.xml.gz=.log); else gzip -f $(@:.xml.gz=.log); \
-	fi
-# 	if [ -s $(@:.gz=) ]; then gzip $(@:.gz=); else rm -f $(@:.gz=); fi
+	rsync $< $@.zip
+	unzip -q -d $(dir $@) $@.zip
+	rm -f $@.zip
+	mv ${WORKDIR}/${CORPUS}/xml/$(notdir $@) ${WORKDIR}/
+	touch $@
+
+
+# intralingual sentence alignments for each movie
+
+${ALGFILES}: ${WORKDIR}/${LANGPAIR}/%: ${WORKDIR}/${LANGUAGE}/%
+	mkdir -p $(dir $@)
+	-${SENTALIGN} $< $@ > $@.log
 
 
 

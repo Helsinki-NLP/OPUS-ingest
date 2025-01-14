@@ -11,22 +11,17 @@ all:
 	${MAKE} -C raw all
 	${MAKE} -C devtest-xml all
 	${MAKE} -C devtest-raw all
+	${MAKE} -C intra all
 
 
 .PHONY: all-jobs
 all-jobs:
 	${MAKE} -C src all-jobs
-	while [ ! -e src/all.done ]; do \
-	  echo "waiting for subtitle conversion jobs"; \
-	  sleep 10; \
-	done
 	${MAKE} -C xml all-jobs
 	${MAKE} -C raw all-jobs
-	while [ ! -e xml/all.done ] &&  [ ! -e raw/all.done ]; do \
-	  echo "waiting for merging and alignment jobs"; \
-	  sleep 10; \
-	done
-	${MAKE} -C devtest-xml testsets.submit
+	${MAKE} -C devtest-xml all-jobs
+	${MAKE} -C devtest-raw all-jobs
+	${MAKE} -C intra all-jobs
 
 
 .PHONY: testsets

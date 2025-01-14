@@ -28,7 +28,8 @@ HPC_QUEUE   = small
 # HPC_MODULES = parallel python-env nlpl-efmaral nlpl-opus nlpl-moses 
 # HPC_MODULES = parallel python-env nlpl-efmaral nlpl-moses
 # HPC_MODULES = parallel git nlpl-cwb nlpl-opus nlpl-moses
-HPC_MODULES = perl parallel git nlpl-cwb nlpl-moses
+# HPC_MODULES = perl parallel git nlpl-cwb nlpl-moses
+HPC_MODULES = git perl parallel
 HPC_EXTRA   =
 
 

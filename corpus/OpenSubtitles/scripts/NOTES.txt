@@ -1,6 +1,18 @@
 
 
 
+post-OCR correction
+
+* Advancing Post-OCR Correction: A Comparative Study of Synthetic Data https://aclanthology.org/2024.findings-acl.361.pdf
+* Enhancing OCR Performance through Post-OCR Models: Adopting Glyph Embedding for Improved Correction https://arxiv.org/pdf/2308.15262
+* unsupervised grammar correction: https://aclanthology.org/W19-4427/
+* https://github.com/jarobyte91/post_ocr_correction
+* https://huggingface.co/docs/transformers/en/model_doc/byt5
+* https://github.com/qurator-spk/sbb_ocr_postcorrection
+
+
+
+
 
 https://code.google.com/archive/p/chared/
 https://code.google.com/archive/p/chared/downloads

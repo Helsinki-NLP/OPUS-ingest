@@ -59,6 +59,12 @@ copy-prev-release-files:
 MERGE_NEW_JOBS := $(patsubst %.zip,%-job,${NEW_ZIPFILES})
 
 all-jobs: ${MERGE_NEW_JOBS}
+	while [ $(words ${LEFT_TO_DO}) -ne 0 ]; do \
+	  echo "waiting for merging raw zipfile jobs"; \
+	  sleep 10; \
+	fi
+	touch all.done
+
 
 .PHONY: ${MERGE_NEW_JOBS}
 ${MERGE_NEW_JOBS}:

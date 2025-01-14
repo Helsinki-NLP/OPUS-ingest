@@ -41,22 +41,18 @@ while (<>){
 	    $parts[0] = 'xml';
 	    $path = join('/',@parts);
 	}
-	if (! -d $path){
-	    system("mkdir -p $path");
-	}
+	print("mkdir -p $path\n");
 	print("mv $_ $path/$subID.$ext\n");
-	# system("mv $_ $path/$subID.$ext");
-	rename $_,"$path/$subID.$ext";
     }
     else{
-	print("don't know how to handle $_\n");
+	print STDERR "don't know how to handle $_\n";
     }
 }
 
 
 sub read_info{
     my $infoFile = shift;
-    print("reading $infoFile\n");
+    print STDERR "reading $infoFile\n";
     open F,"gzip -cd < $infoFile |" || return 0;
     
     my %MovieYear = ();

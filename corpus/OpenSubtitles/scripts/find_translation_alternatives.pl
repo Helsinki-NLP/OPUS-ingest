@@ -1,6 +1,6 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
-use lib $ENV{HOME}.'/OPUS/tools/public/aligner/subalign/lib';
+# use lib $ENV{HOME}.'/OPUS/tools/public/aligner/subalign/lib';
 
 use strict;
 use Text::SRT::Align qw/:all/;
@@ -41,7 +41,7 @@ unless ($outbase){
 }
 
 opendir(my $dh, $srtdir) || die "can't opendir $srtdir: $!";
-my @subs = grep { /\.xml.gz$/ && -f "$srtdir/$_" } readdir($dh);
+my @subs = grep { /\.xml(.gz)?$/ && -f "$srtdir/$_" } readdir($dh);
 closedir $dh;
 
 unless ($#subs){
@@ -152,7 +152,7 @@ foreach my $s (0..$#subs){
 
 	    next if ($bleu < $MIN_BLEU);
 
-	    print STDERR "bleu ( $subs[$s],$subs[$t] ) = $bleu\n";
+	    print "bleu ( $subs[$s],$subs[$t] ) = $bleu\n";
 
 	    ## if the BLEU score is quite low:
 	    ## check if we need to synchronize!
@@ -187,7 +187,7 @@ foreach my $s (0..$#subs){
 
 		## better BLEU score? --> use this alignment
 		if ($bleu2 > $bleu){
-		    print STDERR "bleu2( $subs[$s],$subs[$t] ) = $bleu2\n";
+		    print "bleu2( $subs[$s],$subs[$t] ) = $bleu2\n";
 		    @alignments = @alignments2;
 		    @srcalg = @srcalg2;
 		    @trgalg = @trgalg2;

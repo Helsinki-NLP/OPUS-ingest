@@ -7,14 +7,25 @@ include ../../Makefile.def
 ## subtitle tarball with all files to be extracted
 ## metadata provides information about those files from the opensubs DB
 
-SUBTITLE_TARBALL  := ${CURDIR}/export-2024.tar
-SUBTITLE_METADATA := ${CURDIR}/export-2024.tsv.gz
+SUBTITLE_TARBALL  := ${CURDIR}/export-2024.tar ${CURDIR}/export-missing.tar
+SUBTITLE_METADATA := ${CURDIR}/all-subs.csv.gz ${CURDIR}/export-2024.tsv.gz ${CURDIR}/export-missing.tsv.gz
 
+## sub-dir for storing lang-sorted srt-files
 ## work directory with fast I/O
 ## and script for sorting subtitle files by language
 
-WORKDIR           := ${TMPDIR}/OPUS/${CORPUS}/src
-SUBTITLE_LANGSORT := ${CURDIR}/../scripts/sort_by_language.pl
+SRTDIR  := subtitles-new
+WORKDIR := ${TMPDIR}/OPUS/${CORPUS}/src
+
+
+
+## OLD: export of newer files
+## NEW (above): also previously missing files
+#
+# SUBTITLE_TARBALL  := ${CURDIR}/export-2024.tar
+# SUBTITLE_METADATA := ${CURDIR}/export-2024.tsv.gz
+# SRTDIR            := subtitles
+
 
 
 ## subtitle files to be converted (srt-files)
@@ -34,8 +45,8 @@ SUB2SRT_FILES := $(patsubst ${WORKDIR}/sub/%,${WORKDIR}/srt/%,${SUBFILES})
 
 ## all languages that have been extracted
 
-ifneq ($(wildcard subtitles.done),)
-  LANGUAGES := $(patsubst %.tar,%,$(notdir $(wildcard subtitles/*.tar)))
+ifneq ($(wildcard ${SRTDIR}.done),)
+  LANGUAGES := $(patsubst %.tar,%,$(notdir $(wildcard ${SRTDIR}/*.tar)))
 else ifneq ($(wildcard ${WORKDIR}/srt),)
   LANGUAGES := $(notdir $(wildcard ${WORKDIR}/srt/*))
 endif
@@ -60,7 +71,6 @@ all:
 	${MAKE} convert
 	${MAKE} cleanup
 
-SRTDIR := subtitles
 
 .PHONY: extract
 extract: ${SRTDIR}.done
@@ -109,23 +119,34 @@ print-langs:
 
 .PHONY: all-jobs
 all-jobs:
-	if [ ! -e subtitles.done ]; then ${MAKE} extract-job; fi
-	while [ ! -e subtitles.done ]; do \
+	if [ ! -e ${SRTDIR}.done ]; then ${MAKE} extract-job; fi
+	while [ ! -e ${SRTDIR}.done ]; do \
 	  echo "waiting for subtitle extraction job"; \
 	  sleep 10; \
 	done
+	if [ ! -e subtitles-prev.done ]; then ${MAKE} convert-prev-job; fi
+	while [ ! -e subtitles-prev.done ]; do \
+	  echo "waiting for previous substitle extraction job"; \
+	  sleep 10; \
+	done
 	${MAKE} convert-jobs
+	while [ $(words $(wildcard done/*.zip)) -ne $(words $(LANGUAGES)) ]; do \
+	  echo "waiting for subtitle conversion jobs"; \
+	  sleep 10; \
+	done
+	touch all.done
+
 
 .PHONY: extract-job
 extract-job:
-	if [ ! -e subtitles.done ]; then \
-	  ${MAKE} HPC_DISK=100 HPC_MEM=4g HPC_CORES=1 HPC_MODULES= extract.submit; \
+	if [ ! -e ${SRTDIR}.done ]; then \
+	  ${MAKE} HPC_DISK=500 HPC_MEM=16g HPC_CORES=1 HPC_MODULES= extract.submit; \
 	fi
 
 .PHONY: extract-all-job
 extract-all-job:
 	if [ ! -e subtitles-all.done ]; then \
-	  ${MAKE} HPC_DISK=500 HPC_MEM=4g HPC_CORES=1 HPC_MODULES= extract-all.submit; \
+	  ${MAKE} HPC_DISK=500 HPC_MEM=16g HPC_CORES=1 HPC_MODULES= extract-all.submit; \
 	fi
 
 
@@ -134,12 +155,20 @@ CONVERT_JOBS = $(patsubst %,%-convert-job,${LANGUAGES})
 .PHONY: convert-jobs
 convert-jobs: ${CONVERT_JOBS}
 
+## big files > 1GB
+BIG_FILE = 1073741824
+
 .PHONY: ${CONVERT_JOBS}
-${CONVERT_JOBS}: subtitles.done
-	if [ ! -e ${CORPUSXML}/new/$(@:-job=).zip ]; then \
-	  ${MAKE} HPC_DISK=100 HPC_MEM=32g HPC_CORES=16 HPC_MODULES= EMAIL= $(@:-job=).submit; \
+${CONVERT_JOBS}: ${SRTDIR}.done
+	if [ ! -e done/$(@:-convert-job=).zip ]; then \
+	  if [ $(shell stat -c %s $(patsubst %-convert-job,${SRTDIR}/%.tar,$@)) -gt ${BIG_FILE} ]; then \
+	    ${MAKE} HPC_DISK=500 HPC_MEM=64g HPC_CORES=40 HPC_MODULES= EMAIL= $(@:-job=).submit; \
+	  else \
+	    ${MAKE} HPC_DISK=100 HPC_MEM=32g HPC_CORES=16 HPC_MODULES= EMAIL= $(@:-job=).submit; \
+	  fi \
 	fi
 
+#	if [ ! -e ${CORPUSXML}/new/$(@:-convert-job=).zip ]; then
 
 
 ##-----------------------------------
@@ -150,8 +179,8 @@ ${SRTDIR}.done:
 	mkdir -p ${SRTDIR}
 	${MAKE} ${WORKDIR}/srt
 	if [ -e ${WORKDIR}/sub ]; then \
-	  ${MAKE} convert-sub2srt; \
 	  tar -cf ${SRTDIR}/sub.tar -C ${WORKDIR} sub; \
+	  ${MAKE} convert-sub2srt; \
 	fi
 	for l in `find ${WORKDIR}/srt -mindepth 1 -maxdepth 1 -type d -printf "%f "`; do \
 	  tar -cf ${SRTDIR}/$$l.tar -C ${WORKDIR}/srt $$l; \
@@ -179,10 +208,42 @@ ${WORKDIR}/files: ${SUBTITLE_TARBALL}
 
 
 ## sort srt-files into language-specific sub-dirs
+## OLD: do this with a perl script that moves files --> seems to be quite slow
+## NEW: create a shell script with all mkdir and mv commands and exectue that one
+
+# SUBTITLE_LANGSORT := ${CURDIR}/../scripts/sort_by_language.pl
+# 
+# ${WORKDIR}/srt: ${WORKDIR}/files
+# 	cd ${WORKDIR} && \
+# 	find files -type f | ${SUBTITLE_LANGSORT} ${SUBTITLE_METADATA}
+
+
+SUBTITLE_LANGSORT_COMMANDS := ${CURDIR}/../scripts/sort_by_language_commands.pl
 
 ${WORKDIR}/srt: ${WORKDIR}/files
 	cd ${WORKDIR} && \
-	find files -type f | ${SUBTITLE_LANGSORT} ${SUBTITLE_METADATA}
+	find files -type f | ${SUBTITLE_LANGSORT_COMMANDS} ${SUBTITLE_METADATA} > $@.tmp
+	echo "#!/usr/bin/bash"       > $@.sh
+	grep mkdir $@.tmp | sort -u >> $@.sh
+	grep mv $@.tmp              >> $@.sh
+	chmod +x $@.sh
+	rm -f $@.tmp
+	cd ${WORKDIR} && $@.sh
+	rm -f $@.sh
+
+## generate a script that would move subtitle files into language-specific directories
+## (not used at the moment, instead integrated in srt target above)
+
+langsort.sh: ${SUBTITLE_TARBALL}
+	rm -f $@.tmp
+	for f in $^; do \
+	  tar -tf $$f | grep '\.gz' \
+	  | ${CURDIR}/../scripts/sort_by_language_commands.pl ${SUBTITLE_METADATA} >> $@.tmp; \
+	done
+	echo "#!/usr/bin/bash"       > $@
+	grep mkdir $@.tmp | sort -u >> $@
+	grep mv $@.tmp              >> $@
+	chmod +x $@
 
 
 ## convert from sub to srt format
@@ -198,9 +259,11 @@ ${SUB2SRT_FILES}: ${WORKDIR}/srt/%: ${WORKDIR}/sub/%
 ## the conversion includes creating untokenized (raw) files
 
 # ${LANG_ZIP_XML}:
-${CORPUSXML}/new/%.zip: subtitles/%.tar
+${CORPUSXML}/new/%.zip: ${SRTDIR}/%.tar
 	mkdir -p ${WORKDIR}/srt
 	tar -xf $< -C ${WORKDIR}/srt
+	if [ -e $@ ]; then unzip -n -q -d ${WORKDIR} $@; fi
+	if [ -e ${CORPUSRAW}/new/$(notdir $@) ]; then unzip -n -q -d ${WORKDIR} ${CORPUSRAW}/new/$(notdir $@); fi
 	-${MAKE} LANGUAGE=$(notdir $(@:.zip=)) convert-srt2xml
 	find ${WORKDIR}/${CORPUS}/xml/$(notdir $(@:.zip=)) -empty -delete
 	find ${WORKDIR}/${CORPUS}/raw/$(notdir $(@:.zip=)) -empty -delete
@@ -215,7 +278,7 @@ ${CORPUSXML}/new/%.zip: subtitles/%.tar
 	touch done/$(notdir $@)
 
 
-${CORPUSXML}/new/zh_ze.zip: subtitles/ze.tar
+${CORPUSXML}/new/zh_ze.zip: ${SRTDIR}/ze.tar
 	mkdir -p ${WORKDIR}/srt
 	tar -xf $< -C ${WORKDIR}/srt
 	-${MAKE} LANGUAGE=ze convert-srt2xml
@@ -241,10 +304,10 @@ ${CORPUSXML}/new/zh_ze.zip: subtitles/ze.tar
 	  cd ${WORKDIR} && zip -rq ${CORPUSRAW}/new/en_ze.zip ${CORPUS}/raw/en_ze; \
 	fi
 	mkdir -p done
-	touch done/$(notdir $@)
+	touch done/en_ze.zip done/zh_ze.zip done/ze.zip
 
 
-subtitles/%.tar: subtitles.done
+${SRTDIR}/%.tar: ${SRTDIR}.done
 
 
 ##------------------------------------------------------------------
@@ -261,6 +324,13 @@ MISSING_PREV_LANG_TARGETS := $(patsubst %,%-convert-prev,${MISSING_PREV_LANGS})
 
 subtitles-prev.done: ${MISSING_PREV_LANG_TARGETS}
 	touch $@
+
+
+.PHONY: convert-prev-job
+convert-prev-job:
+	if [ ! -e subtitles-prev.done ]; then
+	   ${MAKE} HPC_DISK=100 HPC_MEM=32g HPC_CORES=16 HPC_MODULES= EMAIL= subtitles-prev.done.submit; \
+	fi
 
 CONVERT_PREV_JOBS = $(patsubst %,%-convert-prev-job,${MISSING_PREV_LANGS})
 

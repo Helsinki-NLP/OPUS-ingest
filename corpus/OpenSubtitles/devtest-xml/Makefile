@@ -49,7 +49,18 @@ all: ${LANG_ZIPFILES}
 	${MAKE} testsets
 	${MAKE} devsets
 	${MAKE} cleanup
+	touch all.done
 
+.PHONY: all-jobs
+all-jobs: ${LANG_ZIPFILES}
+	${MAKE} align-jobs
+	while [ $(words $(wildcard done/*.gz)) -ne $(words $(LANGPAIRS)) ]; do \
+	  echo "waiting for align jobs in devtest-xml"; \
+	  sleep 10; \
+	done
+	${MAKE} testsets
+	${MAKE} devsets
+	touch all.done
 
 ##-------------------------------------------------------
 ## extraction of devtest files (released in DEVTEST_YEAR)
@@ -75,7 +86,6 @@ cleanup:
 	  if [ -d ${WORKHOME} ]; then \
 	    find ${WORKHOME} -delete; \
 	  fi; \
-	  touch all.done; \
 	fi
 
 .PHONY: print-common-movies

@@ -1,86 +1,29 @@
-# -*- coding: utf-8 -*-
-
-
+# -*- coding: utf-8 -*- 
 
 import os, json, io, collections, re, unicodedata, sys, errno, math
 from subprocess import Popen, PIPE
-from mosestokenizer import MosesTokenizer
-import polyglot
-from polyglot.text import Text
-
-supportedTokeniserLangs = ["as", "bn", "ca", "cs", "de", "el", "en", "es", "et", "fi", "fr", "ga", "gu", "hi" ,"hu", "is", "it", "kn", "lt", "lv", "ml", "ni", "mr", "nl", "or", "pa", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "ta", "te", "ue", "zh"]
-
 
 # Path to tokenisation script
-# TOKENISER_PATH = "/proj/nlpl/software/moses/4.0-65c75ff/moses/scripts/tokenizer/tokenizer.perl"
-TOKENISER_PATH = "/users/tiedeman/projappl/mosesdecoder/scripts/tokenizer/tokenizer.perl"
+TOKENISER_PATH = "/cluster/home/plison/mt/mosesdecoder/scripts/tokenizer/tokenizer.perl"
 
 # Path and model for the Kytea sentence segmentation tool (only necessary for Japanese)
-# KYTEA_PATH = "/cluster/home/plison/mt/kytea"
-# KYTEA_JAPANESE = "/cluster/home/plison/mt/kytea/models/jp-0.4.7-5.mod"
-
-# models from https://www.phontron.com/kytea/download/model/
-KYTEA_PATH = "/users/tiedeman/.local"
-KYTEA_JAPANESE = "/users/tiedeman/.local/share/kytea"
-
+KYTEA_PATH = "/cluster/home/plison/mt/kytea"
+KYTEA_JAPANESE = "/cluster/home/plison/mt/kytea/models/jp-0.4.7-5.mod"
 os.environ["LD_LIBRARY_PATH"] += ":" + KYTEA_PATH + "/lib"
 
 # Path for the dictionaries and language models (bigrams)
-DICO_PATH = "/proj/nlpl/data/OPUS/tools/opus/OpenSubtitles2018/unigrams"
-LM_PATH = "/proj/nlpl/data/OPUS/tools/opus/OpenSubtitles2018/bigrams"
+DICO_PATH = "/projects/researchers/researchers01/plison/data/unigrams"
+LM_PATH = "/projects/researchers/researchers01/plison/data/bigrams"
 
 # Language data (codes, names, encodings, scripts, dictionaries)
-languages = {'uzb': 'uz', 'uz': {'codes': ['uzb', 'uz'], 'name': 'Uzbek', 'scripts': ['latin', 'arabic', 'cyrillic'], 'encodings': ['utf-8','windows-1252', 'windows-1256', 'iso-8859-6', 'iso-8859-1', 'koi8-r','windows-1251','maccyrillic','iso-8859-5','ibm855','ibm866']},
-             'tuk': 'tk',
-             'tk': {'codes':
-                    ['tuk','tk'], 'name': 'Turkmen', 'scripts': ['latin','arabic'],
-                    'encodings': ['utf-8','windows-1252', 'iso-8859-1','windows-1256', 'iso-8859-6']},
-             'sme': 'se','se': {'codes':
-['sme','se'], 'name': 'Northern Sami', 'scripts': ['latin'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1']},'sat': {'codes':
-['sat'], 'name': 'Santali', 'scripts': ['latin'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1']},'pus': 'ps', 'ps': {'codes': ['pus', 'ps'], 'name': 'Pushto',
-'scripts': ['arabic'], 'encodings': ['utf-8', 'windows-1256', 'iso-8859-6']},'ori':'or','or': {'codes': ['ori', 'or'], 'name': 'Oriya', 'scripts': ['orya'],
-'encodings': ['utf-8']},'nav': 'nv','nv': {'codes':
-['nav','nv'], 'name': 'Navajo', 'scripts': ['latin'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1']},'nep':'ne','ne': {'codes': ['nep', 'ne'], 'name': 'Nepali', 'scripts': ['devanagari','deva'],
-'encodings': ['utf-8']},'mar':'mr','mr': {'codes': ['mar', 'mr'], 'name': 'Marathi', 'scripts': ['devanagari','deva'],
-'encodings': ['utf-8']},'ibo': 'ig','ig': {'codes':
-['ibo','ig'], 'name': 'Igbo', 'scripts': ['latin'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1']},'gla': 'gd','gd': {'codes':
-['gla','gd'], 'name': 'Scottish Gaelic', 'scripts': ['latin'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1']},'gle': 'ga','ga': {'codes':
-['gle','ga'], 'name': 'Irish', 'scripts': ['latin'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1']},'asm': 'as','as': {'codes': ['asm', 'as'], 'name': 'Assamese', 'scripts':
-['bengali','latin'], 'encodings': ['utf-8','latin'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1']},'sco': {'codes':
-['sco'], 'name': 'Scots', 'scripts': ['latin'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1']},'pom':'pt_MZ','pt_mz': {'scripts': ['latin'], 'codes':
-['pom', 'pt', 'pt_mz', 'por'], 'name': 'Portuguese (MZ)', 'encodings':
-['utf-8', 'windows-1252', 'iso-8859-1']},'tat':'tt','tt': {'codes': ['tat', 'tt'], 'name': 'Tatar', 'scripts': ['latin', 'arabic', 'cyrillic'], 'encodings': ['utf-8','windows-1252', 'windows-1256', 'iso-8859-6', 'iso-8859-1', 'koi8-r','windows-1251','maccyrillic','iso-8859-5','ibm855','ibm866']},'swa':'sw','sw': {'codes':
-['swa','sw','swh'], 'name': 'Swahili', 'scripts': ['latin'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1']},'som':'so','so': {'codes':
-['som','so'], 'name': 'Somali', 'scripts': ['latin','arabic'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1','windows-1256', 'iso-8859-6']},'snd':'sd','sd': {'codes': ['snd', 'sd'], 'name': 'Sindhi', 'scripts': ['devanagari','arabic'],
-'encodings': ['utf-8','windows-1256', 'iso-8859-6']},'oci':'oc','oc': {'codes':
-['oci','oc'], 'name': 'Occitan', 'scripts': ['latin'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1']},'kan':'kn','kn': {'codes':
-['kan','kn'], 'name': 'Kannada', 'scripts': ['kannada'], 'encodings': ['utf-8']},'abk':'ab','ab': {'codes': ['abk', 'ab'], 'name': 'Abkhazian', 'scripts': ['latin', 'georgian', 'cyrillic'], 'encodings': ['utf-8','georgian-ps','windows-1252', 'iso-8859-1', 'koi8-r','windows-1251','maccyrillic','iso-8859-5','ibm855','ibm866']},'kur': 'ku', 'ku': {'codes': ['kur', 'ku', 'kmr', 'ckb', 'sdh', 'lki'], 'name': 'Kurdish', 'scripts': ['latin', 'arabic', 'cyrillic'], 'encodings': ['utf-8','windows-1252', 'windows-1256', 'iso-8859-6', 'iso-8859-1', 'koi8-r','windows-1251','maccyrillic','iso-8859-5','ibm855','ibm866']}, 'kan': 'kn', 'kn': {'codes':
-['kan', 'kn'], 'name': 'Kannada', 'scripts': ['knda'], 'encodings': ['utf-8']}, 'wel': 'cy', 'cym': 'cy', 'cy': {'codes':
-['wel', 'cy', 'cym'], 'name': 'Welsh', 'scripts': ['latin'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1']}, 'aze': 'az', 'az': {'codes': ['aze', 'az', 'azj', 'azb'], 'name': 'Azerbaijani', 'scripts': ['latin', 'arabic', 'cyrillic'], 'encodings': ['utf-8','windows-1252', 'windows-1256', 'iso-8859-6', 'iso-8859-1', 'koi8-r','windows-1251','maccyrillic','iso-8859-5','ibm855','ibm866']}, 'arg': 'an', 'an': {'codes': ['arg', 'an'], 'name': 'Aragonese', 'scripts': ['latin'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1']},'lb': {'codes':
-['ltz','lb'], 'name': 'Luxembourgish', 'scripts': ['latin'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1']},'ast': {'codes':
-['ast'], 'name': 'Asturian', 'scripts': ['latin'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1']}, 'amh': 'am', 'am': {'codes':
-['amh', 'am'], 'name': 'Amharic', 'scripts': ['ethi'], 'encodings': ['utf-8']}, 'alb': 'sq', 'scc': 'sr', 'ita': 'it', 'per': 'fa', 'gl': {'codes':
+languages = {'alb': 'sq', 'scc': 'sr', 'ita': 'it', 'per': 'fa', 'gl': {'codes':
 ['glg', 'gl'], 'name': 'Galician', 'scripts': ['latin'], 'encodings': ['utf-8',
 'windows-1252', 'iso-8859-1']}, 'mne': 'me', 'ell': 'el', 'hrv': 'hr', 'tr':
 {'codes': ['tur', 'tr'], 'name': 'Turkish', 'scripts': ['latin'], 'encodings':
 ['utf-8', 'windows-1254', 'iso-8859-9']}, 'lv': {'codes': ['lav', 'lv'], 'name':
 'Latvian', 'scripts': ['latin'], 'encodings': ['utf-8', 'windows-1257', 'iso-8859-4']}, 
-'lt': {'codes': ['lit', 'lt'], 'name': 'Lithuanian', 'scripts': ['latin'], 'encodings': ['utf-8', 'windows-1257', 'iso-8859-4']}, 'nob': 'nb', 'nno': 'nn', 'nor': 'no',
+'lt': {'codes': ['lit', 'lt'], 'name': 'Lithuanian', 'scripts':
+['latin'], 'encodings': ['utf-8', 'windows-1257', 'iso-8859-4']}, 'nor': 'no',
 'th': {'codes': ['tha', 'th'], 'name': 'Thai', 'scripts': ['thai'], 'encodings':
 ['utf-8', 'tis-620']}, 'te': {'codes': ['tel', 'te'], 'name':
 'Telugu', 'scripts': ['telugu'], 'encodings': ['utf-8']}, 'fin': 'fi', 'ta': {'codes': ['tam', 'ta'], 'name': 'Tamil',
@@ -88,23 +31,20 @@ languages = {'uzb': 'uz', 'uz': {'codes': ['uzb', 'uz'], 'name': 'Uzbek', 'scrip
 'ger': 'de', 'dan': 'da', 'de': {'scripts': ['latin'], 'codes': ['ger', 'de'],
 'name': 'German', 'encodings':['utf-8', 'windows-1252', 'iso-8859-1']}, 
              'cz':'cs', 'da': {'codes': ['dan', 'da'], 'name':
-'Danish', 'scripts': ['latin'], 'encodings': ['utf-8', 'windows-1252', 'iso-8859-1']}, 'mon': 'mn', 'geo': 'ka', 'hin': 'hi', 'eus': 'eu', 'baq': 'eu', "gre":"el", 'el':
+'Danish', 'scripts': ['latin'], 'encodings': ['utf-8', 'windows-1252',
+'iso-8859-1']}, 'mon': 'mn', 'geo': 'ka', 'hin': 'hi', 'baq': 'eu', "gre":"el", 'el':
 {'codes': ['ell', 'el'], 'name': 'Greek', 'scripts': ['greek'], 'encodings':
 ['utf-8', 'windows-1253', 'iso-8859-7']}, 'eo': {'codes': ['epo', 'eo'], 'name':
 'Esperanto', 'scripts': ['latin'], 'encodings': ['utf-8', 'windows-1252',
 'iso-8859-1']}, 'en': {'scripts': ['latin'], 'codes': ['eng', 'en'], 'name':
 'English', 'encodings':
 ['utf-8', 'windows-1252', 'iso-8859-1']}, 'tel': 'te', 
-'ara': 'ar','eu': {'codes': ['baq', 'eu', 'eus'], 'name': 'Basque', 'scripts': ['latin'],
+'ara': 'ar','eu': {'codes': ['baq', 'eu'], 'name': 'Basque', 'scripts': ['latin'],
 'encodings': ['utf-8', 'windows-1252', 'iso-8859-1']}, 'et': {'codes': ['est',
 'et'], 'name': 'Estonian', 'scripts': ['latin'], 'encodings': ['utf-8',
 'windows-1252', 'iso-8859-1']}, 'ur': {'codes': ['urd', 'ur'], 'name': 'Urdu',
 'scripts': ['arabic'], 'encodings': ['utf-8', 'windows-1256', 'iso-8859-6']},
 'arm': 'hy', 'es': {'scripts': ['latin'], 'codes': ['spa', 'es'], 'name':
-'Spanish', 'encodings':
-['utf-8', 'windows-1252', 'iso-8859-1']}, 'es_es': {'scripts': ['latin'], 'codes': ['spa', 'es'], 'name':
-'Spanish', 'encodings':
-['utf-8', 'windows-1252', 'iso-8859-1']}, 'es_149': {'scripts': ['latin'], 'codes': ['spa', 'es'], 'name':
 'Spanish', 'encodings':
 ['utf-8', 'windows-1252', 'iso-8859-1']}, 'ru': {'codes': ['rus', 'ru'], 'name':
 'Russian', 'scripts': ['cyrillic'], 'encodings': ['utf-8','koi8-r','windows-1251',
@@ -130,14 +70,14 @@ languages = {'uzb': 'uz', 'uz': {'codes': ['uzb', 'uz'], 'name': 'Uzbek', 'scrip
 'pol': 'pl', 'fi': {'codes': ['fin', 'fi'], 'name': 'Finnish', 'scripts':
 ['latin'], 'encodings': ['utf-8', 'windows-1252', 'iso-8859-1']}, 'cs':
 {'scripts': ['latin'], 'codes': ['cze', 'cz','cs'], 'name': 'Czech', 'encodings':
-['utf-8', 'windows-1250', 'iso-8859-2']}, 'zh_cn':'zh', 'zh': {'codes': ['chi', 'zh', 'zho', 'cmn', 'yue'], 'name':
+['utf-8', 'windows-1250', 'iso-8859-2']}, 'zh_cn':'zh', 'zh': {'codes': ['chi', 'zh'], 'name':
 'Chinese (simplified)', 'scripts': ['chinese'], 'encodings': ['utf-8', 'big5',
 'gb2312', 'gb18030','hz-gb-2312']}, 'bre': 'br', 'pob': 'pb', 'tgl': 'tl', 'fre': 'fr', 'chi': 'zh',
 'af': {'codes': ['afr', 'af'], 'name': 'Afrikaans', 'scripts': ['latin'],
 'encodings': ['utf-8', 'windows-1252', 'iso-8859-1']}, 'swe': 'sv', 'tl':
 {'codes': ['tgl', 'tl'], 'name': 'Tagalog', 'scripts': ['latin'], 'encodings':
 ['utf-8', 'windows-1252', 'iso-8859-1']}, 'pb':'pt_br', 'pt_br': {'scripts': ['latin'], 'codes':
-['pob', 'pt', 'pt_br', 'por'], 'name': 'Portuguese (BR)', 'encodings':
+['pob', 'pt', 'pt_br'], 'name': 'Portuguese (BR)', 'encodings':
 ['utf-8', 'windows-1252', 'iso-8859-1']}, 'heb': 'he', 'kor': 'ko', 'dut': 'nl',
 'pl': {'scripts': ['latin'], 'codes': ['pol', 'pl'], 'name': 'Polish',
 'encodings': ['utf-8', 'windows-1250', 'iso-8859-2']}, 'hy': {'codes': ['arm',
@@ -152,21 +92,17 @@ languages = {'uzb': 'uz', 'uz': {'codes': ['uzb', 'uz'], 'name': 'Uzbek', 'scrip
 'Montenegrin', 'scripts': ['latin'], 'encodings': ['utf-8', 'windows-1252',
 'iso-8859-1']}, 'ben': 'bn', 'zht': 'zt', 'bel': 'be', 'ml': {'codes': ['mal',
 'ml'], 'name': 'Malayalam', 'scripts': ['malayalam'], 'encodings': ['utf-8']}, 'slv': 'sl', 'mn': {'codes': ['mon', 'mn'],
-'name': 'Mongolian', 'scripts': ['mongolian'], 'encodings': ['utf-8']}, 'mk': {'codes': ['mac', 'mk', 'mkd'], 'name':
+'name': 'Mongolian', 'scripts': ['mongolian'], 'encodings': ['utf-8']}, 'mk': {'codes': ['mac', 'mk'], 'name':
 'Macedonian', 'scripts': ['latin'], 'encodings': ['utf-8', 'windows-1251',
 'iso-8859-5']}, 'cat': 'ca', 'slo': 'sk', 'zhe': 'ze', 'ms': {'codes': ['may',
 'ms'], 'name': 'Malay', 'scripts': ['latin'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1']}, 'my': {'codes': ['bur', 'my','mya'], 'name':
+'windows-1252', 'iso-8859-1']}, 'my': {'codes': ['bur', 'my'], 'name':
 'Burmese', 'scripts': ['burmese'], 'encodings': ['utf-8']}, 'jpn': 'ja', 'vi': {'codes': ['vie', 'vi'], 'name':
 'Vietnamese', 'scripts': ['latin'], 'encodings': ['utf-8', 'windows-1258',
 'iso-8859-1']}, 'is': {'codes': ['ice', 'is'], 'name': 'Icelandic', 'scripts':
 ['latin'], 'encodings': ['utf-8', 'iso-8859-4']}, 'it': {'scripts': ['latin'],
 'codes': ['ita', 'it'], 'name': 'Italian', 'encodings':
-['utf-8', 'windows-1252', 'iso-8859-1']}, 'zt': {'codes': ['zht', 'zt', 'zh','zh_tw', 'zho', 'cmn', 'yue'], 'name':
-'Chinese (traditional)', 'scripts': ['chinese'], 'encodings': ['utf-8', 'big5',
-'gb2312', 'gb18030','hz-gb-2312']}, 'yue': {'codes': ['yue', 'zht', 'zt', 'zh','zh_tw', 'zho', 'cmn'], 'name':
-'Chinese (traditional)', 'scripts': ['chinese'], 'encodings': ['utf-8', 'big5',
-'gb2312', 'gb18030','hz-gb-2312']}, 'zh_tw': {'codes': ['zht', 'zt', 'zh','zh_tw', 'zho', 'cmn', 'yue'], 'name':
+['utf-8', 'windows-1252', 'iso-8859-1']}, 'zt': {'codes': ['zht', 'zt', 'zh'], 'name':
 'Chinese (traditional)', 'scripts': ['chinese'], 'encodings': ['utf-8', 'big5',
 'gb2312', 'gb18030','hz-gb-2312']}, 'ar': {'codes': ['ara', 'ar'], 'name': 'Arabic', 'scripts':
 ['arabic'], 'encodings': ['utf-8', 'windows-1256', 'iso-8859-6']}, 'khm': 'km',
@@ -177,7 +113,8 @@ languages = {'uzb': 'uz', 'uz': {'codes': ['uzb', 'uz'], 'name': 'Uzbek', 'scrip
 ['utf-8', 'windows-1252', 'iso-8859-1']}, 'eng': 'en', 'lit': 'lt', 'bur': 'my',
 'sin': 'si', 'afr': 'af', 'fr': {'scripts': ['latin'], 'codes': ['fre', 'fr'],
 'name': 'French', 'encodings':
-['utf-8', 'windows-1252', 'iso-8859-1']}, 'may': 'ms', 'fa': {'codes': ['per', 'fa', 'fas'], 'name': 'Persian', 'scripts': ['arabic'], 'encodings': ['utf-8',
+['utf-8', 'windows-1252', 'iso-8859-1']}, 'may': 'ms', 'fa': {'codes': ['per',
+'fa'], 'name': 'Persian', 'scripts': ['arabic'], 'encodings': ['utf-8',
 'windows-1256', 'mac_farsi', 'iso-8859-6']}, 'mac': 'mk', 'kaz': 'kk', 'lav': 'lv', 
 'mal':'ml', 'urd': 'ur', 'ka': {'codes': ['geo', 'ka'], 'name': 'Georgian', 'scripts':
 ['georgian'], 'encodings': ['utf-8','georgian-ps']}, 'kk':
@@ -186,9 +123,8 @@ languages = {'uzb': 'uz', 'uz': {'codes': ['uzb', 'uz'], 'name': 'Uzbek', 'scrip
 'sr': {'codes': ['scc', 'sr'], 'name':'Serbian', 'scripts': ['latin', 'cyrillic'], 
 'encodings': ['utf-8','windows-1250', 'windows-1251', 'windows-1252', 'iso-8859-2', 
 'iso-8859-5']},'sq': {'codes': ['alb', 'sq'], 'name': 'Albanian', 'scripts': ['latin'],
-'encodings': ['utf-8', 'windows-1250', 'iso-8859-2']}, 'no': {'codes': ['nor', 'no','nb', 'nn', 'nob', 'nno'], 'name': 'Norwegian', 'scripts': ['latin'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1']}, 'nb': {'codes': ['nor', 'no','nb', 'nob'], 'name': 'Norwegian Bokmål', 'scripts': ['latin'], 'encodings': ['utf-8',
-'windows-1252', 'iso-8859-1']}, 'nn': {'codes': ['nor', 'no', 'nn', 'nno'], 'name': 'Norwegian Nynorsk', 'scripts': ['latin'], 'encodings': ['utf-8',
+'encodings': ['utf-8', 'windows-1250', 'iso-8859-2']}, 'nb':'no', 'no': {'codes': ['nor',
+'no','nb', 'nn'], 'name': 'Norwegian', 'scripts': ['latin'], 'encodings': ['utf-8',
 'windows-1252', 'iso-8859-1']}, 'ko': {'codes': ['kor', 'ko'], 'name': 'Korean',
 'scripts': ['korean'], 'encodings': ['utf-8', 'euc-kr','iso-2022-kr','cp949']}, 'sv': {'scripts':
 ['latin'], 'codes': ['swe', 'sv', 'se'], 'name': 'Swedish', 'encodings':
@@ -215,57 +151,27 @@ class Tokeniser():
         
         """
         
-        self.language = language
-        self.tokprocess = None
-        
-        lcode = language.codes[0]
-        lcode = lcode if lcode.lower()!="pt_br" else "pt"
-        lcode = lcode if lcode.lower()!="pt_mz" else "pt"
-        
+        if isinstance(language, Language):
+            self.language = language
+        elif isinstance(language,str):
+            self.language = getLanguage(language)
+        else:
+            sys.stderr.write("Using English as default tokenisation language\n")
+            self.language = getLanguage("en")
+            
         if "Japanese" in self.language.name:
             self.cmd = KYTEA_PATH + "/bin/kytea -notags -model " + KYTEA_JAPANESE
-            self.tokprocess = Popen(self.cmd, 1, shell=True, stdin=PIPE, stdout=PIPE) if self.cmd else None
-            self.tool = 'kytea'
-        elif lcode in supportedTokeniserLangs:
-            self.MosesTokenizer = MosesTokenizer(lcode)
-            self.tool = 'moses'
+        elif "Chinese" in self.language.name:
+            self.cmd = None
         else:
-            self.MosesTokenizer = MosesTokenizer('en')
-            self.polyglot = lcode
-            self.tool = 'polyglot'
-
-        self.rules = tokenisation_rules.get(self.language.codes[0], {})
-        
-        # if isinstance(language, Language):
-        #     self.language = language
-        # elif isinstance(language,str):
-        #     self.language = getLanguage(language)
-        # else:
-        #     sys.stderr.write("Using English as default tokenisation language\n")
-        #     self.language = getLanguage("en")
-            
-        # if "Japanese" in self.language.name:
-        #     self.cmd = KYTEA_PATH + "/bin/kytea -notags -model " + KYTEA_JAPANESE
-        # elif "Chinese" in self.language.name:
-        #     self.cmd = None
-
-        # elif:
-        #     lcode = self.language.codes[0]
-        #     lcode = lcode if lcode!="pt_br" else "pt"
-        #     if lcode in supportedTokeniserLangs:
-        #         self.MosesTokenizer = MosesTokenizer(lcode)
-        # else:
-        #     self.MosesTokenizer = MosesTokenizer('en')
-        #     self.polyglot = True
-        # # else:
-        # #     self.cmd = TOKENISER_PATH + " -no-escape -q -b "
-        # #     lcode = self.language.codes[0]
-        # #     lcode = lcode if lcode!="pt_br" else "pt"
-        # #     self.cmd += "-l %s" %lcode
+            self.cmd = TOKENISER_PATH + " -no-escape -q -b "
+            lcode = self.language.codes[0]
+            lcode = lcode if lcode!="pt_br" else "pt"
+            self.cmd += "-l %s" %lcode
              
         # Starts a process with the tokeniser tool
-        # self.tokprocess = Popen(self.cmd, 1, shell=True, stdin=PIPE, stdout=PIPE) if self.cmd else None
-        # self.rules = tokenisation_rules.get(self.language.codes[0], {})
+        self.tokprocess = Popen(self.cmd, 1, shell=True, stdin=PIPE, stdout=PIPE) if self.cmd else None
+        self.rules = tokenisation_rules.get(self.language.codes[0], {})
         
  
   
@@ -277,13 +183,6 @@ class Tokeniser():
         if self.language.name.startswith("Chinese"):
             import jieba
             tokens = jieba.cut(sentence, cut_all=False)
-            sentence2 = " ".join(tokens)
-        elif self.tool == 'moses':
-            tokens = self.MosesTokenizer.tokenize(sentence)
-            sentence2 = " ".join(tokens)
-        elif self.tool == 'polyglot':
-            textobj = Text(sentence, hint_language_code=self.polyglot)
-            tokens = textobj.words
             sentence2 = " ".join(tokens)
         else:
             sentence2 = self._feedprocess(sentence)
@@ -520,44 +419,13 @@ class SpellChecker():
 from langid.langid import LanguageIdentifier, model
 identifier = LanguageIdentifier.from_modelstring(model, norm_probs=True)
 
-
-## use either langid.py or OpenLID/fasttext
-
 def getProbDist(text):
-    # return getProbDistLangid(text)
-    return getProbDistOpenLID(text)
-
-
-def getProbDistLangid(text):
     result = identifier.rank(text)
     result2 = {}
     for r in result:
         if r[1]>0.01:
             result2[r[0]]=r[1]
     return result2
-
-
-import fasttext
-from openlid import clean_text
-from huggingface_hub import hf_hub_download
-# from iso639 import languages
-
-OpenLidModelPath = hf_hub_download(repo_id="laurievb/OpenLID-v2", filename="openlid_v2.bin")
-OpenLidModel = fasttext.load_model(OpenLidModelPath)
-
-def getProbDistOpenLID(text):
-    input_text = clean_text(text)
-    result = OpenLidModel.predict(text[:1024].replace("\n", " "), k=5)
-    probs = result[1]
-    result2 = {}
-    for i,r in enumerate(result[0]):
-        p=probs[i]
-        l=r[10:13]
-        result2[l]=p
-        # iso = languages.get(part3=l)
-        # result2[iso.part1]=p
-    return result2
-
 
 
 class Language:
@@ -641,23 +509,10 @@ class Language:
         using the langid library.
         
         """
-        distribOpenLID = getProbDist(text)
-        prob = sum([distribOpenLID[x] for x in self.codes if x in distribOpenLID])
-        if prob > 0.1:
-            return prob
-    
+        distrib = getProbDist(text)
         shortcode = self.codes[0]
-        distrib = getProbDistLangid(text)
-        
-        ## Asturian: accept es as a valid language (is that reasonable?)
-        if "ast" in self.codes and not "ast" in distrib:
-            if 'es' in distrib:
-                return distrib["es"]
-        ## Czech: confusion between 
-        if "cs" in self.codes:
-            return sum([distrib[x] for x in ["cs","cz"] if x in distrib])
-        if "pt_br" in self.codes or "pt_mz" in self.codes:
-            return sum([distrib[x] for x in ["pt","pt_br","pt_mz"] if x in distrib])
+        if "pt_br" in self.codes:
+            return sum([distrib[x] for x in ["pt","pt_br"] if x in distrib])            
         if "no" in self.codes:
             return sum([distrib[x] for x in ["nb","no"] if x in distrib])
         elif "sr" in self.codes or "hr" in self.codes or "bs" in self.codes:
@@ -678,10 +533,8 @@ class Language:
         elif "ms" in distrib and "id" in self.codes:
             return max(distrib["ms"]-0.4,0.0) 
         elif "id" in distrib and "ms" in self.codes:
-            return max(distrib["id"]-0.4,0.0)
-        
-        return sum([distribOpenLID[x] for x in self.codes if x in distribOpenLID])
-        # return 0.0
+         return max(distrib["id"]-0.4,0.0) 
+        return 0.0
     
 
 def getLanguage(langcode):
@@ -689,8 +542,8 @@ def getLanguage(langcode):
     with the provided code, raises a RuntimeError".
     
     """
-    if langcode.lower() in languages.keys():
-        content = languages[langcode.lower()]
+    if langcode in languages.keys():
+        content = languages[langcode]
         if isinstance(content, dict):
             lang = Language(content["name"], content["scripts"])
             lang.encodings = content["encodings"]
