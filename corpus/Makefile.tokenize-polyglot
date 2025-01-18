@@ -6,27 +6,15 @@
 
 OPUSTOKENIZER ?= ${OPUSTOOLS}/opus-polyglot-tokenize.py
 
-# ifeq (${HPC_HOST},puhti)
-#  LOAD_ENV ?= module load python-data/3.8 &&
-# endif
-
 
 ifndef LANGUAGE
   LANGUAGE=$(firstword ${LANGUAGES})
 endif
 
-RAWDIR   = raw/${LANGUAGE}
+RAWDIR := ${CORPUSRAW}/${LANGUAGE}
 ifndef XMLFILES
-  XMLFILES := $(patsubst raw/%,xml/%,$(shell find ${RAWDIR} -name '*.${XMLEXT}'))
+  XMLFILES := $(patsubst ${CORPUSRAW}/%,${CORPUSXML}/%,$(shell find ${RAWDIR} -name '*.${XMLEXT}'))
 endif
-
-## OLD: for-loop (cannot be parallelized)
-##
-# tokenize annotate:
-# 	for l in ${LANGUAGES}; do \
-# 		${MAKE} LANGUAGE=$$l tokenize_files; \
-# 	done
-
 
 
 ## NEW: use flags to indicate finished processes
@@ -43,13 +31,22 @@ ${TOKENIZE_DONE}:
 
 
 tokenize_files annotate_files: ${XMLFILES}
+	mkdir -p log
 	touch log/.${LANGUAGE}.tokenize.done
 
-xml/${LANGUAGE}/%: raw/${LANGUAGE}/%
+
+ifeq (${XMLEXT},'xml.gz')
+  CATCMD = zcat
+  ZIPCMD = | gzip -c
+else
+  CATCMD = cat
+  ZIPCMD = 
+endif
+
+${CORPUSXML}/${LANGUAGE}/%: ${CORPUSRAW}/${LANGUAGE}/%
 	mkdir -p $(shell dirname $@)
-	${LOAD_ENV} zcat $< |\
-	${OPUSTOKENIZER} -l $(LANGUAGE) |\
-	gzip -c > $@
+	${CATCMD} $< | ${OPUSTOKENIZER} -l $(LANGUAGE) ${ZIPCMD} > $@
+
 
 clean-xml:
 	for l in ${LANGUAGES}; do \

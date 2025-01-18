@@ -156,13 +156,16 @@ CONVERT_JOBS = $(patsubst %,%-convert-job,${LANGUAGES})
 convert-jobs: ${CONVERT_JOBS}
 
 ## big files > 1GB
+VERY_BIG_FILE = 10737418240
 BIG_FILE = 1073741824
 
 .PHONY: ${CONVERT_JOBS}
 ${CONVERT_JOBS}: ${SRTDIR}.done
 	if [ ! -e done/$(@:-convert-job=).zip ]; then \
-	  if [ $(shell stat -c %s $(patsubst %-convert-job,${SRTDIR}/%.tar,$@)) -gt ${BIG_FILE} ]; then \
-	    ${MAKE} HPC_DISK=500 HPC_MEM=64g HPC_CORES=40 HPC_MODULES= EMAIL= $(@:-job=).submit; \
+	  if [ $(shell stat -c %s $(patsubst %-convert-job,${SRTDIR}/%.tar,$@)) -gt ${VERY_BIG_FILE} ]; then \
+	    ${MAKE} HPC_DISK=500 HPC_MEM=128g HPC_CORES=40 HPC_MODULES= EMAIL= $(@:-job=).submit; \
+	  elif [ $(shell stat -c %s $(patsubst %-convert-job,${SRTDIR}/%.tar,$@)) -gt ${BIG_FILE} ]; then \
+	    ${MAKE} HPC_DISK=500 HPC_MEM=64g HPC_CORES=32 HPC_MODULES= EMAIL= $(@:-job=).submit; \
 	  else \
 	    ${MAKE} HPC_DISK=100 HPC_MEM=32g HPC_CORES=16 HPC_MODULES= EMAIL= $(@:-job=).submit; \
 	  fi \
@@ -396,6 +399,10 @@ ${CORPUSXML}/prev/%.zip: subtitles-prev/%.tar
 
 SRT2XML = ../scripts/srt2xml.py
 
+# instead of mv xml-files:
+# 	  mv $<.xml $@; \
+#	  tidy -xml -utf8 -i < $<.xml > $@ 2>/dev/null;
+
 ${SRT2XML_FILES}: ${WORKDIR}/${CORPUS}/xml/%.xml: ${WORKDIR}/srt/%.gz
 	mkdir -p $(dir $@) $(dir $<)
 	mkdir -p $(dir $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/raw/%,$@))
@@ -406,12 +413,17 @@ ${SRT2XML_FILES}: ${WORKDIR}/${CORPUS}/xml/%.xml: ${WORKDIR}/srt/%.gz
 	rm -f $<.raw $<.xml
 
 ## special treatment for bilingual subtitles (ze)
+##  instead of mv:
+# 	  mv $(<:.gz=2.gz).xml $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/xml2/%,$@); \
+#	  tidy -xml -utf8 -i \
+#		< $(<:.gz=2.gz).xml \
+#		> $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/xml2/%,$@) 2>/dev/null;
 
 	if [ $(firstword $(subst /, ,$(patsubst ${WORKDIR}/srt/%,%,$<))) == 'ze' ]; then \
 	  mkdir -p $(dir $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/xml2/%,$@)); \
 	  mkdir -p $(dir $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/raw2/%,$@)); \
 	  tidy -xml -utf8 -i \
 		< $(<:.gz=2.gz).xml \
-		> $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/xml2/%,$@) 2>/dev/null; \
+		> $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/xml2/%,$@) 2>/dev/null;
 	  mv $(<:.gz=2.gz).raw $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/raw2/%,$@); \
 	fi

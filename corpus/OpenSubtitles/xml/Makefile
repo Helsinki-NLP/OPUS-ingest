@@ -267,7 +267,7 @@ ${WORKDIR}/previous/%.zip:
 $(sort ${WORKDIR}/${SRC} ${WORKDIR}/${TRG}): ${WORKDIR}/%: %.zip
 	mkdir -p $(dir $@)
 	rsync $< $@.zip
-	unzip -q -d $(dir $@) $@.zip
+	unzip -q -n -d $(dir $@) $@.zip
 	rm -f $@.zip
 	mv ${WORKDIR}/${CORPUS}/xml/$(notdir $@) ${WORKDIR}/
 	touch $@

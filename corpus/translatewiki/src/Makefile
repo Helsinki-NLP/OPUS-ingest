@@ -5,7 +5,7 @@ include ../../Makefile.submit
 
 
 WORKDIR   := ${TMPDIR}/OPUS/${CORPUS}/src
-LANGUAGES := $(sort $(notdir $(wildcard ${WORKDIR}/raw/*)))
+LANGUAGES := $(sort $(subst -, ,$(notdir $(wildcard ${WORKDIR}/${CORPUS}/raw/*))))
 LANGZIPS  := $(patsubst %,${CORPUSRAW}/%.zip,${LANGUAGES})
 LANGPAIRS := ${shell \
 	for s in ${LANGUAGES}; do \
@@ -20,8 +20,8 @@ ALGFILES  := $(patsubst %,${CORPUSXML}/%.xml.gz,${LANGPAIRS})
 
 TRANSLATION_DUMP := $(patsubst v%,translations-%.tar.gz,${VERSION})
 
-POFILES   := $(shell if [ -e ${WORKDIR} ]; then find ${WORKDIR} -type f -name '*.po'; fi)
-POCONVERT := $(addsuffix .done,${POFILES})
+POFILEDIRS := $(shell if [ -e ${WORKDIR}/files ]; then find ${WORKDIR}/files -mindepth 2 -type d; fi)
+POCONVERT  := $(addsuffix .done,${POFILEDIRS})
 
 
 .PHONY: all
@@ -43,7 +43,7 @@ all-jobs:
 
 
 .PHONY: extract convert algfiles zipfiles 
-extract: ${WORKDIR}/tmp
+extract: ${WORKDIR}/files
 convert: ${POCONVERT}
 algfiles: ${ALGFILES}
 zipfiles: ${LANGZIPS}
@@ -53,76 +53,58 @@ zipfiles: ${LANGZIPS}
 
 .PHONY: test-conversion
 test-conversion:
-	mkdir -p ${WORKDIR}/tmp/tmp.dir/test
-	cp nb.po ${WORKDIR}/tmp/tmp.dir/test/
-	make POFILES=${WORKDIR}/tmp/tmp.dir/test/nb.po convert
+	mkdir -p ${WORKDIR}/files/tmp/tmp.dir/test
+	cp *.po ${WORKDIR}/files/tmp/tmp.dir/test/
+	make POFILEDIRS=${WORKDIR}/files/tmp/tmp.dir/test convert
+	mkdir -p $(CURDIR)/test/xml $(CURDIR)/test/raw
 	make CORPUSXML=$(CURDIR)/test/xml algfiles
 	make CORPUSRAW=$(CURDIR)/test/raw zipfiles
-	make CORPUSXML=$(CURDIR)/test/xml ${CORPUSXML}/nb-en.xml.gz
 
 
+## download the tarball of localisation files
 
 ${TRANSLATION_DUMP}:
 	wget -q ${TRANSLATION_DUMPS_URL}/translations-%.tar.gz
 
-${WORKDIR}/tmp: ${TRANSLATION_DUMP}
-	mkdir -p $(dir $@)
-	rsync ${TRANSLATION_DUMP} ${WORKDIR}/
-	tar -C $(dir $@) -xf $<
+
+## extract all localisation files
+
+${WORKDIR}/files: ${TRANSLATION_DUMP}
+	mkdir -p $@
+	tar -C $@ -xf $<
+
+
+## convert all .po files for a specific project dir
+
+PO2OPUS = ${CURDIR}/../scripts/multipo2opus
 
 ${POCONVERT}: %.done: %
-	@( s=en; \
-	  t=$(subst -,_,$(notdir $(<:.po=))); \
-	  d=$(dir $(patsubst ${WORKDIR}/tmp/tmp.%/,%.xml,$(dir $<))); \
-	  f=$(notdir $(patsubst ${WORKDIR}/tmp/tmp.%/,%.xml,$(dir $<))); \
-	  echo "make $$s-$$t/$$d$$f"; \
-	  mkdir -p ${WORKDIR}/raw/$$s/$$d; \
-	  mkdir -p ${WORKDIR}/raw/$$t/$$d; \
-	  mkdir -p ${WORKDIR}/$$s-$$t/$$d; \
-	  mkdir -p $@.d/$$s/$$d; \
-	  mkdir -p $@.d/$$t/$$d; \
-	  cd $@.d; \
-	  po2opus -s $$s -t $$t -S $$s/$$d$$f -T $$t/$$d$$f $< \
-	  | gzip -c > ${WORKDIR}/$$s-$$t/$$d$$f.gz; \
-	  if [ ! -e ${WORKDIR}/raw/$$s/$$d$$f ]; then \
-	    echo "mv $$s/$$d/$$f ${WORKDIR}/raw/$$s/$$d$$f"; \
-	    mv $$s/$$d/$$f ${WORKDIR}/raw/$$s/$$d$$f; \
-	  fi; \
-	  if [ `grep '</s>' $$t/$$d$$f | wc -l` -gt 0 ]; then \
-	    mv -f $$t/$$d/$$f ${WORKDIR}/raw/$$t/$$d$$f; \
-	  fi; \
-	  if [ `zgrep 'xtargets' ${WORKDIR}/$$s-$$t/$$d$$f.gz | wc -l` -eq 0 ]; then \
-	    rm -f ${WORKDIR}/$$s-$$t/$$d$$f.gz; \
-	  fi; )
+	if [ $(words $(wildcard $</*.po)) -gt 0 ]; then \
+	  ${PO2OPUS} -d ${WORKDIR}/${CORPUS}/raw \
+		     -o $(patsubst ${WORKDIR}/files/tmp/tmp.%,%.xml,$<) \
+		     $(wildcard $</*.po); \
+	fi
 	@touch $@
 
 
-${CORPUSRAW}/%.zip: ${WORKDIR}/raw/%
+# zip all raw xml files
+
+${CORPUSRAW}/%.zip: ${WORKDIR}/${CORPUS}/raw/%
 	find $< -empty -delete
 	if [ -e $< ]; then \
-	  mkdir -p ${CORPUSRAW} ${WORKDIR}/${CORPUS}/raw; \
-	  mv $< ${WORKDIR}/${CORPUS}/raw/ ; \
 	  cd ${WORKDIR} && zip -rq $@ ${CORPUS}/raw/$(notdir $<); \
 	  find ${WORKDIR}/${CORPUS}/raw/$(notdir $<) -delete; \
 	fi
 
 
-## merge all individual sentence alignment files
-## swap languages if necessary
-
-swap_langs = $(lastword $(subst -, ,$1))-$(firstword $(subst -, ,$1))
+## merge all individual sentence alignment files for a specific langpair
 
 ${CORPUSXML}/%.xml.gz:
 	mkdir -p $(dir $@)
 	rm -f $@.links
-	if [ -e ${WORKDIR}/$(notdir $(@:.xml.gz=)) ]; then \
-	  find ${WORKDIR}/$(notdir $(@:.xml.gz=)) -type f -name '*.xml.gz' | sort \
-	  | xargs zgrep --no-filename 'link' \
-	  | sed 's/\.xml\"/\.xml.gz\"/g;' >> $@.links; \
-	elif [ -e ${WORKDIR}/$(call swap_langs,$(notdir $(@:.xml.gz=))) ]; then \
-	  find ${WORKDIR}/$(call swap_langs,$(notdir $(@:.xml.gz=))) -type f -name '*.xml.gz' | sort \
-	  | xargs zgrep --no-filename 'link' \
-	  | opus-swap-align \
+	if [ -e ${WORKDIR}/${CORPUS}/raw/$(notdir $(@:.xml.gz=)) ]; then \
+	  find ${WORKDIR}/${CORPUS}/raw/$(notdir $(@:.xml.gz=)) -type f -name '*.xml' | sort \
+	  | xargs grep --no-filename 'link' \
 	  | sed 's/\.xml\"/\.xml.gz\"/g;' >> $@.links; \
 	fi
 	if [ -s $@.links ]; then \
