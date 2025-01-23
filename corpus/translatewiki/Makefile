@@ -6,23 +6,56 @@ include Makefile.def
 include ../Makefile.def
 
 
-## make all:
-## - convert (see below)
-## - annotate (tokenize/tag/chunk depending on Makefile that is included)
-## - udparse (parse with UDPipe)
-## - publish (various packages, cwb index, website etc)
-## - wordalign
 
 .PHONY: all
 all:
+	${MAKE} -C src all
+	${MAKE} -C xml all
 	${MAKE} publish
 
 
-ttt:
-	make ${CORPUSRELEASE}/mono/aa.txt.gz
-#	make ${CORPUSRELEASE}/raw/aa.zip
-#	make ${CORPUSRELEASE}/moses/aa-en.txt.zip
-#	make ${CORPUSRELEASE}/tmx/aa-en.tmx.gz
+publish-moses:
+	${MAKE} moses
+	${MAKE} txt_info
+
+
+
+## temporary fix to get rid of empty links
+
+fix-release-files:
+	${MAKE} remove-empty-links
+	tar -cf xml.tar xml
+	cp xml/Makefile new/Makefile
+	find xml -delete
+	mv new xml
+	find ${CORPUSRELEASE}/moses -delete
+	find ${CORPUSRELEASE}/xml -name '*.xml.gz' -delete
+	find ${CORPUSPUB} -name '*.html' -delete
+	${MAKE} delete-empty-bitexts
+	${MAKE} publish
+	${MAKE} publish-moses
+
+NEWALGFILES = $(patsubst xml/%,new/%,$(wildcard xml/*.xml.gz))
+MOVE_NEWALGFILES = $(addsuffix .move,$(wildcard new/*.xml.gz))
+
+remove-empty-links: ${NEWALGFILES}
+
+${NEWALGFILES}: new/%: xml/%
+	mkdir -p $(dir $@)
+	zgrep -v ';"' $< | gzip -c > $@
+	if [ `zgrep xtargets $@ | head -1 | wc -l` == "0" ]; then \
+	  echo "empty bitext $@ --> delete"; \
+	  rm -f $@; \
+	fi
+
+move-xml-files: ${MOVE_NEWALGFILES}
+
+${MOVE_NEWALGFILES}: %.move: %
+	@if [ `diff <(gzip -cd $<) <(gzip -cd xml/$(notdir $<)) | wc -l` -gt 0 ]; then \
+	  echo "$< changed"; \
+	  mv $< xml/$(notdir $<); \
+	fi
+	rm -f $<
 
 
 ## standard procedures are specified in the following makefiles
@@ -36,6 +69,7 @@ include ../Makefile.submit
 include ../Makefile.process
 include ../Makefile.release
 include ../Makefile.cwb
+
 
 
 ## select one of the following to set the annotation level in xml/

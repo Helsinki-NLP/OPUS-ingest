@@ -209,6 +209,7 @@ MOSES   := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/moses/%.txt.zip,$(C
 DIC     := $(patsubst ${CORPUSHOME}/%,${CORPUSRELEASE}/%,$(wildcard ${CORPUSDIC}/*.dic.gz))
 # DIC    := $(patsubst ${CORPUSXML}/%.xml.gz,${CORPUSRELEASE}/dic/%.dic.gz,$(CES))
 
+
 # ifndef SMT
 # ifneq ($(wildcard ${CORPUSWORDALIGN}),)
 #   SMT    := $(patsubst %,${CORPUSRELEASE}/smt/%.zip,\
@@ -269,6 +270,29 @@ SRCCES = ${shell \
 	    echo "${CORPUSXML}/${SRC}-$$t.xml.gz"; \
 	  fi \
 	done  }
+
+
+## targets for submitting conversion jobs
+
+MONO_RAW_JOBS    := $(addsuffix -job,${MONO_RAW})
+MONO_TOK_JOBS    := $(addsuffix -job,${MONO_TOK})
+TMX_JOBS         := $(addsuffix -job,${TMX})
+MOSES_JOBS       := $(addsuffix -job,${MOSES})
+FREQ_COUNTS_JOBS := $(addsuffix -job,${FREQ_COUNTS})
+TMX_INFO_JOBS    := $(addsuffix -job,${TMX_INFO})
+TXT_INFO_JOBS    := $(addsuffix -job,${TXT_INFO})
+
+RELEASE_LOCALDISK_JOBS  := ${TMX_JOBS} ${MOSES_JOBS}
+RELEASE_REGULAR_JOBS    := lang_raw-job lang_xml-job alg_samples-job ${TXT_INFO_JOBS} ${TMX_INFO_JOBS}
+
+${RELEASE_LOCALDISK_JOBS}:
+	${MAKE} HPC_MEM=16g HPC_CORES=1 HPC_DISK=500 EMAIL= $(@:-job=).submit
+
+${RELEASE_REGULAR_JOBS}:
+	${MAKE} HPC_MEM=16g HPC_CORES=1 EMAIL= $(@:-job=).submit
+
+
+
 
 
 ## NEW: reduce packages if we have > 10,000 bitexts in the corpus
@@ -519,59 +543,68 @@ ${PACKAGES}: ${CORPUSRELEASE} ${SELECTED_PACKAGES}
 	    fi; \
 	  done \
 	done
-	for f in ${LANG_XML} ${LANG_RAW} ${LANG_UD}; do \
-	  if [ -e $$f ]; then \
-	    echo $$f | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@; \
-	  fi \
+	for f in $(patsubst ${OPUSRELEASE}/%,%,${LANG_XML}); do \
+	  if [ -e ${OPUSRELEASE}/$$f ]; then echo $$f >> $@; fi \
 	done
-	for f in ${MONO_RAW} ${MONO_TOK} ${FREQ_COUNTS}; do \
-	  if [ -e $$f ]; then \
-	    echo $$f | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@; \
-	  fi \
+	for f in $(patsubst ${OPUSRELEASE}/%,%,${LANG_RAW}); do \
+	  if [ -e ${OPUSRELEASE}/$$f ]; then echo $$f >> $@; fi \
+	done
+	for f in $(patsubst ${OPUSRELEASE}/%,%,${LANG_UD}); do \
+	  if [ -e ${OPUSRELEASE}/$$f ]; then echo $$f >> $@; fi \
+	done
+	for f in $(patsubst ${OPUSRELEASE}/%,%,${MONO_RAW}); do \
+	  if [ -e ${OPUSRELEASE}/$$f ]; then echo $$f >> $@; fi \
+	done
+	for f in $(patsubst ${OPUSRELEASE}/%,%,${MONO_TOK}); do \
+	  if [ -e ${OPUSRELEASE}/$$f ]; then echo $$f >> $@; fi \
+	done
+	for f in $(patsubst ${OPUSRELEASE}/%,%,${FREQ_COUNTS}); do \
+	  if [ -e ${OPUSRELEASE}/$$f ]; then echo $$f >> $@; fi \
 	done
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
 	mv -f ${PACKAGES}.uniq ${PACKAGES}
 	echo "-----------------------------"      >> ${CORPUSRELEASE}/README
 	echo "xml ....... tokenized corpus and sentence alignments" >> ${CORPUSRELEASE}/README
 	echo "raw ....... untokenized corpus in XML" >> ${CORPUSRELEASE}/README
-	echo "parsed .... parsed corpus in XML"   >> ${CORPUSRELEASE}/README
 	echo "mono ...... monolingual text files" >> ${CORPUSRELEASE}/README
-	echo "moses ..... aligned plain text files" >> ${CORPUSRELEASE}/README
-	echo "tmx ....... bitexts in TMX format" >> ${CORPUSRELEASE}/README
+	if [ `find ${CORPUSRELEASE}/moses -name '*.zip' | wc -l` -gt 0 ]; then \
+	  echo "moses ..... aligned plain text files" >> ${CORPUSRELEASE}/README; \
+	fi
+	if [ `find ${CORPUSRELEASE}/moses -name '*.tmx.gz' | wc -l` -gt 0 ]; then \
+	  echo "tmx ....... bitexts in TMX format" >> ${CORPUSRELEASE}/README; \
+	fi
 	echo "freq ...... token frequencies"      >> ${CORPUSRELEASE}/README
-	echo "smt ....... word alignments and phrase translation tables" >> ${CORPUSRELEASE}/README
-	echo "dic ....... bilingual dictionaries extracted from word alignments" >> ${CORPUSRELEASE}/README
+	if [ `find ${CORPUSRELEASE}/smt -type f | wc -l` -gt 0 ]; then \
+	  echo "smt ....... word alignments and phrase translation tables" >> ${CORPUSRELEASE}/README; \
+	fi
+	if [ `find ${CORPUSRELEASE}/dic -type f | wc -l` -gt 0 ]; then \
+	  echo "dic ....... bilingual dictionaries extracted from word alignments" >> ${CORPUSRELEASE}/README; \
+	fi
 	echo "-----------------------------"  >> ${CORPUSRELEASE}/README
 	echo "Files in this release"          >> ${CORPUSRELEASE}/README
 	echo "-----------------------------"  >> ${CORPUSRELEASE}/README
 	cat ${PACKAGES} | grep '/${VERSION}/' >> ${CORPUSRELEASE}/README
 
 
-#	# echo "${ALG}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
-#	# echo "${LANG_XML} ${LANG_RAW} ${LANG_UD}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
-#	# echo "${MONO_TOK} ${MONO_RAW} ${FREQ_COUNTS}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
-#	# echo "${TMX}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
-#	# echo "${MOSES}" | tr ' ' "\n" | sed "s#${OPUSRELEASE}/##" >> $@
-
 
 
 ## generic target to create a README file
 
 %/README:
-	echo " Corpus Name: ${CORPUS}" >$@
+	echo " Corpus Name: ${CORPUS}"        >$@
 ifneq (${PACKAGE},)
-	echo "     Package: ${PACKAGE}" >>$@
+	echo "     Package: ${PACKAGE}"      >>$@
 endif
-	echo "     Website: http://opus.nlpl.eu/${CORPUS}-${VERSION}.php" >> $@
-	echo "     Release: ${VERSION}" >>$@
+	echo "     Website: http://opus.nlpl.eu/legacy/${CORPUS}-${VERSION}.php" >> $@
+	echo "     Release: ${VERSION}"      >>$@
 ifneq (${RELEASE_DATE},)
 	echo "Release date: ${RELEASE_DATE}" >> $@
-	echo "   OPUS date: ${shell date}" >> $@
+	echo "   OPUS date: ${shell date}"   >> $@
 else
-	echo "Release date: ${shell date}" >> $@
+	echo "Release date: ${shell date}"   >> $@
 endif
 ifneq (${LICENSE},)
-	echo "     License: ${LICENSE}" >>$@
+	echo "     License: ${LICENSE}"      >>$@
 endif
 ifneq (${COPYRIGHT},)
 	echo "   Copyright: $(subst ",\",${COPYRIGHT})" >>$@          # escape "
@@ -580,7 +613,7 @@ ifneq (${CONTACT},)
 	echo "     Contact: $(subst ",\",${CONTACT})" >>$@            # escape "
 endif
 ifneq (${SOURCE_URL},)
-	echo "      Source: ${SOURCE_URL}" >>$@
+	echo "      Source: ${SOURCE_URL}"   >>$@
 endif
 	echo "" >>$@
 	echo "This package is part of OPUS - the open collection of parallel corpora" >> $@
@@ -687,96 +720,13 @@ ${CORPUSRELEASE}/xml/%.zip ${CORPUSRELEASE}/raw/%.zip:
 ## create zip-file in temporary directory
 ## from the collection of individual files
 
-${TMPDIR}/${CORPUS}/raw/%.zip ${TMPDIR}/${CORPUS}/xml/%.zip:
+${TMPDIR}/${CORPUS}/%.zip: ${CORPUSHOME}/%
 	@${MKDIR} $(dir $@)
-	rsync -a $(patsubst ${TMPDIR}/${CORPUS}/%.zip,${CORPUSHOME}/%,$@) $(dir $@)
-	find $(dir $@) -type l -delete
-	find $(dir $@) -name '*.${XMLEXT}' | xargs -P ${THREADS} gunzip -f
-	cd ${TMPDIR} && zip -r $@ $(patsubst ${TMPDIR}/%.zip,%,$@)
-	find $(dir $@) -delete
-
-
-
-
-
-# # ${LANG_XML}: 
-# ${CORPUSRELEASE}/xml/%.zip: # ${CORPUSXML}/%
-# 	@${MKDIR} ${dir $@}
-# 	${MKDIR} ${TMPDIR}/$@/${CORPUS}/xml
-# 	if [ -d ${patsubst ${CORPUSRELEASE}/xml/%.zip,${CORPUSXML}/%,$@} ]; then \
-# 	  rsync -a ${patsubst ${CORPUSRELEASE}/xml/%.zip,${CORPUSXML}/%,$@} \
-# 			${TMPDIR}/$@/${CORPUS}/xml/; \
-# 	elif [ -e $(patsubst ${CORPUSRELEASE}/xml/%.zip,${CORPUSHTML}/%.tar.gz,$@) ]; then \
-# 	  tar -C ${TMPDIR}/$@/${CORPUS} --strip-components=1 \
-# 		-xzf $(patsubst ${CORPUSRELEASE}/xml/%.zip,${CORPUSHTML}/%.tar.gz,$@); \
-# 	fi
-# 	find ${TMPDIR}/$@/${CORPUS}/xml -type l | xargs rm -f
-# 	find ${TMPDIR}/$@/${CORPUS}/xml -name '*.${XMLEXT}' |\
-# 	xargs -P ${THREADS} gunzip -f
-# 	${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README
-# 	${MAKE} ${TMPDIR}/$@/LICENSE
-# 	echo "${CORPUS}/xml/${patsubst %.zip,%,${notdir $@}}" > ${TMPDIR}/$@/INFO
-# 	echo "${CORPUS}"                                     >> ${TMPDIR}/$@/INFO
-# 	echo "${VERSION}"                                    >> ${TMPDIR}/$@/INFO
-# 	( cd ${TMPDIR}/$@; zip -r $@ INFO README LICENSE ${CORPUS}; cd ${PWD} )
-# 	rm -fr ${TMPDIR}/$@
-# 	${MKDIR} ${dir ${PACKAGES}}
-# 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
-# 	chmod 644 $@
-
-
-
-# # ${LANG_RAW}: 
-# ${CORPUSRELEASE}/raw/%.zip: # ${CORPUSRAW}/%
-# 	@${MKDIR} ${dir $@}
-# 	${MKDIR} ${TMPDIR}/$@/${CORPUS}/raw
-# 	if [ -d ${patsubst ${CORPUSRELEASE}/raw/%.zip,${CORPUSRAW}/%,$@} ]; then \
-# 	  rsync -a ${patsubst ${CORPUSRELEASE}/raw/%.zip,${CORPUSRAW}/%,$@} ${TMPDIR}/$@/${CORPUS}/raw/; \
-# 	else \
-# 	  tar -C ${TMPDIR}/$@/${CORPUS} --strip-components=1 \
-# 		-xzf $(patsubst ${CORPUSRELEASE}/raw/%.zip,${CORPUSHTML}/%.raw.tar.gz,$@); \
-# 	fi
-# 	find ${TMPDIR}/$@/${CORPUS}/raw -type l | xargs rm -f
-# 	find ${TMPDIR}/$@/${CORPUS}/raw -name '*.${XMLEXT}' |\
-# 	xargs -P ${THREADS} gunzip -f
-# 	${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README
-# 	${MAKE} ${TMPDIR}/$@/LICENSE
-# 	echo "${CORPUS}/raw/${patsubst %.zip,%,${notdir $@}}" > ${TMPDIR}/$@/INFO
-# 	echo "${CORPUS}"                                     >> ${TMPDIR}/$@/INFO
-# 	echo "${VERSION}"                                    >> ${TMPDIR}/$@/INFO
-# 	( cd ${TMPDIR}/$@; zip -r $@ INFO README LICENSE ${CORPUS}; cd ${PWD} )
-# 	rm -fr ${TMPDIR}/$@
-# 	${MKDIR} ${dir ${PACKAGES}}
-# 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
-# 	chmod 644 $@
-
-
-
-# ${CORPUSRELEASE}/raw/%.zip: # ${CORPUSRAW}/%
-# 	if [ -d ${CORPUSRAW}/$(notdir $@) ]; then \
-# 	  rsync ${CORPUSRAW}/$(notdir $@) $@; \
-# 	else \
-# 	  ${MAKE} ${TMPDIR}/$@; \
-# 	  mv -f ${TMPDIR}/$@ $@; \
-# 	fi
-# 	mkdir -p $@.d
-# 	${MAKE} PACKAGE=${CORPUS}/raw/$(notdir $(@:.zip=)) $@.d/README $@.d/LICENSE
-# 	echo "${CORPUS}/raw/$(notdir $(@:.zip=))"  > $@.d/INFO
-# 	echo "${CORPUS}"                          >> $@.d/INFO
-# 	echo "${VERSION}"                         >> $@.d/INFO
-# 	cd $@.d && zip -r $@ INFO README LICENSE
-# 	find $@.d -delete
-# 	chmod 644 $@
-
-
-# ${TMPDIR}/${CORPUSRELEASE}/raw/%.zip:
-# 	@${MKDIR} $@.d/${CORPUS}/raw
-# 	rsync -a ${CORPUSRAW}/$(@:.zip=) $@.d/${CORPUS}/raw/
-# 	find $@.d/${CORPUS}/raw -type l -delete
-# 	find $@.d/${CORPUS}/raw -name '*.${XMLEXT}' | xargs -P ${THREADS} gunzip -f
-# 	cd $@.d && zip -r $@ ${CORPUS}
-# 	find $@.d -delete
-
+	rsync -a $< $(dir $@)
+	find $(@:.zip=) -type l -delete
+	find $(@:.zip=) -name '*.${XMLEXT}' | xargs -P ${THREADS} gunzip -f
+	cd ${TMPDIR} && zip -r $@ $(patsubst ${TMPDIR}/%,%,$(@:.zip=))
+	find $(@:.zip=) -delete
 
 
 
@@ -820,64 +770,17 @@ mono_raw: ${MONO_RAW}
 
 ${CORPUSRELEASE}/mono/%.tok.gz: ${CORPUSRELEASE}/xml/%.zip
 	@${MKDIR} ${dir $@}
-	opus2txt $< | ${GZIP} -c > $@
+	opus-cat -t $< | ${GZIP} -c > $@
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
 
 ${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRELEASE}/raw/%.zip
 	@${MKDIR} ${dir $@}
-	opus2txt $< | ${GZIP} -c > $@
+	opus-cat -t $< | ${GZIP} -c > $@
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
-
-
-
-# CORPUS_EXT = xml
-
-# monolingual data for language modeling
-# (make sure that data can be parsed and 
-#  that we have sentence per line to avoid that GNU parallel will break the pipe)
-# ${CORPUSRELEASE}/mono/%.tok.gz: ${CORPUSRELEASE}/xml/%.zip
-# 	@${MKDIR} ${dir $@}
-# 	if [ -d ${CORPUSXML}/$(notdir ${@:.tok.gz=}) ]; then \
-# 	  find ${CORPUSXML}/$(notdir ${@:.tok.gz=})/ -name '*.${CORPUS_EXT}.gz' -type f | \
-# 	  xargs ${GZCAT} | \
-# 	  perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g;' |\
-# 	  opus2text | \
-# 	  ${GZIP} -c > $@; \
-# 	fi
-# 	${MKDIR} ${dir ${PACKAGES}}
-# 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
-# 	chmod 644 $@
-
-## attempt to do it with GNU parallel but it produces some problems with the XML parser
-#	  perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g;chomp;s/<\/s>/<\/s>\n/' |\
-#	  ${PARALLEL} opus2text |
-
-# TODO: should we use ftfy here instead of the regex?
-
-
-# ${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRELEASE}/raw/%.zip
-# 	@${MKDIR} ${dir $@}
-# 	if [ -d ${CORPUSRAW}/$(notdir ${@:.txt.gz=}) ]; then \
-# 	  find ${CORPUSRAW}/$(notdir ${@:.txt.gz=})/ -name '*.${CORPUS_EXT}.gz' -type f | \
-# 	  xargs ${GZCAT} | \
-# 	  perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g;' |\
-# 	  opus2text | \
-# 	  ${GZIP} -c > $@; \
-# 	fi
-# 	${MKDIR} ${dir ${PACKAGES}}
-# 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
-# 	chmod 644 $@
-
-
-
-
-## attempt to do it with GNU parallel but it produces some problems with the XML parser
-#	  perl -p -e 's/[\x00-\x08\x0B\x0C\x0E-\x1F]//g;s/&(?!(#\d+|\w+);)/&amp;/g;chomp;s/<\/s>/<\/s>\n/' |\
-#	  ${PARALLEL} opus2text | \
 
 
 
@@ -939,7 +842,7 @@ ifndef UNSORTED_SENTALIGN
 ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%.xml.gz
 	@${MKDIR} ${dir $@}
 	opus-read \
-		-d ${CORPUSXML} \
+		-d ${CORPUSRAW} \
 		-h -m 100 \
 		-N '\/0\/' \
 	$< > $@
@@ -965,21 +868,6 @@ ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	chmod 644 $@
 endif
 
-#	zcat $< | perl -pe 's/(<\/seg>.*)\n/$$1/s' | grep '</tuv>' |\
-#	sed 's/^.*<seg>//;s#</seg> *</tuv>#<br/>#' |\
-#	head -100 |\
-#	sed ': loop; n; a <hr/>' >> $@
-
-
-
-## NEW: could use zip archives
-## disadvantage: it is slow!
-#		-d ${CORPUS} \
-#		-r ${VERSION} \
-
-## OLD: (this does not work if the XML-files are deleted)
-## --> use the released zip file
-#		-d ${CORPUSXML} \
 
 
 .PHONY: corpus_samples
@@ -988,17 +876,10 @@ corpus_samples: ${CORPUS_SAMPLES}
 ${CORPUS_SAMPLES}:
 	@${MKDIR} ${dir $@}
 	echo '<html><head></head><body><pre>' >$@
-	-find ${patsubst ${CORPUSPUB}/%_sample.html,${CORPUSXML}/%,$@}/ -name '*.${ALGEXT}' | \
-	xargs ${GZCAT} | head -100 | recode utf8..utf16 | recode utf16..html >> $@
+	-opus-cat ${patsubst ${CORPUSPUB}/%_sample.html,${CORPUSXML}/%,$@} \
+	| head -100 | recode utf8..utf16 | recode utf16..html >> $@
 	echo '</pre></body></html>' >> $@
 	chmod 644 $@
-
-# ${CORPUS_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%
-# 	@${MKDIR} ${dir $@}
-# 	echo '<html><head></head><body><pre>' >$@
-# 	find $</ -name '*.xml.gz' | \
-# 	xargs ${GZCAT} | head -100 | recode utf8..utf16 | recode utf16..html >> $@
-# 	echo '</pre></body></html>' >> $@
 
 
 
@@ -1067,30 +948,25 @@ moses: ${CORPUSRELEASE} $(MOSES)
 ##      in make with parallel threads
 # $(MOSES): 
 ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSXML}/%.xml.gz
-	@${MKDIR} ${dir $@}
+	@${MKDIR} ${dir $@} ${dir ${PACKAGES}}
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  BASE=${CORPUS}.$(patsubst %.xml.gz,%,$(notdir $<));\
 	  if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
-	  mkdir -p ${LOCALTMP}; \
+	  mkdir -p ${LOCALTMP} ${TMPDIR}/$$BASE; \
 	  ${GZCAT} $< |\
 	  $(OPUS2MOSES) -v -r -d ${CORPUSRAW} \
 		-e ${LOCALTMP}/$$BASE.$$S \
 		-f ${LOCALTMP}/$$BASE.$$T \
 		-b ${LOCALTMP}/$$BASE.xml; \
-	  rm -f $@; \
-	  ${MKDIR} ${TMPDIR}/$$BASE; \
-	  ${MAKE} PACKAGE="${CORPUS}.$$S-$$T in Moses format" ${TMPDIR}/$$BASE/README; \
-	  rm -f ${LOCALTMP}/$$BASE.ids; \
-	  ${MAKE} ${TMPDIR}/$$BASE/LICENSE; \
+	  ${MAKE} PACKAGE="${CORPUS}.$$S-$$T in Moses format" ${TMPDIR}/$$BASE/README ${TMPDIR}/$$BASE/LICENSE; \
+	  rm -f $@ ${LOCALTMP}/$$BASE.ids; \
 	  zip -j ${LOCALTMP}/${notdir $@} ${TMPDIR}/$$BASE/README ${TMPDIR}/$$BASE/LICENSE \
 		 ${LOCALTMP}/$$BASE.$$S ${LOCALTMP}/$$BASE.$$T ${LOCALTMP}/$$BASE.xml; \
 	  mv -f ${LOCALTMP}/${notdir $@} $@; \
-	  rm -f ${LOCALTMP}/$$BASE.$$S ${LOCALTMP}/$$BASE.$$T ${LOCALTMP}/$$BASE.xml;\
-	  rm -f ${TMPDIR}/$$BASE/README ${TMPDIR}/$$BASE/LICENSE;\
+	  rm -f ${LOCALTMP}/$$BASE.$$S ${LOCALTMP}/$$BASE.$$T ${LOCALTMP}/$$BASE.xml \
+	  	${TMPDIR}/$$BASE/README ${TMPDIR}/$$BASE/LICENSE;\
 	  rmdir ${TMPDIR}/$$BASE; )
-	sleep 1
-	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
 
@@ -1238,30 +1114,25 @@ info-files: lang_info ces_info txt_info tmx_info
 lang_info: ${LANG_INFO}
 
 
+
 ## if we skip tokenisation, then do a very simple word count
 
 ifdef SKIP_TOKENIZATION
 
 ${LANG_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/raw/%.zip
 	${MKDIR} ${dir $@}
-	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSRAW}/%,$@}/ -name '*.${XMLEXT}' -type f | \
-	wc -l > $@
-	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSRAW}/%,$@}/ -name '*.${XMLEXT}' -type f | \
-	xargs ${GZCAT} | grep '</s>' | wc -l >> $@
-	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSRAW}/%,$@}/ -name '*.${XMLEXT}' -type f | \
-	xargs ${GZCAT} | sed 's/<[^>]*>//g' | wc -w >> $@
+	opus-cat -l $< | wc -l > $@
+	opus-cat    $< | grep '</s>' | wc -l >> $@
+	opus-cat    $< | sed 's/<[^>]*>//g' | wc -w >> $@
 	chmod 644 $@
 
 else
 
 ${LANG_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/raw/%.zip ${CORPUSRELEASE}/xml/%.zip
 	${MKDIR} ${dir $@}
-	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSRAW}/%,$@}/ -name '*.${XMLEXT}' -type f | \
-	wc -l > $@
-	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSRAW}/%,$@}/ -name '*.${XMLEXT}' -type f | \
-	xargs ${GZCAT} | grep '</s>' | wc -l >> $@
-	find ${patsubst ${CORPUSRELEASE}/info/%.info,${CORPUSXML}/%,$@}/ -name '*.${XMLEXT}' -type f | \
-	xargs ${GZCAT} | grep '</w>' | wc -l >> $@
+	opus-cat -l $< | wc -l > $@
+	opus-cat    $< | grep '</s>' | wc -l >> $@
+	opus-cat    $(word 2,$^) | grep '</w>' | wc -l >> $@
 	chmod 644 $@
 
 endif
@@ -1296,11 +1167,13 @@ endif
 ## make word count files for each corpus file
 ## if we don't have too many (>=10000) of them
 log/.bitext-word-counts:
-	if [ `find ${CORPUSXML} -mindepth 2 -name '*.xml.gz' | head -10000 | wc -l` -lt 10000 ]; then \
-	  find ${CORPUSXML} -mindepth 2 -name '*.xml.gz' | \
-	  sed 's/\.xml\.gz$$/.counts.gz/' | \
-	  xargs -P ${THREADS} ${MAKE}; \
-	fi
+	( n=`find ${CORPUSXML} -mindepth 2 -name '*.xml.gz' | head -10000 | wc -l`; \
+	  if [ $$n -gt 0 ] && [ $$n -lt 10000 ]; then \
+	    find ${CORPUSXML} -mindepth 2 -name '*.xml.gz' | \
+	    sed 's/\.xml\.gz$$/.counts.gz/' | \
+	    xargs -P ${THREADS} ${MAKE}; \
+	  fi )
+	mkdir -p $(dir $@)
 	touch $@
 
 
@@ -1438,9 +1311,15 @@ delete-empty-corpora:
 		rm -f ${CORPUSRELEASE}/raw/$$s.zip; \
 		rm -f ${CORPUSRELEASE}/xml/$$s.zip; \
 		rm -f ${CORPUSRELEASE}/truecaser/$$s.gz; \
-		mv -f ${CORPUSHOME}/xml/$$s ${CORPUSHOME}/DELETE/xml/; \
-		mv -f ${CORPUSHOME}/raw/$$s ${CORPUSHOME}/DELETE/raw/; \
-		mv -f ${CORPUSHOME}/parsed/$$s ${CORPUSHOME}/DELETE/parsed/; \
+		if [ -d ${CORPUSHOME}/xml/$$s ]; then \
+		  mv -f ${CORPUSHOME}/xml/$$s ${CORPUSHOME}/DELETE/xml/; \
+		fi; \
+		if [ -d ${CORPUSHOME}/raw/$$s ]; then \
+		  mv -f ${CORPUSHOME}/raw/$$s ${CORPUSHOME}/DELETE/raw/; \
+		fi; \
+		if [ -d ${CORPUSHOME}/parsed/$$s ]; then \
+		  mv -f ${CORPUSHOME}/parsed/$$s ${CORPUSHOME}/DELETE/parsed/; \
+		fi; \
 	      fi \
 	    fi \
 	done

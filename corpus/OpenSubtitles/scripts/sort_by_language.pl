@@ -79,6 +79,7 @@ sub read_info{
 	$lang = 'ze' if ($lang eq 'zhe');
 	$lang = 'yue' if ($lang eq 'zhc');
 	$lang = 'zh_TW' if ($lang eq 'zht');
+	$lang = 'zh_CN' if ($lang eq 'zh');
 	$lang = 'sr' if ($lang eq 'scc');
 	$lang = 'es_ES' if ($lang eq 'spn');
 	$lang = 'es_149' if ($lang eq 'spl');

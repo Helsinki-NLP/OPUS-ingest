@@ -20,7 +20,7 @@ NEW_ZIPFILES  := $(sort $(notdir $(wildcard new/*.zip) $(wildcard prev/*.zip)))
 PREV_ZIPFILES := $(notdir $(wildcard ${PREV_RELEASE}/xml/*.zip))
 
 NEW_ZIPFILES_LOWCASE := $(shell echo "${NEW_ZIPFILES}" | tr 'A-Z' 'a-z')
-OLD_ZIPFILES := $(filter-out ze_zh.zip ze_en.zip ${NEW_ZIPFILES} ${NEW_ZIPFILES_LOWCASE},${PREV_ZIPFILES})
+OLD_ZIPFILES := $(filter-out zh_cn.zip ze_zh.zip ze_en.zip ${NEW_ZIPFILES} ${NEW_ZIPFILES_LOWCASE},${PREV_ZIPFILES})
 
 LANGPAIRS := ${shell \
 	for s in ${LANGUAGES}; do \
@@ -189,34 +189,35 @@ ${BITEXT_ALIGN_JOBS}:
 
 ##---------------------------------------------------------
 ## merge previous XML files with new files
-## remove generated subtitles (done in subdir generated/)
+## - remove generated subtitles (done in subdir generated/)
+## - extract/remove devtest data (done in subdir devtest-xml)
 ##---------------------------------------------------------
 
-## TODO: is there a risk for a racing situation with the INFO file
-##       between parallel jobs creating zip files?
-
 %.zip:
-	mkdir -p ${WORKDIR}
-	if [ -e new/$@ ]; then unzip -n -q -d ${WORKDIR} new/$@; fi
-	if [ -e prev/$@ ]; then unzip -n -q -d ${WORKDIR} prev/$@; fi
+	mkdir -p ${WORKDIR}/${CORPUS}/xml
 	${MAKE} ${WORKDIR}/previous/$@
 	unzip -q -d ${WORKDIR}/${CORPUS}/xml -n ${WORKDIR}/previous/$@
 	rm -f ${WORKDIR}/previous/$@
-	echo "${CORPUS}/xml/$(@:.zip=)" > ${WORKDIR}/INFO
-	echo "${CORPUS}"               >> ${WORKDIR}/INFO
-	echo "${VERSION}"              >> ${WORKDIR}/INFO
-	cd ${WORKDIR} && zip -q -r ${PWD}/$@ INFO ${CORPUS}/xml/$(@:.zip=)
-	rm -fr ${WORKDIR}/${CORPUS}/xml/$(@:.zip=)
-	find ${WORKDIR} -delete
+	if [ -e prev/$@ ]; then unzip -n -q -d ${WORKDIR} prev/$@; fi
+	if [ -e new/$@ ];  then unzip -n -q -d ${WORKDIR} new/$@; fi
+	mkdir -p ${WORKDIR}/$@.d
+	echo "${CORPUS}/xml/$(@:.zip=)" > ${WORKDIR}/$@.d/INFO
+	echo "${CORPUS}"               >> ${WORKDIR}/$@.d/INFO
+	echo "${VERSION}"              >> ${WORKDIR}/$@.d/INFO
+	cd ${WORKDIR}/$@.d && zip -q ${CURDIR}/$@ INFO
+	cd ${WORKDIR} && zip -q -r ${CURDIR}/$@ ${CORPUS}/xml/$(@:.zip=)
+	find ${WORKDIR}/${CORPUS}/xml/$(@:.zip=) -delete
 	-${MAKE} -C generated $@
 	-${MAKE} -C ../devtest-xml $@
 
 
+
 ## extract and move files from previous release
 
-SUBTITLE_LANGSORT  := ${PWD}/../scripts/sort_by_language.pl
+# SUBTITLE_LANGSORT  := ${CURDIR}/../scripts/sort_by_language.pl
+SUBTITLE_LANGSORT  := ${CURDIR}/../scripts/sort_by_language_commands.pl
 PREVIOUS_RELEASE   := /projappl/nlpl/data/OPUS/OpenSubtitles/v2018/xml
-PREVIOUS_INFO_FILE := ${PWD}/../src/export_all.csv.gz
+PREVIOUS_INFO_FILE := ${CURDIR}/../src/export_all.csv.gz ${CURDIR}/../src/all-subs.csv.gz
 
 find_prev_langzip = $(shell \
 	if   [ -e ${PREVIOUS_RELEASE}/$1 ]; then echo $1; \
@@ -226,18 +227,29 @@ find_prev_langzip = $(shell \
 	else echo $1; \
 	fi )
 
+
+#	mkdir -p $@.d/xml/$(notdir $(@:.zip=))
+
 ${WORKDIR}/previous/%.zip:
-	mkdir -p $@.d/xml/$(notdir $(@:.zip=))
+	mkdir -p $@.d
 	( o=${PREVIOUS_RELEASE}/$(call find_prev_langzip,$(notdir $@)); \
 	  if [ -e $$o ]; then \
 	    unzip -q -d $@.d $$o; \
-	    cd  $@.d && find ${CORPUS} -type f | ${SUBTITLE_LANGSORT} ${PREVIOUS_INFO_FILE}; \
+	    cd  $@.d && find ${CORPUS} -type f | ${SUBTITLE_LANGSORT} ${PREVIOUS_INFO_FILE} > $@.tmp; \
+	    echo "#!/usr/bin/bash"       > $@.sh; \
+	    grep mkdir $@.tmp | sort -u >> $@.sh; \
+	    grep mv $@.tmp              >> $@.sh; \
+	    chmod +x $@.sh; \
+	    rm -f $@.tmp; \
+	    cd $@.d && $@.sh; \
+	    rm -f $@.sh; \
 	  fi )
-	if [ $(notdir $(@:.zip=)) == zh_CN ]; then mv $@.d/xml/zh $@.d/xml/zh_CN; fi
 	if [ $(notdir $(@:.zip=)) == zh_ze ]; then mv $@.d/xml/ze $@.d/xml/zh_ze; fi
 	if [ $(notdir $(@:.zip=)) == en_ze ]; then mv $@.d/xml/ze $@.d/xml/en_ze; fi
 	cd $@.d/xml && zip -r -q $@ $(notdir $(@:.zip=))
 	find $@.d -delete
+
+#	if [ $(notdir $(@:.zip=)) == zh_CN ]; then mv $@.d/xml/zh $@.d/xml/zh_CN; fi
 
 ##-------------------------------
 ## alignment-related targets

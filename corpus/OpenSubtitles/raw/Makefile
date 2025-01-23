@@ -91,7 +91,7 @@ print-only-in-previous-release:
 	echo "${CORPUS}/raw/$(@:.zip=)" > ${WORKDIR}/INFO
 	echo "${CORPUS}"               >> ${WORKDIR}/INFO
 	echo "${VERSION}"              >> ${WORKDIR}/INFO
-	cd ${WORKDIR} && zip -q -r ${PWD}/$@ INFO ${CORPUS}/raw/$(@:.zip=)
+	cd ${WORKDIR} && zip -q -r ${CURDIR}/$@ INFO ${CORPUS}/raw/$(@:.zip=)
 	rm -fr ${WORKDIR}/${CORPUS}/raw/$(@:.zip=)
 	find ${WORKDIR} -delete
 	-${MAKE} -C generated $@
@@ -103,9 +103,10 @@ print-only-in-previous-release:
 
 ## extract and move files from previous release
 
-SUBTITLE_LANGSORT  := ${PWD}/../scripts/sort_by_language.pl
+# SUBTITLE_LANGSORT  := ${PWD}/../scripts/sort_by_language.pl
+SUBTITLE_LANGSORT  := ${CURDIR}/../scripts/sort_by_language_commands.pl
 PREVIOUS_RELEASE   := /projappl/nlpl/data/OPUS/OpenSubtitles/v2018/raw
-PREVIOUS_INFO_FILE := ${PWD}/../src/export_all.csv.gz
+PREVIOUS_INFO_FILE := ${CURDIR}/../src/export_all.csv.gz ${CURDIR}/../src/all-subs.csv.gz
 
 find_prev_langzip = $(shell \
 	if   [ -e ${PREVIOUS_RELEASE}/$1 ]; then echo $1; \
@@ -116,15 +117,22 @@ find_prev_langzip = $(shell \
 	fi )
 
 ${WORKDIR}/previous/%.zip:
-	mkdir -p $@.d/xml/$(notdir $(@:.zip=))
+	mkdir -p $@.d
 	( o=${PREVIOUS_RELEASE}/$(call find_prev_langzip,$(notdir $@)); \
 	  if [ -e $$o ]; then \
 	    unzip -q -d $@.d $$o; \
-	    cd  $@.d && find ${CORPUS} -type f | ${SUBTITLE_LANGSORT} ${PREVIOUS_INFO_FILE}; \
+	    cd  $@.d && find ${CORPUS} -type f | ${SUBTITLE_LANGSORT} ${PREVIOUS_INFO_FILE} > $@.tmp; \
+	    echo "#!/usr/bin/bash"       > $@.sh; \
+	    grep mkdir $@.tmp | sort -u >> $@.sh; \
+	    grep mv $@.tmp              >> $@.sh; \
+	    chmod +x $@.sh; \
+	    rm -f $@.tmp; \
+	    cd $@.d && $@.sh; \
+	    rm -f $@.sh; \
 	  fi )
-	if [ $(notdir $(@:.zip=)) == zh_CN ]; then mv $@.d/xml/zh $@.d/xml/zh_CN; fi
 	if [ $(notdir $(@:.zip=)) == zh_ze ]; then mv $@.d/xml/ze $@.d/xml/zh_ze; fi
 	if [ $(notdir $(@:.zip=)) == en_ze ]; then mv $@.d/xml/ze $@.d/xml/en_ze; fi
 	cd $@.d/xml && zip -r -q $@ $(notdir $(@:.zip=))
 	find $@.d -delete
 
+#	if [ $(notdir $(@:.zip=)) == zh_CN ]; then mv $@.d/xml/zh $@.d/xml/zh_CN; fi

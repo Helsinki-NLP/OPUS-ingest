@@ -12,7 +12,7 @@ ifndef LANGUAGE
 	LANGUAGE=$(firstword ${LANGUAGES})
 endif
 
-RAW_FILE_FORMAT ?= TXTEXT
+RAW_FILE_FORMAT ?= ${TXTEXT}
 
 SRCDIR = src/${LANGUAGE}
 ifneq ("$(wildcard $(SRCDIR))","")
@@ -91,7 +91,7 @@ lexicon: lexicon/Makefile
 	${MAKE} -C lexicon all
 
 
-xml/Makefile:
+${CORPUSXML}/Makefile xml/Makefile:
 	@mkdir -p ${dir $@}
 	@echo "# -*-makefile-*-" > $@
 	@echo ""  >> $@
@@ -103,7 +103,7 @@ xml/Makefile:
 	@echo "jobs: sentalign-jobs" >> $@
 
 
-wordalign/Makefile:
+${CORPUSWORDALIGN}/Makefile wordalign/Makefile:
 	@mkdir -p ${dir $@}
 	@echo "# -*-makefile-*-" > $@
 	@echo ""  >> $@
@@ -114,7 +114,7 @@ wordalign/Makefile:
 	@echo "all: wordalign-all" >> $@
 
 
-lexicon/Makefile:
+${CORPUSLEXICON}/Makefile lexicon/Makefile:
 	@mkdir -p ${dir $@}
 	@echo "# -*-makefile-*-" > $@
 	@echo ""  >> $@

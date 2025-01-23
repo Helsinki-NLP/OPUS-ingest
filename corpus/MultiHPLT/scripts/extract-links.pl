@@ -30,7 +30,7 @@ sub XmlTagStart{
     if ($e eq 'link'){
 	my ($s,$t) = split(/\;/, $a{xtargets});
 	my $score = 0;
-	my ($ScoreAttr) = grep(/(score|certainty|likelihood|prob)/,keys %a);
+	my ($ScoreAttr) = grep(/^(score-bicleaner|score|certainty|likelihood|prob)$/,keys %a);
 	if ($ScoreAttr){
 	    if (defined $a{$ScoreAttr}){
 		$score = $a{$ScoreAttr};

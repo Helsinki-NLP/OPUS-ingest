@@ -76,6 +76,7 @@ CORPUSPARSED     = ${CORPUSHOME}/parsed
 CORPUSPUB        = ${OPUSPUB}/${CORPUS}/${VERSION}
 CORPUSRELEASE    = ${OPUSRELEASE}/${CORPUS}/${VERSION}
 CORPUSWORDALIGN  = ${CORPUSHOME}/wordalign
+CORPUSLEXICON    = ${CORPUSHOME}/lexicon
 
 ## TODO: rename this to CORPUSVERSION?
 VERSION         ?= latest
@@ -106,13 +107,12 @@ UDCWBREG     = ${UDCWB}/reg
 # TODO: check that this really corresponds to valid lang-IDs!
 
 ifndef LANGUAGES
-  LANGUAGES = $(sort $(notdir ${shell if [ -e ${CORPUSRAW} ]; then \
-		find ${CORPUSRAW} -mindepth 1 -maxdepth 1 -type d -printf "%f "; fi}))
+  LANGUAGES = $(sort $(patsubst %.zip,%,$(notdir $(wildcard ${CORPUSRAW}/*.zip))) \
+		     $(shell find ${CORPUSRAW} -mindepth 1 -maxdepth 1 -type d -printf "%f "))
 endif
 
 ifeq (${LANGUAGES},)
-  LANGUAGES = $(sort $(notdir ${shell if [ -e ${CORPUSSRC} ]; then \
-		find ${CORPUSRAW} -mindepth 1 -maxdepth 1 -type d -printf "%f "; fi}))
+  LANGUAGES = $(sort $(shell find ${CORPUSSRC} -mindepth 1 -maxdepth 1 -type d -printf "%f "))
 endif
 
 

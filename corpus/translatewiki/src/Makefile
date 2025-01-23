@@ -76,7 +76,7 @@ ${WORKDIR}/files: ${TRANSLATION_DUMP}
 
 ## convert all .po files for a specific project dir
 
-PO2OPUS = ${CURDIR}/../scripts/multipo2opus
+PO2OPUS = multipo2opus
 
 ${POCONVERT}: %.done: %
 	if [ $(words $(wildcard $</*.po)) -gt 0 ]; then \

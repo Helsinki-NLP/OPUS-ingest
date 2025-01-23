@@ -44,9 +44,9 @@ use File::Temp qw/ tempfile /;
 use DB_File;
 # use DBM_Filter;
 
-use vars qw($opt_d $opt_o $opt_p $opt_P $opt_r $opt_t $opt_u $opt_v);
+use vars qw($opt_d $opt_D $opt_o $opt_p $opt_P $opt_r $opt_t $opt_u $opt_v);
 use Getopt::Std;
-getopts('do:p:Prt:uv');
+getopts('dD:o:p:Prt:uv');
 
 
 $DB_BTREE->{'cachesize'} = 1000000 ;
@@ -72,6 +72,7 @@ if ($part){
 my %LangSeg = ();
 my %LangDB  = ();
 my %LangDBH = ();
+my %LangDBfile = ();
 my $CurrentLang = 'en';
 
 my %SentID = ();
@@ -100,6 +101,7 @@ while (<>){
     ## delete everything before the XML declaration
     if (/<\?xml/){
 	s/^.*(<\?xml)/$1/s;
+	&copy_db_files() if ($opt_d && $opt_D);
 	print STDERR "\nparse TMX file\n" if ($opt_v);
 	$TMXParser = new XML::Parser(Handlers => {Start => \&XmlTagStart,
 						  End => \&XmlTagEnd,
@@ -116,7 +118,27 @@ while (<>){
 
 &close_corpora();
 &close_bitexts();
+if ($opt_d && $opt_D){
+    &copy_db_files();
+    foreach my $lang (keys %LangDBfile){
+	unlink $LangDBfile{$lang};
+    }
+}
 
+
+## move DB files from temp to some other directory
+
+sub copy_db_files{
+    system("mkdir -p $opt_D") unless (-d $opt_D);
+    foreach my $lang (keys %LangDBfile){
+	$LangDB{$lang}{__LAST_SENT_ID__} = $SentID{$lang};
+	undef $LangDBH{$lang};
+	untie %{$LangDB{$lang}};
+	sleep 1;
+	system("rsync $LangDBfile{$lang} $opt_D/$lang.db");
+	$LangDBH{$lang} = tie %{$LangDB{$lang}}, "DB_File", $LangDBfile{$lang}, O_CREAT|O_RDWR, 0666, $DB_BTREE ;
+    }
+}
 
 
 sub close_corpora{
@@ -168,7 +190,8 @@ sub XmlTagStart{
 	    $p->{OPEN_PROP} = $a{type};
 	}
 	# elsif ($a{type}=~/^(score[a-zA-Z\-\_]*|type|info)$/){
-	elsif ($a{type}=~/^(score[a-zA-Z\-\_]*|info)$/){
+	# elsif ($a{type}=~/^(score[a-zA-Z\-\_]*|info)$/){
+	elsif ($a{type}=~/^(score[a-zA-Z\-\_]*)$/){
 	    $p->{OPEN_PROP} = $a{type};
 	}
     }
@@ -262,17 +285,17 @@ sub print_links{
     my $link = join(' ',@{$SrcIDs}).';'.join(' ',@{$TrgIDs});
 
     ## make some minor adjustments to link properties coming from ParaCrawl data
-    unless ($opt_P){
-	if (exists $LinkProp{'score-aligner'}){
-	    $LinkProp{'hunalign'} = $LinkProp{'score-aligner'};
-	    delete $LinkProp{'score-aligner'};
-	}
-	if (exists $LinkProp{'score-bicleaner'}){
-	    $LinkProp{'score'} = $LinkProp{'score-bicleaner'};
-	    delete $LinkProp{'score-bicleaner'};
-	}
-	delete $LinkProp{'lengthRatio'};
-    }
+    # unless ($opt_P){
+    # 	if (exists $LinkProp{'score-aligner'}){
+    # 	    $LinkProp{'hunalign'} = $LinkProp{'score-aligner'};
+    # 	    delete $LinkProp{'score-aligner'};
+    # 	}
+    # 	if (exists $LinkProp{'score-bicleaner'}){
+    # 	    $LinkProp{'score'} = $LinkProp{'score-bicleaner'};
+    # 	    delete $LinkProp{'score-bicleaner'};
+    # 	}
+    # 	delete $LinkProp{'lengthRatio'};
+    # }
 
     $BitextWriter{$LangPair}->emptyTag('link',
 				       'id' => 'L'.$LinkID{$LangPair},
@@ -339,7 +362,16 @@ sub find_sentence{
 	## create a new DB file if necessary
 	if ($opt_d){
 	    my $filename = get_tempfile($opt_t);
+	    if ($opt_D){
+		if (-e "$opt_D/$lang.db"){
+		    system("rsync $opt_D/$lang.db $filename");
+		}
+	    }
 	    $LangDBH{$lang} = tie %{$LangDB{$lang}}, "DB_File", $filename, O_CREAT|O_RDWR, 0666, $DB_BTREE ;
+	    $LangDBfile{$lang} = $filename;
+	    if (exists $LangDB{$lang}{__LAST_SENT_ID__}){
+		$SentID{$lang} = $LangDB{$lang}{__LAST_SENT_ID__};
+	    }
 	    ## this does not seem to work
 	    ## from https://www.perl.com/pub/2012/06/perlunicook-unicode-text-in-dbm-files-the-easy-way.html/
 	    # my $dbobj = tie %{$LangDB{$lang}}, "DB_File", $filename ;

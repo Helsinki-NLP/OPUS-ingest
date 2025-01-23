@@ -13,7 +13,7 @@ LANGUAGES      := $(sort $(patsubst %.zip,%,$(wildcard *.zip)))
 LANGPAIRS := ${shell \
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
-	    if [[ ! "$$s" > "$$t" ]]; then \
+	    if [[ "$$s" < "$$t" ]]; then \
 	      echo "$$s-$$t"; \
 	    fi \
 	  done \
@@ -44,7 +44,8 @@ ALGFILES      := $(addprefix ${WORKDIR}/$(SRC)-$(TRG)/,${COMMON_MOVIES})
 
 
 .PHONY: all
-all: ${LANG_ZIPFILES}
+all:
+	-${MAKE} extract-devtest
 	${MAKE} align-all
 	${MAKE} testsets
 	${MAKE} devsets
@@ -52,7 +53,8 @@ all: ${LANG_ZIPFILES}
 	touch all.done
 
 .PHONY: all-jobs
-all-jobs: ${LANG_ZIPFILES}
+all-jobs:
+	-${MAKE} extract-devtest
 	${MAKE} align-jobs
 	while [ $(words $(wildcard done/*.gz)) -ne $(words $(LANGPAIRS)) ]; do \
 	  echo "waiting for align jobs in devtest-xml"; \
@@ -66,6 +68,9 @@ all-jobs: ${LANG_ZIPFILES}
 ## extraction of devtest files (released in DEVTEST_YEAR)
 ## also removes those files from original xml zipfile
 ##-------------------------------------------------------
+
+.PHONY: extract-devtest
+extract-devtest: ${LANG_ZIPFILES}
 
 %.zip:
 	mkdir -p ${CORPUS}/xml/$(@:.zip=)

@@ -1,17 +1,16 @@
 
 # OpenSubtitles2024
 
-- tarfile with new files: 2024-12-14
-- IDs of generated subtitles files
+- tarfile with new files: export-2024.tar (2024-12-14)
+- incomplete metadata file: export-2024.tsv.gz
 
-Problems:
-```
-zcat src/export-2024.tsv.gz | wc -l 
-gzip: src/export-2024.tsv.gz: unexpected end of file
-336910
-tar -tf src/export-2024.tar | grep '\.gz' | wc -l 
-338902
-```
+- tarball with previously missing subtitle files: export-missing.tar
+- metadata-file for all subtitle files: all-subs.csv.gz
+
+- IDs of generated subtitles files:
+  * generated-subtitles-t07-48.csv
+  * generated-subtitles-t10-00.csv
+
 
 
 # OpenSubtitles2018

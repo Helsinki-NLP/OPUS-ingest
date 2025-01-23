@@ -77,7 +77,7 @@ publish-job:
 	${MAKE} moses
 	${MAKE} copy-tmx-files
 	${MAKE} publish
-	${MAKE} release
+#	${MAKE} release
 #	${MAKE} wordalign/Makefile
 #	${MAKE} -C wordalign submit-all
 #	${MAKE} HPC_CORES=8 HPC_MEM=8g HPC_TIME=72:00 udparse.submit

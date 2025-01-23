@@ -5,11 +5,11 @@ include ../Makefile.def
 PWD := ${shell pwd}
 
 
-TMX2OPUS  = ../scripts/tmx2opus-btree
+TMX2OPUS  = $(CURDIR)/../scripts/tmx2opus-btree
 # TMX2OPUS  = tmx2opus
 # TMX2OPUS = ../scripts/tmx2opus-tc
 
-OPUS_PIVOTING = ../scripts/opus-pivoting
+OPUS_PIVOTING = $(CURDIR)/../scripts/opus-pivoting
 # OPUS_PIVOTING = opus-pivoting
 # OPUS_PIVOTING = ../scripts/opus-pivoting -t score -n 1
 
@@ -22,8 +22,7 @@ endif
 
 .PHONY: all
 all:
-	-ln -s ../../HPLT/src/*.tmx.gz .
-	${MAKE} ${CORPUSRAW}
+	${MAKE} convert
 	${MAKE} pivoting
 
 PIVOT = en
@@ -33,7 +32,7 @@ PIVOT = en
 
 ## link files sorted by pivot language sentence IDs
 
-PIVOT_LINKFILES = ${patsubst %,%.alg,${wildcard ${CORPUSXML}/*${PIVOT}*.xml.gz}}
+PIVOT_LINKFILES = ${addsuffix .alg,${wildcard ${CORPUSXML}/${PIVOT}-*.xml.gz} ${wildcard ${CORPUSXML}/*-${PIVOT}.xml.gz}}
 
 ## all new language combinations
 
@@ -70,21 +69,59 @@ ${PIVOTED_BITEXTS}: ${PIVOT_LINKFILES}
 	  ${MAKE} -C ${CORPUSXML} SRC=$$s TRG=$$t create-align-file; )
 
 
+# .PHONY: convert
+# convert: ${CORPUSRAW}
+
+# ${CORPUSRAW}:
+# 	mkdir -p ${CORPUSRAW}
+# 	( cd ${CORPUSRAW} && \
+# 	  find -L ${PWD} -name '*.tmx.gz' |\
+# 	  xargs zcat | ${UNICODE_CLEANUP} |\
+# 	  ${TMX2OPUS} -u -d -t ${TMPDIR} -o hplt_${RELEASE}.xml.gz )
+# 	mkdir -p ${CORPUSXML}
+# 	${MAKE} -C .. xml/Makefile
+# 	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/
+# 	${MAKE} -C ${CORPUSXML} create-align-files
+# 	touch ${CORPUSRAW}
+
+
 .PHONY: convert
-convert: ${CORPUSRAW}
-
-
-${CORPUSRAW}:
-	mkdir -p ${CORPUSRAW}
-	( cd ${CORPUSRAW} && \
-	  find -L ${PWD} -name '*.tmx.gz' |\
-	  xargs zcat | ${UNICODE_CLEANUP} |\
-	  ${TMX2OPUS} -u -d -t ${TMPDIR} -o hplt_${RELEASE}.xml.gz )
-	mkdir -p ${CORPUSXML}
+convert:
+	-ln -s ../../HPLT/src/*.tmx.gz .
+	${MAKE} -j1 convert-tmx-files
+	mv *.tmx.gz.d/*-* ${CORPUSXML}/
+	${MAKE} merge-corpus-files
 	${MAKE} -C .. xml/Makefile
-	-mv -f ${CORPUSRAW}/*-* ${CORPUSXML}/
 	${MAKE} -C ${CORPUSXML} create-align-files
-	touch ${CORPUSRAW}
+
+
+CONVERTED_LANGS    := $(notdir $(wildcard *.tmx.gz.d/*))
+CONVERTED_CORPORA  := $(patsubst %,${CORPUSRAW}/%/hplt_${RELEASE}.xml.gz,${CONVERTED_LANGS})
+
+merge-corpus-files: ${CONVERTED_CORPORA}
+
+${CONVERTED_CORPORA}:
+	mkdir -p $(dir $@)
+	echo '<?xml version="1.0" encoding="UTF-8"?>' > $(@:.gz=)
+	echo "<text>"                                >> $(@:.gz=)
+	ls -rt *.tmx.gz.d/$(patsubst ${CORPUSRAW}/%/,%,$(dir $@))/*.xml.gz \
+	| xargs zgrep --no-filename '<s id'          >> $(@:.gz=)
+	echo "</text>"                               >> $(@:.gz=)
+	gzip -f $(@:.gz=)
+
+
+
+TMXFILES      := $(sort $(wildcard *.tmx.gz))
+TMXFILES_DONE := $(addsuffix .done,${TMXFILES})
+
+convert-tmx-files: ${TMXFILES_DONE}
+
+${TMXFILES_DONE}: %.done: %
+	mkdir -p $<.d
+	cd $<.d && zcat ${CURDIR}/$< | ${UNICODE_CLEANUP} \
+	| ${TMX2OPUS} -u -d -t ${TMPDIR} -D ${CORPUSSRC}/langdb -o hplt_${RELEASE}.xml.gz
+	touch $@
+
 
 
 

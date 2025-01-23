@@ -424,6 +424,6 @@ ${SRT2XML_FILES}: ${WORKDIR}/${CORPUS}/xml/%.xml: ${WORKDIR}/srt/%.gz
 	  mkdir -p $(dir $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/raw2/%,$@)); \
 	  tidy -xml -utf8 -i \
 		< $(<:.gz=2.gz).xml \
-		> $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/xml2/%,$@) 2>/dev/null;
+		> $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/xml2/%,$@) 2>/dev/null; \
 	  mv $(<:.gz=2.gz).raw $(patsubst ${WORKDIR}/${CORPUS}/xml/%,${WORKDIR}/${CORPUS}/raw2/%,$@); \
 	fi
