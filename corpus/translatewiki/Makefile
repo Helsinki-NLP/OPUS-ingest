@@ -14,6 +14,17 @@ all:
 	${MAKE} publish
 
 
+upload-translatewiki:
+	${MAKE} upload
+	${MAKE} info-yaml
+
+
+release-corpus:
+	${MAKE} langid-mappings
+	${MAKE} index-info
+	${MAKE} upload-website
+	${MAKE} update-git
+
 publish-moses:
 	${MAKE} moses
 	${MAKE} txt_info

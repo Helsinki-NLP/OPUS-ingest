@@ -8,10 +8,7 @@
 # - word alignment
 #
 
-ifndef LANGUAGE
-	LANGUAGE=$(firstword ${LANGUAGES})
-endif
-
+LANGUAGE ?= $(firstword ${LANGUAGES})
 RAW_FILE_FORMAT ?= ${TXTEXT}
 
 SRCDIR = src/${LANGUAGE}
@@ -45,9 +42,9 @@ corpus-extra:
 	${MAKE} wordalign
 	${MAKE} cwb-index
 
-## publish the corpus (create website and download packages)
-.PHONY: publish
-publish: packages webpage
+## create corpus release (download packages and website)
+.PHONY: publish release
+publish release: packages webpage
 
 
 ## prepare makefiles

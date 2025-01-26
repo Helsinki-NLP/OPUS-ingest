@@ -95,7 +95,7 @@ convert:
 	${MAKE} -C ${CORPUSXML} create-align-files
 
 
-CONVERTED_LANGS    := $(notdir $(wildcard *.tmx.gz.d/*))
+CONVERTED_LANGS    := $(sort $(notdir $(wildcard *.tmx.gz.d/*)))
 CONVERTED_CORPORA  := $(patsubst %,${CORPUSRAW}/%/hplt_${RELEASE}.xml.gz,${CONVERTED_LANGS})
 
 merge-corpus-files: ${CONVERTED_CORPORA}

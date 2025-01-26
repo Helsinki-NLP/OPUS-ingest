@@ -111,7 +111,7 @@ align: $(SRC)-$(TRG).xml.gz
 align-all: ${BITEXT_ALGFILES}
 
 align-job:
-	${MAKE} HPC_CORES=32 HPC_DISK=500 HPC_MEM=16g align.submit
+	${MAKE} HPC_CORES=32 HPC_DISK=500 HPC_MEM=64g align.submit
 
 BITEXT_ALIGN_JOBS := $(patsubst %,%-job,${LANGPAIRS})
 
@@ -120,7 +120,7 @@ align-jobs: ${BITEXT_ALIGN_JOBS}
 .PHONY: ${BITEXT_ALIGN_JOBS}
 ${BITEXT_ALIGN_JOBS}:
 	if [ ! -e $(@:-job=.xml.gz) ]; then \
-	  ${MAKE} HPC_CORES=16 HPC_DISK=100 HPC_MEM=16g EMAIL= $(@:-job=.xml.gz).submit; \
+	  ${MAKE} HPC_CORES=16 HPC_DISK=100 HPC_MEM=32g EMAIL= $(@:-job=.xml.gz).submit; \
 	fi
 
 

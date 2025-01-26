@@ -60,7 +60,7 @@ all-jobs: ${ALIGN_JOBS}
 .PHONY: ${ALIGN_JOBS}
 ${ALIGN_JOBS}:
 	if [ ! -e $(@:-job=.xml.gz) ]; then \
-	  ${MAKE} HPC_CORES=16 HPC_DISK=500 HPC_MEM=24g EMAIL= $(@:-job=.xml.gz).submit; \
+	  ${MAKE} HPC_CORES=16 HPC_DISK=500 HPC_MEM=32g EMAIL= $(@:-job=.xml.gz).submit; \
 	fi
 
 

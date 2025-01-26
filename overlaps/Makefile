@@ -100,14 +100,29 @@ job-bitext-puhti:
 
 
 ## only some selected languages
+
+HPLT_V1_LANGUAGES := ar bs ca en et eu fi ga gl hi hr is mk mt nn sq sr sw
+HPLT_V1_TO_ENG    := ar bs ca
+HPLT_V1_FROM_ENG  := et eu fi ga gl hi hr is mk mt nn sq sr sw zh_hant
+
+HPLT_V2_LANGUAGES := af ar az be bg bn bs ca cy en et eu fa fi ga gl gu he hi hr is ja kk kn ko lt lv mk ml mr ms mt nb ne nn si sk sl sq sr sw ta te th tr uk ur uz vi xh
+HPLT_V2_TO_ENG    := af ar az be bg bn bs ca cy 
+HPLT_V2_FROM_ENG  := et eu fa fi ga gl gu he hi hr is ja kk kn ko lt lv mk ml mr ms mt nb ne nn si sk sl sq sr sw ta te th tr uk ur uz vi xh
+
+
+HPLT_LANGUAGES := ${HPLT_V2_LANGUAGES}
+HPLT_TO_ENG    := ${HPLT_V2_TO_ENG}
+HPLT_FROM_ENG  := ${HPLT_V2_FROM_ENG}
+
 .PHONY: hplt-english-bitext-jobs
 hplt-english-bitext-jobs:
-	make 	FIND_LANGUAGES_ALIGNED_TO_ENGLISH='echo "ar bs ca"' \
-		FIND_LANGUAGES_ALIGNED_FROM_ENGLISH='echo "et eu fi ga gl hi hr is mk mt nn sq sr sw zh_hant"' \
+	make 	FIND_LANGUAGES_ALIGNED_TO_ENGLISH='echo "${HPLT_TO_ENG}"' \
+		FIND_LANGUAGES_ALIGNED_FROM_ENGLISH='echo "${HPLT_FROM_ENG}"' \
 	en-bitext-jobs
 
+.PHONY: hplt-mono-jobs
 hplt-mono-jobs:
-	for l in ar bs ca et eu fi ga gl hi hr is mk mt nn sq sr sw; do \
+	for l in ${HPLT_LANGUAGES}; do \
 	  ${MAKE} LANGUAGE=$$l HPC_BIG_MEM=64g HPC_BIG_CORES=4 HPC_BIG_DISK=500 job-mono-puhti; \
 	done
 
