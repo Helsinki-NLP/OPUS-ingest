@@ -1,5 +1,8 @@
 # -*-makefile-*-
 
+LANGUAGES := $(sort 	$(patsubst %.tar,%,$(notdir $(wildcard src/subtitles-all/*.tar))) \
+			$(patsubst %.zip,%,$(notdir $(wildcard raw/*.zip))))
+
 include Makefile.def
 include ../Makefile.def
 
@@ -30,6 +33,9 @@ testsets:
 	${MAKE} -C devtest-raw all
 
 
+
+ttt:
+	echo ${LANGUAGES}
 
 
 ## OLD?

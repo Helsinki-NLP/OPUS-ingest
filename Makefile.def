@@ -116,6 +116,11 @@ ifeq (${LANGUAGES},)
 endif
 
 
+CESALG_FILES ?= $(wildcard ${CORPUSXML}/*.xml.gz)
+LANGPAIRS    ?= $(patsubst ${CORPUSXML}/%.xml.gz,%,${CESALG_FILES})
+
+
+ifeq (${LANGPAIRS},)
 
 ## all language pairs sorted by lang IDs
 ## only one combination
@@ -128,14 +133,20 @@ LANGPAIRS = ${shell \
 	  done \
 	done  }
 
+endif
+
+
 ## all pairs for a specific source language
 ## (this is handy to work with all bitexts for the curren language)
-SRCLANGPAIRS = ${shell \
-	for t in ${LANGUAGES}; do \
-	  if [[ "${SRC}" < "$$t" ]]; then \
-	    echo "${SRC}-$$t"; \
-	  fi \
-	done  }
+SRCLANGPAIRS = $(filter $(SRC)-%,${LANGPAIRS})
+
+
+# SRCLANGPAIRS = ${shell \
+# 	for t in ${LANGUAGES}; do \
+# 	  if [[ "${SRC}" < "$$t" ]]; then \
+# 	    echo "${SRC}-$$t"; \
+# 	  fi \
+# 	done  }
 
 
 # general file extension of files in the corpus

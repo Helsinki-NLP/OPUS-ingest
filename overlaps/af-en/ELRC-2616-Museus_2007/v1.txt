@@ -7,6 +7,7 @@ ELRC-3039-wikipedia_health	v1	404	1/3	33.33
 ELRC-Museus_2007	v1	3	3/3	100.00
 ELRC-wikipedia_health	v1	404	1/3	33.33
 GNOME	v1	21732	0/3	0
+HPLT	v2	3986950	0/3	0
 KDE4	v2	57435	0/3	0
 MultiCCAligned	v1	1497460	1/3	33.33
 NLLB	v1	39177332	0/3	0

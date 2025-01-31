@@ -223,7 +223,7 @@ mono-release-jobs: ${LANGUAGE_RELEASE_JOBS}
 para-release-jobs: ${LANGPAIR_RELEASE_JOBS}
 
 ${LANGUAGE_RELEASE_JOBS}:
-	${MAKE} HPC_MEM=16g HPC_CORES=2 HPC_DISK=200 EMAIL= $(@:-job=).submit
+	${MAKE} HPC_MEM=16g HPC_CORES=2 HPC_DISK=500 EMAIL= $(@:-job=).submit
 
 ${LANGPAIR_RELEASE_JOBS}:
 	@echo "submit $@ only if the required monolingual release files exist!"
@@ -231,7 +231,7 @@ ${LANGPAIR_RELEASE_JOBS}:
 	  if [ -e ${CORPUSRELEASE}/raw/$(lastword $(subst -, ,$(@:-release-job=))).zip ]; then \
 	    if [ -e ${CORPUSRELEASE}/xml/$(firstword $(subst -, ,$(@:-release-job=))).zip ]; then \
 	      if [ -e ${CORPUSRELEASE}/xml/$(lastword $(subst -, ,$(@:-release-job=))).zip ]; then \
-	        ${MAKE} HPC_MEM=16g HPC_CORES=2 HPC_DISK=200 EMAIL= $(@:-job=).submit; \
+	        ${MAKE} HPC_MEM=16g HPC_CORES=2 HPC_DISK=500 EMAIL= $(@:-job=).submit; \
 	      fi \
 	    fi \
 	  fi \
@@ -554,7 +554,7 @@ ${OPUSPUB}/${CORPUS}-${VERSION}.php: ${PACKAGES} ${CORPUS_SAMPLES} ${ALG_SAMPLES
 	@chmod 755 ${dir $@}
 	@chmod 755 ${OPUSPUB}/${CORPUS}
 	@chmod 755 ${OPUSPUB}/${CORPUS}/${VERSION}
-	@${MAKEHTML} -h ${OPUSPUB} -o ${OPUSHOME} -d ${OPUSRELEASE} ${CORPUS} ${VERSION} |\
+	@${MAKEHTML} -h ${OPUSPUB} -o ${OPUSHOME} -d ${OPUSRELEASE} -x ${CORPUSRELEASE}/xml ${CORPUS} ${VERSION} |\
 	sed -e 's|<h3>Download</h3>|<h3>Download</h3>${DOWNLOADINFO_SAFE}${EXTRAHTML_SAFE}${OTHERVERSIONS}|' \
 	    -e 's|<h3>Download</h3>|${CITENOTE_SAFE}<h3>Download</h3>|' \
 	    -e 's|<h1>${CORPUS}${VERSION}</h1>|<h1>${CORPUS} ${VERSION}</h1>${SRCHTML_SAFE}|' \
@@ -566,7 +566,7 @@ ${OPUSPUB}/${CORPUS}-${VERSION}.php: ${PACKAGES} ${CORPUS_SAMPLES} ${ALG_SAMPLES
 
 
 create-website-without-dependencies:
-	@${MAKEHTML} -h ${OPUSPUB} -o ${OPUSHOME} -d ${OPUSRELEASE} ${CORPUS} ${VERSION} |\
+	@${MAKEHTML} -h ${OPUSPUB} -o ${OPUSHOME} -d ${OPUSRELEASE} -x ${CORPUSRELEASE}/xml ${CORPUS} ${VERSION} |\
 	sed -e 's|<h3>Download</h3>|<h3>Download</h3>${DOWNLOADINFO_SAFE}${EXTRAHTML_SAFE}${OTHERVERSIONS}|' \
 	    -e 's|<h3>Download</h3>|${CITENOTE_SAFE}<h3>Download</h3>|' \
 	    -e 's|<h1>${CORPUS}${VERSION}</h1>|<h1>${CORPUS} ${VERSION}</h1>${SRCHTML_SAFE}|' \
@@ -761,7 +761,7 @@ ${TMPDIR}/${CORPUS}/%.zip: ${CORPUSHOME}/%
 	@${MKDIR} $(dir $@)
 	rsync -a $< $(dir $@)
 	find $(@:.zip=) -type l -delete
-	find $(@:.zip=) -name '*.${XMLEXT}' | xargs -P ${THREADS} gunzip -f
+	find $(@:.zip=) -name '*.gz' | xargs -P ${THREADS} gunzip -f
 	cd ${TMPDIR} && zip -r $@ $(patsubst ${TMPDIR}/%,%,$(@:.zip=))
 	find $(@:.zip=) -delete
 
@@ -806,29 +806,73 @@ mono_tok: ${MONO_TOK}
 mono_raw: ${MONO_RAW}
 
 
-${MONO_TOK}: ${CORPUSRELEASE}/mono/%.tok.gz: ${CORPUSRELEASE}/xml/%.zip
-	@${MKDIR} ${LOCALTMP}/mono/xml
-	@rsync $< ${LOCALTMP}/mono/xml/
-	opus-cat -t ${LOCALTMP}/mono/xml/$(notdir $<) \
-	| ${GZIP} -c > ${LOCALTMP}/mono/xml/$(notdir $@)
+${CORPUSRELEASE}/mono/%.tok.gz: ${CORPUSRELEASE}/xml/%.zip
 	@${MKDIR} ${dir $@}
-	@mv ${LOCALTMP}/mono/xml/$(notdir $@) $@
-	@rm -f ${LOCALTMP}/mono/xml/$(notdir $<)
-	@${MKDIR} ${dir ${PACKAGES}}
-	@echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
-	@chmod 644 $@
+	unzip -p $< '*.xml' | ${OPUSTOOLS}/opus2txt.py | ${GZIP} -c > $@
+	${MKDIR} ${dir ${PACKAGES}}
+	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+	chmod 644 $@
 
-${MONO_RAW}: ${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRELEASE}/raw/%.zip
-	${MKDIR} ${LOCALTMP}/mono/raw
-	@rsync $< ${LOCALTMP}/mono/raw/
-	opus-cat -t ${LOCALTMP}/mono/raw/$(notdir $<) \
-	| ${GZIP} -c > ${LOCALTMP}/mono/raw/$(notdir $@)
+${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRELEASE}/raw/%.zip
 	@${MKDIR} ${dir $@}
-	@mv ${LOCALTMP}/mono/raw/$(notdir $@) $@
-	@rm -f ${LOCALTMP}/mono/raw/$(notdir $<)
-	@${MKDIR} ${dir ${PACKAGES}}
-	@echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
-	@chmod 644 $@
+	unzip -p $< '*.xml' | ${OPUSTOOLS}/opus2txt.py | ${GZIP} -c > $@
+	${MKDIR} ${dir ${PACKAGES}}
+	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+	chmod 644 $@
+
+
+
+# ## simple text extraction from XML documents using regular expressions
+# ## TODO: should probably replace that with some proper XML parser
+# ##       or with opus_cat from opustools
+# ## TODO: need to add `-Mopen=locale` to perl call?
+
+# ${CORPUSRELEASE}/mono/%.tok.gz: ${CORPUSRELEASE}/xml/%.zip
+# 	@${MKDIR} ${dir $@}
+# 	unzip -p $< \
+# 	| perl -pe  's/\n/ /g;s/<\/s>/\n/g;s/<[^>]*>//g;s/  */ /gs;' \
+# 	| perl -MHTML::Entities -pe 's/[^\S\n]+/ /g;s/[^\S\n]+$$//g;s/^[^\S\n]+//g;$$_ = decode_entities($$_);' \
+# 	| ${GZIP} -c > $@
+# 	${MKDIR} ${dir ${PACKAGES}}
+# 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+# 	chmod 644 $@
+
+# ${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRELEASE}/raw/%.zip
+# 	@${MKDIR} ${dir $@}
+# 	unzip -p $< \
+# 	| perl -pe  's/\n/ /g;s/<\/s>/\n/g;s/<[^>]*>//g;s/  */ /gs;' \
+# 	| perl -MHTML::Entities -pe 's/[^\S\n]+/ /g;s/[^\S\n]+$$//g;s/^[^\S\n]+//g;$$_ = decode_entities($$_);' \
+# 	| ${GZIP} -c > $@
+# 	${MKDIR} ${dir ${PACKAGES}}
+# 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+# 	chmod 644 $@
+
+
+# ${MONO_TOK}: ${CORPUSRELEASE}/mono/%.tok.gz: ${CORPUSRELEASE}/xml/%.zip
+# 	@${MKDIR} ${LOCALTMP}/mono/xml
+# 	@rsync $< ${LOCALTMP}/mono/xml/
+# 	opus-cat -t ${LOCALTMP}/mono/xml/$(notdir $<) \
+# 	| ${GZIP} -c > ${LOCALTMP}/mono/xml/$(notdir $@)
+# 	@${MKDIR} ${dir $@}
+# 	@mv ${LOCALTMP}/mono/xml/$(notdir $@) $@
+# 	@rm -f ${LOCALTMP}/mono/xml/$(notdir $<)
+# 	@${MKDIR} ${dir ${PACKAGES}}
+# 	@echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+# 	@chmod 644 $@
+
+# ${MONO_RAW}: ${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRELEASE}/raw/%.zip
+# 	${MKDIR} ${LOCALTMP}/mono/raw
+# 	@rsync $< ${LOCALTMP}/mono/raw/
+# 	opus-cat -t ${LOCALTMP}/mono/raw/$(notdir $<) \
+# 	| ${GZIP} -c > ${LOCALTMP}/mono/raw/$(notdir $@)
+# 	@${MKDIR} ${dir $@}
+# 	@mv ${LOCALTMP}/mono/raw/$(notdir $@) $@
+# 	@rm -f ${LOCALTMP}/mono/raw/$(notdir $<)
+# 	@${MKDIR} ${dir ${PACKAGES}}
+# 	@echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+# 	@chmod 644 $@
+
+
 
 # ${CORPUSRELEASE}/mono/%.tok.gz: ${CORPUSRELEASE}/xml/%.zip
 # 	@${MKDIR} ${dir $@}
@@ -844,6 +888,11 @@ ${MONO_RAW}: ${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRELEASE}/raw/%.zip
 # 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 # 	chmod 644 $@
 
+
+
+
+
+# unzip -p OpenSubtitles/xml/af.zip '*.xml' | perl -pe  's/\n/ /g;s/<\/s>/\n/g;s/<[^>]*>//g;s/  */ /gs;' | perl -pe 's/[^\S\n]+/ /g;s/[^\S\n]+$//g;s/^[^\S\n]+//g;' | head
 
 
 ## de-duplicated monolingual texts
@@ -899,17 +948,21 @@ alg_samples: ${ALG_SAMPLES}
 # which would be used for many sample files (year = 0)
 # (they look messy and should actually be removed from the corpus)
 
-ifndef UNSORTED_SENTALIGN
 
-${ALG_SAMPLES}:  ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%.xml.gz
-	@${MKDIR} ${dir $@}
-	opus-read \
-		-d ${CORPUSRAW} \
-		-h -m 100 \
-		-N '\/0\/' \
-	$< > $@
-	chmod 644 $@
-else
+## NEW: don't use opus-read anymore for this
+##      just extract from TMX files
+
+# ifndef UNSORTED_SENTALIGN
+
+# ${ALG_SAMPLES}:  ${CORPUSPUB}/%_sample.html: ${CORPUSXML}/%.xml.gz
+# 	@${MKDIR} ${dir $@}
+# 	opus-read \
+# 		-d ${CORPUSRAW} \
+# 		-h -m 100 \
+# 		-N '\/0\/' \
+# 	$< > $@
+# 	chmod 644 $@
+# else
 
 ${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	@${MKDIR} ${dir $@}
@@ -929,20 +982,29 @@ ${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	echo '</body></html/>' >> $@
 	chmod 644 $@
 
-endif
+# endif
 
 
 
 .PHONY: corpus_samples
 corpus_samples: ${CORPUS_SAMPLES}
 
-${CORPUS_SAMPLES}:
+
+${CORPUS_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/xml/%.zip
 	@${MKDIR} ${dir $@}
-	echo '<html><head></head><body><pre>' >$@
-	-opus-cat ${patsubst ${CORPUSPUB}/%_sample.html,${CORPUSXML}/%,$@} \
-	| head -100 | recode utf8..utf16 | recode utf16..html >> $@
+	echo '<html><head></head><body><pre>'      >$@
+	-unzip -p $< '*.xml' | head -100 \
+	| recode utf8..utf16 | recode utf16..html >> $@
 	echo '</pre></body></html>' >> $@
 	chmod 644 $@
+
+# ${CORPUS_SAMPLES}:
+# 	@${MKDIR} ${dir $@}
+# 	echo '<html><head></head><body><pre>' >$@
+# 	-opus-cat ${patsubst ${CORPUSPUB}/%_sample.html,${CORPUSXML}/%,$@} \
+# 	| head -100 | recode utf8..utf16 | recode utf16..html >> $@
+# 	echo '</pre></body></html>' >> $@
+# 	chmod 644 $@
 
 
 
@@ -1032,41 +1094,118 @@ ${CORPUSRELEASE}/xml/%.strict.xml.gz: ${CORPUSXML}/%.xml.gz
 
 ## convert XML to moses files
 
-$(MOSES) $(MOSES_STRICT): ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSRELEASE}/xml/%.xml.gz
-	@mkdir -p ${TMPDIR}/$@.d
-	@( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
-	   T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
-	   echo "copy source ($$S) and target ($$T) language files to tmp"; \
-	   for L in $$S $$T; do \
-	     if [ -e ${CORPUSRELEASE}/raw/$$L.zip ]; then \
-	       echo "rsync ${CORPUSRELEASE}/raw/$$L.zip ${TMPDIR}/$@.d/"; \
-	       rsync ${CORPUSRELEASE}/raw/$$L.zip ${TMPDIR}/$@.d/; \
-	     elif [ -e ${CORPUSRAW}/$$L.zip ]; then \
-	       echo "rsync ${CORPUSRAW}/$$L.zip ${TMPDIR}/$@.d"; \
-	       rsync ${CORPUSRAW}/$$L.zip ${TMPDIR}/$@.d/; \
-	     elif [ -e ${CORPUSRAW}/$$L ]; then \
-	       echo "rsync -a ${CORPUSRAW}/$$L ${TMPDIR}/$@.d/"; \
-	       rsync -a ${CORPUSRAW}/$$L ${TMPDIR}/$@.d/; \
-	     fi \
-	   done; \
-	   F=${CORPUS}.$(notdir $(@:.txt.zip=)); \
-	   if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
-	   ${GZCAT} $< \
-	   | $(OPUS2MOSES) -v -r -d ${TMPDIR}/$@.d \
-				-e ${TMPDIR}/$@.d/$$F.$$S \
-				-f ${TMPDIR}/$@.d/$$F.$$T \
-				-b ${TMPDIR}/$@.d/$$F.xml; \
-	   ${MAKE} PACKAGE="${CORPUS}.$$S-$$T in Moses format" ${TMPDIR}/$@.d/README ${TMPDIR}/$@.d/LICENSE; \
-	   zip -j ${TMPDIR}/$@ ${TMPDIR}/$@.d/README ${TMPDIR}/$@.d/LICENSE \
-		${TMPDIR}/$@.d/$$F.$$S ${TMPDIR}/$@.d/$$F.$$T ${TMPDIR}/$@.d/$$F.xml; \
-	   find ${TMPDIR}/$@.d -delete; )
-	@mkdir -p $(dir $@)
-	@mv -f ${TMPDIR}/$@ $@
-	@echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
-	@chmod 644 $@
+# $(MOSES) $(MOSES_STRICT): ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSRELEASE}/xml/%.xml.gz
+# 	@mkdir -p ${TMPDIR}/$@.d
+# 	@( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+# 	   T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
+# 	   echo "copy source ($$S) and target ($$T) language files to tmp"; \
+# 	   for L in $$S $$T; do \
+# 	     if [ -e ${CORPUSRELEASE}/raw/$$L.zip ]; then \
+# 	       echo "rsync ${CORPUSRELEASE}/raw/$$L.zip ${TMPDIR}/$@.d/"; \
+# 	       rsync ${CORPUSRELEASE}/raw/$$L.zip ${TMPDIR}/$@.d/; \
+# 	     elif [ -e ${CORPUSRAW}/$$L.zip ]; then \
+# 	       echo "rsync ${CORPUSRAW}/$$L.zip ${TMPDIR}/$@.d"; \
+# 	       rsync ${CORPUSRAW}/$$L.zip ${TMPDIR}/$@.d/; \
+# 	     elif [ -e ${CORPUSRAW}/$$L ]; then \
+# 	       echo "rsync -a ${CORPUSRAW}/$$L ${TMPDIR}/$@.d/"; \
+# 	       rsync -a ${CORPUSRAW}/$$L ${TMPDIR}/$@.d/; \
+# 	     fi \
+# 	   done; \
+# 	   F=${CORPUS}.$(notdir $(@:.txt.zip=)); \
+# 	   if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
+# 	   ${GZCAT} $< \
+# 	   | $(OPUS2MOSES) -v -r -d ${TMPDIR}/$@.d \
+# 				-e ${TMPDIR}/$@.d/$$F.$$S \
+# 				-f ${TMPDIR}/$@.d/$$F.$$T \
+# 				-b ${TMPDIR}/$@.d/$$F.xml; \
+# 	   ${MAKE} PACKAGE="${CORPUS}.$$S-$$T in Moses format" ${TMPDIR}/$@.d/README ${TMPDIR}/$@.d/LICENSE; \
+# 	   zip -j ${TMPDIR}/$@ ${TMPDIR}/$@.d/README ${TMPDIR}/$@.d/LICENSE \
+# 		${TMPDIR}/$@.d/$$F.$$S ${TMPDIR}/$@.d/$$F.$$T ${TMPDIR}/$@.d/$$F.xml; \
+# 	   find ${TMPDIR}/$@.d -delete; )
+# 	@mkdir -p $(dir $@)
+# 	@mv -f ${TMPDIR}/$@ $@
+# 	@echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+# 	@chmod 644 $@
 
 
 
+
+## new: use opus_read
+## NEW: skip ID file (do we need those?)
+##      if yes, then add `-id ${LOCALTMP}/$$F.ids` to opus_read and also add the file to the zip-archive
+
+# # 
+# ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSRELEASE}/xml/%.xml.gz
+# 	@mkdir -p ${LOCALTMP}/${CORPUS}/${VERSION}/raw
+# 	@( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<))))); \
+# 	   T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<))))); \
+# 	   if [ -e ${CORPUSRELEASE}/raw/$$S.zip ] && [ -e ${CORPUSRELEASE}/raw/$$T.zip ]; then \
+# 	      rsync ${CORPUSRELEASE}/raw/$$S.zip ${LOCALTMP}/${CORPUS}/${VERSION}/raw/; \
+# 	      rsync ${CORPUSRELEASE}/raw/$$T.zip ${LOCALTMP}/${CORPUS}/${VERSION}/raw/; \
+# 	      F=${CORPUS}.$(notdir $(@:.txt.zip=)); \
+# 	      if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
+# 	      opus_read -rd ${LOCALTMP} -r ${VERSION} -d ${CORPUS} -p raw \
+# 			-S 1-100 -T 1-100 -s $$S -t $$T -af $< \
+# 			-wm moses -w ${LOCALTMP}/$$F.$$S ${LOCALTMP}/$$F.$$T; \
+# 	      ${MAKE} PACKAGE="${CORPUS}.$$S-$$T in Moses format" ${LOCALTMP}/README ${LOCALTMP}/LICENSE; \
+# 	      zip -j ${LOCALTMP}/$(notdir $@) ${LOCALTMP}/README ${LOCALTMP}/LICENSE \
+# 			${LOCALTMP}/$$F.$$S ${LOCALTMP}/$$F.$$T; \
+# 	      mkdir -p $(dir $@); \
+# 	      mv -f ${LOCALTMP}/$(notdir $@) $@; \
+# 	      mkdir -p ${CORPUSRELEASE}/info; \
+# 	      wc -l < ${LOCALTMP}/$$F.$$S  > $(CORPUSRELEASE)/info/$(notdir $(@:zip=info)); \
+# 	      wc -w < ${LOCALTMP}/$$F.$$S >> $(CORPUSRELEASE)/info/$(notdir $(@:zip=info)); \
+# 	      wc -w < ${LOCALTMP}/$$F.$$T >> $(CORPUSRELEASE)/info/$(notdir $(@:zip=info)); \
+# 	      rm -f ${LOCALTMP}/${CORPUS}/${VERSION}/raw/$$S.zip \
+# 	            ${LOCALTMP}/${CORPUS}/${VERSION}/raw/$$T.zip \
+# 	            ${LOCALTMP}/$$F.$$S ${LOCALTMP}/$$F.$$T \
+# 	            ${LOCALTMP}/README ${LOCALTMP}/LICENSE; \
+# 	      echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}; \
+# 	      chmod 644 $@; \
+# 	      chmod 644 $(CORPUSRELEASE)/info/$(notdir $(@:zip=info); \
+# 	   fi )
+
+
+## use opus_read to extract bitexts and convert to Moses format
+##
+## secondary expansion is needed to create dependency on monolingual zip-files
+##   - ${CORPUSRELEASE}/raw/src.zip
+##   - ${CORPUSRELEASE}/raw/trg.zip
+##
+## NEW: skip ID file (do we need those?)
+##      if yes, then add `-id ${LOCALTMP}/$$F.ids` to opus_read
+##              and also add the file to the zip-archive
+##
+## NEW: already count size here to create info files
+
+.SECONDEXPANSION:
+
+$(MOSES) $(MOSES_STRICT): ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSRELEASE}/xml/%.xml.gz \
+	${CORPUSRELEASE}/raw/$$(firstword $$(subst -, ,$$(firstword $$(subst ., ,$$(notdir $$@))))).zip \
+	${CORPUSRELEASE}/raw/$$(lastword $$(subst -, ,$$(firstword $$(subst ., ,$$(notdir $$@))))).zip
+	@mkdir -p ${LOCALTMP}/${CORPUS}/${VERSION}/raw
+	rsync $(sort $^) ${LOCALTMP}/${CORPUS}/${VERSION}/raw/
+	mkdir -p ${CORPUSRELEASE}/moses ${CORPUSRELEASE}/info
+	( F=${CORPUS}.$(notdir $(@:.txt.zip=)); \
+	  S=$(patsubst %.zip,%,$(notdir $(word 2,$^))); \
+	  T=$(patsubst %.zip,%,$(notdir $(word 3,$^))); \
+	  if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
+	  opus_read -rd ${LOCALTMP} -r ${VERSION} -d ${CORPUS} -p raw \
+			-S 1-100 -T 1-100 -s $$S -t $$T \
+			-af ${LOCALTMP}/${CORPUS}/${VERSION}/raw/$(notdir $<) \
+			-wm moses -w ${LOCALTMP}/$$F.$$S ${LOCALTMP}/$$F.$$T; \
+	  zip -j ${LOCALTMP}/$(notdir $@) ${LOCALTMP}/$$F.$$S ${LOCALTMP}/$$F.$$T; \
+	  wc -l < ${LOCALTMP}/$$F.$$S  > $(CORPUSRELEASE)/info/$(notdir $(@:zip=info)); \
+	  wc -w < ${LOCALTMP}/$$F.$$S >> $(CORPUSRELEASE)/info/$(notdir $(@:zip=info)); \
+	  wc -w < ${LOCALTMP}/$$F.$$T >> $(CORPUSRELEASE)/info/$(notdir $(@:zip=info)); \
+	  rm -f ${LOCALTMP}/${CORPUS}/${VERSION}/raw/$(notdir $^) ${LOCALTMP}/$$F.$$S ${LOCALTMP}/$$F.$$T; )
+	${MAKE} PACKAGE="$$S-$$T in Moses format" ${LOCALTMP}/README ${LOCALTMP}/LICENSE
+	zip -j ${LOCALTMP}/$(notdir $@) ${LOCALTMP}/README ${LOCALTMP}/LICENSE
+	rm -f ${LOCALTMP}/README ${LOCALTMP}/LICENSE
+	mv -f ${LOCALTMP}/$(notdir $@) $@
+	touch $(CORPUSRELEASE)/info/$(notdir $(@:zip=info))
+	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
+	chmod 644 $@ $(CORPUSRELEASE)/info/$(notdir $(@:zip=info))
 
 
 .PHONY: smt
@@ -1175,22 +1314,34 @@ ifdef SKIP_TOKENIZATION
 
 ${LANG_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/raw/%.zip
 	${MKDIR} ${dir $@}
-	opus-cat -l $< | wc -l > $@
-	opus-cat    $< | grep '</s>' | wc -l >> $@
-	opus-cat    $< | sed 's/<[^>]*>//g' | wc -w >> $@
+	unzip -Z1 $< '*.xml'                     | wc -l > $@
+	unzip -p $< '*.xml' | grep '</s>'        | wc -l >> $@
+	unzip -p $< '*.xml' | sed 's/<[^>]*>//g' | wc -w >> $@
 	chmod 644 $@
 
 else
 
 ${LANG_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/raw/%.zip ${CORPUSRELEASE}/xml/%.zip
 	${MKDIR} ${dir $@}
-	opus-cat -l $< | wc -l > $@
-	opus-cat    $< | grep '</s>' | wc -l >> $@
-	opus-cat    $(word 2,$^) | grep '</w>' | wc -l >> $@
+	unzip -Z1 $(word 1,$^) '*.xml'               | wc -l > $@
+	unzip -p  $(word 1,$^) '*.xml' | grep '</s>' | wc -l >> $@
+	unzip -p  $(word 2,$^) '*.xml' | grep '</w>' | wc -l >> $@
 	chmod 644 $@
 
 endif
 
+
+
+# bitext counts
+#
+# TODO: this is not very efficient
+#   --> create counts for individual XML files (if there is < 10000 files
+#       and some those counts using opus-bitextsize
+#   --> otherwise: extract all data with opus_read
+#       and count lines and words
+#
+# prevsiously: just use opus-bitextsize script
+# BUT that does not seem to work on zip-files > 4GB
 
 ces_info: ${CES_INFO}
 ces_info_file: ${CORPUSRELEASE}/info/${LANGPAIR}.info
@@ -1199,25 +1350,54 @@ ces_info_file: ${CORPUSRELEASE}/info/${LANGPAIR}.info
 ifdef SKIP_TOKENIZATION
 
 ${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/raw/%.xml.gz
-	mkdir -p ${dir $@}
-	${GZCAT} $< | opus-bitextsize -d ${CORPUSRAW} > $@
-	chmod 644 $@
+	mkdir -p ${dir $@} ${LOCALTMP}
+	opus_read -rd ${OPUSRELEASE} -r ${VERSION} -d ${CORPUS} -p raw -af $< -wm moses \
+		-s $(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<))))) \
+		-t $(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<))))) \
+		-w ${LOCALTMP}/$(notdir $@).source ${LOCALTMP}/$(notdir $@).target
+	zgrep '</linkGrp>' $< | wc -l          > $@
+	wc -l ${LOCALTMP}/$(notdir $@).source >> $@
+	wc -w ${LOCALTMP}/$(notdir $@).source >> $@
+	wc -w ${LOCALTMP}/$(notdir $@).target >> $@
+	rm -f ${LOCALTMP}/$(notdir $@).source ${LOCALTMP}/$(notdir $@).target
+
+#	mkdir -p ${dir $@}
+#	${GZCAT} $< | opus-bitextsize -d ${CORPUSRAW} > $@
+#	chmod 644 $@
 
 else
 
 ## NEW: use opus-bitextsize to get those counts
 ## NEW: create word count files to make it more efficient
 ## TODO: should we do any of this in some local tmpdir?
+## NEW: use opus_read if we don't have count-files
 ${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/xml/%.xml.gz log/.bitext-word-counts
 	mkdir -p ${dir $@}
-	${GZCAT} $< |\
-	opus-bitextsize -d ${CORPUSXML} > $@
+	if [ `find ${CORPUSXML} -name '*.counts.gz' | wc -l` -gt 0 ]; then \
+	  ${GZCAT} $< | opus-bitextsize -d ${CORPUSXML} > $@; \
+	else \
+	  mkdir -p ${LOCALTMP}; \
+	  opus_read -rd ${OPUSRELEASE} -r ${VERSION} -d ${CORPUS} -p xml -af $< -wm moses \
+		-s $(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<))))) \
+		-t $(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<))))) \
+		-w ${LOCALTMP}/$(notdir $@).source ${LOCALTMP}/$(notdir $@).target; \
+	  zgrep '</linkGrp>' $< | wc -l            > $@; \
+	  wc -l < ${LOCALTMP}/$(notdir $@).source >> $@; \
+	  wc -w < ${LOCALTMP}/$(notdir $@).source >> $@; \
+	  wc -w < ${LOCALTMP}/$(notdir $@).target >> $@; \
+	  rm -f ${LOCALTMP}/$(notdir $@).source ${LOCALTMP}/$(notdir $@).target; \
+	fi
 	chmod 644 $@
+
+#	mkdir -p ${dir $@}
+#	${GZCAT} $< | opus-bitextsize -d ${CORPUSXML} > $@
+#	chmod 644 $@
+
 
 endif
 
 ## make word count files for each corpus file
-## if we don't have too many (>=10000) of them
+## if we don't have too many of them  (<10000)
 log/.bitext-word-counts:
 	( n=`find ${CORPUSXML} -mindepth 2 -name '*.xml.gz' -not -empty | head -10000 | wc -l`; \
 	  if [ $$n -gt 0 ] && [ $$n -lt 10000 ]; then \
@@ -1235,6 +1415,8 @@ ${CORPUSXML}/%.counts.gz: ${CORPUSXML}/%.xml.gz
 	${GZIP} -cd < $< | opus-countwords | grep . | gzip -c > $@
 
 
+## TODO: are those db-targets still in use?
+
 log/.bitext-word-count-dbs:
 	@mkdir -p ${dir $@}
 	find ${CORPUSXML} -mindepth 2 -name '*.counts.gz' | \
@@ -1246,6 +1428,9 @@ ${CORPUSXML}/%.cdb: ${CORPUSXML}/%.counts.gz
 	${GZCAT} $< |\
 	perl ~/research/OpusTools-perl/scripts/admin/opus-tsv2cdb $@
 
+
+
+## counts for MOSES files
 
 txt_info: ${TXT_INFO}
 
@@ -1271,6 +1456,8 @@ ${TXT_INFO}: ${CORPUSRELEASE}/info/%.txt.info: ${CORPUSRELEASE}/moses/%.txt.zip
 	chmod 644 $@
 
 
+## counts for TMX files
+
 tmx_info: ${TMX_INFO}
 
 ${TMX_INFO}: ${CORPUSRELEASE}/info/%.tmx.info: ${CORPUSRELEASE}/tmx/%.tmx.gz
@@ -1285,6 +1472,7 @@ ${TMX_INFO}: ${CORPUSRELEASE}/info/%.tmx.info: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	  	sed 's|^.*<seg>||;s|</seg>.*$$||;' | \
 	  	wc -w >> $@; )
 	chmod 644 $@
+
 
 ## TODO: is it enough to check whether the info dir exists?
 ${OPUSRELEASE}/%.info: ${OPUSRELEASE}/%

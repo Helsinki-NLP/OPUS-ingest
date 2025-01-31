@@ -136,6 +136,8 @@ sub copy_db_files{
 	untie %{$LangDB{$lang}};
 	sleep 1;
 	system("rsync $LangDBfile{$lang} $opt_D/$lang.db");
+	sleep 1;
+	%{$LangDB{$lang}} = ();
 	$LangDBH{$lang} = tie %{$LangDB{$lang}}, "DB_File", $LangDBfile{$lang}, O_CREAT|O_RDWR, 0666, $DB_BTREE ;
     }
 }
@@ -365,6 +367,7 @@ sub find_sentence{
 	    if ($opt_D){
 		if (-e "$opt_D/$lang.db"){
 		    system("rsync $opt_D/$lang.db $filename");
+		    sleep 1;
 		}
 	    }
 	    $LangDBH{$lang} = tie %{$LangDB{$lang}}, "DB_File", $filename, O_CREAT|O_RDWR, 0666, $DB_BTREE ;
@@ -380,6 +383,7 @@ sub find_sentence{
 	}
     }
     if (exists $LangDB{$lang}{$sent}){
+	print STDERR "found sentence $LangDB{$lang}{$sent} ($sent)\n" if ($opt_v);
 	return $LangDB{$lang}{$sent};
     }
     return undef;

@@ -7,6 +7,7 @@ ELRC-wikipedia_health	v1	3160	0/149	0
 GlobalVoices	v2015	696	0/149	0
 GlobalVoices	v2017q3	1027	0/149	0
 GlobalVoices	v2018q4	1028	0/149	0
+HPLT	v2	8686082	0/149	0
 KDE4	v2	73377	26/149	17.44
 MultiCCAligned	v1	5302760	15/149	10.06
 NeuLab-TedTalks	v1	218152	0/149	0

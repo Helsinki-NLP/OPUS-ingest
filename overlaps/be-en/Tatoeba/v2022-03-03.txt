@@ -5,6 +5,7 @@ ELRC-3046-wikipedia_health	v1	203	1/6765	.01
 ELRC-wikipedia_health	v1	203	1/6765	.01
 EUbookshop	v2	5	0/6765	0
 GNOME	v1	149	0/6765	0
+HPLT	v2	3140950	37/6765	.54
 KDE4	v2	74958	1/6765	.01
 MultiCCAligned	v1	1120720	12/6765	.17
 NeuLab-TedTalks	v1	5085	3/6765	.04

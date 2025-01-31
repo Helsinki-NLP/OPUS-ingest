@@ -21,3 +21,7 @@ academic .... tools freely available for research purposes
 nonfree ..... non-free or licensed tools
 
 
+
+possibly interesting tools:
+
+* fast text extraction from XML with xmlcutty: https://github.com/miku/xmlcutty
