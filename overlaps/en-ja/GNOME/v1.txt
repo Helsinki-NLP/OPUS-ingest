@@ -10,6 +10,7 @@ KFTT	v1.0	428858	1/50	2.00
 LinguaTools-WikiTitles	v2014	7374389	4/50	8.00
 MDN_Web_Docs	v2023-09-25	86246	4/50	8.00
 MultiCCAligned	v1	25892129	4/50	8.00
+MultiHPLT	v2	18894014	0/50	0
 NeuLab-TedTalks	v1	213706	0/50	0
 News-Commentary	v11	637	0/50	0
 News-Commentary	v14	638	0/50	0

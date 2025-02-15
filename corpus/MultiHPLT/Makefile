@@ -30,7 +30,7 @@ all-job:
 ## that will submit tokenization jobs when ready
 convert-job:
 	${MAKE} -C src convert
-	${MAKE} HPC_CORES=1 HPC_MEM=128g HPC_DISK=100 HPC_TIME=3-00:00 pivoting-job.submit
+	${MAKE} HPC_CORES=16 HPC_MEM=32g HPC_DISK=100 HPC_TIME=3-00:00 pivoting-job.submit
 #	${MAKE} HPC_CORES=1 HPC_MEM=256g HPC_DISK=100 HPC_TIME=3-00:00 pivoting-job.submit
 
 pivoting-job:
@@ -41,6 +41,10 @@ pivoting-job:
 	  ${MAKE} HPC_CORES=8 THREADS=4 HPC_MEM=128g HPC_TIME=72:00 HPC_DISK=500 publish.submit; \
 	fi
 
+
+ttt:
+	${OPUSTOOLS}/info2yaml.pl -b ${OPUSRELEASE}/${CORPUS}
+#	${MAKE} ${OPUSRELEASE}/${CORPUS}/info.txt
 
 finish-import:
 	${MAKE} MAKEARGS="LANGUAGE=en" LANGUAGE=en tokenize-job
@@ -58,15 +62,17 @@ finish-import:
 only-pivoting-job:
 	${MAKE} -C src pivoting
 	${MAKE} delete-empty-bitexts
-	mkdir -p english/raw english/xml
-	-mv ${CORPUSRAW}/*en* english/raw/
-	-mv ${CORPUSXML}/en-* english/xml/
-	-mv ${CORPUSXML}/*-en english/xml/
-	-mv ${CORPUSXML}/*-en.* english/xml/
+#	mkdir -p english/raw english/xml
+#	-mv ${CORPUSRAW}/*en* english/raw/
+#	-mv ${CORPUSXML}/en-* english/xml/
+#	-mv ${CORPUSXML}/*-en english/xml/
+#	-mv ${CORPUSXML}/*-en.* english/xml/
+
+#	for l in $(filter-out en,$(sort $(notdir $(wildcard ${CORPUSRAW}/?? ${CORPUSRAW}/??_*)))); do
 
 tokenize-jobs:
 	mkdir -p log
-	for l in $(filter-out en,$(sort $(notdir $(wildcard ${CORPUSRAW}/?? ${CORPUSRAW}/??_*)))); do \
+	for l in $(sort $(notdir $(wildcard ${CORPUSRAW}/?? ${CORPUSRAW}/??_*))); do \
 	  ${MAKE} MAKEARGS="LANGUAGE=$$l" LANGUAGE=$$l HPC_CORES=1 HPC_MEM=4g HPC_TIME=72:00 \
 	  tokenize-job.submit; \
 	  rm -f tokenize-job.submit;\

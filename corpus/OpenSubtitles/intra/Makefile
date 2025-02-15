@@ -19,38 +19,40 @@ MOVIES    := $(patsubst ${WORKDIR}/${LANGUAGE}/%,%,$(wildcard ${WORKDIR}/${LANGU
 ALGFILES  := $(addprefix ${WORKDIR}/$(LANGUAGE)-$(LANGUAGE)/,${MOVIES})
 
 
+LOGALL    := $(wildcard *.log.gz)
+XMLALL    := $(wildcard *.xml.gz)
+XMLINSERT := $(wildcard *.insert.xml.gz)
+XMLPCT    := $(wildcard *.pct.xml.gz)
+XMLSPELL  := $(wildcard *.spell.xml.gz)
+XMLOTHER  := $(wildcard *.other.xml.gz)
+
+TMXINSERT := $(patsubst %.xml.gz,${CORPUSRELEASE}/intra/%.tmx.gz,$(XMLINSERT))
+TMXPCT    := $(patsubst %.xml.gz,${CORPUSRELEASE}/intra/%.tmx.gz,$(XMLPCT))
+TMXSPELL  := $(patsubst %.xml.gz,${CORPUSRELEASE}/intra/%.tmx.gz,$(XMLSPELL))
+TMXOTHER  := $(patsubst %.xml.gz,${CORPUSRELEASE}/intra/%.tmx.gz,$(XMLOTHER))
+
+MOINSERT  := $(patsubst %.xml.gz,${CORPUSRELEASE}/intra/%.txt.zip,$(XMLINSERT))
+MOPCT     := $(patsubst %.xml.gz,${CORPUSRELEASE}/intra/%.txt.zip,$(XMLPCT))
+MOSPELL   := $(patsubst %.xml.gz,${CORPUSRELEASE}/intra/%.txt.zip,$(XMLSPELL))
+MOOTHER   := $(patsubst %.xml.gz,${CORPUSRELEASE}/intra/%.txt.zip,$(XMLOTHER))
 
 
-TMXINSERT= $(patsubst %.xml.gz,${CORPUSHTML}/%.tmx.gz,$(wildcard *.insert.xml.gz))
-TMXPCT   = $(patsubst %.xml.gz,${CORPUSHTML}/%.tmx.gz,$(wildcard *.pct.xml.gz))
-TMXSPELL = $(patsubst %.xml.gz,${CORPUSHTML}/%.tmx.gz,$(wildcard *.spell.xml.gz))
-TMXOTHER = $(patsubst %.xml.gz,${CORPUSHTML}/%.tmx.gz,$(wildcard *.other.xml.gz))
-
-MOINSERT= $(patsubst %.xml.gz,${CORPUSHTML}/%.txt.zip,$(wildcard *.insert.xml.gz))
-MOPCT   = $(patsubst %.xml.gz,${CORPUSHTML}/%.txt.zip,$(wildcard *.pct.xml.gz))
-MOSPELL = $(patsubst %.xml.gz,${CORPUSHTML}/%.txt.zip,$(wildcard *.spell.xml.gz))
-MOOTHER = $(patsubst %.xml.gz,${CORPUSHTML}/%.txt.zip,$(wildcard *.other.xml.gz))
-
-CES      = $(wildcard *.xml.gz)
-CES_INFO = $(patsubst %.xml.gz,../xml/%.info,${CES})
-CES_PUB  = $(patsubst %,${CORPUSHTML}/%,${CES})
-
-## sample from "other"
-ALG_SAMPLES = $(patsubst %.other.xml.gz,${CORPUSPUB}/%_sample.html, ${wildcard *.other.xml.gz})
-
-
-TAB2TMX    = ${UPLUGHOME}/tools/tab2tmx
-OPUS2MOSES = $(UPLUGHOME)/tools/xces2moses
-
-
-
-
-SENTALIGN  = ../scripts/find_translation_alternatives.pl -m
+TAB2TMX   := bitext2tmx
+SENTALIGN := ../scripts/find_translation_alternatives.pl -m
 
 
 .PHONY: all
 all: ${INTRAFILES}
 	${MAKE} cleanup
+
+
+## make release files for the intralingual alignments
+
+.PHONY: release-all
+# release-all: ${XMLALL} ${LOGALL} ${MOINSERT} ${MOPCT} ${MOSPELL} ${TMXINSERT} ${TMXPCT} ${TMXSPELL}
+release-all: ${XMLALL} ${LOGALL} ${TMXOTHER}
+
+
 
 ALIGN_JOBS := $(patsubst %,%-job,${LANGPAIRS})
 
@@ -63,10 +65,9 @@ ${ALIGN_JOBS}:
 	  ${MAKE} HPC_CORES=16 HPC_DISK=500 HPC_MEM=32g EMAIL= $(@:-job=.xml.gz).submit; \
 	fi
 
-
-
 .PHONY: align
 align: ${LANGPAIR}.xml.gz
+
 
 
 .PHONY: cleanup
@@ -202,13 +203,13 @@ remove_empty_dir:
 
 
 
-tmx: ${CORPUSHTML}
+tmx:
 	make -j 2 tmx-insert 
 	make -j 2 tmx-spell 
 	make -j 2 tmx-pct 
 	make -j 2 tmx-other
 
-moses: ${CORPUSHTML}
+moses:
 	make -j 2 mo-insert 
 	make -j 2 mo-spell 
 	make -j 2 mo-pct 
@@ -225,62 +226,31 @@ mo-pct: $(MOPCT)
 mo-other: $(MOOTHER)
 
 
-%.tmx.gz: %.txt.zip
+${CORPUSRELEASE}/intra/%.tmx.gz: ${CORPUSRELEASE}/intra/%.txt.zip
 	unzip $<
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  P=$$S-$$T; \
-	  SEXT="$$S"; TEXT="$$T"; \
-	  if [ "$$SEXT" = "$$TEXT" ]; then SEXT=$${SEXT}1;TEXT=$${TEXT}2; fi; \
-	  paste ${CORPUS}.$$P.$$SEXT ${CORPUS}.$$P.$$TEXT |\
+	  s="$${S}1"; t="$${T}2"; \
+	  paste ${CORPUS}.$$P.$$s ${CORPUS}.$$P.$$t |\
 	  sed = - | sed 'N;s/\n/\t/' | sort -k 2 | uniq -f 1 | sort -n |\
 	  cut -f2,3 |\
 	  $(TAB2TMX) -s $$S -t $$T |\
 	  gzip -c > $@; \
-	  rm -f ${CORPUS}.$$P.$$SEXT ${CORPUS}.$$P.$$TEXT ${CORPUS}.$$P.ids; )
+	  rm -f ${CORPUS}.$$P.$$s ${CORPUS}.$$P.$$t; )
 
-${CORPUSHTML}/%.txt.zip: %.xml.gz
+${CORPUSRELEASE}/intra/%.txt.zip: ${CORPUSRELEASE}/intra/%.xml.gz
 	( S="$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))))";\
-	  T="$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))))";\
+	  T="$(lastword  $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))))";\
+	  s="$${S}1"; t="$${T}2"; \
 	  P=$$S-$$T; \
-	  if [ "$$S" = "$$T" ]; then S="$${S}1";T="$${T}2"; fi; \
-	  $(OPUS2MOSES) -d ${CORPUSRAW} -s $$S -t $$T \
-		-P ${CORPUS}.$$P.ids \
-		$< ${CORPUS}.$$P; \
-	  rm -f $@; \
-	  sed 's/  */ /g' < ${CORPUS}.$$P.$$S > ${CORPUS}.$$P.$$S.tmp; \
-	  sed 's/  */ /g' < ${CORPUS}.$$P.$$T > ${CORPUS}.$$P.$$T.tmp; \
-	  mv ${CORPUS}.$$P.$$S.tmp ${CORPUS}.$$P.$$S; \
-	  mv ${CORPUS}.$$P.$$T.tmp ${CORPUS}.$$P.$$T; \
-	  zip $@ ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; \
-	  rm -f ${CORPUS}.$$P.$$S ${CORPUS}.$$P.$$T ${CORPUS}.$$P.ids; )
+	  opus_read -rd ${OPUSRELEASE} -r ${VERSION} -d ${CORPUS} -p raw \
+			-S 1-100 -T 1-100 -s $$S -t $$T -af $< \
+			-wm moses -w ${CORPUS}.$$P.$$s ${CORPUS}.$$P.$$t; \
+	  zip $@ ${CORPUS}.$$P.$$s ${CORPUS}.$$P.$$t; \
+	  rm -f ${CORPUS}.$$P.$$s ${CORPUS}.$$P.$$t; )
 
+${CORPUSRELEASE}/intra/%.gz: %.gz
+	mkdir -p $(dir $@)
+	rsync $< $@
 
-${CES_INFO}: ../xml/%.info: %.xml.gz
-	zgrep 'fromDoc' $< | wc -l > $@
-	zgrep 'xtargets' $< | wc -l >> $@
-	( zgrep 'fromDoc' $< | \
-	  tr ' ' "\n" | grep 'fromDoc' | cut -f2 -d '"' |\
-	  xargs zcat | \
-	  grep '</w>' | wc -l >> $@ )
-	( zgrep 'toDoc' $< | \
-	  tr ' ' "\n" | grep 'toDoc' | cut -f2 -d '"' |\
-	  xargs zcat | \
-	  grep '</w>' | wc -l >> $@ )
-
-
-${CES_PUB}: ${CORPUSHTML}/%: %
-	-mv $< $@
-	-ln -s ${subst ${OPUSHOME},../../..,$@} $<
-
-
-# -N '\/0\/' is used to filter out some strange files in OpenSubtitles2012
-# which would be used for many sample files (year = 0)
-# (they look messy and should actually be removed from the corpus)
-
-${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: %.other.xml.gz
-	@mkdir -p ${dir $@}
-	$(UPLUGTOOLS)/uplug-readalign \
-		-h -m 100 \
-		-N '\/(0|11.*)\/' \
-	$< > $@

@@ -44,7 +44,7 @@ devsets: ${DEVSET_ALG_FILES}
 
 ${TESTSET_ALG_FILES} ${DEVSET_ALG_FILES}: %.log: ../devtest-xml/%.xml.gz
 	mkdir -p $(dir $@)
-	zcat $< | \
+	-zcat $< | \
 	opus2bitext -D \
 		-e $(@:.log=.$(firstword $(subst -, ,$(notdir $(@:.log=))))) \
 		-f $(@:.log=.$(lastword $(subst -, ,$(notdir $(@:.log=))))) 2> $@

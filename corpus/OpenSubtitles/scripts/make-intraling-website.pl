@@ -4,12 +4,14 @@
 use strict;
 use CGI qw(:standard);
 use File::Basename qw/basename/;
+use FindBin qw($Bin);
 
 my $corpus  = shift(@ARGV) || 'OpenSubtitles';
 my $version = shift(@ARGV) || 'v2018';
 
 my $title   = "<a href=\"$corpus-$version.php\">$corpus $version</a> - Intra-Lingual Alignments";
-my $htmldir = "/proj/nlpl/data/OPUS/$corpus/$version";
+my $releasedir = $Bin.'/../../../OPUS/corpus/'.$corpus.'/'.$version;
+# my $htmldir = "/proj/nlpl/data/OPUS/$corpus/$version";
 
 
 my $header=&HtmlHeader();
@@ -47,8 +49,8 @@ print &HtmlEnd();
 
 
 sub print_table{
-    opendir(my $dh, "$htmldir/xml") || die "can't opendir .: $!";
-    my @xmlfiles = grep { /xml\.gz$/ && -f "$htmldir/xml/$_" } readdir($dh);
+    opendir(my $dh, "$releasedir/intra") || die "can't opendir .: $!";
+    my @xmlfiles = grep { /xml\.gz$/ && -f "$releasedir/intra/$_" } readdir($dh);
     closedir $dh;
 
     my %files = ();
@@ -62,7 +64,7 @@ sub print_table{
 	$types{$type}++;
 	$files{$src}{xml}{$type} = $_;
 	s/\.xml\.gz/.tmx.gz/;
-	if (-e "$htmldir/tmx/$_"){
+	if (-e "$releasedir/intra/$_"){
 	    $files{$src}{tmx}{$type} = $_;
 	}
     }
@@ -76,7 +78,7 @@ sub print_table{
     print '</tr>';
     foreach my $l (sort keys %files){
 	print '<tr><th>',$l,'</th>';
-	if (-e "$htmldir/raw/$l.zip"){
+	if (-e "$releasedir/raw/$l.zip"){
 	    print "<td><a href=\"download.php?f=$corpus/$version/raw/$l.zip",'">zip</a></td>'."\n";
 	}
 	else{
@@ -85,10 +87,10 @@ sub print_table{
 	foreach (sort keys %types){
 	    print '<td>';
 	    if (exists $files{$l}{xml}{$_}){
-		print "<a href=\"download.php?f=$corpus/$version/xml/",$files{$l}{xml}{$_},'">xml</a>';
+		print "<a href=\"download.php?f=$corpus/$version/intra/",$files{$l}{xml}{$_},'">xml</a>';
 	    }
 	    if (exists $files{$l}{tmx}{$_}){
-		print " <a href=\"download.php?f=$corpus/$version/tmx/",$files{$l}{tmx}{$_},'">tmx</a>';
+		print " <a href=\"download.php?f=$corpus/$version/intra/",$files{$l}{tmx}{$_},'">tmx</a>';
 	    }
 	    print '</td>'."\n";
 	}

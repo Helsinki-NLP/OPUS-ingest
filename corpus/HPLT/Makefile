@@ -15,9 +15,10 @@ include ../Makefile.def
 all:
 	${MAKE} -C src all
 	${MAKE} annotate
+	${MAKE} alg_files
 	${MAKE} moses
 	${MAKE} copy-tmx-files
-	${MAKE} publish
+	${MAKE} release
 
 
 ## submit a job for fetching and processing all data
@@ -77,7 +78,7 @@ publish-job:
 	${MAKE} alg_files
 	${MAKE} moses
 	${MAKE} copy-tmx-files
-	${MAKE} publish
+	${MAKE} release
 #	${MAKE} publish-release
 #	${MAKE} wordalign/Makefile
 #	${MAKE} -C wordalign submit-all
@@ -98,7 +99,7 @@ copy-tmx-files:
 		if [ ! -e ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz ]; then \
 		  rsync $$f ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
 		  touch ${CORPUSRELEASE}/tmx/$$s-$$t.tmx.gz; \
-		fi \
+	        fi \
               fi; \
 	    fi \
 	  done \

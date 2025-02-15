@@ -105,9 +105,9 @@ HPLT_V1_LANGUAGES := ar bs ca en et eu fi ga gl hi hr is mk mt nn sq sr sw
 HPLT_V1_TO_ENG    := ar bs ca
 HPLT_V1_FROM_ENG  := et eu fi ga gl hi hr is mk mt nn sq sr sw zh_hant
 
-HPLT_V2_LANGUAGES := af ar az be bg bn bs ca cy en et eu fa fi ga gl gu he hi hr is ja kk kn ko lt lv mk ml mr ms mt nb ne nn si sk sl sq sr sw ta te th tr uk ur uz vi xh
+HPLT_V2_LANGUAGES := af ar az be bg bn bs ca cy en eo et eu fa fi ga gl gu he hi hr is ja kk kn ko lt lv mk ml mr ms mt nb ne nn si sk sl sq sr sw ta te th tr uk ur uz vi xh
 HPLT_V2_TO_ENG    := af ar az be bg bn bs ca cy 
-HPLT_V2_FROM_ENG  := et eu fa fi ga gl gu he hi hr is ja kk kn ko lt lv mk ml mr ms mt nb ne nn si sk sl sq sr sw ta te th tr uk ur uz vi xh
+HPLT_V2_FROM_ENG  := eo et eu fa fi ga gl gu he hi hr is ja kk kn ko lt lv mk ml mr ms mt nb ne nn si sk sl sq sr sw ta te th tr uk ur uz vi xh
 
 
 HPLT_LANGUAGES := ${HPLT_V2_LANGUAGES}
@@ -125,6 +125,11 @@ hplt-mono-jobs:
 	for l in ${HPLT_LANGUAGES}; do \
 	  ${MAKE} LANGUAGE=$$l HPC_BIG_MEM=64g HPC_BIG_CORES=4 HPC_BIG_DISK=500 job-mono-puhti; \
 	done
+
+hplt-eo-bitext-job:
+	make 	FIND_LANGUAGES_ALIGNED_TO_ENGLISH='echo ""' \
+		FIND_LANGUAGES_ALIGNED_FROM_ENGLISH='echo "eo"' \
+	en-bitext-jobs
 
 
 #----------------------------------------------------------------------
@@ -292,24 +297,59 @@ check-para-completeness:
 ## for which no overlap scores exist yet
 .PHONY: update-para
 update-para:
-	@echo "nr of existing parallel datatsets for ${LANGPAIR}: $(words ${ALL_PARA})"
-	@echo -n "nr of ${LANGPAIR} bitexts with overlap scores: "
-	@find ${LANGPAIR} -name '*.txt' | wc -l
-	@if [ `find ${LANGPAIR} -name '*.txt' | wc -l` -lt $(words ${ALL_PARA}) ]; then \
-	  echo "make all-para (for ${LANGPAIR})"; \
-	  ${MAKE} all-para; \
-	fi
+	@( i=0; \
+	  for c in $(patsubst ${OPUSRELEASE}/%/moses/${LANGPAIR}.txt.zip,%,${ALL_PARA}); do \
+	    if [ ! -e ${LANGPAIR}/$$c.txt ]; then \
+	      echo "no counts for: $$c"; \
+	      ((i++)); \
+	    fi \
+	  done; \
+	  if [ $$i -gt 0 ]; then \
+	     ${MAKE} all-para; \
+	  fi )
+
+
+#	@echo $(filter-out $(patsubst ${LANGPAIR}/%.txt,%,$(sort $(shell find ${LANGPAIR} -name '*.txt'))),\
+#			$(patsubst ${OPUSRELEASE}/%/moses/${LANGPAIR}.txt.zip,%,${ALL_PARA}))
+
 
 
 .PHONY: update-para-job
 update-para-job:
-	@echo "nr of existing parallel datatsets for ${LANGPAIR}: $(words ${ALL_PARA})"
-	@echo -n "nr of ${LANGPAIR} bitexts with overlap scores: "
-	@find ${LANGPAIR} -name '*.txt' | wc -l
-	@if [ `find ${LANGPAIR} -name '*.txt' | wc -l` -lt $(words ${ALL_PARA}) ]; then \
-	  echo "submit all-para (for ${LANGPAIR})"; \
-	  ${MAKE} HPC_MEM=128g HPC_CORES=2 CORES=2 THREADS=2 HPC_DISK=500 HPC_TIME=24:00 all-para.submit; \
-	fi
+	@( i=0; \
+	  for c in $(patsubst ${OPUSRELEASE}/%/moses/${LANGPAIR}.txt.zip,%,${ALL_PARA}); do \
+	    if [ ! -e ${LANGPAIR}/$$c.txt ]; then \
+	      echo "no counts for: $$c"; \
+	      ((i++)); \
+	    fi \
+	  done; \
+	  if [ $$i -gt 0 ]; then \
+	     echo "submit all-para (for ${LANGPAIR})"; \
+	     ${MAKE} HPC_MEM=128g HPC_CORES=2 CORES=2 THREADS=2 HPC_DISK=500 HPC_TIME=24:00 all-para.submit; \
+	  fi )
+
+
+# .PHONY: update-para-old
+# update-para-old:
+# 	@echo "nr of existing parallel datatsets for ${LANGPAIR}: $(words ${ALL_PARA})"
+# 	@echo -n "nr of ${LANGPAIR} bitexts with overlap scores: "
+# 	@find ${LANGPAIR} -name '*.txt' | wc -l
+# 	@if [ `find ${LANGPAIR} -name '*.txt' | wc -l` -lt $(words ${ALL_PARA}) ]; then \
+# 	  echo "make all-para (for ${LANGPAIR})"; \
+# 	  ${MAKE} all-para; \
+# 	fi
+
+
+# .PHONY: update-para-job-old
+# update-para-job-old:
+# 	@echo "nr of existing parallel datatsets for ${LANGPAIR}: $(words ${ALL_PARA})"
+# 	@echo -n "nr of ${LANGPAIR} bitexts with overlap scores: "
+# 	@find ${LANGPAIR} -name '*.txt' | wc -l
+# 	@if [ `find ${LANGPAIR} -name '*.txt' | wc -l` -lt $(words ${ALL_PARA}) ]; then \
+# 	  echo "submit all-para (for ${LANGPAIR})"; \
+# 	  ${MAKE} HPC_MEM=128g HPC_CORES=2 CORES=2 THREADS=2 HPC_DISK=500 HPC_TIME=24:00 all-para.submit; \
+# 	fi
+
 
 ## print bitext for which we miss overlap scores
 .PHONY: missing-para

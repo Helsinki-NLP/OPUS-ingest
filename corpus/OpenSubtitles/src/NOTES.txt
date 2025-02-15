@@ -12,7 +12,10 @@ FIELDS ESCAPED BY '\'
 LINES TERMINATED BY '\n';
 
 
+
+
 # Issues
+
 
 * some subtitle files do not have any metadata (e.g. file '1954377119')
 

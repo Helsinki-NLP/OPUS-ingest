@@ -111,9 +111,9 @@ ifndef LANGUAGES
 		     $(shell find ${CORPUSRAW} -mindepth 1 -maxdepth 1 -type d -printf "%f "))
 endif
 
-ifeq (${LANGUAGES},)
-  LANGUAGES = $(sort $(shell find ${CORPUSSRC} -mindepth 1 -maxdepth 1 -type d -printf "%f "))
-endif
+# ifeq ($(words ${LANGUAGES}),0)
+#   LANGUAGES = $(sort $(shell find ${CORPUSSRC} -mindepth 1 -maxdepth 1 -type d -printf "%f "))
+# endif
 
 
 CESALG_FILES ?= $(wildcard ${CORPUSXML}/*.xml.gz)
@@ -165,7 +165,7 @@ ALGEXT = xml.gz
 ## restrict threads to 4 on login nodes
 ## (TODO: should we restrict threads in sort etc to leave some cores
 ##        for other tasks as well?)
-CORES    := ${shell nproc}
+CORES    := $(lastword $(sort ${shell nproc} ${HPC_CORES}))
 THREADS  ?= $(shell if [ `hostname | grep login | wc -l` -gt 0 ]; then echo 4; else echo ${CORES}; fi )
 
 ## use pigz for multi-threaded (de-)compression

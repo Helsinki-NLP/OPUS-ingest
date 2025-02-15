@@ -48,7 +48,9 @@ ELRC-Courts_Norway	v1	1448	0/149	0
 ELRC-Norwegian_Directorat	v1	2180	0/149	0
 ELRC-www.nordisketax.net	v1	1017	0/149	0
 EUbookshop	v2	26885	0/149	0
+HPLT	v2	22912647	1/149	.67
 KDE4	v2	116848	35/149	23.48
+MultiHPLT	v2	22912647	1/149	.67
 MultiParaCrawl	v7.1	17582870	0/149	0
 NeuLab-TedTalks	v1	16753	0/149	0
 ParaCrawl	v7.1	17582868	0/149	0

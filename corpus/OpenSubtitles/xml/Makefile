@@ -116,6 +116,23 @@ print-common-movies: ${WORKDIR}/${SRC} ${WORKDIR}/${TRG}
 	@echo "================================================"
 
 
+check-broken:
+	@for p in ${LANGPAIRS}; do \
+	  if [ ! -e $$p.xml.gz ]; then \
+	    if [ ! -e ../alt/$$p.xml.gz ]; then \
+	      if [ -e done/$$p.xml.gz ]; then \
+	        if [ `grep -i 'File exist' $$p.*.err.* | head -1 | wc -l` -gt 0 ]; then \
+	          echo "missing: $$p"; \
+	        fi \
+              fi \
+	    fi \
+	  fi \
+	done
+
+#	          rm -f done/$$p.xml.gz; \
+#	          ${MAKE} $$p-job;
+
+
 ##--------------------------
 ## high-level targets for
 ## merging old and new data
@@ -177,12 +194,12 @@ BIG_FILE = 1073741824
 
 .PHONY: ${BITEXT_ALIGN_JOBS}
 ${BITEXT_ALIGN_JOBS}:
-	if [ ! -e $(@:-job=.xml.gz) ]; then \
+	if [ ! -e $(@:-job=.xml.gz) ] && [ ! -e done/$(@:-job=.xml.gz) ]; then \
 	  if [ $(shell stat -c %s $(firstword $(subst -, ,$(@:-job=))).zip) -gt ${BIG_FILE} ] && \
 	     [ $(shell stat -c %s $(lastword $(subst -, ,$(@:-job=))).zip) -gt ${BIG_FILE} ]; then \
-	    ${MAKE} HPC_CORES=32 HPC_DISK=1000 HPC_MEM=32g EMAIL= $(@:-job=.xml.gz).submit; \
+	    ${MAKE} HPC_CORES=32 HPC_DISK=1000 HPC_MEM=64g EMAIL= $(@:-job=.xml.gz).submit; \
 	  else \
-	    ${MAKE} HPC_CORES=16 HPC_DISK=500 HPC_MEM=16g EMAIL= $(@:-job=.xml.gz).submit; \
+	    ${MAKE} HPC_CORES=16 HPC_DISK=500 HPC_MEM=32g EMAIL= $(@:-job=.xml.gz).submit; \
 	  fi \
 	fi
 
@@ -346,8 +363,16 @@ ${WORKDIR}/${SRC}-${TRG}.xml.gz: $(sort ${WORKDIR}/${SRC} ${WORKDIR}/${TRG}) ${D
 .PHONY: align-files
 align-files: ${ALGFILES}
 
+
+## time limit = 1 hour
+## memory limit 1GB
+
+ALIGN_TIME_LIMIT = 3600
+ALIGN_MEM_LIMIT = 1000000
+
 ${ALGFILES}: ${WORKDIR}/${SRC}-${TRG}/%: ${WORKDIR}/${SRC}/% ${WORKDIR}/${TRG}/%
 	mkdir -p $(dir $@)
-	${SENTALIGN} $< $(patsubst ${WORKDIR}/${SRC}/%,${WORKDIR}/${TRG}/%,$<) > $@.out 2> $@.err
+	-( ulimit -t ${ALIGN_TIME_LIMIT} -v ${ALIGN_MEM_LIMIT} \
+	   && ${SENTALIGN} $< $(patsubst ${WORKDIR}/${SRC}/%,${WORKDIR}/${TRG}/%,$<) > $@.out 2> $@.err )
 
 

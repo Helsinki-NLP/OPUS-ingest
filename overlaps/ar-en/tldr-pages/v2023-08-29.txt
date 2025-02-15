@@ -17,6 +17,8 @@ KDE4	v2	105144	0/325	0
 LinguaTools-WikiTitles	v2014	4673757	1/325	.30
 MultiCCAligned	v1	25033111	1/325	.30
 MultiHPLT	v1.1	0	0/325	0
+MultiHPLT	v1	0	0/325	0
+MultiHPLT	v2	17505359	0/325	0
 MultiUN	v1	8210447	0/325	0
 NeuLab-TedTalks	v1	218550	1/325	.30
 News-Commentary	v11	83163	0/325	0

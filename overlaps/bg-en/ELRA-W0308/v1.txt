@@ -69,6 +69,7 @@ KDE4	v2	102046	0/71	0
 LinguaTools-WikiTitles	v2014	2444290	0/71	0
 MaCoCu	v2	1760778	0/71	0
 MultiCCAligned	v1	10351609	0/71	0
+MultiHPLT	v2	22725296	0/71	0
 MultiMaCoCu	v2	1760778	0/71	0
 MultiParaCrawl	v7.1	6470710	0/71	0
 NeuLab-TedTalks	v1	178322	0/71	0

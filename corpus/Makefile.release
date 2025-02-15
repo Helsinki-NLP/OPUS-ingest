@@ -223,7 +223,9 @@ mono-release-jobs: ${LANGUAGE_RELEASE_JOBS}
 para-release-jobs: ${LANGPAIR_RELEASE_JOBS}
 
 ${LANGUAGE_RELEASE_JOBS}:
-	${MAKE} HPC_MEM=16g HPC_CORES=2 HPC_DISK=500 EMAIL= $(@:-job=).submit
+	if [ ! -e ${CORPUSRELEASE}/freq/$(@:-release-job=).freq.gz ]; then \
+	  ${MAKE} HPC_MEM=16g HPC_CORES=2 HPC_DISK=500 EMAIL= $(@:-job=).submit; \
+	fi
 
 ${LANGPAIR_RELEASE_JOBS}:
 	@echo "submit $@ only if the required monolingual release files exist!"
@@ -231,7 +233,9 @@ ${LANGPAIR_RELEASE_JOBS}:
 	  if [ -e ${CORPUSRELEASE}/raw/$(lastword $(subst -, ,$(@:-release-job=))).zip ]; then \
 	    if [ -e ${CORPUSRELEASE}/xml/$(firstword $(subst -, ,$(@:-release-job=))).zip ]; then \
 	      if [ -e ${CORPUSRELEASE}/xml/$(lastword $(subst -, ,$(@:-release-job=))).zip ]; then \
-	        ${MAKE} HPC_MEM=16g HPC_CORES=2 HPC_DISK=500 EMAIL= $(@:-job=).submit; \
+	        if [ ! -e ${CORPUSRELEASE}/info/$(@:-release-job=).tmx.info ]; then \
+	          ${MAKE} HPC_MEM=16g HPC_CORES=2 HPC_DISK=500 EMAIL= $(@:-job=).submit; \
+	        fi \
 	      fi \
 	    fi \
 	  fi \
@@ -250,8 +254,8 @@ publish-release:
 	${MAKE} index-info
 	${MAKE} upload-website
 	${MAKE} upload-cwb
-	${MAKE} upload-ida
 	${MAKE} update-git
+#	${MAKE} upload-ida
 #	${MAKE} release-nlpl
 
 
@@ -273,26 +277,26 @@ upload-release:
 .PHONY: update-git
 update-git:
 	${MAKE} -C ${OPUSGITHOME} info
-	cd ${OPUSGITHOME}   && git pull
-	cd ${OPUSPUB}       && git pull
-	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'README' -exec git add {} \;
-	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'LICENSE' -exec git add {} \;
-	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'INFO' -exec git add {} \;
-	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'CONTACT*' -exec git add {} \;
-	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'CITATION*' -exec git git add {} \;
-	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name '*.yaml' -exec git add {} \;
-	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name '*.txt' -exec git add {} \;
-	cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name '*.info' -exec git add {} \;
-	cd ${CORPUSRELEASE} && find . -name '*.tsv' -exec git add {} \;
+	-cd ${OPUSGITHOME}   && git pull
+	-cd ${OPUSPUB}       && git pull
+	-cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'README' -exec git add {} \;
+	-cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'LICENSE' -exec git add {} \;
+	-cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'INFO' -exec git add {} \;
+	-cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'CONTACT*' -exec git add {} \;
+	-cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name 'CITATION*' -exec git git add {} \;
+	-cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name '*.yaml' -exec git add {} \;
+	-cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name '*.txt' -exec git add {} \;
+	-cd ${CORPUSRELEASE} && find .  -maxdepth 1 -name '*.info' -exec git add {} \;
+	-cd ${CORPUSRELEASE} && find . -name '*.tsv' -exec git add {} \;
 	-cd ${OPUSRELEASE}  && git add ${CORPUS}/.uploaded-${VERSION}
 	-cd ${OPUSRELEASE}  && git add ${CORPUS}/.released-${VERSION}
 	-cd ${OPUSRELEASE}  && git add ${CORPUS}/*.info ${CORPUS}/*.txt ${CORPUS}/*.txt
-	cd ${OPUSPUB}       && git add ${CORPUS}/${VERSION}
-	cd ${OPUSPUB}       && git add ${CORPUS}-${VERSION}.php ${CORPUS}.php
-	cd ${OPUSGITHOME}   && git commit -am '${CORPUS} release ${VERSION} added'
-	cd ${OPUSPUB}       && git commit -am '${CORPUS} release ${VERSION} added'
-	cd ${OPUSGITHOME}   && git push
-	cd ${OPUSPUB}       && git push
+	-cd ${OPUSPUB}       && git add ${CORPUS}/${VERSION}
+	-cd ${OPUSPUB}       && git add ${CORPUS}-${VERSION}.php ${CORPUS}.php
+	-cd ${OPUSGITHOME}   && git commit -am '${CORPUS} release ${VERSION} added'
+	-cd ${OPUSPUB}       && git commit -am '${CORPUS} release ${VERSION} added'
+	-cd ${OPUSGITHOME}   && git push
+	-cd ${OPUSPUB}       && git push
 
 
 
@@ -975,10 +979,11 @@ ${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	echo '</head>' >> $@
 	echo '<body>' >> $@
 	echo '<p>' >> $@
-	zgrep '</tuv>' $< | \
-	sed 's/^.*<seg>//;s#</seg> *</tuv>#<br/>#' |\
-	head -100 |\
-	sed ': loop; n; a <hr/>' >> $@
+	zcat $< | perl -pe 's/\n//;s/(<\/tuv>)/$$1\n/' \
+	| grep '</tuv>' \
+	| sed 's/^.*<seg>//;s#</seg> *</tuv>#<br/>#' \
+	| head -100 \
+	| sed ': loop; n; a <hr/>' >> $@
 	echo '</body></html/>' >> $@
 	chmod 644 $@
 
@@ -1180,28 +1185,34 @@ ${CORPUSRELEASE}/xml/%.strict.xml.gz: ${CORPUSXML}/%.xml.gz
 
 .SECONDEXPANSION:
 
+ifdef LOCAL_SCRATCH
+  COPY_TO_LOCALTMP := rsync
+else
+  COPY_TO_LOCALTMP := ln -s
+endif
+
 $(MOSES) $(MOSES_STRICT): ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSRELEASE}/xml/%.xml.gz \
 	${CORPUSRELEASE}/raw/$$(firstword $$(subst -, ,$$(firstword $$(subst ., ,$$(notdir $$@))))).zip \
 	${CORPUSRELEASE}/raw/$$(lastword $$(subst -, ,$$(firstword $$(subst ., ,$$(notdir $$@))))).zip
-	@mkdir -p ${LOCALTMP}/${CORPUS}/${VERSION}/raw
-	rsync $(sort $^) ${LOCALTMP}/${CORPUS}/${VERSION}/raw/
+	@mkdir -p ${LOCALTMP}/$(notdir $@).d/${CORPUS}/${VERSION}/raw
+	-${COPY_TO_LOCALTMP} $(sort $^) ${LOCALTMP}/$(notdir $@).d/${CORPUS}/${VERSION}/raw/
 	mkdir -p ${CORPUSRELEASE}/moses ${CORPUSRELEASE}/info
 	( F=${CORPUS}.$(notdir $(@:.txt.zip=)); \
 	  S=$(patsubst %.zip,%,$(notdir $(word 2,$^))); \
 	  T=$(patsubst %.zip,%,$(notdir $(word 3,$^))); \
 	  if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
-	  opus_read -rd ${LOCALTMP} -r ${VERSION} -d ${CORPUS} -p raw \
+	  opus_read -rd ${LOCALTMP}/$(notdir $@).d -r ${VERSION} -d ${CORPUS} -p raw \
 			-S 1-100 -T 1-100 -s $$S -t $$T \
-			-af ${LOCALTMP}/${CORPUS}/${VERSION}/raw/$(notdir $<) \
+			-af ${LOCALTMP}/$(notdir $@).d/${CORPUS}/${VERSION}/raw/$(notdir $<) \
 			-wm moses -w ${LOCALTMP}/$$F.$$S ${LOCALTMP}/$$F.$$T; \
 	  zip -j ${LOCALTMP}/$(notdir $@) ${LOCALTMP}/$$F.$$S ${LOCALTMP}/$$F.$$T; \
 	  wc -l < ${LOCALTMP}/$$F.$$S  > $(CORPUSRELEASE)/info/$(notdir $(@:zip=info)); \
 	  wc -w < ${LOCALTMP}/$$F.$$S >> $(CORPUSRELEASE)/info/$(notdir $(@:zip=info)); \
 	  wc -w < ${LOCALTMP}/$$F.$$T >> $(CORPUSRELEASE)/info/$(notdir $(@:zip=info)); \
-	  rm -f ${LOCALTMP}/${CORPUS}/${VERSION}/raw/$(notdir $^) ${LOCALTMP}/$$F.$$S ${LOCALTMP}/$$F.$$T; )
-	${MAKE} PACKAGE="$$S-$$T in Moses format" ${LOCALTMP}/README ${LOCALTMP}/LICENSE
-	zip -j ${LOCALTMP}/$(notdir $@) ${LOCALTMP}/README ${LOCALTMP}/LICENSE
-	rm -f ${LOCALTMP}/README ${LOCALTMP}/LICENSE
+	  rm -f ${LOCALTMP}/$(notdir $@).d/${CORPUS}/${VERSION}/raw/* ${LOCALTMP}/$$F.$$S ${LOCALTMP}/$$F.$$T; )
+	${MAKE} PACKAGE="$$S-$$T in Moses format" ${LOCALTMP}/$(notdir $@).d/README ${LOCALTMP}/$(notdir $@).d/LICENSE
+	zip -j ${LOCALTMP}/$(notdir $@) ${LOCALTMP}/$(notdir $@).d/README ${LOCALTMP}/$(notdir $@).d/LICENSE
+	rm -f ${LOCALTMP}/$(notdir $@).d/README ${LOCALTMP}/$(notdir $@).d/LICENSE
 	mv -f ${LOCALTMP}/$(notdir $@) $@
 	touch $(CORPUSRELEASE)/info/$(notdir $(@:zip=info))
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
@@ -1465,12 +1476,14 @@ ${TMX_INFO}: ${CORPUSRELEASE}/info/%.tmx.info: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	  T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
 	 zgrep '</tu>' $< | wc -l > $@; \
-	 zgrep "xml:lang=\"$$S\"" $< | \
-	  	sed 's|^.*<seg>||;s|</seg>.*$$||;' | \
-	  	wc -w >> $@; \
-	 zgrep "xml:lang=\"$$T\"" $< | \
-	  	sed 's|^.*<seg>||;s|</seg>.*$$||;' | \
-	  	wc -w >> $@; )
+	 zcat $< | perl -pe 's/\n//;s/(<\/tuv>)/$$1\n/' \
+	 | zgrep "xml:lang=\"$$S\"" \
+	 | sed 's|^.*<seg>||;s|</seg>.*$$||;' \
+	 | wc -w >> $@; \
+	 zcat $< | perl -pe 's/\n//;s/(<\/tuv>)/$$1\n/' \
+	 | zgrep "xml:lang=\"$$T\"" \
+	 | sed 's|^.*<seg>||;s|</seg>.*$$||;' \
+	 | wc -w >> $@; )
 	chmod 644 $@
 
 

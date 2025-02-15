@@ -119,19 +119,10 @@ sentalign-all-tmplang: ${TMPLANGTAR}
 sentalign-all-files: ${SENTALIGNFILES}
 
 sentalign-print:
-	echo ${SENTALIGNFILES}
+	@echo ${SENTALIGNFILES}
 
 srcsentalign-print:
-	echo ${SRCSENTALIGNFILES}
-
-
-
-
-sentalign-print:
-	echo ${SENTALIGNFILES}
-
-srcsentalign-print:
-	echo ${SRCSENTALIGNFILES}
+	@echo ${SRCSENTALIGNFILES}
 
 
 .PHONY: sentalign-clean clean-align

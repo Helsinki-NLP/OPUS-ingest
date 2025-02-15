@@ -64,6 +64,48 @@ all-jobs:
 	${MAKE} devsets
 	touch all.done
 
+
+check-broken:
+	@for p in ${LANGPAIRS}; do \
+	  if [ ! -e $$p.xml.gz ]; then \
+	    if [ ! -e ../devtest-alt/$$p.xml.gz ]; then \
+	      if [ -e done/$$p.xml.gz ]; then \
+	        if [ `grep -i 'File exist' $$p.*.err.* | head -1 | wc -l` -gt 0 ]; then \
+	          echo "missing: $$p"; \
+	          rm -f done/$$p.xml.gz; \
+	          ${MAKE} $$p-job; \
+	        fi \
+	      fi \
+	    fi \
+	  fi \
+	done
+
+
+
+linked-docs.txt:
+	find . -name '*.xml.gz' | xargs zgrep -o 'fromDoc=[^ ]*"' | cut -f2 -d\" > $@.tmp
+	find . -name '*.xml.gz' | xargs zgrep -o 'toDoc=[^ ]*"' | cut -f2 -d\"  >> $@.tmp
+	find ../devtest-alt -name '*.xml.gz' | xargs zgrep -o 'fromDoc=[^ ]*"' | cut -f2 -d\" >> $@.tmp
+	find ../devtest-alt -name '*.xml.gz' | xargs zgrep -o 'toDoc=[^ ]*"' | cut -f2 -d\"   >> $@.tmp
+	sort $@.tmp > $@
+	rm -f $@.tmp
+
+linked-doc-counts.txt: linked-docs.txt
+	sort $< | uniq -c > $@
+
+
+linked-docs-with-scores.txt:
+	find . -name '*.xml.gz' | xargs zgrep '<linkGrp '   > $@.tmp
+	find . -name '*.xml.gz' | xargs zgrep '<linkGrp '  >> $@.tmp
+	find ../devtest-alt -name '*.xml.gz' | xargs zgrep '<linkGrp ' >> $@.tmp
+	find ../devtest-alt -name '*.xml.gz' | xargs zgrep '<linkGrp ' >> $@.tmp
+	grep -o 'fromDoc=[^ ]*"' $@.tmp | cut -f2 -d\" > $@.fromdoc
+	grep -o 'toDoc=[^ ]*"' $@.tmp   | cut -f2 -d\" > $@.todoc
+	grep -o 'score=[^ ]*"' $@.tmp   | cut -f2 -d\" > $@.score
+	paste $@.fromdoc $@.todoc $@.score > $@
+	rm -f $@.tmp $@.fromdoc $@.todoc $@.score
+
+
 ##-------------------------------------------------------
 ## extraction of devtest files (released in DEVTEST_YEAR)
 ## also removes those files from original xml zipfile
@@ -75,7 +117,7 @@ extract-devtest: ${LANG_ZIPFILES}
 %.zip:
 	mkdir -p ${CORPUS}/xml/$(@:.zip=)
 	echo "reserved devtest subtitles (release year ${DEVTEST_YEAR})" > ${CORPUS}/xml/$(@:.zip=)/README
-	unzip ../xml/$@ '*/$(@:.zip=)/${DEVTEST_YEAR}/*'
+	unzip -n -q ../xml/$@ '*/$(@:.zip=)/${DEVTEST_YEAR}/*'
 	zip -rq $@ ${CORPUS}/xml/$(@:.zip=)
 	find ${CORPUS}/xml/$(@:.zip=) -delete
 	zip ../xml/$@ -d '*/$(@:.zip=)/${DEVTEST_YEAR}/*'
@@ -120,7 +162,7 @@ align-jobs: ${BITEXT_ALIGN_JOBS}
 .PHONY: ${BITEXT_ALIGN_JOBS}
 ${BITEXT_ALIGN_JOBS}:
 	if [ ! -e $(@:-job=.xml.gz) ]; then \
-	  ${MAKE} HPC_CORES=16 HPC_DISK=100 HPC_MEM=32g EMAIL= $(@:-job=.xml.gz).submit; \
+	  ${MAKE} HPC_CORES=16 HPC_DISK=100 HPC_MEM=64g EMAIL= $(@:-job=.xml.gz).submit; \
 	fi
 
 
@@ -143,9 +185,10 @@ ${BITEXT_ALIGN_JOBS}:
 	    mv -f $$d/$(@:.xml.gz=.alt.xml.gz) ../devtest-alt/$(@:.xml.gz=.alt.xml.gz); \
 	  fi )
 	mkdir -p done
-	if [ -e ${WORKHOME}/$@ ]; then touch done/$@; fi
+	touch done/$@
 	${MAKE} cleanup
 
+#	if [ -e ${WORKHOME}/$@ ]; then touch done/$@; fi
 
 
 
@@ -201,7 +244,7 @@ dev/%.xml.gz: test/%.xml.gz
 $(sort ${WORKDIR}/${SRC} ${WORKDIR}/${TRG}): ${WORKDIR}/%: %.zip
 	mkdir -p $(dir $@)
 	rsync $< $@.zip
-	unzip -q -d $(dir $@) $@.zip
+	unzip -q -n -d $(dir $@) $@.zip
 	rm -f $@.zip
 	mv ${WORKDIR}/${CORPUS}/xml/$(notdir $@) ${WORKDIR}/
 	touch $@
@@ -268,8 +311,17 @@ ${WORKDIR}/${SRC}-${TRG}.xml.gz: $(sort ${WORKDIR}/${SRC} ${WORKDIR}/${TRG}) ${D
 .PHONY: align-files
 align-files: ${ALGFILES}
 
+
+
+## time limit = 1 hour
+## memory limit 1GB
+
+ALIGN_TIME_LIMIT = 3600
+ALIGN_MEM_LIMIT = 1000000
+
 ${ALGFILES}: ${WORKDIR}/${SRC}-${TRG}/%: ${WORKDIR}/${SRC}/% ${WORKDIR}/${TRG}/%
 	mkdir -p $(dir $@)
-	${SENTALIGN} $< $(patsubst ${WORKDIR}/${SRC}/%,${WORKDIR}/${TRG}/%,$<) > $@.out 2> $@.err
+	-( ulimit -t ${ALIGN_TIME_LIMIT} -v ${ALIGN_MEM_LIMIT} \
+	   && ${SENTALIGN} $< $(patsubst ${WORKDIR}/${SRC}/%,${WORKDIR}/${TRG}/%,$<) > $@.out 2> $@.err )
 
 

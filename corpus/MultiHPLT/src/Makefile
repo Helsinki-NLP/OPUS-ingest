@@ -47,6 +47,10 @@ PIVOTED_BITEXTS = ${shell for s in $(filter-out ${PIVOT},${LANGUAGES}); do \
 .PHONY: pivoting
 pivoting: ${PIVOTED_BITEXTS}
 
+print-pivoted-bitexts:
+	@echo '$(sort $(patsubst %.zip,%,$(notdir $(wildcard ${CORPUSRAW}/*.zip))) \
+		     $(shell find ${CORPUSRAW} -mindepth 1 -maxdepth 1 -type d -printf "%f "))'
+	@echo "$(firstword ${PIVOTED_BITEXTS})"
 
 .INTERMEDIATE: ${PIVOT_LINKFILES}
 

@@ -6,6 +6,7 @@ ELRC-wikipedia_health	v1	237	0/77	0
 HPLT	v2	4088285	1/77	1.29
 KDE4	v2	64154	11/77	14.28
 MultiCCAligned	v1	10610854	10/77	12.98
+MultiHPLT	v2	4088285	1/77	1.29
 NeuLab-TedTalks	v1	100267	0/77	0
 OpenSubtitles	v2016	2419508	1/77	1.29
 OpenSubtitles	v2018	2964358	1/77	1.29

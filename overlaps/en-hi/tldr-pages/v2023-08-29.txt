@@ -17,6 +17,8 @@ Joshua-IPC	v1	36063	1/485	.20
 KDE4	v2	85155	0/485	0
 MultiCCAligned	v1	8072463	1/485	.20
 MultiHPLT	v1.1	0	0/485	0
+MultiHPLT	v1	0	0/485	0
+MultiHPLT	v2	9926614	0/485	0
 NeuLab-TedTalks	v1	19310	1/485	.20
 News-Commentary	v14	2574	1/485	.20
 News-Commentary	v16	2574	1/485	.20
