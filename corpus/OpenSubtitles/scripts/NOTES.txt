@@ -1,5 +1,12 @@
 
 
+test set selection
+
+* graph library: networkx (https://networkx.org/documentation/stable/reference/index.html)
+* TSP solver: http://webhotel4.ruc.dk/%7Ekeld/research/LKH-3/
+
+
+
 
 post-OCR correction
 

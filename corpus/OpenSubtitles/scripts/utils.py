@@ -104,7 +104,7 @@ languages = {'uzb': 'uz', 'uz': {'codes': ['uzb', 'uz'], 'name': 'Uzbek', 'scrip
 'Spanish', 'encodings':
 ['utf-8', 'windows-1252', 'iso-8859-1']}, 'es_es': {'scripts': ['latin'], 'codes': ['spa', 'es'], 'name':
 'Spanish', 'encodings':
-['utf-8', 'windows-1252', 'iso-8859-1']}, 'es_149': {'scripts': ['latin'], 'codes': ['spa', 'es'], 'name':
+['utf-8', 'windows-1252', 'iso-8859-1']}, 'es_419': {'scripts': ['latin'], 'codes': ['spa', 'es'], 'name':
 'Spanish', 'encodings':
 ['utf-8', 'windows-1252', 'iso-8859-1']}, 'ru': {'codes': ['rus', 'ru'], 'name':
 'Russian', 'scripts': ['cyrillic'], 'encodings': ['utf-8','koi8-r','windows-1251',

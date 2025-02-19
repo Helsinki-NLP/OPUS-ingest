@@ -82,6 +82,155 @@ check-broken:
 
 
 
+## pivot-based multilingual dataset extraction
+
+LINK_THRESHOLD   ?= 0.9
+LINKED_DOCS      := linked-docs-with-scores-$(LINK_THRESHOLD).txt
+MULTISET_HOMEDIR := multi-linksets-${LINK_THRESHOLD}
+PIVOTSET_HOMEDIR := pivot-linksets-${LINK_THRESHOLD}
+PIVOTSET_LINKS   := pivot-linksets-${LINK_THRESHOLD}.txt
+PIVOTSET_FILE    := ${PIVOTSET_HOMEDIR}/pivot-data.tsv
+
+pivot-linksets: ${LINKED_DOCS} $(PIVOTSET_LINKS) ${PIVOTSET_FILE}
+
+
+## get a file with all linked documents in devtest
+
+linked-docs-with-scores-all.txt:
+	find . -name '*.xml.gz' | xargs zgrep '<linkGrp '   > $@.tmp
+	find . -name '*.xml.gz' | xargs zgrep '<linkGrp '  >> $@.tmp
+	find ../devtest-alt -name '*.xml.gz' | xargs zgrep '<linkGrp ' >> $@.tmp
+	find ../devtest-alt -name '*.xml.gz' | xargs zgrep '<linkGrp ' >> $@.tmp
+	grep -o 'fromDoc=[^ ]*"' $@.tmp | cut -f2 -d\" > $@.fromdoc
+	grep -o 'toDoc=[^ ]*"' $@.tmp   | cut -f2 -d\" > $@.todoc
+	grep -o 'score=[^ ]*"' $@.tmp   | cut -f2 -d\" > $@.score
+	paste $@.fromdoc $@.todoc $@.score | sort -u | sort -k3,3 -t/ > $@
+	rm -f $@.tmp $@.fromdoc $@.todoc $@.score
+
+
+## extract document pairs above a certain alignment threshold (0.8 or 0.9)
+
+linked-docs-with-scores-0.8.txt: linked-docs-with-scores-all.txt
+	grep '	0.[8-9][0-9]*$$' $< > $@
+
+linked-docs-with-scores-0.9.txt: linked-docs-with-scores-all.txt
+	grep '	0.9[0-9]*$$' $< > $@
+
+
+## find all linksets with a dedicated pivot language document
+## (for a specific movieID) with the maximum number of aligned languages
+
+${PIVOTSET_LINKS}: ${LINKED_DOCS}
+	../scripts/find_link_pivot.pl < $< > $@
+
+## extract the sentence alignments for all linksets listed in the file above
+## the information about the link sets is stored in a new tsv file
+
+MIN_NR_OF_MOVIES ?= 5
+MIN_NR_OF_LANGS  ?= 10
+
+${PIVOTSET_FILE}: ${PIVOTSET_LINKS}
+	../scripts/extract_pivot_linksets.pl -m ${MIN_NR_OF_MOVIES} -l ${MIN_NR_OF_LANGS} -o $(dir $@) < $<
+
+
+
+##--------------------------------------------------------------------------
+## once all those link files have been extracted, we can start
+## creating multi-parallel datasets, one per movieID in each language set
+##
+##   Each line in the tsv file needs to be used to call opus2multi
+##   MULTI_NR sets the line number to be selected for `make create-multiset`
+##   The generic `%-create-multiset` can be used to convert the set for each line
+##   `make create-all-multiset` will call the generic target for all lines in the file
+##
+## NOTE: there can be thousands of lines in ${PIVOTSET_FILE}
+##
+## Examples:
+##
+##     make create-multiset
+##     make MULTISET_NR=10 create-multiset
+##     make 10-create-multiset
+##     make create-all-multisets
+##--------------------------------------------------------------------------
+
+ifneq ($(wildcard ${PIVOTSET_FILE}),)
+
+  NR_PIVOT_FILES    := $(shell wc -l < ${PIVOTSET_FILE})
+  CREATE_MULTISETS  := $(addsuffix -create-multiset,$(shell seq ${NR_PIVOT_FILES}))
+  EXTRACT_MULTISETS := $(addsuffix -extract-multiset,$(shell seq ${NR_PIVOT_FILES}))
+
+  MULTISET_NR       ?= 1
+  MULTISET_MOVIEDIR := $(shell head -${MULTISET_NR} ${PIVOTSET_FILE} | tail -1 | cut -f1)
+  MULTISET_PIVOT    := $(shell head -${MULTISET_NR} ${PIVOTSET_FILE} | tail -1 | cut -f2)
+  MULTISET_LANGS    := $(shell head -${MULTISET_NR} ${PIVOTSET_FILE} | tail -1 | cut -f3)
+
+  MULTISET_DIR      := ${MULTISET_HOMEDIR}/${MULTISET_MOVIEDIR}
+  PIVOTSET_DIR      := ${PIVOTSET_HOMEDIR}/${MULTISET_MOVIEDIR}
+
+  MULTISET_ALGFILES := $(wildcard ${MULTISET_DIR}/*.xml)
+  MULTISET_ALGSRC   := $(patsubst %.xml,%.src,${MULTISET_ALGFILES})
+  MULTISET_ALGTRG   := $(patsubst %.xml,%.trg,${MULTISET_ALGFILES})
+
+  MULTISET_PIVOT_TXT := ${MULTISET_DIR}.${MULTISET_PIVOT}
+  MULTISET_ALG_TXTS  := $(patsubst %,${MULTISET_DIR}.%,${MULTISET_LANGS})
+
+  create-multiset: ${MULTISET_DIR}
+	${MAKE} extract-multiset
+
+  create-all-multisets: ${CREATE_MULTISETS}
+
+  %-create-multiset:
+	${MAKE} MULTISET_NR=$(@:-create-multiset=) create-multiset
+
+
+  ${MULTISET_DIR}: ${PIVOTSET_DIR}
+	mkdir -p ${MULTISET_DIR}
+	cd ${MULTISET_DIR} && opus2multi $(CURDIR)/${PIVOTSET_DIR} ${MULTISET_PIVOT} ${MULTISET_LANGS}
+
+
+  extract-multiset: ${MULTISET_PIVOT_TXT} ${MULTISET_ALG_TXTS}
+
+  create-all-multisets: ${EXTRACT_MULTISETS}
+
+  %-extract-multiset:
+	${MAKE} MULTISET_NR=$(@:-extract-multiset=) extract-multiset
+
+  ${MULTISET_ALGSRC}: %.src: %.xml
+	opus2bitext -e $@ -f $(@:.src=.trg) < $<
+
+  ${MULTISET_ALGTRG}: %.trg: %.src
+	@echo "target text is extracted"
+
+  ${MULTISET_PIVOT_TXT}: ${MULTISET_ALGSRC}
+	cp $< $@
+
+  ${MULTISET_ALG_TXTS}: ${MULTISET_DIR}.%: ${MULTISET_DIR}/${MULTISET_PIVOT}-%.trg
+	cp $< $@
+
+endif
+
+
+
+
+
+## old idea using graph cliques
+
+.PHONY: linksets-0.8 linksets-0.9
+linksets-0.8: linked-docs-with-scores-0.8.txt linksets-0.8.txt linksets-0.8.log
+linksets-0.9: linked-docs-with-scores-0.9.txt linksets-0.9.txt linksets-0.9.log
+
+linksets-%.txt: linked-docs-with-scores-%.txt
+	../scripts/find_link_cliques.py < $< > $@
+
+linksets-%.log: linksets-%.txt
+	mkdir -p $(@:.log=)
+	../scripts/extract_linksets.pl $(@:.log=) < $< 2> $@
+
+
+
+
+## OBSOLETE?
+
 linked-docs.txt:
 	find . -name '*.xml.gz' | xargs zgrep -o 'fromDoc=[^ ]*"' | cut -f2 -d\" > $@.tmp
 	find . -name '*.xml.gz' | xargs zgrep -o 'toDoc=[^ ]*"' | cut -f2 -d\"  >> $@.tmp
@@ -93,17 +242,6 @@ linked-docs.txt:
 linked-doc-counts.txt: linked-docs.txt
 	sort $< | uniq -c > $@
 
-
-linked-docs-with-scores.txt:
-	find . -name '*.xml.gz' | xargs zgrep '<linkGrp '   > $@.tmp
-	find . -name '*.xml.gz' | xargs zgrep '<linkGrp '  >> $@.tmp
-	find ../devtest-alt -name '*.xml.gz' | xargs zgrep '<linkGrp ' >> $@.tmp
-	find ../devtest-alt -name '*.xml.gz' | xargs zgrep '<linkGrp ' >> $@.tmp
-	grep -o 'fromDoc=[^ ]*"' $@.tmp | cut -f2 -d\" > $@.fromdoc
-	grep -o 'toDoc=[^ ]*"' $@.tmp   | cut -f2 -d\" > $@.todoc
-	grep -o 'score=[^ ]*"' $@.tmp   | cut -f2 -d\" > $@.score
-	paste $@.fromdoc $@.todoc $@.score > $@
-	rm -f $@.tmp $@.fromdoc $@.todoc $@.score
 
 
 ##-------------------------------------------------------

@@ -19,12 +19,12 @@ MOVIES    := $(patsubst ${WORKDIR}/${LANGUAGE}/%,%,$(wildcard ${WORKDIR}/${LANGU
 ALGFILES  := $(addprefix ${WORKDIR}/$(LANGUAGE)-$(LANGUAGE)/,${MOVIES})
 
 
-LOGALL    := $(wildcard *.log.gz)
-XMLALL    := $(wildcard *.xml.gz)
-XMLINSERT := $(wildcard *.insert.xml.gz)
-XMLPCT    := $(wildcard *.pct.xml.gz)
-XMLSPELL  := $(wildcard *.spell.xml.gz)
-XMLOTHER  := $(wildcard *.other.xml.gz)
+LOGALL    := $(patsubst %,${CORPUSRELEASE}/intra/%,$(wildcard *.log.gz))
+XMLALL    := $(patsubst %,${CORPUSRELEASE}/intra/%,$(wildcard *.xml.gz))
+XMLINSERT := $(patsubst %,${CORPUSRELEASE}/intra/%,$(wildcard *.insert.xml.gz))
+XMLPCT    := $(patsubst %,${CORPUSRELEASE}/intra/%,$(wildcard *.pct.xml.gz))
+XMLSPELL  := $(patsubst %,${CORPUSRELEASE}/intra/%,$(wildcard *.spell.xml.gz))
+XMLOTHER  := $(patsubst %,${CORPUSRELEASE}/intra/%,$(wildcard *.other.xml.gz))
 
 TMXINSERT := $(patsubst %.xml.gz,${CORPUSRELEASE}/intra/%.tmx.gz,$(XMLINSERT))
 TMXPCT    := $(patsubst %.xml.gz,${CORPUSRELEASE}/intra/%.tmx.gz,$(XMLPCT))
@@ -250,7 +250,7 @@ ${CORPUSRELEASE}/intra/%.txt.zip: ${CORPUSRELEASE}/intra/%.xml.gz
 	  zip $@ ${CORPUS}.$$P.$$s ${CORPUS}.$$P.$$t; \
 	  rm -f ${CORPUS}.$$P.$$s ${CORPUS}.$$P.$$t; )
 
-${CORPUSRELEASE}/intra/%.gz: %.gz
+${LOGALL} ${XMLALL}: ${CORPUSRELEASE}/intra/%.gz: %.gz
 	mkdir -p $(dir $@)
 	rsync $< $@
 

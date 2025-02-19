@@ -78,7 +78,7 @@ sub read_info{
 	$lang = 'zh_CN' if ($lang eq 'zh');
 	$lang = 'sr' if ($lang eq 'scc');
 	$lang = 'es_ES' if ($lang eq 'spn');
-	$lang = 'es_149' if ($lang eq 'spl');
+	$lang = 'es_419' if ($lang eq 'spl');
 	$lang = 'me' if ($lang eq 'mne');
 	my $format = $parts[6];
 	my $year = $parts[8];
