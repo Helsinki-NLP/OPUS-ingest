@@ -92,6 +92,13 @@ PIVOTSET_LINKS   := pivot-linksets-${LINK_THRESHOLD}.txt
 PIVOTSET_FILE    := ${PIVOTSET_HOMEDIR}/pivot-data.tsv
 
 pivot-linksets: ${LINKED_DOCS} $(PIVOTSET_LINKS) ${PIVOTSET_FILE}
+	${MAKE} create-all-multisets
+
+pivot-linksets-0.8:
+	${MAKE} LINK_THRESHOLD=0.8 pivot-linksets
+
+pivot-linksets-all:
+	${MAKE} LINK_THRESHOLD=all pivot-linksets
 
 
 ## get a file with all linked documents in devtest
