@@ -37,10 +37,12 @@ testsets:
 
 
 
-fix-info:
-	make ${CORPUSRELEASE}/info/fi.info ${CORPUSRELEASE}/info/ru.info ${CORPUSRELEASE}/info/sv.info
-	${OPUSTOOLS}/info2yaml.pl -b ${OPUSRELEASE}/${CORPUS}
-	make -C ${OPUSHOME}/admin CORPUS=${CORPUS} VERSION=${VERSION} archive-infofiles
+#fix-info:
+#	${OPUSTOOLS}/info2yaml.pl -b ${OPUSRELEASE}/${CORPUS}
+#	${MAKE} ${OPUSRELEASE}/${CORPUS}/info.txt
+#	make ${CORPUSRELEASE}/info/fi.info ${CORPUSRELEASE}/info/ru.info ${CORPUSRELEASE}/info/sv.info
+#	${OPUSTOOLS}/info2yaml.pl -b ${OPUSRELEASE}/${CORPUS}
+#	make -C ${OPUSHOME}/admin CORPUS=${CORPUS} VERSION=${VERSION} archive-infofiles
 
 
 intraling-website: ${OPUSPUB}/${CORPUS}-alt-${VERSION}.php
