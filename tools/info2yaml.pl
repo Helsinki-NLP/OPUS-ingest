@@ -66,7 +66,7 @@ foreach my $v (keys %info){
 if (exists $GeneralInfo{'latest_release'}){
     my $latest = $GeneralInfo{'latest_release'};
     $GeneralInfo{'number_of_languages'} = $info{$latest}{'number of languages'};
-    $GeneralInfo{'bitext'} = $info{$latest}{'number of language pairs'};
+    $GeneralInfo{'bitexts'} = $info{$latest}{'number of language pairs'};
     $GeneralInfo{'number_of_files'} = $statistics{$latest}{'files'};
     ## if we want commas for thousands: uncomment next line
     # while($GeneralInfo{'number_of_files'} =~ s/(\d+)(\d\d\d)/$1\,$2/){};
