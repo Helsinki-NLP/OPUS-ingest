@@ -12,7 +12,7 @@ DEVTEST_YEAR = 2024
 # after the name of the sub-corpus
 # EXTRAHTML is code which will be put just after the 'Download' header
 
-CITENOTE=Please cite the following article if you use any part of the corpus in your own work:<br/> P. Lison and J. Tiedemann, 2016, <a href="http://stp.lingfil.uu.se/~joerg/paper/opensubs2016.pdf"><i>OpenSubtitles2016: Extracting Large Parallel Corpora from Movie and TV Subtitles.</i></a> In Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016)<br/>
+CITENOTE=Please cite the following article if you use any part of the corpus in your own work:<br/> P. Lison and J. Tiedemann, 2016, <a href="https://aclanthology.org/L16-1147/"><i>OpenSubtitles2016: Extracting Large Parallel Corpora from Movie and TV Subtitles.</i></a> In Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016)<br/>
 
 SRCHTML=<p>This is a new collection of translated movie subtitles from <a href="http://www.opensubtitles.org/">http://www.opensubtitles.org/</a>.<br/><a href="http://www.opensubtitles.org/"><img src="https://static.opensubtitles.org/gfx/logo.gif"></a></p><p><b>IMPORTANT:</b> If you use the OpenSubtitle corpus: Please, add a link to <b>http://www.opensubtitles.org/</b> to your website and to your reports and publications produced with the data! I promised this when I got the data from the providers of that website!</p> <p> This is a slightly cleaner version of the subtitle collection using improved sentence alignment and better language checking.</p>
 
@@ -23,6 +23,6 @@ EXTRAHTML=<p>We also provide <b>sentence alignments between alternative subtitle
 <li><b>pct:</b> Sentence pairs that differ only in punctuation characters.</li>\
 <li><b>spell:</b> Sentence pairs that differ in a few characters only that looks suspiciously like misspellings.</li>\
 </ul>\
-<p>For more information, please look at <br/> J. Tiedemann, 2016, <a href="http://stp.lingfil.uu.se/~joerg/paper/lrec2016.pdf"><i>Finding Alternative Translations in a Large Corpus of Movie Subtitles.</i></a><br/> In Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016)<br/>(and, please, cite the paper as well).</p>
+<p>For more information, please look at <br/> J. Tiedemann, 2016, <a href="https://aclanthology.org/L16-1559/"><i>Finding Alternative Translations in a Large Corpus of Movie Subtitles.</i></a><br/> In Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016)<br/>(and, please, cite the paper as well).</p>
 
 
