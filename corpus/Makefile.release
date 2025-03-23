@@ -136,42 +136,63 @@ WORDALG ?= $(patsubst %.zip,%.alg.zip,${SMT})
 
 ##-------------------------------------------------------------------
 ## selection of packages to be released
+##   BASIC__PACKAGES  = the most basic files we need to release
+##   DERIVED_PACKAGES = derived data formats like TMX and Moses 
+##
 ## NEW: reduce packages if we have > 10,000 bitexts in the corpus
 ## TODO: this does not work when running individual release jobs
 ##       for each language and language pair
 ##-------------------------------------------------------------------
 
-REDUCED_PACKAGES   := ${ALG} ${LANG_XML} ${LANG_RAW} ${LANG_UD} \
-			${MONO_RAW} ${MONO_TOK} ${FREQ_COUNTS}
-REDUCED_INFOFILES  := ${LANG_INFO} ${CES_INFO}
-STANDARD_PACKAGES  := ${REDUCED_PACKAGES} $(MOSES) $(TMX) ${SMT} ${WORDALG} ${DIC}
-STANDARD_INFOFILES := ${REDUCED_INFOFILES} ${TXT_INFO} ${TMX_INFO}
+BASIC_PACKAGES    := ${ALG} ${LANG_RAW} ${LANG_UD} ${MONO_RAW}
+DERIVED_PACKAGES  := $(MOSES) $(TMX) ${SMT} ${WORDALG} ${DIC}
 
-ifeq ($(shell test $(words ${CES}) -gt 10000; echo $$?),0)
-  SELECTED_PACKAGES := ${REDUCED_PACKAGES}
-  INFOFILES         := ${REDUCED_INFOFILES}
+BASIC_INFOFILES   := ${LANG_INFO} ${CES_INFO}
+DERIVED_INFOFILES := ${TXT_INFO} ${TMX_INFO}
+
+
+## special variables for skipping certain packages
+
+ifdef SKIP_TOKENIZATION_AND_DERIVED_DATA
+  SKIP_TOKENIZATION := 1
+  SKIP_DERIVED      := 1
+endif
+
+ifdef SKIP_BITEXT_INFO
+  BASIC_INFOFILES := ${LANG_INFO}
+endif
+
+
+## unless we skip tokenization: add tokenized release packages
+
+ifndef SKIP_TOKENIZATION
+  BASIC_PACKAGES  += ${LANG_XML} ${MONO_TOK} ${FREQ_COUNTS}
+endif
+
+
+## if there is > 10000 language pairs --> skip derived packages
+
+ifdef SKIP_DERIVED
+  SELECTED_PACKAGES := ${BASIC_PACKAGES}
+  INFOFILES         := ${BASIC_INFOFILES}
+else ifeq ($(shell test $(words ${CES}) -gt 10000; echo $$?),0)
+  SELECTED_PACKAGES := ${BASIC_PACKAGES}
+  INFOFILES         := ${BASIC_INFOFILES}
 else
-  SELECTED_PACKAGES := ${STANDARD_PACKAGES}
-  INFOFILES         := ${STANDARD_INFOFILES}
+  SELECTED_PACKAGES := ${BASIC_PACKAGES} ${DERIVED_PACKAGES}
+  INFOFILES         := ${BASIC_INFOFILES} ${DERIVED_INFOFILES}
 endif
 
 
 ## skip all XML and derived files (basically just leaving moses and TMX)
+## TODO: is this really useful for anything (we skip the native OPUS format!)
 
 ifdef SKIP_XML_FILES
-  SELECTED_PACKAGES = $(MOSES) $(TMX)
-  INFOFILES = ${TXT_INFO} ${TMX_INFO}
+  SELECTED_PACKAGES := $(MOSES) $(TMX)
+  INFOFILES         := ${TXT_INFO} ${TMX_INFO}
 endif
 
 
-## skip tokenized files
-## TODO: reduced packages for corpora with many languages!
-## TODO: ces_info and lang_info are not correct
-##       check that opus-bitextsize works as it should also with untokenized files
-
-ifdef SKIP_TOKENIZATION
-  SELECTED_PACKAGES = ${ALG} ${LANG_RAW} ${MONO_RAW} $(MOSES) $(TMX)
-endif
 
 # file with all packages that can be distributed
 PACKAGES := ${CORPUSPUB}/.packages
@@ -200,7 +221,8 @@ show-nrof-packages:
 
 .PHONY: show-packages
 show-packages:
-	@echo  "${notdir ${SELECTED_PACKAGES}}" | tr ' ' "\n"
+	@echo  "${SELECTED_PACKAGES}" | tr ' ' "\n"
+# 	@echo  "${notdir ${SELECTED_PACKAGES}}" | tr ' ' "\n"
 
 ##----------------------------------------------------------------
 ## submit individual SLURM jobs for creating release files
@@ -570,7 +592,7 @@ ${OPUSPUB}/${CORPUS}-${VERSION}.php: ${PACKAGES} ${CORPUS_SAMPLES} ${ALG_SAMPLES
 
 
 create-website-without-dependencies:
-	@${MAKEHTML} -h ${OPUSPUB} -o ${OPUSHOME} -d ${OPUSRELEASE} -x ${CORPUSRELEASE}/xml ${CORPUS} ${VERSION} |\
+	${MAKEHTML} -h ${OPUSPUB} -o ${OPUSHOME} -d ${OPUSRELEASE} -x ${CORPUSRELEASE}/xml ${CORPUS} ${VERSION} |\
 	sed -e 's|<h3>Download</h3>|<h3>Download</h3>${DOWNLOADINFO_SAFE}${EXTRAHTML_SAFE}${OTHERVERSIONS}|' \
 	    -e 's|<h3>Download</h3>|${CITENOTE_SAFE}<h3>Download</h3>|' \
 	    -e 's|<h1>${CORPUS}${VERSION}</h1>|<h1>${CORPUS} ${VERSION}</h1>${SRCHTML_SAFE}|' \
@@ -824,81 +846,6 @@ ${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRELEASE}/raw/%.zip
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
 
-
-
-# ## simple text extraction from XML documents using regular expressions
-# ## TODO: should probably replace that with some proper XML parser
-# ##       or with opus_cat from opustools
-# ## TODO: need to add `-Mopen=locale` to perl call?
-
-# ${CORPUSRELEASE}/mono/%.tok.gz: ${CORPUSRELEASE}/xml/%.zip
-# 	@${MKDIR} ${dir $@}
-# 	unzip -p $< \
-# 	| perl -pe  's/\n/ /g;s/<\/s>/\n/g;s/<[^>]*>//g;s/  */ /gs;' \
-# 	| perl -MHTML::Entities -pe 's/[^\S\n]+/ /g;s/[^\S\n]+$$//g;s/^[^\S\n]+//g;$$_ = decode_entities($$_);' \
-# 	| ${GZIP} -c > $@
-# 	${MKDIR} ${dir ${PACKAGES}}
-# 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
-# 	chmod 644 $@
-
-# ${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRELEASE}/raw/%.zip
-# 	@${MKDIR} ${dir $@}
-# 	unzip -p $< \
-# 	| perl -pe  's/\n/ /g;s/<\/s>/\n/g;s/<[^>]*>//g;s/  */ /gs;' \
-# 	| perl -MHTML::Entities -pe 's/[^\S\n]+/ /g;s/[^\S\n]+$$//g;s/^[^\S\n]+//g;$$_ = decode_entities($$_);' \
-# 	| ${GZIP} -c > $@
-# 	${MKDIR} ${dir ${PACKAGES}}
-# 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
-# 	chmod 644 $@
-
-
-# ${MONO_TOK}: ${CORPUSRELEASE}/mono/%.tok.gz: ${CORPUSRELEASE}/xml/%.zip
-# 	@${MKDIR} ${LOCALTMP}/mono/xml
-# 	@rsync $< ${LOCALTMP}/mono/xml/
-# 	opus-cat -t ${LOCALTMP}/mono/xml/$(notdir $<) \
-# 	| ${GZIP} -c > ${LOCALTMP}/mono/xml/$(notdir $@)
-# 	@${MKDIR} ${dir $@}
-# 	@mv ${LOCALTMP}/mono/xml/$(notdir $@) $@
-# 	@rm -f ${LOCALTMP}/mono/xml/$(notdir $<)
-# 	@${MKDIR} ${dir ${PACKAGES}}
-# 	@echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
-# 	@chmod 644 $@
-
-# ${MONO_RAW}: ${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRELEASE}/raw/%.zip
-# 	${MKDIR} ${LOCALTMP}/mono/raw
-# 	@rsync $< ${LOCALTMP}/mono/raw/
-# 	opus-cat -t ${LOCALTMP}/mono/raw/$(notdir $<) \
-# 	| ${GZIP} -c > ${LOCALTMP}/mono/raw/$(notdir $@)
-# 	@${MKDIR} ${dir $@}
-# 	@mv ${LOCALTMP}/mono/raw/$(notdir $@) $@
-# 	@rm -f ${LOCALTMP}/mono/raw/$(notdir $<)
-# 	@${MKDIR} ${dir ${PACKAGES}}
-# 	@echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
-# 	@chmod 644 $@
-
-
-
-# ${CORPUSRELEASE}/mono/%.tok.gz: ${CORPUSRELEASE}/xml/%.zip
-# 	@${MKDIR} ${dir $@}
-# 	opus-cat -t $< | ${GZIP} -c > $@
-# 	${MKDIR} ${dir ${PACKAGES}}
-# 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
-# 	chmod 644 $@
-
-# ${CORPUSRELEASE}/mono/%.txt.gz: ${CORPUSRELEASE}/raw/%.zip
-# 	@${MKDIR} ${dir $@}
-# 	opus-cat -t $< | ${GZIP} -c > $@
-# 	${MKDIR} ${dir ${PACKAGES}}
-# 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
-# 	chmod 644 $@
-
-
-
-
-
-# unzip -p OpenSubtitles/xml/af.zip '*.xml' | perl -pe  's/\n/ /g;s/<\/s>/\n/g;s/<[^>]*>//g;s/  */ /gs;' | perl -pe 's/[^\S\n]+/ /g;s/[^\S\n]+$//g;s/^[^\S\n]+//g;' | head
-
-
 ## de-duplicated monolingual texts
 
 # ${CORPUSRELEASE}/mono/%.dedup.gz: ${CORPUSRELEASE}/mono/%.txt.gz
@@ -922,6 +869,7 @@ ${FREQ_COUNTS}: ${CORPUSRELEASE}/freq/%.freq.gz: ${CORPUSRELEASE}/mono/%.tok.gz
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@
+
 
 ## Do we want to lower case all text?
 ## (counts before Aug 26, 2023 lower-cased everything before counting)
@@ -968,6 +916,30 @@ alg_samples: ${ALG_SAMPLES}
 # 	chmod 644 $@
 # else
 
+
+ifdef SKIP_DERIVED
+
+${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/xml/%.xml.gz
+	@${MKDIR} ${dir $@}
+	echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"' >$@
+	echo '"http://www.w3.org/TR/REC-html40/loose.dtd">' >> $@
+	echo '<html>' >> $@
+	echo '<head>' >> $@
+	echo '<title>Untitled Document</title>' >> $@
+	echo '<meta http-equiv="Content-Type" content="text/html;charset=utf-8">' >> $@
+	echo '</head>' >> $@
+	echo '<body>' >> $@
+	echo '<p>' >> $@
+	opus_read -rd ${OPUSRELEASE} -r ${VERSION} -d ${CORPUS} -p raw -af $< -wm moses \
+		-s $(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<))))) \
+		-t $(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<))))) \
+		-S 1-10 -T 1-10 -m 100 \
+	| sed -e 's/	/<br\/>	/' -e 's/$$/	<hr\/>/' | tr "\t" "\n" >> $@
+	echo '</p></body></html/>' >> $@
+	chmod 644 $@
+
+else
+
 ${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	@${MKDIR} ${dir $@}
 	echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"' >$@
@@ -984,10 +956,10 @@ ${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
 	| sed 's/^.*<seg>//;s#</seg> *</tuv>#<br/>#' \
 	| head -100 \
 	| sed ': loop; n; a <hr/>' >> $@
-	echo '</body></html/>' >> $@
+	echo '</p></body></html/>' >> $@
 	chmod 644 $@
 
-# endif
+endif
 
 
 
@@ -995,7 +967,9 @@ ${ALG_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/tmx/%.tmx.gz
 corpus_samples: ${CORPUS_SAMPLES}
 
 
-${CORPUS_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/xml/%.zip
+# ifdef SKIP_TOKENIZATION
+
+${CORPUS_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/raw/%.zip
 	@${MKDIR} ${dir $@}
 	echo '<html><head></head><body><pre>'      >$@
 	-unzip -p $< '*.xml' | head -100 \
@@ -1003,13 +977,18 @@ ${CORPUS_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/xml/%.zip
 	echo '</pre></body></html>' >> $@
 	chmod 644 $@
 
-# ${CORPUS_SAMPLES}:
+# else
+
+# ${CORPUS_SAMPLES}: ${CORPUSPUB}/%_sample.html: ${CORPUSRELEASE}/xml/%.zip
 # 	@${MKDIR} ${dir $@}
-# 	echo '<html><head></head><body><pre>' >$@
-# 	-opus-cat ${patsubst ${CORPUSPUB}/%_sample.html,${CORPUSXML}/%,$@} \
-# 	| head -100 | recode utf8..utf16 | recode utf16..html >> $@
+# 	echo '<html><head></head><body><pre>'      >$@
+# 	-unzip -p $< '*.xml' | head -100 \
+# 	| recode utf8..utf16 | recode utf16..html >> $@
 # 	echo '</pre></body></html>' >> $@
 # 	chmod 644 $@
+
+# endif
+
 
 
 
@@ -1309,11 +1288,13 @@ ${SMTFIX}: ${CORPUSRELEASE}/smt/%.fix: ${CORPUSWORDALIGN}/%
 # create bitext info files (some basic statistics)
 
 .PHONY: info lang_info ces_info txt_info tmx_info
-info: lang_info ces_info txt_info tmx_info
+# info: lang_info ces_info txt_info tmx_info
+info: ${INFOFILES}
 	${MAKE} ${CORPUSRELEASE}.info
 	${MAKE} ${OPUSRELEASE}/${CORPUS}/info.txt
 
-info-files: lang_info ces_info txt_info tmx_info
+info-files: ${INFOFILES}
+# info-files: lang_info ces_info txt_info tmx_info
 
 lang_info: ${LANG_INFO}
 
@@ -1360,7 +1341,7 @@ ces_info_file: ${CORPUSRELEASE}/info/${LANGPAIR}.info
 
 ifdef SKIP_TOKENIZATION
 
-${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/raw/%.xml.gz
+${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/xml/%.xml.gz
 	mkdir -p ${dir $@} ${LOCALTMP}
 	opus_read -rd ${OPUSRELEASE} -r ${VERSION} -d ${CORPUS} -p raw -af $< -wm moses \
 		-s $(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<))))) \

@@ -41,35 +41,6 @@ pivoting-job:
 	  ${MAKE} HPC_CORES=8 THREADS=4 HPC_MEM=128g HPC_TIME=72:00 HPC_DISK=500 publish.submit; \
 	fi
 
-
-ttt:
-	${OPUSTOOLS}/info2yaml.pl -b ${OPUSRELEASE}/${CORPUS}
-#	${MAKE} ${OPUSRELEASE}/${CORPUS}/info.txt
-
-finish-import:
-	${MAKE} MAKEARGS="LANGUAGE=en" LANGUAGE=en tokenize-job
-	${MAKE} publish
-	${MAKE} release
-
-#	mkdir -p english/raw english/xml
-#	-mv ${CORPUSRAW}/*en* english/raw/
-#	-mv ${CORPUSXML}/en-* english/xml/
-#	-mv ${CORPUSXML}/*-en english/xml/
-#	-mv ${CORPUSXML}/*-en.* english/xml/
-
-
-
-only-pivoting-job:
-	${MAKE} -C src pivoting
-	${MAKE} delete-empty-bitexts
-#	mkdir -p english/raw english/xml
-#	-mv ${CORPUSRAW}/*en* english/raw/
-#	-mv ${CORPUSXML}/en-* english/xml/
-#	-mv ${CORPUSXML}/*-en english/xml/
-#	-mv ${CORPUSXML}/*-en.* english/xml/
-
-#	for l in $(filter-out en,$(sort $(notdir $(wildcard ${CORPUSRAW}/?? ${CORPUSRAW}/??_*)))); do
-
 tokenize-jobs:
 	mkdir -p log
 	for l in $(sort $(notdir $(wildcard ${CORPUSRAW}/?? ${CORPUSRAW}/??_*))); do \

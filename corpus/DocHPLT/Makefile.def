@@ -1,0 +1,25 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+CORPUS  = DocHPLT
+
+RELEASE = 2
+VERSION = v${RELEASE}
+
+UNSORTED_SENTALIGN                 := 1
+SKIP_TMX_UNIQ                      := 1
+SKIP_TOKENIZATION_AND_DERIVED_DATA := 1
+# SKIP_BITEXT_INFO                   := 1
+
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+
+
+SRCHTML = Parallel corpora from Web Crawls collected in the <a href="https://hplt-project.org">HPLT project</a>. This is the document-aligned version of the data that provides the original parallel documents that contain aligned sentences extracted into the bitextreleased in the <a href="http://opus.nlpl.eu/legacy/HPLT-${VERSION}.php">HPLT ${VERSION} release</a>.
+
+EXTRAHTML = The data packaging is released under the <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">Creative Commons CC0 license</a> ("no rights reserved"), see <a href="https://hplt-project.org">https://hplt-project.org</a> for more details
+
+CITENOTE = Please, acknowledge the HPLT project at <a href="https://hplt-project.org">https://hplt-project.org</a>. This version is derived from the original release at their website adjusted for redistribution via the OPUS corpus collection. Please, acknowledge OPUS as well for this service.
