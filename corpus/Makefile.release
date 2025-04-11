@@ -1076,79 +1076,6 @@ ${CORPUSRELEASE}/xml/%.strict.xml.gz: ${CORPUSXML}/%.xml.gz
 	opus-read -c 1 -S 1 -T 1 -l $< | gzip -c > $@
 
 
-## convert XML to moses files
-
-# $(MOSES) $(MOSES_STRICT): ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSRELEASE}/xml/%.xml.gz
-# 	@mkdir -p ${TMPDIR}/$@.d
-# 	@( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
-# 	   T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<)))));\
-# 	   echo "copy source ($$S) and target ($$T) language files to tmp"; \
-# 	   for L in $$S $$T; do \
-# 	     if [ -e ${CORPUSRELEASE}/raw/$$L.zip ]; then \
-# 	       echo "rsync ${CORPUSRELEASE}/raw/$$L.zip ${TMPDIR}/$@.d/"; \
-# 	       rsync ${CORPUSRELEASE}/raw/$$L.zip ${TMPDIR}/$@.d/; \
-# 	     elif [ -e ${CORPUSRAW}/$$L.zip ]; then \
-# 	       echo "rsync ${CORPUSRAW}/$$L.zip ${TMPDIR}/$@.d"; \
-# 	       rsync ${CORPUSRAW}/$$L.zip ${TMPDIR}/$@.d/; \
-# 	     elif [ -e ${CORPUSRAW}/$$L ]; then \
-# 	       echo "rsync -a ${CORPUSRAW}/$$L ${TMPDIR}/$@.d/"; \
-# 	       rsync -a ${CORPUSRAW}/$$L ${TMPDIR}/$@.d/; \
-# 	     fi \
-# 	   done; \
-# 	   F=${CORPUS}.$(notdir $(@:.txt.zip=)); \
-# 	   if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
-# 	   ${GZCAT} $< \
-# 	   | $(OPUS2MOSES) -v -r -d ${TMPDIR}/$@.d \
-# 				-e ${TMPDIR}/$@.d/$$F.$$S \
-# 				-f ${TMPDIR}/$@.d/$$F.$$T \
-# 				-b ${TMPDIR}/$@.d/$$F.xml; \
-# 	   ${MAKE} PACKAGE="${CORPUS}.$$S-$$T in Moses format" ${TMPDIR}/$@.d/README ${TMPDIR}/$@.d/LICENSE; \
-# 	   zip -j ${TMPDIR}/$@ ${TMPDIR}/$@.d/README ${TMPDIR}/$@.d/LICENSE \
-# 		${TMPDIR}/$@.d/$$F.$$S ${TMPDIR}/$@.d/$$F.$$T ${TMPDIR}/$@.d/$$F.xml; \
-# 	   find ${TMPDIR}/$@.d -delete; )
-# 	@mkdir -p $(dir $@)
-# 	@mv -f ${TMPDIR}/$@ $@
-# 	@echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
-# 	@chmod 644 $@
-
-
-
-
-## new: use opus_read
-## NEW: skip ID file (do we need those?)
-##      if yes, then add `-id ${LOCALTMP}/$$F.ids` to opus_read and also add the file to the zip-archive
-
-# # 
-# ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSRELEASE}/xml/%.xml.gz
-# 	@mkdir -p ${LOCALTMP}/${CORPUS}/${VERSION}/raw
-# 	@( S=$(firstword $(subst -, ,$(firstword $(subst ., ,$(notdir $<))))); \
-# 	   T=$(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<))))); \
-# 	   if [ -e ${CORPUSRELEASE}/raw/$$S.zip ] && [ -e ${CORPUSRELEASE}/raw/$$T.zip ]; then \
-# 	      rsync ${CORPUSRELEASE}/raw/$$S.zip ${LOCALTMP}/${CORPUS}/${VERSION}/raw/; \
-# 	      rsync ${CORPUSRELEASE}/raw/$$T.zip ${LOCALTMP}/${CORPUS}/${VERSION}/raw/; \
-# 	      F=${CORPUS}.$(notdir $(@:.txt.zip=)); \
-# 	      if [ "$$S" == "$$T" ]; then S=$${S}1;T=$${T}2; fi; \
-# 	      opus_read -rd ${LOCALTMP} -r ${VERSION} -d ${CORPUS} -p raw \
-# 			-S 1-100 -T 1-100 -s $$S -t $$T -af $< \
-# 			-wm moses -w ${LOCALTMP}/$$F.$$S ${LOCALTMP}/$$F.$$T; \
-# 	      ${MAKE} PACKAGE="${CORPUS}.$$S-$$T in Moses format" ${LOCALTMP}/README ${LOCALTMP}/LICENSE; \
-# 	      zip -j ${LOCALTMP}/$(notdir $@) ${LOCALTMP}/README ${LOCALTMP}/LICENSE \
-# 			${LOCALTMP}/$$F.$$S ${LOCALTMP}/$$F.$$T; \
-# 	      mkdir -p $(dir $@); \
-# 	      mv -f ${LOCALTMP}/$(notdir $@) $@; \
-# 	      mkdir -p ${CORPUSRELEASE}/info; \
-# 	      wc -l < ${LOCALTMP}/$$F.$$S  > $(CORPUSRELEASE)/info/$(notdir $(@:zip=info)); \
-# 	      wc -w < ${LOCALTMP}/$$F.$$S >> $(CORPUSRELEASE)/info/$(notdir $(@:zip=info)); \
-# 	      wc -w < ${LOCALTMP}/$$F.$$T >> $(CORPUSRELEASE)/info/$(notdir $(@:zip=info)); \
-# 	      rm -f ${LOCALTMP}/${CORPUS}/${VERSION}/raw/$$S.zip \
-# 	            ${LOCALTMP}/${CORPUS}/${VERSION}/raw/$$T.zip \
-# 	            ${LOCALTMP}/$$F.$$S ${LOCALTMP}/$$F.$$T \
-# 	            ${LOCALTMP}/README ${LOCALTMP}/LICENSE; \
-# 	      echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}; \
-# 	      chmod 644 $@; \
-# 	      chmod 644 $(CORPUSRELEASE)/info/$(notdir $(@:zip=info); \
-# 	   fi )
-
 
 ## use opus_read to extract bitexts and convert to Moses format
 ##
@@ -1288,17 +1215,14 @@ ${SMTFIX}: ${CORPUSRELEASE}/smt/%.fix: ${CORPUSWORDALIGN}/%
 # create bitext info files (some basic statistics)
 
 .PHONY: info lang_info ces_info txt_info tmx_info
-# info: lang_info ces_info txt_info tmx_info
 info: ${INFOFILES}
 	${MAKE} ${CORPUSRELEASE}.info
 	${MAKE} ${OPUSRELEASE}/${CORPUS}/info.txt
 
 info-files: ${INFOFILES}
-# info-files: lang_info ces_info txt_info tmx_info
+
 
 lang_info: ${LANG_INFO}
-
-
 
 ## if we skip tokenisation, then do a very simple word count
 
@@ -1348,14 +1272,10 @@ ${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/xml/%.xml.gz
 		-t $(lastword $(subst -, ,$(firstword $(subst ., ,$(notdir $<))))) \
 		-w ${LOCALTMP}/$(notdir $@).source ${LOCALTMP}/$(notdir $@).target
 	zgrep '</linkGrp>' $< | wc -l          > $@
-	wc -l ${LOCALTMP}/$(notdir $@).source >> $@
-	wc -w ${LOCALTMP}/$(notdir $@).source >> $@
-	wc -w ${LOCALTMP}/$(notdir $@).target >> $@
+	wc -l < ${LOCALTMP}/$(notdir $@).source >> $@
+	wc -w < ${LOCALTMP}/$(notdir $@).source >> $@
+	wc -w < ${LOCALTMP}/$(notdir $@).target >> $@
 	rm -f ${LOCALTMP}/$(notdir $@).source ${LOCALTMP}/$(notdir $@).target
-
-#	mkdir -p ${dir $@}
-#	${GZCAT} $< | opus-bitextsize -d ${CORPUSRAW} > $@
-#	chmod 644 $@
 
 else
 
@@ -1363,6 +1283,7 @@ else
 ## NEW: create word count files to make it more efficient
 ## TODO: should we do any of this in some local tmpdir?
 ## NEW: use opus_read if we don't have count-files
+
 ${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/xml/%.xml.gz log/.bitext-word-counts
 	mkdir -p ${dir $@}
 	if [ `find ${CORPUSXML} -name '*.counts.gz' | wc -l` -gt 0 ]; then \
@@ -1380,11 +1301,6 @@ ${CES_INFO}: ${CORPUSRELEASE}/info/%.info: ${CORPUSRELEASE}/xml/%.xml.gz log/.bi
 	  rm -f ${LOCALTMP}/$(notdir $@).source ${LOCALTMP}/$(notdir $@).target; \
 	fi
 	chmod 644 $@
-
-#	mkdir -p ${dir $@}
-#	${GZCAT} $< | opus-bitextsize -d ${CORPUSXML} > $@
-#	chmod 644 $@
-
 
 endif
 

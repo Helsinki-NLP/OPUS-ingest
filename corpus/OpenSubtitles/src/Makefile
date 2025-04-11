@@ -113,6 +113,18 @@ cleanup:
 print-langs:
 	@echo ${LANGUAGES}
 
+
+CONTAINER        := project-OPUS-OpenSubtitles-src
+MAXSIZE          := 5G
+SWIFT_PARAMS_BIG := --use-slo --segment-size ${MAXSIZE}
+
+.PHONY: upload-srcfiles
+upload-srcfiles:
+	which a-get
+	find . -name '*.tar' -exec swift upload ${CONTAINER} --changed --skip-identical ${SWIFT_PARAMS_BIG} {} \;
+	find . -name '*.gz' -exec swift upload ${CONTAINER} --changed --skip-identical ${SWIFT_PARAMS_BIG} {} \;
+
+
 ##--------------------
 ## submit SLURM jobs
 ##--------------------

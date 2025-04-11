@@ -37,6 +37,21 @@ testsets:
 
 
 
+
+CONTAINER        := project-OPUS-OpenSubtitles
+MAXSIZE          := 5G
+SWIFT_PARAMS_BIG := --use-slo --segment-size ${MAXSIZE}
+
+.PHONY: upload-xmlfiles
+upload-xmlfiles:
+	which a-get
+	swift upload ${CONTAINER} --changed --skip-identical ${SWIFT_PARAMS_BIG} raw/new raw/pref raw/generated
+	swift upload ${CONTAINER} --changed --skip-identical ${SWIFT_PARAMS_BIG} xml/new xml/pref xml/generated
+
+
+
+
+
 #fix-info:
 #	${OPUSTOOLS}/info2yaml.pl -b ${OPUSRELEASE}/${CORPUS}
 #	${MAKE} ${OPUSRELEASE}/${CORPUS}/info.txt
