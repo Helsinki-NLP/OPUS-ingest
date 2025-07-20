@@ -7,6 +7,8 @@ include Makefile.def
 include ../Makefile.def
 
 
+LANGUAGES := af ar az be bg bn bs ca cy en eo et eu fa fi ga gl gu he hi hr is ja kk kn ko lt lv mk ml mr ms mt nb ne nn si sk sl sq sr sw ta te th tr uk ur uz vi xh
+
 ## doc-aligned files are on LUMI in
 ## /scratch/project_462000688/dayyan/sharded_data/clean/combined
 
@@ -26,6 +28,13 @@ prepare: ${DOCFILES} ${DOCALGFILES}
 prepare-docfiles: ${DOCFILES}
 prepare-alignfiles: ${DOCALGFILES}
 
+prepare-docfile-jobs:
+	for d in ${DOCFILES}; do \
+	  if [ ! -e $$d ]; then \
+	    ${MAKE} HPC_DISK=500 HPC_MEM=64g $$d.submit; \
+	  fi \
+	done
+
 ## need to add the language prefix that was missing in the original doc-zip files
 
 ${DOCFILES}: raw/%.zip: src/%-deduped-docs.zip
@@ -37,6 +46,9 @@ ${DOCFILES}: raw/%.zip: src/%-deduped-docs.zip
 
 #	@mkdir -p ${dir $@}
 #	mv $< $@
+
+
+
 
 
 
@@ -58,6 +70,18 @@ ${PIVOTED_BITEXTS}:
 	find $@.d -delete
 
 
+PIVOTING_JOBS = $(addsuffix -job,${PIVOTED_BITEXTS})
+
+${PIVOTING_JOBS}:
+	if [ ! -e $(@:-job=) ]; then \
+	  ${MAKE} HPC_MEM=128g $(@:-job=).submit; \
+	fi
+
+pivoting-jobs: ${PIVOTING_JOBS}
+
+
+
+
 # en-fi.sample:
 # 	opus_read -m 10000 -rd ../../OPUS/corpus -r v2 -d DocHPLT -p raw -af ../../OPUS/corpus/DocHPLT/v2/xml/en-fi.xml.gz -wm moses -s en -t fi > en-fi.sample
 
@@ -65,9 +89,9 @@ ${PIVOTED_BITEXTS}:
 # 	opus_read -m 10000 -rd ../../OPUS/corpus -r v2 -d DocHPLT -p raw -af ../../OPUS/corpus/DocHPLT/v2/xml/en-fi.xml.gz -wm moses -s en -t fi | gzip -c > $@
 
 
-# ${DOCALGFILES}: xml/%.gz: src/%.alignments.gz
-# 	@mkdir -p ${dir $@}
-# 	mv $< $@
+${DOCALGFILES}: xml/%.xml.gz: src/%.alignments.gz
+	@mkdir -p ${dir $@}
+	mv $< $@
 
 
 

@@ -4,13 +4,25 @@
 
 CORPUS  = DocHPLT
 
-RELEASE = 2
+
+## release version
+
+RELEASE = 2.1
 VERSION = v${RELEASE}
+
+## corresponding HPLT release
+
+HPLT_RELEASE = 2
+
+
+## don't send e-mails about SLURM jobs
+
+EMAIL = 
 
 UNSORTED_SENTALIGN                 := 1
 SKIP_TMX_UNIQ                      := 1
 SKIP_TOKENIZATION_AND_DERIVED_DATA := 1
-# SKIP_BITEXT_INFO                   := 1
+SKIP_BITEXT_INFO                   := 1
 
 
 # with SRCHTML you can define some extra HTML code that will be placed just
@@ -18,7 +30,7 @@ SKIP_TOKENIZATION_AND_DERIVED_DATA := 1
 # EXTRAHTML is code which will be put just after the 'Download' header
 
 
-SRCHTML = Parallel corpora from Web Crawls collected in the <a href="https://hplt-project.org">HPLT project</a>. This is the document-aligned version of the data that provides the original parallel documents that contain aligned sentences extracted into the bitextreleased in the <a href="http://opus.nlpl.eu/legacy/HPLT-${VERSION}.php">HPLT ${VERSION} release</a>.
+SRCHTML = Parallel corpora from Web Crawls collected in the <a href="https://hplt-project.org">HPLT project</a>. This is the document-aligned version of the data that provides the original parallel documents that contain aligned sentences extracted into the bitextreleased in the <a href="http://opus.nlpl.eu/legacy/HPLT-${HPLT_RELEASE}.php">HPLT ${HPLT_RELEASE} release</a>.
 
 EXTRAHTML = The data packaging is released under the <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">Creative Commons CC0 license</a> ("no rights reserved"), see <a href="https://hplt-project.org">https://hplt-project.org</a> for more details
 
