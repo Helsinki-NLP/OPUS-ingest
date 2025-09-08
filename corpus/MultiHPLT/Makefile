@@ -54,6 +54,15 @@ tokenize-job:
 	${MAKE} annotate_files
 
 
+
+## store project files on allas
+## use project_2003093 (OPUS-corpus)
+
+.PHONY: store-allas
+store-allas:
+	swift upload project-OPUS-${CORPUS}-${VERSION} --changed --skip-identical --use-slo --segment-size 5G raw xml src
+
+
 ## standard procedures are specified in the following makefiles
 ##
 ##   Makefile.process ...... standard corpus processing tasks

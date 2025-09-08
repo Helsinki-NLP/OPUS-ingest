@@ -35,6 +35,10 @@ OPUSNLPL            := ${NLPLHOME}/data/OPUS
 WORK_CONTAINER_BASENAME    = project-OPUS
 RELEASE_CONTAINER_BASENAME = OPUS
 
+
+ARCHIVE_CONTAINER  := ${WORK_CONTAINER_BASENAME}-${CORPUS}-${VERSION}
+
+
 ## scratch/work space
 ## TODO: remove hard-coded scratch space location
 

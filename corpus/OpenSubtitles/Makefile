@@ -52,6 +52,15 @@ upload-xmlfiles:
 
 
 
+## store project files on allas
+## use project_2003093 (OPUS-corpus)
+
+.PHONY: store-allas
+store-allas:
+	swift upload project-OPUS-OpenSubtitles-${VERSION} --changed --skip-identical --use-slo --segment-size 5G raw xml intra alt all src
+
+
+
 
 
 #fix-info:

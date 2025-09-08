@@ -12,6 +12,15 @@ UBUNTU_PACKAGES = libboost-all-dev \
 		pybind11-dev \
 		tidy
 
+
+.PHONY: cleanup-dry-run
+cleanup-dry-run:
+	git clean -d -n
+
+.PHONY: cleanup
+cleanup:
+	git clean -d -f
+
 .PHONY: install
 install: requirements.txt
 	apt install ${UBUNTU_PACKAGES}

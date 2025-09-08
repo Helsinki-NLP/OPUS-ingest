@@ -1,0 +1,31 @@
+
+
+# po2dataset
+
+
+* https://pypi.org/project/po2dataset/ (argos translate)
+* creates zip files with aligned plain text files
+
+Example:
+
+```
+po2dataset tmp/tmp.nxeXgsr03B/out-vicuna/nb.po --format zip --name translatewiki --source_code en --target_code nb --ref "translatewiki.net translations"
+```
+
+
+# CPAN/Perl PO tools
+
+* https://metacpan.org/pod/Locale::PO
+* https://metacpan.org/pod/Text::PO
+
+
+```
+use Locale::PO;
+
+$aref = Locale::PO->load_file_asarray($ARGV[0]);
+
+foreach my $po (@{$aref}){
+    print " ID: ".$po->msgid."\n";
+    print "STR: ".$po->msgstr."\n\n";
+}
+```

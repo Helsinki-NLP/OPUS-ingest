@@ -47,6 +47,20 @@ corpus-extra:
 publish release: packages webpage
 
 
+
+
+## store project files on allas
+## use project_2003093 (OPUS-corpus)
+
+APUT_FLAGS = -p ${CSC_WORK_PROJECT} --override --nc
+
+.PHONY: archive
+archive:
+	which a-put
+	a-put ${APUT_FLAGS} -b ${ARCHIVE_CONTAINER} *
+
+
+
 ## prepare makefiles
 .PHONY: prepare
 prepare: xml/Makefile wordalign/Makefile

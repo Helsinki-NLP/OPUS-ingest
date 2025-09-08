@@ -72,6 +72,12 @@ all:
 	${MAKE} cleanup
 
 
+## store files on allas
+
+store-allas:
+	swift upload project-OPUS-OpenSubtitles-src --changed --skip-identical --use-slo --segment-size 5G *
+
+
 .PHONY: extract
 extract: ${SRTDIR}.done
 
