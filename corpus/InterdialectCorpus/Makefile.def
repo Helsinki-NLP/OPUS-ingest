@@ -1,0 +1,32 @@
+# -*-makefile-*-
+#
+# name & version of the corpus
+
+
+## CORPUSNAME = subdir under OPUS/corpus/
+CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
+
+## current version
+VERSION = v1
+
+LICENSE = CC BY-NC-SA 4.0
+COPYRIGHT = 
+
+# with SRCHTML you can define some extra HTML code that will be placed just
+# after the name of the sub-corpus
+# EXTRAHTML is code which will be put just after the 'Download' header
+# CITENOTE if you want to change the default reference to be cited
+
+SRCHTML = InterdialectCorpus is a parallel corpus of Kurdish (Sorani and Kurmanji) and English available from <a href="https://github.com/KurdishBLARK/InterdialectCorpus">https://github.com/KurdishBLARK/InterdialectCorpus</a>.
+# EXTRAHTML = Simple example corpus
+
+CITENOTE = Please cite <pre>@misc{ahmadi2020leveraging,<br /> \
+      title={Leveraging Multilingual News Websites for Building a Kurdish Parallel Corpus}, <br /> \
+      author={Sina Ahmadi and Hossein Hassani and Daban Q. Jaff},<br /> \
+      year={2020},<br /> \
+      eprint={2010.01554},<br /> \
+      archivePrefix={arXiv},<br /> \
+      primaryClass={cs.CL}<br /> \
+}</pre> and also acknowledge OPUS for providing this package.
+
+BIBTEX = QG1pc2N7YWhtYWRpMjAyMGxldmVyYWdpbmcsCiAgICAgIHRpdGxlPXtMZXZlcmFnaW5nIE11bHRpbGluZ3VhbCBOZXdzIFdlYnNpdGVzIGZvciBCdWlsZGluZyBhIEt1cmRpc2ggUGFyYWxsZWwgQ29ycHVzfSwgCiAgICAgIGF1dGhvcj17U2luYSBBaG1hZGkgYW5kIEhvc3NlaW4gSGFzc2FuaSBhbmQgRGFiYW4gUS4gSmFmZn0sCiAgICAgIHllYXI9ezIwMjB9LAogICAgICBlcHJpbnQ9ezIwMTAuMDE1NTR9LAogICAgICBhcmNoaXZlUHJlZml4PXthclhpdn0sCiAgICAgIHByaW1hcnlDbGFzcz17Y3MuQ0x9Cn0K

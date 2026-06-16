@@ -118,13 +118,19 @@ ${CONVERTED_CORPORA}:
 TMXFILES      := $(sort $(wildcard *.tmx.gz))
 TMXFILES_DONE := $(addsuffix .done,${TMXFILES})
 
+FIX_UTF8 := ${OPUSTOOLS}/fix_utf8_errors.py
+
 convert-tmx-files: ${TMXFILES_DONE}
 
 ${TMXFILES_DONE}: %.done: %
 	mkdir -p $<.d
-	cd $<.d && zcat ${CURDIR}/$< | ${UNICODE_CLEANUP} \
+	cd $<.d && ${FIX_UTF8} ${CURDIR}/$< \
 	| ${TMX2OPUS} -u -d -t ${TMPDIR} -D ${CORPUSSRC}/langdb -o hplt_${RELEASE}.xml.gz
 	touch $@
+
+#	cd $<.d && zcat ${CURDIR}/$< | ${UNICODE_CLEANUP} \
+#	| ${TMX2OPUS} -u -d -t ${TMPDIR} -D ${CORPUSSRC}/langdb -o hplt_${RELEASE}.xml.gz
+#	touch $@
 
 
 

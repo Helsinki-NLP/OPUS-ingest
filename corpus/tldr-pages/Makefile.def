@@ -3,7 +3,10 @@
 # name & version of the corpus
 
 CORPUS  = tldr-pages
-VERSION = v2023-08-29
+
+TODAY  := $(shell date +%F)
+VERSION = v${TODAY}
+# VERSION = v2023-08-29
 
 LICENSE = CC-BY-4.0
 COPYRIGHT = tldr-pages team and contributors

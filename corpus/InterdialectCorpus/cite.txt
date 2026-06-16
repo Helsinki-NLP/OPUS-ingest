@@ -1,0 +1,8 @@
+@misc{ahmadi2020leveraging,
+      title={Leveraging Multilingual News Websites for Building a Kurdish Parallel Corpus}, 
+      author={Sina Ahmadi and Hossein Hassani and Daban Q. Jaff},
+      year={2020},
+      eprint={2010.01554},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}

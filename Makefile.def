@@ -260,6 +260,7 @@ ATOOLS          = atools
 ifeq (${HPC_HOST},puhti)
   EFLOMAL       = module use -a /projappl/nlpl/software/modules/etc && module load nlpl-efmaral && align_eflomal.py
   EFMARAL       = module use -a /projappl/nlpl/software/modules/etc && module load nlpl-efmaral && align.py
+  POLYGLOT_ENV  = module load python-data/3.8-22.10 &&
 endif
 
 

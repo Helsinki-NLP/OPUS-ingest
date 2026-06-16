@@ -461,6 +461,7 @@ LOCALTMP  := ${shell mktemp -d -p ${TMPDIR}}
 
 .PHONY: html refresh-html download-dirs webpage website
 html: 	${OPUSPUB}/${CORPUS}.php ${FREQ_COUNTS}
+	mkdir -p $(dir ${PACKAGES})
 	cat ${PACKAGES} | sort | uniq > ${PACKAGES}.uniq
 	mv -f ${PACKAGES}.uniq ${PACKAGES}
 
@@ -775,7 +776,7 @@ ${LANG_RAW} ${LANG_XML}:
 	echo "$(patsubst ${CORPUSRELEASE}/%.zip,${CORPUS}/%,$@)"  > $@.d/INFO
 	echo "${CORPUS}"                                         >> $@.d/INFO
 	echo "${VERSION}"                                        >> $@.d/INFO
-	cd $@.d && zip -r $@ INFO README LICENSE
+	cd $@.d && zip -q -r $@ INFO README LICENSE
 	find $@.d -delete
 	chmod 644 $@
 
@@ -788,7 +789,7 @@ ${TMPDIR}/${CORPUS}/%.zip: ${CORPUSHOME}/%
 	rsync -a $< $(dir $@)
 	find $(@:.zip=) -type l -delete
 	find $(@:.zip=) -name '*.gz' | xargs -P ${THREADS} gunzip -f
-	cd ${TMPDIR} && zip -r $@ $(patsubst ${TMPDIR}/%,%,$(@:.zip=))
+	cd ${TMPDIR} && zip -q -r $@ $(patsubst ${TMPDIR}/%,%,$(@:.zip=))
 	find $(@:.zip=) -delete
 
 
@@ -817,7 +818,7 @@ ${LANG_UD}: ${CORPUSRELEASE}/parsed/%.zip: ${CORPUSPARSED}/%
 	echo "${patsubst ${OPUSCORPORA}/%,%,$<}" > ${TMPDIR}/$</INFO
 	echo "${CORPUS}" >> ${TMPDIR}/$</INFO
 	echo "${VERSION}" >> ${TMPDIR}/$</INFO
-	( cd ${TMPDIR}/$<; zip -r $@ INFO README LICENSE ${CORPUS}; cd ${PWD} )
+	( cd ${TMPDIR}/$<; zip -q -r $@ INFO README LICENSE ${CORPUS}; cd ${PWD} )
 	rm -fr ${TMPDIR}/$<
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
@@ -1184,16 +1185,17 @@ $(MOSES) $(MOSES_STRICT): ${CORPUSRELEASE}/moses/%.txt.zip: ${CORPUSRELEASE}/xml
 			-S 1-100 -T 1-100 -s $$S -t $$T \
 			-af ${LOCALTMP}/$(notdir $@).d/${CORPUS}/${VERSION}/raw/$(notdir $<) \
 			-wm moses -w ${LOCALTMP}/$$F.$$S ${LOCALTMP}/$$F.$$T; \
-	  zip -j ${LOCALTMP}/$(notdir $@) ${LOCALTMP}/$$F.$$S ${LOCALTMP}/$$F.$$T; \
+	  zip -q -j ${LOCALTMP}/$(notdir $@) ${LOCALTMP}/$$F.$$S ${LOCALTMP}/$$F.$$T; \
 	  wc -l < ${LOCALTMP}/$$F.$$S  > $(CORPUSRELEASE)/info/$(notdir $(@:zip=info)); \
 	  wc -w < ${LOCALTMP}/$$F.$$S >> $(CORPUSRELEASE)/info/$(notdir $(@:zip=info)); \
 	  wc -w < ${LOCALTMP}/$$F.$$T >> $(CORPUSRELEASE)/info/$(notdir $(@:zip=info)); \
 	  rm -f ${LOCALTMP}/$(notdir $@).d/${CORPUS}/${VERSION}/raw/* ${LOCALTMP}/$$F.$$S ${LOCALTMP}/$$F.$$T; )
 	${MAKE} PACKAGE="$$S-$$T in Moses format" ${LOCALTMP}/$(notdir $@).d/README ${LOCALTMP}/$(notdir $@).d/LICENSE
-	zip -j ${LOCALTMP}/$(notdir $@) ${LOCALTMP}/$(notdir $@).d/README ${LOCALTMP}/$(notdir $@).d/LICENSE
+	zip -q -j ${LOCALTMP}/$(notdir $@) ${LOCALTMP}/$(notdir $@).d/README ${LOCALTMP}/$(notdir $@).d/LICENSE
 	rm -f ${LOCALTMP}/$(notdir $@).d/README ${LOCALTMP}/$(notdir $@).d/LICENSE
 	mv -f ${LOCALTMP}/$(notdir $@) $@
 	touch $(CORPUSRELEASE)/info/$(notdir $(@:zip=info))
+	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}
 	chmod 644 $@ $(CORPUSRELEASE)/info/$(notdir $(@:zip=info))
 
@@ -1223,7 +1225,7 @@ ${WORDALG}: ${CORPUSRELEASE}/smt/%.alg.zip: ${CORPUSWORDALIGN}/% # ${CORPUSWORDA
 	xargs -P 8 gunzip -f
 	${MAKE} PACKAGE=${patsubst ${OPUSRELEASE}/%.zip,%,$@} ${TMPDIR}/$@/README
 	rm -f $@
-	( cd ${TMPDIR}/$@; zip -r $@ README ${CORPUS}; cd ${PWD} )
+	( cd ${TMPDIR}/$@; zip -q -r $@ README ${CORPUS}; cd ${PWD} )
 	rm -fr ${TMPDIR}/$@
 	${MKDIR} ${dir ${PACKAGES}}
 	echo "$@" | sed "s#${OPUSRELEASE}/##" >> ${PACKAGES}

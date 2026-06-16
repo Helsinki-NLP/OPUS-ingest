@@ -7,7 +7,10 @@ include Makefile.def
 include ../Makefile.def
 
 
-LANGUAGES := af ar az be bg bn bs ca cy en eo et eu fa fi ga gl gu he hi hr is ja kk kn ko lt lv mk ml mr ms mt nb ne nn si sk sl sq sr sw ta te th tr uk ur uz vi xh
+LANGUAGES_v2 := af ar az be bg bn bs ca cy en eo et eu fa fi ga gl gu he hi hr is ja kk kn ko lt lv mk ml mr ms mt nb ne nn si sk sl sq sr sw ta te th tr uk ur uz vi xh
+LANGUAGES_v3 := bg bs ca cs da el en et eu fi ga gl hr hu is ka lt lv mk mt nb no ro sk sl sq sr tr uk
+
+LANGUAGES ?= ${LANGUAGES_v3}
 
 ## doc-aligned files are on LUMI in
 ## /scratch/project_462000688/dayyan/sharded_data/clean/combined

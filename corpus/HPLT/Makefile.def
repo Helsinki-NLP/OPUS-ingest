@@ -4,8 +4,11 @@
 
 CORPUS  = HPLT
 
-RELEASE = 2
+RELEASE = 3
 VERSION = v${RELEASE}
+
+TRG_LANGUAGES := bg bs ca cs da el et eu fi ga gl hr hu is ka lt lv mk mt nb nn ro sk sl sq sr tr uk
+LANGUAGES := $(sort en ${TRG_LANGUAGES})
 
 # with SRCHTML you can define some extra HTML code that will be placed just
 # after the name of the sub-corpus

@@ -23,13 +23,12 @@ all:
 
 ## submit a job for fetching and processing all data
 
-all-jobs:
-	${MAKE} HPC_CORES=4 HPC_MEM=8g HPC_TIME=72:00 convert-job.submit
 
+all-jobs:
+	${MAKE} HPC_CORES=1 HPC_MEM=4g HPC_TIME=72:00 fetch-job.submit
 
 # all-jobs:
-# 	${MAKE} HPC_CORES=1 HPC_MEM=4g HPC_TIME=72:00 fetch-job.submit
-
+# 	${MAKE} HPC_CORES=4 HPC_MEM=8g HPC_TIME=72:00 convert-job.submit
 
 
 fetch-job:
@@ -104,7 +103,7 @@ copy-tmx-files:
 	    fi \
 	  done \
 	done
-
+	touch ${CORPUSRELEASE}/tmx/*.tmx.gz
 
 
 

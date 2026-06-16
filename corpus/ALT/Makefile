@@ -16,6 +16,7 @@
 # - does not work well for multilingual corpora yet
 #   (converts for every language pair!)
 
+SHELL := bash
 
 include Makefile.def
 include ../Makefile.def
@@ -24,7 +25,13 @@ include ../Makefile.def
 ## LANGUAGES = unique file extensions of files in src (.gz will be removed)
 ## FILES = file basenames
 
-LANGUAGES = en my
+ifneq ($(wildcard src),)
+  LANGUAGES := $(sort $(patsubst src/data_%.txt.train,%,$(wildcard src/data_*.train)))
+else
+  LANGUAGES := bn en fil hi id ja khm lo ms my th vi zh
+endif
+
+
 
 ## make all:
 ## - convert (see below)
@@ -50,6 +57,11 @@ extra:
 	${MAKE} udparse
 	${MAKE} wordalign
 	${MAKE} cwb-index
+
+
+continue:
+	${MAKE} annotate
+	${MAKE} publish
 
 
 ## standard procedures are specified in the following makefiles
@@ -82,26 +94,56 @@ include ../Makefile.tokenize-polyglot
 # include ../Makefile.annotate
 
 .PHONY: fetch
-fetch: wat2020.my-en/alt/train.alt.my
+fetch: src
 
-wat2020.my-en/alt/train.alt.my:
-	wget http://lotus.kuee.kyoto-u.ac.jp/WAT/my-en-data/wat2020.my-en.zip
-	unzip wat2020.my-en.zip
-	rm -f wat2020.my-en.zip
+ALT-Parallel-Corpus-${RELEASE_DATE}:
+	wget https://www2.nict.go.jp/astrec-att/member/mutiyama/ALT/$@.zip
+	unzip $@.zip
+	rm -f $@.zip
+
+tools: ALT-Parallel-Corpus-${RELEASE_DATE}
+	wget https://www2.nict.go.jp/astrec-att/member/mutiyama/ALT/$@.zip
+	wget https://www2.nict.go.jp/astrec-att/member/mutiyama/ALT/URL-train.txt
+	wget https://www2.nict.go.jp/astrec-att/member/mutiyama/ALT/URL-dev.txt
+	wget https://www2.nict.go.jp/astrec-att/member/mutiyama/ALT/URL-test.txt
+	unzip $@.zip
+	gzip -f URL-*.txt
+	sed 's/20190531/${RELEASE_DATE}/' < tools/doit.sh | \
+	sed 's/bg en fil id ja khm lo ms my th vi zh/bg en fil hi id ja khm lo ms my th vi zh/'  \
+	> tools/split.sh
+	chmod +x tools/split.sh
+	rm -f $@.zip
+	cp $</README.txt INFO
+
+src: tools
+	cd tools && ./split.sh
+	mkdir -p src
+	mv tools/data_*.train src/
+	mv src/data_bg.txt.train src/data_bn.txt.train
+
+
 
 
 ## change this if moses2opus is not in your PATH
-MOSES2OPUS = moses2opus
+# MOSES2OPUS = moses2opus
+MOSES2OPUS = ${PWD}/scripts/alt2opus
 
 ## convert
 .PHONY: convert
-convert: xml/en-my.xml.gz
+convert: src
+	${MAKE} raw
 
-xml/en-my.xml.gz:
-	${MAKE} fetch
+raw:
 	mkdir -p raw xml
-	cd raw && ${MOSES2OPUS} -z -s en -t my -b wat2020-train \
-		../wat2020.my-en/alt/train.alt.en \
-		../wat2020.my-en/alt/train.alt.my |\
-	gzip -c > ../$@
+	( cd raw; \
+	for s in ${LANGUAGES}; do \
+	  for t in ${LANGUAGES}; do \
+	    if [ "$$s" \< "$$t" ]; then \
+	      echo "processing $$s-$$t"; \
+	      ${MOSES2OPUS} -z -s $$s -t $$t -b data_train \
+		../src/data_$$s.txt.train  ../src/data_$$t.txt.train |\
+	      gzip -c > ../xml/$$s-$$t.xml.gz; \
+	    fi \
+	  done \
+	done )
 

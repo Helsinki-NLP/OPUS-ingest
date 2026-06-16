@@ -90,11 +90,14 @@ include ../Makefile.tokenize-polyglot
 TSV2OPUS = tsv2opus
 
 
-DOWNLOAD_URLS := `mtdata list | grep Statmt-pmindia-$(patsubst v%,%,${VERSION}) | cut -f2`
+# DOWNLOAD_URLS := `mtdata list | grep Statmt-pmindia-$(patsubst v%,%,${VERSION}) | cut -f2`
 
 fetch:
 	mkdir -p src
-	cd src && for f in ${DOWNLOAD_URLS}; do wget $$f; done
+#	cd src && for f in ${DOWNLOAD_URLS}; do wget $$f; done
+	for l in as bn gu hi kn ml mni mr or pa ta te ur; do \
+	  wget -O src/pmindia.v1.$$l-en.tsv https://data.statmt.org/pmindia/v1/parallel/pmindia.v1.$$l-en.tsv; \
+	done
 	wget -O INFO https://data.statmt.org/pmindia/README
 
 
@@ -111,18 +114,28 @@ ${CONVERTED}: %_done: %
 	@echo "convert $<"
 	@mkdir -p raw xml log
 	@if [ $(suffix $<) == .gz ]; then \
+	  s=$(firstword $(subst .,,$(subst -, ,$(suffix $(<:.tsv.gz=))))); \
+	  t=$(lastword $(subst .,,$(subst -, ,$(suffix $(<:.tsv.gz=))))); \
+	  b=$(notdir $(basename $(<:.tsv.gz=))); \
+	  if [ $$s \< $$t ]; then \
+	     p="-S 1 -T 0 -s $$s -t $$t"; \
+	  else \
+	     p="-S 0 -T 1 -t $$s -s $$t"; \
+	  fi; \
 	  cd raw; \
-	  ${GZIP} -cd < ../$< |\
-	  ${TSV2OPUS} -z \
-		-t $(firstword $(subst .,,$(subst -, ,$(suffix $(<:.tsv.gz=))))) \
-		-s $(lastword $(subst .,,$(subst -, ,$(suffix $(<:.tsv.gz=))))) \
-		-b $(notdir $(basename $(<:.tsv.gz=))); \
+	  ${GZIP} -cd < ../$< | ${TSV2OPUS} -z $$p -b $$b; \
 	else \
+	  s=$(firstword $(subst .,,$(subst -, ,$(suffix $(<:.tsv=))))); \
+	  t=$(lastword $(subst .,,$(subst -, ,$(suffix $(<:.tsv=))))); \
+	  b=$(notdir $(basename $(<:.tsv=))); \
+	  if [ $$s \< $$t ]; then \
+	     p="-S 1 -T 0 -s $$s -t $$t"; \
+	  else \
+	     p="-S 0 -T 1 -t $$s -s $$t"; \
+	  fi; \
 	  cd raw; \
-	  ${TSV2OPUS} -z \
-		-t $(firstword $(subst .,,$(subst -, ,$(suffix $(<:.tsv=))))) \
-		-s $(lastword $(subst .,,$(subst -, ,$(suffix $(<:.tsv=))))) \
-		-b $(notdir $(basename $(<:.tsv.gz=))) < ../$<; \
+	  echo "${TSV2OPUS} -z $$p -b $$b < $<"; \
+	  ${TSV2OPUS} -z $$p -b $$b < ../$<; \
 	fi
 	@touch $@
 

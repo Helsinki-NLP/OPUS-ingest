@@ -7,12 +7,14 @@ CORPUS  = DocHPLT
 
 ## release version
 
-RELEASE = 2.1
+# RELEASE = 2.1
+RELEASE = 3
 VERSION = v${RELEASE}
 
 ## corresponding HPLT release
 
-HPLT_RELEASE = 2
+# HPLT_RELEASE = 2
+HPLT_RELEASE = 3
 
 
 ## don't send e-mails about SLURM jobs

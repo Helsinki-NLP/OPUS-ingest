@@ -101,22 +101,53 @@ convert: ${CONVERTED} xml/Makefile
 	${MAKE} -C xml create-align-files
 
 
+
 ${CONVERTED}: %_done: %
 	@echo "convert $<"
 	@mkdir -p raw xml log
 	@if [ $(suffix $<) == .gz ]; then \
+	  s=$(firstword $(subst .,,$(subst -, ,$(suffix $(<:.tsv.gz=))))); \
+	  t=$(lastword $(subst .,,$(subst -, ,$(suffix $(<:.tsv.gz=))))); \
+	  b="$(notdir $(basename $(<:.tsv=))).$$s-$$t"; \
+	  if [ $$s \< $$t ]; then \
+	     p="-S 0 -T 1 -s $$s -t $$t"; \
+	  else \
+	     p="-S 1 -T 0 -t $$s -s $$t"; \
+	  fi; \
 	  cd raw; \
-	  ${GZIP} -cd < ../$< |\
-	  ${TSV2OPUS} -z \
-		-s $(firstword $(subst .,,$(subst -, ,$(suffix $(<:.tsv.gz=))))) \
-		-t $(lastword $(subst .,,$(subst -, ,$(suffix $(<:.tsv.gz=))))) \
-		-b $(notdir $(basename $(<:.tsv.gz=))); \
+	  ${GZIP} -cd < ../$< | ${TSV2OPUS} -z $$p -b $$b; \
 	else \
+	  s=$(firstword $(subst .,,$(subst -, ,$(suffix $(<:.tsv=))))); \
+	  t=$(lastword $(subst .,,$(subst -, ,$(suffix $(<:.tsv=))))); \
+	  b="$(notdir $(basename $(<:.tsv=))).$$s-$$t"; \
+	  if [ $$s \< $$t ]; then \
+	     p="-S 0 -T 1 -s $$s -t $$t"; \
+	  else \
+	     p="-S 1 -T 0 -t $$s -s $$t"; \
+	  fi; \
 	  cd raw; \
-	  ${TSV2OPUS} -z \
-		-s $(firstword $(subst .,,$(subst -, ,$(suffix $(<:.tsv=))))) \
-		-t $(lastword $(subst .,,$(subst -, ,$(suffix $(<:.tsv=))))) \
-		-b $(notdir $(basename $(<:.tsv.gz=))) < ../$<; \
+	  echo "${TSV2OPUS} -z $$p -b $$b < $<"; \
+	  ${TSV2OPUS} -z $$p -b $$b < ../$<; \
 	fi
 	@touch $@
+
+
+# ${CONVERTED}: %_done: %
+# 	@echo "convert $<"
+# 	@mkdir -p raw xml log
+# 	@if [ $(suffix $<) == .gz ]; then \
+# 	  cd raw; \
+# 	  ${GZIP} -cd < ../$< |\
+# 	  ${TSV2OPUS} -z \
+# 		-s $(firstword $(subst .,,$(subst -, ,$(suffix $(<:.tsv.gz=))))) \
+# 		-t $(lastword $(subst .,,$(subst -, ,$(suffix $(<:.tsv.gz=))))) \
+# 		-b $(notdir $(basename $(<:.tsv.gz=))); \
+# 	else \
+# 	  cd raw; \
+# 	  ${TSV2OPUS} -z \
+# 		-s $(firstword $(subst .,,$(subst -, ,$(suffix $(<:.tsv=))))) \
+# 		-t $(lastword $(subst .,,$(subst -, ,$(suffix $(<:.tsv=))))) \
+# 		-b $(notdir $(basename $(<:.tsv.gz=))) < ../$<; \
+# 	fi
+# 	@touch $@
 

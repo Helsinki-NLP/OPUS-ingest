@@ -7,7 +7,7 @@
 CORPUS  = ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
 
 ## current version
-VERSION = v1
+VERSION = v1b
 
 
 LICENSE      = CC-BY-SA 4.0
@@ -26,7 +26,7 @@ SRCHTML = This directory contains the releases of the pmindia corpus. It is a pa
 plus English, derived from the Prime Minister of India's news updates (https://www.pmindia.gov.in/en/news-updates/).\
 We release a sentence aligned version of the corpus, as well as the monolingual text extracted from the articles.
 
-EXTRAHTML = The code for crawling and aligning is available at <a href="https://github.com/bhaddow/pmindia-crawler">https://github.com/bhaddow/pmindia-crawler</a>
+EXTRAHTML = The code for crawling and aligning is available at <a href="https://github.com/bhaddow/pmindia-crawler">https://github.com/bhaddow/pmindia-crawler</a>. Version 1b fixes the alignment problem for bs-en and as-en.
 
 CITENOTE  = <h3>Acknowledgements</h3>\
 This work has received funding from the European Unions Horizon 2020 research and innovation programme \

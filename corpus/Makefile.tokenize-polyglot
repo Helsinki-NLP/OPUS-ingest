@@ -45,7 +45,7 @@ endif
 
 ${CORPUSXML}/${LANGUAGE}/%: ${CORPUSRAW}/${LANGUAGE}/%
 	mkdir -p $(shell dirname $@)
-	${CATCMD} $< | ${OPUSTOKENIZER} -l $(LANGUAGE) ${ZIPCMD} > $@
+	${POLYGLOT_ENV} ${CATCMD} $< | ${OPUSTOKENIZER} -l $(LANGUAGE) ${ZIPCMD} > $@
 
 
 clean-xml:
