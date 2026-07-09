@@ -11,6 +11,15 @@ LANGUAGES   = $(sort $(notdir $(wildcard ${CORPUSRAW}/??)) \
 
 # VERSION = $(shell date +%F)
 
+
+## for fetching the previous releases you need to configure allas
+##    module load allas
+##    allas-conf -k -p project_2003093
+##
+## after releasing a new version:
+## Don't forget to store the project on allas again for next time
+##    ${MAKE} -C .. CORPUS=Tatoeba store
+
 all:
 	${MAKE} -C .. CORPUS=Tatoeba fetch
 	${MAKE} -C src all
@@ -20,7 +29,6 @@ all:
 	mv -f raw/*-* xml/
 	${MAKE} -C xml create-align-files
 	rm -f log/.tok* log/.*.done
-	${MAKE} annotate
 	${MAKE} more
 
 all-job:
@@ -28,9 +36,24 @@ all-job:
 	${MAKE} HPC_CORES=8 HPC_MEM=16g HPC_TIME=72:00 all.submit
 
 more:
+	${MAKE} annotate
 	${MAKE} moses tmx
 	${MAKE} sample-files
 	${MAKE} publish
+
+store-tatoeba:
+	${MAKE} -C .. CORPUS=Tatoeba store
+
+
+## temporary fix for a problem created by opus-merge-align
+## (multiple closing tags for linkGrp)
+
+FIX_LINKGRP = $(patsubst %.xml.gz,%.old.gz,$(wildcard xml/*.xml.gz))
+fix-linkgrp: ${FIX_LINKGRP}
+${FIX_LINKGRP}: %.old.gz: %.xml.gz
+	mv $< $@
+	zcat $@ | uniq | gzip -c > $<
+	touch $@
 
 
 ## BEFORE MOVING TO NEW opus2moses:
@@ -74,7 +97,8 @@ real-clean:
 # include some standard OPUS targets for processing/annotating data
 
 include ../Makefile.process
-include ../Makefile.tokenize
+include ../Makefile.tokenize-polyglot
+# include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate
 include ../Makefile.cwb

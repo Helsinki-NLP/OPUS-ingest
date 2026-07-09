@@ -6,12 +6,18 @@ include Makefile.def
 include ../Makefile.def
 
 
-
 .PHONY: all
 all:
+	mkdir -p xml raw log
 	${MAKE} -C src all
-	${MAKE} -C xml all
+ifeq (${ENGLISH_CENTRIC},1)
+	find xml -type f -not -name '*-en.xml.gz' -delete
+	find xml -type f -not -name 'en-*.xml.gz' -delete
+endif
 	${MAKE} publish
+
+all-job:
+	make HPC_DISK=500 HPC_CORES=8 HPC_MEM=16g all.submit
 
 
 upload-translatewiki:

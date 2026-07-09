@@ -1,25 +1,17 @@
 # -*-makefile-*-
 #
 
+PROJECT_HOME = ../
 
-include ../Makefile.def
+include ${PROJECT_HOME}Makefile.def
 
-## the find command is a simple trick to
-## avoid re-doing existing files
-## pitfall: if the original raw file changed 
-##          then this will cause problems!
-## --> would be better to avoid creating
-##     the raw files again when updating the corpus
-## this should work now ...
 
 .PHONY: all links cleanup
 all: links create-align-files cleanup
 
-
 ## better move than symlink ...
 links:
 	-mv ../raw/??-?? .
-# 	-ln -s ../raw/??-?? .
 
 cleanup:
 	for s in ${LANGUAGES}; do \
@@ -31,7 +23,7 @@ cleanup:
 	done
 
 
-include ../../Makefile.def
-include ../../Makefile.align
-include ../../Makefile.submit
+include ${PROJECT_HOME}../Makefile.def
+include ${PROJECT_HOME}../Makefile.align
+include ${PROJECT_HOME}../Makefile.submit
 

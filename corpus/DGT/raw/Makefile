@@ -12,6 +12,8 @@ URL2016 = http://wt-public.emm4u.eu/Resources/DGT-TM-2016
 URL2017 = http://wt-public.emm4u.eu/Resources/DGT-TM-2017
 URL2018 = http://wt-public.emm4u.eu/Resources/DGT-TM-2018
 URL2019 = http://wt-public.emm4u.eu/Resources/DGT-TM-2019
+URL2020 = http://wt-public.emm4u.eu/Resources/DGT-TM-2020
+URL2021 = http://wt-public.emm4u.eu/Resources/DGT-TM-2021
 
 
 VOLUMES2011 = 	2004_1 2004_2 \
@@ -29,6 +31,8 @@ VOLUMES2016 = 	2015_1 2015_2 2015_3 2015_4 2015_5 2015_6 2015_7
 VOLUMES2017 = 	2016_1 2016_2 2016_3 2016_4 2016_5 2016_6 2016_7 2016_8 2016_9
 VOLUMES2018 = 	2017_1 2017_2
 VOLUMES2019 = 	2018_1 2018_2 2018_3
+VOLUMES2020 = 	2019_1 2019_2
+VOLUMES2021 = 	2020_1 2020_2 2020_3 2020_4 2020_5
 
 
 ZIP2011 = $(patsubst %,../src/Vol_%.zip,$(VOLUMES2011))
@@ -40,6 +44,16 @@ ZIP2016 = $(patsubst %,../src/Vol_%.zip,$(VOLUMES2016))
 ZIP2017 = $(patsubst %,../src/Vol_%.zip,$(VOLUMES2017))
 ZIP2018 = $(patsubst %,../src/Vol_%.zip,$(VOLUMES2018))
 ZIP2019 = $(patsubst %,../src/Vol_%.zip,$(VOLUMES2019))
+ZIP2020 = $(patsubst %,../src/Vol_%.zip,$(VOLUMES2020))
+ZIP2021 = $(patsubst %,../src/Vol_%.zip,$(VOLUMES2021))
+
+
+VOLUMES = 	$(VOLUMES2011) $(VOLUMES2012) $(VOLUMES2013) $(VOLUMES2014) \
+		$(VOLUMES2015) $(VOLUMES2016) $(VOLUMES2017) $(VOLUMES2018) \
+		$(VOLUMES2019) $(VOLUMES2020) $(VOLUMES2021)
+
+DGTZIP  = $(patsubst %,../src/Vol_%.zip,$(VOLUMES))
+
 
 ## one file for testing
 ZIPTEST = ../src/Vol_2018_3.zip
@@ -58,15 +72,12 @@ all: fetch
 
 ## fetching and renaming files that have brackets
 .PHONY: fetch
-fetch: 	$(ZIP2011) $(ZIP2012) $(ZIP2013) $(ZIP2014) \
-	$(ZIP2015) $(ZIP2016) $(ZIP2017) $(ZIP2018) \
-	$(ZIP2019)
+fetch: 	$(DGTZIP)
 	-find . -type f -name '*\(*.tmx' | perl -pe 'print $$_; s/[\(\) ]/_/g' | xargs -n2 mv
 
+.PHONY: unzip
 unzip:
-	for f in $(ZIP2011) $(ZIP2012) $(ZIP2013) $(ZIP2014) \
-		 $(ZIP2015) $(ZIP2016) $(ZIP2017) $(ZIP2018) \
-		 $(ZIP2019); do \
+	for f in $(DGTZIP); do \
 	  unzip -o $$f; \
 	done
 	-find . -type f -name '*\(*.tmx' | perl -pe 'print $$_; s/[\(\) ]/_/g' | xargs -n2 mv
@@ -83,6 +94,7 @@ convert: ${ENXML}
 ## use English XML files as main target (assuming that there is always English)
 en/%.xml.gz: %.tmx
 	tmx2opus -r -o "${<:.tmx=.xml.gz}" "$<"
+	rm -f "$<"
 
 
 ## TODO: could we make this more general to download files
@@ -131,4 +143,14 @@ $(ZIP2018):
 $(ZIP2019):
 	mkdir -p ${dir $@}
 	wget -O $@ $(URL2019)/${notdir $@}
+	unzip -o $@
+
+$(ZIP2020):
+	mkdir -p ${dir $@}
+	wget -O $@ $(URL2020)/${notdir $@}
+	unzip -o $@
+
+$(ZIP2021):
+	mkdir -p ${dir $@}
+	wget -O $@ $(URL2021)/${notdir $@}
 	unzip -o $@

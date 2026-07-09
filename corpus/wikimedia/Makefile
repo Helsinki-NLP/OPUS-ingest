@@ -30,7 +30,7 @@ TMXDONE  = ${TMXFILES:.tmx.gz=_done}
 
 .PHONY: all
 all:
-	${MAKE} -j 1 download
+	${MAKE} download
 	${MAKE} convert
 	${MAKE} xml/Makefile
 	mv -f raw/*-* xml/ 
@@ -49,19 +49,21 @@ print-released-tmx:
 
 ## submit a job for fetching and processing all data
 all-job:
-	${MAKE} HPC_CORES=1 HPC_TIME=72:00 HPC_DISK=100 convert-job.submit
+	${MAKE} HPC_CORES=1 HPC_MEM=16g HPC_TIME=72:00 stage1-job.submit
 
-## download and convert job (single CPU)
-convert-job:
-	${MAKE} -j 1 download
+stage1-job:
+	${MAKE} download
+	${MAKE} HPC_CORES=1 HPC_TIME=72:00 HPC_DISK=200 stage2-job.submit
+
+stage2-job:
 	${MAKE} convert
 	${MAKE} xml/Makefile
 	mv -f raw/*-* xml/ 
 	${MAKE} -C xml create-align-files
-	${MAKE} HPC_CORES=8 HPC_MEM=16g HPC_TIME=72:00 publish-job.submit
+	${MAKE} HPC_CORES=8 HPC_MEM=16g HPC_TIME=72:00 stage3-job.submit
 
 ## tokenize and publish (multi-threaded)
-publish-job:
+stage3-job:
 	${MAKE} annotate
 	${MAKE} publish
 
@@ -88,7 +90,7 @@ include ../Makefile.udparse
 ##   Makefile.annotate ..... all annotation in Uplug
 
 
-include ../Makefile.tokenize-fast
+include ../Makefile.tokenize-polyglot
 # include ../Makefile.tokenize
 # include ../Makefile.tag
 # include ../Makefile.annotate
@@ -103,13 +105,14 @@ endif
 
 
 .PHONY: convert
-convert: ${TMXFILES}
+convert: # ${TMXFILES}
 	mkdir -p ${CORPUSRAW}
 	( cd ${CORPUSRAW} && \
-	  find ${PWD} -name '*.tmx.gz' |\
-	  xargs zcat |\
-	  ${UNICODE_CLEANUP} |\
+	  find ${PWD}/src -name '*.tmx.gz' |\
+	  xargs zcat | python3 ${PWD}/scripts/fix_encoding.py |\
 	  ${TMX2OPUS} -a -e -I -u -d -t ${TMPDIR} -o wikimedia-${VERSION}.xml.gz; )
+
+# ${UNICODE_CLEANUP} |\
 
 ## OLD: without alignment and keeping empty strings:
 #
@@ -120,6 +123,12 @@ download: ${TMXFILES}
 ${TMXFILES}:
 	mkdir -p ${dir $@}
 	wget -q -O $@ ${DOWNLOADINDEX}/${notdir $@}
+	gunzip -f $@
+	-tidy -xml -utf8 ${@:.gz=} | gzip -c > $@
+	rm -f ${@:.gz=}
+
+
+#	gzip -cd | ${UNICODE_CLEANUP} | gzip -c > $@
 
 #	wget -q -O - ${DOWNLOADINDEX}/${notdir $@} |\
 #	gzip -cd | tidy -xml -utf8 | gzip -c > $@

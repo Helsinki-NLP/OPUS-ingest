@@ -1,0 +1,7 @@
+
+
+for fetching the previous versions:
+configure allas with
+
+  module load allas
+  allas-conf -k -p project_2003093

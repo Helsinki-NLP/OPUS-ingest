@@ -52,6 +52,10 @@ use Getopt::Std;
 getopts('adeo:p:Prt:uvI');
 
 
+binmode STDOUT, ':utf8';
+binmode STDERR, ':utf8';
+
+
 $DB_BTREE->{'cachesize'} = 1000000 ;
 
 
@@ -99,7 +103,7 @@ binmode(STDERR,":utf8");
 while (<>){
 
     ## fix un-escaped XML entities
-    s/&(?!(#\d+|\w+);)/&amp;/g;
+    # s/&(?!(#\d+|\w+);)/&amp;/g;
 
     ## make it possible to pipe more than one TMX file
     ## delete everything before the XML declaration
@@ -115,7 +119,8 @@ while (<>){
     eval { $TMXHandler->parse_more($_); };
     if ($@){
 	print STDERR $_;
-	die $@;
+	print STDERR $@;
+	# die $@;
     }
 }
 

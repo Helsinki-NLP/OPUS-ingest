@@ -7,6 +7,17 @@ include ../../Makefile.submit
 WORKDIR   := ${TMPDIR}/OPUS/${CORPUS}/src
 LANGUAGES := $(sort $(subst -, ,$(notdir $(wildcard ${WORKDIR}/${CORPUS}/raw/*))))
 LANGZIPS  := $(patsubst %,${CORPUSRAW}/%.zip,${LANGUAGES})
+
+ifeq (${ENGLISH_CENTRIC},1)
+LANGPAIRS := ${shell \
+	for s in $(filter-out en,${LANGUAGES}); do \
+	    if [[ "$$s" < "en" ]]; then \
+	      echo "$$s-en"; \
+	    else \
+	      echo "en-$$s"; \
+	    fi \
+	done  }
+else
 LANGPAIRS := ${shell \
 	for s in ${LANGUAGES}; do \
 	  for t in ${LANGUAGES}; do \
@@ -15,6 +26,8 @@ LANGPAIRS := ${shell \
 	    fi \
 	  done \
 	done  }
+endif
+
 ALGFILES  := $(patsubst %,${CORPUSXML}/%.xml.gz,${LANGPAIRS})
 
 
@@ -64,7 +77,7 @@ test-conversion:
 ## download the tarball of localisation files
 
 ${TRANSLATION_DUMP}:
-	wget -q ${TRANSLATION_DUMPS_URL}/translations-%.tar.gz
+	wget -q ${TRANSLATION_DUMPS_URL}/$@
 
 
 ## extract all localisation files

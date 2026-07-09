@@ -6,12 +6,16 @@
 ## CORPUSNAME = subdir under OPUS/corpus/
 CORPUS  := ${firstword ${subst /, ,$(shell pwd | sed 's|^.*/corpus/\(.*\)$$|\1|')}}
 
+## only keep alignments with English
+ENGLISH_CENTRIC := 1
+
 
 ## current version
 
 TRANSLATION_DUMPS_URL := https://translatewiki.net/static/translation-dump
 # VERSION  := $(patsubst translations-%.tar.gz,v%,$(shell wget -q -O - ${TRANSLATION_DUMPS_URL}/info.txt))
-VERSION    := v2025-01-01
+# VERSION    := v2025-01-01
+VERSION    := v2026-07-01
 SOURCE_URL := <a href="https://translatewiki.net/static/translation-dump">https://translatewiki.net/static/translation-dump</a>
 
 
